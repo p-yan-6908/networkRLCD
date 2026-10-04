@@ -11,6 +11,9 @@ ARTIFACT_DEPENDENT_MODULES = {
     "test_native_action_hold_response_diagnosis.py",
     "test_native_action_ordered_projection.py",
     "test_native_context_replay.py",
+    "test_native_action_late_validation.py",
+    "test_native_failure_evidence.py",
+    "test_native_failure_snapshot_replay.py",
 }
 
 
