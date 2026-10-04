@@ -10,7 +10,9 @@ SPEC = importlib.util.spec_from_file_location(
     Path(__file__).resolve().parents[1] / "results/jobs/native_action_hold_response_diagnosis.py",
 )
 if SPEC is None or SPEC.loader is None or not Path(SPEC.origin or "").is_file():
-    pytest.skip("Requires a local results/jobs helper omitted from the public source repo.", allow_module_level=True)
+    pytest.skip(
+        "Requires a local results/jobs helper omitted from the public source repo.", allow_module_level=True
+    )
 D = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(D)
 

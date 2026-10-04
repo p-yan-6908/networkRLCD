@@ -2,7 +2,6 @@ from pathlib import Path
 
 import pytest
 
-
 ARTIFACT_DEPENDENT_MODULES = {
     "test_native_action_atomic_diagnosis_v2.py",
     "test_native_action_atomic_matrix.py",
