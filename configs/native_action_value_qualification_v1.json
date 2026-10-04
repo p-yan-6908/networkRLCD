@@ -1,0 +1,13 @@
+{
+  "abi": "native_action_value_qualified_policy_v1",
+  "model": {
+    "path": "results/native-action-model-v2/model.json",
+    "sha256": "a4bd1cc2d4e40ce48d32431ea39d70d2a8787cf6692d0711e288ee62e15c5527"
+  },
+  "value_skill": {
+    "path": "results/native-action-value-skill-v1",
+    "manifest_sha256": "8395df439a62cc57895f4a6da6d0c120cafa5f94ed67e1788d73d569f53f089d"
+  },
+  "minimum_action_conditioning_utility_skill": 0.01,
+  "role": "train"
+}

@@ -1,0 +1,40 @@
+{
+  "diagnostic_only": true,
+  "controller_comparison_or_SOTA": false,
+  "source_exporter_sha256": "dd89aaae145896ec030968855dab23f02dd73a63ebeccd56dc9f28435a4bdfc5",
+  "inputs": {
+    "Auto": {
+      "root": "results/native-rtc-frame-probe",
+      "manifest_sha256": "59aa0331f4da66eac4c185bf6d21941ece06f817b05d285de520b0885cc4c409",
+      "artifacts_sha256": {
+        "summary.json": "9df17967a9885c812496c8f99d01738bb288d362408207efe43eeeb0f4b568c1",
+        "events.jsonl.gz": "04ca399939cadad27985cc7fd5ad6c0add00d1c9e62b7d3d22db2d2ec28d7af1",
+        "source_snapshot.mjs": "662ee764660c29a9933cf7a59742c3254c465a356dad05e39c0fe37f54bee7e8",
+        "frame_marker.mjs": "4aeee008fc9f8dd9e9cc14feaaf54ae82ef3a5fd8cf04eedd086114caf8ec144",
+        "frame_events.json": "9a89c70a5ae2e25d35c9b4f1f4ea57ffd1f8422fa214276d4a9a22b2122c2f81",
+        "frame_metrics.json": "7422d5bab3e9631cd616f45536c5fc136e104ce637661ef1d57018a277dfe76e",
+        "native_frame_metrics.py": "117127046ca1c1ac929181fd3a532db86ce561792cb72a41d18ab4b0aa9df350",
+        "frame_verifier.py": "0b7125c6ab701963fb4710d9adf300754f7df37b67f5de2ee1865cd89c22a547"
+      }
+    },
+    "MinJitter": {
+      "root": "results/native-rtc-frame-min-jitter",
+      "manifest_sha256": "30659d22fb4325f53db2e4bcbfcf8200e30dad8f83f77500680a9390429ce99b",
+      "artifacts_sha256": {
+        "summary.json": "2cdd9aaedb1168899761f5d1cda9175f3c8ca05677377ae4fd621bdc9b20d55f",
+        "events.jsonl.gz": "5f1d5a06fa9f4eb78cb528feb56b22b89841231d2a25d19c0de2aa4d425aa7a7",
+        "source_snapshot.mjs": "03609b656c3eff05315a00972c4e40ec702182e1f5bd47fba09b4f15377d036f",
+        "frame_marker.mjs": "4aeee008fc9f8dd9e9cc14feaaf54ae82ef3a5fd8cf04eedd086114caf8ec144",
+        "frame_events.json": "0e4f3cd2d19348615f1704481bbea31ed8816f89b815362d05b21a9d70d24378",
+        "frame_metrics.json": "a685e807b8c1bf8684e1639f9334700fc8319d2d21862515e61c33900637857e",
+        "native_frame_metrics.py": "117127046ca1c1ac929181fd3a532db86ce561792cb72a41d18ab4b0aa9df350",
+        "frame_verifier.py": "f717494789b18df3e4be427d692ce95ecae4b101a97240caace58c97b1aae4e7",
+        "native_actuation.mjs": "5369c8ae4e9e9a8b3c6ce293429ad18db2bfd4e1f56037032cc1c7178fd4ad0e"
+      }
+    }
+  },
+  "generated_sha256": {
+    "evidence.tex": "e1a3902d62040b61a2b7422d08509ab3323bac69f3d48112c7a4c2b194f3608f",
+    "native_diagnostics.json": "495fe5e59a2364a7ac4f8caec3ce21b8def03ef311ae6f23896b359ba75fffd6"
+  }
+}

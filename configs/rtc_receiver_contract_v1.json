@@ -1,0 +1,16 @@
+{
+  "abi": "rtc_receiver_contract_probe_v1",
+  "trace": ".tools/rtc_peer_research_v2/artifacts/02530.json",
+  "trace_sha256": "57caffbb3e4fe7cc442c0fe4ddea506f710f0a8afdb8f36a50905bad1fceb5dc",
+  "expected_rows": 2074,
+  "expected_active_monitor_cells": 20603,
+  "source_role": "public behavior trace / documented algebra probe; NOT independent efficacy or paired packet/extractor data",
+  "feature_count": 150,
+  "windows_ms": [60, 60, 60, 60, 60, 600, 600, 600, 600, 600],
+  "precisions": ["float64", "model_float32"],
+  "negative_witnesses": ["milliseconds_labelled_bps", "nonconditional_lost_packet_formula", "fixed_media_priors", "normalized_delay_ratio_numerator"],
+  "claims": {"policy_executed": false, "closed_loop": false, "causality_certified": false, "original_extractor_equivalence": false, "sota": false},
+  "out": "results/rtc-receiver-contract-v1",
+  "boundaries": "Read only the observations field. Never execute foreign source/SDK, infer original packet timing from aggregates, project sender history or apply model outputs.",
+  "stop": "Stop and preserve failures on source identity, reference-observation conformance, float32 compatibility or lost immutable binding. Passing aggregate checks cannot unlock original-controller readiness."
+}

@@ -1,0 +1,48 @@
+{
+  "name": "delayed-credit-n-step-v11",
+  "development_seeds": [20001],
+  "validation_seeds": [20101, 20102],
+  "test_seeds": [21101, 21102, 21103],
+  "max_id_qoe_drop": 0.03,
+  "max_id_risk_increase": 0.002,
+  "max_stress_risk_increase": 0.005,
+  "min_stress_qoe_gain": 0.03,
+  "min_score_gain": 0.01,
+  "risk_penalty": 2.0,
+  "baseline": {
+    "name": "packet-v2-history-demo-cohort-n1-reference",
+    "seeds": [74, 85, 96, 107, 118],
+    "test_seeds": [21101, 21102, 21103],
+    "scenarios": ["steady", "step", "ramp", "wifi", "collapse", "burst_loss", "bufferbloat", "handover", "outage", "feedback_gap", "capacity_surge"],
+    "methods": ["safe", "heuristic", "gcc", "rl", "calibrated", "shielded_uncertainty"],
+    "bootstrap_samples": 4000,
+    "policy_training_scenarios": ["steady", "step", "ramp", "wifi", "steady", "step", "ramp", "wifi", "collapse", "burst_loss", "bufferbloat", "handover", "outage", "feedback_gap", "capacity_surge"],
+    "safety_training_scenarios": ["steady", "step", "ramp", "wifi", "steady", "step", "ramp", "wifi", "collapse", "burst_loss", "bufferbloat", "handover", "outage", "feedback_gap", "capacity_surge"],
+    "simulator": {"backend": "packet_v2", "steps": 240, "queue_mbit": 0.6},
+    "training": {
+      "episodes": 120, "risk_episodes": 60, "calibration_episodes": 60, "hidden": 64, "risk_epochs": 30,
+      "policy_features": "history_v2", "demonstration_episodes": 30, "demonstration_epochs": 20,
+      "demonstration_weight": 0.5, "demonstration_methods": ["gcc"],
+      "epsilon_start": 0.5, "epsilon_end": 0.05, "safety_horizon_steps": 3, "n_step": 1
+    },
+    "gate": {"max_ensemble_std": 0.05}
+  },
+  "candidate": {
+    "name": "packet-v2-history-demo-cohort-n3-candidate",
+    "seeds": [74, 85, 96, 107, 118],
+    "test_seeds": [21101, 21102, 21103],
+    "scenarios": ["steady", "step", "ramp", "wifi", "collapse", "burst_loss", "bufferbloat", "handover", "outage", "feedback_gap", "capacity_surge"],
+    "methods": ["safe", "heuristic", "gcc", "rl", "calibrated", "shielded_uncertainty"],
+    "bootstrap_samples": 4000,
+    "policy_training_scenarios": ["steady", "step", "ramp", "wifi", "steady", "step", "ramp", "wifi", "collapse", "burst_loss", "bufferbloat", "handover", "outage", "feedback_gap", "capacity_surge"],
+    "safety_training_scenarios": ["steady", "step", "ramp", "wifi", "steady", "step", "ramp", "wifi", "collapse", "burst_loss", "bufferbloat", "handover", "outage", "feedback_gap", "capacity_surge"],
+    "simulator": {"backend": "packet_v2", "steps": 240, "queue_mbit": 0.6},
+    "training": {
+      "episodes": 120, "risk_episodes": 60, "calibration_episodes": 60, "hidden": 64, "risk_epochs": 30,
+      "policy_features": "history_v2", "demonstration_episodes": 30, "demonstration_epochs": 20,
+      "demonstration_weight": 0.5, "demonstration_methods": ["gcc"],
+      "epsilon_start": 0.5, "epsilon_end": 0.05, "safety_horizon_steps": 3, "n_step": 3
+    },
+    "gate": {"max_ensemble_std": 0.05}
+  }
+}

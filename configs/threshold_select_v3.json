@@ -1,0 +1,15 @@
+{
+  "name": "rlcd-v3-threshold-selection",
+  "model_seeds": [11, 22, 33, 44, 55, 66, 77, 88, 99, 110],
+  "validation_seeds": [2601, 2602, 2603, 2604, 2605, 2606, 2607, 2608, 2609, 2610],
+  "test_seeds": [3601, 3602, 3603, 3604, 3605, 3606, 3607, 3608, 3609, 3610],
+  "thresholds": [0.5, 0.7, 0.85, 0.9, 0.95],
+  "baseline_threshold": 0.9,
+  "max_id_qoe_drop": 0.03,
+  "max_id_violation_increase": 0.001,
+  "max_stress_violation_increase": 0.005,
+  "max_stress_scenario_violation_increase": 0.02,
+  "risk_penalty": 5.0,
+  "minimum_score_gain": 0.005,
+  "bootstrap_samples": 10000
+}

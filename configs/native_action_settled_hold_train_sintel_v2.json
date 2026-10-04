@@ -1,0 +1,853 @@
+{
+  "abi": "native_late_credit_randomized_hold_v2",
+  "credit": {
+    "abi": "native_late_credit_randomized_hold_v2",
+    "epoch_steps": 32,
+    "caps_bps": [
+      300000,
+      450000,
+      900000
+    ],
+    "cohort_start_after_ack_ms": 1800,
+    "cohort_end_after_ack_ms": 2200,
+    "request_deadline_ms": 150,
+    "future_action_before_last_deadline_forbidden": true,
+    "target": "mean_factual_request_utility_and_miss_within_held_action",
+    "schedule": "counter_uint32_mixer_seed_epoch_only; aliases_share_schedule",
+    "assigned_max_bitrate_is_not_proof_of_encoder_target_response": true,
+    "actual_target_threshold_is_not_an_eligibility_gate": true,
+    "late_window_is_not_guarantee_of_settled_target_or_quality": true
+  },
+  "early_reference": {
+    "abi": "native_late_credit_randomized_hold_v2_early_reference",
+    "epoch_steps": 32,
+    "caps_bps": [
+      300000,
+      450000,
+      900000
+    ],
+    "cohort_start_after_ack_ms": 200,
+    "cohort_end_after_ack_ms": 600,
+    "request_deadline_ms": 150,
+    "future_action_before_last_deadline_forbidden": true,
+    "target": "mean_factual_request_utility_and_miss_within_held_action",
+    "schedule": "counter_uint32_mixer_seed_epoch_only; aliases_share_schedule",
+    "assigned_max_bitrate_is_not_proof_of_encoder_target_response": true,
+    "actual_target_threshold_is_not_an_eligibility_gate": true,
+    "late_window_is_not_guarantee_of_settled_target_or_quality": true
+  },
+  "role": "train",
+  "parent": {
+    "runtime": "./results/native-action-excitation-train-sintel-v1/runtime.json",
+    "manifest_sha256": "d4a3929ac4c70b57b8f9a83abb363549a25924c1c3bb29c4339b56c7aaafc04a",
+    "runtime_sha256": "316d02c3a3fe23b2c458921be3075fccb3f9619f943cd5e1796f06721d2570a5"
+  },
+  "trials": [
+    {
+      "id": "late-stable-0-r0-random-hold-b",
+      "group": "stable-0",
+      "family": "stable",
+      "condition": "random-hold-b",
+      "repetition": 0,
+      "position": 0,
+      "role": "train",
+      "scene_seed": 0,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.61442,
+          "high",
+          6000
+        ],
+        [
+          1.61442,
+          "collapse",
+          6000
+        ],
+        [
+          1.61442,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        300000,
+        320000
+      ],
+      "exploration_seed": 8101
+    },
+    {
+      "id": "late-stable-0-r0-random-hold-a",
+      "group": "stable-0",
+      "family": "stable",
+      "condition": "random-hold-a",
+      "repetition": 0,
+      "position": 1,
+      "role": "train",
+      "scene_seed": 0,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.61442,
+          "high",
+          6000
+        ],
+        [
+          1.61442,
+          "collapse",
+          6000
+        ],
+        [
+          1.61442,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        300000,
+        320000
+      ],
+      "exploration_seed": 8101
+    },
+    {
+      "id": "late-stable-0-r0-fixed450",
+      "group": "stable-0",
+      "family": "stable",
+      "condition": "fixed450",
+      "repetition": 0,
+      "position": 2,
+      "role": "train",
+      "scene_seed": 0,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.61442,
+          "high",
+          6000
+        ],
+        [
+          1.61442,
+          "collapse",
+          6000
+        ],
+        [
+          1.61442,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        300000,
+        320000
+      ],
+      "exploration_seed": 8101
+    },
+    {
+      "id": "late-stable-0-r1-random-hold-a",
+      "group": "stable-0",
+      "family": "stable",
+      "condition": "random-hold-a",
+      "repetition": 1,
+      "position": 0,
+      "role": "train",
+      "scene_seed": 0,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.61442,
+          "high",
+          6000
+        ],
+        [
+          1.61442,
+          "collapse",
+          6000
+        ],
+        [
+          1.61442,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        300000,
+        320000
+      ],
+      "exploration_seed": 8108
+    },
+    {
+      "id": "late-stable-0-r1-fixed450",
+      "group": "stable-0",
+      "family": "stable",
+      "condition": "fixed450",
+      "repetition": 1,
+      "position": 1,
+      "role": "train",
+      "scene_seed": 0,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.61442,
+          "high",
+          6000
+        ],
+        [
+          1.61442,
+          "collapse",
+          6000
+        ],
+        [
+          1.61442,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        300000,
+        320000
+      ],
+      "exploration_seed": 8108
+    },
+    {
+      "id": "late-stable-0-r1-random-hold-b",
+      "group": "stable-0",
+      "family": "stable",
+      "condition": "random-hold-b",
+      "repetition": 1,
+      "position": 2,
+      "role": "train",
+      "scene_seed": 0,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.61442,
+          "high",
+          6000
+        ],
+        [
+          1.61442,
+          "collapse",
+          6000
+        ],
+        [
+          1.61442,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        300000,
+        320000
+      ],
+      "exploration_seed": 8108
+    },
+    {
+      "id": "late-collapse-0-r0-random-hold-b",
+      "group": "collapse-0",
+      "family": "collapse",
+      "condition": "random-hold-b",
+      "repetition": 0,
+      "position": 0,
+      "role": "train",
+      "scene_seed": 2000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2.18085,
+          "high",
+          6000
+        ],
+        [
+          0.57999,
+          "collapse",
+          6000
+        ],
+        [
+          1.98845,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        320000,
+        340000
+      ],
+      "exploration_seed": 8132
+    },
+    {
+      "id": "late-collapse-0-r0-fixed450",
+      "group": "collapse-0",
+      "family": "collapse",
+      "condition": "fixed450",
+      "repetition": 0,
+      "position": 1,
+      "role": "train",
+      "scene_seed": 2000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2.18085,
+          "high",
+          6000
+        ],
+        [
+          0.57999,
+          "collapse",
+          6000
+        ],
+        [
+          1.98845,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        320000,
+        340000
+      ],
+      "exploration_seed": 8132
+    },
+    {
+      "id": "late-collapse-0-r0-random-hold-a",
+      "group": "collapse-0",
+      "family": "collapse",
+      "condition": "random-hold-a",
+      "repetition": 0,
+      "position": 2,
+      "role": "train",
+      "scene_seed": 2000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2.18085,
+          "high",
+          6000
+        ],
+        [
+          0.57999,
+          "collapse",
+          6000
+        ],
+        [
+          1.98845,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        320000,
+        340000
+      ],
+      "exploration_seed": 8132
+    },
+    {
+      "id": "late-collapse-0-r1-fixed450",
+      "group": "collapse-0",
+      "family": "collapse",
+      "condition": "fixed450",
+      "repetition": 1,
+      "position": 0,
+      "role": "train",
+      "scene_seed": 2000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2.18085,
+          "high",
+          6000
+        ],
+        [
+          0.57999,
+          "collapse",
+          6000
+        ],
+        [
+          1.98845,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        320000,
+        340000
+      ],
+      "exploration_seed": 8139
+    },
+    {
+      "id": "late-collapse-0-r1-random-hold-a",
+      "group": "collapse-0",
+      "family": "collapse",
+      "condition": "random-hold-a",
+      "repetition": 1,
+      "position": 1,
+      "role": "train",
+      "scene_seed": 2000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2.18085,
+          "high",
+          6000
+        ],
+        [
+          0.57999,
+          "collapse",
+          6000
+        ],
+        [
+          1.98845,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        320000,
+        340000
+      ],
+      "exploration_seed": 8139
+    },
+    {
+      "id": "late-collapse-0-r1-random-hold-b",
+      "group": "collapse-0",
+      "family": "collapse",
+      "condition": "random-hold-b",
+      "repetition": 1,
+      "position": 2,
+      "role": "train",
+      "scene_seed": 2000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2.18085,
+          "high",
+          6000
+        ],
+        [
+          0.57999,
+          "collapse",
+          6000
+        ],
+        [
+          1.98845,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        320000,
+        340000
+      ],
+      "exploration_seed": 8139
+    },
+    {
+      "id": "late-variable-0-r0-random-hold-b",
+      "group": "variable-0",
+      "family": "variable",
+      "condition": "random-hold-b",
+      "repetition": 0,
+      "position": 0,
+      "role": "train",
+      "scene_seed": 4000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2.57036,
+          "high",
+          6000
+        ],
+        [
+          0.73251,
+          "collapse",
+          6000
+        ],
+        [
+          3.49389,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        340000,
+        360000
+      ],
+      "exploration_seed": 8163
+    },
+    {
+      "id": "late-variable-0-r0-random-hold-a",
+      "group": "variable-0",
+      "family": "variable",
+      "condition": "random-hold-a",
+      "repetition": 0,
+      "position": 1,
+      "role": "train",
+      "scene_seed": 4000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2.57036,
+          "high",
+          6000
+        ],
+        [
+          0.73251,
+          "collapse",
+          6000
+        ],
+        [
+          3.49389,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        340000,
+        360000
+      ],
+      "exploration_seed": 8163
+    },
+    {
+      "id": "late-variable-0-r0-fixed450",
+      "group": "variable-0",
+      "family": "variable",
+      "condition": "fixed450",
+      "repetition": 0,
+      "position": 2,
+      "role": "train",
+      "scene_seed": 4000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2.57036,
+          "high",
+          6000
+        ],
+        [
+          0.73251,
+          "collapse",
+          6000
+        ],
+        [
+          3.49389,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        340000,
+        360000
+      ],
+      "exploration_seed": 8163
+    },
+    {
+      "id": "late-variable-0-r1-random-hold-a",
+      "group": "variable-0",
+      "family": "variable",
+      "condition": "random-hold-a",
+      "repetition": 1,
+      "position": 0,
+      "role": "train",
+      "scene_seed": 4000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2.57036,
+          "high",
+          6000
+        ],
+        [
+          0.73251,
+          "collapse",
+          6000
+        ],
+        [
+          3.49389,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        340000,
+        360000
+      ],
+      "exploration_seed": 8170
+    },
+    {
+      "id": "late-variable-0-r1-fixed450",
+      "group": "variable-0",
+      "family": "variable",
+      "condition": "fixed450",
+      "repetition": 1,
+      "position": 1,
+      "role": "train",
+      "scene_seed": 4000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2.57036,
+          "high",
+          6000
+        ],
+        [
+          0.73251,
+          "collapse",
+          6000
+        ],
+        [
+          3.49389,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        340000,
+        360000
+      ],
+      "exploration_seed": 8170
+    },
+    {
+      "id": "late-variable-0-r1-random-hold-b",
+      "group": "variable-0",
+      "family": "variable",
+      "condition": "random-hold-b",
+      "repetition": 1,
+      "position": 2,
+      "role": "train",
+      "scene_seed": 4000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2.57036,
+          "high",
+          6000
+        ],
+        [
+          0.73251,
+          "collapse",
+          6000
+        ],
+        [
+          3.49389,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        340000,
+        360000
+      ],
+      "exploration_seed": 8170
+    },
+    {
+      "id": "late-brief-collapse-0-r0-random-hold-b",
+      "group": "brief-collapse-0",
+      "family": "brief-collapse",
+      "condition": "random-hold-b",
+      "repetition": 0,
+      "position": 0,
+      "role": "train",
+      "scene_seed": 6000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.89784,
+          "high",
+          6000
+        ],
+        [
+          0.48932,
+          "collapse",
+          6000
+        ],
+        [
+          2.03304,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        360000,
+        380000
+      ],
+      "exploration_seed": 8194
+    },
+    {
+      "id": "late-brief-collapse-0-r0-fixed450",
+      "group": "brief-collapse-0",
+      "family": "brief-collapse",
+      "condition": "fixed450",
+      "repetition": 0,
+      "position": 1,
+      "role": "train",
+      "scene_seed": 6000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.89784,
+          "high",
+          6000
+        ],
+        [
+          0.48932,
+          "collapse",
+          6000
+        ],
+        [
+          2.03304,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        360000,
+        380000
+      ],
+      "exploration_seed": 8194
+    },
+    {
+      "id": "late-brief-collapse-0-r0-random-hold-a",
+      "group": "brief-collapse-0",
+      "family": "brief-collapse",
+      "condition": "random-hold-a",
+      "repetition": 0,
+      "position": 2,
+      "role": "train",
+      "scene_seed": 6000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.89784,
+          "high",
+          6000
+        ],
+        [
+          0.48932,
+          "collapse",
+          6000
+        ],
+        [
+          2.03304,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        360000,
+        380000
+      ],
+      "exploration_seed": 8194
+    },
+    {
+      "id": "late-brief-collapse-0-r1-fixed450",
+      "group": "brief-collapse-0",
+      "family": "brief-collapse",
+      "condition": "fixed450",
+      "repetition": 1,
+      "position": 0,
+      "role": "train",
+      "scene_seed": 6000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.89784,
+          "high",
+          6000
+        ],
+        [
+          0.48932,
+          "collapse",
+          6000
+        ],
+        [
+          2.03304,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        360000,
+        380000
+      ],
+      "exploration_seed": 8201
+    },
+    {
+      "id": "late-brief-collapse-0-r1-random-hold-a",
+      "group": "brief-collapse-0",
+      "family": "brief-collapse",
+      "condition": "random-hold-a",
+      "repetition": 1,
+      "position": 1,
+      "role": "train",
+      "scene_seed": 6000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.89784,
+          "high",
+          6000
+        ],
+        [
+          0.48932,
+          "collapse",
+          6000
+        ],
+        [
+          2.03304,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        360000,
+        380000
+      ],
+      "exploration_seed": 8201
+    },
+    {
+      "id": "late-brief-collapse-0-r1-random-hold-b",
+      "group": "brief-collapse-0",
+      "family": "brief-collapse",
+      "condition": "random-hold-b",
+      "repetition": 1,
+      "position": 2,
+      "role": "train",
+      "scene_seed": 6000,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.89784,
+          "high",
+          6000
+        ],
+        [
+          0.48932,
+          "collapse",
+          6000
+        ],
+        [
+          2.03304,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        360000,
+        380000
+      ],
+      "exploration_seed": 8201
+    }
+  ],
+  "implementation_sha256": "257399b95f4259c9d6e674cf5da23b080ebb2914dbf2d4b359b33fba5fdabe86",
+  "source_sha256": {
+    "assets/encoder_response.mjs": "3dc0a73ecca6fd992d6b46964620b7f6026ed040fee96074ddda0721e074a9a9",
+    "assets/encoder_response_episode.mjs": "376c955d0d56e068a819f9a0b20deab24d47e05fdee24d592dc05f33da135870",
+    "assets/settled_hold_control.mjs": "7fbc239014f080d9729d2e42918479fe63d5d434b0c827ab5303845e67f5ca69",
+    "assets/settled_hold_episode.mjs": "f9df28026fd0179aaf3d0602300e7248b4fb6dd5e9ba3f9ea5616caccaa79bc4"
+  },
+  "timing_prerequisite_path": "./results/native-encoder-long-hold-response-v1",
+  "timing_prerequisite_manifest_sha256": "7f80ff5ce1c29febf18508834e8371a5a33a7429c9ebe02c72727afc30c1a6fb",
+  "existing_physical_groups_reused_not_independent": true,
+  "encoder_target_qp_not_actor_inputs": true,
+  "no_target_or_quality_based_cohort_selection": true,
+  "models_fitted": 0,
+  "SOTA_achieved": false
+}

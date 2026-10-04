@@ -1,0 +1,65 @@
+{
+  "config_sha256": "6d979c51878ef1ab9dccad2099228416b296b994e11a8bb925a05c58b7da87d3",
+  "episodes": 19800,
+  "evidence_label": "Paper-scale descriptive follow-up",
+  "generated_sha256": {
+    "evidence.tex": "111c329853ed64aabd5bc1a70fb61289cb38bf41c498020096770a49e38de035",
+    "figures/qoe_safety_tradeoff.pdf": "78301e50626280f4346d803eaddfeed22c9c01b75a7f50cb62241b4176efe6d9",
+    "figures/reliability.pdf": "956e02b9ee6da6718cd18bac145ab4546945f13b03a6d63a4fa98bae75d5b47f",
+    "figures/trajectory_collapse.pdf": "1cc730e3393023f52da1ad663aa43128ee2e4ed168c991456e77ef1fd018b7cd",
+    "table_ablations.tex": "763dca206cf4afffe34509393aca095f86cc32d341f3d77a79a52b5d3b94fb24",
+    "table_calibration.tex": "5351d0b0cefd8d1a562d05591f6f3d7165f6959a408735ba00ed7d11f41a8683",
+    "table_comparison.tex": "d436aa0037f3cc17cbc9f8f6f88824384861d678fcdcf33e26d40edc35992a9c",
+    "table_contrasts.tex": "a24c50941a3fde2641f865a8115e454e5b892c259ceaf96ee56f7d644d1447f4"
+  },
+  "integrity_checked": true,
+  "limitations": [
+    "Conditional training-seed bootstrap; fixed trace panel.",
+    "No claim of real-network validation or untouched confirmatory data."
+  ],
+  "macro_prefix": "Evidence",
+  "manifest_sha256": "e51e0294f660766d5bf26dcb1582906cc45b156e1ea0279f83e993917409c3de",
+  "model_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99,
+    110
+  ],
+  "source_files": {
+    "calibration_diagnostics.csv": "0a3d9b3d097a9da33c3d94f42ff6f13c1070b281b08c7a059f190f10288d963c",
+    "episodes.csv": "774a1bfc3b1c87980504eec1cc125f8d7660ebe6c27949d096d54949f9687b36",
+    "paired_differences.csv": "bdcd5f8abb7418e7beed1b3b3aa65b3fe55002a4201b9f3a875c246cb6763b78",
+    "summary.csv": "63a562df1edd052dd1cbfeffcc98302053cbcc91cd90c15bfe4e5fc71f50c340"
+  },
+  "source_run": "./results/paper-v1-evaluation",
+  "steps": 11880000,
+  "test_seeds": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "verified_artifacts": 358
+}

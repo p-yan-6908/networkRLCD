@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {BEHAVIORS,COVERAGE_CAPS,RepairPolicy,explorationCap} from './coverage_control.mjs';
+import {legacyVideoConfig} from './streamed_coverage_video.mjs';
+import {applyNativeAction} from './dense_actuation.mjs';
+const features=cap=>{const f=Array(16).fill(0);f[7]=cap/4000000;f[9]=1;f[10]=1;return f;};
+test('fixed scalar coverage preserves all three exact caps',()=>{assert.deepEqual(BEHAVIORS.map(b=>explorationCap(b,0,1,{features:features(400000)})),COVERAGE_CAPS);assert.throws(()=>explorationCap('bwe',0,1,{features:features(400000)}));});
+test('actual scalar cap is never silently projected for actuation',()=>{for(const cap of COVERAGE_CAPS){const p=new RepairPolicy(),o={sample_ms:100,features:features(cap),content_features:[.2,.1,1]},before=structuredClone(o),d=p.observe(o);assert.deepEqual(o,before);assert.equal(d.actual_scalar_cap_bps,cap);assert.equal(d.shadow_projected_cap_bps,300000);assert.equal(d.shadow_only,true);assert.equal(d.learned_departure,false);}assert.throws(()=>new RepairPolicy({}));});
+test('owned V5 movie projection refuses diagnostic/evaluation source',()=>{const c={source_kind:'recorded_video_exact_cap_coverage_v1',video_segment:[60000,80000]};assert.equal(legacyVideoConfig(c).source_kind,'recorded_video_repair_v5');assert.equal(c.source_kind,'recorded_video_exact_cap_coverage_v1');assert.throws(()=>legacyVideoConfig({...c,source_kind:'recorded_video_dense_probe_v1'}));});
+test('exact fine caps actually reach native setParameters and readback',async()=>{for(const cap of COVERAGE_CAPS){let params={encodings:[{maxBitrate:300000}]};const sender={getParameters:()=>structuredClone(params),setParameters:async p=>{params=structuredClone(p);}},receiver=new class{constructor(){this.value=0;}get jitterBufferTarget(){return this.value;}set jitterBufferTarget(v){this.value=v;}}();const d=await applyNativeAction(sender,receiver,{encoder_max_bitrate_bps:cap,receiver_jitter_buffer_target_ms:0});assert.equal(params.encodings[0].maxBitrate,cap);assert.equal(d.encoder_max_bitrate_bps,cap);assert.equal(receiver.jitterBufferTarget,0);}});

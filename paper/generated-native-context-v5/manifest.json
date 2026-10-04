@@ -1,0 +1,34 @@
+{
+  "stage": "native_context_failure_repeatability_paper_verified",
+  "artifacts_sha256": {
+    "evidence.tex": "39fadc4dd33991811aea9b3ef8ce5c42482024579475293e1fd6a0135726555f",
+    "table.tex": "8354ce40d5c82f06cf2630266c064baf5f31903ff0c8e6b3c922126dc327c74b",
+    "groups.tex": "ebecb29994230bd0d131b932ffb5d62bd69c87f460fae7317b1240a4f8e9edce",
+    "cases.tex": "2d12aaeb8a17a581b62a81d83459ff31f232319bbcd3f1d82f703a355d90787b",
+    "evidence.json": "33541623f991a6bccce43a4f341dbfbb8c47ff26f7cb42ff9405262df945bad2"
+  },
+  "exporter_sha256": "d9b2b37bb450c17260b45aade3dbb96261d58ee2447fa61444b820faf8ff2fa1",
+  "source_sha256": {
+    ".tools/audit_native_context_v5.py": "97baf04d91280a327a8985eca8e61a2b5fe016cbca534b897dccf239d1dd8993",
+    ".tools/diagnose_native_context_v5.py": "04c2a8daac3fcc88a93dd7d50c6899f1947a97ad8d67d22b665a8c9dcec5122c",
+    ".tools/run_native_context_v5.py": "d3a050647c064e2ecbf597725ac889dd1782c91823d292f6f1c3773bd99f4de1",
+    ".tools/replay_native_wire.py": "44d3cb17426af61d21a9828d320ca2bdff49adce6ef703fa86d643b00e9ba67c",
+    "src/media_rl/native_context.py": "834e482985b0cdc119c5300e3199a5005f82551c73abbf327e2ab65d8377c77a",
+    "src/media_rl/native_context_replay.py": "70eecebd9fac9cf95bcd155076df4719ef01a7d614f0ea42582d038f0b590376",
+    "src/media_rl/native_context_integrity.py": "947afaaa5e70ca1c1b3dafee812a65392baf4e48e702c1569fc570dfecd2a94a",
+    "benchmarks/native_rtc/native_context.mjs": "36915a30d0d57e38fc442d429019c06b34184742ee585da2a5ffe9faba358474",
+    "configs/native_context_v5.json": "db8448daf0ddbf87ff2e07d5e079da66356f63a3d2966a483a849fd288a7062a",
+    "configs/native_context_development_v5.json": "efa3d9a0b8f569e91cc71f2d912d7cfc9278464ecbb4e219a7a86027023f326f",
+    "results/native-model-v3/model.json": "bab783ccc0b45eb6fab4aaab20c350e5e02a8745cdbe3c3de1c3d096a99d689a",
+    "results/native-model-v4/model.json": "1af1832db2fc44bfbef7a4ca26daa639b96a8058a64b69001c5d271fb0aa22dd",
+    "results/native-context-development-v5/manifest.json": "17040e9cb4a2c67d0aae07f2d18582aa6dbe9a8caa107c1bbe149a4c183ae4a6",
+    "results/jobs/native-context-v5-final-evidence.json": "6277c411d693ccbad4712524736526a28c97ba80690e29756675cf3eb5711829",
+    "results/jobs/native-context-v5-portable-parity.json": "971bfa8e94357f1a45eeb278c048a7a0f3bf5a298d588f7af56d931a8b36676f",
+    "results/jobs/native-context-v5-panel-freeze.json": "a8550b911a7309f72f57ed59b1434687055c4bc0dcf61180b956fd4b7e76257f",
+    "results/jobs/native-context-v5-repeatability-diagnosis.json": "e616c2ae5439f21183b8ab6342d8bd94983e91617707ef30c94270aa76c2abd0",
+    "results/jobs/native-context-v5-python-tests.log": "d368685a03cdece9db50045249bce576c545e162df730c6c233d1ba313c8fd98",
+    "results/jobs/native-context-v5-node-tests.log": "b169c0b4264ab5c946240e5c80c130760cb728e97f5e7c9e0411a39c5544b54a"
+  },
+  "selected_or_promoted": false,
+  "SOTA_achieved": false
+}

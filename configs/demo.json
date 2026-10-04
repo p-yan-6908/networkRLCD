@@ -1,0 +1,7 @@
+{
+  "name": "pilot-not-confirmatory",
+  "seeds": [11, 22, 33],
+  "test_seeds": [101, 102, 103, 104],
+  "simulator": {"steps": 160},
+  "training": {"episodes": 32, "risk_episodes": 12, "calibration_episodes": 12, "risk_epochs": 15}
+}

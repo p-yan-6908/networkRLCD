@@ -1,0 +1,14 @@
+{
+  "source_abi": "recorded_video_v1",
+  "path": "./data/native_video/tears_of_steel_video_only.mp4",
+  "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+  "duration_ms": 734166,
+  "width": 1280,
+  "height": 534,
+  "frame_rate": "24/1",
+  "attribution": "Tears of Steel (2012), Blender Foundation \u2014 original credit scroll retained in the source; video-only benchmark crop, not redistribution",
+  "license_url": "https://mango.blender.org/about/",
+  "source_url": "https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov",
+  "rights_asserted_by_importer": true,
+  "not_representative_corpus": true
+}

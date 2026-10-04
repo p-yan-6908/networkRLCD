@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {holdProbeCap,HOLD_STEPS,SEQUENCE} from './encoder_hold_control.mjs';
+test('fixed geometry aliases independent of observations, exact boundaries and legal caps',()=>{assert.equal(HOLD_STEPS,16);assert.equal(SEQUENCE.length,12);for(let i=0;i<500;i++){assert.equal(holdProbeCap('random-hold-a',i),holdProbeCap('random-hold-b',i));assert.equal(holdProbeCap('fixed450',i),450000);assert.equal(holdProbeCap('random-hold-a',i),SEQUENCE[Math.floor(i/16)%12]);}assert.equal(holdProbeCap('random-hold-a',15),450000);assert.equal(holdProbeCap('random-hold-a',16),300000);assert.equal(holdProbeCap('random-hold-a',32),900000);});
+test('fail closed on actors, future/malformed step or unknown mode',()=>{for(const [b,s] of [['rlcd',0],['gcc',0],['random-hold-a',-1],['random-hold-a',0.1],['random-hold-a',true],['random-hold-a',NaN]])assert.throws(()=>holdProbeCap(b,s));});

@@ -1,0 +1,27 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.DS_Store
+results/
+research/papers/
+.pi/
+.tools/
+paper/build/
+dist/
+build/
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.pdf
+paper/*.fdb_latexmk
+paper/*.fls
+
+# Large recorded media files are kept local; source metadata records provenance and checksums.
+data/native_video/*.mkv
+data/native_video/*.mkv.zip
+data/native_video/*.mp4
+data/native_video/*.mov

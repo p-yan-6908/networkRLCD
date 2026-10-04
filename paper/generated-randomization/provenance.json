@@ -1,0 +1,58 @@
+{
+  "config_sha256": "91c18516aca75513e82061925139df6e1a2ae4a27674adb06bdc203537894d71",
+  "episodes": 7700,
+  "evidence_label": "Paper-scale descriptive follow-up",
+  "generated_sha256": {
+    "evidence.tex": "54ced522a1e7bfbc60938a733d7ec737ae69394d60510a5c23b6bdf3c36c96f6",
+    "figures/qoe_safety_tradeoff.pdf": "e9426a5604062de2dd3c900fac0543624b6543893ea7e1dd9e1d1cd127fc74b4",
+    "figures/reliability.pdf": "d9a439e227ac080cb4e34e905ba36ead21501bbd4abbb1246373d0f1d718b285",
+    "figures/trajectory_collapse.pdf": "d8833fd137493900943d143138e47f9a679e8c14d964c3ad282fd0891ece8b40",
+    "table_ablations.tex": "3456c8eabca78eb7c0ca8ed6c310eea9b3fa8d03af0a5112ede328747e088ab5",
+    "table_calibration.tex": "b2f356c059bb983113e1c68335bd49785fd5917a1da7b0bc4f84b6ba90d590b2",
+    "table_comparison.tex": "49f86206a6572146da5f1b701bb34f8f0b90d3f8dc8ea11c475ca6cb5a0a8b72",
+    "table_contrasts.tex": "1eb7810ad19393b16560c65ed27244390bf6b50e121dea704983934a0ceea0d0",
+    "table_policy_randomization.tex": "6ca65399daf2514b0e177c88b493613230000690ac65030e40bdc38d4957eb78",
+    "table_randomization_families.tex": "dd437a7c792929d78366af23fe4f26ab7d8de8ad4d9020de8c6881fb381a9612",
+    "table_randomization_scenarios.tex": "b526dfbffc151b82e11455e58cfed7d48b2a47b024497531159f37954101879b"
+  },
+  "integrity_checked": true,
+  "limitations": [
+    "Conditional training-seed bootstrap; fixed trace panel.",
+    "No claim of real-network validation or untouched confirmatory data."
+  ],
+  "macro_prefix": "Random",
+  "manifest_sha256": "672c389045c8a2250b0f3efc57269f8ea0dbe7ab72fff1298abbebddc0eb6fd5",
+  "model_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99,
+    110
+  ],
+  "source_files": {
+    "calibration_diagnostics.csv": "d70e028bcf29bf2dd09baabbca75361ddfbae0894c4ae11995b0c03f6f1ad5f1",
+    "episodes.csv": "efa2d72a271ce7414500850a6abe19d0eb6c2df37d0c8324fc9e81356da43a6b",
+    "paired_differences.csv": "2a3eca3faa8daf97addfae68c8341e3d8eba5c902bba6f6749cac9b3359f478d",
+    "summary.csv": "64a6624295170133031e9f12cc143d46b592b5665102aca654208e945e054017"
+  },
+  "source_run": "./results/policy-randomization-v4/test",
+  "steps": 4620000,
+  "test_seeds": [
+    5601,
+    5602,
+    5603,
+    5604,
+    5605,
+    5606,
+    5607,
+    5608,
+    5609,
+    5610
+  ],
+  "verified_artifacts": 345
+}

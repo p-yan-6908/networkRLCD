@@ -1,0 +1,12 @@
+{
+ "experiment_abi":"native_causal_context_v5",
+ "purpose":"one frozen causal context switch between unchanged n=3/n=20 actors; no fitting, cutoff relaxation or development selection",
+ "short_model":"results/native-model-v3/model.json","long_model":"results/native-model-v4/model.json",
+ "window_ms":2000,"max_gap_ms":1000,"bwe_drop_fraction":0.2,"offered_over_bwe_ratio":1.05,
+ "rtcp_rtt_rise_ms":30,"rtcp_rtt_max_observed_age_ms":1000,"packet_send_delay_ms":25,
+ "consecutive_alarm_samples":2,"long_hold_after_alarm_ms":2000,"clean_recovery_ms":1000,
+ "risk_cutoff":0.5,"disagreement_cutoff":0.2,
+ "default_horizon":3,"deterioration_horizon":20,
+ "candidate_selection_or_promotion_allowed":false,"development_labels_used_for_fitting":false,
+ "natural_content_or_SOTA_claim_allowed":false
+}

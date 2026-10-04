@@ -1,0 +1,14 @@
+{
+  "source_abi": "recorded_video_v1",
+  "path": "./data/native_video/sintel_video_only.mp4",
+  "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+  "duration_ms": 888032,
+  "width": 1280,
+  "height": 544,
+  "frame_rate": "24/1",
+  "attribution": "Sintel (2010), Blender Foundation / www.sintel.org \u2014 original film credit scroll retained; video-only remux for local benchmark",
+  "license_url": "https://durian.blender.org/sharing/",
+  "source_url": "https://download.blender.org/durian/movies/Sintel.2010.720p.mkv.zip",
+  "rights_asserted_by_importer": true,
+  "not_representative_corpus": true
+}

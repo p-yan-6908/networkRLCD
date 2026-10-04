@@ -1,0 +1,24 @@
+{
+  "panel_abi": "native_live_development_v1",
+  "purpose": "prospective synthetic-content same-host development comparison, not validation/promotion/final test",
+  "model_path": "results/native-model-v1/model.json",
+  "model_sha256": "46824918cb01fe65f3107fe808b0f9fcd7f583cf9dfab9df500a63698b8a6a64",
+  "controllers": ["fixed", "bwe", "rlcd"],
+  "observation_abi": "native_sender_stats_v1",
+  "history_steps": 4,
+  "receiver_target_ms": 0,
+  "common_shadow_inference": true,
+  "risk_cutoff": 0.5,
+  "disagreement_cutoff": 0.2,
+  "provisional_inference_p99_budget_ms": 10,
+  "candidate_selection_or_promotion_allowed": false,
+  "epochs_are_independent_browser_executions_not_identical_packet_traces": true,
+  "episodes": [
+    {"id":"collapse-a","role":"development","scene_seed":20011,"schedule":[[2,"high",3000],[0.5,"collapse",3000],[2,"recovery",3000]],"order":["rlcd","fixed","bwe"]},
+    {"id":"collapse-b","role":"development","scene_seed":24007,"schedule":[[2,"high",3000],[0.5,"collapse",3000],[2,"recovery",3000]],"order":["bwe","rlcd","fixed"]},
+    {"id":"stable-a","role":"development","scene_seed":28001,"schedule":[[2,"high",3000],[2,"collapse",3000],[2,"recovery",3000]],"order":["fixed","bwe","rlcd"]},
+    {"id":"stable-b","role":"development","scene_seed":32003,"schedule":[[2,"high",3000],[2,"collapse",3000],[2,"recovery",3000]],"order":["rlcd","bwe","fixed"]},
+    {"id":"variable-a","role":"development","scene_seed":36007,"schedule":[[3.2,"high",3000],[0.7,"collapse",3000],[2.8,"recovery",3000]],"order":["bwe","fixed","rlcd"]},
+    {"id":"variable-b","role":"development","scene_seed":40009,"schedule":[[3.2,"high",3000],[0.7,"collapse",3000],[2.8,"recovery",3000]],"order":["fixed","rlcd","bwe"]}
+  ]
+}

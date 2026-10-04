@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {growthHoldAction} from './action_fallback_guard.mjs';
+function d(reason='risk_or_support',delay=120,valid=1,cap=1700000){const f=Array(16).fill(0);f[7]=.25;return {features:f,feedback_features:[delay/150,0,valid,1],fallback:reason!=='learned',reason,encoder_max_bitrate_bps:cap,receiver_jitter_buffer_target_ms:0};}
+test('fresh ACK delay and original sender hold only prevent fallback growth',()=>{const x=d(),before=structuredClone(x);assert.equal(growthHoldAction(x).encoder_max_bitrate_bps,1000000);assert.deepEqual(x,before);assert.equal(growthHoldAction(d('sender_congestion',0,0)).encoder_max_bitrate_bps,1000000);assert.equal(growthHoldAction(d('risk_or_support',200,1,600000)).encoder_max_bitrate_bps,600000);});
+test('no stale/future outcome inference or neural proposal changes',()=>{assert.equal(growthHoldAction(d('risk_or_support',300,0)).encoder_max_bitrate_bps,1700000);assert.equal(growthHoldAction(d('risk_or_support',119.9)).encoder_max_bitrate_bps,1700000);const out=growthHoldAction(d('learned',300));assert.equal(out.encoder_max_bitrate_bps,1700000);assert.equal(out.fallback_growth_hold_active,false);assert.equal(out.native_deployment_qualified,false);});
+test('invalid canonical identity or nonintegral actual cap rejects',()=>{const x=d();x.fallback=false;assert.throws(()=>growthHoldAction(x));const y=d();y.features[7]=150000.2/4e6;assert.throws(()=>growthHoldAction(y));});

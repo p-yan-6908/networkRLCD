@@ -1,0 +1,19 @@
+{
+  "abi": "rtc_peer_probe_protocol_v1",
+  "scope": "published_model_runtime_and_observation_replay_only",
+  "claims": {"closed_loop": false, "qoe_comparison": false, "sota": false},
+  "trace": ".tools/rtc_peer_research_v2/artifacts/02530.json",
+  "trace_git_blob_sha1": "9fa8c7479fa71434e63164dbf417433d5a9185be",
+  "prefix_rows": 2074,
+  "trace_role": "public_emulated_behavior_trace; training/selection membership unknown; NOT independent efficacy data",
+  "peers": ["schaferct-mmsys2024", "mmsys2024-baseline"],
+  "provider": "CPUExecutionProvider",
+  "runtime": "onnxruntime==1.23.2",
+  "threads": 1,
+  "state_policy": "separate zero initial hidden/cell state for each peer; carry its own outputs",
+  "inputs": "unaltered 150-float observation; no true_capacity, quality, loss labels or native projection",
+  "reference": "original scripts' obs reshape(1,1,150) and bandwidth output[0,0,0], applied separately to each peer",
+  "acceptance": ["pinned original Git blob and SHA-256 checkpoints", "exact reference parity for every row", "complete read-only replay audit", "actual label-poison invariance", "actual 64-input native ABI rejection", "all downloaded source bytes unchanged"],
+  "out": "results/published-rtc-peer-probe-v1",
+  "stop": "On hash, ABI, parity or audit failure preserve evidence and stop; no refitting, clamping, online feedback or promotion"
+}

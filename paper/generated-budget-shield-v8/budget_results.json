@@ -1,0 +1,769 @@
+{
+  "contrasts": [
+    {
+      "domain": "id",
+      "high": -0.034622553674385534,
+      "low": -0.18510221805930782,
+      "mean": -0.103820926823735,
+      "metric": "qoe",
+      "n": 10,
+      "reference": "shielded_uncertainty"
+    },
+    {
+      "domain": "id",
+      "high": -0.0037208333333333342,
+      "low": -0.010095833333333335,
+      "mean": -0.0067958333333333325,
+      "metric": "violation_rate",
+      "n": 10,
+      "reference": "shielded_uncertainty"
+    },
+    {
+      "domain": "id",
+      "high": -0.00043012898329328897,
+      "low": -0.05647720570020005,
+      "mean": -0.01941406340987816,
+      "metric": "qoe",
+      "n": 10,
+      "reference": "budget_only"
+    },
+    {
+      "domain": "id",
+      "high": 0.0001583333333333342,
+      "low": -0.00013333333333333142,
+      "mean": 3.333333333333466e-05,
+      "metric": "violation_rate",
+      "n": 10,
+      "reference": "budget_only"
+    },
+    {
+      "domain": "id",
+      "high": -0.12053657713952902,
+      "low": -0.2526938276515449,
+      "mean": -0.17737172769452708,
+      "metric": "qoe",
+      "n": 10,
+      "reference": "gcc"
+    },
+    {
+      "domain": "id",
+      "high": 1.6666666666665102e-05,
+      "low": -0.0004875000000000021,
+      "mean": -0.0002583333333333354,
+      "metric": "violation_rate",
+      "n": 10,
+      "reference": "gcc"
+    },
+    {
+      "domain": "ood",
+      "high": -0.0764619729649941,
+      "low": -0.1948859582995464,
+      "mean": -0.13280909816508207,
+      "metric": "qoe",
+      "n": 10,
+      "reference": "shielded_uncertainty"
+    },
+    {
+      "domain": "ood",
+      "high": -0.019859523809523813,
+      "low": -0.03723815476190477,
+      "mean": -0.028621428571428575,
+      "metric": "violation_rate",
+      "n": 10,
+      "reference": "shielded_uncertainty"
+    },
+    {
+      "domain": "ood",
+      "high": -0.0003841481753685429,
+      "low": -0.03789225686789972,
+      "mean": -0.013149947995594425,
+      "metric": "qoe",
+      "n": 10,
+      "reference": "budget_only"
+    },
+    {
+      "domain": "ood",
+      "high": 0.00017380952380952354,
+      "low": -0.0005380952380952382,
+      "mean": -9.047619047619052e-05,
+      "metric": "violation_rate",
+      "n": 10,
+      "reference": "budget_only"
+    },
+    {
+      "domain": "ood",
+      "high": -0.11585649591917094,
+      "low": -0.2205642189211274,
+      "mean": -0.15984571241626283,
+      "metric": "qoe",
+      "n": 10,
+      "reference": "gcc"
+    },
+    {
+      "domain": "ood",
+      "high": 0.006426249999999995,
+      "low": -0.0005904761904761932,
+      "mean": 0.0026380952380952354,
+      "metric": "violation_rate",
+      "n": 10,
+      "reference": "gcc"
+    }
+  ],
+  "diagnostics": [
+    {
+      "domain": "id",
+      "high": 0.6506230208333332,
+      "low": 0.5068333333333332,
+      "mean": 0.5690458333333333,
+      "method": "shielded_budget",
+      "metric": "budget_intervention_rate",
+      "n": 10
+    },
+    {
+      "domain": "id",
+      "high": 0.22190468749999998,
+      "low": 0.10967874999999999,
+      "mean": 0.16459583333333333,
+      "method": "shielded_budget",
+      "metric": "budget_abstention_rate",
+      "n": 10
+    },
+    {
+      "domain": "id",
+      "high": 0.5167167708333333,
+      "low": 0.33473833333333336,
+      "mean": 0.4234416666666667,
+      "method": "shielded_budget",
+      "metric": "intervention_rate",
+      "n": 10
+    },
+    {
+      "domain": "id",
+      "high": 2.9397880801520495,
+      "low": 2.65317913186043,
+      "mean": 2.8104688396376054,
+      "method": "shielded_budget",
+      "metric": "mean_action_budget_mbps",
+      "n": 10
+    },
+    {
+      "domain": "ood",
+      "high": 0.57052125,
+      "low": 0.45017285714285715,
+      "mean": 0.5024166666666666,
+      "method": "shielded_budget",
+      "metric": "budget_intervention_rate",
+      "n": 10
+    },
+    {
+      "domain": "ood",
+      "high": 0.2900952380952381,
+      "low": 0.1718941666666667,
+      "mean": 0.2340404761904762,
+      "method": "shielded_budget",
+      "metric": "budget_abstention_rate",
+      "n": 10
+    },
+    {
+      "domain": "ood",
+      "high": 0.37865744047619043,
+      "low": 0.19647922619047617,
+      "mean": 0.2831738095238095,
+      "method": "shielded_budget",
+      "metric": "intervention_rate",
+      "n": 10
+    },
+    {
+      "domain": "ood",
+      "high": 2.462240812094117,
+      "low": 2.2159628136478564,
+      "mean": 2.3531370696537848,
+      "method": "shielded_budget",
+      "metric": "mean_action_budget_mbps",
+      "n": 10
+    },
+    {
+      "domain": "id",
+      "high": 0.6575396874999999,
+      "low": 0.5175323958333334,
+      "mean": 0.5787249999999999,
+      "method": "budget_only",
+      "metric": "budget_intervention_rate",
+      "n": 10
+    },
+    {
+      "domain": "id",
+      "high": 0.22191072916666663,
+      "low": 0.10999916666666668,
+      "mean": 0.16477083333333334,
+      "method": "budget_only",
+      "metric": "budget_abstention_rate",
+      "n": 10
+    },
+    {
+      "domain": "id",
+      "high": 0.5036174999999997,
+      "low": 0.33019124999999994,
+      "mean": 0.41395416666666673,
+      "method": "budget_only",
+      "metric": "intervention_rate",
+      "n": 10
+    },
+    {
+      "domain": "id",
+      "high": 2.9125360102158164,
+      "low": 2.638725998737929,
+      "mean": 2.7891430447887204,
+      "method": "budget_only",
+      "metric": "mean_action_budget_mbps",
+      "n": 10
+    },
+    {
+      "domain": "ood",
+      "high": 0.5762715476190476,
+      "low": 0.4603854761904762,
+      "mean": 0.510288095238095,
+      "method": "budget_only",
+      "metric": "budget_intervention_rate",
+      "n": 10
+    },
+    {
+      "domain": "ood",
+      "high": 0.29089565476190477,
+      "low": 0.17128529761904762,
+      "mean": 0.2340785714285714,
+      "method": "budget_only",
+      "metric": "budget_abstention_rate",
+      "n": 10
+    },
+    {
+      "domain": "ood",
+      "high": 0.36472488095238087,
+      "low": 0.19614398809523811,
+      "mean": 0.2762095238095238,
+      "method": "budget_only",
+      "metric": "intervention_rate",
+      "n": 10
+    },
+    {
+      "domain": "ood",
+      "high": 2.4517406597931184,
+      "low": 2.2118395650390554,
+      "mean": 2.3465308098612465,
+      "method": "budget_only",
+      "metric": "mean_action_budget_mbps",
+      "n": 10
+    }
+  ],
+  "domain_means": [
+    {
+      "domain": "id",
+      "mean": 0.16643750000000002,
+      "method": "budget_only",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 1.9718893373245483,
+      "method": "budget_only",
+      "metric": "qoe"
+    },
+    {
+      "domain": "id",
+      "mean": 0.00045833333333333604,
+      "method": "budget_only",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 0.037983333333333334,
+      "method": "calibrated",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 2.040626140902546,
+      "method": "calibrated",
+      "metric": "qoe"
+    },
+    {
+      "domain": "id",
+      "mean": 0.009225000000000006,
+      "method": "calibrated",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 0.0,
+      "method": "gcc",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 2.129847001609197,
+      "method": "gcc",
+      "metric": "qoe"
+    },
+    {
+      "domain": "id",
+      "mean": 0.0007500000000000061,
+      "method": "gcc",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 0.0,
+      "method": "heuristic",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 2.134394487993746,
+      "method": "heuristic",
+      "metric": "qoe"
+    },
+    {
+      "domain": "id",
+      "mean": 0.002416666666666672,
+      "method": "heuristic",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 0.0,
+      "method": "rl",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 2.066955699172091,
+      "method": "rl",
+      "metric": "qoe"
+    },
+    {
+      "domain": "id",
+      "mean": 0.009033333333333334,
+      "method": "rl",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 0.0,
+      "method": "safe",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 1.7540763355534377,
+      "method": "safe",
+      "metric": "qoe"
+    },
+    {
+      "domain": "id",
+      "mean": 0.00033333333333333826,
+      "method": "safe",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 0.16675,
+      "method": "shielded_budget",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 1.9524752739146698,
+      "method": "shielded_budget",
+      "metric": "qoe"
+    },
+    {
+      "domain": "id",
+      "mean": 0.0004916666666666708,
+      "method": "shielded_budget",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 0.009566666666666666,
+      "method": "shielded_uncertainty",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "id",
+      "mean": 2.056296200738405,
+      "method": "shielded_uncertainty",
+      "metric": "qoe"
+    },
+    {
+      "domain": "id",
+      "mean": 0.007287500000000007,
+      "method": "shielded_uncertainty",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.32537857142857146,
+      "method": "budget_only",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.954639765246668,
+      "method": "budget_only",
+      "metric": "qoe"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.0758952380952381,
+      "method": "budget_only",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.14987857142857147,
+      "method": "calibrated",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 1.0637350829654015,
+      "method": "calibrated",
+      "metric": "qoe"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.10682619047619046,
+      "method": "calibrated",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.0,
+      "method": "gcc",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 1.1013355296673364,
+      "method": "gcc",
+      "metric": "qoe"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.07316666666666664,
+      "method": "gcc",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.0,
+      "method": "heuristic",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 1.223982850173059,
+      "method": "heuristic",
+      "metric": "qoe"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.0737857142857143,
+      "method": "heuristic",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.0,
+      "method": "rl",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.5367529006341303,
+      "method": "rl",
+      "metric": "qoe"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.15808333333333333,
+      "method": "rl",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.0,
+      "method": "safe",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.7967683518557518,
+      "method": "safe",
+      "metric": "qoe"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.0707142857142857,
+      "method": "safe",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.32781190476190475,
+      "method": "shielded_budget",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.9414898172510735,
+      "method": "shielded_budget",
+      "metric": "qoe"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.0758047619047619,
+      "method": "shielded_budget",
+      "metric": "violation_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.11038333333333335,
+      "method": "shielded_uncertainty",
+      "metric": "fallback_rate"
+    },
+    {
+      "domain": "ood",
+      "mean": 1.0742989154161555,
+      "method": "shielded_uncertainty",
+      "metric": "qoe"
+    },
+    {
+      "domain": "ood",
+      "mean": 0.10442619047619048,
+      "method": "shielded_uncertainty",
+      "metric": "violation_rate"
+    }
+  ],
+  "limitations": [
+    "Fixed known-family trace panel; model-seed bootstrap only.",
+    "Budget is a telemetry heuristic, not measured capacity or a safety certificate.",
+    "Budget-only retains Q ranking and the learned support guard."
+  ],
+  "selection": {
+    "ablation_method": "budget_only",
+    "baseline_metrics": {
+      "id_qoe": 2.0155932565103303,
+      "id_violation_rate": 0.006833333333333335,
+      "scenarios": {
+        "bufferbloat": {
+          "qoe": 0.8956456412914865,
+          "violation_rate": 0.09083333333333334
+        },
+        "burst_loss": {
+          "qoe": 1.9510054891019268,
+          "violation_rate": 0.1793333333333333
+        },
+        "capacity_surge": {
+          "qoe": 2.566395637390703,
+          "violation_rate": 0.0
+        },
+        "collapse": {
+          "qoe": 0.8713612992525914,
+          "violation_rate": 0.13946666666666668
+        },
+        "feedback_gap": {
+          "qoe": 1.7434867140880765,
+          "violation_rate": 0.009366666666666688
+        },
+        "handover": {
+          "qoe": -0.6116344695878044,
+          "violation_rate": 0.19363333333333332
+        },
+        "outage": {
+          "qoe": -0.2475892273224564,
+          "violation_rate": 0.15166666666666662
+        },
+        "ramp": {
+          "qoe": 2.0004377439863728,
+          "violation_rate": 0.004566666666666668
+        },
+        "steady": {
+          "qoe": 2.357668563130956,
+          "violation_rate": 0.0
+        },
+        "step": {
+          "qoe": 1.7585495042766268,
+          "violation_rate": 0.02080000000000001
+        },
+        "wifi": {
+          "qoe": 1.9457172146473658,
+          "violation_rate": 0.0019666666666666678
+        }
+      },
+      "stress_qoe": 1.0240958691735036,
+      "stress_violation_rate": 0.10918571428571429
+    },
+    "baseline_model_sha256": {
+      "11": "d03b22f5bac7d59d013b04c75a8b2daa1df1061f1dc2caf7c4a762eaa629f62c",
+      "110": "54311bb5b8d3f1dd127013f190d082025bddeb0dd3bb8d2b75c165aae64a710e",
+      "22": "8937ef7ace8320b5a071de37151458ba53d948029606611df286c4b889279ac5",
+      "33": "7831e5cb2c88ffdac964dd0f68ae17a9c5ddb2a94ac7942e8ff4c3a5a1536889",
+      "44": "bcf8f92e40c016e3f1bee2df92a00efa5f07a0bdb0ec0f6b9f8462b9db61b6d5",
+      "55": "25b2fb3a3220b87e80b8dc084ef6a647b47efeeb615c97f2233833a452e4c3a1",
+      "66": "efce05bf94fada81beb87ef8097a9c6d5db2f3c5f22c9be28fa3d27aab7a9350",
+      "77": "ed831e29c52f2dc8da0594d5c5020b4e09400bd2fd903f55023ee48ef01f925f",
+      "88": "95688839483164677dfad5dc6aeef9c2e939c570e6c1f2dcbe4c718dd323ee18",
+      "99": "48292544bc48256e25300ccb622e67cdd7ff21f2f00d682b82891ecf4944c387"
+    },
+    "baseline_score": 0.9739159914133456,
+    "candidate_feasible": false,
+    "candidate_method": "shielded_budget",
+    "candidate_metrics": {
+      "id_qoe": 1.9209879578599358,
+      "id_violation_rate": 0.000708333333333338,
+      "scenarios": {
+        "bufferbloat": {
+          "qoe": 1.2330044946465286,
+          "violation_rate": 0.01070000000000001
+        },
+        "burst_loss": {
+          "qoe": 0.8504462453948672,
+          "violation_rate": 0.1793333333333333
+        },
+        "capacity_surge": {
+          "qoe": 2.486360154560404,
+          "violation_rate": 0.0
+        },
+        "collapse": {
+          "qoe": 1.2611532767611024,
+          "violation_rate": 0.02976666666666667
+        },
+        "feedback_gap": {
+          "qoe": 1.6728190092549113,
+          "violation_rate": 0.0
+        },
+        "handover": {
+          "qoe": -0.705450847560421,
+          "violation_rate": 0.17970000000000003
+        },
+        "outage": {
+          "qoe": -0.43208930980039123,
+          "violation_rate": 0.15166666666666662
+        },
+        "ramp": {
+          "qoe": 1.9269807808315786,
+          "violation_rate": 0.0001666666666666683
+        },
+        "steady": {
+          "qoe": 2.273278999231108,
+          "violation_rate": 0.0
+        },
+        "step": {
+          "qoe": 1.777101462916339,
+          "violation_rate": 0.002466666666666684
+        },
+        "wifi": {
+          "qoe": 1.7065905884607178,
+          "violation_rate": 0.00020000000000000017
+        }
+      },
+      "stress_qoe": 0.9094632890367146,
+      "stress_violation_rate": 0.07873809523809523
+    },
+    "candidate_model_sha256": {
+      "11": "d03b22f5bac7d59d013b04c75a8b2daa1df1061f1dc2caf7c4a762eaa629f62c",
+      "110": "54311bb5b8d3f1dd127013f190d082025bddeb0dd3bb8d2b75c165aae64a710e",
+      "22": "8937ef7ace8320b5a071de37151458ba53d948029606611df286c4b889279ac5",
+      "33": "7831e5cb2c88ffdac964dd0f68ae17a9c5ddb2a94ac7942e8ff4c3a5a1536889",
+      "44": "bcf8f92e40c016e3f1bee2df92a00efa5f07a0bdb0ec0f6b9f8462b9db61b6d5",
+      "55": "25b2fb3a3220b87e80b8dc084ef6a647b47efeeb615c97f2233833a452e4c3a1",
+      "66": "efce05bf94fada81beb87ef8097a9c6d5db2f3c5f22c9be28fa3d27aab7a9350",
+      "77": "ed831e29c52f2dc8da0594d5c5020b4e09400bd2fd903f55023ee48ef01f925f",
+      "88": "95688839483164677dfad5dc6aeef9c2e939c570e6c1f2dcbe4c718dd323ee18",
+      "99": "48292544bc48256e25300ccb622e67cdd7ff21f2f00d682b82891ecf4944c387"
+    },
+    "candidate_promoted": false,
+    "candidate_score": 1.021535147257849,
+    "protocol": {
+      "max_ensemble_std": 0.05,
+      "max_id_qoe_drop": 0.03,
+      "max_id_violation_increase": 0.01,
+      "max_stress_scenario_violation_increase": 0.03,
+      "max_stress_violation_increase": 0.02,
+      "minimum_score_gain": 0.005,
+      "model_seeds": [
+        11,
+        22,
+        33,
+        44,
+        55,
+        66,
+        77,
+        88,
+        99,
+        110
+      ],
+      "name": "rlcd-v8-causal-wire-budget-screen",
+      "risk_penalty": 5.0,
+      "test_seeds": [
+        13701,
+        13702,
+        13703,
+        13704,
+        13705,
+        13706,
+        13707,
+        13708,
+        13709,
+        13710
+      ],
+      "threshold": 0.9,
+      "top_k": 5,
+      "validation_seeds": [
+        12701,
+        12702,
+        12703,
+        12704,
+        12705
+      ]
+    },
+    "reference_method": "shielded_uncertainty",
+    "score_gain": 0.04761915584450349,
+    "selected_controller": "shielded_uncertainty",
+    "selection_split": "validation",
+    "stress_scenario_violation_deltas": {
+      "bufferbloat": -0.08013333333333332,
+      "burst_loss": 0.0,
+      "capacity_surge": 0.0,
+      "collapse": -0.10970000000000002,
+      "feedback_gap": -0.009366666666666688,
+      "handover": -0.013933333333333298,
+      "outage": 0.0
+    },
+    "test_seeds": [
+      13701,
+      13702,
+      13703,
+      13704,
+      13705,
+      13706,
+      13707,
+      13708,
+      13709,
+      13710
+    ],
+    "validation_manifest_sha256": "71d0d28b08837e0d95f3e0acac84269d8b6efb5a07636b388c6527fe2b3d5e3c",
+    "validation_seeds": [
+      12701,
+      12702,
+      12703,
+      12704,
+      12705
+    ]
+  },
+  "units": {
+    "qoe": "synthetic reward per interval",
+    "violation_rate": "fraction"
+  }
+}

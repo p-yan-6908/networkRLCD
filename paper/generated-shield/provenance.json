@@ -1,0 +1,62 @@
+{
+  "config_sha256": "cefc87527c443fe0d9099654fa7050b5efed6eeb70669e170aee68dfef694e46",
+  "episodes": 8800,
+  "evidence_label": "Paper-scale descriptive follow-up",
+  "generated_sha256": {
+    "evidence.tex": "ea67c658cf284f3081eb3e8c83e86907787d911149c78eac8ca2ccce772ecca8",
+    "figures/qoe_safety_tradeoff.pdf": "872935d9988df7660d057200acd9fe40c224456d5c4a553d21ddc098b46c1b31",
+    "figures/reliability.pdf": "0a208c92383e05c7f72e68246f86b25e069eb1220a3864d1ee67d5df7ba38f41",
+    "figures/trajectory_collapse.pdf": "cbb19ea636a99fe48b6b5db792add51c71c877088ed7d437d0c12182db95c89c",
+    "table_ablations.tex": "a3a3f9a7b4e2bf61763b44bd38ea520ef7b28525b867c73e2d99dc04a509c75c",
+    "table_action_selection_calibration.tex": "592802fb27fe3dcf6d64b2f605208b7904c969db30d0f93ffabe0151625113c7",
+    "table_action_shield.tex": "70143b3029ad80f258fc32934469a09dd89ee58bac787ee357e64c6a42767c48",
+    "table_action_shield_contrasts.tex": "e10c7542c4c3cbca37f4f20d81d888527a2659260125341008d5bbcf144b5aea",
+    "table_action_shield_diagnostics.tex": "b43b6af314c800ca88ce5c8167661787edb79cbab992608aa4b1d74d161aa13e",
+    "table_action_shield_families.tex": "8a52fd620d49253e68abf4b2875c4eba96e8fcfdbe40f42d72210ea00be2ff4e",
+    "table_action_shield_scenarios.tex": "4bff6f89698448554da51c59662faf0993cb1de026188f9ae9395bb5c74edd48",
+    "table_calibration.tex": "e213f4eaf121ff0bd645076e93837500b63b8a231868ba095a29664a33563337",
+    "table_comparison.tex": "03473a5c3a371d2af7020291f19efc65b27bbe658d167ac2e3ef1a7a1b8fed6b",
+    "table_contrasts.tex": "fd872238f8f1af2b926bc565a5346cfb6b210cfea4f094bf408897b7e707c51b"
+  },
+  "integrity_checked": true,
+  "limitations": [
+    "Conditional training-seed bootstrap; fixed trace panel.",
+    "No claim of real-network validation or untouched confirmatory data."
+  ],
+  "macro_prefix": "Shield",
+  "manifest_sha256": "f11a44a31d62dcc7bb1acfe0e6c7a4e7f7afe386daf1e5b477cf58ba19c267f4",
+  "model_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99,
+    110
+  ],
+  "source_files": {
+    "calibration_diagnostics.csv": "1885a62b21772a6fd538bde63f9e20c91179dfcf05556ec74a66fee53a0e3b6b",
+    "episodes.csv": "cab0405ac853b3095228c12c3186622250c954e71187679270be7667b93551c4",
+    "paired_differences.csv": "c57e87b624b8576db3ea3d1e40717ce2d092f6903958e9669cb82e92b9d4d5f7",
+    "steps.csv.gz": "1dd9d62dd65a0a05ceadbd8fa686a9c385cae28d2164afab985247b206289719",
+    "summary.csv": "21d43a8086e11dc2da13d8294acf9ac91979ff8240912cd7d14a0055b226fc15"
+  },
+  "source_run": "./results/action-shield-v5/test",
+  "steps": 5280000,
+  "test_seeds": [
+    7701,
+    7702,
+    7703,
+    7704,
+    7705,
+    7706,
+    7707,
+    7708,
+    7709,
+    7710
+  ],
+  "verified_artifacts": 307
+}

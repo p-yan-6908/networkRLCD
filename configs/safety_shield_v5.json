@@ -1,0 +1,14 @@
+{
+  "name": "rlcd-v5-action-shield",
+  "model_seeds": [11, 22, 33, 44, 55, 66, 77, 88, 99, 110],
+  "validation_seeds": [6701, 6702, 6703, 6704, 6705, 6706, 6707, 6708, 6709, 6710],
+  "test_seeds": [7701, 7702, 7703, 7704, 7705, 7706, 7707, 7708, 7709, 7710],
+  "top_k": 5,
+  "threshold": 0.90,
+  "max_id_qoe_drop": 0.03,
+  "max_id_violation_increase": 0.01,
+  "max_stress_violation_increase": 0.02,
+  "max_stress_scenario_violation_increase": 0.03,
+  "risk_penalty": 5.0,
+  "minimum_score_gain": 0.005
+}

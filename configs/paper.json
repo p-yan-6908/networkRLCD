@@ -1,0 +1,8 @@
+{
+  "name": "paper-protocol-v1",
+  "seeds": [11, 22, 33, 44, 55, 66, 77, 88, 99, 110],
+  "test_seeds": [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120],
+  "bootstrap_samples": 10000,
+  "simulator": {"steps": 600},
+  "training": {"episodes": 160, "risk_episodes": 40, "calibration_episodes": 40, "hidden": 64, "risk_epochs": 30}
+}

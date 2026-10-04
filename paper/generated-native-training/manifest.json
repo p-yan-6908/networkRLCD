@@ -1,0 +1,9 @@
+{
+  "stage": "native_training_only_paper_evidence_verified",
+  "artifacts_sha256": {
+    "evidence.tex": "22cf37724a466c35f129859fa8c6dd13f19d83c733de35ebfe86c8a619735416",
+    "evidence.json": "ff16152cfcadcbcccaab12add25c2c3e180b8032e394dba7c9984b7519ba8a76"
+  },
+  "input_model_manifest_sha256": "dd0ea0485cc00dd582dd7b7c430a23618e00432947fba2151d8edd90c1fb80a6",
+  "exporter_sha256": "1fa7f58f57ab29927d5dd4ab321b4bc47a91a074177f9672d29733cb3b0f2478"
+}

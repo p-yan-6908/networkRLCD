@@ -1,0 +1,15 @@
+{
+  "name": "rlcd-v9-delay-evidence-wire-budget",
+  "model_seeds": [11, 22, 33, 44, 55, 66, 77, 88, 99, 110],
+  "validation_seeds": [14701, 14702, 14703, 14704, 14705],
+  "test_seeds": [15701, 15702, 15703, 15704, 15705, 15706, 15707, 15708, 15709, 15710],
+  "top_k": 5,
+  "threshold": 0.9,
+  "max_ensemble_std": 0.05,
+  "max_id_qoe_drop": 0.03,
+  "max_id_violation_increase": 0.01,
+  "max_stress_violation_increase": 0.02,
+  "max_stress_scenario_violation_increase": 0.03,
+  "risk_penalty": 5.0,
+  "minimum_score_gain": 0.005
+}

@@ -1,0 +1,28 @@
+{
+  "stage": "native_temporal_credit_gain_nominal_tradeoff_paper_verified",
+  "artifacts_sha256": {
+    "evidence.tex": "963d704229ed0dd1ec652cee37d8460ac20f623896e7870aa38f03c71cc13c2b",
+    "table.tex": "e83f8f1c788eb7522d1bc399342c45344ff21a696adc48110e1005b3f428367c",
+    "groups.tex": "d7de32cccd31a320c59a78df75a640d7150e19024e3fbe7735eb729d67c6cd07",
+    "evidence.json": "00789bafa1ab5e20019a0648d7811b3de4621e679da68830bc4c3dca73f47831"
+  },
+  "exporter_sha256": "fbfc2e9a6cc20ea930b5f2e1768bcd344f16f54d15f05c6e8009741e72b0b888",
+  "source_sha256": {
+    ".tools/audit_native_temporal_v4.py": "92ebc178c2401e222d0f18b5e91d9b436dae80cd63da10293f85cc4681e06991",
+    ".tools/diagnose_native_temporal_v4.py": "39c491c537f2878bfa3982079a77c614046a5b6477b1155357d8936ad0a99bd9",
+    ".tools/train_native_temporal_v4.py": "bba8cf1e73332772734c0da79639191bb4b7eaad3e4f4297a12bcd2ecbc7c14f",
+    ".tools/replay_native_wire.py": "44d3cb17426af61d21a9828d320ca2bdff49adce6ef703fa86d643b00e9ba67c",
+    "configs/native_temporal_v4.json": "a1e9b81d9a6202c92beb0f4d153b29fe2d2dabe8551622579d12b77d1eb993b4",
+    "configs/native_temporal_development_v4.json": "30c916b8d11618ace2e3c2db7628d5cdaedb12ab6f04d60e1bb800b621785c9c",
+    "results/native-model-v3/model.json": "bab783ccc0b45eb6fab4aaab20c350e5e02a8745cdbe3c3de1c3d096a99d689a",
+    "results/native-model-v4/model.json": "1af1832db2fc44bfbef7a4ca26daa639b96a8058a64b69001c5d271fb0aa22dd",
+    "results/native-model-v4/manifest.json": "47975555c3c3c2c77918627de18690cd4933edee0614b97baa7bce5173e7b7cf",
+    "results/native-temporal-development-v4/manifest.json": "49e6883e51e409f78923b662ed6c1148e9943c9036def9faeaaa79a896969001",
+    "results/jobs/native-model-v4-parity.json": "c65ce8b4ef3b7e1cf1febb48160db4fdf22bc104bac53b5adfe78d54a3a09282",
+    "results/jobs/native-temporal-v4-credit-diagnosis.json": "921c2eb3f75859b3dbf949481499e72b95f89b7c8c9375d6a8af308c4b131acf",
+    "results/jobs/native-temporal-v4-python-tests.log": "823a6d93e8606b6433035de68a501c22e970e1f4f1fac202a7c9812a895b6957",
+    "results/jobs/native-temporal-v4-node-tests.log": "13572208ed8b7ed4d258534dcad38d1b53c5ff6c97989b3e29e74bd94b7abe82"
+  },
+  "selected_or_promoted": false,
+  "SOTA_achieved": false
+}

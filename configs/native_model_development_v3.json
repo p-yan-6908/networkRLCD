@@ -1,0 +1,189 @@
+{
+  "panel_abi": "native_two_model_development_v3",
+  "purpose": "prospective fresh old/native-mixed/BWE comparison; no validation/promotion/final-test inference",
+  "models": {
+    "v1": {
+      "path": "results/native-model-v1/model.json",
+      "sha256": "46824918cb01fe65f3107fe808b0f9fcd7f583cf9dfab9df500a63698b8a6a64"
+    },
+    "v3": {
+      "path": "results/native-model-v3/model.json",
+      "sha256": "bab783ccc0b45eb6fab4aaab20c350e5e02a8745cdbe3c3de1c3d096a99d689a"
+    }
+  },
+  "controllers": [
+    "rlcd-v1",
+    "rlcd-v3",
+    "bwe"
+  ],
+  "common_two_model_shadow": true,
+  "common_shadow_inference": true,
+  "risk_cutoff": 0.5,
+  "disagreement_cutoff": 0.2,
+  "provisional_inference_p99_budget_ms": 10,
+  "candidate_selection_or_promotion_allowed": false,
+  "episodes": [
+    {
+      "id": "collapse-e",
+      "role": "development",
+      "scene_seed": 51401,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          0.5,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "rlcd-v3",
+        "rlcd-v1",
+        "bwe"
+      ]
+    },
+    {
+      "id": "collapse-f",
+      "role": "development",
+      "scene_seed": 55401,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          0.5,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "bwe",
+        "rlcd-v3",
+        "rlcd-v1"
+      ]
+    },
+    {
+      "id": "stable-e",
+      "role": "development",
+      "scene_seed": 59401,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          2,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "rlcd-v1",
+        "bwe",
+        "rlcd-v3"
+      ]
+    },
+    {
+      "id": "stable-f",
+      "role": "development",
+      "scene_seed": 63401,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          2,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "rlcd-v3",
+        "bwe",
+        "rlcd-v1"
+      ]
+    },
+    {
+      "id": "variable-e",
+      "role": "development",
+      "scene_seed": 13651,
+      "schedule": [
+        [
+          3.2,
+          "high",
+          3000
+        ],
+        [
+          0.7,
+          "collapse",
+          3000
+        ],
+        [
+          2.8,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "bwe",
+        "rlcd-v1",
+        "rlcd-v3"
+      ]
+    },
+    {
+      "id": "variable-f",
+      "role": "development",
+      "scene_seed": 18851,
+      "schedule": [
+        [
+          3.2,
+          "high",
+          3000
+        ],
+        [
+          0.7,
+          "collapse",
+          3000
+        ],
+        [
+          2.8,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "rlcd-v1",
+        "rlcd-v3",
+        "bwe"
+      ]
+    }
+  ]
+}

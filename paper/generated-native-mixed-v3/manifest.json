@@ -1,0 +1,25 @@
+{
+  "stage": "native_mixed_v3_stable_gain_transition_loss_paper_verified",
+  "artifacts_sha256": {
+    "evidence.tex": "fd055443325c12244c6e8581505abd3b0e8c6e7b0ed270c63e028c817ea9855b",
+    "table.tex": "30b8d40b3c72d87424345164af73220df24156ae7a8116d623e9b1f35b220204",
+    "groups.tex": "e3b58d6f7bb52035a2f30c9e5c43270547262e870e8cf945c6001fca3d737d7f",
+    "evidence.json": "99d290a1afa50b0001ae4795c3d9c47df0c8d30c30c4b571592dd6623151ede8"
+  },
+  "exporter_sha256": "935f6084a8bd0a51acc411df61220578063faf6a0208a6140ed8ab61ad1934e8",
+  "source_sha256": {
+    ".tools/audit_native_model_v3.py": "a8df4dd5d9008bf1bb31758729657f674d2cc34e140d01792b30d34b64583f20",
+    ".tools/replay_native_wire.py": "44d3cb17426af61d21a9828d320ca2bdff49adce6ef703fa86d643b00e9ba67c",
+    ".tools/diagnose_native_model_v3.py": "f7851999bcc1642e8406a726e5c9b27ebc69f79dac8442a8f0b0ae0184ea0644",
+    "results/jobs/native-model-v3-coverage-and-transition-diagnosis.json": "fb64132b1774d9eddc3f9052e45889d3dae268d62992cfb13e36ed5c040eed02",
+    "results/jobs/native-model-v3-parity.json": "6b7dd00f1bb1d4c0b2c2878c5d4f166e6e648a07ce036c8fec2cd6931e774e43",
+    "results/jobs/native-mixed-v3-loader-forgeries.json": "0349a496b7674ae489c2815ede93399df7ab705785f7f7eec61e2638de9046bd",
+    "results/jobs/native-mixed-v3-outer-timeout-evidence.json": "74b7380fa525cf0f9f2810baba4d812d52e2aa81f7cf18932181ff5dc4953a79",
+    "results/native-mixed-training-v3/manifest.json": "92c881321aef7fd143dfc201562372ef2ae7819b39073946006daf31e45c283c",
+    "results/native-model-v3/manifest.json": "4847455c84e79331cef8151d6e14f9d53e7f825d115c1cb6de49da7ad38fe052",
+    "results/native-model-v3/model.json": "bab783ccc0b45eb6fab4aaab20c350e5e02a8745cdbe3c3de1c3d096a99d689a",
+    "results/native-model-development-v3/manifest.json": "3f366b311e629e4624b8a8e847d49bd692db3354e7d166bcd9a0e1a6c47d284f"
+  },
+  "selected_or_promoted": false,
+  "SOTA_achieved": false
+}

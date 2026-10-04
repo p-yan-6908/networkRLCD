@@ -1,0 +1,761 @@
+{
+  "proof": {
+    "decisions": 1522,
+    "learned_decisions": 1014,
+    "secondary_decisions": 1522,
+    "eligible": 4848,
+    "ontime": 2804,
+    "quality_pairs": 3204,
+    "artifact_hashes": 486,
+    "raw_events": 337994,
+    "opaque_datagrams": 15073,
+    "clock_ties": 0,
+    "total_episodes": 18,
+    "learned_episodes": 12,
+    "max_two_model_p99_ms": 6.3509999644756325,
+    "max_model_score_error": 7.105427357601002e-15,
+    "means": {
+      "rlcd-v1": {
+        "utility": 17.88664898634372,
+        "ontime_fraction": 0.6359470374959842,
+        "inference_p99_ms": 5.265166660745938
+      },
+      "rlcd-v3": {
+        "utility": 16.17161989500855,
+        "ontime_fraction": 0.5101587957226122,
+        "inference_p99_ms": 5.169666683673858
+      },
+      "bwe": {
+        "utility": 16.050014222778554,
+        "ontime_fraction": 0.5895589517646519,
+        "inference_p99_ms": 4.876500003933907
+      }
+    },
+    "rlcd_minus_control": {
+      "bwe": {
+        "case_differences": [
+          {
+            "id": "collapse-e",
+            "utility_delta": -0.5086072180313259,
+            "ontime_fraction_delta": -0.054495387580889454,
+            "high_utility_delta": 11.754266138870632
+          },
+          {
+            "id": "collapse-f",
+            "utility_delta": -2.0803921549093065,
+            "ontime_fraction_delta": -0.11481481481481481,
+            "high_utility_delta": 14.231187540339773
+          },
+          {
+            "id": "stable-e",
+            "utility_delta": 10.984187397510105,
+            "ontime_fraction_delta": 0.24419661296984718,
+            "high_utility_delta": 16.12497026576404
+          },
+          {
+            "id": "stable-f",
+            "utility_delta": 11.002312978370721,
+            "ontime_fraction_delta": 0.2379182156133829,
+            "high_utility_delta": 14.803188312353022
+          },
+          {
+            "id": "variable-e",
+            "utility_delta": -10.377089038919264,
+            "ontime_fraction_delta": -0.436045711138648,
+            "high_utility_delta": 13.338204754261557
+          },
+          {
+            "id": "variable-f",
+            "utility_delta": -8.290777930640932,
+            "ontime_fraction_delta": -0.3531598513011152,
+            "high_utility_delta": 16.005889333515995
+          }
+        ],
+        "mean_utility_delta": 0.12160567223,
+        "mean_ontime_fraction_delta": -0.07940015604203957,
+        "mean_high_utility_delta": 14.376284390850836,
+        "descriptive_single_model_not_significance_or_promotion": true
+      },
+      "rlcd-v1": {
+        "case_differences": [
+          {
+            "id": "collapse-e",
+            "utility_delta": -2.9006929535725448,
+            "ontime_fraction_delta": -0.1412639405204461,
+            "high_utility_delta": 4.65651965574034
+          },
+          {
+            "id": "collapse-f",
+            "utility_delta": -8.38655723537489,
+            "ontime_fraction_delta": -0.34315021341043644,
+            "high_utility_delta": 10.646398126358974
+          },
+          {
+            "id": "stable-e",
+            "utility_delta": 8.870658945913696,
+            "ontime_fraction_delta": 0.21189591078066916,
+            "high_utility_delta": 10.731623049442252
+          },
+          {
+            "id": "stable-f",
+            "utility_delta": 9.511141104639016,
+            "ontime_fraction_delta": 0.21561338289962828,
+            "high_utility_delta": 8.442563311107946
+          },
+          {
+            "id": "variable-e",
+            "utility_delta": -10.447345428496169,
+            "ontime_fraction_delta": -0.41374087842489327,
+            "high_utility_delta": 4.6682870911025525
+          },
+          {
+            "id": "variable-f",
+            "utility_delta": -6.937378981120116,
+            "ontime_fraction_delta": -0.28408371196475285,
+            "high_utility_delta": 7.427423259419545
+          }
+        ],
+        "mean_utility_delta": -1.7150290913351676,
+        "mean_ontime_fraction_delta": -0.12578824177337186,
+        "mean_high_utility_delta": 7.762135748861934,
+        "descriptive_single_model_not_significance_or_promotion": true
+      }
+    },
+    "group_contrasts": {
+      "collapse": {
+        "bwe": {
+          "utility_delta": -1.2944996864703162,
+          "ontime_fraction_delta": -0.08465510119785213,
+          "high_utility_delta": 12.992726839605202
+        },
+        "rlcd-v1": {
+          "utility_delta": -5.643625094473717,
+          "ontime_fraction_delta": -0.24220707696544128,
+          "high_utility_delta": 7.651458891049657
+        }
+      },
+      "stable": {
+        "bwe": {
+          "utility_delta": 10.993250187940413,
+          "ontime_fraction_delta": 0.24105741429161504,
+          "high_utility_delta": 15.464079289058532
+        },
+        "rlcd-v1": {
+          "utility_delta": 9.190900025276356,
+          "ontime_fraction_delta": 0.21375464684014872,
+          "high_utility_delta": 9.5870931802751
+        }
+      },
+      "variable": {
+        "bwe": {
+          "utility_delta": -9.333933484780097,
+          "ontime_fraction_delta": -0.39460278121988157,
+          "high_utility_delta": 14.672047043888776
+        },
+        "rlcd-v1": {
+          "utility_delta": -8.692362204808141,
+          "ontime_fraction_delta": -0.34891229519482303,
+          "high_utility_delta": 6.0478551752610485
+        }
+      }
+    },
+    "all_case_phase_cap_count_means_and_losses_verified": true,
+    "read_only_artifact_and_model_hashes_rechecked": 517,
+    "actual_development_scene_ranges": [
+      [
+        51402,
+        51691
+      ],
+      [
+        55402,
+        55689
+      ],
+      [
+        59402,
+        59689
+      ],
+      [
+        63402,
+        63689
+      ],
+      [
+        13652,
+        13939
+      ],
+      [
+        18852,
+        19139
+      ]
+    ],
+    "prior_and_fit_scene_ranges_disjoint": true,
+    "train_transitions": 3465,
+    "calibration_transitions": 1152,
+    "selected_or_promoted": false,
+    "SOTA_achieved": false
+  },
+  "training_report": {
+    "train_transitions": 3465,
+    "calibration_transitions": 1152,
+    "train_source_requests": 10864,
+    "calibration_source_requests": 3621,
+    "train_episodes": 12,
+    "calibration_episodes": 4,
+    "bellman_mse_samples": [
+      3.0343940025230154,
+      0.37516321633566463,
+      0.3506193076053403,
+      0.8654519058441205,
+      0.9988049340161498,
+      0.16532011819390702,
+      0.32833084411148755,
+      0.932012908638137,
+      0.7801634925059617,
+      1.2155201716897153,
+      1.378000509801164,
+      1.5541346340456317
+    ],
+    "calibration_fraction_mse_raw": 0.2102268663652017,
+    "calibration_fraction_mse_platt": 0.17022030974072644,
+    "calibration_frame_brier_raw": 0.27330796735019663,
+    "calibration_frame_brier_platt": 0.23330141072572133,
+    "risk_episode_bootstrap": true,
+    "offline_metrics_are_not_controller_performance": true,
+    "provisional_screens_not_validation_selected": true,
+    "legacy_weights_loaded": false,
+    "test_used": false,
+    "calibration_policy_output_distribution": {
+      "150000": 60,
+      "300000": 646,
+      "1600000": 172,
+      "2500000": 97,
+      "1000000": 49,
+      "4000000": 90,
+      "600000": 38
+    },
+    "calibration_fallbacks": 152,
+    "calibration_choices_are_counterfactual_not_realized_performance": true,
+    "online_native_policy_not_yet_validated": true,
+    "SOTA_achieved": false
+  },
+  "diagnosis": {
+    "cap_age_coverage": {
+      "old_one_second_train": {
+        "overall": {
+          "post_known_changed_ack_samples": 546,
+          "at_least_1000ms": 36,
+          "at_least_1000ms_fraction": 0.06593406593406594,
+          "under400ms_fraction": 0.32967032967032966,
+          "p99_ms": 1047.954999989271
+        },
+        "by_behavior": {
+          "old_block": {
+            "post_known_changed_ack_samples": 546,
+            "at_least_1000ms": 36,
+            "at_least_1000ms_fraction": 0.06593406593406594,
+            "under400ms_fraction": 0.32967032967032966,
+            "p99_ms": 1047.954999989271
+          }
+        }
+      },
+      "mixed_train": {
+        "overall": {
+          "post_known_changed_ack_samples": 3469,
+          "at_least_1000ms": 1537,
+          "at_least_1000ms_fraction": 0.4430671663303546,
+          "under400ms_fraction": 0.352839434995676,
+          "p99_ms": 27917.183999919893
+        },
+        "by_behavior": {
+          "block-250": {
+            "post_known_changed_ack_samples": 861,
+            "at_least_1000ms": 0,
+            "at_least_1000ms_fraction": 0.0,
+            "under400ms_fraction": 1.0,
+            "p99_ms": 318.1399999856949
+          },
+          "block-1000": {
+            "post_known_changed_ack_samples": 869,
+            "at_least_1000ms": 59,
+            "at_least_1000ms_fraction": 0.06789413118527042,
+            "under400ms_fraction": 0.31070195627157654,
+            "p99_ms": 1039.6640000391005
+          },
+          "block-4000": {
+            "post_known_changed_ack_samples": 871,
+            "at_least_1000ms": 655,
+            "at_least_1000ms_fraction": 0.7520091848450058,
+            "under400ms_fraction": 0.08266360505166476,
+            "p99_ms": 4021.9500000476833
+          },
+          "bwe": {
+            "post_known_changed_ack_samples": 868,
+            "at_least_1000ms": 823,
+            "at_least_1000ms_fraction": 0.9481566820276498,
+            "under400ms_fraction": 0.024193548387096774,
+            "p99_ms": 29251.587999984025
+          }
+        }
+      }
+    },
+    "factual_live_state_diagnosis": {
+      "collapse": {
+        "rlcd-v1": {
+          "factual_associated_sources": 537,
+          "mean_factual_cap_predicted_miss": 0.38502643382768864,
+          "actual_source_miss": 0.4618249534450652,
+          "source_frame_brier": 0.21807394835336913,
+          "known_cap_age": {
+            "post_known_changed_ack_samples": 168,
+            "at_least_1000ms": 47,
+            "at_least_1000ms_fraction": 0.27976190476190477,
+            "under400ms_fraction": 0.47023809523809523,
+            "p99_ms": 4651.8520000875005
+          },
+          "phases": {
+            "high": {
+              "sources": 183,
+              "predicted_miss": 0.17311189285457376,
+              "actual_miss": 0.3005464480874317,
+              "factual_mean_cap_bps": 773224.043715847,
+              "high_cap_decision_fraction": 0.034482758620689655,
+              "fallback_fraction": 0.017241379310344827,
+              "mean_sender_packet_send_delay_ms": 1.811952687925102
+            },
+            "collapse": {
+              "sources": 182,
+              "predicted_miss": 0.4450431013079452,
+              "actual_miss": 0.5934065934065934,
+              "factual_mean_cap_bps": 500000.0,
+              "high_cap_decision_fraction": 0.05357142857142857,
+              "fallback_fraction": 0.42857142857142855,
+              "mean_sender_packet_send_delay_ms": 0.005008014455781875
+            },
+            "recovery": {
+              "sources": 172,
+              "predicted_miss": 0.5469876403199753,
+              "actual_miss": 0.4941860465116279,
+              "factual_mean_cap_bps": 252325.58139534883,
+              "high_cap_decision_fraction": 0.03571428571428571,
+              "fallback_fraction": 0.8392857142857143,
+              "mean_sender_packet_send_delay_ms": 0.0013419005102041132
+            }
+          }
+        },
+        "rlcd-v3": {
+          "factual_associated_sources": 538,
+          "mean_factual_cap_predicted_miss": 0.5750981397475493,
+          "actual_source_miss": 0.7026022304832714,
+          "source_frame_brier": 0.16710199326364442,
+          "known_cap_age": {
+            "post_known_changed_ack_samples": 167,
+            "at_least_1000ms": 49,
+            "at_least_1000ms_fraction": 0.2934131736526946,
+            "under400ms_fraction": 0.48502994011976047,
+            "p99_ms": 3280.301999983788
+          },
+          "phases": {
+            "high": {
+              "sources": 183,
+              "predicted_miss": 0.37772107181195086,
+              "actual_miss": 0.12568306010928962,
+              "factual_mean_cap_bps": 2826502.732240437,
+              "high_cap_decision_fraction": 0.7894736842105263,
+              "fallback_fraction": 0.07017543859649122,
+              "mean_sender_packet_send_delay_ms": 1.8362151896283945
+            },
+            "collapse": {
+              "sources": 182,
+              "predicted_miss": 0.7348097987679371,
+              "actual_miss": 1.0,
+              "factual_mean_cap_bps": 1150000.0,
+              "high_cap_decision_fraction": 0.2857142857142857,
+              "fallback_fraction": 0.7142857142857143,
+              "mean_sender_packet_send_delay_ms": 508.41778385105965
+            },
+            "recovery": {
+              "sources": 173,
+              "predicted_miss": 0.6158639287099995,
+              "actual_miss": 1.0,
+              "factual_mean_cap_bps": 283526.0115606936,
+              "high_cap_decision_fraction": 0.0,
+              "fallback_fraction": 0.5535714285714286,
+              "mean_sender_packet_send_delay_ms": 68.01527848188505
+            }
+          }
+        },
+        "bwe": {
+          "factual_associated_sources": 538,
+          "mean_factual_cap_predicted_miss": 0.5735550193260659,
+          "actual_source_miss": 0.6189591078066915,
+          "source_frame_brier": 0.20786714320532365,
+          "known_cap_age": {
+            "post_known_changed_ack_samples": 167,
+            "at_least_1000ms": 125,
+            "at_least_1000ms_fraction": 0.7485029940119761,
+            "under400ms_fraction": 0.10778443113772455,
+            "p99_ms": 5106.961999983788
+          },
+          "phases": {
+            "high": {
+              "sources": 182,
+              "predicted_miss": 0.48968849904102857,
+              "actual_miss": 0.489010989010989,
+              "factual_mean_cap_bps": 360989.010989011,
+              "high_cap_decision_fraction": 0.03508771929824561,
+              "fallback_fraction": 0.47368421052631576,
+              "mean_sender_packet_send_delay_ms": 2.024791941976153
+            },
+            "collapse": {
+              "sources": 182,
+              "predicted_miss": 0.5830742508089408,
+              "actual_miss": 0.6373626373626373,
+              "factual_mean_cap_bps": 189560.43956043955,
+              "high_cap_decision_fraction": 0.0,
+              "fallback_fraction": 0.5818181818181818,
+              "mean_sender_packet_send_delay_ms": 17.399923722943722
+            },
+            "recovery": {
+              "sources": 174,
+              "predicted_miss": 0.6513205742800521,
+              "actual_miss": 0.735632183908046,
+              "factual_mean_cap_bps": 150000.0,
+              "high_cap_decision_fraction": 0.0,
+              "fallback_fraction": 0.8771929824561403,
+              "mean_sender_packet_send_delay_ms": 0.004706140350873141
+            }
+          }
+        }
+      },
+      "stable": {
+        "rlcd-v1": {
+          "factual_associated_sources": 536,
+          "mean_factual_cap_predicted_miss": 0.24282542154171852,
+          "actual_source_miss": 0.27425373134328357,
+          "source_frame_brier": 0.18745400127655235,
+          "known_cap_age": {
+            "post_known_changed_ack_samples": 168,
+            "at_least_1000ms": 6,
+            "at_least_1000ms_fraction": 0.03571428571428571,
+            "under400ms_fraction": 0.7321428571428571,
+            "p99_ms": 1315.0509999763979
+          },
+          "phases": {
+            "high": {
+              "sources": 182,
+              "predicted_miss": 0.19853142901649798,
+              "actual_miss": 0.31868131868131866,
+              "factual_mean_cap_bps": 809615.3846153846,
+              "high_cap_decision_fraction": 0.05263157894736842,
+              "fallback_fraction": 0.03508771929824561,
+              "mean_sender_packet_send_delay_ms": 0.2631810592736491
+            },
+            "collapse": {
+              "sources": 182,
+              "predicted_miss": 0.27595013420965997,
+              "actual_miss": 0.27472527472527475,
+              "factual_mean_cap_bps": 945054.9450549451,
+              "high_cap_decision_fraction": 0.21052631578947367,
+              "fallback_fraction": 0.03508771929824561,
+              "mean_sender_packet_send_delay_ms": 0.019085566858322377
+            },
+            "recovery": {
+              "sources": 172,
+              "predicted_miss": 0.25464407813488577,
+              "actual_miss": 0.22674418604651161,
+              "factual_mean_cap_bps": 1388081.3953488371,
+              "high_cap_decision_fraction": 0.26785714285714285,
+              "fallback_fraction": 0.03571428571428571,
+              "mean_sender_packet_send_delay_ms": 0.03846155797941897
+            }
+          }
+        },
+        "rlcd-v3": {
+          "factual_associated_sources": 536,
+          "mean_factual_cap_predicted_miss": 0.36242192574547216,
+          "actual_source_miss": 0.05970149253731343,
+          "source_frame_brier": 0.146200902697518,
+          "known_cap_age": {
+            "post_known_changed_ack_samples": 168,
+            "at_least_1000ms": 11,
+            "at_least_1000ms_fraction": 0.06547619047619048,
+            "under400ms_fraction": 0.8035714285714286,
+            "p99_ms": 1950.1840000081074
+          },
+          "phases": {
+            "high": {
+              "sources": 182,
+              "predicted_miss": 0.3712824279616093,
+              "actual_miss": 0.07692307692307693,
+              "factual_mean_cap_bps": 2831318.681318681,
+              "high_cap_decision_fraction": 0.9310344827586207,
+              "fallback_fraction": 0.06896551724137931,
+              "mean_sender_packet_send_delay_ms": 0.9516840557584448
+            },
+            "collapse": {
+              "sources": 182,
+              "predicted_miss": 0.33932673639461153,
+              "actual_miss": 0.038461538461538464,
+              "factual_mean_cap_bps": 2447802.1978021977,
+              "high_cap_decision_fraction": 0.8035714285714286,
+              "fallback_fraction": 0.0,
+              "mean_sender_packet_send_delay_ms": 0.2460656045524651
+            },
+            "recovery": {
+              "sources": 172,
+              "predicted_miss": 0.37748421096942386,
+              "actual_miss": 0.06395348837209303,
+              "factual_mean_cap_bps": 1308139.534883721,
+              "high_cap_decision_fraction": 0.5357142857142857,
+              "fallback_fraction": 0.0,
+              "mean_sender_packet_send_delay_ms": 0.0036222506164470454
+            }
+          }
+        },
+        "bwe": {
+          "factual_associated_sources": 537,
+          "mean_factual_cap_predicted_miss": 0.44276718990373376,
+          "actual_source_miss": 0.30353817504655495,
+          "source_frame_brier": 0.20863040922517082,
+          "known_cap_age": {
+            "post_known_changed_ack_samples": 168,
+            "at_least_1000ms": 144,
+            "at_least_1000ms_fraction": 0.8571428571428571,
+            "under400ms_fraction": 0.07142857142857142,
+            "p99_ms": 8581.76800003171
+          },
+          "phases": {
+            "high": {
+              "sources": 182,
+              "predicted_miss": 0.5039891888683088,
+              "actual_miss": 0.5274725274725275,
+              "factual_mean_cap_bps": 360989.010989011,
+              "high_cap_decision_fraction": 0.034482758620689655,
+              "fallback_fraction": 0.5689655172413793,
+              "mean_sender_packet_send_delay_ms": 2.0803372288152464
+            },
+            "collapse": {
+              "sources": 182,
+              "predicted_miss": 0.4065525228940549,
+              "actual_miss": 0.16483516483516483,
+              "factual_mean_cap_bps": 300000.0,
+              "high_cap_decision_fraction": 0.0,
+              "fallback_fraction": 0.10714285714285714,
+              "mean_sender_packet_send_delay_ms": 0.0012125637755100991
+            },
+            "recovery": {
+              "sources": 173,
+              "predicted_miss": 0.4164588984829762,
+              "actual_miss": 0.2138728323699422,
+              "factual_mean_cap_bps": 300000.0,
+              "high_cap_decision_fraction": 0.0,
+              "fallback_fraction": 0.017857142857142856,
+              "mean_sender_packet_send_delay_ms": 0.0011791028911566617
+            }
+          }
+        }
+      },
+      "variable": {
+        "rlcd-v1": {
+          "factual_associated_sources": 539,
+          "mean_factual_cap_predicted_miss": 0.36282829892115154,
+          "actual_source_miss": 0.35435992578849723,
+          "source_frame_brier": 0.223562648405646,
+          "known_cap_age": {
+            "post_known_changed_ack_samples": 166,
+            "at_least_1000ms": 32,
+            "at_least_1000ms_fraction": 0.1927710843373494,
+            "under400ms_fraction": 0.5542168674698795,
+            "p99_ms": 2319.545000022649
+          },
+          "phases": {
+            "high": {
+              "sources": 184,
+              "predicted_miss": 0.1339401711540091,
+              "actual_miss": 0.24456521739130435,
+              "factual_mean_cap_bps": 776902.1739130435,
+              "high_cap_decision_fraction": 0.017857142857142856,
+              "fallback_fraction": 0.017857142857142856,
+              "mean_sender_packet_send_delay_ms": 0.38802954311509286
+            },
+            "collapse": {
+              "sources": 182,
+              "predicted_miss": 0.4925288091625534,
+              "actual_miss": 0.46153846153846156,
+              "factual_mean_cap_bps": 578846.1538461539,
+              "high_cap_decision_fraction": 0.07142857142857142,
+              "fallback_fraction": 0.44642857142857145,
+              "mean_sender_packet_send_delay_ms": 0.07312253300129558
+            },
+            "recovery": {
+              "sources": 173,
+              "predicted_miss": 0.4698220714368685,
+              "actual_miss": 0.3583815028901734,
+              "factual_mean_cap_bps": 686705.2023121387,
+              "high_cap_decision_fraction": 0.125,
+              "fallback_fraction": 0.5892857142857143,
+              "mean_sender_packet_send_delay_ms": 0.16678379824018963
+            }
+          }
+        },
+        "rlcd-v3": {
+          "factual_associated_sources": 536,
+          "mean_factual_cap_predicted_miss": 0.577517283524218,
+          "actual_source_miss": 0.7052238805970149,
+          "source_frame_brier": 0.1618976916610324,
+          "known_cap_age": {
+            "post_known_changed_ack_samples": 165,
+            "at_least_1000ms": 95,
+            "at_least_1000ms_fraction": 0.5757575757575758,
+            "under400ms_fraction": 0.2606060606060606,
+            "p99_ms": 4785.876000013351
+          },
+          "phases": {
+            "high": {
+              "sources": 181,
+              "predicted_miss": 0.3434856791505069,
+              "actual_miss": 0.1270718232044199,
+              "factual_mean_cap_bps": 2913812.1546961325,
+              "high_cap_decision_fraction": 0.8392857142857143,
+              "fallback_fraction": 0.07142857142857142,
+              "mean_sender_packet_send_delay_ms": 1.3437059004267666
+            },
+            "collapse": {
+              "sources": 182,
+              "predicted_miss": 0.7343713534151587,
+              "actual_miss": 1.0,
+              "factual_mean_cap_bps": 1374175.8241758242,
+              "high_cap_decision_fraction": 0.2909090909090909,
+              "fallback_fraction": 0.7090909090909091,
+              "mean_sender_packet_send_delay_ms": 539.4850258635448
+            },
+            "recovery": {
+              "sources": 173,
+              "predicted_miss": 0.657357050411447,
+              "actual_miss": 1.0,
+              "factual_mean_cap_bps": 300000.0,
+              "high_cap_decision_fraction": 0.0,
+              "fallback_fraction": 0.5714285714285714,
+              "mean_sender_packet_send_delay_ms": 241.77718927154197
+            }
+          }
+        },
+        "bwe": {
+          "factual_associated_sources": 536,
+          "mean_factual_cap_predicted_miss": 0.4487818253000836,
+          "actual_source_miss": 0.30783582089552236,
+          "source_frame_brier": 0.21045132896581126,
+          "known_cap_age": {
+            "post_known_changed_ack_samples": 167,
+            "at_least_1000ms": 143,
+            "at_least_1000ms_fraction": 0.8562874251497006,
+            "under400ms_fraction": 0.0718562874251497,
+            "p99_ms": 8588.519999992848
+          },
+          "phases": {
+            "high": {
+              "sources": 182,
+              "predicted_miss": 0.511092436305264,
+              "actual_miss": 0.532967032967033,
+              "factual_mean_cap_bps": 360989.010989011,
+              "high_cap_decision_fraction": 0.03508771929824561,
+              "fallback_fraction": 0.7017543859649122,
+              "mean_sender_packet_send_delay_ms": 1.2343601079719497
+            },
+            "collapse": {
+              "sources": 182,
+              "predicted_miss": 0.42110503490825474,
+              "actual_miss": 0.18681318681318682,
+              "factual_mean_cap_bps": 300000.0,
+              "high_cap_decision_fraction": 0.0,
+              "fallback_fraction": 0.17857142857142858,
+              "mean_sender_packet_send_delay_ms": 0.002960948129251428
+            },
+            "recovery": {
+              "sources": 172,
+              "predicted_miss": 0.4121344104650256,
+              "actual_miss": 0.19767441860465115,
+              "factual_mean_cap_bps": 300000.0,
+              "high_cap_decision_fraction": 0.0,
+              "fallback_fraction": 0.0,
+              "mean_sender_packet_send_delay_ms": 0.0013245110544217475
+            }
+          }
+        }
+      }
+    },
+    "initial_unknown_age_excluded": true,
+    "coarse_ack_ties_or_inflight_unassigned_labels_excluded": true,
+    "BWE_predictions_are_shadow_for_its_factual_cap_not_the_shadow_choice": true,
+    "not_causal_or_future_capacity_or_pixel_policy_features": true,
+    "development_labels_not_refit": true,
+    "model_and_seal_bytes_unchanged": true,
+    "SOTA_achieved": false
+  },
+  "portable_parity": {
+    "model_sha256": "bab783ccc0b45eb6fab4aaab20c350e5e02a8745cdbe3c3de1c3d096a99d689a",
+    "branches": {
+      "provisional": {
+        "histories": 96,
+        "max_absolute_error": 5.329070518200751e-15,
+        "fallbacks": 4
+      },
+      "all_rejected": {
+        "histories": 96,
+        "max_absolute_error": 5.329070518200751e-15,
+        "fallbacks": 96
+      },
+      "all_accepted": {
+        "histories": 96,
+        "max_absolute_error": 5.329070518200751e-15,
+        "fallbacks": 0
+      }
+    },
+    "trained_weights_unchanged": true,
+    "old_checkpoint_transferred": false,
+    "online_performance_or_SOTA_verified": false
+  },
+  "loader_forgeries": {
+    "rejected_forgeries": [
+      {
+        "attack": "bad_stage",
+        "rejection": "verified frozen training panel required"
+      },
+      {
+        "attack": "panel_digest",
+        "rejection": "verified frozen training panel required"
+      },
+      {
+        "attack": "child_artifact",
+        "rejection": "native episode artifact changed"
+      },
+      {
+        "attack": "validation_role",
+        "rejection": "validation/test episode forbidden in fit data"
+      },
+      {
+        "attack": "duplicate_id",
+        "rejection": "duplicate fit episode ID"
+      },
+      {
+        "attack": "prior_scene",
+        "rejection": "old native source offset reused for fitting"
+      },
+      {
+        "attack": "actual_scene_overlap",
+        "rejection": "generated scene frame ranges overlap across new fit episodes"
+      },
+      {
+        "attack": "behavior_dwell",
+        "rejection": "frozen mixed exploration behavior required"
+      }
+    ],
+    "count": 8,
+    "canonical_archives_and_model_untouched": true,
+    "resealed_roles_and_actual_scene_overlap_rejected": true,
+    "selected_or_promoted": false,
+    "SOTA_achieved": false
+  },
+  "mixed_native_candidate_adopted": false,
+  "synthetic_single_model_development_only": true,
+  "SOTA_achieved": false
+}

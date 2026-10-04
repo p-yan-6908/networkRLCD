@@ -1,0 +1,75 @@
+{
+  "abi": "native_consumed_source_role_receipt_v1",
+  "role": "train",
+  "stage": "train",
+  "video_source": {
+    "source_abi": "recorded_video_v1",
+    "path": "/Users/pyan/networkRLCD/.tools/native_late_validation_v3/bbb-video.mp4",
+    "sha256": "5960a2ad87a822cbe34719077eb7d05d70b65c8c1b4f6d30191b07813f7b8084",
+    "duration_ms": 596458,
+    "width": 1280,
+    "height": 720,
+    "frame_rate": "24/1",
+    "attribution": "(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org; full original credit scroll retained, local video-only stream-copy remux",
+    "license_url": "https://peach.blender.org/about/",
+    "source_url": "https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_720p_h264.mov.zip",
+    "rights_asserted_by_importer": true,
+    "not_representative_corpus": true
+  },
+  "groups": [
+    {
+      "id": "balanced-bbb-collapse",
+      "family": "balanced-collapse",
+      "scene_seed": 0,
+      "reservation_frames": 1000,
+      "video_segment": [
+        100000,
+        120000
+      ],
+      "schedule": [
+        [
+          2.0,
+          "high",
+          6000
+        ],
+        [
+          0.5,
+          "collapse",
+          6000
+        ],
+        [
+          2.0,
+          "recovery",
+          6000
+        ]
+      ],
+      "orders": [
+        [
+          "random-hold-a",
+          "random-hold-b",
+          "fixed450"
+        ],
+        [
+          "random-hold-b",
+          "fixed450",
+          "random-hold-a"
+        ],
+        [
+          "fixed450",
+          "random-hold-a",
+          "random-hold-b"
+        ]
+      ]
+    }
+  ],
+  "consumed_source": {
+    "path": "/Users/pyan/networkRLCD/results/native-action-balanced-hold-pilot-v1",
+    "manifest_sha256": "da623dbebecdf05f315e17e7ae17b90cd10d9795eb41b25ab141d9ecde165539",
+    "package_proof_path": "/Users/pyan/networkRLCD/results/jobs/native-action-balanced-hold-package-proof-v1.json",
+    "package_proof_sha256": "0aca59eaaf7cd660e7c28e4fd8dda36566a0257a1ab97e0288e3aeb75fada17b"
+  },
+  "receipt_producer_sha256": "c443079b03ebccb273dfdaac2686ec56ddb56361b51def88ad7e141eae2dc605",
+  "not_new_native_capture_or_label_dataset": true,
+  "source_role_only_not_learning_or_safety_acceptance": true,
+  "SOTA_achieved": false
+}

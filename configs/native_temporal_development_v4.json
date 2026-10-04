@@ -1,0 +1,197 @@
+{
+  "panel_abi": "native_credit_horizon_development_v4",
+  "purpose": "one prospectively fixed return-horizon ablation on entirely new real source groups; no selection/promotion/final-test claim",
+  "models": {
+    "base": {
+      "path": "results/native-model-v3/model.json",
+      "sha256": "bab783ccc0b45eb6fab4aaab20c350e5e02a8745cdbe3c3de1c3d096a99d689a",
+      "n_step": 3
+    },
+    "long": {
+      "path": "results/native-model-v4/model.json",
+      "sha256": "1af1832db2fc44bfbef7a4ca26daa639b96a8058a64b69001c5d271fb0aa22dd",
+      "n_step": 20
+    }
+  },
+  "controllers": [
+    "rlcd-3step",
+    "rlcd-20step",
+    "bwe"
+  ],
+  "common_two_model_shadow": true,
+  "common_shadow_inference": true,
+  "risk_cutoff": 0.5,
+  "disagreement_cutoff": 0.2,
+  "provisional_inference_p99_budget_ms": 10,
+  "candidate_selection_or_promotion_allowed": false,
+  "actor_return_only_change": true,
+  "identical_risk_members_and_platt": true,
+  "fit_data_root": "results/native-mixed-training-v3",
+  "experiment_sha256": "a1e9b81d9a6202c92beb0f4d153b29fe2d2dabe8551622579d12b77d1eb993b4",
+  "prior_audit_sha256": "d87bcfd20ca2155966f403806521a3761698a0b79bbb8a6d5781013f3c4e41c5",
+  "source_group_reservation_frame_count": 1000,
+  "episodes": [
+    {
+      "id": "collapse-g",
+      "role": "development",
+      "scene_seed": 2425,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          0.5,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "rlcd-20step",
+        "rlcd-3step",
+        "bwe"
+      ]
+    },
+    {
+      "id": "collapse-h",
+      "role": "development",
+      "scene_seed": 4375,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          0.5,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "bwe",
+        "rlcd-20step",
+        "rlcd-3step"
+      ]
+    },
+    {
+      "id": "stable-g",
+      "role": "development",
+      "scene_seed": 7325,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          2,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "rlcd-3step",
+        "bwe",
+        "rlcd-20step"
+      ]
+    },
+    {
+      "id": "stable-h",
+      "role": "development",
+      "scene_seed": 10325,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          2,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "rlcd-20step",
+        "bwe",
+        "rlcd-3step"
+      ]
+    },
+    {
+      "id": "variable-g",
+      "role": "development",
+      "scene_seed": 13950,
+      "schedule": [
+        [
+          3.2,
+          "high",
+          3000
+        ],
+        [
+          0.7,
+          "collapse",
+          3000
+        ],
+        [
+          2.8,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "bwe",
+        "rlcd-3step",
+        "rlcd-20step"
+      ]
+    },
+    {
+      "id": "variable-h",
+      "role": "development",
+      "scene_seed": 15325,
+      "schedule": [
+        [
+          3.2,
+          "high",
+          3000
+        ],
+        [
+          0.7,
+          "collapse",
+          3000
+        ],
+        [
+          2.8,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "rlcd-3step",
+        "rlcd-20step",
+        "bwe"
+      ]
+    }
+  ]
+}

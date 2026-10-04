@@ -1,0 +1,43 @@
+{
+  "config_sha256": "3cf8207967460ed7ec52c438d2fe8d53199e761894673386c540a520780e48ff",
+  "episodes": 1188,
+  "evidence_label": "Exploratory pilot",
+  "generated_sha256": {
+    "evidence.tex": "f5e2215b08796454a61deab0348c2b78f8adfc4bf09e89ede2621302e7b2a1b3",
+    "figures/qoe_safety_tradeoff.pdf": "99508106807d88dd48c71658b3c0759f5b5ba3c0db11ff8a00c7d049ebd01ae4",
+    "figures/reliability.pdf": "ad64c2851a0aa464060f762cfdd173c4f16e0f622e901e6889026560e8cbb55a",
+    "figures/trajectory_collapse.pdf": "51bc4c3e79e95b6522ba32dc7ba43b6e83b744b222ff431e3baadbecd0dcedd9",
+    "table_ablations.tex": "3a38dd6436f3e853c8ab657b26db2127a606a2ceadd037e8a9e6b4425d8b7bf8",
+    "table_calibration.tex": "6e78b14aa0a31a318466fc00c3429374b37c222cd8720e273e7e562a2c6ecca0",
+    "table_comparison.tex": "e9ebc3f8bdff222592c3e5e98d641c656095b1c284f7adf6c2817ee34ae402dc",
+    "table_contrasts.tex": "e07690ecffb5907d93b64c113ee73909edfa798c6ea1cef225b37f845b19c7c6",
+    "table_predictors.tex": "301e8d26acb75e5bbf4d3c22823628ea2e8fdb5afb5f06785a9c309c2f2b802c"
+  },
+  "integrity_checked": true,
+  "limitations": [
+    "Conditional training-seed bootstrap; fixed trace panel.",
+    "No claim of real-network validation or untouched confirmatory data."
+  ],
+  "macro_prefix": "Followup",
+  "manifest_sha256": "cff45165657928cba8a64d9d474860c1b1843b39beac583eccbd0daf67e35f73",
+  "model_seeds": [
+    11,
+    22,
+    33
+  ],
+  "source_files": {
+    "calibration_diagnostics.csv": "42f28225663fa1fb6a4e99fe95d3a7dde84f9ab838abbac3a5ea9a34d8e91517",
+    "episodes.csv": "e24b3a9facc9c97929ea8fb2fed91d16bb3618264bce874237a4bc370e2214c7",
+    "paired_differences.csv": "9a6993805c0c3fc9af0f3b37cf75d5b21390655b4e464a0fb2c9c1b6c8396a67",
+    "summary.csv": "b36582d8eb96719a90d040b03a1f58248f155a46ba960eb01f1782f859b81486"
+  },
+  "source_run": "./results/improvement-v2/test",
+  "steps": 712800,
+  "test_seeds": [
+    1501,
+    1502,
+    1503,
+    1504
+  ],
+  "verified_artifacts": 218
+}

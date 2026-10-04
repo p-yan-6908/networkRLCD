@@ -1,0 +1,15 @@
+{
+  "name": "rlcd-v8-causal-wire-budget-screen",
+  "model_seeds": [11, 22, 33, 44, 55, 66, 77, 88, 99, 110],
+  "validation_seeds": [12701, 12702, 12703, 12704, 12705],
+  "test_seeds": [13701, 13702, 13703, 13704, 13705, 13706, 13707, 13708, 13709, 13710],
+  "top_k": 5,
+  "threshold": 0.9,
+  "max_ensemble_std": 0.05,
+  "max_id_qoe_drop": 0.03,
+  "max_id_violation_increase": 0.01,
+  "max_stress_violation_increase": 0.02,
+  "max_stress_scenario_violation_increase": 0.03,
+  "risk_penalty": 5.0,
+  "minimum_score_gain": 0.005
+}

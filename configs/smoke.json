@@ -1,0 +1,8 @@
+{
+  "name": "smoke-not-paper-evidence",
+  "seeds": [11],
+  "test_seeds": [101, 102],
+  "bootstrap_samples": 100,
+  "simulator": {"steps": 60},
+  "training": {"episodes": 4, "risk_episodes": 4, "calibration_episodes": 4, "hidden": 24, "batch_size": 32, "warmup": 32, "risk_epochs": 3}
+}

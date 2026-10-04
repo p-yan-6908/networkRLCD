@@ -1,0 +1,891 @@
+{
+  "panel_abi": "native_repair5_study_v5",
+  "source_kind": "recorded_video_repair_v5",
+  "stage": "calibration",
+  "models": {
+    "source": {
+      "path": "/Users/pyan/networkRLCD/results/native-model-v3/model.json",
+      "sha256": "bab783ccc0b45eb6fab4aaab20c350e5e02a8745cdbe3c3de1c3d096a99d689a"
+    }
+  },
+  "repair_model": null,
+  "conditions": {
+    "bwe": {
+      "controller": "explore",
+      "model": "source",
+      "behavior": "bwe"
+    },
+    "fixed300": {
+      "controller": "explore",
+      "model": "source",
+      "behavior": "fixed300"
+    },
+    "fixed600": {
+      "controller": "explore",
+      "model": "source",
+      "behavior": "fixed600"
+    },
+    "sweep": {
+      "controller": "explore",
+      "model": "source",
+      "behavior": "sweep"
+    },
+    "bounded": {
+      "controller": "explore",
+      "model": "source",
+      "behavior": "bounded"
+    },
+    "gcc": {
+      "controller": "explore",
+      "model": "source",
+      "behavior": "gcc"
+    }
+  },
+  "repetitions": 2,
+  "groups": [
+    {
+      "id": "stable-0",
+      "family": "stable",
+      "scene_seed": 0,
+      "reservation_frames": 1000,
+      "video_segment": [
+        580000,
+        600000
+      ],
+      "schedule": [
+        [
+          1.96187,
+          "high",
+          6000
+        ],
+        [
+          1.96187,
+          "collapse",
+          6000
+        ],
+        [
+          1.96187,
+          "recovery",
+          6000
+        ]
+      ],
+      "orders": [
+        [
+          "bounded",
+          "fixed600",
+          "fixed300",
+          "sweep",
+          "gcc",
+          "bwe"
+        ],
+        [
+          "fixed600",
+          "fixed300",
+          "sweep",
+          "gcc",
+          "bwe",
+          "bounded"
+        ]
+      ]
+    },
+    {
+      "id": "collapse-0",
+      "family": "collapse",
+      "scene_seed": 2000,
+      "reservation_frames": 1000,
+      "video_segment": [
+        600000,
+        620000
+      ],
+      "schedule": [
+        [
+          1.84989,
+          "high",
+          6000
+        ],
+        [
+          0.40003,
+          "collapse",
+          6000
+        ],
+        [
+          2.41329,
+          "recovery",
+          6000
+        ]
+      ],
+      "orders": [
+        [
+          "fixed300",
+          "fixed600",
+          "sweep",
+          "bounded",
+          "gcc",
+          "bwe"
+        ],
+        [
+          "fixed600",
+          "sweep",
+          "bounded",
+          "gcc",
+          "bwe",
+          "fixed300"
+        ]
+      ]
+    },
+    {
+      "id": "variable-0",
+      "family": "variable",
+      "scene_seed": 4000,
+      "reservation_frames": 1000,
+      "video_segment": [
+        620000,
+        640000
+      ],
+      "schedule": [
+        [
+          3.9145,
+          "high",
+          6000
+        ],
+        [
+          0.62851,
+          "collapse",
+          6000
+        ],
+        [
+          3.39654,
+          "recovery",
+          6000
+        ]
+      ],
+      "orders": [
+        [
+          "bwe",
+          "gcc",
+          "bounded",
+          "fixed600",
+          "sweep",
+          "fixed300"
+        ],
+        [
+          "gcc",
+          "bounded",
+          "fixed600",
+          "sweep",
+          "fixed300",
+          "bwe"
+        ]
+      ]
+    },
+    {
+      "id": "brief-collapse-0",
+      "family": "brief-collapse",
+      "scene_seed": 6000,
+      "reservation_frames": 1000,
+      "video_segment": [
+        640000,
+        660000
+      ],
+      "schedule": [
+        [
+          1.93265,
+          "high",
+          6000
+        ],
+        [
+          0.61719,
+          "collapse",
+          6000
+        ],
+        [
+          2.23438,
+          "recovery",
+          6000
+        ]
+      ],
+      "orders": [
+        [
+          "fixed600",
+          "bounded",
+          "gcc",
+          "fixed300",
+          "sweep",
+          "bwe"
+        ],
+        [
+          "bounded",
+          "gcc",
+          "fixed300",
+          "sweep",
+          "bwe",
+          "fixed600"
+        ]
+      ]
+    }
+  ],
+  "order_seed": 5501,
+  "limits": {
+    "repeatability_utility_span": 3.0,
+    "repeatability_ontime_span": 0.15,
+    "inference_p99_ms": 10.0,
+    "min_validation_groups": 8,
+    "min_utility_gain": 0.0,
+    "max_ontime_drop": 0.02,
+    "max_family_utility_drop": 0.5
+  },
+  "controller_config": {
+    "history_steps": 32,
+    "max_history_ms": 4000,
+    "reset_gap_ms": 1000,
+    "feedback_fresh_ms": 500,
+    "content_fresh_ms": 500,
+    "content_scale": 8,
+    "fallback": "exact_bwe",
+    "risk_architecture": "seven_factual_action_heads",
+    "startup_ms": 500,
+    "up_dwell_ms": 500,
+    "emergency_hold_ms": 2000,
+    "bwe_headroom": 0.95,
+    "fallback_headroom": 0.85,
+    "miss_budget": 0.1,
+    "disagreement_budget": 0.15,
+    "packet_delay_alarm_ms": 15,
+    "rtt_rise_alarm_ms": 30,
+    "min_calibration_groups": 3,
+    "min_calibration_episodes": 3,
+    "min_calibration_requests": 60,
+    "rtt_baseline_window_ms": 4000,
+    "encoder_degradation_preference": "maintain-framerate"
+  },
+  "learner": {
+    "algorithm": "normalized_factual_iql",
+    "model_seeds": [
+      5601,
+      5611,
+      5621
+    ],
+    "hidden": 32,
+    "updates": 3600,
+    "risk_updates": 1600,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "iql_expectile": 0.7,
+    "target_tau": 0.005,
+    "state_scale_floor": 0.1,
+    "gamma": 0.98,
+    "n_step": 1,
+    "miss_penalty": 3.0,
+    "switch_penalty": 0.01,
+    "psnr_divisor": 50
+  },
+  "measurement_recipe": {
+    "abi": "native_repair5_measurement_v5",
+    "movie_loading": "verified_inode_http_range",
+    "warmup_iterations": 64,
+    "warmup_disposable_instances": true,
+    "initial_cap_bps": 300000,
+    "receiver_target_ms": 0,
+    "feedback_channel": "presentation-ack-v2",
+    "feedback_send_ms": 100,
+    "feedback_same_impaired_connection": true,
+    "common_shadow_inference": true,
+    "sender_content": "owned_pre_marker_rgb_gradient_motion",
+    "risk_architecture": "seven_factual_action_heads",
+    "fallback": "exact_bwe",
+    "encoder_degradation_preference": "maintain-framerate"
+  },
+  "source_sha256": {
+    "assets/episode.mjs": "7f0c1eed1bf2b9456f114e6ff9166746689af3e1a708056df45c5238b74645af",
+    "assets/frame_marker.mjs": "4aeee008fc9f8dd9e9cc14feaaf54ae82ef3a5fd8cf04eedd086114caf8ec144",
+    "assets/native_actuation.mjs": "5369c8ae4e9e9a8b3c6ce293429ad18db2bfd4e1f56037032cc1c7178fd4ad0e",
+    "assets/sender_observation.mjs": "2ffacd833560a900b9a2d6332813d522587c2db166434741ac2571486171e850",
+    "assets/source_quality.mjs": "64bd696fb75e4a5b6d0412f3c9d5f1fb383f88b586db3b7d04eaa3ada7520b66",
+    "assets/bwe_cap_controller.mjs": "a61fe6971afface7ae176ad770ff90378d30282bd893a27ac34752f5d10055b6",
+    "assets/native_policy.mjs": "9f91b8afef2f6bff88254937c337628fcea90c175017be1722200b6ff062ec02",
+    "python/native_protocol.py": "323d2b0eb3a5617508356493b6ed80166789b2d46887b0e90296367ba50fc527",
+    "python/native_study.py": "83f9e1a151e4c7c370c11f0fe452f0b57ae3e0afc1716c4b08dcfc04ad7d3c9b",
+    "python/native_statistics.py": "89e432c25eb6087ddaf33066abd54704fa3f3385e5461725a06a9dafa41c756e",
+    "python/native_wire.py": "06949e8586413b3c192b53b2ca47d52c4e26129a2b4e76bc7a9647c95507cde0",
+    "python/native_calibration.py": "67f61269d643305aebb5b82d3c8753bec628cf1a24e3a574a8c864e521696d1b",
+    "python/native_learning.py": "643c177ead82a8747fde621cc01e1fb1eb37cd774b929cec3b0fe93d92fd16f1",
+    "python/native_dataset.py": "ef73fc8a0cea37b398ce9ef98bed36bda7ae3f4f4a131388c8ecd353cb535e32",
+    "python/native_observations.py": "3b3d7d782b4034a35535c2396f380bcb1a33acd64e05db34cc3ee380d6b58fba",
+    "python/native_policy_replay.py": "882171ea0320684dee027b442b92bd888c7883e42f292c98dc5b48c678c1196f",
+    "python/native_quality.py": "0a0c9e7958c190e486e7259b9e15ae1d9f8bbc48f38c2772d6f4e5b05cf06576",
+    "python/native_frame_metrics.py": "117127046ca1c1ac929181fd3a532db86ce561792cb72a41d18ab4b0aa9df350",
+    "python/networks.py": "54b74c7f76b92e5374a564e89c7739fab75b74a1fed9e9c85727352ec3f9120f"
+  },
+  "extra_source_sha256": {
+    "python/native_video.py": "0df354d35fe211107b1e7aca74b65c7bfc63ff29cf48ea6086244944ecb44f2f",
+    "assets/recorded_video.mjs": "3b7046877d0a4e3c29f19bd9aa67204965b35632c39f9fd63c8bea7003aa9e37",
+    "python/native_repair5_policy.py": "ad2f1c926d28a65b9ce1716e1b6702165cdf6d9a375349c9420a86571d34baa4",
+    "python/native_repair5_study.py": "f3ec626faf6a1f7ef7bb6d97a1d1fa9bec8145e1cf6bc3b98c92719e2690102e",
+    "python/native_repair5_learning.py": "dfebd1c009fef3e80e29c5fd4c22a2ca50b18ec6870cd8ef498016cd99168c6d",
+    "python/native_repair5_calibration.py": "26aa9bd354421987ef06ee9dfbb243db328caf528ae5a5da611089c745c6369a",
+    "python/native_repair5_cli.py": "8e36f095c9462b09e7f3eaf37620640d95f2e59317886f819d345364efd0aa23",
+    "python/native_repair5_statistics.py": "9dcc60eb162213cca32370144ebe20f677e5af2bc390e4f299fcc22d7a4d8c3e",
+    "python/native_repair3_policy.py": "4e07f04070c9ee10abf32933478540f9a0d6b5b7715cc6990016dce5086fafe8",
+    "python/native_repair3_study.py": "94d2bdfb028b291784ec922d938a21f4e47795b4896079c42b7b5df04a1f5599",
+    "assets/repair5_policy.mjs": "555aa1120f742b45b34e50cdb2448fec929d433304ef09f002c5e03c3a09dc60",
+    "assets/repair3_policy.mjs": "11695528b8d46169b80242d73d888870dc150101305873f6f6a6c794368ff6ea",
+    "assets/repair5_episode.mjs": "243dbe4817e0da353368ec37c8455bdf328224eaedfdd353457b93a40d9f9948",
+    "assets/fixed_encoder5.mjs": "ce7c02e615ebbe21af9ab66c6ad8fd69af87ca50db4ac8b312fde7f71467dd2c",
+    "assets/repair_http.mjs": "c570bdb444723a64de52fc34bc14b2d2fa25c7c002475308ebd2f05069df6121",
+    "assets/streamed_video5.mjs": "87ea4f463b07cb6281191ab29a2a161d4a981a6ba9ae60c8de4fbf02f13fdb8f",
+    "assets/streamed_video.mjs": "721d507eb48028ad345fed7e9276c7d8f5141189658588bb5d8569375ede4543"
+  },
+  "video_source": {
+    "source_abi": "recorded_video_v1",
+    "path": "/Users/pyan/networkRLCD/data/native_video/tears_of_steel_video_only.mp4",
+    "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+    "duration_ms": 734166,
+    "width": 1280,
+    "height": 534,
+    "frame_rate": "24/1",
+    "attribution": "Tears of Steel (2012), Blender Foundation \u2014 original credit scroll retained in the source; video-only benchmark crop, not redistribution",
+    "license_url": "https://mango.blender.org/about/",
+    "source_url": "https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov",
+    "rights_asserted_by_importer": true,
+    "not_representative_corpus": true
+  },
+  "excluded_video_ranges": [
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        360000,
+        380000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        380000,
+        400000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        400000,
+        420000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        420000,
+        440000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        340000,
+        360000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        440000,
+        460000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        460000,
+        480000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        480000,
+        500000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        300000,
+        320000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        320000,
+        340000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        340000,
+        360000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        360000,
+        380000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        500000,
+        520000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        520000,
+        540000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        540000,
+        560000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        560000,
+        580000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        220000,
+        240000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        240000,
+        260000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        260000,
+        280000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        280000,
+        300000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        260000,
+        280000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        280000,
+        300000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        300000,
+        320000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        320000,
+        340000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        160000,
+        180000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        200000,
+        220000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        220000,
+        240000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        240000,
+        260000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        80000,
+        100000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        120000,
+        140000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        60000,
+        80000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        80000,
+        100000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        100000,
+        120000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        120000,
+        140000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        140000,
+        160000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        160000,
+        180000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        180000,
+        200000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        200000,
+        220000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        60000,
+        80000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        100000,
+        120000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        140000,
+        160000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        180000,
+        200000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        220000,
+        240000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        240000,
+        260000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        260000,
+        280000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        280000,
+        300000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        260000,
+        280000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        280000,
+        300000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        300000,
+        320000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        320000,
+        340000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        160000,
+        180000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        200000,
+        220000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        220000,
+        240000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        240000,
+        260000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        80000,
+        100000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        120000,
+        140000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        60000,
+        80000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        80000,
+        100000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        100000,
+        120000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        120000,
+        140000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        140000,
+        160000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        160000,
+        180000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        180000,
+        200000
+      ]
+    },
+    {
+      "sha256": "45331b1ba03cb28aaf35ac0438e91fb2f2d5011c9351c1f85073fcc0d3952eef",
+      "segment": [
+        200000,
+        220000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        360000,
+        380000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        380000,
+        400000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        400000,
+        420000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        420000,
+        440000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        340000,
+        360000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        440000,
+        460000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        460000,
+        480000
+      ]
+    },
+    {
+      "sha256": "7e88af2774f38dc74958efa62ed2e38add29e38c628d7fe196ec462a25490809",
+      "segment": [
+        480000,
+        500000
+      ]
+    }
+  ],
+  "excluded_inputs_sha256": {
+    "/Users/pyan/networkRLCD/configs/native_repair3_selected_calibration_v3.json": "0b1db7bd2021225d303501936157a1e4a8453d6a499fffd998b9e0a77a7872dd",
+    "/Users/pyan/networkRLCD/configs/native_repair3_smoke_v3.json": "430131840855114453a4248c8cac8ad7c495c3dd272a1f596bd8c1a50c74fdd8",
+    "/Users/pyan/networkRLCD/configs/native_repair4_smoke_v4.json": "bca9060f0ef31be60cbaadfce50926f7afecdbb2db91c799c72e8a20d01f60ac",
+    "/Users/pyan/networkRLCD/configs/native_repair4_smoke_v4b.json": "c17a658b2ca25f39449c56678d40638fe8e2f9873cd965563515619bab57723f",
+    "/Users/pyan/networkRLCD/configs/native_repair5_smoke_v5.json": "8ab53f094f40d5de6b8096df60fa969df98e5c1b0b4221a6c58369c0d7b0760d",
+    "/Users/pyan/networkRLCD/configs/native_repair5_train_sintel_v5.json": "bf55b1e2ede822216ffdea0792bae60c0f85136fd73374cf9206c2b34ca6112e",
+    "/Users/pyan/networkRLCD/configs/native_repair5_train_tos_v5.json": "5fcd5585e4142223202651bd8988d67e14fc5059b6f7cee9e23707a9c2300f03",
+    "/Users/pyan/networkRLCD/configs/native_repair_calibration_v2.json": "f37cc498a70816dd8453ba7c474b2247fd6b4bb6e41674772ea7fbebe07eb3b0",
+    "/Users/pyan/networkRLCD/configs/native_repair_repeatability_v2.json": "9e9a1ecaf4e99d55a8403c0922d129f3d52680cced11514b215017023011bb49",
+    "/Users/pyan/networkRLCD/configs/native_repair_selected_calibration_v2.json": "e768cce0e287795c86a9172bf0e783ef9562c2ce72f9a66f89b7d4b3955920ca",
+    "/Users/pyan/networkRLCD/configs/native_repair_smoke_v2.json": "c92e3fb9a1a3ec0a484ea2db39d1907a5690b2c92de48a306f3f8320aca6e046",
+    "/Users/pyan/networkRLCD/configs/native_repair_smoke_v2b.json": "e83ac0176b3845b230e424110f80c89b2262b764c90d48ba90e58b9985537714",
+    "/Users/pyan/networkRLCD/configs/native_repair_train_v2.json": "e4784d70206cf65db2e90524979a4898b4a793f4a5235f38b3607ea63a85f5ed",
+    "/Users/pyan/networkRLCD/results/native-recorded-repeatability-v1/protocol.json": "ce9262ed9e23d540f62046eb33b09818854016d4676b9afc8c5847323b36df02",
+    "/Users/pyan/networkRLCD/results/native-repair-calibration-v2/protocol.json": "f37cc498a70816dd8453ba7c474b2247fd6b4bb6e41674772ea7fbebe07eb3b0",
+    "/Users/pyan/networkRLCD/results/native-repair-repeatability-v2/protocol.json": "9e9a1ecaf4e99d55a8403c0922d129f3d52680cced11514b215017023011bb49",
+    "/Users/pyan/networkRLCD/results/native-repair-selected-calibration-v2/protocol.json": "e768cce0e287795c86a9172bf0e783ef9562c2ce72f9a66f89b7d4b3955920ca",
+    "/Users/pyan/networkRLCD/results/native-repair-smoke-v2/protocol.json": "c92e3fb9a1a3ec0a484ea2db39d1907a5690b2c92de48a306f3f8320aca6e046",
+    "/Users/pyan/networkRLCD/results/native-repair-smoke-v2b/protocol.json": "e83ac0176b3845b230e424110f80c89b2262b764c90d48ba90e58b9985537714",
+    "/Users/pyan/networkRLCD/results/native-repair-train-v2/protocol.json": "e4784d70206cf65db2e90524979a4898b4a793f4a5235f38b3607ea63a85f5ed",
+    "/Users/pyan/networkRLCD/results/native-repair3-selected-calibration-v3/protocol.json": "0b1db7bd2021225d303501936157a1e4a8453d6a499fffd998b9e0a77a7872dd",
+    "/Users/pyan/networkRLCD/results/native-repair3-smoke-v3/protocol.json": "430131840855114453a4248c8cac8ad7c495c3dd272a1f596bd8c1a50c74fdd8",
+    "/Users/pyan/networkRLCD/results/native-repair4-smoke-v4/protocol.json": "bca9060f0ef31be60cbaadfce50926f7afecdbb2db91c799c72e8a20d01f60ac",
+    "/Users/pyan/networkRLCD/results/native-repair4-smoke-v4b/protocol.json": "c17a658b2ca25f39449c56678d40638fe8e2f9873cd965563515619bab57723f",
+    "/Users/pyan/networkRLCD/results/native-repair5-smoke-v5/protocol.json": "8ab53f094f40d5de6b8096df60fa969df98e5c1b0b4221a6c58369c0d7b0760d",
+    "/Users/pyan/networkRLCD/data/native_video/tears_of_steel_source.json": "1c4a758d85ecea26e0b73a5936d726e3df31ed882f7446a9c74f940c4b43817d"
+  },
+  "episode_timeout_s": 90,
+  "common_shadow_inference": true,
+  "repeatability_run": null,
+  "validation_run": null,
+  "SOTA_achieved": false
+}

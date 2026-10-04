@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtemp,writeFile,rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {createHash} from 'node:crypto';
+import {createServer} from 'node:http';
+import {byteRange,verifiedMovie} from './repair_http.mjs';
+import {RepairPolicy,feedbackFeatures,warmRepair} from './repair_policy.mjs';
+test('HTTP range syntax and bounds reject malformed/multipart/unsafe requests',()=>{assert.deepEqual(byteRange(undefined,100),[0,99,false]);assert.deepEqual(byteRange('bytes=20-29',100),[20,29,true]);assert.deepEqual(byteRange('bytes=-10',100),[90,99,true]);for(const s of ['bytes=100-','bytes=40-20','bytes=-0','bytes=0-4,10-20','bytes=9007199254740992-','garbage'])assert.equal(byteRange(s,100),null);});
+test('verified movie serves exact partial bytes, head proof and refuses wrong SHA',async()=>{const dir=await mkdtemp(tmpdir()+'/repair-range-'),path=dir+'/movie.mp4',data=Buffer.from('0123456789abcdefghijklmnopqrstuvwxyz'),sha=createHash('sha256').update(data).digest('hex');await writeFile(path,data);await assert.rejects(verifiedMovie(path,'a'.repeat(64)),/SHA/);const movie=await verifiedMovie(path,sha),server=createServer((req,res)=>movie.serve(req,res).catch(error=>{res.statusCode=500;res.end(String(error));}));await new Promise(r=>server.listen(0,'127.0.0.1',r));try{const url='http://127.0.0.1:'+server.address().port;const head=await fetch(url,{method:'HEAD'});assert.equal(head.headers.get('x-source-sha256'),sha);assert.equal(head.headers.get('accept-ranges'),'bytes');const partial=await fetch(url,{headers:{Range:'bytes=10-14'}});assert.equal(partial.status,206);assert.equal(await partial.text(),'abcde');const invalid=await fetch(url,{headers:{Range:'bytes=100-'}});assert.equal(invalid.status,416);}finally{server.closeAllConnections();await new Promise(r=>server.close(r));await movie.close();await rm(dir,{recursive:true});}});
+test('disposable warmup does not seed a real history',()=>{assert.equal(warmRepair(null,64),64);const real=new RepairPolicy();assert.deepEqual(real.history,[]);assert.equal(real.started,null);});
+test('future feedback is never a policy input',()=>{assert.throws(()=>feedbackFeatures({source_id:1,capture_request_ms:0,received_ms:101,presented_fps:30},100),/future/);assert.deepEqual(feedbackFeatures(null,100),[0,1,0,0]);});

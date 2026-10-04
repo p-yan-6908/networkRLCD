@@ -1,0 +1,202 @@
+{
+  "abi": "native_encoder_long_hold_response_v1",
+  "geometry": {
+    "hold_steps": 16,
+    "caps_bps": [
+      300000,
+      450000,
+      900000
+    ],
+    "sequence_bps": [
+      450000,
+      300000,
+      900000,
+      300000,
+      900000,
+      450000,
+      300000,
+      900000,
+      300000,
+      450000,
+      900000,
+      450000
+    ],
+    "bands_after_ack_ms": [
+      [
+        200,
+        600
+      ],
+      [
+        600,
+        1000
+      ],
+      [
+        1000,
+        1400
+      ]
+    ],
+    "request_deadline_ms": 150,
+    "directional_target_threshold_fraction": 0.9,
+    "declared_peers": 4,
+    "order": [
+      "fixed450",
+      "random-hold-a",
+      "fixed450",
+      "random-hold-b"
+    ],
+    "repeated_aliases_share_exact_sequence": true,
+    "original_credit_band_retained": [
+      200,
+      600
+    ],
+    "full_panels_or_model_fits_permitted": false,
+    "independent_validation": false
+  },
+  "base_runtime": "./results/native-action-excitation-train-sintel-v1/runtime.json",
+  "base_runtime_sha256": "316d02c3a3fe23b2c458921be3075fccb3f9619f943cd5e1796f06721d2570a5",
+  "trials": [
+    {
+      "id": "encoder-lag-0-fixed450",
+      "group": "stable-0",
+      "family": "stable",
+      "condition": "fixed450",
+      "repetition": 0,
+      "position": 0,
+      "role": "train",
+      "scene_seed": 0,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.61442,
+          "high",
+          6000
+        ],
+        [
+          1.61442,
+          "collapse",
+          6000
+        ],
+        [
+          1.61442,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        300000,
+        320000
+      ],
+      "exploration_seed": 8101
+    },
+    {
+      "id": "encoder-lag-1-random-hold-a",
+      "group": "stable-0",
+      "family": "stable",
+      "condition": "random-hold-a",
+      "repetition": 0,
+      "position": 1,
+      "role": "train",
+      "scene_seed": 0,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.61442,
+          "high",
+          6000
+        ],
+        [
+          1.61442,
+          "collapse",
+          6000
+        ],
+        [
+          1.61442,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        300000,
+        320000
+      ],
+      "exploration_seed": 8101
+    },
+    {
+      "id": "encoder-lag-2-fixed450",
+      "group": "stable-0",
+      "family": "stable",
+      "condition": "fixed450",
+      "repetition": 1,
+      "position": 2,
+      "role": "train",
+      "scene_seed": 0,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.61442,
+          "high",
+          6000
+        ],
+        [
+          1.61442,
+          "collapse",
+          6000
+        ],
+        [
+          1.61442,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        300000,
+        320000
+      ],
+      "exploration_seed": 8101
+    },
+    {
+      "id": "encoder-lag-3-random-hold-b",
+      "group": "stable-0",
+      "family": "stable",
+      "condition": "random-hold-b",
+      "repetition": 1,
+      "position": 3,
+      "role": "train",
+      "scene_seed": 0,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          1.61442,
+          "high",
+          6000
+        ],
+        [
+          1.61442,
+          "collapse",
+          6000
+        ],
+        [
+          1.61442,
+          "recovery",
+          6000
+        ]
+      ],
+      "video_segment": [
+        300000,
+        320000
+      ],
+      "exploration_seed": 8101
+    }
+  ],
+  "implementation_sha256": "711fca1b1a58a7d43d81d446a3e0f6fa622ee9ff0b45663e61e4573f6cd95112",
+  "additional_sources": {
+    "assets/encoder_response.mjs": "3dc0a73ecca6fd992d6b46964620b7f6026ed040fee96074ddda0721e074a9a9",
+    "assets/encoder_response_episode.mjs": "376c955d0d56e068a819f9a0b20deab24d47e05fdee24d592dc05f33da135870",
+    "assets/encoder_hold_control.mjs": "caa448fbb875c6d386454d0678a0f32be82f2d6e09eabc3ec15b0adb4095f68e",
+    "assets/encoder_long_hold_episode.mjs": "ea2396f3665c6cfd294d083257f1d1ab419f5e4a824824ae460fead2c4c51f73"
+  },
+  "availability_manifest_sha256": "c5ed70abe09519b5da6a71cc8971215abd3c1b3dec16a0e7e915aa69de8b3961",
+  "training_reservation_reused_not_new_independence": true,
+  "models_fitted": 0,
+  "SOTA_achieved": false
+}

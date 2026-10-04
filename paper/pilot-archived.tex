@@ -1,0 +1,224 @@
+% Working manuscript. Numerical pilot claims come from audited generated macros.
+\documentclass[10pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,hyperref}
+\usepackage{microtype}
+\hypersetup{hidelinks}
+\providecommand{\evidencepath}{generated}
+\IfFileExists{\evidencepath/evidence.tex}{\input{\evidencepath/evidence.tex}}{\PackageError{rlcd}{Missing audited evidence export}{Run media-rl export-paper before building this manuscript.}}
+\title{RLCD: Calibrated Reinforcement Learning for Safe Real-Time Media Adaptation}
+\author{Author names and affiliations to be supplied}
+\date{Working draft --- exploratory simulation evidence}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Real-time media adaptation must balance quality, delay and loss under network conditions that may differ from those seen during training. We study RLCD, a confidence-gated controller that combines Double DQN media adaptation with a separately trained and calibrated predictor of next-interval constraint satisfaction. Low-confidence or unsupported decisions are replaced by a deterministic conservative controller. The prediction target refers to the proposed RL action, including when that action is rejected; evaluation-only counterfactual labels prevent successful fallback outcomes from being mistaken for correct confidence estimates. An exploratory study with \EvidenceNumSeeds{} training seeds, \EvidenceNumEpisodes{} episodes and \EvidenceNumSteps{} control intervals compares RLCD with its identical ungated policy and deterministic baselines. On the held-out-mechanism panel, mean violation frequency changes from \EvidenceOODRLUnsafePct\% for ungated RL to \EvidenceOODRLCDUnsafePct\% for RLCD, but GCC-like control remains stronger at \EvidenceOODGCCUnsafePct\%. Calibration improves in-distribution proper scoring rules yet worsens out-of-distribution negative log likelihood. These mixed results motivate reporting calibration, control quality and fallback behavior separately. The contribution is an auditable experimental design and empirical risk-mitigation architecture, not a safety certificate or a claim of validated Internet deployment.
+\end{abstract}
+
+\section{Introduction}
+Interactive media is sensitive not only to sustained throughput but also to short queueing excursions, late frames, burst loss and missing feedback. Increasing source bitrate can improve visual quality while increasing queueing delay. Forward error correction (FEC) can recover erasures while consuming bandwidth that might itself cause congestion. Low-latency media modes trade coding efficiency or quality for timeliness. These coupled decisions make learned adaptation attractive, but also make an unqualified reward-maximizing policy difficult to trust when network conditions change.
+
+Requirements for real-time congestion control include low delay, stable behavior, rapid adaptation and appropriate handling of feedback loss~\cite{rfc8836}. Prior learned congestion-control work identifies generalization, safety and fairness as significant deployment challenges~\cite{jay2019aurora}. A policy's preference for an action does not resolve those challenges: Q-values describe expected return under the learned model, not the probability that the action meets an operational latency or loss constraint. A softmax over Q-values therefore has no intrinsic interpretation as safety confidence.
+
+We investigate a different interface: the controller proposes a joint media action and separately reports an estimated probability that this action will satisfy a precisely defined next-interval constraint. A post-hoc calibrator is fitted on disjoint in-distribution (ID) episodes. A deterministic fallback is used when confidence is low, feedback is unusable, or a separate telemetry-support guard rejects the observation. We call this implemented controller \emph{RLCD}; the name is a project identifier, not a claim to reproduce a previously established algorithm.
+
+The central question is not whether adding a confidence score makes RL safe. It is whether an empirically calibrated action-safety estimate improves a deployed risk--quality tradeoff, and whether that improvement persists beyond the calibration distribution. We make three contributions: (i) an explicit proposal-level confidence target and causal controller interface; (ii) a reproducible evaluation protocol that distinguishes rejected-proposal outcomes from executed fallback outcomes; and (iii) an open experimental implementation with paired-seed comparisons, proper scoring rules, fallback diagnostics and reproducible negative findings. We do not introduce a new calibration estimator or prove an invariant safety property.
+
+\section{Related work and scope}
+\paragraph{Learned and deterministic congestion control.}
+Aurora studies Internet congestion control through deep reinforcement learning and emphasizes adoption challenges beyond average reward~\cite{jay2019aurora}. We use a small Double DQN~\cite{hasselt2016double} over a joint bitrate/FEC/media action space; we do not reproduce Aurora's architecture or results. Our GCC-like baseline is inspired by the delay-overuse and loss-response mechanisms in the historical GCC draft~\cite{holmer2016gcc}, but omits production libwebrtc's packet estimators and probe machinery. It must not be interpreted as a production GCC benchmark.
+
+\paragraph{Calibration and selective prediction.}
+Guo et al. study held-out post-hoc probability scaling~\cite{guo2017calibration}; ensembles offer a practical predictive-uncertainty construction~\cite{lakshminarayanan2017ensembles}. Ovadia et al. show that calibration under distribution shift remains problematic~\cite{ovadia2019shift}. These works motivate separate fitting and evaluation of safety probabilities, rather than treating the calibration transformation as a guarantee. SelectiveNet jointly optimizes prediction and rejection~\cite{geifman2019selectivenet}. RLCD instead fits an action-safety predictor separately from its policy, calibrates it post hoc, and deploys a stateful fallback. Its probability-only risk--coverage curves are descriptive diagnostics, not a reproduction of SelectiveNet.
+
+\paragraph{Runtime assurance and shielding.}
+Formal shielding can synthesize an intervention mechanism from a temporal-logic safety specification and an appropriate abstraction of environment dynamics~\cite{alshiekh2017shielding}. That distinction is crucial here. RLCD's guard is a learned one-step risk estimate plus a heuristic support test. It does not compute a winning region, prove recoverability, or enforce a temporal-logic invariant. A deterministic fallback is reproducible, but determinism alone does not make it safe. In particular, a controller cannot recover bandwidth during a complete outage.
+
+\section{Problem formulation and simulator}
+\subsection{Causal observations and joint media actions}
+At each interval of length $\Delta=0.1$ s, the controller receives ten telemetry features: acknowledged wire throughput, RTT, raw loss, jitter, RTT change, the last locally selected bitrate, FEC level and media mode, feedback age, and a validity bit. Feedback becomes available only after the interval that generated it; configured extra delay and feedback gaps retain stale measurements. The controller never receives current capacity, the queue state, scenario identity, or future trace samples. Fixed feature scales and clipping are documented in the artifact.
+
+The action is $a_t=(b_t,f_t,m_t)$, where source bitrate $b_t$ belongs to $\{0.15,0.3,0.6,1,1.6,2.5,4\}$ Mbps, FEC overhead $f_t$ belongs to $\{0,0.1,0.25\}$, and $m_t$ selects normal or low-latency mode. Thus there are 42 actions with wire rate $w_t=b_t(1+f_t)$. Low-latency mode uses an 8 ms coding-delay proxy and quality multiplier 0.82, versus 25 ms and multiplier 1 for normal mode. These values are synthetic modeling assumptions, not codec measurements.
+
+\subsection{Network and media transition}
+The trace specifies bottleneck capacity $C_t$, base RTT, exogenous erasure probability, jitter, feedback availability and burst/buffer modifiers. Given queue occupancy $Q_t$ Mbit and buffer limit $B_t$, arrivals and fluid service are
+\begin{align}
+A_t &= w_t\Delta, & S_t &= \min(Q_t+A_t,C_t\Delta), \\
+D_t &= \max(0,Q_t+A_t-S_t-B_t), & Q_{t+1}&=Q_t+A_t-S_t-D_t.
+\end{align}
+Tail-drop loss is approximated by $\min(1,D_t/A_t)$ and composed with exogenous erasures. For burst intensity $z_t$, the idealized recoverable fraction is
+\begin{equation}
+\rho_t=0.85(1-0.7z_t)\frac{f_t}{1+f_t},\qquad
+\ell_t^{\mathrm{res}}=\frac{\max(0,p_t^{\mathrm{loss}}-\rho_t)}{1-\rho_t}.
+\end{equation}
+FEC therefore adds both wire load and a $20f_t$ ms coding-delay proxy. At zero capacity, residual loss and deadline misses are forced to one. The model does not implement erasure-code blocks or packet identities.
+
+Virtual queue delay is $1000(Q_t+Q_{t+1})/[2\max(C_t,0.01)]$ ms. Virtual media latency $L_t$ adds half the base RTT, jitter, coding delay and this queue delay. A uniform completion-time approximation around $L_t$ yields a deadline-miss fraction
+\begin{equation}
+v_t=\operatorname{clip}\left(\tfrac12+\frac{L_t-L_{\mathrm{deadline}}}{1000\Delta},0,1\right).
+\end{equation}
+The 0.01 Mbps denominator floor makes stalled-interval penalties finite. Consequently, large outage latency values are \emph{virtual delay penalties, not observed packet delivery times}. Timely-goodput accounting is bounded by fluid service and discounts residual loss and deadline misses.
+
+\subsection{Reward and the safety event}
+With $u(b,m)=\log(1+b/0.15)$ multiplied by the mode-quality factor, the default reward is
+\begin{align}
+r_t={}&u(b_t,m_t)(1-\ell_t^{\mathrm{res}})(1-v_t)
+ -0.8\min(L_t/150,10)\nonumber \\
+ &-5\ell_t^{\mathrm{res}}-2v_t-0.15\left|\log(b_t/b_{t-1})\right|.
+\end{align}
+QoE here denotes this synthetic reward, not MOS or VMAF. Reward weights are configurable and shared by all methods. We separately define the binary event
+\begin{equation}\label{eq:safety}
+Y_t(a)=\mathbf{1}\left\{L_t(a)\leq150\;\mathrm{ms},\;\ell_t^{\mathrm{res}}(a)\leq0.05,\;C_t>0\right\}.
+\end{equation}
+The event is not reward positivity, zero deadline misses, action optimality or full-episode safety. Capacity appears only in outcome labeling, never in the policy or confidence features. The thresholds are experimental design choices, not requirements asserted by RFC 8836.
+
+\section{RLCD controller}
+\subsection{Policy training}
+A one-hidden-layer ReLU MLP estimates action values. Double DQN separates online action selection from target-network evaluation~\cite{hasselt2016double}:
+\begin{equation}
+y_t=r_t+\gamma(1-d_t)Q_{\theta^-}\left(o_{t+1},\arg\max_a Q_{\theta}(o_{t+1},a)\right),
+\end{equation}
+where $d_t$ is terminal status. Training uses uniform replay, Huber loss, Adam, a norm-10 gradient cap, and periodically copied target weights. Exploration decays to its configured floor. The final checkpoint is used without test-driven early stopping. The policy-training objective remains expected discounted reward; the runtime gate is a separate empirical intervention, not an exact solution to a constrained MDP.
+
+\subsection{Action-safety estimator and calibration}
+The greedy proposal is $a_t^*=\arg\max_aQ_\theta(o_t,a)$. Safety features concatenate telemetry with the candidate bitrate, redundancy, media mode and a wire-rate/acknowledged-throughput ratio. Standardization uses safety-fit data only. Three separately initialized classifiers are trained with binary cross-entropy on whole-episode bootstrap resamples, and their sigmoid probabilities are averaged to obtain $p_t$. Model disagreement is logged but is not treated as a Bayesian credible interval.
+
+Safety fitting uses independent ID episodes with a predeclared repeating mixture of RL, conservative and GCC-like behavior; random-action augmentation adds action coverage. Calibration uses new ID trace seeds and only labels the RL proposal on that trajectory mixture. Monotone Platt scaling fits
+\begin{equation}
+q_t=\sigma\left(\exp(\alpha)\operatorname{logit}(p_t)+\beta\right)
+\end{equation}
+by held-out binary negative log likelihood (NLL), with the underlying models frozen. Temperature scaling fixes $\beta=0$. Single-class calibration sets produce a recorded smoothed prior instead of an ill-conditioned fit; such a result is an insufficient-data warning, not evidence of successful calibration.
+
+The operational interpretation of $q_t$ is an estimate of $P(Y_t(a_t^*)=1\mid o_t,a_t^*)$. It does not estimate the correctness of the subsequently substituted fallback action. Even within ID mechanisms, the deployed gate changes the distribution of visited states relative to calibration trajectories; this occupancy shift is a limitation to be measured rather than assumed away.
+
+\subsection{Support rejection, hysteresis and fallback}
+The support score is the RMS standardized distance of the ten unclipped telemetry features from their safety-fit mean. Its cutoff is the safety-fit 99.5th percentile. This deliberately simple heuristic is separate from the calibrated probability: it neither inspects the scenario label nor multiplies $q_t$ by an arbitrary penalty.
+
+The default gate rejects when $q_t<0.90$, feedback is invalid or older than 0.5 s, or telemetry exceeds the support cutoff. Nonfinite telemetry bypasses neural inference. Once fallback begins, it lasts at least three decisions and requires $q_t\geq0.93$ to release. These hold/release rules reduce switching chatter but do not establish an invariant. Algorithm~1 states the decision interface.
+
+\begin{table}[t]
+\centering
+\begin{minipage}{.94\linewidth}
+\hrule\vspace{4pt}
+\textbf{Algorithm 1: RLCD runtime decision}
+\begin{enumerate}
+\item Update the deterministic fallback's shadow state from causal telemetry; compute its candidate action $a_t^{\mathrm{fb}}$.
+\item If telemetry is nonfinite, execute $a_t^{\mathrm{fb}}$ and record an invalid-telemetry rejection.
+\item Otherwise obtain $a_t^*$, the ensemble score $p_t$, calibrated score $q_t$, and telemetry-support score.
+\item Reject the proposal on low confidence, invalid/stale feedback, or support rejection. Retain fallback while the hold time or release margin requires it.
+\item Execute $a_t^{\mathrm{fb}}$ if fallback is active, otherwise $a_t^*$. Log both actions, the proposal confidence, and the reason. Do not query latent network state.
+\end{enumerate}
+\hrule
+\end{minipage}
+\caption{Telemetry-only deployment interface. Simulator counterfactuals are evaluation tools and are absent from this runtime decision.}
+\end{table}
+
+The fallback maintains a wire-rate budget and an RTT-excess estimate relative to the observed minimum. Queueing, increasing delay or substantial loss causes multiplicative backoff capped by acknowledged throughput; otherwise it probes additively. A persistent budget allows progress across discrete bitrate rungs despite application-limited acknowledgments. It favors low-latency mode and modest FEC only outside congestion, selecting a minimum-wire action if the budget cannot accommodate another rung. Outages and base-delay changes can still violate Eq.~\ref{eq:safety} under fallback.
+
+\section{Experimental design}
+\subsection{Research questions and comparisons}
+We evaluate four questions: \textbf{RQ1}, does RLCD reduce violations relative to its identical ungated policy, and at what QoE cost? \textbf{RQ2}, does post-hoc scaling improve same-state proper scoring rules under ID and OOD conditions? \textbf{RQ3}, which effects arise from calibration, support rejection, hysteresis and the ensemble? \textbf{RQ4}, how does the resulting controller compare with deterministic methods, including cases where they remain stronger?
+
+The mandatory baselines are the conservative controller used continuously, a throughput/queue/loss heuristic, GCC-like control, and the exact ungated Double DQN checkpoint used by RLCD. Ablations replace calibrated confidence with raw confidence, remove support rejection, remove hysteresis, or use one safety predictor with its own calibration. Removing FEC changes the action space and requires retraining. A temperature-scaling retraining variant and a predeclared threshold sweep complete the protocol. Smoke-scale sweeps establish pipeline functionality, not reliable ablation estimates.
+
+\subsection{Trace families, splits and sample sizes}
+Four ID generators provide steady, stepped and ramped capacity plus correlated Wi-Fi-like variability. Seven OOD generators introduce severe capacity collapse, burst erasures with weaker FEC recovery, bufferbloat, handover, outage, missing feedback and capacity expansion. Each trace is deterministic given its seed; all methods and all model seeds share the same exogenous test panel. Scenario identity and event timing are not observed by the controller.
+
+Training, safety fitting, calibration and testing use disjoint hashed seed namespaces. The evidence analyzed in this draft contains \EvidenceNumSeeds{} model seeds and \EvidenceNumTraceSeeds{} test seeds per scenario, with \EvidenceHorizon{} intervals per episode. The larger protocol is frozen separately (Table~\ref{tab:protocol}); its first four test seeds overlap the pilot, so it is a descriptive follow-up rather than a wholly untouched confirmatory panel. It cannot be relabeled confirmatory merely by increasing the number of model seeds.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{lrr}
+\toprule
+Setting & Analyzed pilot & Frozen scale-up \\
+\midrule
+Model seeds & 3 & 10 \\
+Test seeds per scenario & 4 & 20 \\
+Control intervals per episode & 160 & 600 \\
+Policy-training episodes per seed & 32 & 160 \\
+Safety-fit / calibration episodes & 12 / 12 & 40 / 40 \\
+Hidden units & 48 & 64 \\
+Safety training epochs & 15 & 30 \\
+Evaluation episodes & 1,188 & 19,800 \\
+\bottomrule
+\end{tabular}
+\caption{Separate pilot and scale-up configurations. Both use three safety classifiers, 42 actions, $\gamma=0.95$, Adam learning rate $10^{-3}$, replay size 20,000, batch size 64, and threshold 0.90. The scale-up budget is a protocol, not proof of convergence.}\label{tab:protocol}
+\end{table}
+
+\subsection{Label integrity, metrics and uncertainty}
+For every visited evaluation state, a pure simulator preview labels the RL proposal before the executed action changes the queue. The same exogenous interval is used for the proposal and executed action. This yields distinct fields for proposal safety and executed safety, including on rejected proposals. Substituting the successful fallback outcome as the proposal's label would incorrectly make rejection appear calibrated. Counterfactual preview is excluded from the controller and does not establish a long-horizon causal effect.
+
+We report synthetic QoE, virtual latency tails, raw/residual loss, deadline misses, timely-goodput proxy, switching magnitude and frequency, and source-rate coefficient of variation. Probability quality is measured by binary NLL, Brier score and ten-bin equal-width ECE with counts. Selective risk is undefined when no proposals are accepted, not zero. Fallback analysis includes rate, entry count, run length, reason, immediate prevented violations and introduced harm. Recovery diagnostics explicitly count censored failures.
+
+Table estimates first average the trace panel within each training seed, then bootstrap those seed means. Paired contrasts subtract matched model-seed/test-seed/scenario observations before bootstrapping. Intervals are conditional on this fixed trace panel and do not treat serially correlated intervals as independent samples. Deterministic baselines can have degenerate between-model-seed intervals. With three model seeds, the results are exploratory; we do not make multiple-comparison-adjusted significance claims. Reliability plots and pooled proper scoring rules are descriptive, not independent-time-step confidence intervals.
+
+\section{Pilot results and interpretation}
+\subsection{Gating helps the learned policy, not necessarily the benchmark frontier}
+Table~\ref{tab:comparison} and Figure~\ref{fig:tradeoff} compare the complete controller with its baselines. On ID traces, violation frequency changes from \EvidenceIDRLUnsafePct\% for ungated RL to \EvidenceIDRLCDUnsafePct\% for RLCD, with mean QoE of \EvidenceIDRLQoE{} and \EvidenceIDRLCDQoE{}, respectively. On OOD traces, RLCD achieves mean QoE \EvidenceOODRLCDQoE{} versus \EvidenceOODRLQoE{} for ungated RL, while using fallback on \EvidenceOODRLCDFallbackPct\% of intervals. These are paired-policy comparisons, not comparisons between separately selected favorable training runs.
+
+The deterministic comparison changes the conclusion. GCC-like control attains OOD QoE \EvidenceOODGCCQoE{} and violation frequency \EvidenceOODGCCUnsafePct\%, both stronger than RLCD's corresponding pilot means. Thus the present evidence supports studying gating as an improvement to this learned policy, not claiming that RLCD supersedes a well-performing deterministic controller. More training may change that relationship, but only the completed scale-up evaluation can answer that question.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\evidencepath/table_comparison.tex}}
+\caption{Generated pilot means with conditional 95\% training-seed bootstrap intervals. Unsafe and fallback are interval percentages, not packet percentages. QoE is synthetic. The full metrics, including virtual latency, are available in the run's \texttt{table\_main.tex} and CSV artifacts.}\label{tab:comparison}
+\end{table}
+\IfFileExists{\evidencepath/figures/qoe_safety_tradeoff.pdf}{
+\begin{figure}[t]
+\centering\includegraphics[width=.96\textwidth]{\evidencepath/figures/qoe_safety_tradeoff.pdf}
+\caption{QoE--violation tradeoffs for all registered methods. Plot labels retain implementation names; \texttt{calibrated} denotes RLCD. Intervals are conditional on the fixed trace panel.}\label{fig:tradeoff}
+\end{figure}}{}
+
+\subsection{Calibration must be evaluated under shift with proper scores}
+Table~\ref{tab:calibration} compares raw and reported probabilities on exactly the same main-controller proposal/state rows. ID NLL changes from \EvidenceIDRawNLL{} to \EvidenceIDCalibratedNLL{}, and ID Brier score from \EvidenceIDRawBRIER{} to \EvidenceIDCalibratedBRIER{}. Under OOD mechanisms, however, NLL changes from \EvidenceOODRawNLL{} to \EvidenceOODCalibratedNLL{} and Brier score from \EvidenceOODRawBRIER{} to \EvidenceOODCalibratedBRIER{}. Both proper scoring rules worsen, despite a small improvement in pooled ECE. This disagreement is precisely why ECE alone is insufficient to justify a safety-confidence claim. It is also consistent with prior warnings about post-hoc calibration under shift~\cite{ovadia2019shift}.
+
+\begin{table}[t]
+\centering\input{\evidencepath/table_calibration.tex}
+\caption{Pooled same-state proposal calibration for RLCD. Lower is better for ECE, Brier and NLL. These pooled scores differ from the means of per-episode calibration scores in the main run summary.}\label{tab:calibration}
+\end{table}
+\IfFileExists{\evidencepath/figures/reliability.pdf}{
+\begin{figure}[t]
+\centering\includegraphics[width=.77\textwidth]{\evidencepath/figures/reliability.pdf}
+\caption{Raw versus reported proposal-safety confidence. Curves are descriptive bin summaries; bin counts are retained in CSV. Good ID alignment is not an OOD guarantee.}\label{fig:reliability}
+\end{figure}}{}
+
+\subsection{Ablations and transient behavior}
+Table~\ref{tab:ablations} shows inference-time ablations. Their visited states differ, so cross-method calibration differences should not be interpreted as pure recalibration effects; Table~\ref{tab:calibration} provides the same-state comparison. Raw-confidence gating is a meaningful control baseline rather than an assumed inferior variant. Removing hysteresis can alter both fallback duty cycle and quality, while the support guard contributes little on the pilot's ID panel. These results do not establish that every component is beneficial.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\evidencepath/table_ablations.tex}}
+\caption{Generated inference-time ablation means. Unsafe and fallback are percentages. Full conditional intervals remain in the run's summary CSV; no component-wise significance claim is made.}\label{tab:ablations}
+\end{table}
+\IfFileExists{\evidencepath/figures/trajectory_collapse.pdf}{
+\begin{figure}[t]
+\centering\includegraphics[width=.82\textwidth]{\evidencepath/figures/trajectory_collapse.pdf}
+\caption{Capacity-collapse trajectory for the first predeclared model/trace seed, not a selected success case. Capacity is shown only as an offline reference. Transient queue growth and repeated fallback remain visible; rejection does not eliminate all violations.}\label{fig:collapse}
+\end{figure}}{}
+
+\section{Limitations and next validation steps}
+\paragraph{Simulation fidelity.}
+The simulator models a single bottleneck with aggregate fluid service. It omits packet ordering, retransmission, codec dependencies, FEC block structure, competing adaptive flows and perceptual quality. It therefore does not assess multi-flow fairness or establish RFC compliance. Large virtual outage delays are not latency measurements from delivered traffic. The next external-validity steps are packet-level/emulator experiments, recorded network traces, a real WebRTC integration and codec-aware QoE validation.
+
+\paragraph{Distribution and statistical scope.}
+A few synthetic trace families with fixed event shapes are not representative Internet sampling. The gate changes state occupancy, while ID post-hoc scaling assumes a compatible calibration distribution. Support distance is only a heuristic. Model-seed bootstrap intervals condition on the shared trace panel and omit uncertainty over unseen network populations; the small pilot is especially limited. The scale-up reuses part of that panel and must be described accordingly. Any later policy tuning requires a dedicated validation design and fresh final test traces.
+
+\paragraph{Safety semantics and attribution.}
+One-step calibrated success does not compose automatically into episode safety. The fallback may itself introduce harm, and some network conditions are infeasible at every action. Evaluation-only counterfactuals attribute immediate effects from the same state but do not estimate the long-run causal benefit of a different controller trajectory. Formal shielding would require additional sound abstractions or invariant-set reasoning that this work does not provide.
+
+\section{Conclusion}
+RLCD makes an explicit, testable proposal-level safety-confidence claim and evaluates it separately from executed control outcomes. The pilot shows that gating can improve a fixed learned policy while leaving it behind deterministic baselines, and that ID calibration improvements can reverse under network shift. Those negative results are central to the study rather than exceptions to hide. The framework supports a larger frozen campaign and targeted external validation, but the current evidence warrants empirical risk-mitigation claims only.
+
+\appendix
+\section{Artifact and reproducibility contract}
+The repository provides locked dependencies, strict JSON configurations, CPU model training, frozen checkpoints, seeded traces, complete step/episode logs, integrity manifests, source snapshots and tests. Checkpoints contain policy weights, safety-model weights, calibrator parameters, seed namespaces and training logs; they are inference artifacts, not mid-training resumable snapshots. No GPU run is implied by the CPU implementation.
+
+Manuscript numbers and reduced tables are generated with \texttt{media-rl export-paper}. This command refuses incomplete or hash-mismatched experiments, verifies episode counts and records both input and generated-file hashes. The analyzed source is the completed pilot; partial scale-up outputs are never silently imported. Figures are copied from the same audited source. Runtime status and commands for the larger campaign are documented separately in \texttt{docs/PAPER\_TRAINING\_PLAN.md}.
+
+\begin{table}[ht]
+\centering\resizebox{\textwidth}{!}{\input{\evidencepath/table_contrasts.tex}}
+\caption{Generated paired RLCD-minus-reference effects. Violation-rate contrasts are percentage points; QoE contrasts use reward units. Negative violation differences favor RLCD, while positive QoE differences favor RLCD. Intervals are exploratory and conditional on the fixed trace panel.}
+\end{table}
+
+\bibliographystyle{plain}
+\bibliography{../research/references}
+\end{document}

@@ -1,0 +1,6 @@
+import {NATIVE_ACTIONS} from './native_actuation.mjs';
+export function explorationOrder(seed){if(!Number.isInteger(seed)||seed<1||seed>0xffffffff)throw Error('nonzero uint32 behavior seed required');let state=seed>>>0;const next=()=>{state^=state<<13;state^=state>>>17;state^=state<<5;state>>>=0;return state;};const caps=NATIVE_ACTIONS.filter(a=>a.receiver_jitter_buffer_target_ms===0).map(a=>a.encoder_max_bitrate_bps);for(let i=caps.length-1;i>0;i--){const j=next()%(i+1);[caps[i],caps[j]]=[caps[j],caps[i]];}return Object.freeze(caps);}
+export class NativeBlockExplorer{
+ constructor(seed,start){if(!Number.isFinite(start)||start<0)throw Error('behavior clock required');this.order=explorationOrder(seed);this.protocol=Object.freeze({controller:'native_block_exploration_v1',seed,block_ms:1000,block_start_ms:start,cap_order:this.order,receiver_target_ms:0,behavior_is_not_the_learned_policy:true});}
+ action(now){if(!Number.isFinite(now)||now<this.protocol.block_start_ms)throw Error('noncausal behavior time');const index=Math.floor((now-this.protocol.block_start_ms)/this.protocol.block_ms)%this.order.length;return {encoder_max_bitrate_bps:this.order[index],receiver_jitter_buffer_target_ms:0};}
+}

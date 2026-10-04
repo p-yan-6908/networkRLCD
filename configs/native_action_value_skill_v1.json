@@ -1,0 +1,10 @@
+{
+  "abi": "native_action_conditioned_value_skill_v1",
+  "role": "train",
+  "model_seeds": [6601, 6611, 6621],
+  "cv_updates": 1200,
+  "cv_folds": 2,
+  "min_utility_skill": 0.01,
+  "action_blind_inputs": "three_proposed_action_features_zero; temporal_sender_state_unchanged",
+  "conditional_results": "reuse_original_sealed_same_folds_not_refit"
+}

@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {RepairPolicy,CONFIG,explorationCap,warmRepair} from './repair5_policy.mjs';
+import {legacyVideoConfig} from './streamed_video5.mjs';
+import {configureFixedEncoder,ENCODER_RECIPE} from './fixed_encoder5.mjs';
+const obs=now=>({sample_ms:now,features:[.5,.3,0,0,1,0,0,.075,0,1,1,0,0,0,1,0],content_features:[.2,.1,1]});
+test('no-model startup/faults keep original BWE fallback and budgets',()=>{const p=new RepairPolicy();for(const t of [0,1000,2400])assert.equal(p.observe(obs(t)).encoder_max_bitrate_bps,1.6e6);assert.equal(CONFIG.miss_budget,.1);assert.equal(CONFIG.bwe_headroom,.95);assert.equal(warmRepair(null,64),64);});
+test('fixed-600 and native-GCC are declared factual exploration only',()=>{assert.equal(explorationCap('fixed600',0,0,obs(0)),600000);assert.equal(explorationCap('gcc',0,0,obs(0)),4000000);});
+test('V5 movie namespace maps into unchanged inode-verified V2 loader',()=>{const c={source_kind:'recorded_video_repair_v5',video_source:{sha256:'a'.repeat(64)}};assert.equal(legacyVideoConfig(c).source_kind,'recorded_video_repair_v2');assert.equal(c.source_kind,'recorded_video_repair_v5');assert.throws(()=>legacyVideoConfig({source_kind:'recorded_video_repair_v4'}),/repair5/);});
+test('fixed encoder preference requires real native setter/getter reflection',async()=>{let parameters={encodings:[{maxBitrate:300000}]};const sender={getParameters:()=>({...parameters}),setParameters:async p=>{parameters=p;}};assert.deepEqual(await configureFixedEncoder(sender),ENCODER_RECIPE);assert.equal(parameters.encodings[0].maxBitrate,300000);assert.equal(parameters.degradationPreference,'maintain-framerate');await assert.rejects(()=>configureFixedEncoder({getParameters:()=>({encodings:[{}]}),setParameters:async()=>{}}),/did not reflect/);});
+test('native encoder preference failure is not silently accepted',async()=>{await assert.rejects(()=>configureFixedEncoder({getParameters:()=>({encodings:[]}),setParameters:async()=>{}}),/negotiated/);await assert.rejects(()=>configureFixedEncoder({getParameters:()=>({encodings:[{}]}),setParameters:async()=>{throw Error('unsupported');}}),/unsupported/);});
+test('zero RTT cannot poison the baseline; raw observation stays unchanged',()=>{const p=new RepairPolicy(),o=obs(0);o.features[1]=0;p.observe(o);assert.equal(p.core.rttFloor,null);assert.equal(o.features[10],1);});

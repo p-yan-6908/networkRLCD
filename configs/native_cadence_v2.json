@@ -1,0 +1,21 @@
+{
+  "panel_abi": "native_live_cadence_development_v2",
+  "purpose": "prospective unchanged-weight cadence intervention on fresh synthetic source cases; not validation/promotion/final test",
+  "model_path": "results/native-model-v1/model.json",
+  "model_sha256": "46824918cb01fe65f3107fe808b0f9fcd7f583cf9dfab9df500a63698b8a6a64",
+  "controllers": ["bwe", "rlcd", "rlcd-cadence"],
+  "observation_abi": "native_sender_stats_v1", "history_steps": 4, "receiver_target_ms": 0,
+  "common_shadow_inference": true, "common_shadow_cadence": true, "cadence_dwell_ms": 1000,
+  "risk_cutoff": 0.5, "disagreement_cutoff": 0.2, "provisional_inference_p99_budget_ms": 10,
+  "candidate_selection_or_promotion_allowed": false,
+  "epochs_are_independent_browser_executions_not_identical_packet_traces": true,
+  "success_checks": ["independent raw/model/owned changed-ack/cadence/source replay", "unchanged model and source-role disjointness from V1 training/calibration/development", "report all paired overall/phase/steady quality and on-time harms against both controls", "no safety/superiority/SOTA inference from one short same-host synthetic model panel"],
+  "episodes": [
+    {"id":"collapse-c","role":"development","scene_seed":42043,"schedule":[[2,"high",3000],[0.5,"collapse",3000],[2,"recovery",3000]],"order":["rlcd-cadence","rlcd","bwe"]},
+    {"id":"collapse-d","role":"development","scene_seed":46027,"schedule":[[2,"high",3000],[0.5,"collapse",3000],[2,"recovery",3000]],"order":["bwe","rlcd-cadence","rlcd"]},
+    {"id":"stable-c","role":"development","scene_seed":50021,"schedule":[[2,"high",3000],[2,"collapse",3000],[2,"recovery",3000]],"order":["rlcd","bwe","rlcd-cadence"]},
+    {"id":"stable-d","role":"development","scene_seed":54013,"schedule":[[2,"high",3000],[2,"collapse",3000],[2,"recovery",3000]],"order":["rlcd-cadence","bwe","rlcd"]},
+    {"id":"variable-c","role":"development","scene_seed":58003,"schedule":[[3.2,"high",3000],[0.7,"collapse",3000],[2.8,"recovery",3000]],"order":["bwe","rlcd","rlcd-cadence"]},
+    {"id":"variable-d","role":"development","scene_seed":62003,"schedule":[[3.2,"high",3000],[0.7,"collapse",3000],[2.8,"recovery",3000]],"order":["rlcd","rlcd-cadence","bwe"]}
+  ]
+}

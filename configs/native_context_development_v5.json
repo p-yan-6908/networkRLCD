@@ -1,0 +1,580 @@
+{
+  "panel_abi": "native_causal_context_development_v5",
+  "purpose": "one frozen causal sender-only context switch, not a horizon grid, data fit, selected-policy validation, native promotion or SOTA claim",
+  "models": {
+    "base": {
+      "path": "results/native-model-v3/model.json",
+      "sha256": "bab783ccc0b45eb6fab4aaab20c350e5e02a8745cdbe3c3de1c3d096a99d689a",
+      "n_step": 3
+    },
+    "long": {
+      "path": "results/native-model-v4/model.json",
+      "sha256": "1af1832db2fc44bfbef7a4ca26daa639b96a8058a64b69001c5d271fb0aa22dd",
+      "n_step": 20
+    }
+  },
+  "controllers": [
+    "context",
+    "rlcd-3step",
+    "rlcd-20step",
+    "bwe"
+  ],
+  "common_two_model_shadow": true,
+  "common_shadow_inference": true,
+  "common_context_shadow": true,
+  "context_protocol": {
+    "abi": "native_causal_context_horizon_v5",
+    "window_ms": 2000,
+    "max_gap_ms": 1000,
+    "bwe_drop_fraction": 0.2,
+    "offered_over_bwe_ratio": 1.05,
+    "rtt_rise_ms": 30,
+    "rtt_max_observed_age_ms": 1000,
+    "packet_send_delay_ms": 25,
+    "consecutive_alarm_samples": 2,
+    "long_hold_after_alarm_ms": 2000,
+    "clean_recovery_ms": 1000,
+    "risk_cutoff": 0.5,
+    "disagreement_cutoff": 0.2,
+    "default_horizon": 3,
+    "deterioration_horizon": 20,
+    "no_queue_capacity_pixel_or_phase_inputs": true,
+    "prediction_screen_not_safety_certificate": true
+  },
+  "risk_cutoff": 0.5,
+  "disagreement_cutoff": 0.2,
+  "provisional_inference_p99_budget_ms": 10,
+  "candidate_selection_or_promotion_allowed": false,
+  "one_context_switch_only": true,
+  "identical_risk_members_and_platt": true,
+  "source_group_reservation_frame_count": 1000,
+  "excluded_prior_generated_scene_ranges": [
+    [
+      5402,
+      6328
+    ],
+    [
+      8402,
+      9327
+    ],
+    [
+      11402,
+      12326
+    ],
+    [
+      12602,
+      13526
+    ],
+    [
+      16402,
+      17326
+    ],
+    [
+      17602,
+      18525
+    ],
+    [
+      21252,
+      22176
+    ],
+    [
+      22452,
+      23376
+    ],
+    [
+      25252,
+      26176
+    ],
+    [
+      26452,
+      27376
+    ],
+    [
+      29252,
+      30176
+    ],
+    [
+      30452,
+      31376
+    ],
+    [
+      33602,
+      34525
+    ],
+    [
+      37602,
+      38526
+    ],
+    [
+      44252,
+      45175
+    ],
+    [
+      48402,
+      49328
+    ],
+    [
+      18,
+      321
+    ],
+    [
+      810,
+      1112
+    ],
+    [
+      2112,
+      2417
+    ],
+    [
+      3930,
+      4232
+    ],
+    [
+      4050,
+      4352
+    ],
+    [
+      7002,
+      7304
+    ],
+    [
+      10008,
+      10310
+    ],
+    [
+      15014,
+      15316
+    ],
+    [
+      20012,
+      20300
+    ],
+    [
+      20012,
+      20299
+    ],
+    [
+      20012,
+      20299
+    ],
+    [
+      24008,
+      24295
+    ],
+    [
+      24008,
+      24295
+    ],
+    [
+      24008,
+      24295
+    ],
+    [
+      28002,
+      28289
+    ],
+    [
+      28002,
+      28289
+    ],
+    [
+      28002,
+      28289
+    ],
+    [
+      32004,
+      32291
+    ],
+    [
+      32004,
+      32291
+    ],
+    [
+      32004,
+      32291
+    ],
+    [
+      36008,
+      36295
+    ],
+    [
+      36008,
+      36295
+    ],
+    [
+      36008,
+      36295
+    ],
+    [
+      40010,
+      40297
+    ],
+    [
+      40010,
+      40297
+    ],
+    [
+      40010,
+      40297
+    ],
+    [
+      42044,
+      42333
+    ],
+    [
+      42044,
+      42332
+    ],
+    [
+      42044,
+      42331
+    ],
+    [
+      46028,
+      46315
+    ],
+    [
+      46028,
+      46315
+    ],
+    [
+      46028,
+      46315
+    ],
+    [
+      50022,
+      50309
+    ],
+    [
+      50022,
+      50312
+    ],
+    [
+      50022,
+      50310
+    ],
+    [
+      54014,
+      54301
+    ],
+    [
+      54014,
+      54301
+    ],
+    [
+      54014,
+      54301
+    ],
+    [
+      58004,
+      58291
+    ],
+    [
+      58004,
+      58291
+    ],
+    [
+      58004,
+      58291
+    ],
+    [
+      62004,
+      62291
+    ],
+    [
+      62004,
+      62291
+    ],
+    [
+      62004,
+      62292
+    ],
+    [
+      51402,
+      51691
+    ],
+    [
+      55402,
+      55689
+    ],
+    [
+      59402,
+      59689
+    ],
+    [
+      63402,
+      63689
+    ],
+    [
+      13652,
+      13939
+    ],
+    [
+      18852,
+      19139
+    ],
+    [
+      2426,
+      2715
+    ],
+    [
+      4376,
+      4664
+    ],
+    [
+      7326,
+      7613
+    ],
+    [
+      10326,
+      10614
+    ],
+    [
+      13951,
+      14239
+    ],
+    [
+      15326,
+      15613
+    ]
+  ],
+  "prior_proof_sha256": {
+    "results/jobs/native-model-v3-final-evidence.json": "d87bcfd20ca2155966f403806521a3761698a0b79bbb8a6d5781013f3c4e41c5",
+    "results/jobs/native-temporal-v4-final-evidence.json": "5f8b175221d41c548ea84097ce93c63ee1f6884bc78ee4597d7d3e138fcdb94f"
+  },
+  "source_sha256": {
+    "configs/native_context_v5.json": "db8448daf0ddbf87ff2e07d5e079da66356f63a3d2966a483a849fd288a7062a",
+    "benchmarks/native_rtc/native_context.mjs": "36915a30d0d57e38fc442d429019c06b34184742ee585da2a5ffe9faba358474",
+    "src/media_rl/native_context.py": "834e482985b0cdc119c5300e3199a5005f82551c73abbf327e2ab65d8377c77a",
+    "src/media_rl/native_context_replay.py": "70eecebd9fac9cf95bcd155076df4719ef01a7d614f0ea42582d038f0b590376",
+    ".tools/native_context_episode.mjs": "a8947a068a7a6d8ef8c5ed68e1458d72ee72a51862268c7e0a9f5e349c55c77c",
+    ".tools/audit_native_context_episode.py": "e19913a873dd0008a3e65bb3346c958a8dad3786990a6baad023654002b6612d"
+  },
+  "no_fitting_or_cutoff_relaxation": true,
+  "episodes": [
+    {
+      "id": "collapse-i",
+      "role": "development",
+      "scene_seed": 2725,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          0.5,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "context",
+        "rlcd-3step",
+        "rlcd-20step",
+        "bwe"
+      ]
+    },
+    {
+      "id": "collapse-j",
+      "role": "development",
+      "scene_seed": 32300,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          0.5,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "rlcd-3step",
+        "rlcd-20step",
+        "bwe",
+        "context"
+      ]
+    },
+    {
+      "id": "stable-i",
+      "role": "development",
+      "scene_seed": 34550,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          2,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "rlcd-20step",
+        "bwe",
+        "context",
+        "rlcd-3step"
+      ]
+    },
+    {
+      "id": "stable-j",
+      "role": "development",
+      "scene_seed": 36300,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          2,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "bwe",
+        "context",
+        "rlcd-3step",
+        "rlcd-20step"
+      ]
+    },
+    {
+      "id": "variable-i",
+      "role": "development",
+      "scene_seed": 38550,
+      "schedule": [
+        [
+          3.2,
+          "high",
+          3000
+        ],
+        [
+          0.7,
+          "collapse",
+          3000
+        ],
+        [
+          2.8,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "context",
+        "rlcd-3step",
+        "rlcd-20step",
+        "bwe"
+      ]
+    },
+    {
+      "id": "variable-j",
+      "role": "development",
+      "scene_seed": 40300,
+      "schedule": [
+        [
+          3.2,
+          "high",
+          3000
+        ],
+        [
+          0.7,
+          "collapse",
+          3000
+        ],
+        [
+          2.8,
+          "recovery",
+          3000
+        ]
+      ],
+      "order": [
+        "rlcd-3step",
+        "rlcd-20step",
+        "bwe",
+        "context"
+      ]
+    },
+    {
+      "id": "brief-collapse-i",
+      "role": "development",
+      "scene_seed": 42350,
+      "schedule": [
+        [
+          2,
+          "high",
+          4000
+        ],
+        [
+          0.5,
+          "collapse",
+          1000
+        ],
+        [
+          2,
+          "recovery",
+          4000
+        ]
+      ],
+      "order": [
+        "rlcd-20step",
+        "bwe",
+        "context",
+        "rlcd-3step"
+      ]
+    },
+    {
+      "id": "brief-collapse-j",
+      "role": "development",
+      "scene_seed": 46325,
+      "schedule": [
+        [
+          2,
+          "high",
+          4000
+        ],
+        [
+          0.5,
+          "collapse",
+          1000
+        ],
+        [
+          2,
+          "recovery",
+          4000
+        ]
+      ],
+      "order": [
+        "bwe",
+        "context",
+        "rlcd-3step",
+        "rlcd-20step"
+      ]
+    }
+  ]
+}

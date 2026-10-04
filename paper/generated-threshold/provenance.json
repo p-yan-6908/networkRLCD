@@ -1,0 +1,56 @@
+{
+  "config_sha256": "e86e2c8b67997e20e7bd5a19a755490724a164b91b83a5e8425a6c4820d1ddf6",
+  "episodes": 7700,
+  "evidence_label": "Paper-scale descriptive follow-up",
+  "generated_sha256": {
+    "evidence.tex": "284c051aa1481b3fd33d48e5ef5477b9c5f0ea7ff874b10a822149a29313be6f",
+    "figures/qoe_safety_tradeoff.pdf": "6f011517e7e1c9358b05b8635f26155a7bbd4f8c67045d8f5fa53b25ba96f6f2",
+    "figures/reliability.pdf": "23ffbb1a7b8a8575eb45d70501c614785c8f4de021708ed9e7421036a830ecd9",
+    "figures/trajectory_collapse.pdf": "33e94739024c9a4f3acb708db7a011893853c610885b33b474a24356a1a0730c",
+    "table_ablations.tex": "f7eac19f4affb57b36f4922a63e7257a0b52e6ab6beb47260b3080b892bf92bb",
+    "table_calibration.tex": "f6b7b84e1bcc430be322d9c66cf72678dfac76cd6fb5947b2437fb75e47c3df0",
+    "table_comparison.tex": "9b8711d7ef3f084a1e35181fbcccd99070a82efa83de2c252200a93cf9d68fec",
+    "table_contrasts.tex": "6547d65a60b2ce2ff63545442b58e35278e677bfdb27cdc4518ec75692d9dbd5",
+    "table_thresholds.tex": "e1e7e2646c81c17e193cca276ce823c8e30daa1933b2e8031fae14005e615ec6"
+  },
+  "integrity_checked": true,
+  "limitations": [
+    "Conditional training-seed bootstrap; fixed trace panel.",
+    "No claim of real-network validation or untouched confirmatory data."
+  ],
+  "macro_prefix": "Threshold",
+  "manifest_sha256": "b52521e6778670a2d877aa38befb49f6a722b2bce69b5c978bf03b5911a884a7",
+  "model_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99,
+    110
+  ],
+  "source_files": {
+    "calibration_diagnostics.csv": "0df4173a452766e22aeef28c22065aa3ac0bae2fc537a1f5bbef182a32a1fb65",
+    "episodes.csv": "9b5895ef727b1dde7d5fb457184552f96ff3a3f824e7b0d019c1bcd7bb177786",
+    "paired_differences.csv": "78f9a584043b36ec9b9f8435bc50f2985e74267e688a78381499188af9dd794a",
+    "summary.csv": "7e00af20e135c8708e05c661505abf106e88ce345152f58043f7ca3eb3daf614"
+  },
+  "source_run": "./results/threshold-selection-v3/test",
+  "steps": 4620000,
+  "test_seeds": [
+    3601,
+    3602,
+    3603,
+    3604,
+    3605,
+    3606,
+    3607,
+    3608,
+    3609,
+    3610
+  ],
+  "verified_artifacts": 272
+}

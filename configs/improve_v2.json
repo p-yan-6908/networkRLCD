@@ -1,0 +1,15 @@
+{
+  "name": "rlcd-v2-development",
+  "model_seeds": [11, 22, 33],
+  "validation_seeds": [501, 502],
+  "test_seeds": [1501, 1502, 1503, 1504],
+  "safety_episodes": 40,
+  "calibration_episodes": 40,
+  "stress_fraction": 0.5,
+  "candidates": ["id_refit", "stress_safe", "stress_gcc"],
+  "max_id_qoe_drop": 0.08,
+  "max_id_violation_increase": 0.002,
+  "risk_penalty": 5.0,
+  "minimum_score_gain": 0.01,
+  "bootstrap_samples": 2000
+}

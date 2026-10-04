@@ -1,0 +1,28 @@
+{
+  "panel_abi":"native_mixed_training_panel_v3",
+  "purpose":"fresh mixed-dwell and native-BWE factual training/calibration coverage, not validation/test or a performance claim",
+  "observation_abi":"native_sender_stats_v1","history_steps":4,"receiver_target_ms":0,
+  "behavior_block_choices_ms":[250,1000,4000],"bwe_headroom":0.85,
+  "reward":{"on_time_sampled_psnr_divisor":100,"miss_penalty":0.2,"switch_penalty":0.005,"gamma":0.97,"n_step":3},
+  "learner":{"model_seed":1301,"hidden":64,"updates":2400,"batch_size":64,"learning_rate":0.0003,"cql_alpha":0.05,"target_update_every":80,"risk_updates":1200},
+  "risk_cutoff":0.5,"disagreement_cutoff":0.2,
+  "candidate_selection_or_promotion_allowed":false,"previous_development_not_used_for_fitting":true,
+  "episodes":[
+    {"id":"train-fast-a","role":"train","behavior_kind":"block","block_ms":250,"behavior_seed":1701,"scene_seed":5401,"schedule":[[2.2,"high",10000],[0.4,"collapse",10000],[2.2,"recovery",10000]]},
+    {"id":"train-second-a","role":"train","behavior_kind":"block","block_ms":1000,"behavior_seed":1703,"scene_seed":8401,"schedule":[[2.2,"high",10000],[0.4,"collapse",10000],[2.2,"recovery",10000]]},
+    {"id":"train-long-a","role":"train","behavior_kind":"block","block_ms":4000,"behavior_seed":1709,"scene_seed":11401,"schedule":[[2.2,"high",10000],[0.4,"collapse",10000],[2.2,"recovery",10000]]},
+    {"id":"train-bwe-a","role":"train","behavior_kind":"bwe","behavior_seed":1721,"scene_seed":12601,"schedule":[[2.2,"high",10000],[0.4,"collapse",10000],[2.2,"recovery",10000]]},
+    {"id":"train-fast-b","role":"train","behavior_kind":"block","block_ms":250,"behavior_seed":1723,"scene_seed":16401,"schedule":[[2,"high",10000],[2,"collapse",10000],[2,"recovery",10000]]},
+    {"id":"train-second-b","role":"train","behavior_kind":"block","block_ms":1000,"behavior_seed":1733,"scene_seed":17601,"schedule":[[2,"high",10000],[2,"collapse",10000],[2,"recovery",10000]]},
+    {"id":"train-long-b","role":"train","behavior_kind":"block","block_ms":4000,"behavior_seed":1741,"scene_seed":21251,"schedule":[[2,"high",10000],[2,"collapse",10000],[2,"recovery",10000]]},
+    {"id":"train-bwe-b","role":"train","behavior_kind":"bwe","behavior_seed":1747,"scene_seed":22451,"schedule":[[2,"high",10000],[2,"collapse",10000],[2,"recovery",10000]]},
+    {"id":"train-fast-c","role":"train","behavior_kind":"block","block_ms":250,"behavior_seed":1753,"scene_seed":25251,"schedule":[[3.2,"high",10000],[0.7,"collapse",10000],[2.8,"recovery",10000]]},
+    {"id":"train-second-c","role":"train","behavior_kind":"block","block_ms":1000,"behavior_seed":1759,"scene_seed":26451,"schedule":[[3.2,"high",10000],[0.7,"collapse",10000],[2.8,"recovery",10000]]},
+    {"id":"train-long-c","role":"train","behavior_kind":"block","block_ms":4000,"behavior_seed":1777,"scene_seed":29251,"schedule":[[3.2,"high",10000],[0.7,"collapse",10000],[2.8,"recovery",10000]]},
+    {"id":"train-bwe-c","role":"train","behavior_kind":"bwe","behavior_seed":1783,"scene_seed":30451,"schedule":[[3.2,"high",10000],[0.7,"collapse",10000],[2.8,"recovery",10000]]},
+    {"id":"cal-fast-d","role":"calibration","behavior_kind":"block","block_ms":250,"behavior_seed":1787,"scene_seed":33601,"schedule":[[2.5,"high",10000],[0.6,"collapse",10000],[2.5,"recovery",10000]]},
+    {"id":"cal-second-d","role":"calibration","behavior_kind":"block","block_ms":1000,"behavior_seed":1789,"scene_seed":37601,"schedule":[[2.5,"high",10000],[0.6,"collapse",10000],[2.5,"recovery",10000]]},
+    {"id":"cal-long-d","role":"calibration","behavior_kind":"block","block_ms":4000,"behavior_seed":1801,"scene_seed":44251,"schedule":[[2.5,"high",10000],[0.6,"collapse",10000],[2.5,"recovery",10000]]},
+    {"id":"cal-bwe-d","role":"calibration","behavior_kind":"bwe","behavior_seed":1811,"scene_seed":48401,"schedule":[[2.5,"high",10000],[0.6,"collapse",10000],[2.5,"recovery",10000]]}
+  ]
+}

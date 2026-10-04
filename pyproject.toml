@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "calibrated-media-rl"
+version = "0.1.0"
+description = "Reproducible calibrated RL experiments for real-time media adaptation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.1,<3", "scipy>=1.14,<2", "matplotlib>=3.9,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.11"]
+rtc-peers = ["onnxruntime==1.23.2"]
+
+[project.scripts]
+media-rl = "media_rl.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/media_rl"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"benchmarks/native_rtc" = "media_rl/native_assets"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src/**", "tests/**", "benchmarks/native_rtc/**", "configs/*.json", "docs/*.md", "paper/*.tex", "paper/*.md",
+  "research/*.md", "research/*.bib", "README.md", "GOAL.md", "uv.lock",
+  ".python-version", "pyproject.toml", "Makefile", ".github/workflows/*.yml",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

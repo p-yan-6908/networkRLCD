@@ -1,0 +1,43 @@
+{
+  "counts": {
+    "train": {
+      "transitions": 543,
+      "source_requests": 1703,
+      "episodes": 6
+    },
+    "calibration": {
+      "transitions": 180,
+      "source_requests": 567,
+      "episodes": 2
+    }
+  },
+  "calibration_frame_brier_raw": 0.22470603007338913,
+  "calibration_frame_brier_platt": 0.1684504364048174,
+  "parity": {
+    "model_sha256": "46824918cb01fe65f3107fe808b0f9fcd7f583cf9dfab9df500a63698b8a6a64",
+    "branches": {
+      "provisional": {
+        "histories": 31,
+        "max_absolute_error": 3.552713678800501e-15,
+        "fallbacks": 8
+      },
+      "all_rejected": {
+        "histories": 31,
+        "max_absolute_error": 3.552713678800501e-15,
+        "fallbacks": 31
+      },
+      "all_accepted": {
+        "histories": 31,
+        "max_absolute_error": 3.552713678800501e-15,
+        "fallbacks": 0
+      }
+    },
+    "trained_weights_unchanged": true,
+    "old_checkpoint_transferred": false,
+    "online_performance_or_SOTA_verified": false
+  },
+  "model_sha256": "46824918cb01fe65f3107fe808b0f9fcd7f583cf9dfab9df500a63698b8a6a64",
+  "panel_sha256": "119e458ac02f2aa7abd146c8e6f6012b27c9690f1bafc9a34380ec55e4c4bcd6",
+  "calibration_score_is_in_sample": true,
+  "online_policy_superiority_or_SOTA": false
+}

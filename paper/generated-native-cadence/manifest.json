@@ -1,0 +1,17 @@
+{
+  "stage": "native_cadence_negative_development_paper_verified",
+  "artifacts_sha256": {
+    "evidence.tex": "5c390e6c496bc5e8deb25fd5ca01eeefa5ef0c8c5af375d9ef80ad3817c1f55d",
+    "table.tex": "1ac3bb86764da70e5979057acf156720b259a76e8ed4e6c01a7f32a4a4da84c2",
+    "evidence.json": "cdf09d7a3069d648b2b3e8053f67ba4be94e4f84bac798a98f7edaa1e17dbbcf"
+  },
+  "exporter_sha256": "1a6fefc50c546434190378500059b3572de3ed8d0175f239da0d0017f3e48483",
+  "auditor_sha256": "12df01b661bc00e9d3bdd31dd0e141272dc53af1e9f432644216dee2ad326ae4",
+  "wire_replayer_sha256": "44d3cb17426af61d21a9828d320ca2bdff49adce6ef703fa86d643b00e9ba67c",
+  "read_only_probe_sha256": "7705caa8573b36bb56ffe865f70ffcdea0e7aeb6be7fc2797efc48c779cfd6ab",
+  "read_only_evidence_sha256": "c9f81e76717af97c99470a55ca2a7f37faf01a345c1a3c38aefc5b8fb721567b",
+  "panel_manifest_sha256": "8de396bcf7416949ecec7cf35e487b8b059cf47a9b13ffd4fd20edba629d8db3",
+  "model_sha256": "46824918cb01fe65f3107fe808b0f9fcd7f583cf9dfab9df500a63698b8a6a64",
+  "selected_or_promoted": false,
+  "SOTA_achieved": false
+}

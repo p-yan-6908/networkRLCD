@@ -1,0 +1,752 @@
+% Working manuscript: nine audited synthetic studies; V8 and V9 are not promoted.
+\documentclass[10pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{float}
+\usepackage{amsmath,amssymb,booktabs,graphicx,hyperref}
+\usepackage{microtype}
+\usepackage{pdflscape}
+\hypersetup{hidelinks}
+\providecommand{\evidencepath}{generated-scaleup}
+\providecommand{\followuppath}{generated-followup}
+\providecommand{\thresholdpath}{generated-threshold}
+\providecommand{\randomizationpath}{generated-randomization}
+\providecommand{\shieldpath}{generated-shield}
+\providecommand{\actioncalpath}{generated-action-calibration-v6}
+\providecommand{\uncertaintyshieldpath}{generated-uncertainty-shield-v7}
+\providecommand{\budgetshieldpath}{generated-budget-shield-v8}
+\providecommand{\delaybudgetpath}{generated-delay-budget-v9}
+\IfFileExists{\delaybudgetpath/evidence.tex}{\input{\delaybudgetpath/evidence.tex}}{\PackageError{rlcd}{Missing audited V9 delay-budget evidence}{Run make paper-evidence.}}
+\IfFileExists{\budgetshieldpath/evidence.tex}{\input{\budgetshieldpath/evidence.tex}}{\PackageError{rlcd}{Missing audited V8 budget-screen evidence}{Run make paper-evidence.}}
+\IfFileExists{\evidencepath/evidence.tex}{\input{\evidencepath/evidence.tex}}{\PackageError{rlcd}{Missing audited v1 evidence}{Run make paper-evidence.}}
+\IfFileExists{\followuppath/evidence.tex}{\input{\followuppath/evidence.tex}}{\PackageError{rlcd}{Missing audited follow-up evidence}{Run make paper-evidence.}}
+\IfFileExists{\thresholdpath/evidence.tex}{\input{\thresholdpath/evidence.tex}}{\PackageError{rlcd}{Missing audited threshold evidence}{Run make paper-evidence.}}
+\IfFileExists{\randomizationpath/evidence.tex}{\input{\randomizationpath/evidence.tex}}{\PackageError{rlcd}{Missing audited policy-randomization evidence}{Run make paper-evidence.}}
+\IfFileExists{\shieldpath/evidence.tex}{\input{\shieldpath/evidence.tex}}{\PackageError{rlcd}{Missing audited action-shield evidence}{Run make paper-evidence.}}
+\IfFileExists{\actioncalpath/evidence.tex}{\input{\actioncalpath/evidence.tex}}{\PackageError{rlcd}{Missing audited V6 action-calibration evidence}{Run make paper-evidence.}}
+\IfFileExists{\uncertaintyshieldpath/evidence.tex}{\input{\uncertaintyshieldpath/evidence.tex}}{\PackageError{rlcd}{Missing audited V7 uncertainty-screen evidence}{Run make paper-evidence.}}
+\IfFileExists{generated-native-rtc/evidence.tex}{\input{generated-native-rtc/evidence.tex}}{\PackageError{rlcd}{Missing sealed native diagnostic evidence}{Run make paper-evidence.}}
+\IfFileExists{generated-native-training/evidence.tex}{\input{generated-native-training/evidence.tex}}{\PackageError{rlcd}{Missing audited native training-only evidence}{Run make paper-evidence.}}
+\IfFileExists{generated-native-development/evidence.tex}{\input{generated-native-development/evidence.tex}}{\PackageError{rlcd}{Missing audited negative native development evidence}{Run make paper-evidence.}}
+\IfFileExists{generated-native-cadence/evidence.tex}{\input{generated-native-cadence/evidence.tex}}{\PackageError{rlcd}{Missing actual native cadence evidence}{Run make paper-evidence.}}
+\IfFileExists{generated-native-mixed-v3/evidence.tex}{\input{generated-native-mixed-v3/evidence.tex}}{\PackageError{rlcd}{Missing audited mixed-native data evidence}{Run make paper-evidence.}}
+\IfFileExists{generated-native-temporal-v4/evidence.tex}{\input{generated-native-temporal-v4/evidence.tex}}{\PackageError{rlcd}{Missing audited native temporal-credit evidence}{Run make paper-evidence.}}
+\IfFileExists{generated-native-context-v5/evidence.tex}{\input{generated-native-context-v5/evidence.tex}}{\PackageError{rlcd}{Missing audited causal context evidence}{Run make paper-evidence.}}
+\title{RLCD: Calibrated Reinforcement Learning for Safe Real-Time Media Adaptation}
+\author{Author names and affiliations to be supplied}
+\date{Working draft --- exploratory simulation evidence}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Real-time media adaptation balances quality, delay and loss under changing network conditions. RLCD combines a Double DQN media policy, a separately fitted and calibrated next-interval safety predictor, and deterministic fallback. Evaluation labels rejected proposals separately from executed actions, avoiding attribution of fallback successes to calibrated confidence. Across nine synthetic studies, the initial \EvidenceNumSeeds{}-seed evaluation spans \EvidenceNumEpisodes{} episodes and \EvidenceNumSteps{} intervals. Gating reduces stress violations relative to its identical ungated policy, but does not dominate deterministic controllers. Validation-locked safety-refit, threshold and policy-randomization follow-ups do not justify changing the reference. Action-wise screening and ID selected-action recalibration improve nominal outcomes, while stress confidence remains optimistic; a disagreement guard intervenes rarely. A subsequent causal wire-budget screen reduces stress violations by 2.862 percentage points on 8,800 fresh episodes (conditional model-seed interval $[-3.724,-1.986]$), but lowers ID and stress QoE by 0.104 and 0.133 reward units. It is rejected by the frozen validation QoE constraint. Removing probability/disagreement eligibility from this envelope produces no resolved violation disadvantage, questioning confidence's incremental benefit under this particular guard. A delay-evidence follow-up recovers 1.160 burst-loss reward units relative to the loss-responsive envelope with unchanged observed violations, but still fails nominal-quality promotion. Its matched confidence ablation shows a small stress-risk regression from adding eligibility. These adaptive, known-mechanism studies identify tradeoffs and negative findings through auditable paired comparisons; they establish neither episode safety, unseen-network generalization nor a deployment certificate.
+\end{abstract}
+
+\section{Introduction}
+Interactive media is sensitive not only to sustained throughput but also to short queueing excursions, late frames, burst loss and missing feedback. Increasing source bitrate can improve visual quality while increasing queueing delay. Forward error correction (FEC) can recover erasures while consuming bandwidth that might itself cause congestion. Low-latency media modes trade coding efficiency or quality for timeliness. These coupled decisions make learned adaptation attractive, but also make an unqualified reward-maximizing policy difficult to trust when network conditions change.
+
+Requirements for real-time congestion control include low delay, stable behavior, rapid adaptation and appropriate handling of feedback loss~\cite{rfc8836}. Prior learned congestion-control work identifies generalization, safety and fairness as significant deployment challenges~\cite{jay2019aurora}. A policy's preference for an action does not resolve those challenges: Q-values describe expected return under the learned model, not the probability that the action meets an operational latency or loss constraint. A softmax over Q-values therefore has no intrinsic interpretation as safety confidence.
+
+We investigate a different interface: the controller proposes a joint media action and separately reports an estimated probability that this action will satisfy a precisely defined next-interval constraint. A post-hoc calibrator is fitted on disjoint episodes: in-distribution (ID) only in v1, and a declared ID/stress mixture in the stress-refit variants. A deterministic fallback is used when confidence is low, feedback is unusable, or a separate telemetry-support guard rejects the observation. We call this implemented controller \emph{RLCD}; the name is a project identifier, not a claim to reproduce a previously established algorithm.
+
+The central question is not whether adding a confidence score makes RL safe. It is whether an empirically calibrated action-safety estimate improves a deployed risk--quality tradeoff, and whether that improvement persists beyond the calibration distribution. We make three contributions: (i) an explicit proposal-level confidence target and causal controller interface; (ii) a reproducible evaluation protocol that distinguishes rejected-proposal outcomes from executed fallback outcomes; and (iii) an open experimental implementation with paired-seed comparisons, proper scoring rules, fallback diagnostics and reproducible negative findings. We do not introduce a new calibration estimator or prove an invariant safety property.
+
+\section{Related work and scope}
+\paragraph{Learned and deterministic congestion control.}
+Aurora studies Internet congestion control through deep reinforcement learning and emphasizes adoption challenges beyond average reward~\cite{jay2019aurora}. We use a small Double DQN~\cite{hasselt2016double} over a joint bitrate/FEC/media action space; we do not reproduce Aurora's architecture or results. Our GCC-like baseline is inspired by the delay-overuse and loss-response mechanisms in the historical GCC draft~\cite{holmer2016gcc}, but omits production libwebrtc's packet estimators and probe machinery. It must not be interpreted as a production GCC benchmark.
+
+\paragraph{Calibration and selective prediction.}
+Guo et al. study held-out post-hoc probability scaling~\cite{guo2017calibration}; ensembles offer a practical predictive-uncertainty construction~\cite{lakshminarayanan2017ensembles}. Ovadia et al. show that calibration under distribution shift remains problematic~\cite{ovadia2019shift}. These works motivate separate fitting and evaluation of safety probabilities, rather than treating the calibration transformation as a guarantee. SelectiveNet jointly optimizes prediction and rejection~\cite{geifman2019selectivenet}. RLCD instead fits an action-safety predictor separately from its policy, calibrates it post hoc, and deploys a stateful fallback. Its probability-only risk--coverage curves are descriptive diagnostics, not a reproduction of SelectiveNet.
+
+\paragraph{Randomized training coverage.}
+Domain randomization exposes a model to varied simulated conditions rather than a single nominal environment~\cite{tobin2017randomization}. Tobin et al. study visual object localization and physical robotic transfer; our v2 use randomizes network-stress supervision for a safety predictor. Tiboni et al. study adaptive entropy-maximizing distributions for robotic sim-to-real transfer~\cite{tiboni2023doraemon}; v4 does not implement their method or inherit its evidence, but tests one fixed policy-training mixture. All v4 stress mechanisms occur during candidate policy training, so fresh v4 traces measure new realizations rather than unseen-mechanism generalization.
+
+\paragraph{Finite-sample risk control and threshold selection.}
+Conformal risk control bounds expected bounded losses under exchangeability and a monotone-risk condition; extensions relax exchangeability only under their own shift assumptions~\cite{angelopoulos2022conformalrisk} and~\cite{farinhas2023nonexchangeable}. Learn-then-Test instead frames a finite candidate family as risk hypotheses and combines finite-sample valid p-values with family-wise error control, without requiring monotone risk~\cite{angelopoulos2022learntest}. It could in principle screen a prespecified family of closed-loop controllers if full-episode losses were bounded and calibration episodes were independent draws from a declared target distribution. We do not apply it here: the existing threshold study uses empirical validation for promotion, not risk-control p-values or an independent target-distribution calibration panel; per-step outcomes are serially dependent and the scenario panel is a fixed heterogeneous design. We therefore make no conformal, distribution-free or finite-sample safety-guarantee claim.
+
+\paragraph{Runtime assurance and chance-constrained action screens.}
+Formal shielding can synthesize interventions from temporal-logic specifications and an appropriate abstraction of environment dynamics~\cite{alshiekh2017shielding}. Adaptive Chance-Constraint Safeguards (ACS) instead evaluates actions against a chance constraint and projects into a feasible set, coupled to a learned recovery policy and explicit theoretical assumptions~\cite{chen2023acs}. V5 tests a much narrower empirical screen: among the five highest-Q actions, choose the first whose existing calibrated one-step probability clears the fixed threshold; otherwise use the deterministic fallback. It implements neither ACS's recovery objective nor its proof. Kenton et al. report mixed results for ensemble-based catastrophe avoidance across gridworld and CoinRun, while finding that ensemble uncertainty can help predict near-term risk in some settings~\cite{kenton2019generalizing}. This motivates our V7 disagreement-abstention ablation only: it does not establish OOD detection or transfer. RLCD's learned risk estimate, disagreement score and telemetry support distance do not establish a winning region, recoverability, or temporal invariant. A deterministic fallback is reproducible, but determinism alone does not make it safe; in particular, a controller cannot recover bandwidth during a complete outage.
+
+\section{Problem formulation and simulator}
+\subsection{Causal observations and joint media actions}
+At each interval of length $\Delta=0.1$ s, the controller receives ten telemetry features: acknowledged wire throughput, RTT, raw loss, jitter, RTT change, the last locally selected bitrate, FEC level and media mode, feedback age, and a validity bit. Feedback becomes available only after the interval that generated it; configured extra delay and feedback gaps retain stale measurements. The controller never receives current capacity, the queue state, scenario identity, or future trace samples. Fixed feature scales and clipping are documented in the artifact.
+
+The action is $a_t=(b_t,f_t,m_t)$, where source bitrate $b_t$ belongs to $\{0.15,0.3,0.6,1,1.6,2.5,4\}$ Mbps, FEC overhead $f_t$ belongs to $\{0,0.1,0.25\}$, and $m_t$ selects normal or low-latency mode. Thus there are 42 actions with wire rate $w_t=b_t(1+f_t)$. Low-latency mode uses an 8 ms coding-delay proxy and quality multiplier 0.82, versus 25 ms and multiplier 1 for normal mode. These values are synthetic modeling assumptions, not codec measurements.
+
+\subsection{Network and media transition}
+The trace specifies bottleneck capacity $C_t$, base RTT, exogenous erasure probability, jitter, feedback availability and burst/buffer modifiers. Given queue occupancy $Q_t$ Mbit and buffer limit $B_t$, arrivals and fluid service are
+\begin{align}
+A_t &= w_t\Delta, & S_t &= \min(Q_t+A_t,C_t\Delta), \\
+D_t &= \max(0,Q_t+A_t-S_t-B_t), & Q_{t+1}&=Q_t+A_t-S_t-D_t.
+\end{align}
+Tail-drop loss is approximated by $\min(1,D_t/A_t)$ and composed with exogenous erasures. For burst intensity $z_t$, the idealized recoverable fraction is
+\begin{equation}
+\rho_t=0.85(1-0.7z_t)\frac{f_t}{1+f_t},\qquad
+\ell_t^{\mathrm{res}}=\frac{\max(0,p_t^{\mathrm{loss}}-\rho_t)}{1-\rho_t}.
+\end{equation}
+FEC therefore adds both wire load and a $20f_t$ ms coding-delay proxy. At zero capacity, residual loss and deadline misses are forced to one. The model does not implement erasure-code blocks or packet identities.
+
+Virtual queue delay is $1000(Q_t+Q_{t+1})/[2\max(C_t,0.01)]$ ms. Virtual media latency $L_t$ adds half the base RTT, jitter, coding delay and this queue delay. A uniform completion-time approximation around $L_t$ yields a deadline-miss fraction
+\begin{equation}
+v_t=\operatorname{clip}\left(\tfrac12+\frac{L_t-L_{\mathrm{deadline}}}{1000\Delta},0,1\right).
+\end{equation}
+The 0.01 Mbps denominator floor makes stalled-interval penalties finite. Consequently, large outage latency values are \emph{virtual delay penalties, not observed packet delivery times}. Timely-goodput accounting is bounded by fluid service and discounts residual loss and deadline misses.
+
+\subsection{Reward and the safety event}
+With $u(b,m)=\log(1+b/0.15)$ multiplied by the mode-quality factor, the default reward is
+\begin{align}
+r_t={}&u(b_t,m_t)(1-\ell_t^{\mathrm{res}})(1-v_t)
+ -0.8\min(L_t/150,10)\nonumber \\
+ &-5\ell_t^{\mathrm{res}}-2v_t-0.15\left|\log(b_t/b_{t-1})\right|.
+\end{align}
+QoE here denotes this synthetic reward, not MOS or VMAF. Reward weights are configurable and shared by all methods. We separately define the binary event
+\begin{equation}\label{eq:safety}
+Y_t(a)=\mathbf{1}\left\{L_t(a)\leq150\;\mathrm{ms},\;\ell_t^{\mathrm{res}}(a)\leq0.05,\;C_t>0\right\}.
+\end{equation}
+The event is not reward positivity, zero deadline misses, action optimality or full-episode safety. Capacity appears only in outcome labeling, never in the policy or confidence features. The thresholds are experimental design choices, not requirements asserted by RFC 8836.
+
+\section{RLCD controller}
+\subsection{Policy training}
+A one-hidden-layer ReLU MLP estimates action values. Double DQN separates online action selection from target-network evaluation~\cite{hasselt2016double}:
+\begin{equation}
+y_t=r_t+\gamma(1-d_t)Q_{\theta^-}\left(o_{t+1},\arg\max_a Q_{\theta}(o_{t+1},a)\right),
+\end{equation}
+where $d_t$ is terminal status. Training uses uniform replay, Huber loss, Adam, a norm-10 gradient cap, and periodically copied target weights. Exploration decays to its configured floor. The final checkpoint is used without test-driven early stopping. The policy-training objective remains expected discounted reward; the runtime gate is a separate empirical intervention, not an exact solution to a constrained MDP.
+
+\subsection{Action-safety estimator and calibration}
+The greedy proposal is $a_t^*=\arg\max_aQ_\theta(o_t,a)$. Safety features concatenate telemetry with the candidate bitrate, redundancy, media mode and a wire-rate/acknowledged-throughput ratio. Standardization uses safety-fit data only. Three separately initialized classifiers are trained with binary cross-entropy on whole-episode bootstrap resamples, and their sigmoid probabilities are averaged to obtain $p_t$. Model disagreement is logged but is not treated as a Bayesian credible interval.
+
+In v1, safety fitting uses independent ID episodes with a predeclared repeating mixture of RL, conservative and GCC-like behavior; random-action augmentation adds action coverage. Calibration uses new ID trace seeds and only labels the RL proposal on that trajectory mixture. Monotone Platt scaling fits
+\begin{equation}
+q_t=\sigma\left(\exp(\alpha)\operatorname{logit}(p_t)+\beta\right)
+\end{equation}
+by held-out binary negative log likelihood (NLL), with the underlying models frozen. Temperature scaling fixes $\beta=0$. Single-class calibration sets produce a recorded smoothed prior instead of an ill-conditioned fit; such a result is an insufficient-data warning, not evidence of successful calibration.
+
+The operational interpretation of $q_t$ is an estimate of $P(Y_t(a_t^*)=1\mid o_t,a_t^*)$. It does not estimate the correctness of the subsequently substituted fallback action. Even within ID mechanisms, the deployed gate changes the distribution of visited states relative to calibration trajectories; this occupancy shift is a limitation to be measured rather than assumed away.
+
+\subsection{Support rejection, hysteresis and fallback}
+The support score is the RMS standardized distance of the ten unclipped telemetry features from their safety-fit mean. Its cutoff is the safety-fit 99.5th percentile. This deliberately simple heuristic is separate from the calibrated probability: it neither inspects the scenario label nor multiplies $q_t$ by an arbitrary penalty.
+
+The default gate rejects when $q_t<0.90$, feedback is invalid or older than 0.5 s, or telemetry exceeds the support cutoff. Nonfinite telemetry bypasses neural inference. Once fallback begins, it lasts at least three decisions and requires $q_t\geq0.93$ to release. These hold/release rules reduce switching chatter but do not establish an invariant. Algorithm~1 states the decision interface.
+
+\begin{table}[t]
+\centering
+\begin{minipage}{.94\linewidth}
+\hrule\vspace{4pt}
+\textbf{Algorithm 1: RLCD runtime decision}
+\begin{enumerate}
+\item Update the deterministic fallback's shadow state from causal telemetry; compute its candidate action $a_t^{\mathrm{fb}}$.
+\item If telemetry is nonfinite, execute $a_t^{\mathrm{fb}}$ and record an invalid-telemetry rejection.
+\item Otherwise obtain $a_t^*$, the ensemble score $p_t$, calibrated score $q_t$, and telemetry-support score.
+\item Reject the proposal on low confidence, invalid/stale feedback, or support rejection. Retain fallback while the hold time or release margin requires it.
+\item Execute $a_t^{\mathrm{fb}}$ if fallback is active, otherwise $a_t^*$. Log both actions, the proposal confidence, and the reason. Do not query latent network state.
+\end{enumerate}
+\hrule
+\end{minipage}
+\caption{Telemetry-only deployment interface. Simulator counterfactuals are evaluation tools and are absent from this runtime decision.}
+\end{table}
+
+V1's conservative fallback maintains a wire-rate budget and an RTT-excess estimate relative to the observed minimum. Queueing, increasing delay or substantial loss causes multiplicative backoff capped by acknowledged throughput; otherwise it probes additively. A persistent budget allows progress across discrete bitrate rungs despite application-limited acknowledgments. It favors low-latency mode and modest FEC only outside congestion, selecting a minimum-wire action if the budget cannot accommodate another rung. Outages and base-delay changes can still violate Eq.~\ref{eq:safety} under fallback.
+
+\section{Experimental design}
+\subsection{Questions, baselines and completed studies}
+We ask whether gating improves its identical ungated policy, whether probability scaling improves same-state proper scores, which components explain any gains, and whether deterministic controllers remain stronger. Baselines include continuous conservative, throughput/queue/loss heuristic, GCC-like control and the exact ungated Double DQN checkpoint. V1 additionally tests raw scores, no support rejection, no hysteresis and a single calibrated predictor. Physical/FEC and temperature sweeps exist only at smoke scale and do not support full-budget conclusions.
+
+Four ID trace families provide steady, stepped and ramped capacity and correlated Wi-Fi-like variation. Seven stress families provide severe capacity collapse, burst erasures, bufferbloat, handover, outage, missing feedback and capacity expansion. V1 policy, safety fitting and calibration use only ID families, so the seven stress families are mechanism-held-out for v1. The completed scale-up partly overlaps the earlier pilot's trace seeds and is descriptive rather than untouched confirmatory evidence.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{lrrr}
+\toprule
+Setting & V1 scale-up & V2 validation & V2 fresh test \\
+\midrule
+Model seeds & 10 & 3 & 3 \\
+Trace seeds per scenario & 20 & 2 & 4 \\
+Intervals per episode & 600 & 600 & 600 \\
+Controller variants & 9 & 4 & 9 \\
+Evaluation episodes & 19,800 & 264 & 1,188 \\
+Evaluation intervals & 11,880,000 & 158,400 & 712,800 \\
+\bottomrule
+\end{tabular}
+\caption{Separate completed/protocol matrices; the v2 tables report only completed, audited output. V1 trains 160 policy episodes per seed. V2 freezes the first three policies, not the best three. Both use 64 hidden units, three safety classifiers, 30 risk-fit epochs, 42 actions, $\gamma=0.95$, learning rate $10^{-3}$, batch size 64 and gate threshold 0.90. V2 does not add policy-training transitions.}\label{tab:protocol}
+\end{table}
+
+\subsection{V2 safety-refit protocol and selection lock}
+V1 outcomes were inspected before designing v2; the original panel is therefore development evidence. The first three model seeds, 11, 22 and 33, are fixed in advance. Their policy weights, simulator, reward, action space and gate thresholds are unchanged. Each newly trained safety ensemble uses 40 fitting episodes and 40 disjoint calibration episodes. A uniform random-action candidate supplements the greedy proposal during risk fitting; duplicate candidates are labeled once. Behavior alternates between RL, conservative and GCC-like trajectories, with 15\% random executed actions during fitting only. Calibration still labels only greedy proposals.
+
+Three candidates isolate plausible changes. \textbf{ID refit} uses ID-only episodes with the richer action-label coverage. \textbf{Stress + safe} uses the same episode/optimizer budget, replacing half the fitting and calibration episodes with randomized stress traces. \textbf{Stress + GCC} shares exactly those learned safety weights and calibrator, but replaces the conservative fallback with the existing deterministic GCC-like controller. Thus the latter contrast changes fallback composition, not the neural policy or probability estimator. Episode budgets are matched; deduplication causes small differences in total label counts, recorded in each checkpoint.
+
+Randomized training traces have five random change points. Per segment, capacity is log-uniform on $[0.12,7]$ Mbps, base RTT uniform on $[25,230]$ ms, baseline erasure probability uniform on $[0.001,0.025]$, and buffer multiplier uniformly selected from $\{1,2,4,8\}$. A two-state burst process enters with probability 0.025 and exits with probability 0.2 per interval; its episode-level erasure severity is uniform on $[0.06,0.4]$. Absolute Gaussian jitter has an episode-level scale drawn uniformly from 1--15 ms. Half the traces contain a randomly located 3--15-interval feedback gap, clipped at the episode boundary. These are training generators, not replays of evaluation traces. The original seven \texttt{ood} families are called the \emph{stress panel} for v2: many of their mechanisms now overlap safety-model training support. Fresh realizations do not imply fresh mechanisms.
+
+Risk fitting, calibration and validation use independent hashed namespaces \texttt{risk\_v2}, \texttt{calibration\_v2} and \texttt{validation}. Validation uses seeds 501--502 across all eleven families. A candidate is feasible if its ID QoE is at least v1 minus 0.08, its ID violation rate at most v1 plus 0.002, and its stress violation rate no worse than v1. Among feasible candidates, maximize
+\[
+J=\tfrac12(\overline r_{\mathrm{ID}}+\overline r_{\mathrm{stress}})-5\overline v_{\mathrm{stress}},
+\]
+requiring $J-J_{\mathrm{v1}}>0.01$; otherwise retain v1. All candidates and tolerances were recorded before evaluation. The complete ranking and selection are persisted before the fresh test seeds 1501--1504 are evaluated in the separate \texttt{test} namespace. No reselection follows fresh-test outcomes. The selected controller is denoted RLCD v2 below; explicit v1 and refit controls remain in the final matrix.
+
+\subsection{Labels, metrics and statistical scope}
+An evaluation-only simulator preview labels each proposed action before execution changes the queue, including rejected proposals. Proposal confidence never uses the executed fallback's outcome as its label. The runtime controller cannot call preview or inspect latent capacity. We report synthetic QoE, virtual-latency tails, raw/residual loss, deadline misses, goodput, action stability and fallback rate/reasons/harm. Probability diagnostics include NLL, Brier score, ten-bin ECE, bin counts and selective risk; zero accepted actions yield undefined selective risk, not zero risk.
+
+Comparisons average the shared trace panel within each model seed and bootstrap model-seed means. Paired contrasts subtract matched model/trace/scenario outcomes before resampling. These conditional intervals omit uncertainty over new network populations; deterministic baselines may have degenerate intervals. Three model seeds support exploratory follow-up estimates only, not strong multiple-comparison-adjusted significance claims. For probability attribution, v2 additionally replays the \emph{same ungated policy states and labels} through every predictor, eliminating cross-controller occupancy differences in that benchmark. Raw versus calibrated scores on each main controller's own trajectory remain a separate diagnostic.
+
+\section{Completed v1 scale-up}
+\subsection{Gating helps under stress, but does not dominate the baseline}
+The full v1 evaluation is complete, not merely a frozen budget. Table~\ref{tab:comparison} reports \EvidenceNumEpisodes{} episodes. On ID traces, gating changes violation frequency from \EvidenceIDRLUnsafePct\% to \EvidenceIDRLCDUnsafePct\% and QoE from \EvidenceIDRLQoE{} to \EvidenceIDRLCDQoE{}; it does not improve the ID point estimates. On the mechanism-held-out panel, RLCD reaches QoE \EvidenceOODRLCDQoE{} versus \EvidenceOODRLQoE{} for its identical ungated policy, with violation frequencies \EvidenceOODRLCDUnsafePct\% versus \EvidenceOODRLUnsafePct\%. Fallback occupies \EvidenceOODRLCDFallbackPct\% of intervals.
+
+GCC-like control still attains lower stress violation frequency, \EvidenceOODGCCUnsafePct\%, and higher mean QoE, \EvidenceOODGCCQoE{}. The paired QoE difference from GCC-like control includes zero in its conditional bootstrap interval; the mean ordering is not a universal dominance result. Remaining failures include capacity-collapse/bufferbloat transients, while some burst/outage intervals are intrinsically difficult or infeasible. More policy-training transitions alone have not established superiority over the deterministic baseline.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\evidencepath/table_comparison.tex}}
+\caption{Completed v1 scale-up: means and conditional 95\% model-seed bootstrap intervals. Unsafe/fallback are interval percentages, not packet percentages. OOD denotes the seven families held out of v1 training.}\label{tab:comparison}
+\end{table}
+
+\subsection{Mixed calibration effects motivate refitting}
+Table~\ref{tab:calibration} compares raw and reported scores on identical v1 proposal/state rows. ID NLL changes from \EvidenceIDRawNLL{} to \EvidenceIDCalibratedNLL{}, and Brier score from \EvidenceIDRawBRIER{} to \EvidenceIDCalibratedBRIER{}: both worsen. Stress NLL improves from \EvidenceOODRawNLL{} to \EvidenceOODCalibratedNLL{}, while Brier worsens from \EvidenceOODRawBRIER{} to \EvidenceOODCalibratedBRIER{}. The pilot's direction of change must therefore not be carried forward mechanically. Neither calibration-fit optimization nor a single pooled ECE establishes deployment calibration~\cite{ovadia2019shift}.
+
+\begin{table}[t]
+\centering\input{\evidencepath/table_calibration.tex}
+\caption{V1 pooled same-state raw/reported confidence. Lower is better. These pooled scores are distinct from means of per-episode scores.}\label{tab:calibration}
+\end{table}
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\evidencepath/table_ablations.tex}}
+\caption{Completed v1 inference-time ablations. Each method visits different states, so their calibration metrics alone cannot isolate recalibration effects. Unsafe/fallback are percentages.}\label{tab:v1ablations}
+\end{table}
+
+\section{Locked-validation safety-refit follow-up}
+\subsection{Fresh-trace control outcomes}
+Validation selected \emph{Stress + GCC}. Its selection score was 1.171 versus 1.025 for v1; ID refit also qualified (1.085), while Stress + safe failed the declared ID-QoE tolerance. All three candidates and this rejection remain recorded. The fresh test reverses the preferred controller's apparent improvement: compared with matched v1, selected-controller stress QoE decreases by 0.081 (conditional 95\% interval $[-0.144,-0.012]$) and violation frequency increases by 0.490 percentage points ($[-1.357,2.238]$). ID QoE also decreases, while ID violation frequency rises by 0.219 percentage points. We therefore \textbf{do not promote the selected controller over v1}, and do not retrospectively replace the locked choice with another candidate after seeing test outcomes.
+
+Table~\ref{tab:followup} evaluates the locked selection on \FollowupNumSeeds{} original policy seeds and \FollowupNumTraceSeeds{} fresh trace seeds per family. This is a paired follow-up, not a comparison between the ten-seed v1 mean and a favorable three-seed subset. The \emph{RLCD v1} row reevaluates the original bundles on the same fresh traces as the selected refit. The ungated policy weights are identical across these comparisons.
+
+On the fresh stress panel, selected RLCD obtains mean QoE \FollowupOODRLCDQoE{} and violation frequency \FollowupOODRLCDUnsafePct\%, compared with \FollowupOODRLQoE{} and \FollowupOODRLUnsafePct\% for ungated RL. The GCC-like benchmark has QoE \FollowupOODGCCQoE{} and violation frequency \FollowupOODGCCUnsafePct\%. Selected-controller fallback occupies \FollowupOODRLCDFallbackPct\% of stress intervals. The paired contrasts in the appendix retain comparisons against both v1 and GCC-like control rather than asserting that a learned refit necessarily wins.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\followuppath/table_comparison.tex}}
+\caption{Fresh-test follow-up. RLCD denotes the validation-selected controller; RLCD v1 is the original checkpoint on exactly the same panel. Conditional 95\% intervals use only three model seeds and warrant caution.}\label{tab:followup}
+\end{table}
+\IfFileExists{\followuppath/figures/qoe_safety_tradeoff.pdf}{
+\begin{figure}[t]
+\centering\includegraphics[width=.96\textwidth]{\followuppath/figures/qoe_safety_tradeoff.pdf}
+\caption{Fresh-panel quality/risk tradeoffs. Implementation label \texttt{calibrated} means the selected refit; \texttt{calibrated\_v1} is the original. The plot's legacy \texttt{ood} group is the v2 stress panel, not wholly unseen mechanisms.}\label{fig:tradeoff}
+\end{figure}}{}
+
+\subsection{Separating supervision, fallback and probability scaling}
+The predictor itself does improve on identical stress states (Table~\ref{tab:predictors}): calibrated Brier score falls from 0.07984 to 0.06249 and NLL from 0.80904 to 0.33088. These are approximately 21.7\% and 59.1\% lower model-seed means, not independent-sample significance claims. ID scores worsen, and scaling the stress predictor improves stress NLL while worsening its Brier score relative to raw output. Better stress probability prediction therefore neither ensures uniformly better calibration nor guarantees better closed-loop decisions.
+
+The Stress + safe control reduces fresh stress violation frequency to 8.653\% from v1's 10.081\%, but lowers QoE from 1.108 to 1.056 and increases fallback duty cycle from 15.214\% to 37.274\%. It is a risk--quality tradeoff, not a dominating replacement. The ID refit has favorable stress point estimates but was not the locked winner and is not selected post hoc. Scenario inspection explains part of the tradeoff: Stress + safe substantially reduces collapse violations, whereas Stress + GCC increases them; both lose quality during burst loss without reducing that family's violation rate. More frequent rejection can be expensive when the alternate action does not resolve infeasibility. Immediate counterfactual diagnostics do not by themselves prove a long-run causal mechanism.
+
+Table~\ref{tab:ablations} retains the matched-episode-budget ID refit and stress refit with conservative fallback. Stress + GCC uses exactly the stress-refit predictor; differences between these two calibrated controllers arise from fallback composition and its induced occupancy. The raw-confidence gate keeps the selected model and fallback fixed and removes only post-hoc scaling. These controls prevent attributing all control improvement to calibration or additional DQN training.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\followuppath/table_ablations.tex}}
+\caption{Fresh-test attribution controls. The selected candidate may coincide with an explicitly named control; duplicated rows in that case are intentional. Unsafe/fallback are percentages.}\label{tab:ablations}
+\end{table}
+\begin{table}[t]
+\centering\input{\followuppath/table_predictors.tex}
+\caption{Predictor comparison on exactly the same fresh ungated-policy states and labels. Entries average model-seed scores; no gate changes these trajectories. Raw and calibrated scores are both retained to distinguish supervision from probability scaling.}\label{tab:predictors}
+\end{table}
+\begin{table}[t]
+\centering\input{\followuppath/table_calibration.tex}
+\caption{Raw/reported confidence on identical selected-controller proposal rows. These states differ from the ungated trajectories in Table~\ref{tab:predictors}; the two diagnostics must not be conflated.}\label{tab:followupcal}
+\end{table}
+\IfFileExists{\followuppath/figures/reliability.pdf}{
+\begin{figure}[t]
+\centering\includegraphics[width=.77\textwidth]{\followuppath/figures/reliability.pdf}
+\caption{Fresh selected-controller confidence bins. The legacy OOD label denotes the stress panel. Reliability is descriptive; bin counts remain in the CSV artifacts.}\label{fig:reliability}
+\end{figure}}{}
+\IfFileExists{\followuppath/figures/trajectory_collapse.pdf}{
+\begin{figure}[t]
+\centering\includegraphics[width=.82\textwidth]{\followuppath/figures/trajectory_collapse.pdf}
+\caption{Collapse trajectory for the first fixed model/trace seed, not a selected success case. Latent capacity is an offline plot reference only.}\label{fig:collapse}
+\end{figure}}{}
+
+\clearpage
+\section{V3 validation-selected threshold follow-up}
+\subsection{Protocol and locked decision}
+The third study leaves the v1 policy, safety model, calibrator, fallback, OOD-support guard and hysteresis unchanged; only the primary confidence threshold varies. All ten original model/safety bundles are evaluated on five prespecified thresholds using paired validation trace seeds. The validation panel contains ten realizations of each of the eleven scenario mechanisms; the disjoint test panel therefore measures fresh realizations of mechanisms already represented in validation, not generalization to an unseen mechanism. \ThresholdValidationEpisodes{} validation episodes determine a locked ranking. Feasibility limits constrain ID QoE and violation changes, aggregate stress violations, and per-family stress risk. Among feasible candidates the score is \(0.5(\mathrm{QoE}_{\mathrm{ID}}+\mathrm{QoE}_{\mathrm{stress}})-5\,\mathrm{Violation}_{\mathrm{stress}}\); promotion requires a gain greater than 0.005 over the original \ThresholdThreshold{} threshold. These are development tolerances, not operational safety limits.
+
+\begin{table}[H]
+\centering\resizebox{\textwidth}{!}{\input{\thresholdpath/table_thresholds.tex}}
+\caption{Frozen v3 validation ranking. The 0.90 baseline is retained unless a feasible candidate exceeds its score by more than 0.005. All five candidates were feasible; 0.85 had the largest alternative score gain (0.0009), so the predeclared margin was not met. Values are validation-panel means.}
+\label{tab:thresholds}
+\end{table}
+
+All candidates meet the stated feasibility bounds, but none meets the minimum improvement margin. Threshold 0.85 is the highest-scoring alternative: its score is 1.0317 versus 1.0308 at 0.90, a gain of 0.0009 rather than the required 0.005. The selection marker was written before final testing; 0.90 was retained without inspecting test outcomes. Thus the threshold study produces a negative model-selection result, not a new or improved gate.
+
+\subsection{Fresh-panel controller outcomes}
+The locked controller and fixed-0.90 control are exactly equivalent on this panel, as required by the selection rule. We report the fixed-threshold comparator explicitly rather than crediting threshold selection with any gain. The \ThresholdNumEpisodes{}-episode test uses ten policy/safety seeds and ten disjoint trace realizations per scenario. On the stress panel, the 0.90 gate raises QoE over ungated Double DQN by 0.504 (conditional 95\% model-seed interval [0.308, 0.719]) and lowers violation frequency by 5.029 percentage points ([−6.333, −3.832]). It nevertheless trails GCC-like control by 0.047 QoE units ([−0.088, −0.010]) and has 3.114 percentage points more violations ([2.430, 3.826]). In ID, RLCD likewise trails GCC-like by 0.057 QoE units (conditional 95\% interval [−0.084, −0.026]) and has 0.303 percentage points more violations ([0.154, 0.462]). Intervals condition on the fixed trace panel; deterministic baselines have degenerate between-training-seed intervals.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\thresholdpath/table_comparison.tex}}
+\caption{V3 fresh-test outcomes on disjoint realizations of the validation scenario families. Entries are means and conditional 95\% training-seed bootstrap intervals. ``RLCD'' is the validation-selected threshold; it equals the separately evaluated 0.90 reference exactly, so the duplicate rows are intentional. Unsafe and fallback are episode percentages.}
+\label{tab:threshold-test}
+\end{table}
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\thresholdpath/table_contrasts.tex}}
+\caption{V3 paired RLCD-minus-reference contrasts on the fresh trace panel. Violation differences are percentage points; intervals resample the ten model seeds conditional on this panel.}
+\label{tab:threshold-contrasts}
+\end{table}
+
+The raw-versus-reported confidence diagnostics on the selected controller's own visited proposal states are also mixed: stress ECE changes from 0.07168 to 0.07144 and NLL from 0.78379 to 0.63776, while Brier score changes from 0.06881 to 0.06995. These descriptive pooled values do not imply improved closed-loop control. V3 expands model-seed and fresh-trace evidence beyond the three-seed v2 follow-up, but tests no new mechanisms and is not independent real-network validation.
+
+\section{V4 fixed policy-training randomization}
+\paragraph{Protocol and locked validation decision.}
+After the v3 threshold study retained the original gate, v4 tests a single, predeclared intervention: the policy encounters a fixed 19-entry scenario schedule at the unchanged 160-episode training budget. Three repetitions of the four ID families followed by the seven named stress families yield 104 ID and 56 stress episodes per seed. Model seeds match v1; the safety predictor's 40 risk-fit episodes and 40 calibration episodes per seed remain ID-only. The schedule was motivated by domain-randomization research on robotic transfer~\cite{tiboni2023doraemon}, but is a fixed media-network experiment, not an implementation of that work's adaptive method or a sim-to-real test. Ten model seeds, ten validation traces and ten disjoint final traces are evaluated across eleven scenarios and seven methods. Validation alone determines promotion using the predeclared score and harm constraints in \path{docs/POLICY_RANDOMIZATION_V4.md}; the decision and validation manifest hash were persisted before the test directory was created.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\randomizationpath/table_policy_randomization.tex}}
+\caption{V4 validation metrics and predeclared promotion decision. The candidate must satisfy ID-QoE, ID-risk, aggregate stress-risk and every stress-family constraint, then exceed the v1 selection score by more than 0.005.}
+\label{tab:randomization-selection}
+\end{table}
+
+The candidate is infeasible: its ID-QoE loss and its bufferbloat/collapse violation increases exceed the frozen limits. Its aggregate stress violation increase is within the aggregate tolerance, but this does not override the family-level failures; its selection score is also lower than v1. The protocol therefore retains \texttt{calibrated\_v1} without inspecting final-test results.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\randomizationpath/table_randomization_families.tex}}
+\caption{V4 validation stress-family risk differences (candidate minus v1), compared with the prespecified maximum increase of 3 percentage points.}
+\label{tab:randomization-families}
+\end{table}
+
+\paragraph{Fresh-test diagnostic, not a promotion.}
+The disjoint test evaluates the locked v1 controller and the unpromoted v4 candidate on identical traces. Relative to matched v1, the candidate's paired stress QoE change is $\RandomOODDeltaVoneQoE{}$ and the violation-frequency change is $\RandomOODDeltaVoneUnsafePP{}$ percentage points; the corresponding ID contrasts are $\RandomIDDeltaVoneQoE{}$ and $\RandomIDDeltaVoneUnsafePP{}$ percentage points. Intervals are conditional on the ten model-seed clusters and the fixed trace panel. Table~\ref{tab:randomization-test} retains all deterministic, ungated and learned controls; in particular, v1 is not relabeled as the candidate. All seven stress families were used during v4 policy training, so the fresh panel supports only a fresh-realization comparison. The full scenario-stratified results are included in the appendix.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\randomizationpath/table_comparison.tex}}
+\caption{V4 fresh-test controller outcomes. The policy-randomized RLCD candidate is shown for diagnosis but was not promoted; RLCD v1 is the controller selected by the pre-test validation lock. Intervals condition on the fixed trace panel and resample model seeds.}
+\label{tab:randomization-test}
+\end{table}
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\randomizationpath/table_contrasts.tex}}
+\caption{V4 paired fresh-test candidate-minus-reference effects. Violation-rate contrasts are percentage points; intervals condition on this trace panel and resample ten model seeds.}
+\label{tab:randomization-contrasts}
+\end{table}
+
+\section{V5 action-wise calibrated safety screen}
+\paragraph{Frozen protocol.}
+The v2 refit and v4 randomized policy were not promoted, and v3 retained the original 0.90 gate. V5 therefore freezes v1 policy, safety-ensemble and calibrator weights and tests only an action-selection change motivated by chance-constrained screening~\cite{chen2023acs}. At each valid observation, the controller ranks the 42 joint actions by the original Q values and checks the top five in order. It executes the first candidate whose calibrated one-step safety probability is at least 0.90 and whose state-support score is within the source checkpoint's limit; otherwise, including invalid/stale telemetry, it uses the existing deterministic fallback. No predictor or policy is retrained. The calibration set was collected for the original proposal distribution, so screening alternatives may introduce selection bias; the intervention is empirical, not a formal shield.
+
+The ten source-policy seeds are evaluated on ten validation and ten disjoint final trace seeds over the same eleven synthetic scenarios. Validation alone can promote the shield only if the ID QoE loss is at most 0.03, ID violation increase at most 0.01, aggregate stress violation increase at most 0.02, every stress-family increase at most 0.03, and the fixed score gain exceeds 0.005. Validation selected the shield, with score gain 0.02582; the selection and validation-manifest hash were saved before final traces were created. All family mechanisms are already known; the final panel measures new realizations, not unseen-mechanism generalization. \path{docs/SAFETY_SHIELD_V5.md} records the full protocol, including the excluded development smoke probe.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\shieldpath/table_action_shield.tex}}
+\caption{V5 validation metrics and locked promotion decision. The candidate must satisfy all QoE and aggregate/family risk bounds and exceed the prespecified selection-score margin.}
+\label{tab:shield-selection}
+\end{table}
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\shieldpath/table_action_shield_families.tex}}
+\caption{V5 validation stress-family violation differences (shield minus v1); increases are compared with the 3-percentage-point bound.}
+\label{tab:shield-families}
+\end{table}
+
+\paragraph{Fresh-test comparison.}
+The fresh panel evaluates the locked selection and all deterministic, ungated and learned controls on identical traces. Relative to matched calibrated v1, the screen raises ID QoE by 0.0259 (95% model-seed interval [0.0135,0.0387]) and lowers the ID violation rate by 0.144 percentage points [−0.219,−0.074]. In OOD, the QoE difference is +0.0136 [−0.0018,0.0298] and the violation-rate change is +0.00004 [−0.00403,0.00354]; neither interval excludes zero. Heuristic and GCC-like controllers still achieve better ID QoE/violation tradeoffs. Paired effects are in Table~\ref{tab:shield-contrasts}; scenario outcomes are in the appendix. The one-step screen diagnostics separate Q-policy proposal outcomes from the action actually executed. Computed after the fresh-test lock without retuning, the post-selection table pairs each selected-action confidence with its one-step executed-safety label; on OOD rows, mean confidence exceeds observed safety by 5.61 percentage points (95\% model-seed interval [5.09, 6.10]), and by 21.83 points [8.22, 39.78] among the 1,841 changed-action steps. The screen reduces the model-seed mean unsafe fraction on those replacements from 60.69\% for greedy proposals to 26.35\% for selected alternatives, but the residual confidence gap shows that selection does not preserve proposal calibration. The ID replacement subset contains only 803 steps and has wide seed intervals. These paired labels are post-hoc, descriptive one-step outcomes, not long-run causal effects or safety guarantees.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\shieldpath/table_comparison.tex}}
+\caption{V5 fresh-test controller QoE, violation frequency and fallback rate. Intervals are conditional on the fixed trace panel and resample source-model seeds.}
+\label{tab:shield-test}
+\end{table}
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\shieldpath/table_action_shield_contrasts.tex}}
+\caption{V5 paired fresh-test shield-minus-v1 effects. Violation contrasts are percentage points; intervals condition on this trace panel.}
+\label{tab:shield-contrasts}
+\end{table}
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\shieldpath/table_action_shield_diagnostics.tex}}
+\caption{V5 step-level screen diagnostics summarized per model seed. Replacement/proposal comparisons are same-state one-step labels; they do not estimate long-run causal effects.}
+\label{tab:shield-diagnostics}
+\end{table}
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\shieldpath/table_action_selection_calibration.tex}}
+\caption{V5 post-selection action calibration. Entries are means and 95\% bootstrap intervals over source-model seeds; counts are time steps, not independent samples. Proposal scores are paired with their one-step counterfactual safety labels; selected-action scores are paired with the executed action's one-step outcome. Replacement rows condition on changed actions.}
+\label{tab:shield-action-calibration}
+\end{table}
+
+\section{V6 selected-action recalibration}
+\paragraph{Frozen intervention and validation lock.}
+V6 leaves the ten v1 policy and safety-ensemble checkpoints unchanged and fits only the post-hoc Platt calibrator. The 40-episode-per-seed calibration panel is ID-only and balanced across the four ID families. Rollouts use the frozen source controller, including its original calibrator and the top-five/0.90 screen; for each accepted selected action, the raw safety score is paired with its one-step outcome. Fallback rows are excluded, leaving 23,662--23,939 selected actions per seed. All collected labels are used for fitting, so fit ECE/Brier values are in-sample diagnostics. This targets screen-selected rather than only greedy-proposal actions, but the refitted calibrator can change subsequent screen decisions and visited states; it is a one-pass fit, not calibration on the candidate's eventual closed-loop distribution.
+
+The locked validation panel uses ten model seeds and ten traces per scenario (2,200 episodes). It promotes the recalibrated screen: the selection score rises from 1.0774 to 1.1083 (gain 0.03094), ID QoE from 2.084 to 2.115, and ID unsafe rate from 0.615\% to 0.494\%; aggregate stress QoE rises from 1.092 to 1.113 while stress unsafe rate falls from 10.213\% to 10.111\%. The saved selection lock precedes the disjoint 9701--9710 fresh-test panel. Table~\ref{tab:v6-selection} reports the validation decision.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\actioncalpath/table_action_shield.tex}}
+\caption{V6 validation metrics and locked promotion decision. The candidate satisfies the frozen V5 ID, aggregate-risk, family-risk and score-gain constraints.}
+\label{tab:v6-selection}
+\end{table}
+
+\paragraph{Fresh-test effects.}
+The recalibrated controller without the action screen is the calibrator-only control. Relative to v1, its ID QoE change is +0.0004 [-0.0051, 0.0061] and its ID unsafe-rate change is -0.0017 percentage points [-0.0054, 0.0013]; both seed-clustered intervals include zero. The combined recalibrated screen, relative to matched calibrated v1, changes ID QoE by +0.022 [0.009, 0.036] and ID violation rate by -0.050 percentage points [-0.100, -0.007]. Stress/OOD QoE changes by +0.023 [0.010, 0.040], while the unsafe-rate change is -0.263 percentage points [-0.749, 0.105] and includes zero. The candidate combines recalibration and screening, so this comparison does not establish a screen-only causal effect. The calibrator-only control intervals include zero; the resolved ID differences are observed only for the combined candidate and cannot be attributed to recalibration alone.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\actioncalpath/table_comparison.tex}}
+\caption{V6 fresh-test QoE, unsafe frequency and fallback rates for all eight controllers. Brackets show 95\% intervals resampling ten source-model seeds conditional on the fixed trace panel.}
+\label{tab:v6-comparison}
+\end{table}
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\actioncalpath/table_action_shield_contrasts.tex}}
+\caption{V6 paired fresh-test effects of the recalibrated screen versus matched calibrated v1. Violation contrasts are percentage points; intervals resample model seeds.}
+\label{tab:v6-contrasts}
+\end{table}
+
+The selected-action calibration audit uses evaluation-only one-step labels on each method's visited states, not fallback outcomes or in-sample fitting labels. On ID, the screen-selected actions' mean confidence and observed safety both round to 99.94\%. On OOD steps, confidence exceeds observed safety by 5.09 percentage points [4.51, 5.71]; among the 1,417 changed-action steps the gap is 16.50 percentage points [3.94, 35.07]. Thus the ID-selected-action fit does not remove OOD selection shift. These time-step summaries are seed-clustered descriptive diagnostics, not independent-step inference, long-run causal effects or episode-safety guarantees.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\actioncalpath/table_action_selection_calibration.tex}}
+\caption{V6 selected-action confidence against fresh one-step safety labels. Entries are means with 95\% seed-bootstrap intervals; counts are steps, not independent samples, and changed-action rows condition on screen interventions.}
+\label{tab:v6-action-calibration}
+\end{table}
+
+\section{V7 ensemble-disagreement abstention}
+V6's fresh OOD audit found that calibrated confidence remained optimistic for screen-selected actions. Since the safety predictor is an episode-bootstrap ensemble and its disagreement was previously logged but unused by the action screen, V7 tests whether this signal is useful as an additional abstention criterion. The hypothesis is intentionally narrow and informed by prior results; it is not a confirmatory real-network claim.
+
+The V7 baseline and candidate use the same V6 selected-action-calibrated checkpoints, policy, safety ensemble, calibrator, top-five Q ranking, 0.90 calibrated-probability threshold, telemetry support check and deterministic fallback. The candidate accepts a probability-eligible action only when the ensemble standard deviation of its raw safety probabilities is at most 0.05; if every probability-eligible candidate exceeds this cutoff, it falls back with reason \texttt{uncertainty\_abstention}. The cutoff is fixed at five probability points in the preregistered JSON; it is not a calibrated lower confidence bound and does not alter the estimated safety probability. Thus the V6-to-V7 comparison changes only inference-time action screening, not training or calibration.
+
+The ten frozen model seeds are evaluated on ten validation trace seeds (10701--10710) and a disjoint ten-seed fresh test panel (11701--11710), across all eleven known scenario families. Validation compares V7 against the V6 action screen under the same promotion bounds and score rule; the fresh panel is opened only after this decision is persisted. Since the stress families are known and V7 is an adaptive follow-up, results measure new realizations of the synthetic scenarios, not unseen-mechanism generalization. Step-wise disagreement and abstention diagnostics are descriptive and do not imply an episode-level guarantee.
+
+Validation selected V7 by a score gain of 0.00507, only marginally above the preregistered 0.005 threshold. On the 8,800-episode fresh test panel, the paired ID changes versus V6 were negligible: QoE $+0.00043$ (model-seed interval $[-0.00004,0.00134]$) and violation rate $-0.003$ percentage points (interval $[-0.018,0.009]$). The stress/OOD QoE change was $+0.00182$ (interval $[0.00003,0.00463]$); the stress-violation change was $-0.083$ percentage points (interval $[-0.209,-0.0005]$). This latter interval narrowly excludes zero under the fixed-panel model-seed bootstrap, but the absolute effect is small. The cutoff triggered on only 0.24\% of stress steps (0.04\% ID), limiting its practical impact. The V7 OOD means (QoE 1.071, violations 10.51\%) remain worse than GCC-like control (1.119, 7.21\%). These are conditional descriptive effects, not a safety or real-network guarantee.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\uncertaintyshieldpath/table_uncertainty_shield_selection.tex}}
+\caption{V7 validation metrics and locked promotion decision relative to the V6 screen.}
+\label{tab:v7-selection}
+\end{table}
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\uncertaintyshieldpath/table_uncertainty_shield_contrasts.tex}}
+\caption{V7-minus-V6 paired fresh-test effects on the fixed trace panel. Violation contrasts are percentage points; intervals resample model seeds.}
+\label{tab:v7-contrasts}
+\end{table}
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\uncertaintyshieldpath/table_uncertainty_shield_families.tex}}
+\caption{V7 validation stress-family violation differences relative to V6 and the frozen per-family promotion limit.}
+\label{tab:v7-families}
+\end{table}
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\uncertaintyshieldpath/table_uncertainty_shield_diagnostics.tex}}
+\caption{V7 disagreement-screen step diagnostics summarized by model seed; time steps are not independent experimental units.}
+\label{tab:v7-diagnostics}
+\end{table}
+
+\clearpage
+\section{V8 causal wire-budget screening}
+\subsection{Frozen controller and matched ablation}
+V7's disagreement criterion rarely activates. V8 tests a complementary signal available without inspecting latent capacity: the existing conservative fallback's causal, stateful wire-rate budget. Both screens retain the same V6-derived policy, safety ensemble, selected-action calibrator, top-five ranking, probability threshold, disagreement cutoff, feedback/support guards and fallback. Let $B_t$ be the shadow fallback's budget after its single update at decision $t$, and $s_t(a)$ the raw ensemble standard deviation. The V8 eligibility set is
+\begin{equation}
+\begin{aligned}
+\mathcal{A}_t &= \operatorname{Top5}(Q(o_t,\cdot)),\\
+\mathcal{C}_t &= \{a\in\mathcal{A}_t:
+ q_t(a)\geq 0.90,\ s_t(a)\leq 0.05,\ b(a)(1+f(a))\leq B_t\}.
+\end{aligned}
+\end{equation}
+The controller executes the highest-Q member, or the deterministic fallback when this set is empty. If actions eligible under both probability and disagreement criteria exist but all exceed the budget, the distinct reason is \texttt{budget\_abstention}. FEC overhead participates in the constraint; neither the budget nor rejection changes the reported probability.
+
+The default budget starts at 0.6 Mbps. With usable feedback, RTT excess above its running minimum greater than 35 ms, loss above 0.06, or RTT trend above 15 ms causes backoff to $\max(0.15,\min(0.7B_{t-1},0.8T_t))$, where $T_t$ is acknowledged wire throughput. Otherwise the budget probes by $0.5\Delta$ Mbps, capped at the largest configured wire rate. Missing/stale/nonfinite feedback invokes the existing halving rule. Persistent probing avoids treating application-limited acknowledgments as capacity. These pre-existing fallback dynamics are not fitted or changed in V8. The budget is a heuristic envelope, not a capacity lower bound, invariant region or safety certificate.
+
+A test-only \texttt{budget\_only} ablation removes probability/disagreement eligibility but retains the same Q ranking, feedback/support guards, envelope and fallback. Scores are still computed for diagnostics; this ablation is neither model-free nor a runtime-cost comparison. It tests what probability-based eligibility adds after a causal envelope is present, and cannot become a post-test promotion choice.
+
+\subsection{Locked decision and fresh-panel tradeoffs}
+The frozen JSON declares ten model seeds, five validation trace seeds (12701--12705), ten fresh test seeds (13701--13710), all eleven known families and 600 intervals per episode. Validation compares only V8 and V7 (1,100 episodes); the test retains both, the confidence ablation, conservative, heuristic, GCC-like, ungated RL and the proposal gate (8,800 episodes). Promotion reuses the V7 QoE/risk bounds and strictly greater than 0.005 score-gain margin. Checkpoint hashes and the validation-manifest hash are locked before generating test traces. This is an adaptive known-mechanism synthetic follow-up, not unseen-mechanism validation.
+
+Validation rejects V8 despite a score gain of 0.04762: ID QoE falls from 2.0156 to 1.9210, a 0.0946 drop exceeding the fixed 0.03 tolerance. All violation bounds pass, but the QoE constraint is not overridden by the aggregate score. The persisted choice remains \texttt{shielded\_uncertainty}; neither the fresh panel nor its ablation can change it.
+
+On the completed 8,800-episode test, V8-minus-V7 ID effects are QoE $-0.104$ (interval $[-0.185,-0.035]$) and unsafe frequency $-0.680$ percentage points ($[-1.010,-0.372]$). Stress QoE falls by $0.133$ ($[-0.195,-0.076]$), while unsafe frequency falls by $2.862$ percentage points ($[-3.724,-1.986]$). The causal envelope changes the otherwise-eligible choice on 56.90\% of ID and 50.24\% of stress steps, much more often than V7's disagreement criterion. These descriptive intervals resample the ten model seeds conditional on the fixed trace panel.
+
+The tradeoff is heterogeneous. Collapse and bufferbloat QoE improve by 0.373 and 0.299, with violation changes of $-10.310$ and $-7.638$ percentage points. Burst-loss QoE instead falls by 1.132 with unchanged 17.15\% violations. This is consistent with the envelope's raw-loss backoff also reacting to erasures, not solely queue congestion; the scenario comparison does not establish a long-run causal attribution. The unchanged budget dynamics were not retuned after seeing this harm.
+
+The matched confidence ablation is central: adding probability/disagreement eligibility to the budget screen changes ID and stress violations by $+0.003$ and $-0.009$ percentage points, with intervals $[-0.013,0.016]$ and $[-0.054,0.017]$ that include zero. QoE is slightly lower with confidence ($-0.0194$ ID and $-0.0131$ stress). This does not prove the predictor is unnecessary generally: the ablation retains learned Q ranking and the support guard, and the controllers occupy different states. It provides no resolved incremental violation benefit for eligibility under this fixed envelope. GCC-like control still offers greater mean ID/stress QoE (2.130/1.101 versus V8's 1.952/0.941).
+
+Accepted V8 stress actions remain 1.51 probability points optimistic (model-seed interval $[0.99,2.07]$); the ablated screen has the same rounded optimism. These post-selection diagnostics reflect different occupancy and rejected actions, not improved safety-model weights or calibration fitting. Rejected-candidate probabilities on fallback steps are excluded rather than scored against fallback safety. The appendix reports scenario, intervention, and separate accepted-action audits for both screens.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\budgetshieldpath/table_budget_shield_selection.tex}}
+\caption{V8 validation decision against the matched V7 screen. Absolute unsafe frequencies are percentages.}
+\label{tab:v8-selection}
+\end{table}
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\budgetshieldpath/table_budget_shield_contrasts.tex}}
+\caption{V8-minus-reference fresh-test contrasts; violation differences are percentage points, with model-seed intervals conditional on the fixed panel. The budget-without-confidence comparator removes only probability/disagreement eligibility.}
+\label{tab:v8-contrasts}
+\end{table}
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\budgetshieldpath/table_comparison.tex}}
+\caption{All V8 fresh-panel controllers. The proposal gate and screens use the same frozen V6-derived bundles; only their inference-time rules differ.}
+\label{tab:v8-comparison}
+\end{table}
+
+\clearpage
+\section{V9 delay-evidence budget follow-up}
+\subsection{Frozen intervention and paired protocol}
+V8's erasure-family harm motivates an adaptive test of removing raw-loss-only backoff. Delay and loss are not interchangeable signals; evaluation guidelines include both end-to-end loss and queueing variation, as well as requiring real-codec assessment beyond synthetic quality proxies~\cite{rfc8868}. V9 uses RTT excess above the running minimum greater than 35 ms or RTT trend greater than 15 ms to back off. The 0.6 Mbps initial budget, additive probe, multiplicative factors, floor/cap, FEC preference and missing-feedback handling are unchanged. Raw loss still controls FEC preference. This is a heuristic intervention, not a reliable congestion/erasure classifier or capacity lower bound.
+
+The intervention changes \emph{both} the warm envelope and its deterministic fallback dynamics. V8 comparisons are therefore not same-fallback envelope-only effects. The two new opt-in methods leave existing methods unchanged. They retain the same frozen V6-derived Q policy, risk ensemble, calibrator, top-five ranking, 0.90 probability threshold, 0.05 raw disagreement cutoff and feedback/support guards. The matched \texttt{delay\_budget\_only} screen removes only probability/disagreement eligibility, not learned Q values, support rejection or score computation. Neither method observes latent capacity, loss cause or scenario identity.
+
+The JSON protocol declares ten model seeds, five validation trace seeds (14701--14705), ten fresh test seeds (15701--15710), all eleven known families and 600 intervals per episode. Validation includes V7, V8 and V9 (1,650 episodes), but promotion compares only V9 with the retained V7 reference under the unchanged QoE/risk bounds and score-gain margin. V8 is a mechanistic comparator, not a promotion alternative. The nine-controller test has 9,900 episodes (5,940,000 intervals), including the confidence ablation and all deterministic/ungated/proposal baselines regardless of rejection. Checkpoint and validation-manifest hashes are locked before test generation. These are new realizations of known mechanisms, not unseen-network validation.
+
+\subsection{Locked rejection and completed fresh-panel results}
+Validation again rejects the candidate: ID QoE decreases from 2.1495 to 2.0386 (0.1109, beyond the fixed 0.03 bound), despite passing every violation constraint and gaining 0.09096 in score. The saved choice remains \texttt{shielded\_uncertainty}. The completed test includes all 9,900 episodes regardless of this decision, with no refitting or post-test promotion.
+
+On this panel, V9 minus V7 changes ID QoE by $-0.1137$ (model-seed interval $[-0.1938,-0.0471]$) and unsafe frequency by $-0.376$ percentage points ($[-0.574,-0.187]$). Stress QoE changes by $+0.0127$ ($[-0.0434,+0.0684]$), an unresolved quality effect, while unsafe frequency falls by 2.416 percentage points ($[-3.371,-1.273]$). The intervals condition on ten model-seed clusters and this fixed known-family panel.
+
+The paired V8 comparator isolates the practical loss-response tradeoff. ID QoE and violation means are exactly equal on this panel. Stress QoE improves by 0.1658 ($[0.1534,0.1801]$) with zero observed violation difference. Burst-loss QoE rises from 0.776 to 1.937, a 1.160 gain, with unchanged 19.75\% unsafe frequency; all other scenario means are unchanged. Thus the intervention removes much of V8's burst-erasure quality penalty without an observed risk cost here, but does not repair its nominal-quality loss. This does not establish reliable loss-cause identification or general safety preservation; both budget and fallback dynamics changed, and controllers occupy different states.
+
+Adding probability and disagreement eligibility to the matched delay-budget ablation slightly worsens stress QoE. Its effect is $-0.00278$, with an interval from $-0.00552$ to $-0.00093$. Unsafe frequency rises by 0.024 percentage points (interval 0.009 to 0.047). The ID QoE effect is $-0.00143$, with an interval from $-0.00393$ to $+0.00004$. The ID violation effect is $+0.005$ percentage points, with an interval from $-0.0004$ to $+0.0100$. Both ID intervals contain zero. These conditional comparisons provide no incremental protection from confidence eligibility under this rule, including a small resolved stress regression, not evidence that Q ranking or support rejection is unnecessary.
+
+Accepted V9 stress actions remain 4.64 probability points optimistic ($[4.17,5.17]$), versus 4.62 ($[4.15,5.14]$) for the ablation on its own states. These occupancy-conditioned diagnostics reflect unchanged safety weights and calibration, not estimator improvement. GCC-like control still has higher ID QoE (2.186 versus 2.027) and lower stress unsafe frequency (7.590\% versus 8.108\%); V9-minus-GCC stress violations are $+0.517$ percentage points ($[0.112,1.011]$). The appendix supplies both scenario comparisons, envelope diagnostics and separate full-score audits.
+
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\delaybudgetpath/table_delay_budget_selection.tex}}
+\caption{V9 validation lock against V7; V8 is a mechanistic comparator, not another promotion choice. Absolute unsafe frequencies are percentages.}
+\label{tab:v9-selection}
+\end{table}
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\delaybudgetpath/table_delay_budget_contrasts.tex}}
+\caption{V9-minus-reference fresh-panel effects. Unsafe-frequency differences are percentage points; intervals resample ten model seeds conditional on this panel. The ablation retains Q ranking and support rejection.}
+\label{tab:v9-contrasts}
+\end{table}
+\begin{table}[t]
+\centering\resizebox{\textwidth}{!}{\input{\delaybudgetpath/table_comparison.tex}}
+\caption{All nine V9 fresh-panel controllers, including rejected V9 and the matched confidence ablation. No post-test winner replaces the validation choice.}
+\label{tab:v9-comparison}
+\end{table}
+
+\clearpage
+\section{Limitations and next validation steps}
+\paragraph{Simulation fidelity.}
+The simulator models a single bottleneck with aggregate fluid service. It omits packet ordering, retransmission, codec dependencies, FEC block structure, competing adaptive flows and perceptual quality. It therefore does not assess multi-flow fairness or establish RFC compliance. Large virtual outage delays are not latency measurements from delivered traffic. The next external-validity steps are recorded network/content panels, a matched native RLCD integration and codec-aware QoE validation. Appendix~\ref{app:native-frames} adds an ancillary native WebRTC packet/codec and application-frame timing diagnostic, but it runs native browser control only, not RLCD; it does not externally validate these nine policy studies.
+
+\paragraph{Distribution and statistical scope.}
+Synthetic families with fixed event shapes are not representative Internet sampling. V1 partly reused pilot trace seeds. V2–v9 are adaptive follow-ups to known model behavior and do not restore an untouched research process. V2 and v4 expose candidate components to previously labeled stress mechanisms; v3–v9 final tests use disjoint realizations of the same known families. V5 screens alternatives with a calibrator fitted for original proposals. V6 refits on source-screen-selected ID actions, but the recalibrator can itself change later choices and states; OOD selected-action confidence remains optimistic. V7's fixed disagreement threshold was selected after prior OOD diagnostics and triggers rarely; its small test-panel risk shift is conditional on this known synthetic panel. V8 substantially changes action selection and occupancy, loses QoE on erasure-heavy conditions, and fails its nominal-quality promotion bound. Its confidence ablation retains learned Q values and support rejection, so it does not isolate all learned components. V9 removes raw-loss-only budget and fallback backoff on a new panel; burst-loss quality recovers but nominal quality still fails its promotion bound. Confidence eligibility has a small conditional stress regression versus the matched ablation, and selected-action stress scores remain optimistic. Delay evidence does not identify loss causes reliably or certify feasibility. Neither the telemetry-support heuristic, causal budget nor one-step risk score composes into episode safety. Conditional model-seed intervals omit new-network-population uncertainty. Future work needs independently collected traces and mechanisms, not repeated tuning against these panels.
+
+\paragraph{Safety semantics and attribution.}
+One-step calibrated success does not compose automatically into episode safety. The fallback may itself introduce harm, and some network conditions are infeasible at every action. Evaluation-only counterfactuals attribute immediate effects from the same state but do not estimate the long-run causal benefit of a different controller trajectory. Formal shielding would require additional sound abstractions or invariant-set reasoning that this work does not provide.
+
+\section{Conclusion}
+RLCD provides a causal, auditable interface between learned preferences, empirical one-step safety probabilities and deterministic intervention. Gating improves the initial ungated policy's stress outcomes, but safety refits, randomized training and additional guards do not uniformly improve the complete controller. Action screening and ID selected-action recalibration improve nominal outcomes while leaving stress overconfidence; V7's disagreement guard has only a small conditional effect. V8 produces a much larger stress-violation reduction, but loses both nominal and stress QoE and is rejected by its frozen validation constraint. Its confidence ablation finds no resolved additional violation protection beyond the envelope, rather than establishing a general benefit from calibrated eligibility. V9 removes raw-loss-only budget and fallback backoff, recovering burst-loss quality relative to V8 with unchanged observed violations, but still fails nominal-quality promotion. Its confidence ablation reveals a small conditional stress regression from adding eligibility. The preserved decision is to retain V7, not choose a post-test winner. Independent network populations, congestion-versus-erasure validation, episode-level risk calibration, and packet/codec experiments are needed before deployment claims. These synthetic adaptive findings provide neither a formal safety guarantee nor unseen-mechanism or real-network validation.
+
+\appendix
+\section{Artifact and reproducibility contract}
+The repository provides locked dependencies, strict JSON configurations, CPU model training, frozen checkpoints, seeded traces, complete step/episode logs, integrity manifests, source snapshots and tests. Checkpoints contain policy weights, safety-model weights, calibrator parameters, seed namespaces and training logs; they are inference artifacts, not mid-training resumable snapshots. No GPU run is implied by the CPU implementation.
+
+Numbers for the nine formal synthetic studies are generated with \texttt{media-rl export-paper}. The exporter refuses incomplete or hash-mismatched experiments, validates episode counts and records source/generated hashes. Export sources and commands for all nine studies are listed in \path{paper/README.md}.
+
+The completed V6 test is \path{results/action-calibration-v6/final-campaign/test}. Its validation lock, frozen configurations and reproduction details are documented in \path{docs/ACTION_CALIBRATION_V6.md}. The V7 fresh-test panel and its resume provenance are in \path{results/uncertainty-shield-v7/final-campaign/test} and its parent campaign; the original partial test remains preserved separately. \par
+The complete V8 test at \path{results/budget-shield-v8/test} has 386 audited artifacts. Its selection lock binds the validation manifest, and all ten saved bundles are byte-identical to their source. The 1,100-episode validation audit verifies 327 artifacts. Generated tables and machine-readable paired estimates are in \path{paper/generated-budget-shield-v8}.
+
+The earlier pilot manuscript is archived separately, not silently reused. Completed stages are reused only after auditing; no mid-training or mid-evaluation resume is claimed. Detailed protocols are in \path{docs/IMPROVEMENT_V2.md}, \path{docs/POLICY_RANDOMIZATION_V4.md}, \path{docs/SAFETY_SHIELD_V5.md}, \path{docs/ACTION_CALIBRATION_V6.md}, \path{docs/BUDGET_SHIELD_V8.md}, \path{docs/DELAY_BUDGET_V9.md}, and \path{paper/README.md}. The V9 test at \path{results/delay-budget-v9/test} contains 9,900 episodes and 405 audited artifacts; its validation has 1,650 episodes and 346 artifacts. All ten source bundles and all 159 frozen implementation files match both stage snapshots. The validation lock and earlier canonical V8 evidence remain unchanged.
+
+\begin{table}[ht]
+\centering\resizebox{\textwidth}{!}{\input{\followuppath/table_contrasts.tex}}
+\caption{Fresh-panel selected-controller minus matched v1/RL/GCC-like effects. Violation contrasts are percentage points. Positive QoE and negative violation contrasts favor the selected controller; intervals condition on this panel.}
+\end{table}
+
+\begin{table}[ht]
+\centering\resizebox{\textwidth}{!}{\input{\evidencepath/table_contrasts.tex}}
+\caption{V1 scale-up paired RLCD-minus-reference effects. Violation-rate contrasts are percentage points; QoE contrasts use reward units. Negative violation differences favor RLCD, while positive QoE differences favor RLCD. Intervals are exploratory and conditional on the fixed trace panel.}
+\end{table}
+
+\begin{table}[p]
+\centering\resizebox{\textwidth}{!}{\input{\randomizationpath/table_randomization_scenarios.tex}}
+\caption{V4 fresh-test QoE and violation-frequency means by scenario. Deltas are randomized candidate minus matched v1; all stress mechanisms were represented during policy training.}
+\label{tab:randomization-scenarios}
+\end{table}
+
+\begin{table}[p]
+\centering\resizebox{\textwidth}{!}{\input{\shieldpath/table_action_shield_scenarios.tex}}
+\caption{V5 fresh-test QoE and violation-frequency means by scenario. Deltas are top-five shield minus matched v1; every stress family was already known.}
+\label{tab:shield-scenarios}
+\end{table}
+
+\begin{table}[p]
+\centering\resizebox{\textwidth}{!}{\input{\actioncalpath/table_action_shield_diagnostics.tex}}
+\caption{V6 one-step screen diagnostics summarized per model seed. Replacement/proposal labels are same-state counterfactuals, not long-run causal effects.}
+\label{tab:v6-screen-diagnostics}
+\end{table}
+
+\begin{table}[p]
+\centering\resizebox{\textwidth}{!}{\input{\actioncalpath/table_action_shield_families.tex}}
+\caption{V6 validation stress-family violation differences (recalibrated screen minus v1), checked against the frozen family-wise promotion bound.}
+\label{tab:v6-families}
+\end{table}
+
+\begin{table}[p]
+\centering\resizebox{\textwidth}{!}{\input{\actioncalpath/table_action_shield_scenarios.tex}}
+\caption{V6 fresh-test QoE and violation-frequency means by known scenario. Deltas are recalibrated screen minus matched v1; these are new realizations, not unseen mechanisms.}
+\label{tab:v6-scenarios}
+\end{table}
+
+\begin{table}[p]
+\centering\resizebox{\textwidth}{!}{\input{\budgetshieldpath/table_budget_shield_scenarios.tex}}
+\caption{V8 fresh-test scenario means; deltas are V8 minus V7. Burst-loss QoE regresses without reducing violations.}
+\label{tab:v8-scenarios}
+\end{table}
+
+\begin{table}[p]
+\centering\resizebox{\textwidth}{!}{\input{\budgetshieldpath/table_budget_shield_families.tex}}
+\caption{V8 validation stress-family constraints. Passing all risk bounds does not override the failed ID-QoE bound.}
+\label{tab:v8-families}
+\end{table}
+
+\begin{table}[p]
+\centering\resizebox{\textwidth}{!}{\input{\budgetshieldpath/table_budget_shield_diagnostics.tex}}
+\caption{V8 envelope diagnostics on each controller's own states, aggregated by model seed. Step rates are descriptive, not independent-trial safety guarantees.}
+\label{tab:v8-diagnostics}
+\end{table}
+
+\begin{landscape}
+\begin{table}[p]
+\centering\resizebox{\linewidth}{!}{\input{\budgetshieldpath/table_budget_shield_calibration.tex}}
+\caption{V8 accepted-action and proposal safety-score audit. Rejected-candidate scores on fallback steps are excluded from accepted-action subsets.}
+\label{tab:v8-calibration}
+\end{table}
+
+\begin{table}[p]
+\centering\resizebox{\linewidth}{!}{\input{\budgetshieldpath/table_budget_only_calibration.tex}}
+\caption{The confidence-ablated budget screen's post-selection score audit on its own occupancy distribution. Scores are logged but do not determine probability/disagreement eligibility.}
+\label{tab:v8-ablation-calibration}
+\end{table}
+\end{landscape}
+
+\clearpage
+\section{V9 paired scenario and confidence audits}
+\begin{table}[htbp]
+\centering\resizebox{\textwidth}{!}{\input{\delaybudgetpath/table_delay_budget_scenarios.tex}}
+\caption{V9 fresh-test scenario means against V7. Quality and risk tradeoffs do not override the nominal-quality rejection.}
+\end{table}
+\begin{table}[htbp]
+\centering\resizebox{\textwidth}{!}{\input{\delaybudgetpath/table_delay_budget_scenarios_v8.tex}}
+\caption{V9 versus the paired V8 loss-responsive budget. Burst-loss quality recovers; other scenario means and all violation means are unchanged on this fixed panel.}
+\end{table}
+\begin{table}[p]
+\centering\resizebox{\textwidth}{!}{\input{\delaybudgetpath/table_delay_budget_families.tex}}
+\caption{V9 validation stress-family bounds relative to V7. Passing all risk constraints cannot override the failed ID-QoE bound.}
+\end{table}
+\begin{table}[p]
+\centering\resizebox{\textwidth}{!}{\input{\delaybudgetpath/table_delay_budget_diagnostics.tex}}
+\caption{V9 and matched-ablation envelope diagnostics on their own states, aggregated by model seed. Step rates are descriptive, not independent-trial or episode-safety guarantees.}
+\end{table}
+\begin{landscape}
+\begin{table}[p]
+\centering\resizebox{\linewidth}{!}{\input{\delaybudgetpath/table_delay_budget_calibration.tex}}
+\caption{V9 proposal and accepted-action score audit. Rejected candidate scores on fallback steps are excluded from accepted subsets; confidence is not a fallback certificate.}
+\end{table}
+\begin{table}[p]
+\centering\resizebox{\linewidth}{!}{\input{\delaybudgetpath/table_delay_budget_only_calibration.tex}}
+\caption{The confidence-ablated delay-budget screen's full score audit on its own occupancy. Scores are logged but do not determine probability or disagreement eligibility.}
+\end{table}
+\end{landscape}
+\clearpage
+\section{Native WebRTC application-frame diagnostics}
+\label{app:native-frames}
+This ancillary diagnostic is \textbf{not an RLCD comparison or a tenth formal policy study}. An owned headless Chrome 154.0.8037.58 instance, CDP 1.3, negotiates VP8 and transport-wide congestion feedback between local peers. All direct SDP candidates are removed and replaced by owned UDP proxies. The real-time FIFO/drop-tail relay has a 30{,}000-byte remaining-wire queue, 25\,ms propagation per direction and a $2\to0.5\to2$\,Mbps service schedule, with four seconds per phase. The encoder cap stays 4\,Mbps; it is not a hard wire-rate envelope. Wire accounting adds 28 estimated IPv4/UDP bytes per opaque native datagram, not Ethernet airtime.
+
+Each generated $640\times360$ canvas frame, requested nominally at 30\,Hz, carries a 16-bit source ID and CRC-8 in high-contrast pixels. Manual \texttt{requestFrame} timestamps and receiver pixel-readback completion times share one document's monotonic clock. Source identity is reconstructed from actual decoded video pixels, not native aggregate loss or estimated capture-time fields. The predeclared 150\,ms criterion is \emph{capture-request to video-pixel readback}; it includes application/render/readback overhead, is not the exact native capture instant or physical screen scan-out, and supplies no perceptual-quality score. All source requests whose deadlines exceed the measurement cutoff are excluded irrespective of whether they already have an observed outcome; warmup is excluded separately. Duplicate readbacks never increase delivered-opportunity counts. Unknown markers are not imputed safe.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrrrrr}
+\toprule
+Receiver mode & Eligible & On time & Late seen & No identified readback & On time (\%)\\
+\midrule
+Browser default & \NativeAutoEligible & \NativeAutoOntime & \NativeAutoLate & \NativeAutoMissing & \NativeAutoOnPercent\\
+Zero target & \NativeMinJitterEligible & \NativeMinJitterOntime & \NativeMinJitterLate & \NativeMinJitterMissing & \NativeMinJitterOnPercent\\
+\bottomrule
+\end{tabular}
+\caption{Single-run native application-frame diagnostics on independent browser executions, not paired inferential controller results. ``No identified readback'' includes capture/encoder omissions and callback/render behavior, not solely network loss. Zero target refers to the verified native receiver \texttt{jitterBufferTarget} setter, not an encoder latency mode.}
+\label{tab:native-app-frames}
+\end{table}
+
+The default run records \NativeAutoSourceRequests{} source requests, excludes \NativeAutoWarmup{} warmup and \NativeAutoCensored{} terminal requests, and has \NativeAutoCoverage\% known-marker callback coverage. The zero-target run records \NativeMinJitterSourceRequests{}, excludes \NativeMinJitterWarmup{} warmup and \NativeMinJitterCensored{} terminal requests, with \NativeMinJitterCoverage\% coverage. Identified eligible readbacks have median ages \NativeAutoMedianDelay{} and \NativeMinJitterMedianDelay{}\,ms, respectively; these are conditional on an identified readback, not missing-frame delay estimates. High-phase identifiable on-time fractions are \NativeAutoHighOnPercent\% and \NativeMinJitterHighOnPercent\%; neither run has identifiable on-time opportunities in collapse or recovery. Getter acceptance does not make the zero target a delay bound: native buffers and frame dependencies can still incur much larger delays.
+
+The supported native action ABI has \textbf{14} encoder-cap/receiver-target combinations: seven scalar bitrate caps crossed with automatic or zero receiver target. Real inherited native accessors and command readbacks are required; unsupported/shadow properties, FEC ratios, encoder-latency modes and legacy 42-action checkpoint manifests are rejected. This is an \emph{actuation} interface, not a trained native policy, a complete sender-feedback observation schema or a certificate that simulator checkpoints transfer. Both rows use native control without RLCD.
+
+Raw packet service, admission/drop and propagation events, source/frame ID luminances, clocks, terminal exclusions and generated metrics are independently audited and source/metric/verifier snapshots sealed in \path{results/native-rtc-frame-probe} and \path{results/native-rtc-frame-min-jitter}. The diagnostic exporter \path{.tools/export_native_frame_paper.py} checks every artifact hash, metric-source identity and recomputed counts before generating \path{paper/generated-native-rtc}. These short synthetic-content, same-host observations need representative independent trace/content panels, native policy validation, risk/quality-matched strong conventional and published learned peers, uncertainty analysis and measurement validation before any deployment or SOTA claim. No learned controller is promoted from these diagnostics.
+\paragraph{Separate fresh native training: no online promotion.}
+A subsequently frozen exploratory panel collects \NativeTrainEpisodes{} training and \NativeCalibrationEpisodes{} calibration Chrome/VP8 episodes with varied synthetic link schedules and generated-scene offsets. Seeded one-second cap permutations cover all seven zero-target actions. Independent raw wire, pixel/CRC, sender and quality replay is sealed before fitting. The 16-feature native sender ABI, stacked over four causal observations, supplies 64 model inputs; proxy capacity/queue, receiver pixels, phase and future outcomes never enter state. A fresh conservative Double-DQN actor uses three-step returns and an action-conditioned, episode-bootstrap risk ensemble. No legacy simulator checkpoint is transferred.
+
+Outcome-complete acknowledged-action labels yield \NativeTrainTransitions{} training transitions from \NativeTrainRequests{} source requests, and \NativeCalibrationTransitions{} calibration transitions from \NativeCalibrationRequests{} requests. Missing/late opportunities remain in the denominator; transition-in-flight or unassociated labels are excluded, and missing decisions are never bridged. On the \emph{fitted calibration fold}, source-frame Brier changes from \NativeRawBrier{} to \NativePlattBrier{} after Platt fitting; this is in-sample calibration, not held-out controller performance or a safety certificate. Portable JavaScript/Python inference agrees numerically on causal histories and accepted/rejected screen branches. At the training-only freeze, the candidate in \path{results/native-model-v1} had not run in a live peer. The subsequent conventional-control development comparison below does not supply published learned-peer, representative independent trace/content or native-promotion evidence. These training-only findings do not replace the selected V7 model or establish SOTA.
+\paragraph{Prospective live native development: negative relative to BWE.}
+The frozen candidate subsequently executes six learned-peer runs alongside twelve conventional controls on six new, counterbalanced source/schedule configurations: collapse, steady and variable profiles with generated-scene offsets. These are independent browser executions of matched templates, not identical packet traces or a representative external benchmark. All controls run identical shadow neural inference and instrumentation, while only the learned condition actuates its output. Independent raw/model replay checks \NativeLiveDecisions{} decisions (\NativeLearnedDecisions{} learned), \NativeLiveRequests{} complete source opportunities and \NativeLiveQualityPairs{} sampled RGB pairs. Native model scores agree within $7.2\times10^{-15}$ and maximum per-run inference p99 is \NativeLiveInferenceTail{}\,ms, not a worst-case/runtime certificate. One unassociated in-flight capture tied with the first acknowledgment under browser clock quantization is quarantined, never relabeled as clean training data.
+
+\begin{table}[ht]
+\centering
+\input{generated-native-development/table.tex}
+\caption{Single-model native development means over six matched source/schedule templates. Generated content, same-host userspace transport and common native GCC/shadow-inference overhead limit scope; this is not held-out promotion or SOTA evidence.}
+\label{tab:native-learned-development}
+\end{table}
+
+Relative to BWE-headroom, native RLCD changes aggregate utility by \NativeLiveBweUtilityDelta{} and on-time frequency by \NativeLiveBweOntimeDelta{} percentage points, despite first-phase utility gain \NativeLiveBweFirstPhaseDelta{}. First-phase utility also remains \NativeLiveFixedFirstPhaseDelta{} below fixed-cap control; steady-link quality worsens. No native candidate is promoted. The learner changes caps much faster than its one-second exploratory training blocks (134 of 143 consecutive changed-command intervals are shorter), and selected-policy frame-miss predictions are optimistic. These are failure hypotheses, not causal explanations or corrected guarantees. At this V1 checkpoint, the prediction-screened cadence prototype was unit/math-tested only: holding proposals changes later telemetry/outcomes, so same-input replay cannot demonstrate controller improvement. Fresh cadence-matched/selected-calibration studies and genuine external peers remain necessary. V7 selection and the unachieved SOTA objective are unchanged.
+\paragraph{Actual screened-cadence development: no adoption.}
+A further predeclared panel tests the one-second guard on six fresh source offsets in 18 matched-template Chrome/VP8 executions, alongside unchanged native RLCD and causal BWE controls. Every condition runs common neural and cadence shadow computations. The guard holds only a still-predicted-eligible current cap; fallback or current probability/disagreement rejection releases immediately. Initial and changed-command acknowledgments supply adapter dwell state, never a new neural/oracle feature. Independent raw/model/clock/source replay checks \NativeCadenceTotalDecisions{} decisions (\NativeCadenceDecisions{} cadence), \NativeCadenceRequests{} complete opportunities, \NativeCadencePairs{} sampled RGB pairs and 486 sealed artifacts. Maximum per-run combined neural/arbiter p99 is \NativeCadencePolicyTail{}\,ms.
+\begin{table}[ht]
+\centering
+\input{generated-native-cadence/table.tex}
+\caption{Actual single-model screened-cadence development, six fresh matched source/schedule templates. Independent packet trajectories, common native GCC/shadow compute, synthetic content and no promotion/final-test scope limit interpretation.}
+\label{tab:native-cadence-development}
+\end{table}
+The guard holds \NativeCadenceHolds{} proposals but barely changes average cap churn. Relative to unchanged RLCD, utility changes \NativeCadenceRlUtilityDelta{} and on-time frequency \NativeCadenceRlOntimeDelta{} percentage points; \emph{both steady-link cases lose utility and on-time delivery}. Relative to BWE, utility remains \NativeCadenceBweUtilityDelta{} and on-time frequency \NativeCadenceBweOntimeDelta{} percentage points worse. Among 148 changed base proposals, 77 cannot dwell because the current-cap ensemble disagreement fails its unchanged screen; 29 invoke fallback, 10 fail the probability screen and 3 reach dwell expiry. Relaxing those screens is not a justified repair. State/action coverage and temporal credit mismatch need fresh training/calibration studies, not post-hoc fitting on these development outcomes. The guard is not adopted; all native/SOTA and representative published-peer requirements remain outstanding.
+\paragraph{Mixed-dwell native data: stable gains, transition losses.}
+To address the measured long-stable coverage gap without relaxing either screen, we freeze 12 fresh training and four source-disjoint calibration Chrome/VP8 episodes, each 30 seconds, using 250-, 1,000- and 4,000-ms seeded cap permutations plus unchanged causal BWE-headroom behavior. The seven zero-target actions, 16-feature/four-step native ABI, architecture, learning seed/update counts, factual source reward and 0.5/0.2 screens remain unchanged; V1 weights and all prior development labels are excluded. Actual generated scene-frame ranges, not just offsets, are checked against every earlier native fit/development group. Fresh fitting uses \NativeMixedTrainTransitions{} / \NativeMixedCalibrationTransitions{} train/calibration transitions from \NativeMixedTrainRequests{} / \NativeMixedCalibrationRequests{} source opportunities. Known changed-ack cap ages at least one second increase from \NativeMixedOldLongCoverage{}\% to \NativeMixedNewLongCoverage{}\%; this is data coverage, not performance evidence. Fitted calibration source-frame Brier falls from \NativeMixedBrierRaw{} to \NativeMixedBrierPlatt{} under Platt fitting, not a held-out guarantee. JS/Python parity covers 96 histories in each of three screen branches without changing trained weights. An external whole-collector deadline interrupted the last calibration peer before any raw/outcome file was saved; setup snapshots were preserved and only that same frozen missing case was rerun, with no completed outcome replacement.
+
+We then freeze six independent fresh development groups and counterbalanced old-RLCD/fresh-RLCD/BWE orders before executing 18 actual native peers. Every condition always computes V1 then V3 on the same causal states, while only the declared controller actuates; source trajectories are independently realized, not simulated from shadow decisions. Read-only raw/feature/both-model/clock/marker/quality replay verifies \NativeMixedDecisions{} decisions per model stream, \NativeMixedRequests{} complete source opportunities, \NativeMixedPairs{} sampled RGB pairs and 486 child artifacts. Maximum per-run two-model p99 is \NativeMixedPolicyTail{}\,ms. No candidate is adopted.
+\begin{table}[ht]
+\centering
+\input{generated-native-mixed-v3/table.tex}
+\caption{Fresh mixed-native single-model development means over six matched source/schedule groups, with common V1-then-V3 shadow compute. Generated content, same-host userspace transport and native GCC remain shared limitations; this is not promotion or representative SOTA evidence.}
+\label{tab:native-mixed-v3}
+\end{table}
+\begin{table}[ht]
+\centering\resizebox{\textwidth}{!}{\input{generated-native-mixed-v3/groups.tex}}
+\caption{All template-family gains and losses of fresh mixed-data RLCD. Each family has two actual source groups; positive/negative values favor/harm the candidate. Descriptive paired means, not confidence intervals or independent-model replication.}
+\label{tab:native-mixed-v3-groups}
+\end{table}
+Both steady cases improve: mean utility rises \NativeMixedStableOldUtilityDelta{} versus old RLCD and \NativeMixedStableBweUtilityDelta{} versus BWE. But collapse changes \NativeMixedCollapseOldUtilityDelta{} / \NativeMixedCollapseBweUtilityDelta{} and variable links \NativeMixedVariableOldUtilityDelta{} / \NativeMixedVariableBweUtilityDelta{} versus old/BWE. Aggregate utility changes \NativeMixedOldUtilityDelta{} versus old RLCD and only \NativeMixedBweUtilityDelta{} versus BWE; on-time frequency changes \NativeMixedOldOntimeDelta{} / \NativeMixedBweOntimeDelta{} percentage points. Averaging the steady wins would hide severe transient losses. On factually associated collapse/variable source labels, predicted current-cap miss is about 0.575/0.578 while observed miss is 0.703/0.705; these are development diagnostics, not causal explanations or permissible refitting labels. The next hypothesis is transition/backlog-sensitive credit assignment and selected-policy calibration with fresh fitting data, preserving stable-link quality and unchanged screen cutoffs. No queue/capacity/pixel oracle is added to neural inputs. Formal native validation, multi-model uncertainty, natural content/measured traces, strong published peers and untouched final tests remain outstanding. V7 selection and the unachieved SOTA objective are unchanged.
+\paragraph{A pure longer-return native actor ablation: improvement with unacceptable trade-offs.}
+A single preregistered experiment changes only the native actor's return horizon from $n=3$ to $n=20$ on the same sealed mixed-data training/calibration fold, not a newly collected fitting dataset. All input states/actions, initialization seed/update counts, architecture, reward scalars and discount stay fixed; fresh actor fitting does not load reference Q weights. Refitted risk weights, Platt pair, metadata and 0.5/0.2 cutoffs match V3 bit-for-bit. Terminal/missing-decision/episode boundaries remain strict. Actual mean train-return windows are \NativeTemporalWindowThree{} / \NativeTemporalWindowTwenty{}\,ms, rather than assumed exact 0.3/2-second horizons. Windows containing later different behavior caps increase \NativeTemporalMixtureThree{}\% to \NativeTemporalMixtureTwenty{}\%; longer off-policy returns are not causal individual-frame credit assignment. Portable parity again checks 96 histories in each of three gate branches.
+
+Six new source-range-disjoint groups and all n=3/n=20/BWE orders are frozen before 18 actual matched-template native executions. Both actors always run in fixed n=3-then-n=20 shadow order, with only the declared controller actuating. Independent raw/feature/model/native-action/source-quality replay checks \NativeTemporalDecisions{} decisions per model stream, \NativeTemporalRequests{} complete opportunities, \NativeTemporalPairs{} sampled RGB pairs and 486 child hashes; 518 audited artifact/model hashes remain unchanged afterward. Every common-history risk/disagreement vector is exactly equal, isolating Q selection rather than a weakened safety screen. Maximum combined per-run p99 is \NativeTemporalTail{}\,ms, below the unchanged provisional 10-ms budget.
+\begin{table}[ht]
+\centering\input{generated-native-temporal-v4/table.tex}
+\caption{Single-model actual native temporal-credit development means: same fitting data, actor recipe and risk/Platt/screens, only return horizon differs. New source templates do not provide identical packet trajectories, natural-content generalization, significance or native promotion evidence.}
+\label{tab:native-temporal-v4}
+\end{table}
+\begin{table}[ht]
+\centering\resizebox{\textwidth}{!}{\input{generated-native-temporal-v4/groups.tex}}
+\caption{All family trade-offs of n=20 minus unchanged n=3 and BWE, two actual source groups per family. Positive/negative values favor/harm the long-return candidate; no unfavorable case is discarded.}
+\label{tab:native-temporal-v4-groups}
+\end{table}
+Aggregate utility improves \NativeTemporalBaseUtility{} versus n=3 and \NativeTemporalBweUtility{} versus BWE; on-time frequency improves \NativeTemporalBaseOntime{} / \NativeTemporalBweOntime{} percentage points. Variable-link utility recovers \NativeTemporalVariableBaseUtility{} versus n=3, with collapse-family gain \NativeTemporalCollapseBaseUtility{}. But \emph{both steady cases regress}: steady utility changes \NativeTemporalStableBaseUtility{} versus n=3, and one collapse case has \NativeTemporalWorstBweUtility{} utility and \NativeTemporalWorstBweOntime{} on-time percentage-point changes versus BWE. Uniformly longer credit is therefore \emph{not adopted}; an aggregate win cannot erase nominal loss or catastrophic case variation. The controls do not include original native V1 or strong published learned peers on this new panel. These single-model generated-content development outcomes motivate fresh causal context-sensitive credit/data hypotheses and selected-policy calibration, not a post-hoc gate override, development-label refit or safety guarantee. Formal role-disjoint native validation/final tests, natural/measured panels and representative peer comparisons remain necessary; V7 selection and the unachieved SOTA objective are unchanged.
+\paragraph{A causal context switch: failed control and a repeatability warning.}
+One prospectively frozen sender-only adapter chooses the unchanged $n=3$ actor by default and the unchanged $n=20$ actor after two consecutive telemetry alarms. Alarms use a 20\% fall in causal two-second BWE peak corroborated by offered load at least 1.05 times BWE, a fresh linked-RTCP RTT rise of at least 30 ms, or native packet-send delay at least 25 ms. A two-second post-alarm hold and one-second continuously valid clean recovery add hysteresis. Missing/stale telemetry is not evidence of clean recovery; stream changes and sampling gaps above one second reset context. Only current/past sender features and relative observation clocks enter the adapter: no latent capacity/queue, receiver pixels, trace phase or future labels. There is no training, horizon/gate grid, risk-screen override or development-label refit; both frozen models retain exactly the same risk weights, Platt pair and 0.5/0.2 screens. Portable JS/Python replay agrees on 600 context states; 22 focused tests include selected-actor, score, raw-oracle, clock, cutoff, timing and flag forgeries.
+
+Eight new source-range-disjoint groups, four controls and all orders are declared before \NativeContextPeers{} actual native executions. Each condition occupies each of four execution positions twice. The same two model evaluations and context work execute in every condition, only the declared controller actuates. The original collapse/steady/variable templates gain a one-second-collapse/four-second-high/four-second-recovery family, without a phase input. Independent read-only raw/feature/both-model/context/actual-action/marker/quality replay verifies \NativeContextDecisions{} decisions per model stream, \NativeContextRequests{} complete opportunities, \NativeContextPairs{} sampled RGB pairs and \NativeContextChildHashes{} child artifact hashes; \NativeContextProofHashes{} source/model/artifact hashes stay unchanged. Actual order and every final source range, cap/phase row and all 24 case contrasts are verified. Entire-source/snapshot integrity is evidence of implementation reproducibility, not identical native stochastic trajectories.
+\begin{table}[ht]
+\centering\input{generated-native-context-v5/table.tex}
+\caption{Actual native causal-context development means on eight fresh synthetic source groups; frozen actors and unchanged risk screens. No native promotion or published-learned-peer comparison.}
+\label{tab:native-context-v5}
+\end{table}
+\begin{table}[ht]
+\centering\resizebox{\textwidth}{!}{\input{generated-native-context-v5/groups.tex}}
+\caption{Every context-minus-fixed-control family mean, two source groups per family; both positive and negative utility/on-time changes are retained.}
+\label{tab:native-context-v5-groups}
+\end{table}
+\begin{table}[ht]
+\centering\resizebox{\textwidth}{!}{\input{generated-native-context-v5/cases.tex}}
+\caption{All 24 actual context-minus-control case contrasts, including unfavorable steady, brief-collapse and catastrophic variable/collapse cases. These are descriptive one-seed development outcomes, not paired identical packet traces or confidence intervals.}
+\label{tab:native-context-v5-cases}
+\end{table}
+Aggregate utility changes \NativeContextShortUtility{} versus short, \NativeContextLongUtility{} versus long and \NativeContextBweUtility{} versus BWE; corresponding on-time changes are \NativeContextShortOntime{}, \NativeContextLongOntime{} and \NativeContextBweOntime{} percentage points. Steady utility improves \NativeContextStableLongUtility{} versus long but changes \NativeContextStableShortUtility{} versus short; brief-collapse utility changes \NativeContextBriefShortUtility{} versus short. The causal switch is \emph{not adopted}: stable-i selects long on \NativeContextSteadyFalseLong{} decisions after sender-delay alarms despite constant link capacity, while collapse-j has a large short/long/BWE loss (Table~\ref{tab:native-context-v5-cases}). Maximum combined p99 is \NativeContextTail{} ms for context conditions (below the unchanged 10-ms provisional budget), but \NativeContextAllTail{} ms across all conditions, with collapse-j's long control exceeding budget. Selector-only p99 reaches \NativeContextSelectorTail{} ms; aggregate-average timing does not erase a per-condition tail failure.
+
+Crucially, stable-j and variable-i never switch from short, yet their separate-run contrasts versus the exact same short-policy mapping are nonzero; variable-i changes \NativeContextZeroSwitchUtility{} utility / \NativeContextZeroSwitchOntime{} on-time percentage points. This cannot be explained by a horizon switch that never occurred: browser scheduling, endogenous feedback, actual history and media/packet trajectories are not identical. Nor does it prove which nuisance mechanism dominates. Thus neither steady improvement nor any individual apparent gain establishes a causal switching effect. The next defensible task is \emph{prospective repeated identical-policy controls and sender-signal repeatability}, followed by selected-policy calibration and role-disjoint evaluation, not a post-hoc threshold grid on these eight groups. Natural/measured media/traces, multi-model uncertainty and strong published learned peers remain outstanding. V7 remains selected; SOTA remains unachieved.
+
+\clearpage
+\bibliographystyle{plain}
+\bibliography{../research/references}
+\end{document}

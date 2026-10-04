@@ -1,0 +1,15 @@
+{
+  "name": "rlcd-v7-ensemble-disagreement-screen",
+  "model_seeds": [11, 22, 33, 44, 55, 66, 77, 88, 99, 110],
+  "validation_seeds": [10701, 10702, 10703, 10704, 10705, 10706, 10707, 10708, 10709, 10710],
+  "test_seeds": [11701, 11702, 11703, 11704, 11705, 11706, 11707, 11708, 11709, 11710],
+  "top_k": 5,
+  "threshold": 0.9,
+  "max_ensemble_std": 0.05,
+  "max_id_qoe_drop": 0.03,
+  "max_id_violation_increase": 0.01,
+  "max_stress_violation_increase": 0.02,
+  "max_stress_scenario_violation_increase": 0.03,
+  "risk_penalty": 5.0,
+  "minimum_score_gain": 0.005
+}

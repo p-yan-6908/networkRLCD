@@ -1,0 +1,8 @@
+{
+  "name": "selected-action-calibration-v6",
+  "episodes": 40,
+  "split_namespace": "action_calibration_v6",
+  "top_k": 5,
+  "threshold": 0.9,
+  "calibration": "platt"
+}

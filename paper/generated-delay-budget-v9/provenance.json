@@ -1,0 +1,65 @@
+{
+  "config_sha256": "c1054eb354c3eb89a102322f04acebca658c3275f5ab7dd50833ccdb3ae223cf",
+  "episodes": 9900,
+  "evidence_label": "Paper-scale descriptive follow-up",
+  "generated_sha256": {
+    "delay_budget_results.json": "96824e47d1abb22571b277d3ec36aaa44e7de34615b9399c5996c0a5e6824698",
+    "evidence.tex": "4325f4885607383324c9e5cce44aef24fd02f308b78376579317618a8c75460a",
+    "table_ablations.tex": "dc8c77b10d23914d88bb8b2887ed5907899d0995beb70ec2cc1434163d1b3ab8",
+    "table_calibration.tex": "17c05249f3ab6786eeae1981c7b01d42fcff05d90e09d670bb92d6a2b1e1fc7d",
+    "table_comparison.tex": "11c3dd05be2dbf460a74c1a959f3d137eb1572208973847b55c5a969818861f3",
+    "table_contrasts.tex": "9194dd536704679419ecf7f86a3a170020e27d65ab19dcd89420748aa20ad67c",
+    "table_delay_budget_calibration.tex": "ab18468365f86fdf963084a228a48cf0d799f1720d63f54605e25c33c7985fc1",
+    "table_delay_budget_contrasts.tex": "e41540843dcd346a5bde0dd6d5c5599a6c2fe018aa7fc7e5d06b4b9bf5b1bdd4",
+    "table_delay_budget_diagnostics.tex": "b76496462fd076bfe8fac5c4cfb4e5ac1ab843514dc7f20ed496aff5edf1fc08",
+    "table_delay_budget_families.tex": "9464b7168a5fcde11c3eb7b0540b3b13146a6d9fe69ff897a8bf6462b0dbcc5e",
+    "table_delay_budget_only_calibration.tex": "7e71f2c2be032b3c37798ab76ca83ef682bb7b429ae80c9443658482a0a0b860",
+    "table_delay_budget_scenarios.tex": "6bb36a2d6a8d30f5fe7e8da89ca65bf21f4ea4974bd1e6d898fb9cb1f510c51d",
+    "table_delay_budget_scenarios_v8.tex": "43f88bd484d2ee714aff3d5daefe85210a0b57d884190acb666e05ede1d50795",
+    "table_delay_budget_selection.tex": "5a06206e314eb702115819cdd9ee596eb95138bc9421b8fd90e92de0e627b224"
+  },
+  "integrity_checked": true,
+  "limitations": [
+    "Conditional training-seed bootstrap; fixed trace panel.",
+    "No claim of real-network validation or untouched confirmatory data."
+  ],
+  "macro_prefix": "DelayBudget",
+  "manifest_sha256": "c2790935dbc782f06084c277eea737828a5507c4c68d7aa2c8d5b0ea1673d9e3",
+  "model_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99,
+    110
+  ],
+  "source_files": {
+    "calibration_diagnostics.csv": "5f22ddea070b24e0fd4b279932bff1bd3b4fddfeed2e11623dc1b10366a58845",
+    "delay_budget_only_diagnostics.csv": "ee3c09214486f00a57aa707170ad238e481a8a27f3b79f6b4c8b9635c6c3b220",
+    "episodes.csv": "f75e91d39b8f3dfcf96cee2aa796b258018baad1cf5198d506fae661e6b1c29d",
+    "paired_differences.csv": "4059d41140b75298024ac363c29632fca2aff5f2eb816dc95c627f0bfb9e35a4",
+    "selection.json": "1eb425eae7e482a600c0c526149fa0d956c0d9c0634c404bce4210cabec5b733",
+    "shield_diagnostics.csv": "1f74eb276a862c9ce8613114ad68bdb1aabd18363e86232f02f2965446113495",
+    "steps.csv.gz": "ccf29ad2fc23a88f6253b15dd160d61d2802d216103f9cc914dfa58b12af7d9f",
+    "summary.csv": "05fd000ea88dea50538dbf863fcaafb28b2255d6ecb45c426c5d647453b8c3fc"
+  },
+  "source_run": "./results/delay-budget-v9/test",
+  "steps": 5940000,
+  "test_seeds": [
+    15701,
+    15702,
+    15703,
+    15704,
+    15705,
+    15706,
+    15707,
+    15708,
+    15709,
+    15710
+  ],
+  "verified_artifacts": 405
+}

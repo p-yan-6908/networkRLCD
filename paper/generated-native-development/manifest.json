@@ -1,0 +1,13 @@
+{
+  "stage": "native_live_negative_development_paper_verified",
+  "artifacts_sha256": {
+    "evidence.tex": "e5fda5db1fbb268fe2b273bb7a75a6bb28daf4989efc55b85a3f9bc242043062",
+    "table.tex": "54460d6b95b71a050863f02eaeb3827b4418e6bb64d05e1e56209780dbc9ceb0",
+    "evidence.json": "57684d2e55495f387f5c882bdbd180ddb3163c255cdea3ed50f48e0af80fcb66"
+  },
+  "panel_manifest_sha256": "adc2f23900fd2bc350e8cdc344999bbf5e29b2a65edfebc85b068995a4f67b20",
+  "exporter_sha256": "5a332dbfddbfe5d32d41694e7ab86c65d1d349954b14997ffd6887c0ff3c4ae5",
+  "auditor_sha256": "b323349a9d659d49c5eacbf41f8da2aec466519c3c4a7c6f4c2d83d88fdc330a",
+  "model_sha256": "46824918cb01fe65f3107fe808b0f9fcd7f583cf9dfab9df500a63698b8a6a64",
+  "selected_or_promoted": false
+}

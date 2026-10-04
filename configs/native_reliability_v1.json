@@ -1,0 +1,834 @@
+{
+  "panel_abi": "native_reliability_study_v1",
+  "stage": "repeatability",
+  "source_kind": "generated_canvas",
+  "models": {
+    "source": {
+      "path": "./results/native-model-v3/model.json",
+      "sha256": "bab783ccc0b45eb6fab4aaab20c350e5e02a8745cdbe3c3de1c3d096a99d689a"
+    }
+  },
+  "conditions": {
+    "rlcd-a": {
+      "controller": "rlcd",
+      "model": "source"
+    },
+    "rlcd-b": {
+      "controller": "rlcd",
+      "model": "source"
+    },
+    "bwe": {
+      "controller": "bwe",
+      "model": "source"
+    }
+  },
+  "repetitions": 2,
+  "groups": [
+    {
+      "id": "stable-0",
+      "family": "stable",
+      "scene_seed": 32600,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          2,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "orders": [
+        [
+          "rlcd-a",
+          "rlcd-b",
+          "bwe"
+        ],
+        [
+          "rlcd-b",
+          "bwe",
+          "rlcd-a"
+        ]
+      ]
+    },
+    {
+      "id": "collapse-0",
+      "family": "collapse",
+      "scene_seed": 34850,
+      "reservation_frames": 1000,
+      "schedule": [
+        [
+          2,
+          "high",
+          3000
+        ],
+        [
+          0.5,
+          "collapse",
+          3000
+        ],
+        [
+          2,
+          "recovery",
+          3000
+        ]
+      ],
+      "orders": [
+        [
+          "rlcd-a",
+          "rlcd-b",
+          "bwe"
+        ],
+        [
+          "rlcd-b",
+          "bwe",
+          "rlcd-a"
+        ]
+      ]
+    }
+  ],
+  "order_seed": 1901,
+  "limits": {
+    "repeatability_utility_span": 3.0,
+    "repeatability_ontime_span": 0.15,
+    "inference_p99_ms": 10.0,
+    "min_validation_groups": 8,
+    "min_utility_gain": 0.0,
+    "max_ontime_drop": 0.02,
+    "max_family_utility_drop": 0.5
+  },
+  "risk_cutoff": 0.5,
+  "disagreement_cutoff": 0.2,
+  "common_shadow_inference": true,
+  "episode_timeout_s": 90,
+  "excluded_scene_ranges": [
+    [
+      5402,
+      6328
+    ],
+    [
+      8402,
+      9327
+    ],
+    [
+      11402,
+      12326
+    ],
+    [
+      12602,
+      13526
+    ],
+    [
+      16402,
+      17326
+    ],
+    [
+      17602,
+      18525
+    ],
+    [
+      21252,
+      22176
+    ],
+    [
+      22452,
+      23376
+    ],
+    [
+      25252,
+      26176
+    ],
+    [
+      26452,
+      27376
+    ],
+    [
+      29252,
+      30176
+    ],
+    [
+      30452,
+      31376
+    ],
+    [
+      33602,
+      34525
+    ],
+    [
+      37602,
+      38526
+    ],
+    [
+      44252,
+      45175
+    ],
+    [
+      48402,
+      49328
+    ],
+    [
+      18,
+      321
+    ],
+    [
+      810,
+      1112
+    ],
+    [
+      2112,
+      2417
+    ],
+    [
+      3930,
+      4232
+    ],
+    [
+      4050,
+      4352
+    ],
+    [
+      7002,
+      7304
+    ],
+    [
+      10008,
+      10310
+    ],
+    [
+      15014,
+      15316
+    ],
+    [
+      20012,
+      20300
+    ],
+    [
+      20012,
+      20299
+    ],
+    [
+      20012,
+      20299
+    ],
+    [
+      24008,
+      24295
+    ],
+    [
+      24008,
+      24295
+    ],
+    [
+      24008,
+      24295
+    ],
+    [
+      28002,
+      28289
+    ],
+    [
+      28002,
+      28289
+    ],
+    [
+      28002,
+      28289
+    ],
+    [
+      32004,
+      32291
+    ],
+    [
+      32004,
+      32291
+    ],
+    [
+      32004,
+      32291
+    ],
+    [
+      36008,
+      36295
+    ],
+    [
+      36008,
+      36295
+    ],
+    [
+      36008,
+      36295
+    ],
+    [
+      40010,
+      40297
+    ],
+    [
+      40010,
+      40297
+    ],
+    [
+      40010,
+      40297
+    ],
+    [
+      42044,
+      42333
+    ],
+    [
+      42044,
+      42332
+    ],
+    [
+      42044,
+      42331
+    ],
+    [
+      46028,
+      46315
+    ],
+    [
+      46028,
+      46315
+    ],
+    [
+      46028,
+      46315
+    ],
+    [
+      50022,
+      50309
+    ],
+    [
+      50022,
+      50312
+    ],
+    [
+      50022,
+      50310
+    ],
+    [
+      54014,
+      54301
+    ],
+    [
+      54014,
+      54301
+    ],
+    [
+      54014,
+      54301
+    ],
+    [
+      58004,
+      58291
+    ],
+    [
+      58004,
+      58291
+    ],
+    [
+      58004,
+      58291
+    ],
+    [
+      62004,
+      62291
+    ],
+    [
+      62004,
+      62291
+    ],
+    [
+      62004,
+      62292
+    ],
+    [
+      42044,
+      42331
+    ],
+    [
+      42044,
+      42332
+    ],
+    [
+      42044,
+      42333
+    ],
+    [
+      46028,
+      46315
+    ],
+    [
+      50022,
+      50312
+    ],
+    [
+      50022,
+      50309
+    ],
+    [
+      50022,
+      50310
+    ],
+    [
+      54014,
+      54301
+    ],
+    [
+      58004,
+      58291
+    ],
+    [
+      62004,
+      62292
+    ],
+    [
+      62004,
+      62291
+    ],
+    [
+      42351,
+      42639
+    ],
+    [
+      42351,
+      42638
+    ],
+    [
+      42351,
+      42640
+    ],
+    [
+      46326,
+      46615
+    ],
+    [
+      46326,
+      46613
+    ],
+    [
+      46326,
+      46614
+    ],
+    [
+      2726,
+      3013
+    ],
+    [
+      2726,
+      3016
+    ],
+    [
+      2726,
+      3014
+    ],
+    [
+      32301,
+      32589
+    ],
+    [
+      32301,
+      32588
+    ],
+    [
+      34551,
+      34838
+    ],
+    [
+      36301,
+      36588
+    ],
+    [
+      36301,
+      36587
+    ],
+    [
+      36301,
+      36584
+    ],
+    [
+      38551,
+      38838
+    ],
+    [
+      38551,
+      38837
+    ],
+    [
+      40301,
+      40588
+    ],
+    [
+      40301,
+      40590
+    ],
+    [
+      20012,
+      20299
+    ],
+    [
+      20012,
+      20300
+    ],
+    [
+      24008,
+      24295
+    ],
+    [
+      28002,
+      28289
+    ],
+    [
+      32004,
+      32291
+    ],
+    [
+      36008,
+      36295
+    ],
+    [
+      40010,
+      40297
+    ],
+    [
+      48402,
+      49328
+    ],
+    [
+      33602,
+      34525
+    ],
+    [
+      44252,
+      45175
+    ],
+    [
+      37602,
+      38526
+    ],
+    [
+      12602,
+      13526
+    ],
+    [
+      22452,
+      23376
+    ],
+    [
+      30452,
+      31376
+    ],
+    [
+      5402,
+      6328
+    ],
+    [
+      16402,
+      17326
+    ],
+    [
+      25252,
+      26176
+    ],
+    [
+      11402,
+      12326
+    ],
+    [
+      21252,
+      22176
+    ],
+    [
+      29252,
+      30176
+    ],
+    [
+      8402,
+      9327
+    ],
+    [
+      17602,
+      18525
+    ],
+    [
+      26452,
+      27376
+    ],
+    [
+      51402,
+      51689
+    ],
+    [
+      51402,
+      51691
+    ],
+    [
+      55402,
+      55689
+    ],
+    [
+      59402,
+      59689
+    ],
+    [
+      63402,
+      63689
+    ],
+    [
+      13652,
+      13939
+    ],
+    [
+      18852,
+      19139
+    ],
+    [
+      1,
+      379
+    ],
+    [
+      1,
+      380
+    ],
+    [
+      2426,
+      2713
+    ],
+    [
+      2426,
+      2715
+    ],
+    [
+      4376,
+      4663
+    ],
+    [
+      4376,
+      4664
+    ],
+    [
+      7326,
+      7613
+    ],
+    [
+      10326,
+      10613
+    ],
+    [
+      10326,
+      10614
+    ],
+    [
+      13951,
+      14238
+    ],
+    [
+      13951,
+      14239
+    ],
+    [
+      15326,
+      15613
+    ],
+    [
+      10008,
+      10310
+    ],
+    [
+      15014,
+      15316
+    ],
+    [
+      18,
+      321
+    ],
+    [
+      810,
+      1112
+    ],
+    [
+      2112,
+      2417
+    ],
+    [
+      3930,
+      4232
+    ],
+    [
+      4050,
+      4352
+    ],
+    [
+      7002,
+      7304
+    ]
+  ],
+  "excluded_inputs_sha256": {
+    "./results/native-cadence-v2/collapse-c-bwe/frame_events.json": "be707b91b380316923a9c0626c2b9116c6c9a0287d6e3eb739f785edafc7021f",
+    "./results/native-cadence-v2/collapse-c-rlcd/frame_events.json": "4c9c1838b77624a2d217d72ab3d2d74da6759073e7c171683104e368010672c2",
+    "./results/native-cadence-v2/collapse-c-rlcd-cadence/frame_events.json": "8a3ab3cb099f1ef2f7c7a29359256894f1c2c2989f3edd9e2a1e486e42cf7613",
+    "./results/native-cadence-v2/collapse-d-bwe/frame_events.json": "0fa610f2954cedd34d9c46bcea2de4b34c03f20c4b43b077b22aeff24cdd79e3",
+    "./results/native-cadence-v2/collapse-d-rlcd/frame_events.json": "d8dabc69d2b81a59dee0323bfe4e92c8124e339afc1964d0f9d94d83d9744f1b",
+    "./results/native-cadence-v2/collapse-d-rlcd-cadence/frame_events.json": "b2e2681818967a3304b3ac0818a5ce7d2a5e34760eff787218dc321cd7e2cf96",
+    "./results/native-cadence-v2/stable-c-bwe/frame_events.json": "68eb33adff4ec2006f91c16b77711eb3cd0862492a779d1488a197c1850c79fe",
+    "./results/native-cadence-v2/stable-c-rlcd/frame_events.json": "40dda791e31baf7082cc7eecce4757f7663f76d1cada7cfe01db2900a2575e83",
+    "./results/native-cadence-v2/stable-c-rlcd-cadence/frame_events.json": "b09438b97658e4c7c4357eb85d959e0e0e9157050d8916b72e86994fb0952d8d",
+    "./results/native-cadence-v2/stable-d-bwe/frame_events.json": "dac8e403490ef0974a851de64bc73ee343c0afd2a12d970dc6a73c16e7e87066",
+    "./results/native-cadence-v2/stable-d-rlcd/frame_events.json": "67cede61bf2543e4fade23ae826e4110bf70034e4992dbce764842d4624c726c",
+    "./results/native-cadence-v2/stable-d-rlcd-cadence/frame_events.json": "cca26ef813fe6a421710c09eedef9f280542b1a5aa0f82f537de4ddcdfd5fc75",
+    "./results/native-cadence-v2/variable-c-bwe/frame_events.json": "ddf86a17d2f25ba52f97b521f3922d9d0eabc1656323eb55fedc7bb15616168a",
+    "./results/native-cadence-v2/variable-c-rlcd/frame_events.json": "9fc9aacaec0c008db194159522608223e87ee8b5c2d6db09f184d08c73fd84ac",
+    "./results/native-cadence-v2/variable-c-rlcd-cadence/frame_events.json": "2c90b98cfc8e25cabe93c8a4fffa31fefcb93a117912db01c537ebfc94cd5d5d",
+    "./results/native-cadence-v2/variable-d-bwe/frame_events.json": "938db1116bc31c66cfa5cc632453f555e3c7dec344e34183c229d124b0e0ce6c",
+    "./results/native-cadence-v2/variable-d-rlcd/frame_events.json": "e4031342f885026fb50b9af843f0ee07fd852230d6163a6272e272a8888cb0fb",
+    "./results/native-cadence-v2/variable-d-rlcd-cadence/frame_events.json": "25042f0fe8d5d6fd692bb55101333659e7e8882dc6c6de96caf020f075fbdb8e",
+    "./results/native-context-development-v5/brief-collapse-i-bwe/frame_events.json": "8df32d39305feae895e0fe672ea3ec542e2815c112ffe72b9c1a4759aaa5bb36",
+    "./results/native-context-development-v5/brief-collapse-i-context/frame_events.json": "dd31af885052e3121a59707e2af18c92cc330c995a23e56f141bb147e03b94ba",
+    "./results/native-context-development-v5/brief-collapse-i-rlcd-20step/frame_events.json": "41a3a77da093bd6585c169008871b0b6a8d0561337463bcef5c01047d8285bc5",
+    "./results/native-context-development-v5/brief-collapse-i-rlcd-3step/frame_events.json": "0f363a78e4664d3f1df9a0401384bf8ef2f112f5a259ee6ec52c93951da294f0",
+    "./results/native-context-development-v5/brief-collapse-j-bwe/frame_events.json": "5d106234953b81812256030e1ba1666d7d917f6bcfe378c298eb08c98fcbb9d6",
+    "./results/native-context-development-v5/brief-collapse-j-context/frame_events.json": "838dd1a1081029e2ee67ffc3997dd708b63c5c876f4b45cacd10b3e9802b3c06",
+    "./results/native-context-development-v5/brief-collapse-j-rlcd-20step/frame_events.json": "d841bf79da9c720e25d56671a39576e506df1a92af22272a8bca7137622c5544",
+    "./results/native-context-development-v5/brief-collapse-j-rlcd-3step/frame_events.json": "a444c4eb43e5821569ac33b12eb67cc62bd5ee941666db1496fea000583a8587",
+    "./results/native-context-development-v5/collapse-i-bwe/frame_events.json": "1f39c6bc52b2d31a1556ed892c6ab896c057291828c9517d28b716fcca9b9a9d",
+    "./results/native-context-development-v5/collapse-i-context/frame_events.json": "351da766d48bba715b179390004f620b2eb15746398993d95c51bd0b0387455d",
+    "./results/native-context-development-v5/collapse-i-rlcd-20step/frame_events.json": "bcb55b2846a46bd11fea73de77032d36ba0062bbff07d8cbc4863d57bbd7a679",
+    "./results/native-context-development-v5/collapse-i-rlcd-3step/frame_events.json": "72ca78ea070472c06e67dfe6090b4af108be3986765b8d6ddb07306bb9dc31dc",
+    "./results/native-context-development-v5/collapse-j-bwe/frame_events.json": "9ae91de0706f46d21bb2d20b2f57c8323f58f06232f30fb5a4b45f7fb473f03c",
+    "./results/native-context-development-v5/collapse-j-context/frame_events.json": "c6f9766444cd3fcd3c1c47b4cd07b46ef20ad8d405f271df92cb469b181e4229",
+    "./results/native-context-development-v5/collapse-j-rlcd-20step/frame_events.json": "fd8670b9b5ffb19c6d5706fad676783a96ad0e873ae11db89e40f34865c76018",
+    "./results/native-context-development-v5/collapse-j-rlcd-3step/frame_events.json": "95d8e9524f9129f3b31344341e31706cc04f9bc8d165c0f20a67b475cd4534a4",
+    "./results/native-context-development-v5/stable-i-bwe/frame_events.json": "5e0459e9b8c0105c7b57c214a7142fd0f1784e1722943ee8d1891076e2344e88",
+    "./results/native-context-development-v5/stable-i-context/frame_events.json": "37fc67dcc0b0b66bad7013644e6aad8fa96c0b18a32e9dcd4caecaa22307c159",
+    "./results/native-context-development-v5/stable-i-rlcd-20step/frame_events.json": "4d2b7002dbf62a8208d9164f337a35956c56cb3a22a07876208710f0d0242d97",
+    "./results/native-context-development-v5/stable-i-rlcd-3step/frame_events.json": "7955dfa2b68acccfb94f6d75c464e83a2123d73d756bcd36e677fc17907c9db4",
+    "./results/native-context-development-v5/stable-j-bwe/frame_events.json": "dd12f79f3edf0216f2aa45f293862477f24c7027faa40fcf7b3bc53fd63c6b9e",
+    "./results/native-context-development-v5/stable-j-context/frame_events.json": "db19ff3a56116ebf67a8dc0a22b2a1c9204311fc4a909820abb3c5730e3e4a52",
+    "./results/native-context-development-v5/stable-j-rlcd-20step/frame_events.json": "b5e51387e9d9aef373d7beba2e2bf8d9ff8e08bbde203abe226330eff3fafd2d",
+    "./results/native-context-development-v5/stable-j-rlcd-3step/frame_events.json": "64d72d084d41cb1ba051569337cfbb50f227b10988301ee1c5b7aecf41a57961",
+    "./results/native-context-development-v5/variable-i-bwe/frame_events.json": "ab707fd7891ae59a7cdfbf6ba16ce0bec9dcbfca8de14f47fc3d15045b477c4f",
+    "./results/native-context-development-v5/variable-i-context/frame_events.json": "390983f925dd799b6194df7c5ba0443b8686104387537c35fe9256a580a84476",
+    "./results/native-context-development-v5/variable-i-rlcd-20step/frame_events.json": "e1b619149ff791cae7a10f6957d683998918de64a875ae1805e90f11538d3c65",
+    "./results/native-context-development-v5/variable-i-rlcd-3step/frame_events.json": "5b83ad29e9a5cebdc30a17493b2d0ed65a237dcfbd3c2d08feeeb431d27717e9",
+    "./results/native-context-development-v5/variable-j-bwe/frame_events.json": "f864f301f20abb188ae73d831f29707887f91e775222828f75666f96617b198b",
+    "./results/native-context-development-v5/variable-j-context/frame_events.json": "14ce7e9727ad56226548b70b894039206f6b45b8d03fe85809627235458e3a7b",
+    "./results/native-context-development-v5/variable-j-rlcd-20step/frame_events.json": "78ed11371f640656c16a7d94d51cd7954ee0dcb81aac48f6a558f75772d38829",
+    "./results/native-context-development-v5/variable-j-rlcd-3step/frame_events.json": "1cb95a126b3c2b5e48629c9233b1b7a9481aaf8dae1fd6add3786acb5bc59045",
+    "./results/native-development-v1/collapse-a-bwe/frame_events.json": "1d62617321b3c8c5081b8794de57020bf205b29090aed0d2291c02c0de900192",
+    "./results/native-development-v1/collapse-a-fixed/frame_events.json": "dbd521b6f287f05797fe010d7576685f03b6a1ad4f407abcffe6be1922fcbcca",
+    "./results/native-development-v1/collapse-a-rlcd/frame_events.json": "33a6567a2fe3d07a7e6d9c9f8b40cd11ac81cdd60f4e058d27b7e12d7db799ca",
+    "./results/native-development-v1/collapse-b-bwe/frame_events.json": "681ebe289759493944f5865f6e8ec19a56fcc8bb60efb5af1a428603ca161ce2",
+    "./results/native-development-v1/collapse-b-fixed/frame_events.json": "ce351a3bad207cd836cc4b468462fafeebacada822f1fb47de1c388b987a71ff",
+    "./results/native-development-v1/collapse-b-rlcd/frame_events.json": "7921e00b26c350537d2474b44faf7f4a45be6d484db6e30fa513e07d0265eede",
+    "./results/native-development-v1/stable-a-bwe/frame_events.json": "ebee439c2c40deec03950133a9019b744595107d8a83e7cbce6db18fba23ea1e",
+    "./results/native-development-v1/stable-a-fixed/frame_events.json": "846021ba2f12d9522e080a0100d5bfc85f9cf2592ddf967551168b285a9bbbee",
+    "./results/native-development-v1/stable-a-rlcd/frame_events.json": "267495dfc84891c809188a1602efff2eeb4f39c67d7a51cc8f7c219d7c10336c",
+    "./results/native-development-v1/stable-b-bwe/frame_events.json": "7304eaad56747a2c5aa52a0bf3db62bdf230e736521f693e7a5bd296e6c0e4c9",
+    "./results/native-development-v1/stable-b-fixed/frame_events.json": "7cfcda44c8561d45b8b2d4d319688a86b4ce7907d5a895b7f4a8b862c35f97ee",
+    "./results/native-development-v1/stable-b-rlcd/frame_events.json": "e538b87f259a588d10c6cd3f7d8c47c1db865b692e41ec234328102469636fda",
+    "./results/native-development-v1/variable-a-bwe/frame_events.json": "f8ae147a48459f37a620b90c0d9fd467cc1d8e09cab403c7408584a82415119c",
+    "./results/native-development-v1/variable-a-fixed/frame_events.json": "bad82f721b87d27a686ab26028bbff8553c606aefe26047e5ef1c058d4bc0ac3",
+    "./results/native-development-v1/variable-a-rlcd/frame_events.json": "b0e1096c057c626c8e5301cc0ccf046c0dbcde1bddc3b5285b42c4e4aa21e08b",
+    "./results/native-development-v1/variable-b-bwe/frame_events.json": "ac8e7793d7aca733fae067a672089342741e21f88221da3d6f0e2d060ef825c9",
+    "./results/native-development-v1/variable-b-fixed/frame_events.json": "29e92ff4b57b4341f499f9b4f34c461a467997ac54bb082368724c87e17b4024",
+    "./results/native-development-v1/variable-b-rlcd/frame_events.json": "4dff1091d012051703353fa9cffc9ed387dadf9035f025828729366b84b464ec",
+    "./results/native-mixed-training-v3/cal-bwe-d/frame_events.json": "d6281cf6f8f3458aa4b9497ea732db5e5b4d585d5c56976e7d7864a3c4502e91",
+    "./results/native-mixed-training-v3/cal-fast-d/frame_events.json": "187e0296ee531ff35c0222d4ddae13f788febcb814859efbb0d8004c694b7cdb",
+    "./results/native-mixed-training-v3/cal-long-d/frame_events.json": "d6ec7e38ed102ad48fc50175ccad5754ea8df88627b709b2bec82fbc14d35b8a",
+    "./results/native-mixed-training-v3/cal-second-d/frame_events.json": "f92b44990059d4db982062cfcc74d73b3b14eb94aeb979be1f31c532a82052e9",
+    "./results/native-mixed-training-v3/train-bwe-a/frame_events.json": "a5e9e4b29a4092f7c70105940f117a4d408e67d8e67c79704467033a96d2258d",
+    "./results/native-mixed-training-v3/train-bwe-b/frame_events.json": "3b7f4a078e6cf8410d37f0a3f2deb946c3ff3c0d30b2d34b3b48ef2a5a904781",
+    "./results/native-mixed-training-v3/train-bwe-c/frame_events.json": "b888b8c0d95724eb097a3267aab18ddd7d859514fb9223225e03be5b52c1f148",
+    "./results/native-mixed-training-v3/train-fast-a/frame_events.json": "88edb25595ac4a1789959b8b7314f3c3c574b23f8c797174c181137287c25a4c",
+    "./results/native-mixed-training-v3/train-fast-b/frame_events.json": "4aaa05afb37653f3d89070af34f218ad2dbdf7564dfcef049d654c335fd96cd9",
+    "./results/native-mixed-training-v3/train-fast-c/frame_events.json": "b3b2a0d97aeb429e14963a33128c9fbd5f0add918949a5243eb850f189bccba7",
+    "./results/native-mixed-training-v3/train-long-a/frame_events.json": "6e1c7e05d0071e7d3a46f316f4c62266f5b62c5a1e4bd4de68ff1b2280811815",
+    "./results/native-mixed-training-v3/train-long-b/frame_events.json": "d06a03b6e21d83271773c02daabed2cd5c0a43feee45f45e13e51df3208b721e",
+    "./results/native-mixed-training-v3/train-long-c/frame_events.json": "1815542065a61c17ae8cc9dedf60bc40563572c2f9c25fcb282f7d6968a8c745",
+    "./results/native-mixed-training-v3/train-second-a/frame_events.json": "57492319b645f28792e8296346e71e047cf1463eca3713e73da67b9f0f2668b2",
+    "./results/native-mixed-training-v3/train-second-b/frame_events.json": "94bfa6e6182a16e5fbaf538397cce5e435f52b0e69f642bfc768caf12e53ca89",
+    "./results/native-mixed-training-v3/train-second-c/frame_events.json": "75a1cb876a9048060c919aa6da719e6be4d79aa8c56d503a0a222f072a564ad8",
+    "./results/native-model-development-v3/collapse-e-bwe/frame_events.json": "a4ba3a8e5942653ff545512d2da593d21c7aa0e1bd181bf98ccf9ae7b0ac2e79",
+    "./results/native-model-development-v3/collapse-e-rlcd-v1/frame_events.json": "320a91f07b822f73f302d1679f3355eef83fa79299e1dd3a159b69750431b01e",
+    "./results/native-model-development-v3/collapse-e-rlcd-v3/frame_events.json": "5322ea1e2fea1ab4881f6b95ec01ea3a710ab889bb3b65aa7447f65cf054563a",
+    "./results/native-model-development-v3/collapse-f-bwe/frame_events.json": "829ce3e1c46ed3c75945d1eb07f2828003601cad25b725d5cd22d849e1a49117",
+    "./results/native-model-development-v3/collapse-f-rlcd-v1/frame_events.json": "cbaa5502ae956a7eeb658a52a1484ede4cc3702d4cebbfa5edbc470ee0ca2e4b",
+    "./results/native-model-development-v3/collapse-f-rlcd-v3/frame_events.json": "0fdf9f2866bf1086e75a34c0c7c6814f7f2bd5ece54ca124cfd094cbaff1caf7",
+    "./results/native-model-development-v3/stable-e-bwe/frame_events.json": "cb25de6f632537c9638bb8cb08aa41c113a9ea09779cd869eba922fa3a47fa57",
+    "./results/native-model-development-v3/stable-e-rlcd-v1/frame_events.json": "b42cae6ac3abb773825e95fa65a4757e19f5e3828040f4213801dd36ad093ec0",
+    "./results/native-model-development-v3/stable-e-rlcd-v3/frame_events.json": "94f3155cb5c372f5a404482dfb6db13de8b76468070f630f5cc6115908416b57",
+    "./results/native-model-development-v3/stable-f-bwe/frame_events.json": "00d07fe768600fbea774a2867088276d071d359b6b73ff5f497542a156f6788c",
+    "./results/native-model-development-v3/stable-f-rlcd-v1/frame_events.json": "a2662f81a4e550540036e32e5d50abc802c027b943d6b8cc967d30485745c923",
+    "./results/native-model-development-v3/stable-f-rlcd-v3/frame_events.json": "95a1a78b77365bbbe940324339b62fc03374108a0a02931062e57a2a3e292a5b",
+    "./results/native-model-development-v3/variable-e-bwe/frame_events.json": "9a240e1cc46d35befc0e5b26a28a519020b27612e69f787fd9dea25de3df1e56",
+    "./results/native-model-development-v3/variable-e-rlcd-v1/frame_events.json": "8e28e2712e23e4a02482c0484985779a1633e2cd914e6c1e3d2b1b103841c34d",
+    "./results/native-model-development-v3/variable-e-rlcd-v3/frame_events.json": "615d67ef7dcdba6c5c10929f3786531b0a0caf146c6220044802ae72a4836c8b",
+    "./results/native-model-development-v3/variable-f-bwe/frame_events.json": "91bb41e6e8d7a3e3a859ec72fa644ea8c5d85a0c92e236d5cb369bcb2c607876",
+    "./results/native-model-development-v3/variable-f-rlcd-v1/frame_events.json": "26fd83f1eca20103d1102264802068da03b886aeda787f938d493a7a2e14a163",
+    "./results/native-model-development-v3/variable-f-rlcd-v3/frame_events.json": "471caa207588ef228471023e2230d62c491d5a6237a61b37fe05217c616dd895",
+    "./results/native-rollout-v1-bwe/source_snapshot.mjs": "9d1cbe53e7462ddce2d92a56b53286efcb693214195c82d7a1960c6a7f3ab723",
+    "./results/native-rollout-v1-bwe/frame_events.json": "cc26a7e0bd2d2972ea57ebb8ca356e10f83a67762d0188c55ebc1ef5ab95f1ea",
+    "./results/native-rollout-v1-fixed/source_snapshot.mjs": "9d1cbe53e7462ddce2d92a56b53286efcb693214195c82d7a1960c6a7f3ab723",
+    "./results/native-rollout-v1-fixed/frame_events.json": "935ecb9dbdfcecf0dd9f875cb316dec1c2f3ec30be4a67d0ff86b2a2bbde3427",
+    "./results/native-temporal-development-v4/collapse-g-bwe/frame_events.json": "8cc539ac0b8d44a3c464da9468432349db6316b43ecd3eaa2cab44159f3ae352",
+    "./results/native-temporal-development-v4/collapse-g-rlcd-20step/frame_events.json": "d96bc6c1227004502f29d180de569dafba956a7af8a26bda9e8ffc943965adee",
+    "./results/native-temporal-development-v4/collapse-g-rlcd-3step/frame_events.json": "4cd0c3e5caf68c71fdb12b15ddc4aaee83b8e72d1085db85b75bf18d9c1ea2cf",
+    "./results/native-temporal-development-v4/collapse-h-bwe/frame_events.json": "f9f8d526f46a9825d4c62484efcfa27a54f43dd0dfdd378378ec0a4228a49330",
+    "./results/native-temporal-development-v4/collapse-h-rlcd-20step/frame_events.json": "38ae76283611b5dcbb6cb95e776d899a51782dbe2783497ca18fa688d5234018",
+    "./results/native-temporal-development-v4/collapse-h-rlcd-3step/frame_events.json": "18812336470a6c51ac064ab47f7b4f0216c829f1b04b32af2feb14440213cfda",
+    "./results/native-temporal-development-v4/stable-g-bwe/frame_events.json": "0fa60c8d48f5f4b90a1c3ce77ce44225968a0561fda5d21549c80a0b6b1b5fbe",
+    "./results/native-temporal-development-v4/stable-g-rlcd-20step/frame_events.json": "0a8198689bfb80d905b3791b37747e377fc27e8a806e1d7fd2b4b60e0f6c3a2d",
+    "./results/native-temporal-development-v4/stable-g-rlcd-3step/frame_events.json": "2682dd3240f387a04b842004eabfdb3dcb375b595e4ad407400840d4afe9cd02",
+    "./results/native-temporal-development-v4/stable-h-bwe/frame_events.json": "826f3e9b284ff6c107b1853c6d49d9d3785a1fbad266cfd7170e75b435fa3e87",
+    "./results/native-temporal-development-v4/stable-h-rlcd-20step/frame_events.json": "74e7ffec1ca77893f343e2663aa6a5629553413eb7cafc660a1ce200519f9f11",
+    "./results/native-temporal-development-v4/stable-h-rlcd-3step/frame_events.json": "eb9ce5a87334ea64e2d04a49f5b678acf96959032f721455ab3eeffcc51abf17",
+    "./results/native-temporal-development-v4/variable-g-bwe/frame_events.json": "bd6dae610fd57eef8f0cc262aa5639f2d50057fbb5b1f9c44ba67e95fdaba2e9",
+    "./results/native-temporal-development-v4/variable-g-rlcd-20step/frame_events.json": "ee4fc3b9d821e74f49e547abde30066073a152a4100bc998e77b696cf6cabe87",
+    "./results/native-temporal-development-v4/variable-g-rlcd-3step/frame_events.json": "3b4cba4ce6c0cb955c20eaef879c9e314da640d0e99d2adeff02b20cfe81ecf2",
+    "./results/native-temporal-development-v4/variable-h-bwe/frame_events.json": "9f72448ffb309d11ec450cfb9bb82c9909169f8c7a062e6c2db6bd97a924d9a8",
+    "./results/native-temporal-development-v4/variable-h-rlcd-20step/frame_events.json": "e0be3fa7636eeaf880ec8ee58be998c2beea59869def47a68fdef9780ac4bf87",
+    "./results/native-temporal-development-v4/variable-h-rlcd-3step/frame_events.json": "6e8aa935cf0029edb465e3925880058f56d7b9a7173a39cc7d7d26db696c513a",
+    "./results/native-training-v1/calibration-d-743/frame_events.json": "a76dddc4b4f2f7fbb48cbafab684506b04173b3b376ac6be309c276edf80f045",
+    "./results/native-training-v1/calibration-d-859/frame_events.json": "807b121018f3cb4ca6902defcfd52ff29be62426a90fd100c0fb551196a13d15",
+    "./results/native-training-v1/train-a-101/frame_events.json": "b15709e28cb832b98c69a780148b8ea27fdc7113364f3af841d47eb4b4079a53",
+    "./results/native-training-v1/train-a-211/frame_events.json": "e20cde5a42dd4bc2de609b8d4c9b3b093ed9e9b61e6820231d2ebee43e9074de",
+    "./results/native-training-v1/train-b-317/frame_events.json": "4b85b28ca3abd0b0dd2e021c53aa35f5b47453918150431d15e251afbe8568f9",
+    "./results/native-training-v1/train-b-421/frame_events.json": "0bf31e51dc85352be17e9a9a61430b4b7a3609bf9886fb5f97db9279c6967fa1",
+    "./results/native-training-v1/train-c-523/frame_events.json": "f8a8054cc713db4114a60ac2829e6b9c293c922fde6420ef1814d4252e257de5",
+    "./results/native-training-v1/train-c-631/frame_events.json": "84ff0707ece81709e8fa765a739c7b04798ae1c5f36eedea434e38925b08d1c9"
+  },
+  "source_sha256": {
+    "assets/episode.mjs": "41b45b035c2f2c67e9885d814317c6a83387beea8187a6cac799db226a65eb04",
+    "assets/frame_marker.mjs": "4aeee008fc9f8dd9e9cc14feaaf54ae82ef3a5fd8cf04eedd086114caf8ec144",
+    "assets/native_actuation.mjs": "5369c8ae4e9e9a8b3c6ce293429ad18db2bfd4e1f56037032cc1c7178fd4ad0e",
+    "assets/sender_observation.mjs": "2ffacd833560a900b9a2d6332813d522587c2db166434741ac2571486171e850",
+    "assets/source_quality.mjs": "64bd696fb75e4a5b6d0412f3c9d5f1fb383f88b586db3b7d04eaa3ada7520b66",
+    "assets/bwe_cap_controller.mjs": "a61fe6971afface7ae176ad770ff90378d30282bd893a27ac34752f5d10055b6",
+    "assets/native_policy.mjs": "9f91b8afef2f6bff88254937c337628fcea90c175017be1722200b6ff062ec02",
+    "python/native_protocol.py": "323d2b0eb3a5617508356493b6ed80166789b2d46887b0e90296367ba50fc527",
+    "python/native_study.py": "33b9d8e23dd0839459420a244b81c3b60cd09fcd38454ed9419ab831d1cd1263",
+    "python/native_statistics.py": "89e432c25eb6087ddaf33066abd54704fa3f3385e5461725a06a9dafa41c756e",
+    "python/native_wire.py": "06949e8586413b3c192b53b2ca47d52c4e26129a2b4e76bc7a9647c95507cde0",
+    "python/native_calibration.py": "67f61269d643305aebb5b82d3c8753bec628cf1a24e3a574a8c864e521696d1b",
+    "python/native_learning.py": "643c177ead82a8747fde621cc01e1fb1eb37cd774b929cec3b0fe93d92fd16f1",
+    "python/native_dataset.py": "ef73fc8a0cea37b398ce9ef98bed36bda7ae3f4f4a131388c8ecd353cb535e32",
+    "python/native_observations.py": "3b3d7d782b4034a35535c2396f380bcb1a33acd64e05db34cc3ee380d6b58fba",
+    "python/native_policy_replay.py": "882171ea0320684dee027b442b92bd888c7883e42f292c98dc5b48c678c1196f",
+    "python/native_quality.py": "0a0c9e7958c190e486e7259b9e15ae1d9f8bbc48f38c2772d6f4e5b05cf06576",
+    "python/native_frame_metrics.py": "117127046ca1c1ac929181fd3a532db86ce561792cb72a41d18ab4b0aa9df350",
+    "python/networks.py": "54b74c7f76b92e5374a564e89c7739fab75b74a1fed9e9c85727352ec3f9120f"
+  },
+  "repeatability_run": null,
+  "SOTA_achieved": false,
+  "transport_role": "encoder_cap_overlay_on_native_GCC",
+  "natural_content_or_measured_link": false,
+  "published_learned_peer_comparison": false
+}

@@ -1,0 +1,62 @@
+{
+  "config_sha256": "0c3e1d020f5e532a718d9b33e0264fb711c41ee4fa6ac55582c3b16f0152559a",
+  "episodes": 8800,
+  "evidence_label": "Paper-scale descriptive follow-up",
+  "generated_sha256": {
+    "evidence.tex": "6dc6fa76142066dab9047985a79e4ad7ada8ac42bdf48a4c394d8ead0decf219",
+    "figures/qoe_safety_tradeoff.pdf": "a733275e57a0800883a5d4950bb670f1dfb17bf1dcac0c7362012c05aade9b93",
+    "figures/reliability.pdf": "0169ce9ab6962e783855d855d6e58d1ee5ec35a6916582be155b294ae8dc3dec",
+    "figures/trajectory_collapse.pdf": "bb94866ecc85bf8f541f1111bf903730e23642ed452f78253c85a73141694725",
+    "table_ablations.tex": "f16ece70f73787a1c240149542605be06bc8a247e1a3942a97cca93a71b90305",
+    "table_calibration.tex": "b675a8b55cf8c2357c7e9e59122c8dea2901aaafe332a01e5c5cbe33174f21a9",
+    "table_comparison.tex": "395583db407308490baa91137a1c5f778e2a35e2796208be6bb0315c5197ed13",
+    "table_contrasts.tex": "6b947bad36c86c21c3da78e81abe1c49e0c0a3c980e0b0e072fca4cd9caeb662",
+    "table_uncertainty_shield_contrasts.tex": "0ae3ecee93a12f5980861b86499d3556ce30eff911fbc8f36c34154661e3091b",
+    "table_uncertainty_shield_diagnostics.tex": "d39718f2a809ba3dc09abc4d14eb729d52bed5835013cad53b7ea3c993958413",
+    "table_uncertainty_shield_families.tex": "476618ed02ad88d6805fdaa1e2c7fa3d894c601960afc96ea46b03d1177c0bd4",
+    "table_uncertainty_shield_selection.tex": "17aa858ccaf528145c3edb610036a3c0e731ac444188b4e9a1c6ca81e8dcc203"
+  },
+  "integrity_checked": true,
+  "limitations": [
+    "Conditional training-seed bootstrap; fixed trace panel.",
+    "No claim of real-network validation or untouched confirmatory data."
+  ],
+  "macro_prefix": "Disagreement",
+  "manifest_sha256": "9f5bf3fe19344026512aef17714dfff6a1228e516d170c4db27caf72b723b397",
+  "model_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99,
+    110
+  ],
+  "source_files": {
+    "calibration_diagnostics.csv": "35bb5d98fd7f0a348854720570653994d519e2cfa8efbbcfead229cbd8788141",
+    "episodes.csv": "e933031b1bcd90faf94d491fe6e55d3aa504f96a61fc7372e39a2185bf5f29a1",
+    "paired_differences.csv": "db87d6d4488d14857abb7af6ee1f6e17fcc45f598ef8c8400356ca669dec8ac6",
+    "selection.json": "c367adbf348d5c62e595ae2926364cf91c960192c8da0db82729f9f7edeb9d15",
+    "shield_diagnostics.csv": "3c8e6b1f62b943988ed20434fbc923db3cbc6705b920eca39ce43aca4eb6e03e",
+    "steps.csv.gz": "a808957203dd21d4cacae250e5ed8a187286716b749fb9b13d4c06cd6dd3bb06",
+    "summary.csv": "65ab7edac3ee1ac29b18e8a9238a4ecd080876e33bc4dfa8e3a7e7770c00c60d"
+  },
+  "source_run": "./results/uncertainty-shield-v7/final-campaign/test",
+  "steps": 5280000,
+  "test_seeds": [
+    11701,
+    11702,
+    11703,
+    11704,
+    11705,
+    11706,
+    11707,
+    11708,
+    11709,
+    11710
+  ],
+  "verified_artifacts": 400
+}

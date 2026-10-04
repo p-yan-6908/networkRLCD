@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {assignment,encodedSeed,MAX_BLOCK_SEED,settledHoldCap} from './balanced_hold_control.mjs';
+const caps=[300000,450000,900000];
+test('all arms every bounded epoch, real aliases identical, all nine transitions each block',()=>{for(const seed of [0,1,10801,123456,MAX_BLOCK_SEED]){for(let e=0;e<=512;e++){const a=[0,1,2].map(r=>assignment('random-hold-a',e,encodedSeed(seed,r)));assert.deepEqual([...a].sort((a,b)=>a-b),caps);assert.deepEqual(a,[0,1,2].map(r=>assignment('random-hold-b',e,encodedSeed(seed,r))));}for(let block=0;block<170;block++){const pairs=new Set;for(let r=0;r<3;r++)for(let e=block*3+1;e<block*3+4;e++)pairs.add([assignment('random-hold-a',e-1,encodedSeed(seed,r)),assignment('random-hold-a',e,encodedSeed(seed,r))].join(':'));assert.equal(pairs.size,9);}}});
+test('32-step seed-only caps are independent of sender state; fixed450 unchanged',()=>{for(let r=0;r<3;r++)for(let s=0;s<160;s++){const seed=encodedSeed(10801,r),a={features:Array(16).fill(0)},b={features:Array(16).fill(1000)};b.features[9]=1;assert.equal(settledHoldCap('random-hold-a',s,seed,a),settledHoldCap('random-hold-b',s,seed,b));assert.equal(settledHoldCap('fixed450',s,seed,b),450000);}});
+test('out-of-range/fractional replica or epoch inputs rejected',()=>{for(const [s,r] of [[-1,0],[MAX_BLOCK_SEED+1,0],[0,-1],[0,3],[0,0.5]])assert.throws(()=>encodedSeed(s,r));for(const [e,s] of [[-1,0],[513,0],[0.5,0],[0,-1],[0,0xffffffff]])assert.throws(()=>assignment('random-hold-a',e,s));});

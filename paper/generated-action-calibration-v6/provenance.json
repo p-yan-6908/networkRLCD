@@ -1,0 +1,59 @@
+{
+  "config_sha256": "d04b574c9328ba183a3375466ca041c47f226a3b6f22a9ba2588a88c374477a7",
+  "episodes": 8800,
+  "evidence_label": "Paper-scale descriptive follow-up",
+  "generated_sha256": {
+    "evidence.tex": "1956b57a337cc486f8bf9164da9beadc9a51ebcab43bf0a28ce9eb0dd31bb418",
+    "table_ablations.tex": "135a0ae1f4ece13755bd8b60a2f7a829b1c681a15df5e4c80330ffc71ef1c0ae",
+    "table_action_selection_calibration.tex": "20dc1c166f78352780830556aa8356fd1d55d5a2c8cc46a2d8e9c8467362be7b",
+    "table_action_shield.tex": "7269e70832bba23aa15d42da60a3cb779f5d119204f077d9139043b592e345eb",
+    "table_action_shield_contrasts.tex": "83644fcea880e93977cbc55b9b111097eb2266cb03ae90562d8ec6c745cfdd3d",
+    "table_action_shield_diagnostics.tex": "023ba0ae5914d95be13cdd5e1136c1d1a9d7358b61f9f34d388477ba3ba921f4",
+    "table_action_shield_families.tex": "5cdd1260aff9eefba70f9aa5bd2ebec2dd0ae8bde0659648e6149d655787478b",
+    "table_action_shield_scenarios.tex": "558b8bc92cf164876c739e41e23f3a9463aa369af20c2a2bdd771a9a0c823c47",
+    "table_calibration.tex": "c044f99aa44c8154823de607b4b1b2b6c7ecd04f70d688e4c2aeaaaf273e982d",
+    "table_comparison.tex": "a0a33fca60232f07fb6c996af4cc722cbdba996ad2d3f04c9c85125766454061",
+    "table_contrasts.tex": "1b939bcf303e7f85ef9bb5e700b9ac37e6567b8af602148332586ace116e02d9"
+  },
+  "integrity_checked": true,
+  "limitations": [
+    "Conditional training-seed bootstrap; fixed trace panel.",
+    "No claim of real-network validation or untouched confirmatory data."
+  ],
+  "macro_prefix": "ActionCal",
+  "manifest_sha256": "2f345b7463c3eeb5fe385897585e945922aca28a0791539ac372eebd8c7ed191",
+  "model_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99,
+    110
+  ],
+  "source_files": {
+    "calibration_diagnostics.csv": "4a3df107a7a016e3dd6ee39b121b0982295660e9e2b7e4909f365b37390f716f",
+    "episodes.csv": "5c286a2b5d0dacceb75e16c8207178c90a2087edd9f265585334d360f5340f1e",
+    "paired_differences.csv": "1d0990a59b0d012da071eeb8a8ce74688bf3bd0696410fc7f3f91fda9ee37553",
+    "steps.csv.gz": "427e6180c9b80cbbcac8a9426172f62262e53f82448e1e96902716016860fc50",
+    "summary.csv": "a6fdabeefdafa9958a0a67a0768a6cc6a2e0ba86d72677ddb5ca6251f60c70d5"
+  },
+  "source_run": "./results/action-calibration-v6/final-campaign/test",
+  "steps": 5280000,
+  "test_seeds": [
+    9701,
+    9702,
+    9703,
+    9704,
+    9705,
+    9706,
+    9707,
+    9708,
+    9709,
+    9710
+  ],
+  "verified_artifacts": 366
+}

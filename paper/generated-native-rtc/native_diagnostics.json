@@ -1,0 +1,171 @@
+{
+  "Auto": {
+    "root": "results/native-rtc-frame-probe",
+    "manifest_sha256": "59aa0331f4da66eac4c185bf6d21941ece06f817b05d285de520b0885cc4c409",
+    "artifacts_sha256": {
+      "summary.json": "9df17967a9885c812496c8f99d01738bb288d362408207efe43eeeb0f4b568c1",
+      "events.jsonl.gz": "04ca399939cadad27985cc7fd5ad6c0add00d1c9e62b7d3d22db2d2ec28d7af1",
+      "source_snapshot.mjs": "662ee764660c29a9933cf7a59742c3254c465a356dad05e39c0fe37f54bee7e8",
+      "frame_marker.mjs": "4aeee008fc9f8dd9e9cc14feaaf54ae82ef3a5fd8cf04eedd086114caf8ec144",
+      "frame_events.json": "9a89c70a5ae2e25d35c9b4f1f4ea57ffd1f8422fa214276d4a9a22b2122c2f81",
+      "frame_metrics.json": "7422d5bab3e9631cd616f45536c5fc136e104ce637661ef1d57018a277dfe76e",
+      "native_frame_metrics.py": "117127046ca1c1ac929181fd3a532db86ce561792cb72a41d18ab4b0aa9df350",
+      "frame_verifier.py": "0b7125c6ab701963fb4710d9adf300754f7df37b67f5de2ee1865cd89c22a547"
+    },
+    "browser": "Chrome/154.0.8037.58",
+    "native_actuation": null,
+    "metrics": {
+      "measurement_qualified": true,
+      "metric": "capture_request_to_video_pixel_readback",
+      "deadline_ms": 150.0,
+      "total_source_requests": 381,
+      "warmup_excluded": 15,
+      "terminal_censored": 5,
+      "callbacks_in_window": 192,
+      "known_marker_callbacks": 192,
+      "unknown_marker_callbacks": 0,
+      "known_marker_coverage": 1.0,
+      "read_errors": 0,
+      "duplicate_identified_readbacks": 0,
+      "overall": {
+        "eligible": 361,
+        "identifiable_ontime": 21,
+        "identified_late": 170,
+        "no_identifiable_readback": 170,
+        "identified_readback_delay_p50_ms": 423.0,
+        "identified_readback_delay_p95_ms": 1647.0,
+        "identifiable_ontime_rate": 0.05817174515235457,
+        "unidentified_or_late_rate": 0.9418282548476454,
+        "deadline_miss_rate_bounds_allowing_unknown_readbacks": [
+          0.9418282548476454,
+          0.9418282548476454
+        ]
+      },
+      "by_source_phase": {
+        "pre_connection": {
+          "eligible": 1,
+          "identifiable_ontime": 0,
+          "identified_late": 0,
+          "no_identifiable_readback": 1,
+          "identified_readback_delay_p50_ms": null,
+          "identified_readback_delay_p95_ms": null,
+          "identifiable_ontime_rate": 0.0
+        },
+        "high": {
+          "eligible": 122,
+          "identifiable_ontime": 21,
+          "identified_late": 89,
+          "no_identifiable_readback": 12,
+          "identified_readback_delay_p50_ms": 284.2999999821186,
+          "identified_readback_delay_p95_ms": 431.31999998390677,
+          "identifiable_ontime_rate": 0.1721311475409836
+        },
+        "collapse": {
+          "eligible": 121,
+          "identifiable_ontime": 0,
+          "identified_late": 30,
+          "no_identifiable_readback": 91,
+          "identified_readback_delay_p50_ms": 1449.7999999821186,
+          "identified_readback_delay_p95_ms": 1996.089999985695,
+          "identifiable_ontime_rate": 0.0
+        },
+        "recovery": {
+          "eligible": 117,
+          "identifiable_ontime": 0,
+          "identified_late": 51,
+          "no_identifiable_readback": 66,
+          "identified_readback_delay_p50_ms": 605.5999999642372,
+          "identified_readback_delay_p95_ms": 1023.1500000059605,
+          "identifiable_ontime_rate": 0.0
+        }
+      },
+      "physical_scanout_or_capture_instant_verified": false,
+      "network_loss_or_controller_SOTA_certified": false
+    }
+  },
+  "MinJitter": {
+    "root": "results/native-rtc-frame-min-jitter",
+    "manifest_sha256": "30659d22fb4325f53db2e4bcbfcf8200e30dad8f83f77500680a9390429ce99b",
+    "artifacts_sha256": {
+      "summary.json": "2cdd9aaedb1168899761f5d1cda9175f3c8ca05677377ae4fd621bdc9b20d55f",
+      "events.jsonl.gz": "5f1d5a06fa9f4eb78cb528feb56b22b89841231d2a25d19c0de2aa4d425aa7a7",
+      "source_snapshot.mjs": "03609b656c3eff05315a00972c4e40ec702182e1f5bd47fba09b4f15377d036f",
+      "frame_marker.mjs": "4aeee008fc9f8dd9e9cc14feaaf54ae82ef3a5fd8cf04eedd086114caf8ec144",
+      "frame_events.json": "0e4f3cd2d19348615f1704481bbea31ed8816f89b815362d05b21a9d70d24378",
+      "frame_metrics.json": "a685e807b8c1bf8684e1639f9334700fc8319d2d21862515e61c33900637857e",
+      "native_frame_metrics.py": "117127046ca1c1ac929181fd3a532db86ce561792cb72a41d18ab4b0aa9df350",
+      "frame_verifier.py": "f717494789b18df3e4be427d692ce95ecae4b101a97240caace58c97b1aae4e7",
+      "native_actuation.mjs": "5369c8ae4e9e9a8b3c6ce293429ad18db2bfd4e1f56037032cc1c7178fd4ad0e"
+    },
+    "browser": "Chrome/154.0.8037.58",
+    "native_actuation": {
+      "mode": "min-jitter",
+      "native_action_abi": "native_encoder_cap_playout_v1",
+      "action_count": 14,
+      "encoder_max_bitrate_bps": 4000000,
+      "native_jitter_target_supported": true,
+      "receiver_jitter_buffer_target_ms": 0,
+      "encoder_cap_is_not_wire_rate": true,
+      "FEC_or_encoder_latency_mode_actuated": false
+    },
+    "metrics": {
+      "measurement_qualified": true,
+      "metric": "capture_request_to_video_pixel_readback",
+      "deadline_ms": 150.0,
+      "total_source_requests": 382,
+      "warmup_excluded": 17,
+      "terminal_censored": 5,
+      "callbacks_in_window": 169,
+      "known_marker_callbacks": 169,
+      "unknown_marker_callbacks": 0,
+      "known_marker_coverage": 1.0,
+      "read_errors": 0,
+      "duplicate_identified_readbacks": 0,
+      "overall": {
+        "eligible": 360,
+        "identifiable_ontime": 116,
+        "identified_late": 51,
+        "no_identifiable_readback": 193,
+        "identified_readback_delay_p50_ms": 114.39999997615814,
+        "identified_readback_delay_p95_ms": 1138.299999964237,
+        "identifiable_ontime_rate": 0.32222222222222224,
+        "unidentified_or_late_rate": 0.6777777777777778,
+        "deadline_miss_rate_bounds_allowing_unknown_readbacks": [
+          0.6777777777777778,
+          0.6777777777777778
+        ]
+      },
+      "by_source_phase": {
+        "high": {
+          "eligible": 122,
+          "identifiable_ontime": 116,
+          "identified_late": 2,
+          "no_identifiable_readback": 4,
+          "identified_readback_delay_p50_ms": 109.2000000178814,
+          "identified_readback_delay_p95_ms": 131.725,
+          "identifiable_ontime_rate": 0.9508196721311475
+        },
+        "collapse": {
+          "eligible": 121,
+          "identifiable_ontime": 0,
+          "identified_late": 10,
+          "no_identifiable_readback": 111,
+          "identified_readback_delay_p50_ms": 1967.2000000178814,
+          "identified_readback_delay_p95_ms": 2944.0,
+          "identifiable_ontime_rate": 0.0
+        },
+        "recovery": {
+          "eligible": 117,
+          "identifiable_ontime": 0,
+          "identified_late": 39,
+          "no_identifiable_readback": 78,
+          "identified_readback_delay_p50_ms": 734.1000000238419,
+          "identified_readback_delay_p95_ms": 1125.6999999642373,
+          "identifiable_ontime_rate": 0.0
+        }
+      },
+      "physical_scanout_or_capture_instant_verified": false,
+      "network_loss_or_controller_SOTA_certified": false
+    }
+  }
+}

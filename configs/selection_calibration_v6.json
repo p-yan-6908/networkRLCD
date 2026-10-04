@@ -1,0 +1,14 @@
+{
+  "name": "rlcd-v6-selected-action-calibration",
+  "model_seeds": [11, 22, 33, 44, 55, 66, 77, 88, 99, 110],
+  "validation_seeds": [8701, 8702, 8703, 8704, 8705, 8706, 8707, 8708, 8709, 8710],
+  "test_seeds": [9701, 9702, 9703, 9704, 9705, 9706, 9707, 9708, 9709, 9710],
+  "top_k": 5,
+  "threshold": 0.9,
+  "max_id_qoe_drop": 0.03,
+  "max_id_violation_increase": 0.01,
+  "max_stress_violation_increase": 0.02,
+  "max_stress_scenario_violation_increase": 0.03,
+  "risk_penalty": 5.0,
+  "minimum_score_gain": 0.005
+}

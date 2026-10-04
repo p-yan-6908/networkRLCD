@@ -1,0 +1,20 @@
+{
+  "panel_abi": "native_exploration_panel_v1",
+  "purpose": "separate native training/calibration development data, not promotion test",
+  "observation_abi": "native_sender_stats_v1",
+  "history_steps": 4,
+  "receiver_target_ms": 0,
+  "behavior_block_ms": 1000,
+  "reward": {"on_time_sampled_psnr_divisor": 100, "miss_penalty": 0.2, "switch_penalty": 0.005, "gamma": 0.97, "n_step": 3},
+  "learner": {"model_seed": 1301, "hidden": 64, "updates": 2400, "batch_size": 64, "learning_rate": 0.0003, "cql_alpha": 0.05, "target_update_every": 80, "risk_updates": 1200},
+  "episodes": [
+    {"id":"train-a-101","role":"train","behavior_seed":101,"scene_seed":17,"schedule":[[2.2,"high",2500],[0.4,"collapse",3500],[2.2,"recovery",3500]]},
+    {"id":"train-a-211","role":"train","behavior_seed":211,"scene_seed":809,"schedule":[[2.2,"high",3500],[0.4,"collapse",2500],[2.2,"recovery",3500]]},
+    {"id":"train-b-317","role":"train","behavior_seed":317,"scene_seed":2111,"schedule":[[3,"high",2500],[0.8,"collapse",3500],[3,"recovery",3500]]},
+    {"id":"train-b-421","role":"train","behavior_seed":421,"scene_seed":3929,"schedule":[[3,"high",3500],[0.8,"collapse",3500],[3,"recovery",2500]]},
+    {"id":"train-c-523","role":"train","behavior_seed":523,"scene_seed":4049,"schedule":[[1.5,"high",2500],[0.3,"collapse",3500],[1.5,"recovery",3500]]},
+    {"id":"train-c-631","role":"train","behavior_seed":631,"scene_seed":7001,"schedule":[[1.5,"high",3500],[0.3,"collapse",2500],[1.5,"recovery",3500]]},
+    {"id":"calibration-d-743","role":"calibration","behavior_seed":743,"scene_seed":10007,"schedule":[[2.5,"high",2500],[0.6,"collapse",3500],[2.5,"recovery",3500]]},
+    {"id":"calibration-d-859","role":"calibration","behavior_seed":859,"scene_seed":15013,"schedule":[[2.5,"high",3500],[0.6,"collapse",2500],[2.5,"recovery",3500]]}
+  ]
+}

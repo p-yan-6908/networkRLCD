@@ -1,0 +1,64 @@
+{
+  "config_sha256": "b66a2bdbc1d7f854e048eebcea02dabbdbdaf4fa6b952e9f59b869a1a7dba16a",
+  "episodes": 8800,
+  "evidence_label": "Paper-scale descriptive follow-up",
+  "generated_sha256": {
+    "budget_results.json": "f6d75fad82189a6b7c331e445fc2bcaa3cba726a0539f30d4b4632e4ff724295",
+    "evidence.tex": "dc8606b23a215cfcf0e10624abe0c8a2a45aec5e650e0812f7a32b071a2a791f",
+    "table_ablations.tex": "1c7709b48595361b59b06bfcc1f3abc9d4454b17b2079b8c2ab3494c30a87cc0",
+    "table_budget_only_calibration.tex": "05604ba567e479b6b018d99b1c7618f73bf8e90858c60380424349c753ada5a0",
+    "table_budget_shield_calibration.tex": "e93583498708d9266a61c63a77b6abfe5b63bf3772da44be971d852aa0f7e342",
+    "table_budget_shield_contrasts.tex": "85576a644e27de4594eb6fc2f66b704367ffd2dd288547e42870773d294fbf7c",
+    "table_budget_shield_diagnostics.tex": "aca8d24c734dc0ab3197a5d710045a109de11a9099f1e47d530dc80dfeea3b19",
+    "table_budget_shield_families.tex": "e16e3f86e87650ca8f16a9fd033a86ab4e337781a6cb2bd2fbd41c8212f5d09a",
+    "table_budget_shield_scenarios.tex": "db496b6eb1b1d9fd9e25c870ab5979ae451b2ecdb8e0b3b5eea9f14b67754ce9",
+    "table_budget_shield_selection.tex": "1b65b70150f8ed9a605b69a4eec3d6f92770776343c4cfb77e379f17acae62d9",
+    "table_calibration.tex": "3842035f3dfab0c7794bef335a7810d57e71005e61822866efb5a542db8fe300",
+    "table_comparison.tex": "6ff0103de4ed53458b66d030194f5a391a62205cf13e7698b9f6f59b170cda51",
+    "table_contrasts.tex": "cf154ad2f13baaf4ae002813f5d7cfbd63e6c7611e716842c8530f10d0a6bf67"
+  },
+  "integrity_checked": true,
+  "limitations": [
+    "Conditional training-seed bootstrap; fixed trace panel.",
+    "No claim of real-network validation or untouched confirmatory data."
+  ],
+  "macro_prefix": "Budget",
+  "manifest_sha256": "724c89939c233dd1b92bac3a86d199637c6fc81edfed102516605710065155ea",
+  "model_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88,
+    99,
+    110
+  ],
+  "source_files": {
+    "budget_only_diagnostics.csv": "dcbb5cd554053aa922e1fcb53f4c81689a91e70122662fd7e3304a00e4dda00c",
+    "calibration_diagnostics.csv": "82b137b7313741839826beeea7e36bb3b718cd893a08fa234738d95fdb6c567c",
+    "episodes.csv": "5284672426e61d21af2d5de14fb493a7c7e7d85d7c12b54307f3790668e54767",
+    "paired_differences.csv": "38154e1cd187faf9a1fdd2bc642922f96c8763f0bdd690da857c97a877255506",
+    "selection.json": "8f29c23773fb0fdb0c167ec4070bd2ee8a224b59c4096cd214745a7bdf7292c7",
+    "shield_diagnostics.csv": "5e0b8a1538147e4a3dda7fbcff3100dbab1f7808100f70344e4222d20c43cb41",
+    "steps.csv.gz": "6a1eec3040b1e3b7ff1503cd5f65ecac002245c0977410976e65d5ef473e9dda",
+    "summary.csv": "2c61994380e0ab915dadec313c09a681a8766e482193db192f3aa1f4c985b903"
+  },
+  "source_run": "./results/budget-shield-v8/test",
+  "steps": 5280000,
+  "test_seeds": [
+    13701,
+    13702,
+    13703,
+    13704,
+    13705,
+    13706,
+    13707,
+    13708,
+    13709,
+    13710
+  ],
+  "verified_artifacts": 386
+}

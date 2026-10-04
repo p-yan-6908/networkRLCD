@@ -1,0 +1,3 @@
+// Fixed common measurement recipe, not a learned action or safety guarantee.
+export const ENCODER_RECIPE=Object.freeze({degradation_preference:'maintain-framerate',readback_verified:true});
+export async function configureFixedEncoder(sender){const p=sender.getParameters();if(!p.encodings?.length)throw Error('negotiated encoder required');p.degradationPreference=ENCODER_RECIPE.degradation_preference;await sender.setParameters(p);if(sender.getParameters().degradationPreference!==ENCODER_RECIPE.degradation_preference)throw Error('native degradation preference did not reflect request');return {...ENCODER_RECIPE};}
