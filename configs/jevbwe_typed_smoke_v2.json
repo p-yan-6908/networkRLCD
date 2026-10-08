@@ -1,0 +1,17 @@
+{
+  "name": "jevbwe-typed-smoke-v2",
+  "steps": 150,
+  "tune_episodes": 8,
+  "train_episodes": 24,
+  "rounds": 2,
+  "calibration_episodes": 12,
+  "hidden": 16,
+  "epochs": 8,
+  "batch_size": 64,
+  "model_seeds": [0, 1],
+  "validation_seeds": [29101, 29102],
+  "test_seeds": [29201, 29202],
+  "scenarios": ["steady", "wifi", "collapse"],
+  "bootstrap_samples": 200,
+  "workers": 4
+}

@@ -1,4 +1,4 @@
-.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status
+.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-evidence paper-pdf
 setup:
 	uv sync --frozen --extra dev
 
@@ -62,6 +62,48 @@ paper-evidence:
 	uv run --frozen .tools/export_native_model_v3_paper.py
 	uv run --frozen .tools/export_native_temporal_v4_paper.py
 	uv run --frozen .tools/export_native_context_v5_paper.py
+
+# Root of the typed-control run directories. The tracked result summaries occupy results/, and a
+# run refuses to write into an existing directory, so regenerate with TYPED=results/regen.
+TYPED ?= results
+
+jevbwe-typed-smoke:
+	uv run --frozen jevbwe-typed run --config configs/jevbwe_typed_smoke_v2.json --out $(TYPED)/jevbwe-typed-smoke-new
+
+# Main study, estimator diagnosis, summaries ablation and the legacy-estimator replication.
+# About two hours on 8 cores; output directories must not exist.
+jevbwe-typed:
+	uv run --frozen jevbwe-typed diagnose --config configs/jevbwe_typed_v2.json --out $(TYPED)/jevbwe-typed-v2-diagnosis
+	uv run --frozen jevbwe-typed run --config configs/jevbwe_typed_v2.json --out $(TYPED)/jevbwe-typed-v2
+	uv run --frozen jevbwe-typed run --config configs/jevbwe_typed_v2_no_summaries.json --out $(TYPED)/jevbwe-typed-v2-ablation-no-summaries --splits validation
+	uv run --frozen jevbwe-typed run --config configs/jevbwe_typed_v2_legacy.json --out $(TYPED)/jevbwe-typed-v2-legacy
+
+# Replay and audit of the frozen V2 test panel (about 15 minutes). Adds files beside the frozen
+# ones and never rewrites them: decision records, identity checks and the family-level audit.
+jevbwe-typed-audit:
+	uv run --frozen jevbwe-typed rescore --run $(TYPED)/jevbwe-typed-v2 --split test
+	uv run --frozen jevbwe-typed audit --run $(TYPED)/jevbwe-typed-v2 --split test --robustness $(TYPED)/jevbwe-typed-v2-legacy
+
+# Broadened training (V3). Train and read the development panel first; see docs/JEVBWE_TYPED_V3_BROAD.md.
+jevbwe-typed-broad:
+	uv run --frozen jevbwe-typed run --config configs/jevbwe_typed_v3_broad.json --out $(TYPED)/jevbwe-typed-v3-broad --splits validation,development
+	uv run --frozen jevbwe-typed rescore --run $(TYPED)/jevbwe-typed-v3-broad --split development
+	uv run --frozen jevbwe-typed audit --run $(TYPED)/jevbwe-typed-v3-broad --split development --reference $(TYPED)/jevbwe-typed-v2
+
+# The untouched test families of V3: evaluated once; the evaluate command refuses to recompute.
+jevbwe-typed-broad-test:
+	uv run --frozen jevbwe-typed evaluate --run $(TYPED)/jevbwe-typed-v3-broad --splits test
+	uv run --frozen jevbwe-typed rescore --run $(TYPED)/jevbwe-typed-v3-broad --split test
+	uv run --frozen jevbwe-typed audit --run $(TYPED)/jevbwe-typed-v3-broad --split test
+
+jevbwe-typed-evidence:
+	uv run --frozen jevbwe-typed export --run $(TYPED)/jevbwe-typed-v2 --diagnosis $(TYPED)/jevbwe-typed-v2-diagnosis --ablation $(TYPED)/jevbwe-typed-v2-ablation-no-summaries --robustness $(TYPED)/jevbwe-typed-v2-legacy --broadened $(TYPED)/jevbwe-typed-v3-broad --out paper/generated-jevbwe-typed-v2
+
+# Compile from the exported evidence already under paper/generated-*; does not re-export the
+# nine archived studies, whose pruned results must be restored first (see ARCHIVED_RESULTS.md).
+paper-pdf:
+	@mkdir -p paper/build
+	cd paper && ../.tools/tectonic --untrusted --keep-logs --keep-intermediates --outdir build main.tex
 
 paper-status:
 	uv run media-rl status --run results/paper-v1-evaluation

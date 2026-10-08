@@ -21,16 +21,42 @@ uv run media-rl run --config configs/paper.json --out results/my-paper
 
 Output directories must be empty/nonexistent; existing evidence is never silently overwritten. CPU training is sufficient for these small networks. The user permits Modal CLI GPU training if needed; see [`GOAL.md`](GOAL.md). No GPU jobs are required or launched by this package.
 
-## JevBWE: bitrate-only learned residual (opt-in)
+## Synthetic Typed-Control (JevBWE typed decisions)
 
-The [new residual research path](docs/JEVBWE_RESIDUAL_V1.md) ranks **six BWE-relative bitrate ratios**, not the legacy 42 joint actions. It uses three seconds of ordered causal history, separate requested/actual/encoder-target telemetry, a **1.8-second increase dwell with immediate decreases**, and encoder-settled/network-delayed delivered-QoE credit. Matched state-only checks of utility **and delivered-only QoE** must pass before screened learned control is enabled. The first workflow is **synthetic only**; old native data/weights are not relabeled, and no native superiority or safety is claimed. The completed pilot passes predictive action skill, but a separate fallback-only diagnosis shows **no demonstrated neural control gain**, so it is not promoted.
+A small Jev-like head answers one typed question per second (which of six BWE-relative bitrate ratios is best over the next few seconds) and reports a probability for every option. It is trained on strictly proper scoring rules, using the RLCD recipe of REINFORCE over noisy reported logits, with labels from counterfactual rollouts in a forked simulator. The controller multiplies the probabilities by a fixed payoff table. **Synthetic only; nothing is promoted.** This is a separate track from the native actuator study: it does not touch the native controller freeze and does not answer the native identifiability problem, because a real network cannot supply rollout labels.
+
+- **[V2](docs/JEVBWE_TYPED_V2.md), trained on four families.** In distribution the head beats the fixed ratio selected on training families by **+0.213 utility**, positive in 4 of 4 families (family-level interval [+0.066, +0.361]). On seven held-out families the mean gain is +0.047 but its family-level interval [-0.027, +0.122] includes zero, and calibration degrades (ECE 0.152; pooled ID ECE 0.012 hides up to 0.181 per family).
+- **[V3](docs/JEVBWE_TYPED_V3_BROAD.md), trained on thirteen broader families, tested once on twelve untouched families** against criteria written down beforehand. Gain +0.054, positive in 7 of 12 families, family-level t interval [-0.005, +0.112]: not established. Pooled ECE 0.070: above the 0.05 threshold. Unsafe intervals down 0.72 points: met.
+- **The RLCD recipe is not what helps.** An exact-gradient control and an untyped regression match the head on every panel. What they share is rollout supervision.
+- **No hindsight at run time.** Replaying every learned test episode with rollouts switched off reproduces the frozen outcomes exactly.
+
+The V2 study also explains the earlier null results. The legacy GCC-like estimator grows without bound when the sender is below capacity, so the old `0.85 x BWE` fallback was an untuned baseline. Over that estimator a fixed 0.60 ratio is a constant cap that scores higher utility than the typed head over the bounded estimator (0.636 against 0.527) with more unsafe intervals (7.20% against 4.55%); neither dominates.
+
+```sh
+uv run --frozen jevbwe-typed run --config configs/jevbwe_typed_smoke_v2.json --out results/my-typed-smoke
+make jevbwe-typed            # V2: diagnosis, main study, ablation and replication; about two hours on 8 cores
+make jevbwe-typed-audit      # V2: replay checks and the family-level audit of the frozen panel
+make jevbwe-typed-broad      # V3: train, validation and development panels; about 90 minutes
+make jevbwe-typed-broad-test # V3: the untouched test panel, once
+make jevbwe-typed-evidence   # paper macros, tables and figures
+```
+
+`results/` is ignored except for the small summaries the paper reads (config, report, audit and isolation JSON). On a clone those already occupy `results/jevbwe-typed-*`, so pass `TYPED=results/regen` to regenerate into fresh directories; see [what is tracked](docs/JEVBWE_TYPED_V2.md#what-is-tracked-and-regenerating-the-rest).
+
+## JevBWE V1: supervised bitrate residual (superseded)
+
+Superseded by the typed-decision study above, which shows its `0.85 x BWE` fallback was an untuned baseline. Code and artifacts are unchanged.
+
+The [residual research path](docs/JEVBWE_RESIDUAL_V1.md) ranks **six BWE-relative bitrate ratios**, not the legacy 42 joint actions. It uses three seconds of ordered causal history, separate requested/actual/encoder-target telemetry, a **1.8-second increase dwell with immediate decreases**, and encoder-settled/network-delayed delivered-QoE credit. Matched state-only checks of utility **and delivered-only QoE** must pass before screened learned control is enabled. The first workflow is **synthetic only**; old native data/weights are not relabeled, and no native superiority or safety is claimed. The completed pilot passes predictive action skill, but a separate fallback-only diagnosis shows **no demonstrated neural control gain**, so it is not promoted.
 
 ```sh
 uv run media-rl jevbwe-run --config configs/jevbwe_smoke_v1.json --out results/my-jevbwe-smoke
 uv run media-rl jevbwe-audit --run results/my-jevbwe-smoke
 ```
 
-## JevBWE-RLCD: separate probabilistic experiment
+## JevBWE-RLCD V1: factual-bandit pilot (superseded)
+
+Superseded by the typed-decision study above. This pilot scored an event that barely depends on the action, on 432 factual cohorts; its failure says little about whether the approach can work. Code and artifacts are unchanged.
 
 The [experimental numeric RLCD path](docs/JEVBWE_RLCD_V1.md) preserves the supervised JevBWE baseline and frozen risk model. A **1,846-parameter six-action policy** uses Gaussian REINFORCE and factual-only, inverse-propensity-weighted proper log/spherical rewards. New IID exploration logs known conditional propensities; unobserved actions are never fabricated as failures or winners. The optional local **Laya** typed-decision benchmark is separate and is **not** the default controller.
 

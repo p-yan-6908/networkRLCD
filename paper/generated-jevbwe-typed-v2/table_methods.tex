@@ -1,0 +1,22 @@
+\begin{tabular}{lrrrrr}
+\toprule
+ & \multicolumn{2}{c}{ID families} & \multicolumn{2}{c}{Held-out families} & All \\
+Method & Utility & Unsafe \% & Utility & Unsafe \% & Utility \\
+\midrule
+Fixed 0.60$\times$BWE & 0.352 & 0.00 & $-$0.233 & 6.39 & $-$0.021 \\
+Fixed 0.70$\times$BWE & 0.417 & 0.00 & $-$0.199 & 6.39 & 0.025 \\
+Fixed 0.80$\times$BWE & 0.759 & 0.00 & $-$0.062 & 6.40 & 0.237 \\
+Fixed 0.85$\times$BWE & 1.056 & 0.04 & $-$0.005 & 6.42 & 0.381 \\
+Fixed 0.90$\times$BWE & 1.036 & 0.31 & 0.066 & 6.59 & 0.419 \\
+Fixed 1.00$\times$BWE & 1.018 & 0.86 & 0.147 & 7.17 & 0.464 \\
+Fixed 1.05$\times$BWE & 1.016 & 1.59 & 0.148 & 7.63 & 0.464 \\
+\midrule
+Typed choice, RLCD, payoff-weighted & 1.249 & 0.13 & 0.114 & 7.07 & 0.527 \\
+Typed choice, RLCD, confidence-gated & 1.092 & 0.56 & 0.144 & 7.20 & 0.489 \\
+Typed choice, RLCD, most probable (no guard) & 1.131 & 0.93 & 0.116 & 7.61 & 0.485 \\
+Typed choice, exact gradient, payoff-weighted & 1.257 & 0.13 & 0.115 & 7.05 & 0.530 \\
+Advantage regression (untyped) & 1.230 & 0.27 & 0.115 & 7.15 & 0.521 \\
+\midrule
+Hindsight oracle (non-causal bound) & 1.387 & 0.46 & 0.262 & 6.53 & 0.671 \\
+\bottomrule
+\end{tabular}

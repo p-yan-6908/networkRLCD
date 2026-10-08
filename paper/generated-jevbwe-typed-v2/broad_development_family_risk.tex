@@ -1,0 +1,18 @@
+\begin{tabular}{llrrrrrrrr}
+\toprule
+ & & \multicolumn{4}{c}{Unsafe control intervals (\%)} & \multicolumn{4}{c}{Typed head (RLCD)} \\
+Family & Split & Floor & Train-sel. & Typed & Regression & Decisions & Acc. \% & Conf. \% & ECE \\
+\midrule
+steady & Legacy training & 0.00 & 1.37 & 0.00 & 0.00 & 3{,}840 & 91.5 & 75.2 & 0.171 \\
+step & Legacy training & 0.00 & 1.64 & 0.16 & 0.06 & 3{,}840 & 62.0 & 81.9 & 0.205 \\
+ramp & Legacy training & 0.00 & 1.42 & 0.06 & 0.43 & 3{,}840 & 77.3 & 80.8 & 0.120 \\
+wifi & Legacy training & 0.00 & 1.93 & 0.42 & 0.77 & 3{,}840 & 72.3 & 81.0 & 0.120 \\
+collapse & Development & 0.00 & 6.18 & 3.05 & 3.90 & 3{,}840 & 62.9 & 94.4 & 0.317 \\
+burst loss & Development & 15.22 & 15.22 & 15.22 & 15.22 & 3{,}840 & 100.0 & 98.7 & 0.013 \\
+bufferbloat & Development & 0.00 & 2.12 & 0.77 & 1.74 & 3{,}840 & 64.4 & 91.4 & 0.270 \\
+handover & Development & 4.86 & 14.58 & 14.40 & 14.41 & 3{,}840 & 96.6 & 94.0 & 0.033 \\
+outage & Development & 15.00 & 15.28 & 15.28 & 15.28 & 3{,}840 & 100.0 & 92.6 & 0.074 \\
+feedback gap & Development & 0.00 & 0.00 & 0.00 & 0.00 & 3{,}840 & 100.0 & 94.1 & 0.059 \\
+capacity surge & Development & 0.00 & 0.00 & 0.00 & 0.00 & 3{,}840 & 100.0 & 84.9 & 0.151 \\
+\bottomrule
+\end{tabular}

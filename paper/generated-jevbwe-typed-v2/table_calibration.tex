@@ -1,0 +1,14 @@
+\begin{tabular}{llrrrrr}
+\toprule
+Head and rule & Panel & Decisions & Accuracy \% & Confidence \% & ECE & NLL \\
+\midrule
+RLCD, payoff-weighted & ID & 15{,}360 & 75.0 & 74.7 & 0.012 & 0.716 \\
+RLCD, payoff-weighted & Held-out & 26{,}880 & 76.6 & 90.1 & 0.152 & 2.476 \\
+RLCD, confidence-gated & ID & 15{,}360 & 78.7 & 79.9 & 0.025 & 0.599 \\
+RLCD, confidence-gated & Held-out & 26{,}880 & 72.6 & 89.7 & 0.177 & 2.720 \\
+RLCD, most probable (no guard) & ID & 15{,}360 & 78.9 & 79.1 & 0.023 & 0.591 \\
+RLCD, most probable (no guard) & Held-out & 26{,}880 & 71.3 & 89.3 & 0.180 & 2.728 \\
+Exact gradient, payoff-weighted & ID & 15{,}360 & 74.5 & 74.5 & 0.013 & 0.725 \\
+Exact gradient, payoff-weighted & Held-out & 26{,}880 & 76.5 & 90.1 & 0.150 & 2.823 \\
+\bottomrule
+\end{tabular}

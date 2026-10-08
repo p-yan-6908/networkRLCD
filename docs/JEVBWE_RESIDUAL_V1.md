@@ -1,5 +1,11 @@
 # JevBWE residual V1 — separate opt-in synthetic candidate
 
+> **Superseded by [JevBWE typed decisions V2](JEVBWE_TYPED_V2.md).** The comparisons
+> below use a fixed `0.85 x BWE` fallback over an estimator that grows without bound
+> when the sender is below capacity. On ID tune traces a fixed 0.60 ratio scores 1.198
+> under that estimator against 0.771 for 0.85, so "no gain over the fallback" was a
+> comparison against an untuned baseline. Code and artifacts are kept unchanged.
+
 ## Design contract
 
 This implements the feedback's **bitrate-first residual**, without replacing GCC/BWE,

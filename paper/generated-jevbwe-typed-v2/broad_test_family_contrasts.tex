@@ -1,0 +1,13 @@
+\begin{tabular}{lrlcrl}
+\toprule
+ & \multicolumn{3}{c}{Test: minus train-selected} & \multicolumn{2}{c}{Test: minus hindsight-best} \\
+Method & $\Delta$ & family 95\% $t$ & $>0$ & $\Delta$ & family 95\% $t$ \\
+\midrule
+RLCD, payoff-weighted & $+$0.054 & [$-$0.005, $+$0.112] & 7/12 & $+$0.054 & [$-$0.005, $+$0.112] \\
+RLCD, confidence-gated & $+$0.027 & [$-$0.008, $+$0.061] & 6/12 & $+$0.027 & [$-$0.008, $+$0.061] \\
+RLCD, most probable (no guard) & $+$0.027 & [$-$0.008, $+$0.061] & 6/12 & $+$0.027 & [$-$0.008, $+$0.061] \\
+Exact gradient, payoff-weighted & $+$0.057 & [$-$0.006, $+$0.120] & 7/12 & $+$0.057 & [$-$0.006, $+$0.120] \\
+Advantage regression (untyped) & $+$0.050 & [$+$0.005, $+$0.095] & 8/12 & $+$0.050 & [$+$0.005, $+$0.095] \\
+Hindsight oracle (non-causal bound) & $+$0.148 & [$+$0.070, $+$0.227] & 10/12 & $+$0.148 & [$+$0.070, $+$0.227] \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,15 @@
+\begin{tabular}{llrrrr}
+\toprule
+Estimator & Method & ID utility & Held-out utility & All & Unsafe \% (all) \\
+\midrule
+Unbounded (legacy) & Best fixed ratio (0.60) & 1.189 & 0.319 & 0.636 & 7.20 \\
+ & Typed choice, RLCD, payoff-weighted & 1.236 & 0.336 & 0.663 & 7.33 \\
+ & Advantage regression (untyped) & 1.251 & 0.330 & 0.665 & 7.21 \\
+ & Hindsight oracle (non-causal bound) & 1.375 & 0.530 & 0.838 & 5.80 \\
+\midrule
+Acked-rate-bounded & Best fixed ratio (1.05) & 1.016 & 0.148 & 0.464 & 5.43 \\
+ & Typed choice, RLCD, payoff-weighted & 1.249 & 0.114 & 0.527 & 4.55 \\
+ & Advantage regression (untyped) & 1.230 & 0.115 & 0.521 & 4.65 \\
+ & Hindsight oracle (non-causal bound) & 1.387 & 0.262 & 0.671 & 4.33 \\
+\bottomrule
+\end{tabular}

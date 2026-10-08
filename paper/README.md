@@ -60,6 +60,22 @@ The new appendix measures generated-video application request-to-pixel-readback 
 
 `make paper-evidence` still audits/exports all **nine formal synthetic studies**, and now also invokes `.tools/export_native_frame_paper.py` for the **separate ancillary** appendix. It checks sealed eight/nine-artifact native manifests, current-versus-frozen metric source identity and full recomputation before writing `paper/generated-native-rtc/{evidence.tex,native_diagnostics.json,provenance.json}`. No browser experiment or training is launched by a paper build, and no old study or promotion decision is changed. Protocol/details: `docs/NATIVE_RTC_BENCHMARK.md`.
 
+## Study 10: typed bitrate decisions (separate testbed)
+
+Section "Study 10" of `main.tex` reports the synthetic typed-control track: [V2](../docs/JEVBWE_TYPED_V2.md), its family-level audit, and the broadened run [V3](../docs/JEVBWE_TYPED_V3_BROAD.md) with its untouched test families. It is bitrate-only, uses a corrected (acked-rate-bounded) estimator, and is **not** one of the nine hash-audited studies. Its numbers come from `report.json` and the `audit_*.json` files under `results/jevbwe-typed-v2` and `results/jevbwe-typed-v3-broad` through `jevbwe-typed export`, which writes `paper/generated-jevbwe-typed-v2/` (macros, tables, figures, source hashes).
+
+Claim boundary: counterfactual rollout supervision lets a small probabilistic bitrate policy beat fixed-ratio control in distribution; on unseen families the mean gain over the train-selected fixed ratio is positive but not established at family level, before and after broadened training; calibration degrades on unseen families; no advantage for RLCD-style training over exact-gradient or regression controls; no native, real-network or safety claim. The hindsight-best fixed ratio is an oracle and is never the comparator for a claim. "RLCD" in that section means reinforcement learning for calibrated decisions, the typed-decision training recipe, and is unrelated to the project name used elsewhere in the paper.
+
+```sh
+make jevbwe-typed            # diagnosis, main study, ablation and replication (about two hours on 8 cores)
+make jevbwe-typed-evidence   # regenerate paper/generated-jevbwe-typed-v2/
+make paper-pdf               # compile from the evidence already exported under paper/generated-*
+```
+
+`make paper` re-exports the nine archived studies first and needs their pruned results restored (see `ARCHIVED_RESULTS.md`). `make paper-pdf` only compiles.
+
+Build state after the Study 10 audit and broadened run (2026-10-07): 53 pages, 24 bibliography entries, no undefined references and no overfull boxes under the bundled Tectonic. The Study 10 pages were proofread from extracted text; they have not been reviewed visually, and several of its tables are scaled to the line width. The page and bibliography counts in the "Verified PDF" note below predate this section.
+
 ## Rebuild audited tables and PDF
 
 ```sh

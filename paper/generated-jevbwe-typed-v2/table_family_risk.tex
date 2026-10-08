@@ -1,0 +1,18 @@
+\begin{tabular}{llrrrrrrrr}
+\toprule
+ & & \multicolumn{4}{c}{Unsafe control intervals (\%)} & \multicolumn{4}{c}{Typed head (RLCD)} \\
+Family & Split & Floor & Train-sel. & Typed & Regression & Decisions & Acc. \% & Conf. \% & ECE \\
+\midrule
+steady & ID & 0.00 & 0.13 & 0.00 & 0.00 & 3{,}840 & 89.7 & 71.6 & 0.181 \\
+step & ID & 0.00 & 0.13 & 0.05 & 0.09 & 3{,}840 & 58.0 & 74.7 & 0.169 \\
+ramp & ID & 0.00 & 0.13 & 0.08 & 0.40 & 3{,}840 & 78.0 & 77.6 & 0.033 \\
+wifi & ID & 0.00 & 0.87 & 0.40 & 0.59 & 3{,}840 & 74.2 & 74.7 & 0.026 \\
+collapse & Held-out & 0.00 & 1.13 & 3.72 & 4.20 & 3{,}840 & 68.5 & 95.5 & 0.271 \\
+burst loss & Held-out & 15.22 & 15.22 & 15.22 & 15.22 & 3{,}840 & 60.3 & 96.2 & 0.359 \\
+bufferbloat & Held-out & 0.00 & 0.13 & 0.93 & 0.91 & 3{,}840 & 68.6 & 91.4 & 0.227 \\
+handover & Held-out & 4.86 & 14.34 & 14.36 & 14.42 & 3{,}840 & 90.8 & 91.5 & 0.035 \\
+outage & Held-out & 15.00 & 15.28 & 15.28 & 15.28 & 3{,}840 & 84.1 & 92.3 & 0.111 \\
+feedback gap & Held-out & 0.00 & 0.00 & 0.00 & 0.00 & 3{,}840 & 72.0 & 94.0 & 0.220 \\
+capacity surge & Held-out & 0.00 & 0.00 & 0.00 & 0.00 & 3{,}840 & 91.7 & 69.8 & 0.219 \\
+\bottomrule
+\end{tabular}

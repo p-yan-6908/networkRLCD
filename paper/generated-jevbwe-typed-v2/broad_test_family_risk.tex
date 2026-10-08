@@ -1,0 +1,19 @@
+\begin{tabular}{llrrrrrrrr}
+\toprule
+ & & \multicolumn{4}{c}{Unsafe control intervals (\%)} & \multicolumn{4}{c}{Typed head (RLCD)} \\
+Family & Split & Floor & Train-sel. & Typed & Regression & Decisions & Acc. \% & Conf. \% & ECE \\
+\midrule
+sawtooth & Test & 0.00 & 3.08 & 0.81 & 1.45 & 3{,}840 & 74.5 & 82.1 & 0.093 \\
+square wave & Test & 0.00 & 1.88 & 0.59 & 0.91 & 3{,}840 & 60.9 & 84.9 & 0.240 \\
+staircase & Test & 0.00 & 1.03 & 1.32 & 1.08 & 3{,}840 & 78.4 & 85.5 & 0.100 \\
+slow fade & Test & 0.00 & 0.49 & 0.19 & 0.32 & 3{,}840 & 81.8 & 91.6 & 0.120 \\
+low rate & Test & 0.00 & 0.91 & 0.72 & 0.82 & 3{,}840 & 53.0 & 95.7 & 0.427 \\
+long path & Test & 0.00 & 2.22 & 0.01 & 0.09 & 3{,}840 & 86.1 & 78.3 & 0.078 \\
+jitter storm & Test & 0.06 & 0.19 & 0.06 & 0.06 & 3{,}840 & 99.9 & 94.5 & 0.054 \\
+micro outage & Test & 11.19 & 11.20 & 11.19 & 11.19 & 3{,}840 & 89.7 & 97.7 & 0.088 \\
+feedback flap & Test & 0.00 & 0.00 & 0.00 & 0.00 & 3{,}840 & 100.0 & 97.1 & 0.029 \\
+shallow buffer & Test & 0.00 & 1.47 & 0.10 & 0.29 & 3{,}840 & 79.3 & 77.2 & 0.055 \\
+lossy link & Test & 0.00 & 0.00 & 0.00 & 0.00 & 3{,}840 & 100.0 & 99.0 & 0.010 \\
+compound & Test & 0.00 & 1.34 & 0.20 & 0.62 & 3{,}840 & 91.4 & 94.8 & 0.040 \\
+\bottomrule
+\end{tabular}

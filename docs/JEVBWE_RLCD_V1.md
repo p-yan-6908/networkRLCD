@@ -1,5 +1,16 @@
 # JevBWE-RLCD numeric V1; optional Laya benchmark
 
+> **Superseded by [JevBWE typed decisions V2](JEVBWE_TYPED_V2.md).** The comparisons
+> below use a fixed `0.85 x BWE` fallback over an estimator that grows without bound
+> when the sender is below capacity. On ID tune traces a fixed 0.60 ratio scores 1.198
+> under that estimator against 0.771 for 0.85, so "no gain over the fallback" was a
+> comparison against an untuned baseline. Code and artifacts are kept unchanged.
+
+> This pilot also scored a fixed event (`utility >= 1.0`) that barely depends on the
+> action, on 432 factual cohorts (about 72 per option). Its failed qualification does
+> not show that proper-score training cannot work here; V2 trains the same kind of
+> head on 128,000 rollout-labelled decisions.
+
 **Experimental, synthetic-only, unpromoted.** The supervised JevBWE controller and
 checkpoint are the frozen baseline, not renamed RLCD. Legacy 42-action Double
 DQN/native models, defaults and `media-rl` commands are unchanged. `jevbwe-rlcd`

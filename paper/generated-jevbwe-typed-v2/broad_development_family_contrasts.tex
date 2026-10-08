@@ -1,0 +1,13 @@
+\begin{tabular}{lrlcrlcrl}
+\toprule
+ & \multicolumn{3}{c}{Legacy training: minus train-selected} & \multicolumn{3}{c}{Development: minus train-selected} & \multicolumn{2}{c}{Development: minus hindsight-best} \\
+Method & $\Delta$ & family 95\% $t$ & $>0$ & $\Delta$ & family 95\% $t$ & $>0$ & $\Delta$ & family 95\% $t$ \\
+\midrule
+RLCD, payoff-weighted & $+$0.202 & [$+$0.125, $+$0.280] & 4/4 & $+$0.008 & [$-$0.088, $+$0.104] & 3/7 & $+$0.008 & [$-$0.088, $+$0.104] \\
+RLCD, confidence-gated & $+$0.109 & [$-$0.097, $+$0.315] & 3/4 & $+$0.008 & [$-$0.014, $+$0.030] & 2/7 & $+$0.008 & [$-$0.014, $+$0.030] \\
+RLCD, most probable (no guard) & $+$0.109 & [$-$0.097, $+$0.315] & 3/4 & $+$0.008 & [$-$0.014, $+$0.030] & 2/7 & $+$0.008 & [$-$0.014, $+$0.030] \\
+Exact gradient, payoff-weighted & $+$0.190 & [$+$0.094, $+$0.286] & 4/4 & $+$0.009 & [$-$0.084, $+$0.103] & 3/7 & $+$0.009 & [$-$0.084, $+$0.103] \\
+Advantage regression (untyped) & $+$0.186 & [$+$0.005, $+$0.367] & 4/4 & $-$0.003 & [$-$0.080, $+$0.074] & 3/7 & $-$0.003 & [$-$0.080, $+$0.074] \\
+Hindsight oracle (non-causal bound) & $+$0.334 & [$+$0.257, $+$0.412] & 4/4 & $+$0.115 & [$-$0.037, $+$0.267] & 3/7 & $+$0.115 & [$-$0.037, $+$0.267] \\
+\bottomrule
+\end{tabular}

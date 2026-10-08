@@ -1,0 +1,1788 @@
+{
+ "abi": "jevbwe_typed_v2",
+ "base_tuning": {
+  "selected": 0.9,
+  "source": "id_tune_split",
+  "sweep": [
+   {
+    "ratio": 0.6,
+    "unsafe": 0.0,
+    "utility": 0.344757827325588
+   },
+   {
+    "ratio": 0.7,
+    "unsafe": 0.0,
+    "utility": 0.4081983507315806
+   },
+   {
+    "ratio": 0.8,
+    "unsafe": 0.0,
+    "utility": 0.7490358518466772
+   },
+   {
+    "ratio": 0.9,
+    "unsafe": 0.0019965277777777776,
+    "utility": 1.079533285904072
+   },
+   {
+    "ratio": 1,
+    "unsafe": 0.01189236111111111,
+    "utility": 0.9874192173886449
+   },
+   {
+    "ratio": 1.05,
+    "unsafe": 0.012977430555555555,
+    "utility": 1.0457863268418
+   }
+  ]
+ },
+ "elapsed_s": 1447.8199181556702,
+ "inference_us": 68.28927050810307,
+ "panels": {
+  "validation": {
+   "all": {
+    "contrasts": {
+     "choice_analytic_bayes": {
+      "base": {
+       "interval95": [
+        0.19373291147745927,
+        0.26497808026852243
+       ],
+       "reference": "fixed_0.90",
+       "unsafe": -0.002907986111111111,
+       "utility": 0.22850052420356
+      },
+      "best_fixed": {
+       "interval95": [
+        0.1462836797333318,
+        0.2114730153599218
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": -0.0001736111111111111,
+       "utility": 0.17824603912028708
+      },
+      "legacy_fallback": {
+       "interval95": [
+        0.14606077144774052,
+        0.21058821331732971
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": -0.0001736111111111111,
+       "utility": 0.17824603912028708
+      }
+     },
+     "choice_rlcd_bayes": {
+      "base": {
+       "interval95": [
+        0.20330140073374556,
+        0.2745438165147298
+       ],
+       "reference": "fixed_0.90",
+       "unsafe": -0.002560763888888889,
+       "utility": 0.2387434870707067
+      },
+      "best_fixed": {
+       "interval95": [
+        0.16064191488209364,
+        0.2172763826617054
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.00017361111111111112,
+       "utility": 0.18848900198743374
+      },
+      "legacy_fallback": {
+       "interval95": [
+        0.15906871106913933,
+        0.21955378172144166
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.00017361111111111112,
+       "utility": 0.18848900198743374
+      }
+     },
+     "choice_rlcd_gated": {
+      "base": {
+       "interval95": [
+        -0.028185456940796463,
+        0.06863080227180167
+       ],
+       "reference": "fixed_0.90",
+       "unsafe": 0.002387152777777778,
+       "utility": 0.02050734178653147
+      },
+      "best_fixed": {
+       "interval95": [
+        -0.06089189121433169,
+        0.0039750520279365495
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.005121527777777778,
+       "utility": -0.029747143296741482
+      },
+      "legacy_fallback": {
+       "interval95": [
+        -0.0633094619826907,
+        0.005434816030233176
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.005121527777777778,
+       "utility": -0.029747143296741482
+      }
+     },
+     "choice_rlcd_map": {
+      "base": {
+       "interval95": [
+        0.08674141075843905,
+        0.1582358650970262
+       ],
+       "reference": "fixed_0.90",
+       "unsafe": 0.005121527777777778,
+       "utility": 0.1237783523243115
+      },
+      "best_fixed": {
+       "interval95": [
+        0.048207815435907866,
+        0.09688819585500037
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.007855902777777778,
+       "utility": 0.07352386724103854
+      },
+      "legacy_fallback": {
+       "interval95": [
+        0.045993698273670565,
+        0.09670346805293842
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.007855902777777778,
+       "utility": 0.07352386724103854
+      }
+     },
+     "oracle": {
+      "base": {
+       "interval95": [
+        0.34859260695753647,
+        0.4052160234806657
+       ],
+       "reference": "fixed_0.90",
+       "unsafe": 0.0018229166666666667,
+       "utility": 0.37650301039151035
+      },
+      "best_fixed": {
+       "interval95": [
+        0.30494034781729223,
+        0.350851362650694
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.004557291666666666,
+       "utility": 0.32624852530823745
+      },
+      "legacy_fallback": {
+       "interval95": [
+        0.3044719020583472,
+        0.349721406475466
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.004557291666666666,
+       "utility": 0.32624852530823745
+      }
+     },
+     "regress_greedy": {
+      "base": {
+       "interval95": [
+        0.14274444814430418,
+        0.24017679740862732
+       ],
+       "reference": "fixed_0.90",
+       "unsafe": -0.0008246527777777777,
+       "utility": 0.1925657371834602
+      },
+      "best_fixed": {
+       "interval95": [
+        0.10815095097659655,
+        0.18036399640169568
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.0019097222222222224,
+       "utility": 0.14231125210018725
+      },
+      "legacy_fallback": {
+       "interval95": [
+        0.1079093412849503,
+        0.18082503663418034
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.0019097222222222224,
+       "utility": 0.14231125210018725
+      }
+     }
+    },
+    "methods": {
+     "choice_analytic_bayes": {
+      "deadline_miss": 0.0004435422837702569,
+      "decisions": 2048,
+      "executed_accuracy": 0.5830078125,
+      "executed_advantage": 0.07001865761868248,
+      "executed_regret": 0.06426188497931024,
+      "latency_p95_ms": 37.16146143296031,
+      "override_share": 0.927734375,
+      "per_model_seed": [
+       1.249352648059359
+      ],
+      "per_scenario": {
+       "ramp": 1.1904603505601474,
+       "steady": 1.3664234813259675,
+       "step": 1.2827422769908412,
+       "wifi": 1.1577844833604805
+      },
+      "rate_mbps": 0.9302528949450801,
+      "reasons": {
+       "accepted": 2141,
+       "base_answer": 162,
+       "unsupported_history": 1
+      },
+      "reliability": {
+       "accuracy": 0.720703125,
+       "bins": [
+        {
+         "accuracy": 0.21052631578947367,
+         "confidence": 0.27131542571900374,
+         "lower": 0.2,
+         "rows": 38
+        },
+        {
+         "accuracy": 0.3401360544217687,
+         "confidence": 0.3646154012000614,
+         "lower": 0.3,
+         "rows": 147
+        },
+        {
+         "accuracy": 0.4302788844621514,
+         "confidence": 0.44945535776572293,
+         "lower": 0.4,
+         "rows": 251
+        },
+        {
+         "accuracy": 0.555984555984556,
+         "confidence": 0.5482890411072251,
+         "lower": 0.5,
+         "rows": 259
+        },
+        {
+         "accuracy": 0.6443148688046647,
+         "confidence": 0.6473938767840841,
+         "lower": 0.6,
+         "rows": 343
+        },
+        {
+         "accuracy": 0.75,
+         "confidence": 0.7400460042419363,
+         "lower": 0.7,
+         "rows": 228
+        },
+        {
+         "accuracy": 0.9622641509433962,
+         "confidence": 0.852498545109407,
+         "lower": 0.8,
+         "rows": 159
+        },
+        {
+         "accuracy": 0.9967897271268058,
+         "confidence": 0.9777078324929138,
+         "lower": 0.9,
+         "rows": 623
+        }
+       ],
+       "brier": 0.38100620738127866,
+       "confidence": 0.7100461150484776,
+       "ece": 0.022158811406472016,
+       "nll": 0.787130932728725,
+       "rows": 2048
+      },
+      "unsafe": 0.00034722222222222224,
+      "utility": 1.249352648059359
+     },
+     "choice_rlcd_bayes": {
+      "deadline_miss": 0.0008460119845985859,
+      "decisions": 2048,
+      "executed_accuracy": 0.58935546875,
+      "executed_advantage": 0.07507391349957121,
+      "executed_regret": 0.06783786622927035,
+      "latency_p95_ms": 37.23371749171119,
+      "override_share": 0.9296875,
+      "per_model_seed": [
+       1.2595956109265058
+      ],
+      "per_scenario": {
+       "ramp": 1.1804873833118459,
+       "steady": 1.4018997964618243,
+       "step": 1.2926172904975881,
+       "wifi": 1.163377973434765
+      },
+      "rate_mbps": 0.9567809403464912,
+      "reasons": {
+       "accepted": 2149,
+       "base_answer": 154,
+       "unsupported_history": 1
+      },
+      "reliability": {
+       "accuracy": 0.72412109375,
+       "bins": [
+        {
+         "accuracy": 0.17391304347826086,
+         "confidence": 0.27604844612130586,
+         "lower": 0.2,
+         "rows": 23
+        },
+        {
+         "accuracy": 0.37748344370860926,
+         "confidence": 0.3619640029104836,
+         "lower": 0.3,
+         "rows": 151
+        },
+        {
+         "accuracy": 0.4782608695652174,
+         "confidence": 0.445513627806897,
+         "lower": 0.4,
+         "rows": 253
+        },
+        {
+         "accuracy": 0.5360824742268041,
+         "confidence": 0.5505958943582432,
+         "lower": 0.5,
+         "rows": 291
+        },
+        {
+         "accuracy": 0.6558265582655827,
+         "confidence": 0.6527494251769683,
+         "lower": 0.6,
+         "rows": 369
+        },
+        {
+         "accuracy": 0.8023715415019763,
+         "confidence": 0.7387740385784994,
+         "lower": 0.7,
+         "rows": 253
+        },
+        {
+         "accuracy": 0.9351851851851852,
+         "confidence": 0.8494440148684315,
+         "lower": 0.8,
+         "rows": 108
+        },
+        {
+         "accuracy": 0.9983333333333333,
+         "confidence": 0.9807255893604556,
+         "lower": 0.9,
+         "rows": 600
+        }
+       ],
+       "brier": 0.3841952726985304,
+       "confidence": 0.7040496624347619,
+       "ece": 0.02648990740804941,
+       "nll": 0.7883707236478454,
+       "rows": 2048
+      },
+      "unsafe": 0.0006944444444444445,
+      "utility": 1.2595956109265058
+     },
+     "choice_rlcd_gated": {
+      "deadline_miss": 0.0065756537253433,
+      "decisions": 2048,
+      "executed_accuracy": 0.6142578125,
+      "executed_advantage": 0.049904417722691885,
+      "executed_regret": 0.1035826790971339,
+      "latency_p95_ms": 39.15084240220139,
+      "override_share": 0.4462890625,
+      "per_model_seed": [
+       1.0413594656423306
+      ],
+      "per_scenario": {
+       "ramp": 1.033400943434593,
+       "steady": 1.1541096678880967,
+       "step": 1.0369153024030884,
+       "wifi": 0.9410119488435446
+      },
+      "rate_mbps": 0.7774786983846615,
+      "reasons": {
+       "accepted": 968,
+       "base_answer": 484,
+       "low_confidence": 830,
+       "unsupported_history": 22
+      },
+      "reliability": {
+       "accuracy": 0.78662109375,
+       "bins": [
+        {
+         "accuracy": 0.2413793103448276,
+         "confidence": 0.2731204387821082,
+         "lower": 0.2,
+         "rows": 29
+        },
+        {
+         "accuracy": 0.4218009478672986,
+         "confidence": 0.3589712931427844,
+         "lower": 0.3,
+         "rows": 211
+        },
+        {
+         "accuracy": 0.47706422018348627,
+         "confidence": 0.4483185465194196,
+         "lower": 0.4,
+         "rows": 218
+        },
+        {
+         "accuracy": 0.5367965367965368,
+         "confidence": 0.546579225163779,
+         "lower": 0.5,
+         "rows": 231
+        },
+        {
+         "accuracy": 0.7464788732394366,
+         "confidence": 0.6504631971021331,
+         "lower": 0.6,
+         "rows": 142
+        },
+        {
+         "accuracy": 0.8164556962025317,
+         "confidence": 0.7458706663931259,
+         "lower": 0.7,
+         "rows": 158
+        },
+        {
+         "accuracy": 0.9590163934426229,
+         "confidence": 0.8587030443331726,
+         "lower": 0.8,
+         "rows": 122
+        },
+        {
+         "accuracy": 0.9978655282817502,
+         "confidence": 0.979680940420178,
+         "lower": 0.9,
+         "rows": 937
+        }
+       ],
+       "brier": 0.2962154437920823,
+       "confidence": 0.7522425935511942,
+       "ece": 0.037484255801846916,
+       "nll": 0.6103559688806186,
+       "rows": 2048
+      },
+      "unsafe": 0.005642361111111111,
+      "utility": 1.0413594656423306
+     },
+     "choice_rlcd_map": {
+      "deadline_miss": 0.009047925560016549,
+      "decisions": 2048,
+      "executed_accuracy": 0.748046875,
+      "executed_advantage": 0.07822792776203501,
+      "executed_regret": 0.10959352061812534,
+      "latency_p95_ms": 41.6843561913872,
+      "override_share": 0.89453125,
+      "per_model_seed": [
+       1.1446304761801107
+      ],
+      "per_scenario": {
+       "ramp": 1.0569032547781025,
+       "steady": 1.463453493308167,
+       "step": 1.0671535089672475,
+       "wifi": 0.9910116476669255
+      },
+      "rate_mbps": 0.9754344627389001,
+      "reasons": {
+       "base_answer": 282,
+       "ungated": 2022
+      },
+      "reliability": {
+       "accuracy": 0.748046875,
+       "bins": [
+        {
+         "accuracy": 0.2,
+         "confidence": 0.2747237953680216,
+         "lower": 0.2,
+         "rows": 60
+        },
+        {
+         "accuracy": 0.3504273504273504,
+         "confidence": 0.34941325335142565,
+         "lower": 0.3,
+         "rows": 234
+        },
+        {
+         "accuracy": 0.4312796208530806,
+         "confidence": 0.45155585927276143,
+         "lower": 0.4,
+         "rows": 211
+        },
+        {
+         "accuracy": 0.5051546391752577,
+         "confidence": 0.5492342123574311,
+         "lower": 0.5,
+         "rows": 194
+        },
+        {
+         "accuracy": 0.735,
+         "confidence": 0.6487342163805385,
+         "lower": 0.6,
+         "rows": 200
+        },
+        {
+         "accuracy": 0.808,
+         "confidence": 0.7481754193448326,
+         "lower": 0.7,
+         "rows": 125
+        },
+        {
+         "accuracy": 0.8545454545454545,
+         "confidence": 0.8586934643529257,
+         "lower": 0.8,
+         "rows": 110
+        },
+        {
+         "accuracy": 0.9923413566739606,
+         "confidence": 0.9796870323879661,
+         "lower": 0.9,
+         "rows": 914
+        }
+       ],
+       "brier": 0.33020842213121315,
+       "confidence": 0.7388842050223846,
+       "ece": 0.026515631212769078,
+       "nll": 0.6863346006617475,
+       "rows": 2048
+      },
+      "unsafe": 0.00837673611111111,
+      "utility": 1.1446304761801107
+     },
+     "fixed_0.60": {
+      "deadline_miss": 0.0,
+      "latency_p95_ms": 36.86712988442504,
+      "per_scenario": {
+       "ramp": 0.3738847463637738,
+       "steady": 0.3446329065631287,
+       "step": 0.3702115392456597,
+       "wifi": 0.34118332022015
+      },
+      "rate_mbps": 0.15705137589273327,
+      "unsafe": 0.0,
+      "utility": 0.357478128098178
+     },
+     "fixed_0.70": {
+      "deadline_miss": 0.0,
+      "latency_p95_ms": 36.86712988442504,
+      "per_scenario": {
+       "ramp": 0.4469080244971504,
+       "steady": 0.40109419602027174,
+       "step": 0.4427594475956706,
+       "wifi": 0.40983867825478815
+      },
+      "rate_mbps": 0.1843844629812798,
+      "unsafe": 0.0,
+      "utility": 0.42515008659197023
+     },
+     "fixed_0.80": {
+      "deadline_miss": 0.0,
+      "latency_p95_ms": 36.86712988442504,
+      "per_scenario": {
+       "ramp": 0.810875699355148,
+       "steady": 0.7501646650249456,
+       "step": 0.8051892370912651,
+       "wifi": 0.7125394333902337
+      },
+      "rate_mbps": 0.3855986638866655,
+      "unsafe": 0.0,
+      "utility": 0.769692258715398
+     },
+     "fixed_0.85": {
+      "deadline_miss": 0.000492117302439527,
+      "latency_p95_ms": 36.92302637601434,
+      "per_scenario": {
+       "ramp": 1.140109296985075,
+       "steady": 1.0728277809642757,
+       "step": 1.1330146004995703,
+       "wifi": 0.9384747573073676
+      },
+      "rate_mbps": 0.7267472836102581,
+      "unsafe": 0.0005208333333333333,
+      "utility": 1.071106608939072
+     },
+     "fixed_0.90": {
+      "deadline_miss": 0.003962524258347033,
+      "latency_p95_ms": 38.95272437350916,
+      "per_scenario": {
+       "ramp": 1.115104141990172,
+       "steady": 1.1590480493531987,
+       "step": 0.9054098311681404,
+       "wifi": 0.9038464729116856
+      },
+      "rate_mbps": 0.7595878426055963,
+      "unsafe": 0.003255208333333333,
+      "utility": 1.0208521238557993
+     },
+     "fixed_1.00": {
+      "deadline_miss": 0.011481815818332642,
+      "latency_p95_ms": 42.00087629700016,
+      "per_scenario": {
+       "ramp": 1.044796415223411,
+       "steady": 1.1097788280334129,
+       "step": 0.9738812253083713,
+       "wifi": 0.943438824482498
+      },
+      "rate_mbps": 0.799477406578798,
+      "unsafe": 0.010763888888888889,
+      "utility": 1.0179738232619233
+     },
+     "fixed_1.05": {
+      "deadline_miss": 0.01474821125561693,
+      "latency_p95_ms": 50.461655050180084,
+      "per_scenario": {
+       "ramp": 1.0846459438120688,
+       "steady": 1.142543181726189,
+       "step": 0.9486275390120477,
+       "wifi": 0.9648552737558203
+      },
+      "rate_mbps": 0.8746918968526519,
+      "unsafe": 0.013802083333333333,
+      "utility": 1.0351679845765314
+     },
+     "oracle": {
+      "deadline_miss": 0.0054670434898825785,
+      "latency_p95_ms": 39.81576171256089,
+      "per_scenario": {
+       "ramp": 1.5015314929650359,
+       "steady": 1.46700412297135,
+       "step": 1.3494613619419453,
+       "wifi": 1.2714235591109069
+      },
+      "rate_mbps": 1.2908939212534407,
+      "unsafe": 0.005078124999999999,
+      "utility": 1.3973551342473096
+     },
+     "regress_greedy": {
+      "deadline_miss": 0.0026497821089422778,
+      "decisions": 2048,
+      "executed_accuracy": 0.552734375,
+      "executed_advantage": 0.09531301083748159,
+      "executed_regret": 0.07736953342833755,
+      "latency_p95_ms": 37.55196450882903,
+      "override_share": 0.79736328125,
+      "per_model_seed": [
+       1.2134178610392594
+      ],
+      "per_scenario": {
+       "ramp": 1.1170336148643172,
+       "steady": 1.47456667288421,
+       "step": 1.1716125292999688,
+       "wifi": 1.090458627108541
+      },
+      "rate_mbps": 0.9366942073783142,
+      "reasons": {
+       "accepted": 1845,
+       "base_answer": 450,
+       "unsupported_history": 9
+      },
+      "unsafe": 0.0024305555555555556,
+      "utility": 1.2134178610392594
+     }
+    },
+    "model_seeds": 1,
+    "references": {
+     "base": "fixed_0.90",
+     "best_fixed": "fixed_0.85",
+     "legacy_fallback": "fixed_0.85"
+    },
+    "scenarios": [
+     "steady",
+     "step",
+     "ramp",
+     "wifi"
+    ],
+    "trace_seeds": 16
+   },
+   "id": {
+    "contrasts": {
+     "choice_analytic_bayes": {
+      "base": {
+       "interval95": [
+        0.19293148909459085,
+        0.2634891169591746
+       ],
+       "reference": "fixed_0.90",
+       "unsafe": -0.002907986111111111,
+       "utility": 0.22850052420356
+      },
+      "best_fixed": {
+       "interval95": [
+        0.144604007300379,
+        0.21125596385838374
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": -0.0001736111111111111,
+       "utility": 0.17824603912028708
+      },
+      "legacy_fallback": {
+       "interval95": [
+        0.14546374013797053,
+        0.2103679650594304
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": -0.0001736111111111111,
+       "utility": 0.17824603912028708
+      }
+     },
+     "choice_rlcd_bayes": {
+      "base": {
+       "interval95": [
+        0.2000562683589082,
+        0.27578047176762566
+       ],
+       "reference": "fixed_0.90",
+       "unsafe": -0.002560763888888889,
+       "utility": 0.2387434870707067
+      },
+      "best_fixed": {
+       "interval95": [
+        0.15910097462351525,
+        0.21974900285216592
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.00017361111111111112,
+       "utility": 0.18848900198743374
+      },
+      "legacy_fallback": {
+       "interval95": [
+        0.1596767859982567,
+        0.218900026293796
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.00017361111111111112,
+       "utility": 0.18848900198743374
+      }
+     },
+     "choice_rlcd_gated": {
+      "base": {
+       "interval95": [
+        -0.02674281499937488,
+        0.07109063292377447
+       ],
+       "reference": "fixed_0.90",
+       "unsafe": 0.002387152777777778,
+       "utility": 0.02050734178653147
+      },
+      "best_fixed": {
+       "interval95": [
+        -0.0631944633563101,
+        0.0050713187573177484
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.005121527777777778,
+       "utility": -0.029747143296741482
+      },
+      "legacy_fallback": {
+       "interval95": [
+        -0.06159061782705183,
+        0.004978070845932192
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.005121527777777778,
+       "utility": -0.029747143296741482
+      }
+     },
+     "choice_rlcd_map": {
+      "base": {
+       "interval95": [
+        0.08621558006534287,
+        0.15703786647593146
+       ],
+       "reference": "fixed_0.90",
+       "unsafe": 0.005121527777777778,
+       "utility": 0.1237783523243115
+      },
+      "best_fixed": {
+       "interval95": [
+        0.04530623116968658,
+        0.0972378605354679
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.007855902777777778,
+       "utility": 0.07352386724103854
+      },
+      "legacy_fallback": {
+       "interval95": [
+        0.0466523819991751,
+        0.09710006875807209
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.007855902777777778,
+       "utility": 0.07352386724103854
+      }
+     },
+     "oracle": {
+      "base": {
+       "interval95": [
+        0.3466919530566122,
+        0.40361254984048484
+       ],
+       "reference": "fixed_0.90",
+       "unsafe": 0.0018229166666666667,
+       "utility": 0.37650301039151035
+      },
+      "best_fixed": {
+       "interval95": [
+        0.30528155592319556,
+        0.34971994428183134
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.004557291666666666,
+       "utility": 0.32624852530823745
+      },
+      "legacy_fallback": {
+       "interval95": [
+        0.3050107631150079,
+        0.34970070334617925
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.004557291666666666,
+       "utility": 0.32624852530823745
+      }
+     },
+     "regress_greedy": {
+      "base": {
+       "interval95": [
+        0.14392057546604906,
+        0.24383693835956644
+       ],
+       "reference": "fixed_0.90",
+       "unsafe": -0.0008246527777777777,
+       "utility": 0.1925657371834602
+      },
+      "best_fixed": {
+       "interval95": [
+        0.10855113937952411,
+        0.17960938330060947
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.0019097222222222224,
+       "utility": 0.14231125210018725
+      },
+      "legacy_fallback": {
+       "interval95": [
+        0.10629467051130083,
+        0.1795000412886037
+       ],
+       "reference": "fixed_0.85",
+       "unsafe": 0.0019097222222222224,
+       "utility": 0.14231125210018725
+      }
+     }
+    },
+    "methods": {
+     "choice_analytic_bayes": {
+      "deadline_miss": 0.0004435422837702569,
+      "decisions": 2048,
+      "executed_accuracy": 0.5830078125,
+      "executed_advantage": 0.07001865761868248,
+      "executed_regret": 0.06426188497931024,
+      "latency_p95_ms": 37.16146143296031,
+      "override_share": 0.927734375,
+      "per_model_seed": [
+       1.249352648059359
+      ],
+      "per_scenario": {
+       "ramp": 1.1904603505601474,
+       "steady": 1.3664234813259675,
+       "step": 1.2827422769908412,
+       "wifi": 1.1577844833604805
+      },
+      "rate_mbps": 0.9302528949450801,
+      "reasons": {
+       "accepted": 2141,
+       "base_answer": 162,
+       "unsupported_history": 1
+      },
+      "reliability": {
+       "accuracy": 0.720703125,
+       "bins": [
+        {
+         "accuracy": 0.21052631578947367,
+         "confidence": 0.27131542571900374,
+         "lower": 0.2,
+         "rows": 38
+        },
+        {
+         "accuracy": 0.3401360544217687,
+         "confidence": 0.3646154012000614,
+         "lower": 0.3,
+         "rows": 147
+        },
+        {
+         "accuracy": 0.4302788844621514,
+         "confidence": 0.44945535776572293,
+         "lower": 0.4,
+         "rows": 251
+        },
+        {
+         "accuracy": 0.555984555984556,
+         "confidence": 0.5482890411072251,
+         "lower": 0.5,
+         "rows": 259
+        },
+        {
+         "accuracy": 0.6443148688046647,
+         "confidence": 0.6473938767840841,
+         "lower": 0.6,
+         "rows": 343
+        },
+        {
+         "accuracy": 0.75,
+         "confidence": 0.7400460042419363,
+         "lower": 0.7,
+         "rows": 228
+        },
+        {
+         "accuracy": 0.9622641509433962,
+         "confidence": 0.852498545109407,
+         "lower": 0.8,
+         "rows": 159
+        },
+        {
+         "accuracy": 0.9967897271268058,
+         "confidence": 0.9777078324929138,
+         "lower": 0.9,
+         "rows": 623
+        }
+       ],
+       "brier": 0.38100620738127866,
+       "confidence": 0.7100461150484776,
+       "ece": 0.022158811406472016,
+       "nll": 0.787130932728725,
+       "rows": 2048
+      },
+      "unsafe": 0.00034722222222222224,
+      "utility": 1.249352648059359
+     },
+     "choice_rlcd_bayes": {
+      "deadline_miss": 0.0008460119845985859,
+      "decisions": 2048,
+      "executed_accuracy": 0.58935546875,
+      "executed_advantage": 0.07507391349957121,
+      "executed_regret": 0.06783786622927035,
+      "latency_p95_ms": 37.23371749171119,
+      "override_share": 0.9296875,
+      "per_model_seed": [
+       1.2595956109265058
+      ],
+      "per_scenario": {
+       "ramp": 1.1804873833118459,
+       "steady": 1.4018997964618243,
+       "step": 1.2926172904975881,
+       "wifi": 1.163377973434765
+      },
+      "rate_mbps": 0.9567809403464912,
+      "reasons": {
+       "accepted": 2149,
+       "base_answer": 154,
+       "unsupported_history": 1
+      },
+      "reliability": {
+       "accuracy": 0.72412109375,
+       "bins": [
+        {
+         "accuracy": 0.17391304347826086,
+         "confidence": 0.27604844612130586,
+         "lower": 0.2,
+         "rows": 23
+        },
+        {
+         "accuracy": 0.37748344370860926,
+         "confidence": 0.3619640029104836,
+         "lower": 0.3,
+         "rows": 151
+        },
+        {
+         "accuracy": 0.4782608695652174,
+         "confidence": 0.445513627806897,
+         "lower": 0.4,
+         "rows": 253
+        },
+        {
+         "accuracy": 0.5360824742268041,
+         "confidence": 0.5505958943582432,
+         "lower": 0.5,
+         "rows": 291
+        },
+        {
+         "accuracy": 0.6558265582655827,
+         "confidence": 0.6527494251769683,
+         "lower": 0.6,
+         "rows": 369
+        },
+        {
+         "accuracy": 0.8023715415019763,
+         "confidence": 0.7387740385784994,
+         "lower": 0.7,
+         "rows": 253
+        },
+        {
+         "accuracy": 0.9351851851851852,
+         "confidence": 0.8494440148684315,
+         "lower": 0.8,
+         "rows": 108
+        },
+        {
+         "accuracy": 0.9983333333333333,
+         "confidence": 0.9807255893604556,
+         "lower": 0.9,
+         "rows": 600
+        }
+       ],
+       "brier": 0.3841952726985304,
+       "confidence": 0.7040496624347619,
+       "ece": 0.02648990740804941,
+       "nll": 0.7883707236478454,
+       "rows": 2048
+      },
+      "unsafe": 0.0006944444444444445,
+      "utility": 1.2595956109265058
+     },
+     "choice_rlcd_gated": {
+      "deadline_miss": 0.0065756537253433,
+      "decisions": 2048,
+      "executed_accuracy": 0.6142578125,
+      "executed_advantage": 0.049904417722691885,
+      "executed_regret": 0.1035826790971339,
+      "latency_p95_ms": 39.15084240220139,
+      "override_share": 0.4462890625,
+      "per_model_seed": [
+       1.0413594656423306
+      ],
+      "per_scenario": {
+       "ramp": 1.033400943434593,
+       "steady": 1.1541096678880967,
+       "step": 1.0369153024030884,
+       "wifi": 0.9410119488435446
+      },
+      "rate_mbps": 0.7774786983846615,
+      "reasons": {
+       "accepted": 968,
+       "base_answer": 484,
+       "low_confidence": 830,
+       "unsupported_history": 22
+      },
+      "reliability": {
+       "accuracy": 0.78662109375,
+       "bins": [
+        {
+         "accuracy": 0.2413793103448276,
+         "confidence": 0.2731204387821082,
+         "lower": 0.2,
+         "rows": 29
+        },
+        {
+         "accuracy": 0.4218009478672986,
+         "confidence": 0.3589712931427844,
+         "lower": 0.3,
+         "rows": 211
+        },
+        {
+         "accuracy": 0.47706422018348627,
+         "confidence": 0.4483185465194196,
+         "lower": 0.4,
+         "rows": 218
+        },
+        {
+         "accuracy": 0.5367965367965368,
+         "confidence": 0.546579225163779,
+         "lower": 0.5,
+         "rows": 231
+        },
+        {
+         "accuracy": 0.7464788732394366,
+         "confidence": 0.6504631971021331,
+         "lower": 0.6,
+         "rows": 142
+        },
+        {
+         "accuracy": 0.8164556962025317,
+         "confidence": 0.7458706663931259,
+         "lower": 0.7,
+         "rows": 158
+        },
+        {
+         "accuracy": 0.9590163934426229,
+         "confidence": 0.8587030443331726,
+         "lower": 0.8,
+         "rows": 122
+        },
+        {
+         "accuracy": 0.9978655282817502,
+         "confidence": 0.979680940420178,
+         "lower": 0.9,
+         "rows": 937
+        }
+       ],
+       "brier": 0.2962154437920823,
+       "confidence": 0.7522425935511942,
+       "ece": 0.037484255801846916,
+       "nll": 0.6103559688806186,
+       "rows": 2048
+      },
+      "unsafe": 0.005642361111111111,
+      "utility": 1.0413594656423306
+     },
+     "choice_rlcd_map": {
+      "deadline_miss": 0.009047925560016549,
+      "decisions": 2048,
+      "executed_accuracy": 0.748046875,
+      "executed_advantage": 0.07822792776203501,
+      "executed_regret": 0.10959352061812534,
+      "latency_p95_ms": 41.6843561913872,
+      "override_share": 0.89453125,
+      "per_model_seed": [
+       1.1446304761801107
+      ],
+      "per_scenario": {
+       "ramp": 1.0569032547781025,
+       "steady": 1.463453493308167,
+       "step": 1.0671535089672475,
+       "wifi": 0.9910116476669255
+      },
+      "rate_mbps": 0.9754344627389001,
+      "reasons": {
+       "base_answer": 282,
+       "ungated": 2022
+      },
+      "reliability": {
+       "accuracy": 0.748046875,
+       "bins": [
+        {
+         "accuracy": 0.2,
+         "confidence": 0.2747237953680216,
+         "lower": 0.2,
+         "rows": 60
+        },
+        {
+         "accuracy": 0.3504273504273504,
+         "confidence": 0.34941325335142565,
+         "lower": 0.3,
+         "rows": 234
+        },
+        {
+         "accuracy": 0.4312796208530806,
+         "confidence": 0.45155585927276143,
+         "lower": 0.4,
+         "rows": 211
+        },
+        {
+         "accuracy": 0.5051546391752577,
+         "confidence": 0.5492342123574311,
+         "lower": 0.5,
+         "rows": 194
+        },
+        {
+         "accuracy": 0.735,
+         "confidence": 0.6487342163805385,
+         "lower": 0.6,
+         "rows": 200
+        },
+        {
+         "accuracy": 0.808,
+         "confidence": 0.7481754193448326,
+         "lower": 0.7,
+         "rows": 125
+        },
+        {
+         "accuracy": 0.8545454545454545,
+         "confidence": 0.8586934643529257,
+         "lower": 0.8,
+         "rows": 110
+        },
+        {
+         "accuracy": 0.9923413566739606,
+         "confidence": 0.9796870323879661,
+         "lower": 0.9,
+         "rows": 914
+        }
+       ],
+       "brier": 0.33020842213121315,
+       "confidence": 0.7388842050223846,
+       "ece": 0.026515631212769078,
+       "nll": 0.6863346006617475,
+       "rows": 2048
+      },
+      "unsafe": 0.00837673611111111,
+      "utility": 1.1446304761801107
+     },
+     "fixed_0.60": {
+      "deadline_miss": 0.0,
+      "latency_p95_ms": 36.86712988442504,
+      "per_scenario": {
+       "ramp": 0.3738847463637738,
+       "steady": 0.3446329065631287,
+       "step": 0.3702115392456597,
+       "wifi": 0.34118332022015
+      },
+      "rate_mbps": 0.15705137589273327,
+      "unsafe": 0.0,
+      "utility": 0.357478128098178
+     },
+     "fixed_0.70": {
+      "deadline_miss": 0.0,
+      "latency_p95_ms": 36.86712988442504,
+      "per_scenario": {
+       "ramp": 0.4469080244971504,
+       "steady": 0.40109419602027174,
+       "step": 0.4427594475956706,
+       "wifi": 0.40983867825478815
+      },
+      "rate_mbps": 0.1843844629812798,
+      "unsafe": 0.0,
+      "utility": 0.42515008659197023
+     },
+     "fixed_0.80": {
+      "deadline_miss": 0.0,
+      "latency_p95_ms": 36.86712988442504,
+      "per_scenario": {
+       "ramp": 0.810875699355148,
+       "steady": 0.7501646650249456,
+       "step": 0.8051892370912651,
+       "wifi": 0.7125394333902337
+      },
+      "rate_mbps": 0.3855986638866655,
+      "unsafe": 0.0,
+      "utility": 0.769692258715398
+     },
+     "fixed_0.85": {
+      "deadline_miss": 0.000492117302439527,
+      "latency_p95_ms": 36.92302637601434,
+      "per_scenario": {
+       "ramp": 1.140109296985075,
+       "steady": 1.0728277809642757,
+       "step": 1.1330146004995703,
+       "wifi": 0.9384747573073676
+      },
+      "rate_mbps": 0.7267472836102581,
+      "unsafe": 0.0005208333333333333,
+      "utility": 1.071106608939072
+     },
+     "fixed_0.90": {
+      "deadline_miss": 0.003962524258347033,
+      "latency_p95_ms": 38.95272437350916,
+      "per_scenario": {
+       "ramp": 1.115104141990172,
+       "steady": 1.1590480493531987,
+       "step": 0.9054098311681404,
+       "wifi": 0.9038464729116856
+      },
+      "rate_mbps": 0.7595878426055963,
+      "unsafe": 0.003255208333333333,
+      "utility": 1.0208521238557993
+     },
+     "fixed_1.00": {
+      "deadline_miss": 0.011481815818332642,
+      "latency_p95_ms": 42.00087629700016,
+      "per_scenario": {
+       "ramp": 1.044796415223411,
+       "steady": 1.1097788280334129,
+       "step": 0.9738812253083713,
+       "wifi": 0.943438824482498
+      },
+      "rate_mbps": 0.799477406578798,
+      "unsafe": 0.010763888888888889,
+      "utility": 1.0179738232619233
+     },
+     "fixed_1.05": {
+      "deadline_miss": 0.01474821125561693,
+      "latency_p95_ms": 50.461655050180084,
+      "per_scenario": {
+       "ramp": 1.0846459438120688,
+       "steady": 1.142543181726189,
+       "step": 0.9486275390120477,
+       "wifi": 0.9648552737558203
+      },
+      "rate_mbps": 0.8746918968526519,
+      "unsafe": 0.013802083333333333,
+      "utility": 1.0351679845765314
+     },
+     "oracle": {
+      "deadline_miss": 0.0054670434898825785,
+      "latency_p95_ms": 39.81576171256089,
+      "per_scenario": {
+       "ramp": 1.5015314929650359,
+       "steady": 1.46700412297135,
+       "step": 1.3494613619419453,
+       "wifi": 1.2714235591109069
+      },
+      "rate_mbps": 1.2908939212534407,
+      "unsafe": 0.005078124999999999,
+      "utility": 1.3973551342473096
+     },
+     "regress_greedy": {
+      "deadline_miss": 0.0026497821089422778,
+      "decisions": 2048,
+      "executed_accuracy": 0.552734375,
+      "executed_advantage": 0.09531301083748159,
+      "executed_regret": 0.07736953342833755,
+      "latency_p95_ms": 37.55196450882903,
+      "override_share": 0.79736328125,
+      "per_model_seed": [
+       1.2134178610392594
+      ],
+      "per_scenario": {
+       "ramp": 1.1170336148643172,
+       "steady": 1.47456667288421,
+       "step": 1.1716125292999688,
+       "wifi": 1.090458627108541
+      },
+      "rate_mbps": 0.9366942073783142,
+      "reasons": {
+       "accepted": 1845,
+       "base_answer": 450,
+       "unsupported_history": 9
+      },
+      "unsafe": 0.0024305555555555556,
+      "utility": 1.2134178610392594
+     }
+    },
+    "model_seeds": 1,
+    "references": {
+     "base": "fixed_0.90",
+     "best_fixed": "fixed_0.85",
+     "legacy_fallback": "fixed_0.85"
+    },
+    "scenarios": [
+     "steady",
+     "step",
+     "ramp",
+     "wifi"
+    ],
+    "trace_seeds": 16
+   }
+  }
+ },
+ "synthetic_only": true,
+ "training": [
+  {
+   "calibration": {
+    "choice_analytic": {
+     "label_rows": [
+      106,
+      334,
+      722,
+      1082,
+      263,
+      3893
+     ],
+     "raw": {
+      "accuracy": 0.71,
+      "bins": [
+       {
+        "accuracy": 0.16071428571428573,
+        "confidence": 0.27688724979588114,
+        "lower": 0.2,
+        "rows": 56
+       },
+       {
+        "accuracy": 0.2518518518518518,
+        "confidence": 0.35965447058029704,
+        "lower": 0.3,
+        "rows": 270
+       },
+       {
+        "accuracy": 0.38477801268498946,
+        "confidence": 0.452044832692766,
+        "lower": 0.4,
+        "rows": 473
+       },
+       {
+        "accuracy": 0.4594594594594595,
+        "confidence": 0.5532339576728825,
+        "lower": 0.5,
+        "rows": 629
+       },
+       {
+        "accuracy": 0.5458996328029376,
+        "confidence": 0.6515181208134792,
+        "lower": 0.6,
+        "rows": 817
+       },
+       {
+        "accuracy": 0.5828282828282828,
+        "confidence": 0.7486514251767258,
+        "lower": 0.7,
+        "rows": 990
+       },
+       {
+        "accuracy": 0.7635239567233385,
+        "confidence": 0.844007629649251,
+        "lower": 0.8,
+        "rows": 647
+       },
+       {
+        "accuracy": 0.9845115170770453,
+        "confidence": 0.9830658816260729,
+        "lower": 0.9,
+        "rows": 2518
+       }
+      ],
+      "brier": 0.40006302592727105,
+      "confidence": 0.7764534062862904,
+      "ece": 0.06759094068177436,
+      "nll": 0.8144154427524144,
+      "rows": 6400
+     },
+     "rows": 6400,
+     "scaled": {
+      "accuracy": 0.71,
+      "bins": [
+       {
+        "accuracy": 0.17525773195876287,
+        "confidence": 0.26998622803406447,
+        "lower": 0.2,
+        "rows": 97
+       },
+       {
+        "accuracy": 0.3225108225108225,
+        "confidence": 0.356402948499291,
+        "lower": 0.3,
+        "rows": 462
+       },
+       {
+        "accuracy": 0.4273255813953488,
+        "confidence": 0.4536780380851025,
+        "lower": 0.4,
+        "rows": 688
+       },
+       {
+        "accuracy": 0.5338345864661654,
+        "confidence": 0.5502041936742893,
+        "lower": 0.5,
+        "rows": 931
+       },
+       {
+        "accuracy": 0.5664263645726055,
+        "confidence": 0.6470052154146839,
+        "lower": 0.6,
+        "rows": 971
+       },
+       {
+        "accuracy": 0.7354838709677419,
+        "confidence": 0.742451530993673,
+        "lower": 0.7,
+        "rows": 620
+       },
+       {
+        "accuracy": 0.9197994987468672,
+        "confidence": 0.8615131611718182,
+        "lower": 0.8,
+        "rows": 399
+       },
+       {
+        "accuracy": 0.9919354838709677,
+        "confidence": 0.9776285138403982,
+        "lower": 0.9,
+        "rows": 2232
+       }
+      ],
+      "brier": 0.3912025088852644,
+      "confidence": 0.7233734419409922,
+      "ece": 0.0306201312537034,
+      "nll": 0.7997192330573429,
+      "rows": 6400
+     },
+     "temperature": 1.2346729288947136,
+     "threshold": 0.7,
+     "threshold_curve": [
+      {
+       "advantage": 0.018563204461621127,
+       "coverage": 0.81625,
+       "threshold": 0.0
+      },
+      {
+       "advantage": 0.01856469534738957,
+       "coverage": 0.80828125,
+       "threshold": 0.3
+      },
+      {
+       "advantage": 0.018710235370138474,
+       "coverage": 0.76828125,
+       "threshold": 0.4
+      },
+      {
+       "advantage": 0.021689229080074268,
+       "coverage": 0.696875,
+       "threshold": 0.5
+      },
+      {
+       "advantage": 0.03225205042181201,
+       "coverage": 0.5809375,
+       "threshold": 0.6
+      },
+      {
+       "advantage": 0.045217703692837785,
+       "coverage": 0.44890625,
+       "threshold": 0.7
+      },
+      {
+       "advantage": 0.04501532759502574,
+       "coverage": 0.3640625,
+       "threshold": 0.8
+      },
+      {
+       "advantage": 0.04048614357244679,
+       "coverage": 0.30453125,
+       "threshold": 0.9
+      }
+     ]
+    },
+    "choice_rlcd": {
+     "label_rows": [
+      120,
+      365,
+      672,
+      1024,
+      243,
+      3976
+     ],
+     "raw": {
+      "accuracy": 0.72421875,
+      "bins": [
+       {
+        "accuracy": 0.15384615384615385,
+        "confidence": 0.2777721613640328,
+        "lower": 0.2,
+        "rows": 39
+       },
+       {
+        "accuracy": 0.27672955974842767,
+        "confidence": 0.36367672200242135,
+        "lower": 0.3,
+        "rows": 318
+       },
+       {
+        "accuracy": 0.35266821345707655,
+        "confidence": 0.45484795971524083,
+        "lower": 0.4,
+        "rows": 431
+       },
+       {
+        "accuracy": 0.4699537750385208,
+        "confidence": 0.5501177594297215,
+        "lower": 0.5,
+        "rows": 649
+       },
+       {
+        "accuracy": 0.5289532293986637,
+        "confidence": 0.650214285564424,
+        "lower": 0.6,
+        "rows": 898
+       },
+       {
+        "accuracy": 0.6769383697813122,
+        "confidence": 0.7476909948713059,
+        "lower": 0.7,
+        "rows": 1006
+       },
+       {
+        "accuracy": 0.792,
+        "confidence": 0.8393573450649044,
+        "lower": 0.8,
+        "rows": 500
+       },
+       {
+        "accuracy": 0.9894490035169988,
+        "confidence": 0.9851745850157336,
+        "lower": 0.9,
+        "rows": 2559
+       }
+      ],
+      "brier": 0.37799550608219695,
+      "confidence": 0.7744309708222228,
+      "ece": 0.05363041986745336,
+      "nll": 0.7735292833662177,
+      "rows": 6400
+     },
+     "rows": 6400,
+     "scaled": {
+      "accuracy": 0.72421875,
+      "bins": [
+       {
+        "accuracy": 0.2,
+        "confidence": 0.27515243716281884,
+        "lower": 0.2,
+        "rows": 70
+       },
+       {
+        "accuracy": 0.284037558685446,
+        "confidence": 0.3546535188473275,
+        "lower": 0.3,
+        "rows": 426
+       },
+       {
+        "accuracy": 0.4332298136645963,
+        "confidence": 0.4528117330844867,
+        "lower": 0.4,
+        "rows": 644
+       },
+       {
+        "accuracy": 0.49461206896551724,
+        "confidence": 0.5532383887131709,
+        "lower": 0.5,
+        "rows": 928
+       },
+       {
+        "accuracy": 0.6149131767109295,
+        "confidence": 0.6510385548414369,
+        "lower": 0.6,
+        "rows": 979
+       },
+       {
+        "accuracy": 0.76,
+        "confidence": 0.7413530083693199,
+        "lower": 0.7,
+        "rows": 650
+       },
+       {
+        "accuracy": 0.9393939393939394,
+        "confidence": 0.8533309947459706,
+        "lower": 0.8,
+        "rows": 297
+       },
+       {
+        "accuracy": 0.9921030756442227,
+        "confidence": 0.9797429319950514,
+        "lower": 0.9,
+        "rows": 2406
+       }
+      ],
+      "brier": 0.37271367674898953,
+      "confidence": 0.7352040704550098,
+      "ece": 0.03205399068635199,
+      "nll": 0.7654939831736353,
+      "rows": 6400
+     },
+     "temperature": 1.174048686256915,
+     "threshold": 0.8,
+     "threshold_curve": [
+      {
+       "advantage": 0.022974951835333924,
+       "coverage": 0.8271875,
+       "threshold": 0.0
+      },
+      {
+       "advantage": 0.02370489494553821,
+       "coverage": 0.82046875,
+       "threshold": 0.3
+      },
+      {
+       "advantage": 0.026523338114954394,
+       "coverage": 0.775,
+       "threshold": 0.4
+      },
+      {
+       "advantage": 0.027059170765823745,
+       "coverage": 0.70859375,
+       "threshold": 0.5
+      },
+      {
+       "advantage": 0.03578576005274325,
+       "coverage": 0.6003125,
+       "threshold": 0.6
+      },
+      {
+       "advantage": 0.04610752133556841,
+       "coverage": 0.46703125,
+       "threshold": 0.7
+      },
+      {
+       "advantage": 0.04817215641091477,
+       "coverage": 0.3746875,
+       "threshold": 0.8
+      },
+      {
+       "advantage": 0.04452482378863674,
+       "coverage": 0.33015625,
+       "threshold": 0.9
+      }
+     ]
+    },
+    "regress": {
+     "rows": 6400
+    }
+   },
+   "model_seed": 0,
+   "parameters": {
+    "choice_analytic": 8070,
+    "choice_rlcd": 8070,
+    "regress": 8070
+   },
+   "rounds": [
+    {
+     "label_share": [
+      0.001328125,
+      0.0015625,
+      0.00390625,
+      0.2635546875,
+      0.033515625,
+      0.6961328125
+     ],
+     "mean_best_advantage": 0.03970367873953507,
+     "round": 0,
+     "rows": 25600
+    },
+    {
+     "label_share": [
+      0.012265625,
+      0.022421875,
+      0.05171875,
+      0.1323046875,
+      0.04046875,
+      0.7408203125
+     ],
+     "mean_best_advantage": 0.11730546186658299,
+     "round": 1,
+     "rows": 25600
+    },
+    {
+     "label_share": [
+      0.011796875,
+      0.02578125,
+      0.0525,
+      0.1505078125,
+      0.0378125,
+      0.7216015625
+     ],
+     "mean_best_advantage": 0.11328436502958471,
+     "round": 2,
+     "rows": 25600
+    },
+    {
+     "label_share": [
+      0.013046875,
+      0.03109375,
+      0.063125,
+      0.1458203125,
+      0.0370703125,
+      0.70984375
+     ],
+     "mean_best_advantage": 0.12697755131813945,
+     "round": 3,
+     "rows": 25600
+    },
+    {
+     "label_share": [
+      0.0101171875,
+      0.03234375,
+      0.055,
+      0.1647265625,
+      0.0333203125,
+      0.7044921875
+     ],
+     "mean_best_advantage": 0.11353151825841622,
+     "round": 4,
+     "rows": 25600
+    }
+   ]
+  }
+ ]
+}
