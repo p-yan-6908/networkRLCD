@@ -161,3 +161,134 @@ def test_only_an_explicit_complete_review_lets_a_candidate_through(exported):
     assert (
         json.loads(manifest.read_text())["rights_cleared_candidates"] == 0
     )  # reading a review changes nothing
+
+
+def test_conversion_is_one_video_only_h264_file_inside_the_registered_box():
+    spec = acquisition.load_settings()["native_ready"]
+    command = acquisition.conversion_command("in.webm", "out.mp4", spec)
+    assert command[0] == "ffmpeg" and command[-1] == "out.mp4" and "-an" in command
+    assert (
+        command[command.index("-c:v") + 1] == "libx264" and command[command.index("-profile:v") + 1] == "main"
+    )
+    scale = command[command.index("-vf") + 1]
+    assert (
+        "min(1280,iw)" in scale and "min(720,ih)" in scale and "force_original_aspect_ratio=decrease" in scale
+    )
+    assert "fps" not in scale and "pad" not in scale  # no frame-rate change, no padding
+    assert (
+        spec["audio"] is False and spec["frame_rate"] == "unchanged" and spec["aspect_ratio"] == "unchanged"
+    )
+
+
+def save_review(path, table):
+    with path.open("w", newline="") as stream:
+        writer = csv.DictWriter(stream, fieldnames=acquisition.COLUMNS)
+        writer.writeheader()
+        writer.writerows(table)
+    return path
+
+
+def test_fetch_touches_only_reviewed_candidates_checks_identity_and_stops_at_the_budget(
+    exported, monkeypatch
+):
+    import hashlib
+    import subprocess
+
+    root, _ = exported
+    manifest = root / "review/rights-review-manifest.json"
+    with (root / "review/rights-review-manifest.csv").open(newline="") as stream:
+        table = list(csv.DictReader(stream))
+    table[0].update(rights_review_decision="needs_media_inspection")
+    table[1].update(rights_review_decision="needs_media_inspection")
+    table[2].update(rights_review_decision="fail")
+    review = save_review(root / "reviewed.csv", table)
+    stock = read_json(root / "inventory.json")
+    payload = {r["asset_id"]: f"media of {r['asset_id']}".encode() for r in stock["records"]}
+    for r in stock["records"]:
+        r["reported_media_sha1"] = hashlib.sha1(payload[r["asset_id"]]).hexdigest()
+    (root / "inventory.json").unlink()
+    write_json(root / "inventory.json", stock)
+    fetched = []
+
+    def download(url, target, user_agent, limit):
+        identifier = "commons-" + url.rsplit("/", 1)[1].split(".")[0]
+        fetched.append(identifier)
+        target.write_bytes(payload[identifier])
+        return target.stat().st_size
+
+    def run(command, **kwargs):
+        if command[0] == "ffmpeg" and str(command[-1]).endswith((".mp4", ".jpg")):
+            acquisition.Path(command[-1]).write_bytes(b"derived")
+        return subprocess.CompletedProcess(command, 0, stdout="ffmpeg version test")
+
+    probed = dict(duration_seconds=120.0, bytes=7, video_codec="h264", profile="Main", width=1280, height=720)
+    probed.update(
+        frame_rate="25/1", pixel_format="yuv420p", video_streams=1, audio_streams=0, audio_codecs=[]
+    )
+    monkeypatch.setattr(acquisition, "download", download)
+    monkeypatch.setattr(acquisition.subprocess, "run", run)
+    monkeypatch.setattr(acquisition, "probe", lambda path: dict(probed))
+    result = acquisition.fetch(review, manifest, root / "inventory.json", root / "media")
+    assert fetched == [
+        table[0]["candidate_id"],
+        table[1]["candidate_id"],
+    ]  # never the failed or unreviewed ones
+    assert result["fetched_candidates"] == 2 and result["reviewed_as_pass_at_fetch"] == 0
+    assert result["outcome_data_collected"] is False
+    record = result["records"][0]
+    assert record["native_ready"]["parent_sha256"] == record["original"]["sha256"]  # lineage to the original
+    assert record["native_ready"]["derived_verification_artifact"]
+    assert record["original"]["sha1_matches_reviewed_revision"]
+    again = acquisition.fetch(review, manifest, root / "inventory.json", root / "media")
+    assert again["fetched_candidates"] == 2 and len(fetched) == 2  # nothing is fetched twice
+    tight = read_json(acquisition.SETTINGS)
+    tight["budget"].update(maximum_download_bytes=50_000_000)  # less than one candidate's catalogue size
+    write_json(root / "tight.json", tight)
+    with pytest.raises(ValueError, match="download budget reached"):
+        acquisition.fetch(review, manifest, root / "inventory.json", root / "other", root / "tight.json")
+    assert len(fetched) == 2  # stopped before touching the network
+    stock["records"] = [dict(r, reported_media_sha1="0" * 40) for r in stock["records"]]
+    (root / "inventory.json").unlink()
+    write_json(root / "inventory.json", stock)
+    table[3].update(rights_review_decision="needs_media_inspection")
+    save_review(review, table)
+    with pytest.raises(ValueError, match="differ from the reviewed revision"):
+        acquisition.fetch(review, manifest, root / "inventory.json", root / "media")
+
+
+def test_evidence_extract_lists_verbatim_quotes_and_flags_an_unanchored_review(tmp_path):
+    lines = [
+        "=={{int:filedesc}}==",
+        "{{Information",
+        "|source={{own}}",
+        "|author=[[User:Someone|Someone]]",
+        "}}",
+    ]
+    lines += ["=={{int:license-header}}==", "{{self|cc-by-4.0}}"]
+    revision = dict(revid=5, slots=dict(main=dict(content=chr(10).join(lines))))
+    page = dict(pageid=77, title="File:A Title.webm", revisions=[revision])
+    page["videoinfo"] = [
+        dict(extmetadata=dict(LicenseShortName=dict(value="CC BY 4.0"), Artist=dict(value="Someone")))
+    ]
+    (tmp_path / "evidence").mkdir()
+    snapshot = tmp_path / "evidence/a.txt"
+    snapshot.write_text(
+        json.dumps(dict(query=dict(pages=[page, dict(pageid=1, revisions=[], videoinfo=[])])))
+    )
+    row = dict(candidate_id="commons-77", title="A Title", rights_evidence_snapshot="evidence/a.txt")
+    row["rights_evidence_snapshot_sha256"] = acquisition.digest(snapshot)
+    boilerplate = "This file is licensed under the Creative Commons Attribution 4.0 International license."
+    extract = acquisition.evidence_extract(row, dict(decision="pass", binding_quote=boilerplate), tmp_path)
+    assert (
+        extract["title_in_evidence"] and not extract["reviewer_binding_quote_in_evidence"]
+    )  # not in the evidence
+    assert "{{self|cc-by-4.0}}" in extract["verbatim_quote_candidates"]
+    assert "CC BY 4.0" in extract["verbatim_quote_candidates"]
+    assert extract["information_fields"] == ["|source={{own}}", "|author=[[User:Someone|Someone]]"]
+    anchored = acquisition.evidence_extract(
+        row, dict(decision="pass", binding_quote="{{self|cc-by-4.0}}"), tmp_path
+    )
+    assert anchored["reviewer_binding_quote_in_evidence"]
+    snapshot.write_text("tampered")
+    with pytest.raises(ValueError, match="archived rights evidence changed"):
+        acquisition.evidence_extract(row, dict(decision="pass", binding_quote=boilerplate), tmp_path)

@@ -1,0 +1,1208 @@
+{
+  "abi": "native_actuator_qualification_n1_rights_evidence_extracts",
+  "reviewers": [
+    "ChatGPT (OpenAI) \u2014 copyright/licence evidence review"
+  ],
+  "passes": 16,
+  "passes_whose_binding_quote_is_in_the_archived_evidence": 0,
+  "passes_the_unchanged_ingest_would_accept_on_evidence": 0,
+  "clears_nothing": true,
+  "extracts": [
+    {
+      "candidate_id": "commons-144186427",
+      "revision_id": 1256821045,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}"
+      ],
+      "information_fields": [
+        "|date=2024-01-18",
+        "|source={{own}}",
+        "|author=[[User:Graineahumus|Graineahumus]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Graineahumus\" title=\"User:Graineahumus\">Graineahumus</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}",
+        "CC BY 4.0",
+        "Creative Commons Attribution 4.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-45099858",
+      "revision_id": 1200644056,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}"
+      ],
+      "information_fields": [
+        "|date=2015-08-03",
+        "|source={{own}}",
+        "|author={{u|Coentor}}",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Coentor\" title=\"User:Coentor\">Coentor</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}",
+        "CC BY 4.0",
+        "Creative Commons Attribution 4.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-64302110",
+      "revision_id": 1141997827,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "== {{int:license-header}} ==",
+        "{{self|cc-by-4.0}}"
+      ],
+      "information_fields": [
+        "|source={{own}}",
+        "|author=[[User:Basile Morin|Basile Morin]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Basile_Morin\" title=\"User:Basile Morin\">Basile Morin</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "== {{int:license-header}} ==",
+        "{{self|cc-by-4.0}}",
+        "CC BY 4.0",
+        "Creative Commons Attribution 4.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-44346310",
+      "revision_id": 752395527,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "== {{int:license-header}} ==",
+        "{{self|GFDL|cc-by-3.0}}"
+      ],
+      "information_fields": [
+        "|Source         ={{own}}",
+        "|Author         =[[User:Ermell|Ermell]]",
+        "|Date           =",
+        "|Permission     ="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Ermell\" title=\"User:Ermell\">Ermell</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "== {{int:license-header}} ==",
+        "{{self|GFDL|cc-by-3.0}}",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-78181584",
+      "revision_id": 1190317504,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "== {{int:license-header}} ==",
+        "{{cc-by-4.0}}",
+        "{{LicenseReview|site=[https://www.youtube.com/watch?v=XChst3cpnVU Youtube]|user=Podzemnik|date=2019-04-22}}"
+      ],
+      "information_fields": [
+        "|date=2019-02-13",
+        "|source= [https://www.youtube.com/watch?v=XChst3cpnVU Best Commercial Spot - JD.COM 'Joy & Heron' Animated CGI Spot by Passion Pictures]",
+        "|author=Client: {{w|JD.com}}<br>",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Artist": "<p>Client: <a href=\"https://en.wikipedia.org/wiki/JD.com\" class=\"extiw\" title=\"w:JD.com\">JD.com</a><br>\nAgency: 180.ai<br>\nDirectors: Kyra &amp; Constantin<br>\nChief Creative Officer: Kenneth Kuan<br>\nCreative: Kenneth Kuan, Ben Too, Xu Kun, Lim Yanshan, Xu Chao<br>\nAgency Producer: Nancy Wang, Violette Xue<br>\nAccount Service: Peter Lo, Bonnie Tian, Wang Mengdi<br>\nProduction Company: Passion Pictures Melbourne<br>\nAnimation Producer: Sibylle Preuss<br>\nAnimation Supervisor: Ferran Casas<br>\nCG Supervisor: Alex Holman<br>\nHead of CG: Jason Nicholas<br>\nVFX Supervisor: Dave Walker<br>\nSound Design: Nami Strack<br>\nMusic &amp; Sound Mix: Nylon Studios<br>\nOriginal Score Composer: Jesse Watt<br>\nExecutive Producer: Katie Mackin<br>\nProducer: Fiona Fry<br>\nCountry: China<br>\n</p>\nReleased: February 2018",
+        "Credit": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=XChst3cpnVU\">Best Commercial Spot - JD.COM 'Joy &amp; Heron' Animated CGI Spot by Passion Pictures</a>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "== {{int:license-header}} ==",
+        "{{cc-by-4.0}}",
+        "{{LicenseReview|site=[https://www.youtube.com/watch?v=XChst3cpnVU Youtube]|user=Podzemnik|date=2019-04-22}}",
+        "CC BY 4.0",
+        "Creative Commons Attribution 4.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-187234232",
+      "revision_id": 1229118604,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}"
+      ],
+      "information_fields": [
+        "|date=2026-03-27",
+        "|source={{own}}",
+        "|author=[[User:CampoUnificado|Renzo Rojas Alvarez]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:CampoUnificado\" title=\"User:CampoUnificado\">Renzo Rojas Alvarez</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}",
+        "CC BY 4.0",
+        "Creative Commons Attribution 4.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-29267197",
+      "revision_id": 1248195981,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "== {{int:license-header}} ==",
+        "{{self|GFDL|cc-by-3.0}}"
+      ],
+      "information_fields": [
+        "|Source={{own}}",
+        "|Date=2013-10-27",
+        "|Author=[[User:Quahadi|<span style=\"color: Red;\">'''Quahadi'''</span>]] [[User_talk:Quahadi|'''<span style=\"color: Orange;\">A\u00f1t\u00f3</span>''']] 08:25, 29 October 2013 (UTC)",
+        "|Permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Quahadi\" title=\"User:Quahadi\"><span style=\"color: Red;\"><b>Quahadi</b></span></a> <a href=\"//commons.wikimedia.org/wiki/User_talk:Quahadi\" title=\"User talk:Quahadi\"><b><span style=\"color: Orange;\">A\u00f1t\u00f3</span></b></a> 08:25, 29 October 2013 (UTC)",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "== {{int:license-header}} ==",
+        "{{self|GFDL|cc-by-3.0}}",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-19058010",
+      "revision_id": 1239123612,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "== {{int:license-header}} ==",
+        "{{self|GFDL|cc-by-3.0}}{{Malayalam loves Wikimedia event - 2}}"
+      ],
+      "information_fields": [
+        "|Source={{own}}",
+        "|Date=2012-04-08",
+        "|Author=[[User:Vaikoovery|Vaikoovery]]",
+        "|Permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Vaikoovery\" title=\"User:Vaikoovery\">Vaikoovery</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "== {{int:license-header}} ==",
+        "{{self|GFDL|cc-by-3.0}}{{Malayalam loves Wikimedia event - 2}}",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-19376147",
+      "revision_id": 1236450078,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "== {{int:license-header}} =="
+      ],
+      "information_fields": [
+        "| date = 2011-08-04",
+        "| source = {{own}}",
+        "| author = [[:wmil:Homepage|Wikimedia Israel]]",
+        "| permission ="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a href=\"https://www.wikimedia.org.il/Homepage\" class=\"extiw\" title=\"wmil:Homepage\">Wikimedia Israel</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "== {{int:license-header}} ==",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-176813687",
+      "revision_id": 1116476425,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}"
+      ],
+      "information_fields": [
+        "|date=14-10-25",
+        "|source={{own}}",
+        "|author=[[User:Jyoti Chiring|Jyoti Chiring]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Jyoti_Chiring\" title=\"User:Jyoti Chiring\">Jyoti Chiring</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}",
+        "CC BY 4.0",
+        "Creative Commons Attribution 4.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-42522829",
+      "revision_id": 1202330056,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|GFDL|cc-by-3.0}}"
+      ],
+      "information_fields": [
+        "|date=2015-07-06",
+        "|source={{own}}",
+        "|author=[[User:Llann W\u00e9\u00b2|Llann W\u00e9\u00b2]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Llann_W%C3%A9%C2%B2\" title=\"User:Llann W\u00e9\u00b2\">Llann W\u00e9\u00b2</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|GFDL|cc-by-3.0}}",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-15303497",
+      "revision_id": 1087786149,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "== {{int:license-header}} ==",
+        "{{self|Cc-zero}}"
+      ],
+      "information_fields": [
+        "|Source={{own}}",
+        "|Date=2008-05-23",
+        "|Author=[[User:Sp5uhe|Sp5uhe]]",
+        "|Permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC0",
+        "UsageTerms": "Creative Commons Zero, Public Domain Dedication",
+        "LicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Sp5uhe\" title=\"User:Sp5uhe\">Sp5uhe</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "false",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "== {{int:license-header}} ==",
+        "{{self|Cc-zero}}",
+        "CC0",
+        "Creative Commons Zero, Public Domain Dedication"
+      ]
+    },
+    {
+      "candidate_id": "commons-106384795",
+      "revision_id": 1141998343,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}"
+      ],
+      "information_fields": [
+        "|date=2021-05-15",
+        "|source={{own}}",
+        "|author=[[User:Lorax|G. Edward Johnson]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Lorax\" title=\"User:Lorax\">G. Edward Johnson</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}",
+        "CC BY 4.0",
+        "Creative Commons Attribution 4.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-63258722",
+      "revision_id": 866671269,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}"
+      ],
+      "information_fields": [
+        "|date=2017-10-08",
+        "|source={{own}}",
+        "|author=[[User:Borys Kozielski|Borys Kozielski]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Borys_Kozielski\" title=\"User:Borys Kozielski\">Borys Kozielski</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}",
+        "CC BY 4.0",
+        "Creative Commons Attribution 4.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-167238183",
+      "revision_id": 1111001129,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-zero}}"
+      ],
+      "information_fields": [
+        "|date=2025-06-09",
+        "|source={{own}}",
+        "|author=[[User:Yasa (WMCH)|Yasa (WMCH)]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC0",
+        "UsageTerms": "Creative Commons Zero, Public Domain Dedication",
+        "LicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Yasa_(WMCH)\" title=\"User:Yasa (WMCH)\">Yasa (WMCH)</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "false",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-zero}}",
+        "CC0",
+        "Creative Commons Zero, Public Domain Dedication"
+      ]
+    },
+    {
+      "candidate_id": "commons-121308342",
+      "revision_id": 781941526,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "|Permission={{cc-zero}}"
+      ],
+      "information_fields": [
+        "|Date= \u200e30. \u200eJuli \u200e2022, \u200f\u200e20:53:57 Hace {{age|2022|07|30}} a\u00f1os y {{age in days|2022|07|30}} d\u00edas.",
+        "|Source={{own}}",
+        "|Author={{own}}",
+        "|Permission={{cc-zero}}"
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC0",
+        "UsageTerms": "Creative Commons Zero, Public Domain Dedication",
+        "LicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "Artist": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "false",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "|Permission={{cc-zero}}",
+        "CC0",
+        "Creative Commons Zero, Public Domain Dedication"
+      ]
+    },
+    {
+      "candidate_id": "commons-115782037",
+      "revision_id": 1033830217,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{YouTube CC-BY|Aktivni mediji}}",
+        "{{LicenseReview|site={{From YouTube|1=n5ks3WvJA_E|2=Brajkovi\u010d na startu kronometra na Dirki po Sloveniji 2012}}|user=MZaplotnik|date=2024-08-25}}"
+      ],
+      "information_fields": [
+        "|date=2012-06-17",
+        "|source={{From YouTube|1=n5ks3WvJA_E|2=Brajkovi\u010d na startu kronometra na Dirki po Sloveniji 2012}}",
+        "|author=[https://www.youtube.com/user/BicikelCom Aktivni mediji]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/user/BicikelCom\">Aktivni mediji</a>",
+        "Credit": "<bdi lang=\"en\" dir=\"ltr\"><a href=\"//commons.wikimedia.org/wiki/Commons:YouTube_files\" title=\"Commons:YouTube files\">YouTube</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=n5ks3WvJA_E\"><bdi lang=\"\">Brajkovi\u010d na startu kronometra na Dirki po Sloveniji 2012</bdi></a> \u2013 View/save archived versions on <a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/*/https://www.youtube.com/watch?v=n5ks3WvJA_E\">archive.org</a></bdi>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{YouTube CC-BY|Aktivni mediji}}",
+        "{{LicenseReview|site={{From YouTube|1=n5ks3WvJA_E|2=Brajkovi\u010d na startu kronometra na Dirki po Sloveniji 2012}}|user=MZaplotnik|date=2024-08-25}}",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-142833688",
+      "revision_id": 1081029637,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-zero}}"
+      ],
+      "information_fields": [
+        "|date=2023-12-24",
+        "|source={{own}}",
+        "|author=David Gauro",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC0",
+        "UsageTerms": "Creative Commons Zero, Public Domain Dedication",
+        "LicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "Artist": "David Gauro",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "false",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-zero}}",
+        "CC0",
+        "Creative Commons Zero, Public Domain Dedication"
+      ]
+    },
+    {
+      "candidate_id": "commons-57781331",
+      "revision_id": 1275619649,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{YouTube CC-BY|F1000Research}}",
+        "{{LicenseReview|site={{From YouTube|1=S2nnuztOqls|2=Mobilisation of local people and technology in mapping for the Sierra Leone Ebola epidemic response}}|user=Daphne Lantier|date=2017-04-08}}"
+      ],
+      "information_fields": [
+        "|date=2015-06-10",
+        "|source={{From YouTube|1=S2nnuztOqls|2=Mobilisation of local people and technology in mapping for the Sierra Leone Ebola epidemic response}}",
+        "|author=[https://www.youtube.com/user/F1000Research F1000Research]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/user/F1000Research\">F1000Research</a>",
+        "Credit": "<bdi lang=\"en\" dir=\"ltr\"><a href=\"//commons.wikimedia.org/wiki/Commons:YouTube_files\" title=\"Commons:YouTube files\">YouTube</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=S2nnuztOqls\"><bdi lang=\"\">Mobilisation of local people and technology in mapping for the Sierra Leone Ebola epidemic response</bdi></a> \u2013 View/save archived versions on <a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/*/https://www.youtube.com/watch?v=S2nnuztOqls\">archive.org</a></bdi>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{YouTube CC-BY|F1000Research}}",
+        "{{LicenseReview|site={{From YouTube|1=S2nnuztOqls|2=Mobilisation of local people and technology in mapping for the Sierra Leone Ebola epidemic response}}|user=Daphne Lantier|date=2017-04-08}}",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-29832113",
+      "revision_id": 1187158397,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{LicenseReview|site=https://www.youtube.com/watch?v=WIHk_A0z0Rc|user=Avenue|date=2013-11-26}}"
+      ],
+      "information_fields": [
+        "|date=2013-11-16",
+        "|source=[https://www.youtube.com/watch?v=WIHk_A0z0Rc Paroxysm at Etna, 16-17 November 2013]",
+        "|author=[https://www.youtube.com/user/bmanct Boris Behncke]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/user/bmanct\">Boris Behncke</a>",
+        "Credit": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=WIHk_A0z0Rc\">Paroxysm at Etna, 16-17 November 2013</a>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{LicenseReview|site=https://www.youtube.com/watch?v=WIHk_A0z0Rc|user=Avenue|date=2013-11-26}}",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-25423110",
+      "revision_id": 495085079,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-3.0}}"
+      ],
+      "information_fields": [
+        "|date=2013-03-12",
+        "|source={{own}}",
+        "|author=[[User:Rmjelley|Rmjelley]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Rmjelley&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Rmjelley (page does not exist)\">Rmjelley</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-3.0}}",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-194480872",
+      "revision_id": 1269969422,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-zero}}"
+      ],
+      "information_fields": [
+        "|date=2026-06-24",
+        "|source={{own}}",
+        "|author=[[User:\uc5b4\uc370\ud2b8|\uc5b4\uc370\ud2b8]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC0",
+        "UsageTerms": "Creative Commons Zero, Public Domain Dedication",
+        "LicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "Artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:%EC%96%B4%EC%8D%B0%ED%8A%B8&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:\uc5b4\uc370\ud2b8 (page does not exist)\">\uc5b4\uc370\ud2b8</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "false",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-zero}}",
+        "CC0",
+        "Creative Commons Zero, Public Domain Dedication"
+      ]
+    },
+    {
+      "candidate_id": "commons-70401610",
+      "revision_id": 1264168026,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{YouTube CC-BY|GEMblog}}",
+        "{{LicenseReview|site={{From YouTube|1=Nk9pK_H9rKs|2=G.E.M.\u3010\u611b\u5982\u610f\u3011MV [HD] \u9127\u7d2b\u68cb}}|user=Roy17|date=2019-01-16}}"
+      ],
+      "information_fields": [
+        "|date=2018-06-27",
+        "|source={{From YouTube|1=Nk9pK_H9rKs|2=G.E.M.\u3010\u611b\u5982\u610f\u3011MV [HD] \u9127\u7d2b\u68cb}}",
+        "|author=[https://www.youtube.com/user/GEMblog GEMblog]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/user/GEMblog\">GEMblog</a>",
+        "Credit": "<bdi lang=\"en\" dir=\"ltr\"><a href=\"//commons.wikimedia.org/wiki/Commons:YouTube_files\" title=\"Commons:YouTube files\">YouTube</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=Nk9pK_H9rKs\"><bdi lang=\"\">G.E.M.\u3010\u611b\u5982\u610f\u3011MV [HD] \u9127\u7d2b\u68cb</bdi></a> \u2013 View/save archived versions on <a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/*/https://www.youtube.com/watch?v=Nk9pK_H9rKs\">archive.org</a></bdi>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{YouTube CC-BY|GEMblog}}",
+        "{{LicenseReview|site={{From YouTube|1=Nk9pK_H9rKs|2=G.E.M.\u3010\u611b\u5982\u610f\u3011MV [HD] \u9127\u7d2b\u68cb}}|user=Roy17|date=2019-01-16}}",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-116101415",
+      "revision_id": 1033814474,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{YouTube CC-BY|\u0413\u0422\u0420\u041a \u0427\u0438\u0442\u0430}}",
+        "{{LicenseReview|site=https://www.youtube.com/watch?v=LlEF414Ecxc|user=LicenseReviewerBot|date=2022-03-20}}"
+      ],
+      "information_fields": [
+        "|date=2022-03-05",
+        "|source={{From YouTube|1=LlEF414Ecxc|2=\u0412\u0440\u0435\u043c\u044f Z: \u0437\u0430\u0431\u0430\u0439\u043a\u0430\u043b\u044c\u0446\u044b \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044e\u0442 \u0432\u043e\u0435\u043d\u043d\u043e\u0441\u043b\u0443\u0436\u0430\u0449\u0438\u0445 \u0441\u043b\u043e\u0432\u043e\u043c \u0438 \u0434\u0435\u043b\u043e\u043c}}",
+        "|author=[https://www.youtube.com/user/GtrkChita \u0413\u0422\u0420\u041a \u0427\u0438\u0442\u0430]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/user/GtrkChita\">\u0413\u0422\u0420\u041a \u0427\u0438\u0442\u0430</a>",
+        "Credit": "<bdi lang=\"en\" dir=\"ltr\"><a href=\"//commons.wikimedia.org/wiki/Commons:YouTube_files\" title=\"Commons:YouTube files\">YouTube</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=LlEF414Ecxc\"><bdi lang=\"\">\u0412\u0440\u0435\u043c\u044f Z: \u0437\u0430\u0431\u0430\u0439\u043a\u0430\u043b\u044c\u0446\u044b \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044e\u0442 \u0432\u043e\u0435\u043d\u043d\u043e\u0441\u043b\u0443\u0436\u0430\u0449\u0438\u0445 \u0441\u043b\u043e\u0432\u043e\u043c \u0438 \u0434\u0435\u043b\u043e\u043c</bdi></a> \u2013 View/save archived versions on <a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/*/https://www.youtube.com/watch?v=LlEF414Ecxc\">archive.org</a></bdi>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{YouTube CC-BY|\u0413\u0422\u0420\u041a \u0427\u0438\u0442\u0430}}",
+        "{{LicenseReview|site=https://www.youtube.com/watch?v=LlEF414Ecxc|user=LicenseReviewerBot|date=2022-03-20}}",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-34935632",
+      "revision_id": 1131103937,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "|Permission={{YouTube CC-BY}}",
+        "{{LicenseReview|site=https://www.youtube.com/watch?v=mvnJkDWdxWE&list=UUv6stiOqEnPCTDMsl0DyXnA|user=INeverCry|date=2014-11-18}}"
+      ],
+      "information_fields": [
+        "|source={{From YouTube|1=mvnJkDWdxWE|2=https://www.youtube.com/watch?v=mvnJkDWdxWE&list=UUv6stiOqEnPCTDMsl0DyXnA}}",
+        "|Date=2014-08-14",
+        "|Author=[https://www.youtube.com/user/eotsuVideo Essence of Time]",
+        "|Permission={{YouTube CC-BY}}"
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/user/eotsuVideo\">Essence of Time</a>",
+        "Credit": "<bdi lang=\"en\" dir=\"ltr\"><a href=\"//commons.wikimedia.org/wiki/Commons:YouTube_files\" title=\"Commons:YouTube files\">YouTube</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=mvnJkDWdxWE\"><bdi lang=\"\">https://www.youtube.com/watch?v=mvnJkDWdxWE&amp;list=UUv6stiOqEnPCTDMsl0DyXnA</bdi></a> \u2013 View/save archived versions on <a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/*/https://www.youtube.com/watch?v=mvnJkDWdxWE\">archive.org</a></bdi>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "|Permission={{YouTube CC-BY}}",
+        "{{LicenseReview|site=https://www.youtube.com/watch?v=mvnJkDWdxWE&list=UUv6stiOqEnPCTDMsl0DyXnA|user=INeverCry|date=2014-11-18}}",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-146207667",
+      "revision_id": 1116778122,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}"
+      ],
+      "information_fields": [
+        "|date=2024-02-18",
+        "|source={{own}}",
+        "|author=[[User:I\u00f1aki LL|I\u00f1aki LL]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:I%C3%B1aki_LL\" title=\"User:I\u00f1aki LL\">I\u00f1aki LL</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}",
+        "CC BY 4.0",
+        "Creative Commons Attribution 4.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-98763505",
+      "revision_id": 822713952,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-zero}}"
+      ],
+      "information_fields": [
+        "|date={{Taken on|2021-01-04|location=Moscow}}",
+        "|source={{own}}",
+        "|author=Svetlov Artem",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC0",
+        "UsageTerms": "Creative Commons Zero, Public Domain Dedication",
+        "LicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "Artist": "Svetlov Artem",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "false",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-zero}}",
+        "CC0",
+        "Creative Commons Zero, Public Domain Dedication"
+      ]
+    },
+    {
+      "candidate_id": "commons-169274056",
+      "revision_id": 1129452461,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-zero}}"
+      ],
+      "information_fields": [
+        "|date=2024-10-26",
+        "|source={{own}}",
+        "|author=[[User:Bile rene|Bile rene]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC0",
+        "UsageTerms": "Creative Commons Zero, Public Domain Dedication",
+        "LicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Bile_rene\" title=\"User:Bile rene\">Bile rene</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "false",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-zero}}",
+        "CC0",
+        "Creative Commons Zero, Public Domain Dedication"
+      ]
+    },
+    {
+      "candidate_id": "commons-177394777",
+      "revision_id": 1117164540,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}"
+      ],
+      "information_fields": [
+        "|date=2025-10-23",
+        "|source={{own}}",
+        "|author=[[User:Tigergolfgrapefruit|Tigergolfgrapefruit]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Tigergolfgrapefruit&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Tigergolfgrapefruit (page does not exist)\">Tigergolfgrapefruit</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}",
+        "CC BY 4.0",
+        "Creative Commons Attribution 4.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-81493039",
+      "revision_id": 1281530294,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-3.0}}\u200e"
+      ],
+      "information_fields": [
+        "|date=2019-08-18",
+        "|source={{own}}",
+        "|author=[[User:Salgo60|Magnus S\u00e4lg\u00f6]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Salgo60\" title=\"User:Salgo60\">Magnus S\u00e4lg\u00f6</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-3.0}}\u200e",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-175191681",
+      "revision_id": 1188169971,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{Cc-by-4.0}}",
+        "{{LicenseReview}}"
+      ],
+      "information_fields": [
+        "|source={{Own}}",
+        "|author={{Creator:Siobhan Leachman}}",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Artist": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Siobhan_Leachman\" class=\"extiw\" title=\"w:en:Siobhan Leachman\"><span title=\"New Zealand Wikimedian\">Siobhan Leachman</span></a></bdi>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{Cc-by-4.0}}",
+        "{{LicenseReview}}",
+        "CC BY 4.0",
+        "Creative Commons Attribution 4.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-29168975",
+      "revision_id": 1248494099,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "== {{int:license-header}} ==",
+        "{{self|GFDL|cc-by-3.0}}"
+      ],
+      "information_fields": [
+        "|Source={{own}}",
+        "|Date=2013-10-23",
+        "|Author=[[User:Quahadi|<span style=\"color: Red;\">'''Quahadi'''</span>]] [[User_talk:Quahadi|'''<span style=\"color: Orange;\">A\u00f1t\u00f3</span>''']] 14:08, 24 October 2013 (UTC)",
+        "|Permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Quahadi\" title=\"User:Quahadi\"><span style=\"color: Red;\"><b>Quahadi</b></span></a> <a href=\"//commons.wikimedia.org/wiki/User_talk:Quahadi\" title=\"User talk:Quahadi\"><b><span style=\"color: Orange;\">A\u00f1t\u00f3</span></b></a> 14:08, 24 October 2013 (UTC)",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "== {{int:license-header}} ==",
+        "{{self|GFDL|cc-by-3.0}}",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-185002032",
+      "revision_id": 1229681625,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}"
+      ],
+      "information_fields": [
+        "|date=2026-02-25",
+        "|source={{own}}",
+        "|author=[[User:Magdmartin|Magdmartin]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Magdmartin\" title=\"User:Magdmartin\">Magdmartin</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}",
+        "CC BY 4.0",
+        "Creative Commons Attribution 4.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-95430957",
+      "revision_id": 1059203314,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-zero}}",
+        "{{Apache}}<ref>https://github.com/jitsi/jitsi/blob/master/LICENSE</ref>"
+      ],
+      "information_fields": [
+        "|date=2020-10-11",
+        "|source={{own}}",
+        "|author=[[User:Quilt Phase|Tom Ackroyd]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC0",
+        "UsageTerms": "Creative Commons Zero, Public Domain Dedication",
+        "LicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Quilt_Phase\" title=\"User:Quilt Phase\">Tom Ackroyd</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "false",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-zero}}",
+        "{{Apache}}<ref>https://github.com/jitsi/jitsi/blob/master/LICENSE</ref>",
+        "CC0",
+        "Creative Commons Zero, Public Domain Dedication"
+      ]
+    },
+    {
+      "candidate_id": "commons-165551300",
+      "revision_id": 1033035183,
+      "review_decision": "needs_media_inspection",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}"
+      ],
+      "information_fields": [
+        "|date=2025-05-14",
+        "|source={{own}}",
+        "|author=[[User:Koffermejia|Koffermejia]]",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 4.0",
+        "UsageTerms": "Creative Commons Attribution 4.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "Artist": "<a href=\"//commons.wikimedia.org/wiki/User:Koffermejia\" title=\"User:Koffermejia\">Koffermejia</a>",
+        "Credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "=={{int:license-header}}==",
+        "{{self|cc-by-4.0}}",
+        "CC BY 4.0",
+        "Creative Commons Attribution 4.0"
+      ]
+    },
+    {
+      "candidate_id": "commons-32353576",
+      "revision_id": 1033839196,
+      "review_decision": "pass",
+      "title_in_evidence": true,
+      "reviewer_binding_quote_in_evidence": false,
+      "licence_templates": [
+        "== {{int:license-header}} ==",
+        "{{LicenseReview|site=https://www.youtube.com/watch?v=x8dwXoWODZ4|user=McZusatz|date=2014-05-04}}"
+      ],
+      "information_fields": [
+        "|source={{From YouTube|1=x8dwXoWODZ4|2=https://www.youtube.com/watch?v=x8dwXoWODZ4}}",
+        "|author=https://www.youtube.com/user/d3Vienno",
+        "|date=2013-03-30",
+        "|permission="
+      ],
+      "extmetadata": {
+        "LicenseShortName": "CC BY 3.0",
+        "UsageTerms": "Creative Commons Attribution 3.0",
+        "LicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "Artist": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.youtube.com/user/d3Vienno\">https://www.youtube.com/user/d3Vienno</a>",
+        "Credit": "<bdi lang=\"en\" dir=\"ltr\"><a href=\"//commons.wikimedia.org/wiki/Commons:YouTube_files\" title=\"Commons:YouTube files\">YouTube</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.youtube.com/watch?v=x8dwXoWODZ4\"><bdi lang=\"\">https://www.youtube.com/watch?v=x8dwXoWODZ4</bdi></a> \u2013 View/save archived versions on <a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/*/https://www.youtube.com/watch?v=x8dwXoWODZ4\">archive.org</a></bdi>",
+        "AttributionRequired": "true",
+        "Restrictions": "",
+        "Copyrighted": "True"
+      },
+      "verbatim_quote_candidates": [
+        "== {{int:license-header}} ==",
+        "{{LicenseReview|site=https://www.youtube.com/watch?v=x8dwXoWODZ4|user=McZusatz|date=2014-05-04}}",
+        "CC BY 3.0",
+        "Creative Commons Attribution 3.0"
+      ]
+    }
+  ]
+}

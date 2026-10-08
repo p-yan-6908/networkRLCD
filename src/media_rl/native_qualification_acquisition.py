@@ -8,11 +8,15 @@ empty and is the reviewer's to fill.
 
 import argparse
 import csv
+import hashlib
 import json
+import re
+import subprocess
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 
 from . import native_actuator_qualification_panel as n1
+from .native_panel_assets import _text
 from .native_protocol import digest, read_json, require, write_json
 
 ABI = "native_actuator_qualification_n1_rights_review_manifest"
@@ -207,6 +211,257 @@ def reviewed(csv_path, manifest_path):
     return result
 
 
+def file_hashes(path):
+    sha256, sha1 = hashlib.sha256(), hashlib.sha1()
+    with Path(path).open("rb") as stream:
+        for block in iter(lambda: stream.read(1 << 20), b""):
+            sha256.update(block)
+            sha1.update(block)
+    return sha256.hexdigest(), sha1.hexdigest()
+
+
+def probe(path):
+    fields = "format=duration,size:stream=codec_type,codec_name,profile,width,height,r_frame_rate,pix_fmt"
+    command = ["ffprobe", "-v", "error", "-show_entries", fields, "-of", "json", str(path)]
+    data = json.loads(subprocess.run(command, check=True, capture_output=True, text=True, timeout=120).stdout)
+    video = [s for s in data["streams"] if s.get("codec_type") == "video"]
+    audio = [s for s in data["streams"] if s.get("codec_type") == "audio"]
+    require(video, "no video stream")
+    return dict(
+        duration_seconds=float(data["format"]["duration"]),
+        bytes=int(data["format"]["size"]),
+        video_codec=video[0].get("codec_name"),
+        profile=video[0].get("profile"),
+        width=video[0].get("width"),
+        height=video[0].get("height"),
+        frame_rate=video[0].get("r_frame_rate"),
+        pixel_format=video[0].get("pix_fmt"),
+        video_streams=len(video),
+        audio_streams=len(audio),
+        audio_codecs=[s.get("codec_name") for s in audio],
+    )
+
+
+def conversion_command(source, target, spec):
+    """One video-only H.264 file, never larger than the registered box, aspect and frame rate unchanged."""
+    scale = f"scale=w='min({spec['maximum_width']},iw)':h='min({spec['maximum_height']},ih)'"
+    scale += ":force_original_aspect_ratio=decrease:force_divisible_by=2"
+    command = ["ffmpeg", "-nostdin", "-hide_banner", "-loglevel", "error", "-i", str(source)]
+    command += ["-map", "0:v:0", "-an", "-sn", "-dn", "-map_metadata", "-1", "-vf", scale]
+    command += ["-c:v", spec["codec"], "-preset", spec["preset"], "-crf", str(spec["crf"])]
+    command += ["-profile:v", spec["profile"], "-pix_fmt", spec["pixel_format"], "-movflags", "+faststart"]
+    return [*command, str(target)]
+
+
+def download(url, target, user_agent, limit):
+    part = Path(str(target) + ".part")
+    command = [
+        "curl",
+        "--fail",
+        "--location",
+        "--silent",
+        "--show-error",
+        "--retry",
+        "3",
+        "--retry-delay",
+        "5",
+    ]
+    command += ["--max-filesize", str(int(limit)), "--user-agent", user_agent, "--output", str(part), url]
+    subprocess.run(command, check=True, capture_output=True, text=True, timeout=3600)
+    part.rename(target)
+    return target.stat().st_size
+
+
+def stored_bytes(root):
+    return sum(f.stat().st_size for f in Path(root).rglob("*") if f.is_file())
+
+
+def lineage(out, settings):
+    """Everything fetched so far: original hash, derived hash, how one became the other, and the budget."""
+    records = sorted(
+        (read_json(p) for p in (Path(out) / "records").glob("*.json")), key=lambda r: r["queue_position"]
+    )
+    ready = [
+        r
+        for r in records
+        if r["native_ready"]
+        and r["native_ready"]["video_codec"] == "h264"
+        and r["native_ready"]["duration_seconds"] >= 80
+    ]
+    return dict(
+        abi="native_actuator_qualification_n1_acquisition_lineage",
+        fetched_candidates=len(records),
+        downloaded_bytes=sum(r["original"]["bytes"] for r in records),
+        stored_bytes=stored_bytes(out),
+        budget=settings["budget"],
+        native_ready_format_candidates=len(ready),
+        undecodable_originals=[r["candidate_id"] for r in records if r["native_ready"] is None],
+        reviewed_as_pass_at_fetch=sum(r["reviewed_as_pass_at_fetch"] for r in records),
+        native_ready_conversion=settings["native_ready"],
+        outcome_data_collected=False,
+        records=records,
+    )
+
+
+def fetch(review_path, manifest_path, inventory_path, out, settings_path=SETTINGS, limit=None):
+    """Download reviewed candidates, verify identity, derive the native-ready file, record lineage.
+
+    Only candidates the review marks ``pass`` or ``needs_media_inspection`` are touched. Each
+    download is checked against the SHA-1 that Commons reported for the reviewed revision. The
+    H.264 file is a derived verification artifact whose record carries the original's SHA-256
+    as parent. Fetching stops at the download or storage budget and never widens the queue.
+    It clears no rights and collects no outcome.
+    """
+    settings = load_settings(settings_path)
+    budget, spec = settings["budget"], settings["native_ready"]
+    decisions = reviewed(review_path, manifest_path)
+    reported = {r["asset_id"]: r.get("reported_media_sha1") for r in read_json(inventory_path)["records"]}
+    out = Path(out)
+    for name in ("original", "native", "inspection", "records"):
+        (out / name).mkdir(parents=True, exist_ok=True)
+    version = subprocess.run(
+        ["ffmpeg", "-version"], check=True, capture_output=True, text=True
+    ).stdout.splitlines()[0]
+    done = 0
+    for row in read_json(manifest_path)["rows"]:
+        identifier = row["candidate_id"]
+        record_path = out / "records" / f"{identifier}.json"
+        if not decisions[identifier]["may_download"] or record_path.exists():
+            continue
+        if limit is not None and done >= limit:
+            break
+        spent = sum(read_json(p)["original"]["bytes"] for p in (out / "records").glob("*.json"))
+        require(
+            spent + row["catalogue_bytes"] <= budget["maximum_download_bytes"],
+            "download budget reached; stopping",
+        )
+        require(
+            stored_bytes(out) + 2 * row["catalogue_bytes"] <= budget["maximum_temporary_storage_bytes"],
+            "temporary storage budget reached; stopping",
+        )
+        original = out / "original" / (identifier + (Path(urlparse(row["media_url"]).path).suffix or ".bin"))
+        if not original.exists():
+            download(row["media_url"], original, settings["user_agent"], row["catalogue_bytes"] * 1.05 + 1e6)
+        sha256, sha1 = file_hashes(original)
+        require(
+            sha1 == reported[identifier], f"{identifier}: downloaded bytes differ from the reviewed revision"
+        )
+        native = out / "native" / f"{identifier}.mp4"
+        native.unlink(missing_ok=True)  # a half-written conversion is never kept as a variant
+        command = conversion_command(original, native, spec)
+        record = dict(
+            candidate_id=identifier,
+            queue_position=row["queue_position"],
+            source_url=row["source_url"],
+            media_url=row["media_url"],
+            review_decision_at_fetch=decisions[identifier]["decision"],
+            reviewed_as_pass_at_fetch=decisions[identifier]["rights_cleared"],
+            original=dict(
+                file=str(original.relative_to(out)),
+                sha256=sha256,
+                sha1=sha1,
+                sha1_matches_reviewed_revision=True,
+            ),
+        )
+        done += 1
+        try:
+            subprocess.run(command, check=True, capture_output=True, text=True, timeout=7200)
+            record["original"].update(probe(original))
+        except subprocess.CalledProcessError as error:
+            # An original that cannot be decoded is recorded as such and never becomes native-ready.
+            native.unlink(missing_ok=True)
+            record["original"].update(bytes=original.stat().st_size, unreadable=True)
+            record.update(
+                native_ready=None,
+                conversion_failed=(error.stderr or "").strip()[-300:],
+                inspection_sheet=None,
+            )
+            write_json(record_path, record)
+            continue
+        derived = probe(native)
+        sheet = out / "inspection" / f"{identifier}.jpg"
+        frames = f"fps=30/{max(derived['duration_seconds'], 1):.3f},scale=240:-2,tile=6x5"
+        grid = ["ffmpeg", "-nostdin", "-hide_banner", "-loglevel", "error", "-y", "-i", str(native)]
+        subprocess.run(
+            [*grid, "-vf", frames, "-frames:v", "1", "-q:v", "4", str(sheet)], check=True, timeout=1800
+        )
+        record.update(
+            native_ready=dict(
+                file=str(native.relative_to(out)),
+                sha256=file_hashes(native)[0],
+                parent_sha256=sha256,
+                derived_verification_artifact=True,
+                ffmpeg=version,
+                arguments=command[command.index("-map") : -1],
+                **derived,
+            ),
+            inspection_sheet=str(sheet.relative_to(out)),
+        )
+        write_json(record_path, record)
+    return lineage(out, settings)
+
+
+def evidence_extract(row, review, discovery_root):
+    """What the archived evidence says about one candidate, and which exact strings it contains.
+
+    The unchanged ingest accepts a binding quote only if it occurs verbatim in the archived
+    evidence file. This lists such strings. Choosing one and asserting the right is the
+    reviewer's act; nothing here clears a source.
+    """
+    snapshot = Path(discovery_root) / row["rights_evidence_snapshot"]
+    require(digest(snapshot) == row["rights_evidence_snapshot_sha256"], "archived rights evidence changed")
+    raw = snapshot.read_text()
+    number = int(row["candidate_id"].rsplit("-", 1)[1])
+    page = next(p for p in json.loads(raw)["query"]["pages"] if p["pageid"] == number)
+    lines = [
+        line.strip() for line in page["revisions"][0]["slots"]["main"]["content"].splitlines() if line.strip()
+    ]
+    metadata = page["videoinfo"][0].get("extmetadata", {})
+    wanted = ("LicenseShortName", "UsageTerms", "LicenseUrl", "Artist", "Credit", "AttributionRequired")
+    values = {k: metadata[k]["value"] for k in (*wanted, "Restrictions", "Copyrighted") if k in metadata}
+    templates = [
+        x for x in lines if "{{" in x and re.search(r"cc-|cc0|cc zero|self\||pd-|licen[cs]e", x, re.I)
+    ]
+    fields = [x for x in lines if re.match(r"\|\s*(source|author|permission|date)\s*=", x, re.I)]
+    quotes = [
+        q for q in (*templates, values.get("LicenseShortName"), values.get("UsageTerms")) if q and q in raw
+    ]
+    quote = review["binding_quote"]
+    return dict(
+        candidate_id=row["candidate_id"],
+        revision_id=page["revisions"][0]["revid"],
+        review_decision=review["decision"],
+        title_in_evidence=_text(row["title"]) in _text(raw),
+        reviewer_binding_quote_in_evidence=bool(quote) and quote in raw,
+        licence_templates=templates,
+        information_fields=fields,
+        extmetadata=values,
+        verbatim_quote_candidates=list(dict.fromkeys(quotes)),
+    )
+
+
+def evidence_report(review_path, manifest_path, discovery_root):
+    decisions = reviewed(review_path, manifest_path)
+    extracts = [
+        evidence_extract(row, decisions[row["candidate_id"]], discovery_root)
+        for row in read_json(manifest_path)["rows"]
+    ]
+    passed = [e for e in extracts if e["review_decision"] == "pass"]
+    return dict(
+        abi="native_actuator_qualification_n1_rights_evidence_extracts",
+        reviewers=sorted({d["rights_reviewer"] for d in decisions.values()}),
+        passes=len(passed),
+        passes_whose_binding_quote_is_in_the_archived_evidence=sum(
+            e["reviewer_binding_quote_in_evidence"] for e in passed
+        ),
+        passes_the_unchanged_ingest_would_accept_on_evidence=sum(
+            e["reviewer_binding_quote_in_evidence"] and e["title_in_evidence"] for e in passed
+        ),
+        clears_nothing=True,
+        extracts=extracts,
+    )
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Native Phase N1 acquisition records; downloads nothing")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -219,9 +474,25 @@ def main(argv=None):
     review = sub.add_parser("review-status", help="Summarise a filled-in review; changes nothing")
     review.add_argument("--review", required=True, type=Path)
     review.add_argument("--manifest", required=True, type=Path)
+    evidence = sub.add_parser("evidence", help="Extract what the archived evidence says; clears nothing")
+    get = sub.add_parser("fetch", help="Download reviewed candidates within budget and record lineage")
+    for p in (evidence, get):
+        p.add_argument("--review", required=True, type=Path)
+        p.add_argument("--manifest", required=True, type=Path)
+        p.add_argument("--out", required=True, type=Path)
+    evidence.add_argument("--discovery", required=True, type=Path)
+    get.add_argument("--inventory", required=True, type=Path)
+    get.add_argument("--limit", type=int)
     args = parser.parse_args(argv)
     try:
-        if args.command == "rights-manifest":
+        if args.command == "evidence":
+            result = evidence_report(args.review, args.manifest, args.discovery)
+            write_json(args.out, result)
+            result = {k: v for k, v in result.items() if k != "extracts"}
+        elif args.command == "fetch":
+            result = fetch(args.review, args.manifest, args.inventory, args.out, limit=args.limit)
+            result = {k: v for k, v in result.items() if k != "records"}
+        elif args.command == "rights-manifest":
             result = export(args.inventory, args.queue, args.out)
         else:
             entries = reviewed(args.review, args.manifest)
@@ -230,7 +501,7 @@ def main(argv=None):
                 counts[entry["decision"]] = counts.get(entry["decision"], 0) + 1
             result = dict(decisions=counts, may_download=sum(e["may_download"] for e in entries.values()))
         print(json.dumps(result, indent=1, sort_keys=True))
-    except (ValueError, FileExistsError, FileNotFoundError, KeyError) as error:
+    except (ValueError, FileExistsError, FileNotFoundError, KeyError, subprocess.CalledProcessError) as error:
         parser.exit(2, f"error: {error}\n")
 
 
