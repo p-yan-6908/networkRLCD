@@ -1,0 +1,11 @@
+{
+  "name": "jevbwe-smoke-v1",
+  "steps": 150,
+  "train_episodes": 12,
+  "qualification_episodes": 8,
+  "risk_episodes": 8,
+  "calibration_episodes": 8,
+  "epochs": 20,
+  "test_seeds": [8101, 8102],
+  "scenarios": ["steady", "wifi", "collapse"]
+}

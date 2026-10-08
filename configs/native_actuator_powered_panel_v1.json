@@ -1,0 +1,16 @@
+{
+  "abi": "native_actuator_source_panel_v2",
+  "template": "results/native-action-excitation-train-sintel-v1/runtime.json",
+  "reservation_root": "results",
+  "source_units_per_stratum_role": 16,
+  "replicates": 5,
+  "seed": 250731,
+  "iv_assumptions_explicitly_assumed": false,
+  "power_simulations": 200,
+  "power_assumptions": {
+    "adjacent_effect_actual_over_bwe": 0.15,
+    "source_random_slope_sd": 0.1,
+    "peer_noise_sd": 0.08,
+    "cohort_noise_sd": 0.08
+  }
+}

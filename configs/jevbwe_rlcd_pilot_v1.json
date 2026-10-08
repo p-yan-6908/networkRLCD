@@ -1,0 +1,25 @@
+{
+  "study": {
+    "name": "jevbwe-rlcd-pilot-v1",
+    "seed": 17101,
+    "steps": 360,
+    "train_episodes": 36,
+    "qualification_episodes": 18,
+    "calibration_episodes": 18,
+    "hidden": 16,
+    "epochs": 80,
+    "batch_size": 32,
+    "learning_rate": 0.003,
+    "test_seeds": [19201, 19202, 19203, 19204, 19205, 19206, 19207, 19208],
+    "scenarios": ["steady", "step", "wifi", "collapse", "feedback_gap"]
+  },
+  "validation_seeds": [19101, 19102, 19103, 19104, 19105, 19106, 19107, 19108],
+  "group_size": 8,
+  "noise_std": 0.2,
+  "categorical_weight": 0.5,
+  "spherical_weight": 0.5,
+  "success_qoe": 1.0,
+  "alpha": 0.05,
+  "bootstrap_samples": 2000,
+  "min_neural_cohorts": 24
+}

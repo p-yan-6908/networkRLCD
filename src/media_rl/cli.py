@@ -305,8 +305,34 @@ def main(argv=None):
         p.add_argument("--config" if command.endswith("study") else "--run", required=True, type=Path)
         if command.endswith("study"):
             p.add_argument("--out", required=True, type=Path)
+    for command in ("jevbwe-run", "jevbwe-train", "jevbwe-evaluate"):
+        p = sub.add_parser(command, help="Opt-in bitrate-only BWE residual; synthetic research only")
+        p.add_argument("--config", required=True, type=Path)
+        p.add_argument("--out", required=True, type=Path)
+        if command == "jevbwe-evaluate":
+            p.add_argument("--model", required=True, type=Path)
+    p = sub.add_parser("jevbwe-audit", help="Verify JevBWE artifact hashes, not native efficacy")
+    p.add_argument("--run", required=True, type=Path)
     args = parser.parse_args(argv)
     try:
+        if args.command.startswith("jevbwe-"):
+            from .jevbwe_experiment import audit_study, evaluate_study, load_study, run_study, train_study
+
+            if args.command == "jevbwe-audit":
+                result = audit_study(args.run)
+            else:
+                config = load_study(args.config)
+                if args.command == "jevbwe-train":
+                    result = train_study(config, args.out)
+                elif args.command == "jevbwe-run":
+                    result = run_study(config, args.out)
+                else:
+                    report = evaluate_study(config, args.model, args.out)
+                    result = {
+                        key: report[key] for key in ("contrasts", "action_value_passed", "synthetic_only")
+                    }
+            print(json.dumps(result, indent=2))
+            return
         if args.command.startswith("rtc-peer-"):
             from .published_rtc_peer_cli import run
 

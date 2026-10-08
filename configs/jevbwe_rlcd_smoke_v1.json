@@ -1,0 +1,17 @@
+{
+  "study": {
+    "name": "jevbwe-rlcd-smoke-v1",
+    "seed": 17101,
+    "steps": 150,
+    "train_episodes": 12,
+    "qualification_episodes": 8,
+    "calibration_episodes": 8,
+    "epochs": 30,
+    "test_seeds": [19201, 19202],
+    "scenarios": ["steady", "wifi", "collapse"]
+  },
+  "validation_seeds": [19101, 19102],
+  "group_size": 8,
+  "noise_std": 0.2,
+  "success_qoe": 1.0
+}

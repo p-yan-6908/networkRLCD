@@ -16,6 +16,12 @@ rtc-peers = ["onnxruntime==1.23.2"]
 
 [project.scripts]
 media-rl = "media_rl.cli:main"
+jevbwe-rlcd = "media_rl.jevbwe_rlcd_cli:main"
+media-actuator = "media_rl.native_actuator_study:main"
+media-actuator-panel = "media_rl.native_actuator_panel:main"
+media-panel-assets = "media_rl.native_panel_assets:main"
+media-acquisition-audit = "media_rl.native_acquisition_audit:main"
+media-acquisition-discovery = "media_rl.native_acquisition_discovery:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/media_rl"]
@@ -25,7 +31,7 @@ packages = ["src/media_rl"]
 
 [tool.hatch.build.targets.sdist]
 include = [
-  "src/**", "tests/**", "benchmarks/native_rtc/**", "configs/*.json", "docs/*.md", "paper/*.tex", "paper/*.md",
+  "src/**", "tests/**", "benchmarks/native_rtc/**", "benchmarks/jevbwe/*.py", "configs/*.json", "docs/*.md", "paper/*.tex", "paper/*.md",
   "research/*.md", "research/*.bib", "README.md", "GOAL.md", "uv.lock",
   ".python-version", "pyproject.toml", "Makefile", ".github/workflows/*.yml",
 ]

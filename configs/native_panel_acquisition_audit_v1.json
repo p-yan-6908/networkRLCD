@@ -1,0 +1,34 @@
+{
+  "abi": "native_acquisition_dry_run_v1",
+  "target_independent_units": 96,
+  "previously_exposed_title_ids": ["bigbuckbunny", "sintel", "tearsofsteel"],
+  "prior_exposure_note": "Conservative exclusion from prior repository native runs; cross-capture and source SHA review still required for all candidates.",
+  "controller_freeze": "configs/native_controller_freeze_v1.json",
+  "tiers": {
+    "A": "official clean-license content; capture independence still reviewed",
+    "B": "only reviewed per-sequence rights evidence",
+    "C": "independent generated/captured component, reported separately"
+  },
+  "main_panel_allowed_licenses": ["CC-BY-4.0", "CC-BY-3.0", "CC0-1.0"],
+  "noncommercial_assets_separate_and_ineligible": true,
+  "independence": "shared canonical title OR capture OR parent lineage is one source cluster; rights unit is not a cluster",
+  "unknown_capture_provenance_is_not_verified_independence": true,
+  "content_strata_require_owned_preassignment_measurement": true,
+  "native_source_minimum_duration_seconds": 80,
+  "native_representation_codec": "h264",
+  "maximum_single_text_bytes": 2097152,
+  "maximum_total_text_bytes": 16777216,
+  "maximum_metadata_requests": 256,
+  "media_download_budget_bytes": 0,
+  "estimated_scratch_minimum_bytes": 1000000000000,
+  "estimated_scratch_preferred_bytes": 2000000000000,
+  "scratch_budget_is_recommendation_not_allocation": true,
+  "allowed_text_hosts": ["ultravideo.fi", "opencontent.netflix.com", "sites.google.com", "media.xiph.org", "www.xiph.org", "creativecommons.org", "peach.blender.org", "durian.blender.org", "mango.blender.org", "download.blender.org", "s3.amazonaws.com"],
+  "allowed_rights_pdf_urls": ["https://media.xiph.org/video/derf/vqeg.its.bldrdoc.gov/HDTV/SVT_MultiFormat/SVT_MultiFormat_v10.pdf", "https://media.xiph.org/video/derf/ftp3.itu.int/video-site/sequences/Irene/Sign_Irene.pdf"],
+  "source_pages": [
+    {"source": "UVG-VCM", "tier": "A", "url": "https://ultravideo.fi/UVG-VCM/index.html"},
+    {"source": "Netflix", "tier": "A", "url": "https://opencontent.netflix.com/home"},
+    {"source": "Xiph", "tier": "B", "url": "https://media.xiph.org/video/derf/"},
+    {"source": "original UVG", "tier": "restricted", "url": "https://ultravideo.fi/dataset.html"}
+  ]
+}

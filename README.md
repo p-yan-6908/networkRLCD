@@ -21,6 +21,72 @@ uv run media-rl run --config configs/paper.json --out results/my-paper
 
 Output directories must be empty/nonexistent; existing evidence is never silently overwritten. CPU training is sufficient for these small networks. The user permits Modal CLI GPU training if needed; see [`GOAL.md`](GOAL.md). No GPU jobs are required or launched by this package.
 
+## JevBWE: bitrate-only learned residual (opt-in)
+
+The [new residual research path](docs/JEVBWE_RESIDUAL_V1.md) ranks **six BWE-relative bitrate ratios**, not the legacy 42 joint actions. It uses three seconds of ordered causal history, separate requested/actual/encoder-target telemetry, a **1.8-second increase dwell with immediate decreases**, and encoder-settled/network-delayed delivered-QoE credit. Matched state-only checks of utility **and delivered-only QoE** must pass before screened learned control is enabled. The first workflow is **synthetic only**; old native data/weights are not relabeled, and no native superiority or safety is claimed. The completed pilot passes predictive action skill, but a separate fallback-only diagnosis shows **no demonstrated neural control gain**, so it is not promoted.
+
+```sh
+uv run media-rl jevbwe-run --config configs/jevbwe_smoke_v1.json --out results/my-jevbwe-smoke
+uv run media-rl jevbwe-audit --run results/my-jevbwe-smoke
+```
+
+## JevBWE-RLCD: separate probabilistic experiment
+
+The [experimental numeric RLCD path](docs/JEVBWE_RLCD_V1.md) preserves the supervised JevBWE baseline and frozen risk model. A **1,846-parameter six-action policy** uses Gaussian REINFORCE and factual-only, inverse-propensity-weighted proper log/spherical rewards. New IID exploration logs known conditional propensities; unobserved actions are never fabricated as failures or winners. The optional local **Laya** typed-decision benchmark is separate and is **not** the default controller.
+
+The synthetic pilot has valid randomized identification data but **does not qualify causal action discrimination or demonstrate learned control gain**. Both paths remain unpromoted; genuine Laya inference was not run. The dedicated document covers probability semantics, statistical/safety gates and optional setup.
+
+```sh
+uv run --frozen jevbwe-rlcd run --config configs/jevbwe_rlcd_smoke_v1.json \
+  --baseline-model results/my-jevbwe-smoke/training/model.json --out results/my-rlcd-smoke
+uv run --frozen benchmarks/jevbwe/verify_rlcd.py --run results/my-rlcd-smoke
+```
+
+## Causal actuator identification: next milestone, no new model
+
+The [separate native diagnostic](docs/NATIVE_ACTUATOR_IDENTIFICATION_V1.md) freezes
+all controller architectures. It randomizes **{0.65, 0.85, 1.05} × observed BWE**,
+holds each assignment for **3 s after acknowledgment**, and logs actual encoded
+payload output separately from encoder target and RTP send rate. Fresh discovery
+and replication clips, factual-only outcomes and staged actuator/QoE gates come
+before any state×action ML. Laya remains deferred; policy probabilities are not
+probabilities that a bitrate is "correct".
+
+**Native smoke:** four peers, 2,009 encoded-frame events and 24 complete cohorts
+replay exactly. Thirteen windows were non-plateau and retained. Only two physical
+blocks per role: **insufficient causal qualification**, not an established negative
+action effect. No policy was trained or promoted. Licensed content reservations
+are nearly exhausted; do not recycle old validation clips for a powered panel.
+
+```sh
+uv run --frozen media-actuator plan --config configs/native_actuator_identification_smoke_v1.json --out results/my-actuator-plan
+uv run --frozen media-actuator run --protocol results/my-actuator-plan/protocol.json --out results/my-actuator
+uv run --frozen media-actuator audit --root results/my-actuator
+```
+
+## Powered causal actuator panel (diagnostic only)
+
+`media-actuator-panel` adds frozen preintervention low/medium/high content strata,
+four controlled network schedules and fresh repeated peers, keeping the original
+three residuals and all controller architectures unchanged. First-stage strength,
+content/regime interactions and factual QoE sensitivity use source/title/capture-clustered,
+independent-role replication gates. An optional actuator-validity predictor is
+**not fitted**; no safety gate or policy is promoted.
+
+The 13 unused windows are **one previously used title**, not 13 independent units.
+The corrected inventory has **zero eligible fresh source clusters**; the prospective
+target is **96 independent licensed source/capture units**. Collection is blocked,
+not a negative actuator result. `media-panel-assets` validates per-asset rights and
+lineage; 31 controller/model/physical-actuator source files are hash-frozen.
+See [powered-panel methods, assumptions and commands](docs/NATIVE_ACTUATOR_POWERED_PANEL_V1.md).
+The [text-only acquisition audit](docs/NATIVE_PANEL_ACQUISITION_AUDIT_V1.md)
+records actual candidates, license snapshots, provisional clusters and storage
+bounds without media downloads or changes to the frozen controllers.
+The [Commons/Blender Discovery V2](docs/NATIVE_PANEL_ACQUISITION_DISCOVERY_V2.md)
+adds per-file rights/provenance snapshots, conservative independent-cluster
+counts and a sealed original-capture reserve matrix. Its 110 fresh metadata
+candidate clusters are **not** 110 verified eligible units; eligibility remains zero.
+
 ## What is included
 
 - 42 joint actions: seven bitrates × three FEC levels × normal/low-latency media mode.
@@ -113,7 +179,9 @@ A [prospective multi-context balanced training study](docs/NATIVE_ACTION_BALANCE
 
 A [fresh atomic four-context balanced training study](docs/NATIVE_ACTION_ATOMIC_MATRIX_V4.md) now completes **36 conventional peers / 120 cohorts / 1,456 requests**, all-arm exposure in **20/20 strata** and all nine transitions per group, outside **65 earlier role inputs**. The once-only unchanged twelve-forecaster comparison uses **280 rows / 3,400 requests / 12 groups**. **Action information still fails: −1.07788% pooled; group interval [−5.61132%, +2.18487%]; both folds are negative.** **19 Python / four Node**, actual full native/numeric/extracted-wheel replay, fourteen executing-source hashes, sixteen resealed semantic rejections and twelve native-actor ABI rejections pass. No old model/default/validation change, tuning, native promotion or SOTA; completed balanced exposure is not sufficient evidence of generalization.
 
-A [training-only diagnosis of the fixed negative models](docs/NATIVE_ACTION_ATOMIC_DIAGNOSIS_V2.md) now attributes the net error gap mainly to ToS, rules out dead hidden units, and verifies alias/encoder/gradient/sampling variability. A separate **opt-in ordered32-step projection** removes provable summary-order invariance while preserving old92 features/state/actions; **no model is fitted or default changed**. Actual full/current/ordered inputs have the same26 duplicate pairs, so no real collision or performance improvement is claimed. **17 Python checks**, isolated actual12-model replay andeight semantic reseal rejections pass; action generalization/native/SOTA remain blocked.
+A [training-only diagnosis of the fixed negative models](docs/NATIVE_ACTION_ATOMIC_DIAGNOSIS_V2.md) now attributes the net error gap mainly to ToS, rules out dead hidden units, and verifies alias/encoder/gradient/sampling variability. A separate **opt-in ordered32-step projection** removes provable summary-order invariance while preserving old92 features/state/actions; **no model was fitted in that diagnosis phase or default changed**. Actual full/current/ordered inputs have the same26 duplicate pairs, so no real collision or performance improvement is claimed. **17 Python checks**, isolated actual12-model replay andeight semantic reseal rejections pass; action generalization/native/SOTA remain blocked.
+
+A [single predeclared ordered-history training ablation](docs/NATIVE_ACTION_ORDERED_VALUE_CV_V1.md) is now complete: twelve new 118-input auxiliary models preserve original initialization/minibatch RNG, data/folds/recipe and matched blind controls. Pooled action skill changes **−1.08% → +1.31%**, but **the full gate still fails**: Sintel misses action/prior thresholds and the group interval **[−4.13%, +7.98%]** crosses zero; new-only conditional MSE also worsens. **15 targeted Python cases**, full deterministic twelve-model training replay, isolated-wheel replay and ten fully resealed semantic rejections pass. Original models/roles/defaults remain intact; no native deployment or SOTA claim. This experiment is closed; no further experiment is started.
 
 ## Published RTC peers — original checkpoints, offline replay only
 

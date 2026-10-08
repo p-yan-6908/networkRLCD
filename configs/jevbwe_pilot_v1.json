@@ -1,0 +1,21 @@
+{
+  "name": "jevbwe-synthetic-pilot-v1",
+  "seed": 7101,
+  "steps": 360,
+  "dt_ms": 100,
+  "train_episodes": 36,
+  "qualification_episodes": 18,
+  "risk_episodes": 18,
+  "calibration_episodes": 18,
+  "hold_ms": 3000,
+  "encoder_up_ms": 1500,
+  "encoder_down_ms": 100,
+  "credit_window_ms": 600,
+  "switch_weight": 0.15,
+  "hidden": 16,
+  "epochs": 60,
+  "batch_size": 32,
+  "learning_rate": 0.003,
+  "test_seeds": [8101, 8102, 8103, 8104],
+  "scenarios": ["steady", "step", "wifi", "collapse", "feedback_gap"]
+}

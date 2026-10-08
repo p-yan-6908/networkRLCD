@@ -1,0 +1,29 @@
+{
+  "abi": "licensed_independent_panel_assets_v1_request",
+  "assets": [
+    {
+      "path": "/replace/with/actual-owned-asset.mp4",
+      "sha256": "REPLACE_WITH_ACTUAL_MEDIA_SHA256",
+      "source": "Netflix Open Content / UVG-VCM / reviewed Xiph asset / owned generation",
+      "source_title": "REPLACE_WITH_CANONICAL_ORIGINAL_TITLE_NOT_EXCERPT_NAME",
+      "capture_group": "REPLACE_WITH_REVIEWED_ORIGINAL_CAPTURE_SESSION_ID",
+      "independence_basis": "REPLACE_WITH_CAPTURE_OR_GENERATION_PROVENANCE_AND_SHARED_ASSET_REVIEW",
+      "source_url": "https://replace.example/actual-asset",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "REPLACE_WITH_ACTUAL_OWNER_AND_REQUIRED_ATTRIBUTION",
+      "rights_asserted_by_importer": false,
+      "license_evidence": {
+        "path": "/replace/with/actual-accompanying-readme-or-rights-page.txt",
+        "sha256": "REPLACE_WITH_ACTUAL_EVIDENCE_SHA256",
+        "scope": "this_asset",
+        "source_title": "REPLACE_WITH_CANONICAL_ORIGINAL_TITLE_NOT_EXCERPT_NAME",
+        "license": "CC-BY-4.0",
+        "source_url": "https://replace.example/actual-asset-license",
+        "checked_at_utc": "REPLACE_WITH_ACTUAL_REVIEW_TIMESTAMP",
+        "reviewed_by_importer": false,
+        "binding_quote": "REPLACE_WITH_EXACT_ASSET_PERMISSION_QUOTE_FROM_SNAPSHOT"
+      }
+    }
+  ]
+}

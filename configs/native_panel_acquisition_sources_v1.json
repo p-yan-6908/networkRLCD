@@ -1,0 +1,73 @@
+{
+  "abi": "native_panel_acquisition_sources_v1",
+  "controller_freeze": "configs/native_controller_freeze_v1.json",
+  "main_panel_allowed_licenses": ["CC-BY-4.0", "CC-BY-3.0", "CC0-1.0"],
+  "target_independent_source_units": 96,
+  "units_per_primary_stratum_per_role": 16,
+  "roles": ["discovery", "replication"],
+  "downloads_enabled": false,
+  "media_download_budget_bytes": 0,
+  "license_research_date": "2026-10-05",
+  "sources": [
+    {
+      "source": "UVG-VCM",
+      "source_url": "https://ultravideo.fi/UVG-VCM/index.html",
+      "reported_sequences": 20,
+      "reported_license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "official_statement_verified_via_live_search": true,
+      "per_asset_membership_license_receipt_required": true,
+      "capture_session_independence_review_required": true,
+      "native_duration_and_format_eligibility_not_verified": true,
+      "acquired_units": 0
+    },
+    {
+      "source": "Netflix Open Content",
+      "source_url": "https://opencontent.netflix.com/home",
+      "candidate_titles": ["Nocturne", "Sparks", "Meridian", "Chimera", "El Fuente"],
+      "reported_license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "official_statement_verified_via_live_search": true,
+      "per_asset_membership_license_receipt_required": true,
+      "all_encodes_crops_and_excerpts_of_each_title_share_cluster": true,
+      "capture_session_independence_review_required": true,
+      "acquired_units": 0
+    },
+    {
+      "source": "Xiph Derf",
+      "source_url": "https://media.xiph.org/video/derf/",
+      "reported_license": null,
+      "each_sequence_accompanying_readme_license_required": true,
+      "mirrors_of_other_titles_are_not_new_independent_units": true,
+      "capture_session_independence_review_required": true,
+      "acquired_units": 0
+    },
+    {
+      "source": "original UVG",
+      "source_url": "https://ultravideo.fi/dataset.html",
+      "reported_sequences": 16,
+      "reported_license": "CC-BY-NC",
+      "blocked_from_main_panel": true,
+      "reason": "noncommercial license; do not mix with commercially usable main corpus",
+      "acquired_units": 0
+    },
+    {
+      "source": "procedural Blender component",
+      "generation_axes": ["object motion", "camera motion", "texture density", "spatial complexity"],
+      "license": null,
+      "explicit_asset_and_component_rights_required": true,
+      "independent_scene_draws_and_generation_lineage_required": true,
+      "same_scene_variants_or_shared_capture_are_one_cluster": true,
+      "not_the_entire_main_panel": true,
+      "renderer_implemented": false,
+      "acquired_units": 0
+    }
+  ],
+  "blinded_reestimation": {
+    "baseline_96_uses_assumed_not_measured_variance": true,
+    "enabled": false,
+    "reason": "Needs preregistered nuisance-only estimator, source-level tranche, bounded N rule and sequential error-control review before observing tranche outcomes",
+    "unblinded_convenience_reduction_forbidden": true,
+    "no_N_changed_based_on_observed_treatment_effects": true
+  }
+}

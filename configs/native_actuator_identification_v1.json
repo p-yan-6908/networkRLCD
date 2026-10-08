@@ -1,0 +1,9 @@
+{
+  "abi": "native_actuator_identification_v1",
+  "template": "results/native-action-excitation-train-sintel-v1/runtime.json",
+  "catalogs": [".tools/native_late_validation_v3/bbb-catalog.json"],
+  "contexts_per_film": 8,
+  "seed": 150732,
+  "reservation_root": "results",
+  "iv_assumptions_explicitly_assumed": false
+}

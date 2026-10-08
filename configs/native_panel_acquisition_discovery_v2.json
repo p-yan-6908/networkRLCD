@@ -1,0 +1,47 @@
+{
+  "abi": "NATIVE_PANEL_ACQUISITION_DISCOVERY_V2",
+  "controller_freeze": "configs/native_controller_freeze_v1.json",
+  "target_independent_units": 96,
+  "minimum_duration_seconds": 80,
+  "allowed_licenses": ["CC-BY-4.0", "CC-BY-3.0", "CC0-1.0"],
+  "previously_exposed_title_ids": ["bigbuckbunny", "sintel", "tearsofsteel"],
+  "media_download_budget_bytes": 0,
+  "maximum_single_text_bytes": 2097152,
+  "maximum_total_text_bytes": 67108864,
+  "maximum_metadata_requests": 256,
+  "minimum_request_interval_seconds": 1,
+  "user_agent": "networkRLCD-acquisition-discovery/2.0 (metadata-only; https://github.com/p-yan-6908/networkRLCD)",
+  "allowed_text_hosts": ["commons.wikimedia.org", "studio.blender.org", "cloud.blender.org", "www.blender.org", "download.blender.org", "orange.blender.org", "peach.blender.org", "durian.blender.org", "mango.blender.org", "gooseberry.blender.org", "creativecommons.org", "www.youtube.com"],
+  "allowed_rights_pdf_urls": [],
+  "commons": {
+    "api": "https://commons.wikimedia.org/w/api.php",
+    "search_queries": ["filetype:video hastemplate:cc-by-4.0", "filetype:video hastemplate:cc-by-4.0 hastemplate:own", "filetype:video hastemplate:cc-by-3.0 hastemplate:own", "filetype:video hastemplate:cc-zero hastemplate:own", "filetype:video hastemplate:cc-by-3.0", "filetype:video hastemplate:cc-zero", "filetype:video"],
+    "batch_size": 10,
+    "maximum_batches_per_query": 15,
+    "maximum_enumerated_files": 600,
+    "maximum_auxiliary_batches": 30,
+    "retain_only_explicit_license_and_provenance": true
+  },
+  "blender": {
+    "catalog_url": "https://studio.blender.org/films/",
+    "downloads_url": "https://download.blender.org/demo/movies/",
+    "maximum_productions": 30,
+    "source_copyright_pages": ["https://orange.blender.org/press/", "https://peach.blender.org/about/", "https://durian.blender.org/sharing/", "https://mango.blender.org/sharing/"],
+    "shared_franchise_lineage": {"caminandes-1": "caminandes", "caminandes-2": "caminandes", "caminandes-3": "caminandes"}
+  },
+  "capture_plan": {
+    "namespace": "networkRLCD:NATIVE_PANEL_ACQUISITION_DISCOVERY_V2:original-capture:v1",
+    "reserve_slots": 96,
+    "duration_seconds": 120,
+    "resolution": [1920, 1080],
+    "fps": 30,
+    "source_bitrate_mbps_bounds": [8, 20],
+    "normalized_bitrate_mbps_bounds": [2, 8],
+    "license_type": "CC-BY-4.0",
+    "spatial_targets": ["low", "medium", "high"],
+    "temporal_targets": ["low", "medium", "high"],
+    "planned_targets_are_not_measured_strata": true,
+    "planned_slots_are_not_eligible_units": true,
+    "no_excerpts_as_independent_units": true
+  }
+}
