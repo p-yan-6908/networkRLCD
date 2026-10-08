@@ -1,0 +1,38 @@
+{
+  "abi": "native_actuator_qualification_n1",
+  "margin": 0.03,
+  "design_effect": 0.1,
+  "alpha": 0.025,
+  "contrast_power": 0.95,
+  "strata": 3,
+  "first_stage_sources": 12,
+  "maximum_sources": 24,
+  "regimes": 4,
+  "peers_per_regime": 10,
+  "holds_per_peer": 6,
+  "minimum_cell_cohorts": 3,
+  "minimum_complete_fraction": 0.95,
+  "maximum_alias_fraction": 0.1,
+  "maximum_arm_completeness_gap": 0.05,
+  "maximum_skipped_sources": 4,
+  "heterogeneity_alpha": 0.05,
+  "capture": {
+    "seed": 260107,
+    "template": "results/native-action-excitation-train-sintel-v1/runtime.json",
+    "reservation_root": "results"
+  },
+  "power_scenarios": [
+    {"name": "n2_assumptions", "lower_effect": 0.15, "upper_effect": 0.15, "source_contrast_sd": 0.02, "peer_sd": 0.08, "cohort_sd": 0.08},
+    {"name": "design_effect_n2_noise", "lower_effect": 0.1, "upper_effect": 0.1, "source_contrast_sd": 0.02, "peer_sd": 0.08, "cohort_sd": 0.08},
+    {"name": "design_effect_smoke_noise", "lower_effect": 0.1, "upper_effect": 0.1, "source_contrast_sd": 0.05, "peer_sd": 0.08, "cohort_sd": 0.14},
+    {"name": "smoke_like", "lower_effect": 0.09, "upper_effect": 0.21, "source_contrast_sd": 0.05, "peer_sd": 0.08, "cohort_sd": 0.14},
+    {"name": "design_effect_heterogeneous", "lower_effect": 0.1, "upper_effect": 0.1, "source_contrast_sd": 0.08, "peer_sd": 0.08, "cohort_sd": 0.14},
+    {"name": "design_effect_very_heterogeneous", "lower_effect": 0.1, "upper_effect": 0.1, "source_contrast_sd": 0.12, "peer_sd": 0.08, "cohort_sd": 0.14},
+    {"name": "one_stratum_saturates", "lower_effect": 0.15, "upper_effect": 0.15, "source_contrast_sd": 0.05, "peer_sd": 0.08, "cohort_sd": 0.14, "saturating_strata": 1, "saturation": 0},
+    {"name": "one_regime_dead", "lower_effect": 0.15, "upper_effect": 0.15, "source_contrast_sd": 0.05, "peer_sd": 0.08, "cohort_sd": 0.14, "dead_regimes": 1},
+    {"name": "null_both_at_margin", "lower_effect": 0.03, "upper_effect": 0.03, "source_contrast_sd": 0.05, "peer_sd": 0.08, "cohort_sd": 0.14},
+    {"name": "null_lower_at_margin", "lower_effect": 0.03, "upper_effect": 0.15, "source_contrast_sd": 0.08, "peer_sd": 0.08, "cohort_sd": 0.14},
+    {"name": "null_saturation_at_margin", "lower_effect": 0.1, "upper_effect": 0.045, "source_contrast_sd": 0.02, "peer_sd": 0.08, "cohort_sd": 0.14, "saturating_strata": 1, "saturation": 0},
+    {"name": "no_actuation", "lower_effect": 0, "upper_effect": 0, "source_contrast_sd": 0.02, "peer_sd": 0.08, "cohort_sd": 0.14}
+  ]
+}

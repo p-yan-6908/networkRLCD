@@ -90,6 +90,18 @@ uv run --frozen media-actuator run --protocol results/my-actuator-plan/protocol.
 uv run --frozen media-actuator audit --root results/my-actuator
 ```
 
+## Native Phase N1: actuator qualification (registered design, no data)
+
+The [N1 preregistration](docs/NATIVE_PHASE_N1_ACTUATOR_QUALIFICATION.md) isolates one question from the powered panel below: does the requested ratio separate the actual encoded output rate? It reuses the frozen controller, the three-arm randomized hold protocol and the unchanged collector, makes no QoE claim, and leaves the 96-unit panel untouched as Phase N2. It needs **12 independent source clusters** at minimum (4 per complexity tercile), extended in balanced blocks to at most 24 by a blinded rule that exposes only the prescribed source count.
+
+The planner, a capture path that computes no outcome statistic, the sealed interim and the final analysis are implemented, hash-frozen (`configs/native_actuator_qualification_n1_freeze.json`) and exercised on test doubles and mock rows only. Nothing has been collected, the inventory still holds zero eligible sources, and no interim custodian is named.
+
+```sh
+uv run --frozen media-actuator-qualification show
+uv run --frozen media-actuator-qualification verify-freeze
+uv run --frozen media-actuator-qualification dry-run --out results/my-n1-dry-run   # mock rows only
+```
+
 ## Powered causal actuator panel (diagnostic only)
 
 `media-actuator-panel` adds frozen preintervention low/medium/high content strata,
