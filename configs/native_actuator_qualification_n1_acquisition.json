@@ -1,0 +1,20 @@
+{
+  "abi": "native_actuator_qualification_n1_acquisition",
+  "queue": {
+    "seed": 260107,
+    "candidates": 36,
+    "inventory": "results/native-panel-acquisition-discovery-v2-final/inventory.json"
+  },
+  "budget": {
+    "maximum_download_bytes": 10000000000,
+    "maximum_temporary_storage_bytes": 30000000000,
+    "retain_unnecessary_transcode_variants": false
+  },
+  "eligible_sources_per_tercile": {
+    "required": 4,
+    "preferred": 8
+  },
+  "expand_discovery_automatically": false,
+  "download_only_after_rights_review": true,
+  "native_ready_conversion_is_a_derived_artifact_with_lineage_to_the_original_hash": true
+}

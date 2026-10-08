@@ -1,0 +1,588 @@
+{
+  "abi": "native_actuator_qualification_n1_acquisition_queue",
+  "seed": 260107,
+  "candidate_clusters": 110,
+  "queue": [
+    {
+      "position": 0,
+      "source_cluster_id": "candidate-746f73cbcf00b15efdb47f96",
+      "asset_id": "commons-144186427",
+      "source_title": "Gnu Linux. Utilisation basique 6",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 259.724,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Gnu_Linux._Utilisation_basique_6.webm",
+      "estimated_bytes": 15251692,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 1,
+      "source_cluster_id": "candidate-9895ca13840b2f27b6271520",
+      "asset_id": "commons-45099858",
+      "source_title": "Demolici\u00f3 Nou Ajuntament",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 84.869,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Demolici%C3%B3_Nou_Ajuntament.webm",
+      "estimated_bytes": 21774219,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 2,
+      "source_cluster_id": "candidate-2010e6cd214becd5a9898c32",
+      "asset_id": "commons-64302110",
+      "source_title": "Red weaver ants transporting a dead gecko, in Laos (video)",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 145.731,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Red_weaver_ants_transporting_a_dead_gecko,_in_Laos_(video).webm",
+      "estimated_bytes": 210030629,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 3,
+      "source_cluster_id": "candidate-67c0c37c93f0614402b88d5e",
+      "asset_id": "commons-44346310",
+      "source_title": "2015-09-25-F\u00e4hre-Bamberg",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 142.189,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:2015-09-25-F%C3%A4hre-Bamberg.webm",
+      "estimated_bytes": 34939796,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 4,
+      "source_cluster_id": "candidate-5f35f8dafbba71236e2b8374",
+      "asset_id": "commons-78181584",
+      "source_title": "Joy & Heron - Animated CGI Spot by Passion Pictures",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 243.901,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Joy_%26_Heron_-_Animated_CGI_Spot_by_Passion_Pictures.webm",
+      "estimated_bytes": 41126379,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 5,
+      "source_cluster_id": "candidate-9d9abb711b54562de66aa06c",
+      "asset_id": "commons-187234232",
+      "source_title": "Entrevista a Edson Canaza - 12\u00b0 Encuentro de cine Corriente. webm",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 317.283,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Entrevista_a_Edson_Canaza_-_12%C2%B0_Encuentro_de_cine_Corriente._webm.webm",
+      "estimated_bytes": 24157500,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 6,
+      "source_cluster_id": "candidate-127714b386c27cb10158ab4c",
+      "asset_id": "commons-29267197",
+      "source_title": "Na sjeveru Vi\u017eanice 20131027 103431",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 162.112,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Na_sjeveru_Vi%C5%BEanice_20131027_103431.ogv",
+      "estimated_bytes": 46287557,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 7,
+      "source_cluster_id": "candidate-3492d2a7d9eac4aaf180380f",
+      "asset_id": "commons-19058010",
+      "source_title": "Thidambu Nritham (1) - big",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 95.03333333333333,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Thidambu_Nritham_(1)_-_big.ogv",
+      "estimated_bytes": 60411008,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 8,
+      "source_cluster_id": "candidate-fd6f987eeb6f756ea14d443c",
+      "asset_id": "commons-19376147",
+      "source_title": "Wiki Academy 2011 - Uses of Wiki Technology in Higher Education",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 3908.32,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Wiki_Academy_2011_-_Uses_of_Wiki_Technology_in_Higher_Education.ogv",
+      "estimated_bytes": 527231056,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 9,
+      "source_cluster_id": "candidate-8ac57feaf5a042121f062dbf",
+      "asset_id": "commons-176813687",
+      "source_title": "Vaisnavas kirtan",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 89.508,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Vaisnavas_kirtan.webm",
+      "estimated_bytes": 92667754,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 10,
+      "source_cluster_id": "candidate-7fa52a89a045f1bc5b26da35",
+      "asset_id": "commons-42522829",
+      "source_title": "WV0016-D13 FerteSaintCyr",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 215.04469387755103,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:WV0016-D13_FerteSaintCyr.ogv",
+      "estimated_bytes": 69009756,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 11,
+      "source_cluster_id": "candidate-a526980c0b565e48fd3f2c06",
+      "asset_id": "commons-15303497",
+      "source_title": "2008-05-23 14-35 Rabka",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 519.36,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:2008-05-23_14-35_Rabka.ogv",
+      "estimated_bytes": 58319215,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 12,
+      "source_cluster_id": "candidate-a9fba94ac8747299610ccb32",
+      "asset_id": "commons-106384795",
+      "source_title": "Periodical Cicada emerging from underground 2021-05-15 233901977",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 138.907,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Periodical_Cicada_emerging_from_underground_2021-05-15_233901977.webm",
+      "estimated_bytes": 1047940318,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 13,
+      "source_cluster_id": "candidate-18d4356067f8f1aa87c954cd",
+      "asset_id": "commons-63258722",
+      "source_title": "Community recruitment - Serbian wiki way \u2013 Miroslav Loci",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 1813.945,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Community_recruitment_-_Serbian_wiki_way_%E2%80%93_Miroslav_Loci.webm",
+      "estimated_bytes": 788935944,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 14,
+      "source_cluster_id": "candidate-5619264ce45c375174bb4c09",
+      "asset_id": "commons-167238183",
+      "source_title": "2025-06-09 Interna\u021bional Archives Week 2025 Panel discusion",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 1620.181,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:2025-06-09_Interna%C8%9Bional_Archives_Week_2025_Panel_discusion.webm",
+      "estimated_bytes": 126791461,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 15,
+      "source_cluster_id": "candidate-f5fc03f80812f2968d807554",
+      "asset_id": "commons-121308342",
+      "source_title": "Heli Schmilka Fire Fighting Elbe 30 7 2022",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 168.963,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Heli_Schmilka_Fire_Fighting_Elbe_30_7_2022.webm",
+      "estimated_bytes": 84795949,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 16,
+      "source_cluster_id": "candidate-e78cf43fe7447472e824d7b2",
+      "asset_id": "commons-115782037",
+      "source_title": "Brajkovi\u010d na startu kronometra na Dirki po Sloveniji 2012",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 157.183,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Brajkovi%C4%8D_na_startu_kronometra_na_Dirki_po_Sloveniji_2012.webm",
+      "estimated_bytes": 41754526,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 17,
+      "source_cluster_id": "candidate-aa3473f0636001680a85be45",
+      "asset_id": "commons-142833688",
+      "source_title": "Barmasha agriculture song When wife talks to the (video-converter.com)",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 116.96000000000001,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Barmasha_agriculture_song_When_wife_talks_to_the_(video-converter.com).webm",
+      "estimated_bytes": 39558418,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 18,
+      "source_cluster_id": "candidate-6b215d11a8996375248dd94b",
+      "asset_id": "commons-57781331",
+      "source_title": "Mobilisation of local people and technology in mapping for the Sierra Leone Ebola epidemic response",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 843.5840000000001,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Mobilisation_of_local_people_and_technology_in_mapping_for_the_Sierra_Leone_Ebola_epidemic_response.webm",
+      "estimated_bytes": 42822677,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 19,
+      "source_cluster_id": "candidate-34216918ae03577b47f0cf61",
+      "asset_id": "commons-29832113",
+      "source_title": "Paroxysm at Etna, 16-17 November 2013",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 491.16700000000003,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Paroxysm_at_Etna,_16-17_November_2013.webm",
+      "estimated_bytes": 77358508,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 20,
+      "source_cluster_id": "candidate-e3615fce47ca4f22e96873d2",
+      "asset_id": "commons-25423110",
+      "source_title": "Open Education La Trobe - Who's Doing What?",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 3608.055873015873,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Open_Education_La_Trobe_-_Who%27s_Doing_What%3F.ogv",
+      "estimated_bytes": 263676745,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 21,
+      "source_cluster_id": "candidate-2c7715d2c6f0617b16f2b2a9",
+      "asset_id": "commons-194480872",
+      "source_title": "8200\ud638\ub300 \uc11c\uc6b8 \ucd9c\ubc1c \ubd80\uc0b0\ud589",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 93.523,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:8200%ED%98%B8%EB%8C%80_%EC%84%9C%EC%9A%B8_%EC%B6%9C%EB%B0%9C_%EB%B6%80%EC%82%B0%ED%96%89.webm",
+      "estimated_bytes": 35441779,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 22,
+      "source_cluster_id": "candidate-1e705dabcdab9fd76d2593dd",
+      "asset_id": "commons-70401610",
+      "source_title": "G.E.M.\u3010\u611b\u5982\u610f\u3011MV (HD) \u9127\u7d2b\u68cb",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 231.025,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:G.E.M.%E3%80%90%E6%84%9B%E5%A6%82%E6%84%8F%E3%80%91MV_(HD)_%E9%84%A7%E7%B4%AB%E6%A3%8B.webm",
+      "estimated_bytes": 62532158,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 23,
+      "source_cluster_id": "candidate-1eb4878b468dd9b661a3a361",
+      "asset_id": "commons-116101415",
+      "source_title": "\u0412\u0440\u0435\u043c\u044f Z- \u0437\u0430\u0431\u0430\u0439\u043a\u0430\u043b\u044c\u0446\u044b \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044e\u0442 \u0432\u043e\u0435\u043d\u043d\u043e\u0441\u043b\u0443\u0436\u0430\u0449\u0438\u0445 \u0441\u043b\u043e\u0432\u043e\u043c \u0438 \u0434\u0435\u043b\u043e\u043c",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 345.181,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:%D0%92%D1%80%D0%B5%D0%BC%D1%8F_Z-_%D0%B7%D0%B0%D0%B1%D0%B0%D0%B9%D0%BA%D0%B0%D0%BB%D1%8C%D1%86%D1%8B_%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%B2%D0%B0%D1%8E%D1%82_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D0%BB%D1%83%D0%B6%D0%B0%D1%89%D0%B8%D1%85_%D1%81%D0%BB%D0%BE%D0%B2%D0%BE%D0%BC_%D0%B8_%D0%B4%D0%B5%D0%BB%D0%BE%D0%BC.webm",
+      "estimated_bytes": 85476612,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 24,
+      "source_cluster_id": "candidate-8d404e022b851bf4d00aae00",
+      "asset_id": "commons-34935632",
+      "source_title": "\u0421\u0412-\u0414\u041d\u0420-110. \u0420\u0430\u0437\u0440\u0443\u0448\u0435\u043d\u0438\u044f \u0432 \u0446\u0435\u043d\u0442\u0440\u0435 \u0414\u043e\u043d\u0435\u0446\u043a\u0430",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 144.93895691609978,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%92-%D0%94%D0%9D%D0%A0-110._%D0%A0%D0%B0%D0%B7%D1%80%D1%83%D1%88%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B2_%D1%86%D0%B5%D0%BD%D1%82%D1%80%D0%B5_%D0%94%D0%BE%D0%BD%D0%B5%D1%86%D0%BA%D0%B0.ogv",
+      "estimated_bytes": 67074702,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 25,
+      "source_cluster_id": "candidate-e6f080bfdf40a4bf53b3b1a3",
+      "asset_id": "commons-146207667",
+      "source_title": "Castej\u00f3n - Gamazada urteurrena (2024) (16)",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 232.377,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Castej%C3%B3n_-_Gamazada_urteurrena_(2024)_(16).webm",
+      "estimated_bytes": 19217907,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 26,
+      "source_cluster_id": "candidate-5fb3aa519508dc442cf6fc83",
+      "asset_id": "commons-98763505",
+      "source_title": "Moscow trolleybus 9803 2021-01 GX010217",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 153.087,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Moscow_trolleybus_9803_2021-01_GX010217.webm",
+      "estimated_bytes": 941546538,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 27,
+      "source_cluster_id": "candidate-2b022b66f65bf38dda1321a3",
+      "asset_id": "commons-169274056",
+      "source_title": "IBAI Lecturer launch 2",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 105.09100000000001,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:IBAI_Lecturer_launch_2.webm",
+      "estimated_bytes": 349173140,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 28,
+      "source_cluster_id": "candidate-ee52af7e58ca5d793e66fdad",
+      "asset_id": "commons-177394777",
+      "source_title": "ZG 2025 Personalized AI for learning intangible cultural heritage - Lau",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 1323.304,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:ZG_2025_Personalized_AI_for_learning_intangible_cultural_heritage_-_Lau.webm",
+      "estimated_bytes": 84138249,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 29,
+      "source_cluster_id": "candidate-d33961d52957a981909a2d81",
+      "asset_id": "commons-81493039",
+      "source_title": "Reforming the Featured Article process in the Indonesian Wikipedia",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 1799.407,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Reforming_the_Featured_Article_process_in_the_Indonesian_Wikipedia.webm",
+      "estimated_bytes": 144370130,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 30,
+      "source_cluster_id": "candidate-44e84bb6ce5341198a8ab47e",
+      "asset_id": "commons-175191681",
+      "source_title": "Integrating research expedition data LivingData 2025",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 517.58,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Integrating_research_expedition_data_LivingData_2025.webm",
+      "estimated_bytes": 24332179,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 31,
+      "source_cluster_id": "candidate-e86f5e9e11c824e17086f13c",
+      "asset_id": "commons-29168975",
+      "source_title": "\u0160kvar, Orebi\u0107 164909",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 130.79466666666667,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:%C5%A0kvar,_Orebi%C4%87_164909.ogv",
+      "estimated_bytes": 30388907,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 32,
+      "source_cluster_id": "candidate-637296cbe73ee0675c443bcd",
+      "asset_id": "commons-185002032",
+      "source_title": "OpenRefine3-10-presentation",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 813.234,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:OpenRefine3-10-presentation.webm",
+      "estimated_bytes": 53199396,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 33,
+      "source_cluster_id": "candidate-b9d120fb1d1fb1e49bfe717d",
+      "asset_id": "commons-95430957",
+      "source_title": "James Taylor Auckland Museum and Wikimedia 2010-10-11 for Commons",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 1701.993,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:James_Taylor_Auckland_Museum_and_Wikimedia_2010-10-11_for_Commons.webm",
+      "estimated_bytes": 678091270,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 34,
+      "source_cluster_id": "candidate-492db20f50b51f6a8247509f",
+      "asset_id": "commons-165551300",
+      "source_title": "Video del Centro Cultural Leyes de Reforma",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 83.22800000000001,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Video_del_Centro_Cultural_Leyes_de_Reforma.webm",
+      "estimated_bytes": 180316464,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    },
+    {
+      "position": 35,
+      "source_cluster_id": "candidate-72647ab9c850b0f97599119e",
+      "asset_id": "commons-32353576",
+      "source_title": "D3.js-tutorial-14-The-Tree-Layout-(1-of-2)",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 420.196,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:D3.js-tutorial-14-The-Tree-Layout-(1-of-2).webm",
+      "estimated_bytes": 11076565,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ]
+    }
+  ],
+  "estimated_bytes": 6481217103,
+  "verified_eligible_sources": 0,
+  "media_downloaded": false,
+  "rights_reviewed": false,
+  "purpose": "verify in this order until four, then eight, sources per complexity tercile are eligible"
+}
