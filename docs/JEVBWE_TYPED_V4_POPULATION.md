@@ -137,6 +137,64 @@ make jevbwe-typed-population-test TYPED=results/regen   # step 4, after the free
   module; nothing V4 executes changed except that the development registration is written by
   `register`. The base ratio selected on the 512 `pop_d` tune traces is 1.05.
 
+- 2026-10-09, training, validation and the development panel completed (training and
+  validation 72 minutes, development 46). Between the training launch and the freeze, commit
+  `c811b0a` changed the evidence exporter, documents and the paper only.
+- 2026-10-09, freeze: `configs/jevbwe_typed_v4_test.json` written by `jevbwe-typed register`
+  from the five trained model files and committed with these development results, before any
+  controller ran on `pop_s`.
+
 ## Results
 
-None yet.
+### Validation: the 64 training families, fresh traces (4 each)
+
+| Quantity | Result (family-level t interval) |
+|---|---|
+| Base ratio selected on 512 tune traces | 1.05 (0.1556 against 0.1548 for 1.00) |
+| Tuned rule selected on the same traces | `delay(high=1.05, low=1.0, on_ms=50, off_ms=10)` |
+| RLCD head minus fixed 1.05 | +0.029 [+0.007, +0.052], 33 of 64 families |
+| Regression head minus fixed 1.05 | +0.046 [+0.023, +0.069], 40 of 64 |
+| RLCD minus regression head | -0.017 [-0.025, -0.008] |
+| RLCD minus exact-gradient head | -0.000 [-0.002, +0.002] |
+| Hindsight oracle minus fixed 1.05 | +0.087 [+0.062, +0.113] |
+| Pooled ECE of the RLCD head | 0.008 |
+| Unsafe intervals, RLCD head | -0.73 points |
+
+In distribution the population is a harder target than the 13 hand-written families were. V3
+gained +0.126 of an oracle headroom of +0.248 on its own training families; V4 gains +0.029 of
++0.087 on its own.
+
+### Development: `pop_r`, the traces of the V3 replication (48 families by 16 traces)
+
+Not confirmatory: `pop_r` had been read. All 19,200 learned episodes replay exactly without
+rollouts, and the fixed-ratio outcomes are identical to the replication's (largest difference
+0), so the last column is paired.
+
+| Quantity | V4 (trained on `pop_d`) | V3 (replication) | V4 minus V3 |
+|---|---|---|---|
+| RLCD head minus fixed 1.05 | +0.012 [-0.014, +0.038], 25 of 48 | +0.019 [+0.005, +0.034], 32 of 48 | -0.008 [-0.038, +0.023] |
+| RLCD head minus tuned rule | +0.012 [-0.014, +0.038] | +0.020 [+0.004, +0.035] | |
+| Regression head minus fixed 1.05 | +0.024 [+0.006, +0.041], 35 of 48 | +0.021 [+0.005, +0.037], 29 of 48 | +0.002 [-0.020, +0.025] |
+| RLCD minus regression head | -0.012 [-0.024, +0.001] | -0.002 [-0.006, +0.003] | |
+| Pooled ECE | 0.037 | 0.138 | |
+| Families with ECE above 0.05 | 39 of 48 | 35 of 48 | |
+| Unsafe intervals, points | -0.86 [-1.14, -0.62] | -0.26 [-0.38, -0.16] | -0.60 |
+| Decisions that leave the base ratio | 32% | 7% | |
+
+Reading, for development only:
+
+- Training on draws from the population did not raise the typed head's gain on other draws.
+  The point estimate is lower than V3's and its interval now includes zero, because the head
+  acts in a third of decisions instead of a fourteenth and families spread further apart.
+- Pooled calibration improved to within the threshold. Family by family it did not: ECE exceeds
+  0.05 in 39 of 48 families.
+- Unsafe intervals fall by more than under V3.
+- The regression control is ahead of the typed head in distribution and on the development
+  panel, which is a first in this track. The typed label says which option is best; the
+  regression target says by how much.
+
+As registered, the test is run whatever this panel shows.
+
+### Test: `pop_s`
+
+Not run yet.

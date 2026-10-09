@@ -1,0 +1,43 @@
+{
+ "base_ratio": 1.05,
+ "models": {
+  "model_seed_0.json": "9a91b31ec8847f30ca71427521bbf8415acc683e43eb311e24045e9debb79987",
+  "model_seed_1.json": "a153e73e962be6812c2d5644d53f6021af3623104ad5b80fe296c0e6bbbbe05d",
+  "model_seed_2.json": "05c6c97ef2b1e37609c2a9759dc6e6d1ad4d43bfa81bfa33532a6a15a0ee6910",
+  "model_seed_3.json": "aa8197574475707beaa9299e84275dd3f8df8291d68611aa4d5bcf0f4858d4ca",
+  "model_seed_4.json": "a6082855b871578ab482098483171117b14137167200238db0fec3d1ded0bf1d"
+ },
+ "name": "jevbwe-typed-v4-test",
+ "panel": "s",
+ "population_hash": "fbfb8da06b15443679e4da1bb46a030d46be9a55caeafcca257df7ab5fdd679c",
+ "population_seed": 20261008,
+ "primary_method": "choice_rlcd_bayes",
+ "protocol": "docs/JEVBWE_TYPED_V4_POPULATION.md",
+ "rule_best": {
+  "high": 1.05,
+  "kind": "delay",
+  "low": 1,
+  "off_ms": 10,
+  "on_ms": 50
+ },
+ "sensitive_margin": 0.02,
+ "source": "jevbwe-typed-v4-population",
+ "test_seeds": [
+  29401,
+  29402,
+  29403,
+  29404,
+  29405,
+  29406,
+  29407,
+  29408,
+  29409,
+  29410,
+  29411,
+  29412,
+  29413,
+  29414,
+  29415,
+  29416
+ ]
+}
