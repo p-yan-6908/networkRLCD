@@ -720,6 +720,15 @@ def main(argv=None):
     p.add_argument("--replication", type=Path)
     p.add_argument("--replication-baselines", type=Path)
     p.add_argument("--factual", type=Path)
+    p.add_argument("--crossover", type=Path)
+    p.add_argument("--panel", nargs=3, action="append", default=[], metavar=("PREFIX", "RUN", "BASELINES"))
+    p.add_argument("--validation", nargs=2, action="append", default=[], metavar=("PREFIX", "RUN"))
+    p.add_argument("--out", required=True, type=Path)
+    p = sub.add_parser(
+        "crossover", help="Per-link crossover identification against identical-trace differences"
+    )
+    p.add_argument("--run", required=True, type=Path)
+    p.add_argument("--settings", type=Path)
     p.add_argument("--out", required=True, type=Path)
     p = sub.add_parser("transfer", help="Evaluate a finished run's frozen models once on a registered panel")
     p.add_argument("--run", required=True, type=Path)
@@ -771,9 +780,21 @@ def main(argv=None):
             from .typed_bitrate_followup_report import export as followup
 
             written = followup(
-                args.out, args.baselines, args.replication, args.replication_baselines, args.factual
+                args.out,
+                args.baselines,
+                args.replication,
+                args.replication_baselines,
+                args.factual,
+                args.panel,
+                args.validation,
+                args.crossover,
             )
             print(json.dumps(written, indent=1))
+            return
+        if args.command == "crossover":
+            from . import typed_bitrate_crossover as crossover
+
+            print(crossover.headline(crossover.study(args.run, args.out, args.settings)))
             return
         if args.command == "transfer":
             print(headline(transfer(args.run, args.out, args.registration)))

@@ -3,6 +3,19 @@
 Status: **protocol registered 2026-10-08, before any V4 model was trained.** Results are
 appended below the protocol and do not change it.
 
+**Outcome.** All four pre-specified criteria are met on the sealed panel. On 48 families that
+no controller had run on, the V4 typed head gains +0.032 utility over the train-selected fixed
+ratio (family-level t interval [+0.008, +0.056], bootstrap [+0.007, +0.056], 35 of 48 families)
+and +0.032 over the tuned rule, with pooled ECE 0.020 and unsafe intervals down 0.87 points.
+Three registered secondaries limit what that means. Training on the population did not raise
+the typed head's utility: V4 minus the frozen V3 head on identical traces is +0.004
+[-0.018, +0.026], and V3 itself gains +0.028 there. What population training changed is pooled
+calibration (ECE 0.145 to 0.020) and constraint violations (-0.57 points). The regression
+control beats the typed head by 0.023 [+0.011, +0.036]. And family by family the probabilities
+are still off: ECE exceeds 0.05 in 38 of 48 families. The gain is a quarter of the hindsight
+oracle's. On the development panel, read first, the same models gained +0.012 with an interval
+that includes zero. Synthetic only; the typed controller is not promoted.
+
 Simulator study in the synthetic track. It trains new typed heads with the V3 method and
 changes the training distribution only. The native controller freeze and the registered native
 Phase N1 are untouched and are not informed by it.
@@ -143,6 +156,10 @@ make jevbwe-typed-population-test TYPED=results/regen   # step 4, after the free
 - 2026-10-09, freeze: `configs/jevbwe_typed_v4_test.json` written by `jevbwe-typed register`
   from the five trained model files and committed with these development results, before any
   controller ran on `pop_s`.
+- 2026-10-09, test: both transfers, their replays, audits and rule comparisons ran once from the
+  freeze commit `cd698f6` with a clean working tree (`results/v4-stage2.log`), in 106 minutes.
+  A development study on other families ran on the same machine for part of that time; it
+  shares no state with the test.
 
 ## Results
 
@@ -195,6 +212,99 @@ Reading, for development only:
 
 As registered, the test is run whatever this panel shows.
 
-### Test: `pop_s`
+### Test: `pop_s`, the sealed panel (48 families by 16 traces, five model seeds)
 
-Not run yet.
+One evaluation of the V4 models and one of the frozen V3 models, on identical traces. All
+19,200 learned episodes of each replay exactly with rollouts switched off, the recomputed
+decision rule reproduces every executed option, and the fixed-ratio outcomes of the two runs
+are identical (largest difference 0).
+
+| Method | Utility | Unsafe intervals |
+|---|---:|---:|
+| fixed 1.00 (best fixed ratio on this panel, in hindsight) | 0.157 | 6.7% |
+| **fixed 1.05** (selected on `pop_d`; the comparator for both runs) | **0.155** | 6.9% |
+| V3 RLCD head (trained on 13 hand-written families) | 0.183 | 6.6% |
+| V3 regression head | 0.180 | 6.7% |
+| **V4 RLCD head** (trained on `pop_d`) | **0.187** | 6.1% |
+| V4 exact-gradient head | 0.185 | 6.1% |
+| V4 regression head | 0.210 | 6.2% |
+| hindsight oracle | 0.281 | 6.2% |
+
+5.7% of control intervals violate a constraint whatever the sender does.
+
+#### Pre-specified criteria (V4, `choice_rlcd_bayes`)
+
+| # | Criterion | Result | Met |
+|---|---|---|---|
+| 1 | Gain over fixed 1.05; both family-level intervals exclude zero | +0.032; bootstrap [+0.007, +0.056]; t [+0.008, +0.056]; 35/48 families positive | yes |
+| 2 | Gain over the tuned rule; both intervals exclude zero | +0.032; bootstrap [+0.009, +0.056]; t [+0.009, +0.056]; 36/48 | yes |
+| 3 | Pooled ECE at most 0.05 | 0.020 (accuracy 0.816 at confidence 0.818); family-level interval [0.013, 0.051] | yes |
+| 4 | Upper end of the unsafe-share difference at most +1.0 point | -0.87 points; family-level interval [-1.10, -0.67] | yes |
+
+By the table fixed in advance this is the row "1 to 4 met".
+
+#### Registered secondaries
+
+| Quantity | Result (family t interval) |
+|---|---|
+| **V4 minus V3, typed head, identical traces** | +0.004 [-0.018, +0.026]; bootstrap [-0.019, +0.025]; 32/48. Not established |
+| V4 minus V3, unsafe intervals | -0.57 points [-0.75, -0.39] |
+| V4 minus V3, regression head | +0.031 [+0.011, +0.050]; 40/48 |
+| V3 head minus its fixed ratio (second replication of V3) | +0.028 [+0.012, +0.044]; 37/48; ECE 0.145; unsafe -0.30 points; three of four criteria, as on `pop_r` |
+| V4 head minus the hindsight-best fixed ratio (1.00) | +0.030 [+0.011, +0.049] |
+| Hindsight oracle minus fixed 1.05 | +0.126 [+0.096, +0.156]; the V4 head realises 25% |
+| **V4 RLCD minus regression head** | -0.023 [-0.036, -0.011]; bootstrap [-0.037, -0.011] |
+| V4 RLCD minus exact-gradient head | +0.002; t [+0.000, +0.004]; bootstrap [-0.001, +0.007] |
+| Payoff-weighted minus `map` rule | -0.000 [-0.023, +0.022] |
+| Action-sensitive families (39 of 48) | head minus fixed +0.041 [+0.012, +0.069]; head minus rule +0.041 [+0.013, +0.069] |
+| Leave-one-family-out range of the gain | +0.028 to +0.037 |
+| Family ECE | 0.003 to 0.327, median 0.113; above 0.05 in 38 of 48 families |
+| Decisions that leave the base ratio | 37% |
+
+#### What the result does and does not show
+
+- **The registered claim holds.** With training families drawn from the test population, the
+  typed head gains on families no controller had run on, against a fixed ratio and a tuned
+  rule, with pooled calibration inside the threshold and fewer constraint violations. This is
+  the first panel in the track where every pre-specified criterion is met.
+- **Population training did not buy utility for the typed head.** The paired contrast with the
+  frozen V3 head is +0.004 with an interval from -0.018 to +0.026, and V3's own gain on this
+  panel is +0.028. The claim "training on the population generalises better" is therefore not
+  made for the typed head's utility. It is supported for calibration and for constraint
+  violations, and for the regression head's utility (+0.031).
+- **The typed head is not the best use of the labels.** Advantage regression gains +0.056
+  against +0.032 on the sealed panel, and the difference excludes zero at family level. The
+  same held in distribution and on the development panel. A typed choice label says which
+  option is best; the regression target says by how much. For control the second is worth more.
+- **RLCD against the exact gradient.** On this panel the difference is +0.002 and its t
+  interval just excludes zero while its bootstrap interval does not. The protocol allowed an
+  RLCD-specific claim if "such an interval" excluded zero. We do not make one: the difference
+  is a fifteenth of the gain, one of its two intervals includes zero, it was absent or of the
+  opposite sign on four earlier panels, and on the same panel regression is ahead of both by
+  ten times as much.
+- **Pooled calibration is not family calibration.** Confidence and accuracy agree to 0.003
+  when pooled over the panel. Within families they do not: ECE exceeds 0.05 in 38 of 48.
+  Over-confident and under-confident families cancel. The registered criterion was the pooled
+  one, and it is met; a user of the probabilities on one link should not expect them to be
+  calibrated there.
+- **Two panels, two sizes.** On `pop_r`, read first as development, the same models gained
+  +0.012 [-0.014, +0.038]. On `pop_s` they gain +0.032 [+0.008, +0.056]. Both are 48 draws
+  from one population and the intervals overlap widely. The test is the registered result; the
+  development figure is the reason not to quote +0.032 as the size of the effect. Over the 96
+  families the mean is +0.022.
+- **Family spread grew.** V4 acts in 37% of decisions against V3's 7%, and its family-level
+  gains run from -0.204 to +0.207 with a standard deviation of 0.082 (V3: 0.056). It wins more
+  and loses more.
+- **A quarter of the headroom.** A constant ratio chosen per family in hindsight would gain
+  +0.026 on this panel; the V4 head is +0.006 above that and the regression head +0.029.
+- Simulator only. The labels are hindsight rollouts, which a real network cannot provide.
+  Nothing here is a native result and the typed controller is not promoted.
+
+#### Status of the data
+
+`pop_s` has now been read and is a development panel. The population has no sealed panel left;
+a further confirmatory experiment needs a new index space, which the generator can supply at
+no cost and which must be registered before use.
+
+Tracked summaries: `results/jevbwe-typed-v4-test/` and `results/jevbwe-typed-v3-on-sealed/`
+(`config`, `report`, `audit_test`, `test_isolation`) and their `-baselines/report.json`.

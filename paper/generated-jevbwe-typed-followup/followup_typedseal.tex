@@ -1,0 +1,17 @@
+\begin{tabular}{lrllr}
+\toprule
+Quantity & Estimate & Family bootstrap & Family $t$ & Criterion \\
+\midrule
+1. Head $-$ train-selected fixed ratio & $+$0.028 & [$+$0.014, $+$0.046] & [$+$0.012, $+$0.044] & met \\
+2. Head $-$ tuned rule & $+$0.030 & [$+$0.014, $+$0.048] & [$+$0.012, $+$0.047] & met \\
+3. Pooled ECE (at most 0.05) & 0.145 & [0.105, 0.187] & n/a & not met \\
+4. Unsafe intervals, points (upper end at most $+$1.0) & $-$0.30 & [$-$0.45, $-$0.18] & [$-$0.43, $-$0.18] & met \\
+\midrule
+Head $-$ hindsight-best fixed ratio & $+$0.026 & [$+$0.011, $+$0.043] & [$+$0.010, $+$0.042] &  \\
+RLCD $-$ exact-gradient head & $-$0.001 & [$-$0.004, $+$0.002] & [$-$0.002, $+$0.001] &  \\
+RLCD $-$ regression head & $+$0.003 & [$-$0.005, $+$0.011] & [$-$0.004, $+$0.011] &  \\
+Tuned rule $-$ fixed ratio & $-$0.002 & [$-$0.008, $+$0.004] & [$-$0.007, $+$0.004] &  \\
+Hindsight oracle $-$ fixed ratio & $+$0.126 & [$+$0.097, $+$0.155] & [$+$0.096, $+$0.156] &  \\
+Head $-$ fixed ratio, 39 action-sensitive families & $+$0.035 & [$+$0.017, $+$0.055] & [$+$0.015, $+$0.054] &  \\
+\bottomrule
+\end{tabular}

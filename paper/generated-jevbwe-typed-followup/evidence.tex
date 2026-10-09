@@ -102,6 +102,16 @@
 \newcommand{\TypedRepOracleGainT}{[$+$0.080, $+$0.135]}
 \newcommand{\TypedRepOracleGainLeaveOut}{[$+$0.103, $+$0.110]}
 \newcommand{\TypedRepOracleShare}{18}
+\newcommand{\TypedRepFamilyConstantGain}{$+$0.030}
+\newcommand{\TypedRepFamilyConstantShare}{28}
+\newcommand{\TypedRepHeadVsFamilyConstant}{$-$0.010}
+\newcommand{\TypedRepRegressVsFamilyConstant}{$-$0.009}
+\newcommand{\TypedRepRegressGain}{$+$0.021}
+\newcommand{\TypedRepRegressGainSeed}{[$+$0.016, $+$0.026]}
+\newcommand{\TypedRepRegressGainPositive}{29 of 48}
+\newcommand{\TypedRepRegressGainFamily}{[$+$0.007, $+$0.039]}
+\newcommand{\TypedRepRegressGainT}{[$+$0.005, $+$0.037]}
+\newcommand{\TypedRepRegressGainLeaveOut}{[$+$0.016, $+$0.022]}
 \newcommand{\TypedRepRlcdVsAnalytic}{$+$0.000}
 \newcommand{\TypedRepRlcdVsAnalyticSeed}{[$-$0.002, $+$0.002]}
 \newcommand{\TypedRepRlcdVsAnalyticPositive}{26 of 48}
@@ -152,6 +162,409 @@
 \newcommand{\TypedRepMetConstraints}{met}
 \newcommand{\TypedRepCriteriaMet}{three}
 \newcommand{\TypedRepCriteria}{four}
+\newcommand{\TypedPopDevFamilies}{48}
+\newcommand{\TypedPopDevTraceSeeds}{16}
+\newcommand{\TypedPopDevTraces}{768}
+\newcommand{\TypedPopDevSealedFamilies}{48}
+\newcommand{\TypedPopDevPoolFamilies}{64}
+\newcommand{\TypedPopDevBaseRatio}{1.05}
+\newcommand{\TypedPopDevHindsightRatio}{1.00}
+\newcommand{\TypedPopDevBaseUtility}{0.096}
+\newcommand{\TypedPopDevHindsightUtility}{0.103}
+\newcommand{\TypedPopDevHeadUtility}{0.108}
+\newcommand{\TypedPopDevOracleUtility}{0.203}
+\newcommand{\TypedPopDevBaseUnsafe}{8.07}
+\newcommand{\TypedPopDevHeadUnsafe}{7.20}
+\newcommand{\TypedPopDevOverride}{32.4}
+\newcommand{\TypedPopDevEce}{0.037}
+\newcommand{\TypedPopDevEceFamily}{[0.024, 0.064]}
+\newcommand{\TypedPopDevAccuracy}{0.828}
+\newcommand{\TypedPopDevConfidence}{0.835}
+\newcommand{\TypedPopDevEceBest}{0.004}
+\newcommand{\TypedPopDevEceWorst}{0.383}
+\newcommand{\TypedPopDevEceMedian}{0.107}
+\newcommand{\TypedPopDevEceAbove}{39}
+\newcommand{\TypedPopDevFamilySd}{0.089}
+\newcommand{\TypedPopDevNearZero}{9}
+\newcommand{\TypedPopDevLargest}{$+$0.169}
+\newcommand{\TypedPopDevSmallest}{$-$0.358}
+\newcommand{\TypedPopDevFloor}{6.9}
+\newcommand{\TypedPopDevIsolationEpisodes}{19{,}200}
+\newcommand{\TypedPopDevIsolationDifference}{0.0}
+\newcommand{\TypedPopDevRuleName}{delay hysteresis between 1.05 and 1.00, reducing at 50\,ms of excess round-trip delay and restoring at 10\,ms}
+\newcommand{\TypedPopDevGain}{$+$0.012}
+\newcommand{\TypedPopDevGainSeed}{[$+$0.006, $+$0.018]}
+\newcommand{\TypedPopDevGainPositive}{25 of 48}
+\newcommand{\TypedPopDevGainFamily}{[$-$0.015, $+$0.036]}
+\newcommand{\TypedPopDevGainT}{[$-$0.014, $+$0.038]}
+\newcommand{\TypedPopDevGainLeaveOut}{[$+$0.008, $+$0.020]}
+\newcommand{\TypedPopDevGainVsHindsight}{$+$0.004}
+\newcommand{\TypedPopDevGainVsHindsightSeed}{[$-$0.001, $+$0.010]}
+\newcommand{\TypedPopDevGainVsHindsightPositive}{31 of 48}
+\newcommand{\TypedPopDevGainVsHindsightFamily}{[$-$0.018, $+$0.025]}
+\newcommand{\TypedPopDevGainVsHindsightT}{[$-$0.017, $+$0.026]}
+\newcommand{\TypedPopDevGainVsHindsightLeaveOut}{[$+$0.002, $+$0.011]}
+\newcommand{\TypedPopDevUnsafe}{$-$0.86}
+\newcommand{\TypedPopDevUnsafeSeed}{[$-$0.93, $-$0.80]}
+\newcommand{\TypedPopDevUnsafePositive}{0 of 48}
+\newcommand{\TypedPopDevUnsafeFamily}{[$-$1.14, $-$0.62]}
+\newcommand{\TypedPopDevUnsafeT}{[$-$1.13, $-$0.59]}
+\newcommand{\TypedPopDevUnsafeLeaveOut}{[$-$0.88, $-$0.79]}
+\newcommand{\TypedPopDevOracleGain}{$+$0.108}
+\newcommand{\TypedPopDevOracleGainSeed}{[$+$0.102, $+$0.112]}
+\newcommand{\TypedPopDevOracleGainPositive}{42 of 48}
+\newcommand{\TypedPopDevOracleGainFamily}{[$+$0.081, $+$0.136]}
+\newcommand{\TypedPopDevOracleGainT}{[$+$0.080, $+$0.135]}
+\newcommand{\TypedPopDevOracleGainLeaveOut}{[$+$0.103, $+$0.110]}
+\newcommand{\TypedPopDevOracleShare}{11}
+\newcommand{\TypedPopDevFamilyConstantGain}{$+$0.030}
+\newcommand{\TypedPopDevFamilyConstantShare}{28}
+\newcommand{\TypedPopDevHeadVsFamilyConstant}{$-$0.018}
+\newcommand{\TypedPopDevRegressVsFamilyConstant}{$-$0.006}
+\newcommand{\TypedPopDevRegressGain}{$+$0.023}
+\newcommand{\TypedPopDevRegressGainSeed}{[$+$0.018, $+$0.028]}
+\newcommand{\TypedPopDevRegressGainPositive}{35 of 48}
+\newcommand{\TypedPopDevRegressGainFamily}{[$+$0.004, $+$0.041]}
+\newcommand{\TypedPopDevRegressGainT}{[$+$0.006, $+$0.041]}
+\newcommand{\TypedPopDevRegressGainLeaveOut}{[$+$0.021, $+$0.029]}
+\newcommand{\TypedPopDevRlcdVsAnalytic}{$+$0.000}
+\newcommand{\TypedPopDevRlcdVsAnalyticSeed}{[$-$0.002, $+$0.002]}
+\newcommand{\TypedPopDevRlcdVsAnalyticPositive}{20 of 48}
+\newcommand{\TypedPopDevRlcdVsAnalyticFamily}{[$-$0.003, $+$0.003]}
+\newcommand{\TypedPopDevRlcdVsAnalyticT}{[$-$0.001, $+$0.001]}
+\newcommand{\TypedPopDevRlcdVsAnalyticLeaveOut}{[$-$0.000, $+$0.000]}
+\newcommand{\TypedPopDevRlcdVsRegress}{$-$0.012}
+\newcommand{\TypedPopDevRlcdVsRegressSeed}{[$-$0.015, $-$0.008]}
+\newcommand{\TypedPopDevRlcdVsRegressPositive}{23 of 48}
+\newcommand{\TypedPopDevRlcdVsRegressFamily}{[$-$0.024, $+$0.000]}
+\newcommand{\TypedPopDevRlcdVsRegressT}{[$-$0.024, $+$0.001]}
+\newcommand{\TypedPopDevRlcdVsRegressLeaveOut}{[$-$0.014, $-$0.010]}
+\newcommand{\TypedPopDevBayesVsMap}{$-$0.005}
+\newcommand{\TypedPopDevBayesVsMapSeed}{[$-$0.012, $+$0.001]}
+\newcommand{\TypedPopDevBayesVsMapPositive}{23 of 48}
+\newcommand{\TypedPopDevBayesVsMapFamily}{[$-$0.032, $+$0.021]}
+\newcommand{\TypedPopDevBayesVsMapT}{[$-$0.032, $+$0.022]}
+\newcommand{\TypedPopDevBayesVsMapLeaveOut}{[$-$0.008, $-$0.000]}
+\newcommand{\TypedPopDevGainVsRule}{$+$0.012}
+\newcommand{\TypedPopDevGainVsRuleSeed}{[$+$0.006, $+$0.018]}
+\newcommand{\TypedPopDevGainVsRulePositive}{28 of 48}
+\newcommand{\TypedPopDevGainVsRuleFamily}{[$-$0.014, $+$0.035]}
+\newcommand{\TypedPopDevGainVsRuleT}{[$-$0.014, $+$0.038]}
+\newcommand{\TypedPopDevGainVsRuleLeaveOut}{[$+$0.009, $+$0.020]}
+\newcommand{\TypedPopDevRuleVsFixed}{$-$0.000}
+\newcommand{\TypedPopDevRuleVsFixedSeed}{[$-$0.001, $+$0.000]}
+\newcommand{\TypedPopDevRuleVsFixedPositive}{15 of 48}
+\newcommand{\TypedPopDevRuleVsFixedFamily}{[$-$0.001, $+$0.001]}
+\newcommand{\TypedPopDevRuleVsFixedT}{[$-$0.001, $+$0.000]}
+\newcommand{\TypedPopDevRuleVsFixedLeaveOut}{[$-$0.000, $+$0.000]}
+\newcommand{\TypedPopDevSensitiveFamilies}{36}
+\newcommand{\TypedPopDevSensitiveMargin}{0.02}
+\newcommand{\TypedPopDevSensitiveGain}{$+$0.020}
+\newcommand{\TypedPopDevSensitiveGainSeed}{[$+$0.014, $+$0.027]}
+\newcommand{\TypedPopDevSensitiveGainPositive}{25 of 36}
+\newcommand{\TypedPopDevSensitiveGainFamily}{[$-$0.015, $+$0.052]}
+\newcommand{\TypedPopDevSensitiveGainT}{[$-$0.014, $+$0.054]}
+\newcommand{\TypedPopDevSensitiveGainLeaveOut}{[$+$0.016, $+$0.031]}
+\newcommand{\TypedPopDevSensitiveGainVsRule}{$+$0.021}
+\newcommand{\TypedPopDevSensitiveGainVsRuleSeed}{[$+$0.014, $+$0.027]}
+\newcommand{\TypedPopDevSensitiveGainVsRulePositive}{25 of 36}
+\newcommand{\TypedPopDevSensitiveGainVsRuleFamily}{[$-$0.015, $+$0.052]}
+\newcommand{\TypedPopDevSensitiveGainVsRuleT}{[$-$0.013, $+$0.055]}
+\newcommand{\TypedPopDevSensitiveGainVsRuleLeaveOut}{[$+$0.016, $+$0.031]}
+\newcommand{\TypedPopDevVsReference}{$-$0.008}
+\newcommand{\TypedPopDevVsReferenceSeed}{[$-$0.013, $-$0.002]}
+\newcommand{\TypedPopDevVsReferencePositive}{25 of 48}
+\newcommand{\TypedPopDevVsReferenceFamily}{[$-$0.040, $+$0.020]}
+\newcommand{\TypedPopDevVsReferenceT}{[$-$0.038, $+$0.023]}
+\newcommand{\TypedPopDevVsReferenceLeaveOut}{[$-$0.011, $+$0.002]}
+\newcommand{\TypedPopDevVsReferenceUnsafe}{$-$0.60}
+\newcommand{\TypedPopDevVsReferenceUnsafeSeed}{[$-$0.65, $-$0.55]}
+\newcommand{\TypedPopDevVsReferenceUnsafePositive}{1 of 48}
+\newcommand{\TypedPopDevVsReferenceUnsafeFamily}{[$-$0.88, $-$0.37]}
+\newcommand{\TypedPopDevVsReferenceUnsafeT}{[$-$0.85, $-$0.35]}
+\newcommand{\TypedPopDevVsReferenceUnsafeLeaveOut}{[$-$0.61, $-$0.52]}
+\newcommand{\TypedPopDevFixedVsReference}{$+$0.000}
+\newcommand{\TypedPopDevFixedVsReferenceSeed}{[$+$0.000, $+$0.000]}
+\newcommand{\TypedPopDevFixedVsReferencePositive}{0 of 48}
+\newcommand{\TypedPopDevFixedVsReferenceFamily}{[$+$0.000, $+$0.000]}
+\newcommand{\TypedPopDevFixedVsReferenceT}{[$+$0.000, $+$0.000]}
+\newcommand{\TypedPopDevFixedVsReferenceLeaveOut}{[$+$0.000, $+$0.000]}
+\newcommand{\TypedPopDevReferenceIdentity}{0.0}
+\newcommand{\TypedPopDevMetGain}{not met}
+\newcommand{\TypedPopDevMetRule}{not met}
+\newcommand{\TypedPopDevMetCalibration}{met}
+\newcommand{\TypedPopDevMetConstraints}{met}
+\newcommand{\TypedPopDevCriteriaMet}{two}
+\newcommand{\TypedPopDevCriteria}{four}
+\newcommand{\TypedPopFamilies}{48}
+\newcommand{\TypedPopTraceSeeds}{16}
+\newcommand{\TypedPopTraces}{768}
+\newcommand{\TypedPopSealedFamilies}{48}
+\newcommand{\TypedPopPoolFamilies}{64}
+\newcommand{\TypedPopBaseRatio}{1.05}
+\newcommand{\TypedPopHindsightRatio}{1.00}
+\newcommand{\TypedPopBaseUtility}{0.155}
+\newcommand{\TypedPopHindsightUtility}{0.157}
+\newcommand{\TypedPopHeadUtility}{0.187}
+\newcommand{\TypedPopOracleUtility}{0.281}
+\newcommand{\TypedPopBaseUnsafe}{6.93}
+\newcommand{\TypedPopHeadUnsafe}{6.06}
+\newcommand{\TypedPopOverride}{37.0}
+\newcommand{\TypedPopEce}{0.020}
+\newcommand{\TypedPopEceFamily}{[0.013, 0.051]}
+\newcommand{\TypedPopAccuracy}{0.816}
+\newcommand{\TypedPopConfidence}{0.818}
+\newcommand{\TypedPopEceBest}{0.003}
+\newcommand{\TypedPopEceWorst}{0.327}
+\newcommand{\TypedPopEceMedian}{0.113}
+\newcommand{\TypedPopEceAbove}{38}
+\newcommand{\TypedPopFamilySd}{0.082}
+\newcommand{\TypedPopNearZero}{8}
+\newcommand{\TypedPopLargest}{$+$0.207}
+\newcommand{\TypedPopSmallest}{$-$0.204}
+\newcommand{\TypedPopFloor}{5.7}
+\newcommand{\TypedPopIsolationEpisodes}{19{,}200}
+\newcommand{\TypedPopIsolationDifference}{0.0}
+\newcommand{\TypedPopRuleName}{delay hysteresis between 1.05 and 1.00, reducing at 50\,ms of excess round-trip delay and restoring at 10\,ms}
+\newcommand{\TypedPopGain}{$+$0.032}
+\newcommand{\TypedPopGainSeed}{[$+$0.027, $+$0.037]}
+\newcommand{\TypedPopGainPositive}{35 of 48}
+\newcommand{\TypedPopGainFamily}{[$+$0.007, $+$0.056]}
+\newcommand{\TypedPopGainT}{[$+$0.008, $+$0.056]}
+\newcommand{\TypedPopGainLeaveOut}{[$+$0.028, $+$0.037]}
+\newcommand{\TypedPopGainVsHindsight}{$+$0.030}
+\newcommand{\TypedPopGainVsHindsightSeed}{[$+$0.024, $+$0.036]}
+\newcommand{\TypedPopGainVsHindsightPositive}{39 of 48}
+\newcommand{\TypedPopGainVsHindsightFamily}{[$+$0.010, $+$0.049]}
+\newcommand{\TypedPopGainVsHindsightT}{[$+$0.011, $+$0.049]}
+\newcommand{\TypedPopGainVsHindsightLeaveOut}{[$+$0.027, $+$0.034]}
+\newcommand{\TypedPopUnsafe}{$-$0.87}
+\newcommand{\TypedPopUnsafeSeed}{[$-$0.96, $-$0.79]}
+\newcommand{\TypedPopUnsafePositive}{0 of 48}
+\newcommand{\TypedPopUnsafeFamily}{[$-$1.10, $-$0.67]}
+\newcommand{\TypedPopUnsafeT}{[$-$1.09, $-$0.66]}
+\newcommand{\TypedPopUnsafeLeaveOut}{[$-$0.89, $-$0.83]}
+\newcommand{\TypedPopOracleGain}{$+$0.126}
+\newcommand{\TypedPopOracleGainSeed}{[$+$0.118, $+$0.134]}
+\newcommand{\TypedPopOracleGainPositive}{45 of 48}
+\newcommand{\TypedPopOracleGainFamily}{[$+$0.097, $+$0.155]}
+\newcommand{\TypedPopOracleGainT}{[$+$0.096, $+$0.156]}
+\newcommand{\TypedPopOracleGainLeaveOut}{[$+$0.121, $+$0.129]}
+\newcommand{\TypedPopOracleShare}{25}
+\newcommand{\TypedPopFamilyConstantGain}{$+$0.026}
+\newcommand{\TypedPopFamilyConstantShare}{21}
+\newcommand{\TypedPopHeadVsFamilyConstant}{$+$0.006}
+\newcommand{\TypedPopRegressVsFamilyConstant}{$+$0.029}
+\newcommand{\TypedPopRegressGain}{$+$0.056}
+\newcommand{\TypedPopRegressGainSeed}{[$+$0.051, $+$0.060]}
+\newcommand{\TypedPopRegressGainPositive}{38 of 48}
+\newcommand{\TypedPopRegressGainFamily}{[$+$0.032, $+$0.081]}
+\newcommand{\TypedPopRegressGainT}{[$+$0.031, $+$0.081]}
+\newcommand{\TypedPopRegressGainLeaveOut}{[$+$0.050, $+$0.059]}
+\newcommand{\TypedPopRlcdVsAnalytic}{$+$0.002}
+\newcommand{\TypedPopRlcdVsAnalyticSeed}{[$-$0.001, $+$0.006]}
+\newcommand{\TypedPopRlcdVsAnalyticPositive}{28 of 48}
+\newcommand{\TypedPopRlcdVsAnalyticFamily}{[$-$0.001, $+$0.007]}
+\newcommand{\TypedPopRlcdVsAnalyticT}{[$+$0.000, $+$0.004]}
+\newcommand{\TypedPopRlcdVsAnalyticLeaveOut}{[$+$0.002, $+$0.002]}
+\newcommand{\TypedPopRlcdVsRegress}{$-$0.023}
+\newcommand{\TypedPopRlcdVsRegressSeed}{[$-$0.027, $-$0.020]}
+\newcommand{\TypedPopRlcdVsRegressPositive}{21 of 48}
+\newcommand{\TypedPopRlcdVsRegressFamily}{[$-$0.037, $-$0.011]}
+\newcommand{\TypedPopRlcdVsRegressT}{[$-$0.036, $-$0.011]}
+\newcommand{\TypedPopRlcdVsRegressLeaveOut}{[$-$0.025, $-$0.021]}
+\newcommand{\TypedPopBayesVsMap}{$-$0.000}
+\newcommand{\TypedPopBayesVsMapSeed}{[$-$0.005, $+$0.005]}
+\newcommand{\TypedPopBayesVsMapPositive}{30 of 48}
+\newcommand{\TypedPopBayesVsMapFamily}{[$-$0.024, $+$0.021]}
+\newcommand{\TypedPopBayesVsMapT}{[$-$0.023, $+$0.022]}
+\newcommand{\TypedPopBayesVsMapLeaveOut}{[$-$0.003, $+$0.005]}
+\newcommand{\TypedPopGainVsRule}{$+$0.032}
+\newcommand{\TypedPopGainVsRuleSeed}{[$+$0.027, $+$0.037]}
+\newcommand{\TypedPopGainVsRulePositive}{36 of 48}
+\newcommand{\TypedPopGainVsRuleFamily}{[$+$0.009, $+$0.056]}
+\newcommand{\TypedPopGainVsRuleT}{[$+$0.009, $+$0.056]}
+\newcommand{\TypedPopGainVsRuleLeaveOut}{[$+$0.029, $+$0.037]}
+\newcommand{\TypedPopRuleVsFixed}{$-$0.000}
+\newcommand{\TypedPopRuleVsFixedSeed}{[$-$0.001, $+$0.000]}
+\newcommand{\TypedPopRuleVsFixedPositive}{15 of 48}
+\newcommand{\TypedPopRuleVsFixedFamily}{[$-$0.001, $+$0.001]}
+\newcommand{\TypedPopRuleVsFixedT}{[$-$0.001, $+$0.001]}
+\newcommand{\TypedPopRuleVsFixedLeaveOut}{[$-$0.000, $+$0.000]}
+\newcommand{\TypedPopSensitiveFamilies}{39}
+\newcommand{\TypedPopSensitiveMargin}{0.02}
+\newcommand{\TypedPopSensitiveGain}{$+$0.041}
+\newcommand{\TypedPopSensitiveGainSeed}{[$+$0.034, $+$0.047]}
+\newcommand{\TypedPopSensitiveGainPositive}{31 of 39}
+\newcommand{\TypedPopSensitiveGainFamily}{[$+$0.011, $+$0.068]}
+\newcommand{\TypedPopSensitiveGainT}{[$+$0.012, $+$0.069]}
+\newcommand{\TypedPopSensitiveGainLeaveOut}{[$+$0.036, $+$0.047]}
+\newcommand{\TypedPopSensitiveGainVsRule}{$+$0.041}
+\newcommand{\TypedPopSensitiveGainVsRuleSeed}{[$+$0.034, $+$0.047]}
+\newcommand{\TypedPopSensitiveGainVsRulePositive}{31 of 39}
+\newcommand{\TypedPopSensitiveGainVsRuleFamily}{[$+$0.011, $+$0.069]}
+\newcommand{\TypedPopSensitiveGainVsRuleT}{[$+$0.013, $+$0.069]}
+\newcommand{\TypedPopSensitiveGainVsRuleLeaveOut}{[$+$0.036, $+$0.047]}
+\newcommand{\TypedPopVsReference}{$+$0.004}
+\newcommand{\TypedPopVsReferenceSeed}{[$-$0.002, $+$0.009]}
+\newcommand{\TypedPopVsReferencePositive}{32 of 48}
+\newcommand{\TypedPopVsReferenceFamily}{[$-$0.019, $+$0.025]}
+\newcommand{\TypedPopVsReferenceT}{[$-$0.018, $+$0.026]}
+\newcommand{\TypedPopVsReferenceLeaveOut}{[$+$0.001, $+$0.009]}
+\newcommand{\TypedPopVsReferenceUnsafe}{$-$0.57}
+\newcommand{\TypedPopVsReferenceUnsafeSeed}{[$-$0.64, $-$0.51]}
+\newcommand{\TypedPopVsReferenceUnsafePositive}{0 of 48}
+\newcommand{\TypedPopVsReferenceUnsafeFamily}{[$-$0.75, $-$0.39]}
+\newcommand{\TypedPopVsReferenceUnsafeT}{[$-$0.74, $-$0.39]}
+\newcommand{\TypedPopVsReferenceUnsafeLeaveOut}{[$-$0.58, $-$0.52]}
+\newcommand{\TypedPopFixedVsReference}{$+$0.000}
+\newcommand{\TypedPopFixedVsReferenceSeed}{[$+$0.000, $+$0.000]}
+\newcommand{\TypedPopFixedVsReferencePositive}{0 of 48}
+\newcommand{\TypedPopFixedVsReferenceFamily}{[$+$0.000, $+$0.000]}
+\newcommand{\TypedPopFixedVsReferenceT}{[$+$0.000, $+$0.000]}
+\newcommand{\TypedPopFixedVsReferenceLeaveOut}{[$+$0.000, $+$0.000]}
+\newcommand{\TypedPopReferenceIdentity}{0.0}
+\newcommand{\TypedPopMetGain}{met}
+\newcommand{\TypedPopMetRule}{met}
+\newcommand{\TypedPopMetCalibration}{met}
+\newcommand{\TypedPopMetConstraints}{met}
+\newcommand{\TypedPopCriteriaMet}{four}
+\newcommand{\TypedPopCriteria}{four}
+\newcommand{\TypedSealFamilies}{48}
+\newcommand{\TypedSealTraceSeeds}{16}
+\newcommand{\TypedSealTraces}{768}
+\newcommand{\TypedSealSealedFamilies}{48}
+\newcommand{\TypedSealPoolFamilies}{64}
+\newcommand{\TypedSealBaseRatio}{1.05}
+\newcommand{\TypedSealHindsightRatio}{1.00}
+\newcommand{\TypedSealBaseUtility}{0.155}
+\newcommand{\TypedSealHindsightUtility}{0.157}
+\newcommand{\TypedSealHeadUtility}{0.183}
+\newcommand{\TypedSealOracleUtility}{0.281}
+\newcommand{\TypedSealBaseUnsafe}{6.93}
+\newcommand{\TypedSealHeadUnsafe}{6.63}
+\newcommand{\TypedSealOverride}{7.1}
+\newcommand{\TypedSealEce}{0.145}
+\newcommand{\TypedSealEceFamily}{[0.105, 0.187]}
+\newcommand{\TypedSealAccuracy}{0.800}
+\newcommand{\TypedSealConfidence}{0.945}
+\newcommand{\TypedSealEceBest}{0.003}
+\newcommand{\TypedSealEceWorst}{0.563}
+\newcommand{\TypedSealEceMedian}{0.119}
+\newcommand{\TypedSealEceAbove}{35}
+\newcommand{\TypedSealFamilySd}{0.056}
+\newcommand{\TypedSealNearZero}{20}
+\newcommand{\TypedSealLargest}{$+$0.246}
+\newcommand{\TypedSealSmallest}{$-$0.012}
+\newcommand{\TypedSealFloor}{5.7}
+\newcommand{\TypedSealIsolationEpisodes}{19{,}200}
+\newcommand{\TypedSealIsolationDifference}{0.0}
+\newcommand{\TypedSealRuleName}{delay hysteresis between 1.05 and 0.80, reducing at 15\,ms of excess round-trip delay and restoring at 5\,ms}
+\newcommand{\TypedSealGain}{$+$0.028}
+\newcommand{\TypedSealGainSeed}{[$+$0.025, $+$0.032]}
+\newcommand{\TypedSealGainPositive}{37 of 48}
+\newcommand{\TypedSealGainFamily}{[$+$0.014, $+$0.046]}
+\newcommand{\TypedSealGainT}{[$+$0.012, $+$0.044]}
+\newcommand{\TypedSealGainLeaveOut}{[$+$0.024, $+$0.029]}
+\newcommand{\TypedSealGainVsHindsight}{$+$0.026}
+\newcommand{\TypedSealGainVsHindsightSeed}{[$+$0.020, $+$0.032]}
+\newcommand{\TypedSealGainVsHindsightPositive}{35 of 48}
+\newcommand{\TypedSealGainVsHindsightFamily}{[$+$0.011, $+$0.043]}
+\newcommand{\TypedSealGainVsHindsightT}{[$+$0.010, $+$0.042]}
+\newcommand{\TypedSealGainVsHindsightLeaveOut}{[$+$0.022, $+$0.027]}
+\newcommand{\TypedSealUnsafe}{$-$0.30}
+\newcommand{\TypedSealUnsafeSeed}{[$-$0.35, $-$0.25]}
+\newcommand{\TypedSealUnsafePositive}{2 of 48}
+\newcommand{\TypedSealUnsafeFamily}{[$-$0.45, $-$0.18]}
+\newcommand{\TypedSealUnsafeT}{[$-$0.43, $-$0.18]}
+\newcommand{\TypedSealUnsafeLeaveOut}{[$-$0.31, $-$0.27]}
+\newcommand{\TypedSealOracleGain}{$+$0.126}
+\newcommand{\TypedSealOracleGainSeed}{[$+$0.118, $+$0.134]}
+\newcommand{\TypedSealOracleGainPositive}{45 of 48}
+\newcommand{\TypedSealOracleGainFamily}{[$+$0.097, $+$0.155]}
+\newcommand{\TypedSealOracleGainT}{[$+$0.096, $+$0.156]}
+\newcommand{\TypedSealOracleGainLeaveOut}{[$+$0.121, $+$0.129]}
+\newcommand{\TypedSealOracleShare}{22}
+\newcommand{\TypedSealFamilyConstantGain}{$+$0.026}
+\newcommand{\TypedSealFamilyConstantShare}{21}
+\newcommand{\TypedSealHeadVsFamilyConstant}{$+$0.002}
+\newcommand{\TypedSealRegressVsFamilyConstant}{$-$0.002}
+\newcommand{\TypedSealRegressGain}{$+$0.025}
+\newcommand{\TypedSealRegressGainSeed}{[$+$0.021, $+$0.029]}
+\newcommand{\TypedSealRegressGainPositive}{35 of 48}
+\newcommand{\TypedSealRegressGainFamily}{[$+$0.012, $+$0.040]}
+\newcommand{\TypedSealRegressGainT}{[$+$0.011, $+$0.038]}
+\newcommand{\TypedSealRegressGainLeaveOut}{[$+$0.022, $+$0.026]}
+\newcommand{\TypedSealRlcdVsAnalytic}{$-$0.001}
+\newcommand{\TypedSealRlcdVsAnalyticSeed}{[$-$0.003, $+$0.002]}
+\newcommand{\TypedSealRlcdVsAnalyticPositive}{18 of 48}
+\newcommand{\TypedSealRlcdVsAnalyticFamily}{[$-$0.004, $+$0.002]}
+\newcommand{\TypedSealRlcdVsAnalyticT}{[$-$0.002, $+$0.001]}
+\newcommand{\TypedSealRlcdVsAnalyticLeaveOut}{[$-$0.001, $+$0.000]}
+\newcommand{\TypedSealRlcdVsRegress}{$+$0.003}
+\newcommand{\TypedSealRlcdVsRegressSeed}{[$-$0.000, $+$0.007]}
+\newcommand{\TypedSealRlcdVsRegressPositive}{30 of 48}
+\newcommand{\TypedSealRlcdVsRegressFamily}{[$-$0.005, $+$0.011]}
+\newcommand{\TypedSealRlcdVsRegressT}{[$-$0.004, $+$0.011]}
+\newcommand{\TypedSealRlcdVsRegressLeaveOut}{[$+$0.002, $+$0.006]}
+\newcommand{\TypedSealBayesVsMap}{$+$0.019}
+\newcommand{\TypedSealBayesVsMapSeed}{[$+$0.016, $+$0.022]}
+\newcommand{\TypedSealBayesVsMapPositive}{34 of 48}
+\newcommand{\TypedSealBayesVsMapFamily}{[$+$0.001, $+$0.036]}
+\newcommand{\TypedSealBayesVsMapT}{[$+$0.002, $+$0.036]}
+\newcommand{\TypedSealBayesVsMapLeaveOut}{[$+$0.014, $+$0.024]}
+\newcommand{\TypedSealGainVsRule}{$+$0.030}
+\newcommand{\TypedSealGainVsRuleSeed}{[$+$0.025, $+$0.035]}
+\newcommand{\TypedSealGainVsRulePositive}{34 of 48}
+\newcommand{\TypedSealGainVsRuleFamily}{[$+$0.014, $+$0.048]}
+\newcommand{\TypedSealGainVsRuleT}{[$+$0.012, $+$0.047]}
+\newcommand{\TypedSealGainVsRuleLeaveOut}{[$+$0.025, $+$0.031]}
+\newcommand{\TypedSealRuleVsFixed}{$-$0.002}
+\newcommand{\TypedSealRuleVsFixedSeed}{[$-$0.004, $+$0.001]}
+\newcommand{\TypedSealRuleVsFixedPositive}{22 of 48}
+\newcommand{\TypedSealRuleVsFixedFamily}{[$-$0.008, $+$0.004]}
+\newcommand{\TypedSealRuleVsFixedT}{[$-$0.007, $+$0.004]}
+\newcommand{\TypedSealRuleVsFixedLeaveOut}{[$-$0.002, $-$0.000]}
+\newcommand{\TypedSealSensitiveFamilies}{39}
+\newcommand{\TypedSealSensitiveMargin}{0.02}
+\newcommand{\TypedSealSensitiveGain}{$+$0.035}
+\newcommand{\TypedSealSensitiveGainSeed}{[$+$0.030, $+$0.039]}
+\newcommand{\TypedSealSensitiveGainPositive}{35 of 39}
+\newcommand{\TypedSealSensitiveGainFamily}{[$+$0.017, $+$0.055]}
+\newcommand{\TypedSealSensitiveGainT}{[$+$0.015, $+$0.054]}
+\newcommand{\TypedSealSensitiveGainLeaveOut}{[$+$0.029, $+$0.036]}
+\newcommand{\TypedSealSensitiveGainVsRule}{$+$0.036}
+\newcommand{\TypedSealSensitiveGainVsRuleSeed}{[$+$0.030, $+$0.041]}
+\newcommand{\TypedSealSensitiveGainVsRulePositive}{28 of 39}
+\newcommand{\TypedSealSensitiveGainVsRuleFamily}{[$+$0.017, $+$0.058]}
+\newcommand{\TypedSealSensitiveGainVsRuleT}{[$+$0.015, $+$0.057]}
+\newcommand{\TypedSealSensitiveGainVsRuleLeaveOut}{[$+$0.030, $+$0.037]}
+\newcommand{\TypedSealMetGain}{met}
+\newcommand{\TypedSealMetRule}{met}
+\newcommand{\TypedSealMetCalibration}{not met}
+\newcommand{\TypedSealMetConstraints}{met}
+\newcommand{\TypedSealCriteriaMet}{three}
+\newcommand{\TypedSealCriteria}{four}
+\newcommand{\TypedPopValFamilies}{64}
+\newcommand{\TypedPopValEce}{0.008}
+\newcommand{\TypedPopValGain}{$+$0.029}
+\newcommand{\TypedPopValGainSeed}{[$+$0.021, $+$0.038]}
+\newcommand{\TypedPopValGainPositive}{33 of 64}
+\newcommand{\TypedPopValGainFamily}{[$+$0.006, $+$0.053]}
+\newcommand{\TypedPopValGainT}{[$+$0.007, $+$0.052]}
+\newcommand{\TypedPopValGainLeaveOut}{[$+$0.025, $+$0.033]}
+\newcommand{\TypedPopValUnsafe}{$-$0.73}
+\newcommand{\TypedPopValUnsafeSeed}{[$-$0.81, $-$0.62]}
+\newcommand{\TypedPopValUnsafePositive}{0 of 64}
+\newcommand{\TypedPopValUnsafeFamily}{[$-$1.03, $-$0.47]}
+\newcommand{\TypedPopValUnsafeT}{[$-$1.00, $-$0.46]}
+\newcommand{\TypedPopValUnsafeLeaveOut}{[$-$0.74, $-$0.65]}
+\newcommand{\TypedPopValOracleGain}{$+$0.087}
+\newcommand{\TypedPopValOracleGainSeed}{[$+$0.079, $+$0.097]}
+\newcommand{\TypedPopValOracleGainPositive}{49 of 64}
+\newcommand{\TypedPopValOracleGainFamily}{[$+$0.062, $+$0.115]}
+\newcommand{\TypedPopValOracleGainT}{[$+$0.062, $+$0.113]}
+\newcommand{\TypedPopValOracleGainLeaveOut}{[$+$0.082, $+$0.089]}
 \newcommand{\TypedFactSeeds}{3}
 \newcommand{\TypedFactBudgets}{5}
 \newcommand{\TypedFactStates}{6{,}656}
@@ -323,3 +736,24 @@
 \newcommand{\TypedFactControlTopPriceFamily}{[$-$0.070, $-$0.017]}
 \newcommand{\TypedFactControlTopPriceT}{[$-$0.058, $-$0.030]}
 \newcommand{\TypedFactControlTopPriceLeaveOut}{[$-$0.046, $-$0.040]}
+\newcommand{\TypedCrossLinks}{64}
+\newcommand{\TypedCrossSessions}{32}
+\newcommand{\TypedCrossSessionSeconds}{36}
+\newcommand{\TypedCrossBetweenSpread}{0.171}
+\newcommand{\TypedCrossDesigns}{48}
+\newcommand{\TypedCrossUsable}{two}
+\newcommand{\TypedCrossShortSlopeLow}{$-$0.95}
+\newcommand{\TypedCrossShortSlopeHigh}{$+$0.53}
+\newcommand{\TypedCrossShortCorrelationLow}{$-$0.24}
+\newcommand{\TypedCrossShortCorrelationHigh}{$+$0.28}
+\newcommand{\TypedCrossPrimaryA}{1.05}
+\newcommand{\TypedCrossPrimaryB}{1.00}
+\newcommand{\TypedCrossPrimaryEffect}{$+$0.003}
+\newcommand{\TypedCrossPrimarySpread}{0.025}
+\newcommand{\TypedCrossPrimaryWhole}{437}
+\newcommand{\TypedCrossPrimaryIdeal}{16}
+\newcommand{\TypedCrossWholeLow}{48}
+\newcommand{\TypedCrossWholeHigh}{437}
+\newcommand{\TypedCrossUsableLow}{1{,}031}
+\newcommand{\TypedCrossUsableHigh}{1{,}238}
+\newcommand{\TypedCrossUsableBlock}{18}

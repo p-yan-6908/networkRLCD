@@ -1,4 +1,4 @@
-.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-factual jevbwe-typed-population jevbwe-typed-population-test jevbwe-typed-followup-evidence jevbwe-typed-evidence paper-pdf
+.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-factual jevbwe-typed-population jevbwe-typed-population-test jevbwe-typed-crossover jevbwe-typed-followup-evidence jevbwe-typed-evidence paper-pdf
 setup:
 	uv sync --frozen --extra dev
 
@@ -122,6 +122,7 @@ jevbwe-typed-population:
 	uv run --frozen jevbwe-typed rescore --run $(TYPED)/jevbwe-typed-v4-development --split test
 	uv run --frozen jevbwe-typed audit --run $(TYPED)/jevbwe-typed-v4-development --split test --reference $(TYPED)/jevbwe-typed-v3-replication
 	uv run --frozen jevbwe-typed baselines --run $(TYPED)/jevbwe-typed-v4-development --out $(TYPED)/jevbwe-typed-v4-development-baselines
+	uv run --frozen jevbwe-typed audit --run $(TYPED)/jevbwe-typed-v4-population --split validation
 
 # The sealed panel: V4 and the frozen V3 models, once each, on identical traces (about 2.5 hours).
 # Run only after configs/jevbwe_typed_v4_test.json has been committed with the frozen hashes.
@@ -134,8 +135,13 @@ jevbwe-typed-population-test:
 	uv run --frozen jevbwe-typed audit --run $(TYPED)/jevbwe-typed-v4-test --split test --reference $(TYPED)/jevbwe-typed-v3-on-sealed
 	uv run --frozen jevbwe-typed baselines --run $(TYPED)/jevbwe-typed-v4-test --out $(TYPED)/jevbwe-typed-v4-test-baselines
 	uv run --frozen jevbwe-typed baselines --run $(TYPED)/jevbwe-typed-v3-on-sealed --out $(TYPED)/jevbwe-typed-v3-on-sealed-baselines
+# Per-link crossover identification on the development pool (about five minutes; needs the V4 run).
+# See docs/JEVBWE_TYPED_CROSSOVER_V1.md.
+jevbwe-typed-crossover:
+	uv run --frozen jevbwe-typed crossover --run $(TYPED)/jevbwe-typed-v4-population --settings configs/jevbwe_typed_crossover_v1.json --out $(TYPED)/typed-crossover-v1
+
 jevbwe-typed-followup-evidence:
-	uv run --frozen jevbwe-typed followup --baselines $(TYPED)/typed-baseline-audit-v1 --replication $(TYPED)/jevbwe-typed-v3-replication --replication-baselines $(TYPED)/jevbwe-typed-v3-replication-baselines --factual $(TYPED)/typed-factual-v1 --out paper/generated-jevbwe-typed-followup
+	uv run --frozen jevbwe-typed followup --baselines $(TYPED)/typed-baseline-audit-v1 --replication $(TYPED)/jevbwe-typed-v3-replication --replication-baselines $(TYPED)/jevbwe-typed-v3-replication-baselines --factual $(TYPED)/typed-factual-v1 --crossover $(TYPED)/typed-crossover-v1 --validation TypedPopVal $(TYPED)/jevbwe-typed-v4-population --panel TypedPopDev $(TYPED)/jevbwe-typed-v4-development $(TYPED)/jevbwe-typed-v4-development-baselines --panel TypedPop $(TYPED)/jevbwe-typed-v4-test $(TYPED)/jevbwe-typed-v4-test-baselines --panel TypedSeal $(TYPED)/jevbwe-typed-v3-on-sealed $(TYPED)/jevbwe-typed-v3-on-sealed-baselines --out paper/generated-jevbwe-typed-followup
 
 jevbwe-typed-evidence:
 	uv run --frozen jevbwe-typed export --run $(TYPED)/jevbwe-typed-v2 --diagnosis $(TYPED)/jevbwe-typed-v2-diagnosis --ablation $(TYPED)/jevbwe-typed-v2-ablation-no-summaries --robustness $(TYPED)/jevbwe-typed-v2-legacy --broadened $(TYPED)/jevbwe-typed-v3-broad --out paper/generated-jevbwe-typed-v2

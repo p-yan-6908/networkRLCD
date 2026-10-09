@@ -119,6 +119,20 @@ def panel_macros(report, audit, rules, prefix="TypedRep"):
     family_macros(rows, "OracleGain", panel["methods"]["oracle"]["utility_vs_train_fixed"])
     oracle = panel["methods"]["oracle"]["utility_vs_train_fixed"]["mean"]
     rows["OracleShare"] = plain(100 * gain["mean"] / oracle, 0)
+    # A constant ratio chosen per family in hindsight: what knowing the family alone would give.
+    fixed = [m["per_scenario"] for name, m in table.items() if name.startswith("fixed_")]
+    constant = float(
+        np.mean([max(f[s] for f in fixed) - table[base]["per_scenario"][s] for s in panel["families"]])
+    )
+    rows.update(
+        FamilyConstantGain=signed(constant),
+        FamilyConstantShare=plain(100 * constant / oracle, 0),
+        HeadVsFamilyConstant=signed(gain["mean"] - constant),
+        RegressVsFamilyConstant=signed(
+            panel["methods"]["regress_greedy"]["utility_vs_train_fixed"]["mean"] - constant
+        ),
+    )
+    family_macros(rows, "RegressGain", panel["methods"]["regress_greedy"]["utility_vs_train_fixed"])
     for label, pair in (
         ("RlcdVsAnalytic", "rlcd_vs_exact_gradient"),
         ("RlcdVsRegress", "rlcd_vs_regression"),
@@ -376,6 +390,71 @@ def figure_factual(report, path):
     plt.close(fig)
 
 
+def crossover_macros(report):
+    """Per-link crossover identification: how many designs are usable and what they cost."""
+    rows, pairs = {}, report["pairs"]
+    cells = [(p, d) for p in pairs for d in p["designs"]]
+    usable = [(p, d) for p, d in cells if d["usable"]]
+    short = [d for _, d in cells if d["block_ms"] < max(x["block_ms"] for _, x in cells)]
+    primary = pairs[0]
+    rows.update(
+        TypedCrossLinks=str(report["links"]),
+        TypedCrossSessions=str(report["sessions"]),
+        TypedCrossSessionSeconds=f"{report['session_seconds']:.0f}",
+        TypedCrossBetweenSpread=plain(report["between_session_spread"]),
+        TypedCrossDesigns=str(len(cells)),
+        TypedCrossUsable=NUMBERS[len(usable)] if len(usable) < len(NUMBERS) else str(len(usable)),
+        TypedCrossShortSlopeLow=signed(min(d["slope"] for d in short), 2),
+        TypedCrossShortSlopeHigh=signed(max(d["slope"] for d in short), 2),
+        TypedCrossShortCorrelationLow=signed(min(d["correlation"] for d in short), 2),
+        TypedCrossShortCorrelationHigh=signed(max(d["correlation"] for d in short), 2),
+        TypedCrossPrimaryA=f"{primary['a']:.2f}",
+        TypedCrossPrimaryB=f"{primary['b']:.2f}",
+        TypedCrossPrimaryEffect=signed(primary["true_effect_mean"]),
+        TypedCrossPrimarySpread=plain(primary["true_effect_spread"]),
+        TypedCrossPrimaryWhole=count(int(round(primary["designs"][0]["sessions_needed_whole_sessions"]))),
+        TypedCrossPrimaryIdeal=count(int(round(primary["designs"][0]["sessions_needed_identical_traces"]))),
+    )
+    whole = [p["designs"][0]["sessions_needed_whole_sessions"] for p in pairs]
+    rows["TypedCrossWholeLow"] = count(int(round(min(whole))))
+    rows["TypedCrossWholeHigh"] = count(int(round(max(whole))))
+    if usable:
+        needs = [d["sessions_needed"] for _, d in usable]
+        rows["TypedCrossUsableLow"] = count(int(round(min(needs))))
+        rows["TypedCrossUsableHigh"] = count(int(round(max(needs))))
+        rows["TypedCrossUsableBlock"] = f"{min(d['block_ms'] for _, d in usable) / 1000:g}"
+    return rows
+
+
+def table_crossover(report, washout_ms=1000):
+    lines = [
+        "\\begin{tabular}{lrrrrrrl}",
+        "\\toprule",
+        "Pair & True effect & Block (s) & Slope & Intercept & Correlation & Sessions & Usable \\\\",
+        "\\midrule",
+    ]
+    for pair in report["pairs"]:
+        first = pair["designs"][0]
+        label = f"{pair['a']:.2f} to {pair['b']:.2f}"
+        for design in (d for d in pair["designs"] if d["washout_ms"] == washout_ms):
+            cells = [
+                label,
+                signed(pair["true_effect_mean"]) if label else "",
+                f"{design['block_ms'] / 1000:g}",
+                signed(design["slope"], 2),
+                signed(design["intercept"]),
+                signed(design["correlation"], 2),
+                count(int(round(design["sessions_needed"]))),
+                "yes" if design["usable"] else "no",
+            ]
+            lines.append(" & ".join(cells) + " \\\\")
+            label = ""
+        whole, ideal = first["sessions_needed_whole_sessions"], first["sessions_needed_identical_traces"]
+        note = f"whole sessions: {count(int(round(whole)))} per ratio; identical traces: {count(int(round(ideal)))}"
+        lines.append(f" & & \\multicolumn{{6}}{{l}}{{{note}}} \\\\")
+    return "\n".join([*lines, "\\bottomrule", "\\end{tabular}"]) + "\n"
+
+
 def load_panel(run, baselines):
     """Report, audit and rule audit of one registered transfer, with the checks the paper relies on."""
     files = [Path(run) / "report.json", Path(run) / "audit_test.json", Path(baselines) / "report.json"]
@@ -388,7 +467,14 @@ def load_panel(run, baselines):
 
 
 def export(
-    out, baselines, replication=None, replication_baselines=None, factual=None, panels=(), validations=()
+    out,
+    baselines,
+    replication=None,
+    replication_baselines=None,
+    factual=None,
+    panels=(),
+    validations=(),
+    crossover=None,
 ):
     """Write macros, tables and the learning-curve figure from the follow-up summaries.
 
@@ -431,6 +517,14 @@ def export(
         evidence.update(factual_macros(curves))
         (out / "followup_factual.tex").write_text(table_factual(curves))
         figure_factual(curves, out / "followup_factual.pdf")
+        sources.append(path)
+    if crossover:
+        path = Path(crossover) / "report.json"
+        crossed = json.loads(path.read_text())
+        if not crossed.get("synthetic_only"):
+            raise ValueError("the crossover study must be marked synthetic")
+        evidence.update(crossover_macros(crossed))
+        (out / "followup_crossover.tex").write_text(table_crossover(crossed))
         sources.append(path)
     lines = ["% Generated by `jevbwe-typed followup`; do not edit."]
     lines += [f"\\newcommand{{\\{name}}}{{{value}}}" for name, value in evidence.items()]

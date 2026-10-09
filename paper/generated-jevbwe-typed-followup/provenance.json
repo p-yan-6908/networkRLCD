@@ -1,7 +1,18 @@
 {
+ "results/jevbwe-typed-v3-on-sealed-baselines/report.json": "8b4747216a8c796c42a4e5ba9737f6cef2392832e86fb9715dd7edcde615782b",
+ "results/jevbwe-typed-v3-on-sealed/audit_test.json": "e1a0ae3c5e8ba937fecce26dea12daa07933b760397f7e2d66fa5b95d03ec724",
+ "results/jevbwe-typed-v3-on-sealed/report.json": "f333dba5d817a371b31889b3d5916b263f018d7e097a0ce60be0880c0a521a99",
  "results/jevbwe-typed-v3-replication-baselines/report.json": "8746a5d3207d03d4d3db57ca56faec0ba839760dc6da1b77606d5c69a353fece",
  "results/jevbwe-typed-v3-replication/audit_test.json": "547341a0ce1cfa3482a70b14ab9bef3e0cdb41ad22493292c915475326fa8a34",
  "results/jevbwe-typed-v3-replication/report.json": "f37c04240f235734b56d954c588344373060f9d0a68448ffa899704098c97234",
+ "results/jevbwe-typed-v4-development-baselines/report.json": "757abb1a598b18e022aa602c9d1a12cde9009c5892bc43917bde3d7b2dba81c7",
+ "results/jevbwe-typed-v4-development/audit_test.json": "4e62d8be2c58f1186b96f6d7b73e56a8392eb97f92a25999969d95bda8d71597",
+ "results/jevbwe-typed-v4-development/report.json": "d54a7b83a94251621e67ac2a79a4afa631a77ee3b0daf76971c464c1788db587",
+ "results/jevbwe-typed-v4-population/audit_validation.json": "fb8a5be72c4c864c8468fa21b93167d0b6509124a74a5f0efeba8455ed4532fb",
+ "results/jevbwe-typed-v4-test-baselines/report.json": "e04490c25760ed56209255ec2e2af03cd997afea0d73e286c2f3132894f607bc",
+ "results/jevbwe-typed-v4-test/audit_test.json": "9f5671bf9b0421abe76536cff9de21569f62201a630fcf4f6abfddd35c1eaf8d",
+ "results/jevbwe-typed-v4-test/report.json": "b4343108ccabadf151263ec18d4e600654e7847e115e2808fa5dcbfb1e846b23",
  "results/typed-baseline-audit-v1/report.json": "42d8f19113fa1383c0e516f4c9887d9bc03e864b05f0c9c2919d794f1368722a",
+ "results/typed-crossover-v1/report.json": "5972c38c8394c63a2047623af0f4393d0c590b7e3099ec1c9062a4c2e8e05ec8",
  "results/typed-factual-v1/report.json": "76825095efbd21048f040b2938060b5c7045a4d9665bf31b4094957ea48ad94a"
 }
