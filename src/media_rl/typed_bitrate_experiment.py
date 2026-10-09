@@ -5,6 +5,7 @@ only in the test split, which nothing is tuned on. All evidence is synthetic.
 """
 
 import argparse
+import hashlib
 import json
 import time
 from collections import Counter
@@ -467,6 +468,55 @@ def run(config, out, splits=("validation", "test")):
     return report
 
 
+def transfer(run, out, registration):
+    """One evaluation of a finished run's frozen models on a registered panel, in a new directory.
+
+    Nothing is refitted: the base ratio, heads, temperatures, payoff tables and guards are the
+    source run's. The model files and the family population must match the hashes that the
+    registration recorded before any controller ran on the panel.
+    """
+    from .typed_bitrate_population import SEED, names, table_hash
+
+    run, out = Path(run), Path(out)
+    if out.exists():
+        raise FileExistsError(out)
+    record = json.loads(Path(registration).read_text())
+    source = load_config(run / "config.json")
+    if record["source"] != source.name or source.base_ratio != record["base_ratio"]:
+        raise ValueError("registration names a different source run or base ratio")
+    if record["population_seed"] != SEED or record["population_hash"] != table_hash():
+        raise ValueError("the family population differs from the registered one")
+    files = {f"model_seed_{s}.json": (run / f"model_seed_{s}.json").read_bytes() for s in source.model_seeds}
+    if record["models"] != {name: hashlib.sha256(data).hexdigest() for name, data in files.items()}:
+        raise ValueError("model files differ from the registered hashes")
+    config = replace(
+        source,
+        name=record["name"],
+        scenarios=names(record["panel"]),
+        development_scenarios=[],
+        test_seeds=list(record["test_seeds"]),
+    ).validate()
+    out.mkdir(parents=True)
+    started = time.time()
+    for name, data in files.items():
+        (out / name).write_bytes(data)
+    dump(out / "config.json", config.to_dict())
+    frozen = json.loads((run / "report.json").read_text())
+    report = dict(
+        abi=ABI,
+        synthetic_only=True,
+        base_tuning=frozen["base_tuning"],
+        training=frozen["training"],
+        inference_us=frozen["inference_us"],
+        transfer=dict(source=source.name, registration=record),
+        panels={},
+    )
+    add_panels(config, [json.loads(data) for data in files.values()], report, out, ("test",))
+    report["elapsed_s"] = time.time() - started
+    dump(out / "report.json", report)
+    return report
+
+
 def decision_arrays(rows):
     """Decision-level record of the learned methods: what was reported, run and best in hindsight."""
     scored = [(r, d) for r in rows for d in r["decisions"] if "scores" in d]
@@ -614,6 +664,13 @@ def main(argv=None):
     p.add_argument("--split", default="test")
     p.add_argument("--robustness", type=Path, help="Finished run of the same config with bwe=legacy")
     p.add_argument("--reference", type=Path, help="Finished run whose test panel has the same traces")
+    p = sub.add_parser("baselines", help="Tuned reactive rules replayed on a finished run's frozen panels")
+    p.add_argument("--run", required=True, type=Path)
+    p.add_argument("--out", required=True, type=Path)
+    p = sub.add_parser("transfer", help="Evaluate a finished run's frozen models once on a registered panel")
+    p.add_argument("--run", required=True, type=Path)
+    p.add_argument("--registration", required=True, type=Path)
+    p.add_argument("--out", required=True, type=Path)
     p = sub.add_parser("export", help="LaTeX macros, tables and figure from a finished run")
     p.add_argument("--run", required=True, type=Path)
     p.add_argument("--out", required=True, type=Path)
@@ -636,6 +693,14 @@ def main(argv=None):
 
             result = audit(args.run, args.split, args.robustness, args.reference)
             print(json.dumps(result["headline"], indent=1))
+            return
+        if args.command == "baselines":
+            from . import typed_bitrate_baselines as baselines
+
+            print(baselines.headline(baselines.audit(args.run, args.out)))
+            return
+        if args.command == "transfer":
+            print(headline(transfer(args.run, args.out, args.registration)))
             return
         if args.command == "rescore":
             print(json.dumps(rescore(args.run, args.split), indent=1))

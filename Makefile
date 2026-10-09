@@ -1,4 +1,4 @@
-.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-evidence paper-pdf
+.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-evidence paper-pdf
 setup:
 	uv sync --frozen --extra dev
 
@@ -96,6 +96,18 @@ jevbwe-typed-broad-test:
 	uv run --frozen jevbwe-typed rescore --run $(TYPED)/jevbwe-typed-v3-broad --split test
 	uv run --frozen jevbwe-typed audit --run $(TYPED)/jevbwe-typed-v3-broad --split test
 
+# Tuned reactive rules replayed on the frozen V3 panels (about three minutes); analysis only.
+# See docs/JEVBWE_TYPED_BASELINE_AUDIT.md.
+jevbwe-typed-baselines:
+	uv run --frozen jevbwe-typed baselines --run $(TYPED)/jevbwe-typed-v3-broad --out $(TYPED)/typed-baseline-audit-v1
+
+# One evaluation of the frozen V3 models on the registered population panel; nothing is refitted
+# and the transfer command refuses to recompute. See docs/JEVBWE_TYPED_V3_REPLICATION.md.
+jevbwe-typed-replication:
+	uv run --frozen jevbwe-typed transfer --run $(TYPED)/jevbwe-typed-v3-broad --registration configs/jevbwe_typed_v3_replication.json --out $(TYPED)/jevbwe-typed-v3-replication
+	uv run --frozen jevbwe-typed rescore --run $(TYPED)/jevbwe-typed-v3-replication --split test
+	uv run --frozen jevbwe-typed audit --run $(TYPED)/jevbwe-typed-v3-replication --split test
+	uv run --frozen jevbwe-typed baselines --run $(TYPED)/jevbwe-typed-v3-replication --out $(TYPED)/jevbwe-typed-v3-replication-baselines
 jevbwe-typed-evidence:
 	uv run --frozen jevbwe-typed export --run $(TYPED)/jevbwe-typed-v2 --diagnosis $(TYPED)/jevbwe-typed-v2-diagnosis --ablation $(TYPED)/jevbwe-typed-v2-ablation-no-summaries --robustness $(TYPED)/jevbwe-typed-v2-legacy --broadened $(TYPED)/jevbwe-typed-v3-broad --out paper/generated-jevbwe-typed-v2
 

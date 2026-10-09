@@ -11,6 +11,7 @@ training family in temporal structure or in parameter range. The legacy registry
 import numpy as np
 
 from .scenarios import Trace
+from .typed_bitrate_population import POPULATION, SEALED
 
 
 def _base(rng, steps):
@@ -226,7 +227,9 @@ TEST_FAMILIES = dict(
     lossy_link=lossy_link,
     compound=compound,
 )
-FAMILIES = {**TRAIN_FAMILIES, **TEST_FAMILIES}
+# Sampled population panels: evaluation-only unless drawn from the development pool.
+TEST_FAMILIES.update({name: family for name, family in POPULATION.items() if name in SEALED})
+FAMILIES = {**TRAIN_FAMILIES, **TEST_FAMILIES, **POPULATION}
 
 
 def family_trace(name, steps, seed):

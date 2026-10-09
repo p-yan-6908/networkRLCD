@@ -1,0 +1,27 @@
+{
+  "name": "jevbwe-typed-v3-replication",
+  "registered": "2026-10-08",
+  "source": "jevbwe-typed-v3-broad",
+  "base_ratio": 1.05,
+  "panel": "r",
+  "test_seeds": [29301, 29302, 29303, 29304, 29305, 29306, 29307, 29308, 29309, 29310, 29311, 29312, 29313, 29314, 29315, 29316],
+  "population_seed": 20261008,
+  "population_hash": "fbfb8da06b15443679e4da1bb46a030d46be9a55caeafcca257df7ab5fdd679c",
+  "models": {
+    "model_seed_0.json": "c0a4ce0d464f7de67f576a3a87caa63a2d9fc109c6ea2ec7eadfbe23144f8f37",
+    "model_seed_1.json": "c0b7bf42ba5121893982ac9aae425fb74f1cb9070caff45e3355d7eb1b677ce9",
+    "model_seed_2.json": "9b53295e2d4dd50a199aab9bae75695c7a9f8f77ccd4e5d471afbb6e2d0bab3b",
+    "model_seed_3.json": "cc73c3e2f748057042226470aedf554593df900ee3c089626b644288cf1412d5",
+    "model_seed_4.json": "e7c3738f693dfc68a4983d68dc00173cdb48ced5941e2d28dfd01909f99905c0"
+  },
+  "primary_method": "choice_rlcd_bayes",
+  "rule_best": {"kind": "delay", "high": 1.05, "low": 0.8, "on_ms": 15, "off_ms": 5},
+  "sensitive_margin": 0.02,
+  "criteria": {
+    "gain_over_train_fixed": "family bootstrap and family t interval (47 df) of the utility difference both exclude zero",
+    "gain_over_tuned_rule": "the same two intervals for the difference to rule_best both exclude zero",
+    "calibration": "pooled top-label ECE (10 bins) at most 0.05",
+    "constraints": "upper end of the family-clustered interval of the unsafe-share difference to the train-selected fixed ratio at most +1.0 percentage point"
+  },
+  "protocol": "docs/JEVBWE_TYPED_V3_REPLICATION.md"
+}
