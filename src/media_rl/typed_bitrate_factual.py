@@ -20,6 +20,7 @@ from pathlib import Path
 
 import numpy as np
 
+from .jevbwe import STATE_DIM, CausalHistory, number
 from .networks import MLP
 from .typed_bitrate import ABI, Features, Governor, Link, load_config, rollout_values, split_seed, step
 from .typed_bitrate_audit import contrast
@@ -62,22 +63,50 @@ def load_settings(path=None):
     return settings
 
 
-def block_episode(config, scenario, seed, behaviour_seed, probability, truth=True):
+class DeferredHistory(CausalHistory):
+    """``CausalHistory`` that keeps its rows every step and builds the state only on request.
+
+    Building the ordered state is most of an episode's cost, and a factual block needs it at
+    block starts only. The row bookkeeping is that of ``CausalHistory.observe``.
+    """
+
+    build = True
+
+    def observe(self, sample):
+        if self.build:
+            return super().observe(sample)
+        now, c = sample.sample_ms, self.config
+        if not number(now) or now < 0 or (self.last_ms is not None and now <= self.last_ms):
+            raise ValueError("JevBWE sample clock must strictly advance")
+        reset = self.last_ms is not None and now - self.last_ms > c.reset_gap_ms
+        if reset:
+            self.rows.clear()
+        self.rows.append(sample)
+        self.rows = [s for s in self.rows if now - s.sample_ms <= c.max_history_ms]
+        self.last_ms = now
+        return np.zeros(STATE_DIM), reset
+
+
+def block_episode(config, scenario, seed, behaviour_seed, probability, truth=True, eager=False):
     """The base policy with random factual blocks.
 
     A block draws one option uniformly, holds it for the commit window and runs the base ratio
     for the tail: the estimand of a rollout label, observed for a single option. Blocks never
     overlap, so a block's outcome depends on no other block's draw. ``truth`` adds the rollout
-    value of every option at the block start, for the control head and for scoring.
+    value of every option at the block start, for the control head and for scoring. ``eager``
+    builds the ordered state at every step, as a controller would; the rows are the same.
     """
     link, rules, features = Link(config, scenario, seed), Governor(config), Features(config)
+    features.history = DeferredHistory(config.residual)
     rng = np.random.default_rng(behaviour_seed)
     rows, block, missing = [], None, [np.nan] * len(config.ratios)
     for t in range(config.steps):
         sample = link.sample()
-        state = features.observe(sample)
         free = block is None and t % config.decision_steps == 0 and t + config.horizon_steps <= config.steps
-        if free and rng.random() < probability:
+        start = bool(free and rng.random() < probability)
+        features.history.build = start or eager
+        state = features.observe(sample)  # summaries every step; the ordered state where a block starts
+        if start:
             values = rollout_values(link, rules, sample, config)[0] if truth else missing
             block = dict(
                 start=t, arm=int(rng.integers(len(config.ratios))), state=state, values=values, total=0.0
@@ -119,8 +148,9 @@ def collect(config, data_seed, blocks, probability, truth_blocks=None):
     families, episodes, have = config.train_scenarios, [], 0
     while have < blocks:
         truth = have < truth_blocks
-        done, rate = len(episodes), have / len(episodes) if episodes else 4.0
-        more = max(len(families), math.ceil(((truth_blocks if truth else blocks) - have) / rate * 1.03))
+        done, target = len(episodes), truth_blocks if truth else blocks
+        rate = max(have / done, 0.1) if done else None  # a short first chunk measures blocks per episode
+        more = max(len(families), math.ceil((target - have) / rate * 1.03)) if rate else 4 * len(families)
         tasks = [
             (
                 families[i % len(families)],

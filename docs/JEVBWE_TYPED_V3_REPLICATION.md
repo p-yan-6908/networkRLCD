@@ -185,7 +185,7 @@ the sender does (more than 10% in 14 families).
 | # | Criterion | Result | Met |
 |---|---|---|---|
 | 1 | Gain over fixed 1.05; both family-level intervals exclude zero | +0.019; bootstrap [+0.006, +0.036]; t [+0.005, +0.034]; 32/48 families positive | yes |
-| 2 | Gain over the tuned rule; both intervals exclude zero | +0.020; bootstrap [+0.005, +0.037]; t [+0.004, +0.035]; 30/48 | yes |
+| 2 | Gain over the tuned rule; both intervals exclude zero | +0.020; bootstrap [+0.005, +0.036]; t [+0.004, +0.035]; 30/48 | yes |
 | 3 | Pooled ECE at most 0.05 | 0.138 (accuracy 0.816 at confidence 0.947); family-level interval [0.098, 0.188] | **no** |
 | 4 | Upper end of the unsafe-share difference at most +1.0 point | -0.26 points; family-level interval [-0.38, -0.16] | yes |
 

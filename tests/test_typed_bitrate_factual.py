@@ -84,6 +84,9 @@ def test_a_factual_block_observes_exactly_the_rollout_value_of_its_option():
         assert rows["arms"].min() >= 0 and rows["arms"].max() < len(c.ratios)
         executed = rows["values"][np.arange(count), rows["arms"]]
         assert np.abs(rows["outcomes"] - executed).max() < 1e-12  # the same estimand, one option
+        eager = block_episode(c, scenario, seed, 17, 0.5, eager=True)
+        for key in rows:  # building the state only at block starts changes no row
+            assert np.array_equal(eager[key], rows[key])
         blind = block_episode(c, scenario, seed, 17, 0.5, truth=False)
         assert np.isnan(blind["values"]).all()
         for key in ("states", "arms", "outcomes"):  # computing hindsight never disturbs the episode

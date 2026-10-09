@@ -100,6 +100,15 @@ Fixed before the run:
 make jevbwe-typed-factual TYPED=results/regen   # needs the frozen V3 run under results/regen
 ```
 
+## Run log
+
+- 2026-10-08, first launch from commit `7ecfb9b`: stopped after 34 minutes, during data
+  collection for the first seed. Building the ordered history state at every control step made
+  a factual episode cost about 0.1 s, so the largest budget alone needed 45 minutes per seed.
+  No model had been fitted and no result existed or was read. The collector now builds that
+  state only where a block starts; a test checks that the rows are identical either way, and
+  seeds, budgets, pipelines and reading rules are unchanged.
+
 ## Results
 
 None yet. The study has not been run.
