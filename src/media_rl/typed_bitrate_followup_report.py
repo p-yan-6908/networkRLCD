@@ -70,8 +70,8 @@ def rule_macros(report):
     return rows
 
 
-def replication_macros(report, audit, rules):
-    """The frozen models on the registered population panel."""
+def panel_macros(report, audit, rules, prefix="TypedRep"):
+    """A registered transfer: frozen models on a population panel they never trained on."""
     rows, panel = {}, audit["panels"]["all"]
     head, table = panel["methods"][PRIMARY], report["panels"]["test"]["all"]["methods"]
     base, hindsight = panel["train_fixed"], panel["hindsight_fixed"]
@@ -82,64 +82,80 @@ def replication_macros(report, audit, rules):
     calibration = audit["calibration"][PRIMARY]["all"]
     registered = report["transfer"]["registration"]
     rows.update(
-        TypedRepFamilies=str(families),
-        TypedRepTraceSeeds=str(len(registered["test_seeds"])),
-        TypedRepTraces=count(families * len(registered["test_seeds"])),
-        TypedRepSealedFamilies=str(PANELS["s"]),
-        TypedRepPoolFamilies=str(PANELS["d"]),
-        TypedRepBaseRatio=f"{float(base.removeprefix('fixed_')):.2f}",
-        TypedRepHindsightRatio=f"{float(hindsight.removeprefix('fixed_')):.2f}",
-        TypedRepBaseUtility=plain(table[base]["utility"]),
-        TypedRepHindsightUtility=plain(table[hindsight]["utility"]),
-        TypedRepHeadUtility=plain(table[PRIMARY]["utility"]),
-        TypedRepOracleUtility=plain(table["oracle"]["utility"]),
-        TypedRepBaseUnsafe=plain(100 * table[base]["unsafe"], 2),
-        TypedRepHeadUnsafe=plain(100 * table[PRIMARY]["unsafe"], 2),
-        TypedRepOverride=plain(100 * table[PRIMARY]["override_share"], 1),
-        TypedRepEce=plain(calibration["ece"]),
-        TypedRepEceFamily=span(calibration["family_interval95"]).replace("$+$", ""),
-        TypedRepAccuracy=plain(calibration["accuracy"]),
-        TypedRepConfidence=plain(calibration["confidence"]),
-        TypedRepEceBest=plain(min(ece)),
-        TypedRepEceWorst=plain(max(ece)),
-        TypedRepEceMedian=plain(float(np.median(ece))),
-        TypedRepEceAbove=str(int(np.sum(np.asarray(ece) > 0.05))),
-        TypedRepFamilySd=plain(float(by_family.std(ddof=1))),
-        TypedRepNearZero=str(int(np.sum(np.abs(by_family) < 0.005))),
-        TypedRepLargest=signed(float(by_family.max())),
-        TypedRepSmallest=signed(float(by_family.min())),
-        TypedRepFloor=plain(
-            100 * float(np.mean([audit["families"][f]["floor"] for f in panel["families"]])), 1
-        ),
-        TypedRepIsolationEpisodes=count(audit["isolation"]["episodes"]),
-        TypedRepIsolationDifference=plain(audit["isolation"]["unlabelled_replay"], 1),
+        Families=str(families),
+        TraceSeeds=str(len(registered["test_seeds"])),
+        Traces=count(families * len(registered["test_seeds"])),
+        SealedFamilies=str(PANELS["s"]),
+        PoolFamilies=str(PANELS["d"]),
+        BaseRatio=f"{float(base.removeprefix('fixed_')):.2f}",
+        HindsightRatio=f"{float(hindsight.removeprefix('fixed_')):.2f}",
+        BaseUtility=plain(table[base]["utility"]),
+        HindsightUtility=plain(table[hindsight]["utility"]),
+        HeadUtility=plain(table[PRIMARY]["utility"]),
+        OracleUtility=plain(table["oracle"]["utility"]),
+        BaseUnsafe=plain(100 * table[base]["unsafe"], 2),
+        HeadUnsafe=plain(100 * table[PRIMARY]["unsafe"], 2),
+        Override=plain(100 * table[PRIMARY]["override_share"], 1),
+        Ece=plain(calibration["ece"]),
+        EceFamily=span(calibration["family_interval95"]).replace("$+$", ""),
+        Accuracy=plain(calibration["accuracy"]),
+        Confidence=plain(calibration["confidence"]),
+        EceBest=plain(min(ece)),
+        EceWorst=plain(max(ece)),
+        EceMedian=plain(float(np.median(ece))),
+        EceAbove=str(int(np.sum(np.asarray(ece) > 0.05))),
+        FamilySd=plain(float(by_family.std(ddof=1))),
+        NearZero=str(int(np.sum(np.abs(by_family) < 0.005))),
+        Largest=signed(float(by_family.max())),
+        Smallest=signed(float(by_family.min())),
+        Floor=plain(100 * float(np.mean([audit["families"][f]["floor"] for f in panel["families"]])), 1),
+        IsolationEpisodes=count(audit["isolation"]["episodes"]),
+        IsolationDifference=plain(audit["isolation"]["unlabelled_replay"], 1),
+        RuleName=rule_name(registered["rule_best"]),
     )
-    family_macros(rows, "TypedRepGain", gain)
-    family_macros(rows, "TypedRepGainVsHindsight", head["utility_vs_hindsight_fixed"])
-    family_macros(rows, "TypedRepUnsafe", head["unsafe_vs_train_fixed"], 2, 100)
-    family_macros(rows, "TypedRepOracleGain", panel["methods"]["oracle"]["utility_vs_train_fixed"])
+    family_macros(rows, "Gain", gain)
+    family_macros(rows, "GainVsHindsight", head["utility_vs_hindsight_fixed"])
+    family_macros(rows, "Unsafe", head["unsafe_vs_train_fixed"], 2, 100)
+    family_macros(rows, "OracleGain", panel["methods"]["oracle"]["utility_vs_train_fixed"])
     oracle = panel["methods"]["oracle"]["utility_vs_train_fixed"]["mean"]
-    rows["TypedRepOracleShare"] = plain(100 * gain["mean"] / oracle, 0)
+    rows["OracleShare"] = plain(100 * gain["mean"] / oracle, 0)
     for label, pair in (
-        ("TypedRepRlcdVsAnalytic", "rlcd_vs_exact_gradient"),
-        ("TypedRepRlcdVsRegress", "rlcd_vs_regression"),
-        ("TypedRepBayesVsMap", "payoff_weighted_vs_map"),
+        ("RlcdVsAnalytic", "rlcd_vs_exact_gradient"),
+        ("RlcdVsRegress", "rlcd_vs_regression"),
+        ("BayesVsMap", "payoff_weighted_vs_map"),
     ):
         family_macros(rows, label, panel["pairs"][pair]["utility"])
     panels = rules["panels"]["test"]["panels"]
-    family_macros(rows, "TypedRepGainVsRule", panels["all"]["contrasts"]["head_vs_rule_best"]["utility"])
-    family_macros(
-        rows, "TypedRepRuleVsFixed", panels["all"]["contrasts"]["rule_best_vs_train_fixed"]["utility"]
-    )
+    family_macros(rows, "GainVsRule", panels["all"]["contrasts"]["head_vs_rule_best"]["utility"])
+    family_macros(rows, "RuleVsFixed", panels["all"]["contrasts"]["rule_best_vs_train_fixed"]["utility"])
     if "sensitive" in panels:
         sensitive = panels["sensitive"]
-        rows["TypedRepSensitiveFamilies"] = str(len(sensitive["families"]))
-        rows["TypedRepSensitiveMargin"] = plain(registered["sensitive_margin"], 2)
-        family_macros(rows, "TypedRepSensitiveGain", sensitive["contrasts"]["head_vs_train_fixed"]["utility"])
-        family_macros(
-            rows, "TypedRepSensitiveGainVsRule", sensitive["contrasts"]["head_vs_rule_best"]["utility"]
-        )
-    return rows
+        rows["SensitiveFamilies"] = str(len(sensitive["families"]))
+        rows["SensitiveMargin"] = plain(registered["sensitive_margin"], 2)
+        family_macros(rows, "SensitiveGain", sensitive["contrasts"]["head_vs_train_fixed"]["utility"])
+        family_macros(rows, "SensitiveGainVsRule", sensitive["contrasts"]["head_vs_rule_best"]["utility"])
+    if audit.get("paired"):  # this run minus a reference run on identical traces
+        paired = audit["paired"]["panels"]["all"]
+        family_macros(rows, "VsReference", paired[PRIMARY]["utility"])
+        family_macros(rows, "VsReferenceUnsafe", paired[PRIMARY]["unsafe"], 2, 100)
+        family_macros(rows, "FixedVsReference", paired["train_fixed"]["utility"])
+        rows["ReferenceIdentity"] = plain(audit["paired"]["fixed_ratio_identity"], 1)
+    met = verdicts(audit, rules)
+    rows.update({f"Met{k.title()}": "met" if v else "not met" for k, v in met.items()})
+    rows.update(CriteriaMet=NUMBERS[sum(met.values())], Criteria=NUMBERS[len(met)])
+    return {prefix + name: value for name, value in rows.items()}
+
+
+def validation_macros(audit, prefix):
+    """A run's own validation panel: the families it trained on, fresh traces."""
+    rows, panel = {}, audit["panels"]["all"]
+    head = panel["methods"][PRIMARY]
+    calibration = audit["calibration"][PRIMARY]["all"]
+    rows.update(Families=str(len(panel["families"])), Ece=plain(calibration["ece"]))
+    family_macros(rows, "Gain", head["utility_vs_train_fixed"])
+    family_macros(rows, "Unsafe", head["unsafe_vs_train_fixed"], 2, 100)
+    family_macros(rows, "OracleGain", panel["methods"]["oracle"]["utility_vs_train_fixed"])
+    return {prefix + name: value for name, value in rows.items()}
 
 
 def identified(entry, name="factual"):
@@ -243,36 +259,34 @@ def verdicts(audit, rules):
     )
 
 
-def table_replication(rows):
+def table_replication(rows, prefix="TypedRep"):
     """The four registered criteria and the secondary contrasts, from the macros already computed."""
 
     def line(label, name, verdict=None, t=True):
-        cells = [rows[name], rows[f"{name}Family"], rows[f"{name}T"] if t else "n/a"]
-        return f"{label} & " + " & ".join(cells) + f" & {rows[verdict] if verdict else ''} \\\\"
+        cells = [rows[prefix + name], rows[f"{prefix}{name}Family"], rows[f"{prefix}{name}T"] if t else "n/a"]
+        return f"{label} & " + " & ".join(cells) + f" & {rows[prefix + verdict] if verdict else ''} \\\\"
 
     lines = [
         "\\begin{tabular}{lrllr}",
         "\\toprule",
         "Quantity & Estimate & Family bootstrap & Family $t$ & Criterion \\\\",
         "\\midrule",
-        line("1. Head $-$ train-selected fixed ratio", "TypedRepGain", "TypedRepMetGain"),
-        line("2. Head $-$ tuned rule", "TypedRepGainVsRule", "TypedRepMetRule"),
-        line("3. Pooled ECE (at most 0.05)", "TypedRepEce", "TypedRepMetCalibration", t=False),
-        line(
-            "4. Unsafe intervals, points (upper end at most $+$1.0)",
-            "TypedRepUnsafe",
-            "TypedRepMetConstraints",
-        ),
+        line("1. Head $-$ train-selected fixed ratio", "Gain", "MetGain"),
+        line("2. Head $-$ tuned rule", "GainVsRule", "MetRule"),
+        line("3. Pooled ECE (at most 0.05)", "Ece", "MetCalibration", t=False),
+        line("4. Unsafe intervals, points (upper end at most $+$1.0)", "Unsafe", "MetConstraints"),
         "\\midrule",
-        line("Head $-$ hindsight-best fixed ratio", "TypedRepGainVsHindsight"),
-        line("RLCD $-$ exact-gradient head", "TypedRepRlcdVsAnalytic"),
-        line("RLCD $-$ regression head", "TypedRepRlcdVsRegress"),
-        line("Tuned rule $-$ fixed ratio", "TypedRepRuleVsFixed"),
-        line("Hindsight oracle $-$ fixed ratio", "TypedRepOracleGain"),
+        line("Head $-$ hindsight-best fixed ratio", "GainVsHindsight"),
+        line("RLCD $-$ exact-gradient head", "RlcdVsAnalytic"),
+        line("RLCD $-$ regression head", "RlcdVsRegress"),
+        line("Tuned rule $-$ fixed ratio", "RuleVsFixed"),
+        line("Hindsight oracle $-$ fixed ratio", "OracleGain"),
     ]
-    if "TypedRepSensitiveGain" in rows:
-        label = f"Head $-$ fixed ratio, {rows['TypedRepSensitiveFamilies']} action-sensitive families"
-        lines.append(line(label, "TypedRepSensitiveGain"))
+    if prefix + "SensitiveGain" in rows:
+        label = f"Head $-$ fixed ratio, {rows[prefix + 'SensitiveFamilies']} action-sensitive families"
+        lines.append(line(label, "SensitiveGain"))
+    if prefix + "VsReference" in rows:
+        lines.append(line("Head $-$ reference head on identical traces", "VsReference"))
     return "\n".join([*lines, "\\bottomrule", "\\end{tabular}"]) + "\n"
 
 
@@ -362,8 +376,25 @@ def figure_factual(report, path):
     plt.close(fig)
 
 
-def export(out, baselines, replication=None, replication_baselines=None, factual=None):
-    """Write macros, tables and the learning-curve figure from the follow-up summaries."""
+def load_panel(run, baselines):
+    """Report, audit and rule audit of one registered transfer, with the checks the paper relies on."""
+    files = [Path(run) / "report.json", Path(run) / "audit_test.json", Path(baselines) / "report.json"]
+    report, audit, rules = (json.loads(p.read_text()) for p in files)
+    if "transfer" not in report or not all(d.get("synthetic_only") for d in (report, audit, rules)):
+        raise ValueError("a panel must be a registered synthetic transfer")
+    if not audit.get("isolation"):
+        raise ValueError("replay the panel before exporting its evidence")
+    return files, report, audit, rules
+
+
+def export(
+    out, baselines, replication=None, replication_baselines=None, factual=None, panels=(), validations=()
+):
+    """Write macros, tables and the learning-curve figure from the follow-up summaries.
+
+    ``panels`` adds further registered transfers as (macro prefix, run, rule audit) and
+    ``validations`` a run's audited validation panel as (macro prefix, run).
+    """
     out = Path(out)
     out.mkdir(parents=True, exist_ok=True)
     sources = [Path(baselines) / "report.json"]
@@ -374,20 +405,24 @@ def export(out, baselines, replication=None, replication_baselines=None, factual
     if replication:
         if not replication_baselines:
             raise ValueError("the replication needs its baseline audit")
-        files = [Path(replication) / "report.json", Path(replication) / "audit_test.json"]
-        files.append(Path(replication_baselines) / "report.json")
-        report, audit, rules = (json.loads(p.read_text()) for p in files)
-        if "transfer" not in report or not all(d.get("synthetic_only") for d in (report, audit, rules)):
-            raise ValueError("the replication must be a registered synthetic transfer")
-        if not audit.get("isolation"):
-            raise ValueError("replay the replication panel before exporting its evidence")
-        evidence.update(replication_macros(report, audit, rules))
-        met = verdicts(audit, rules)
-        evidence.update({f"TypedRepMet{k.title()}": "met" if v else "not met" for k, v in met.items()})
-        evidence.update(TypedRepCriteriaMet=NUMBERS[sum(met.values())], TypedRepCriteria=NUMBERS[len(met)])
+        files, report, audit, rules = load_panel(replication, replication_baselines)
+        evidence.update(panel_macros(report, audit, rules))
         (out / "followup_replication.tex").write_text(table_replication(evidence))
         sources += files
     (out / "followup_rules.tex").write_text(table_rules(audited, rules))
+    for prefix, run, rule_audit in panels:
+        if not prefix.isalpha() or f"{prefix}Gain" in evidence:
+            raise ValueError("panel prefixes must be distinct and consist of letters")
+        files, report, audit, panel_rules = load_panel(run, rule_audit)
+        evidence.update(panel_macros(report, audit, panel_rules, prefix))
+        (out / f"followup_{prefix.lower()}.tex").write_text(table_replication(evidence, prefix))
+        sources += files
+    for prefix, run in validations:
+        path = Path(run) / "audit_validation.json"
+        if not prefix.isalpha() or f"{prefix}Gain" in evidence:
+            raise ValueError("validation prefixes must be distinct and consist of letters")
+        evidence.update(validation_macros(json.loads(path.read_text()), prefix))
+        sources.append(path)
     if factual:
         path = Path(factual) / "report.json"
         curves = json.loads(path.read_text())

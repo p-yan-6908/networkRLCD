@@ -227,8 +227,10 @@ Diagnostic only, as registered.
   0.005, eleven gain more than 0.02, one loses more than 0.02 (-0.047), and one family supplies
   +0.265. The seven families with persistent loss gain nothing on average (-0.001), as the
   estimator pins the rate there. The four largest gains are on links with a buffer well below
-  the default depth; that observation was made after the result and is a description, not a
-  finding.
+  the default depth. Split by buffer depth, the 15 families below 0.7 times the default gain
+  +0.046 of an oracle headroom of +0.142; the 18 between 0.7 and 2 gain +0.004 of +0.069; the
+  15 above 2 gain +0.011 of +0.119. These observations were made after the result and are a
+  description, not a finding.
 - **Calibration fails.** Confidence 0.947 against accuracy 0.816. Pooled ECE doubles relative
   to V3's test families (0.070 to 0.138). The payoff-weighted rule still acts sensibly because
   it weighs probabilities by payoffs, but nothing here supports calling the probabilities

@@ -130,6 +130,13 @@ make jevbwe-typed-population TYPED=results/regen        # steps 1 and 2
 make jevbwe-typed-population-test TYPED=results/regen   # step 4, after the freeze
 ```
 
+## Run log
+
+- 2026-10-08, training launched from commit `04f13b4`. Since the registration commit
+  (`c1e7192`) the code gained the `register` and `followup` commands and a guard in the factual
+  module; nothing V4 executes changed except that the development registration is written by
+  `register`. The base ratio selected on the 512 `pop_d` tune traces is 1.05.
+
 ## Results
 
-None yet. No V4 model has been trained.
+None yet.

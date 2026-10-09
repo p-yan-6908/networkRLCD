@@ -102,7 +102,7 @@ The ten fixed ratios on each panel, as a check on the first question:
   remains true of the option set, and the head can still only move down from its base, but the
   bar itself would not have been higher with a wider grid.
 - **A simple reactive rule does not reproduce the head's gain.** The best of 204 candidates
-  adds +0.014 on the traces that selected it and +0.002 to +0.008 elsewhere. In distribution
+  adds +0.015 on the traces that selected it and +0.002 to +0.008 elsewhere. In distribution
   the head is +0.118 above it in 13 of 13 families.
 - **The V3 conclusion does not move.** Against the tuned rule the head's gain on the twelve
   former test families is +0.049, positive in 5 of 12, with a t interval that includes zero.
