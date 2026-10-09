@@ -133,3 +133,10 @@ The browser/native outcome experiment does not run until all four are complete:
 
 Details are in the [acquisition log](NATIVE_PHASE_N1_ACQUISITION_LOG.md). Completing the gate
 does not start the experiment.
+
+## 9. Importer's assertion and go-ahead (2026-10-09)
+
+The repository owner adopted the final rights review as their own importer assertion for the
+21 ingested sources, and instructed that stage one be captured as registered. Both answers
+are quoted in the acquisition log. The custodian record of section 3 applies to the interim
+unchanged.

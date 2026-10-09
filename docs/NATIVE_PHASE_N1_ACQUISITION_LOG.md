@@ -1,7 +1,9 @@
 # Native Phase N1: acquisition log
 
-No outcome data exists. Nothing here ingests, screens, plans or runs the native experiment.
-The registration stays frozen at `318c473` (`native-n1-preregistered`).
+Entries are dated. Those of 2026-10-08 were written before any capture; the stage-one capture
+is opened by the entry of 2026-10-09 and logged in the
+[capture log](NATIVE_PHASE_N1_CAPTURE_LOG.md). The registration stays frozen at `318c473`
+(`native-n1-preregistered`).
 
 ## 2026-10-08: review received, queue fetched
 
@@ -170,3 +172,21 @@ Source pool, sealed plan, custodian record and acquisition provenance are comple
 native outcome experiment has not been started and is not started by this log. The capture
 path has still only run on test doubles; its first native run is also its first test against
 a browser.
+
+## 2026-10-09: the owner adopts the review and opens the capture
+
+No outcome data existed when this entry was written.
+
+**Importer's assertion.** Asked directly whether they adopt the final review as their own
+assertion, the repository owner answered "Yes, I adopt it". The final rights review
+(`rights-review-manifest-final.csv`, `contact-sheet-review-final.json`) is therefore the
+owner's importer assertion for the 21 ingested sources. This replaces the basis recorded on
+2026-10-08, which inferred the two importer flags from the owner having submitted the review.
+The evidence review itself is still by the reviewer of record. The ingest, the screening and
+the sealed plan stand unchanged, and no file was regenerated.
+
+**Go-ahead.** Asked whether to start the capture, the owner chose "Start stage one": the
+registered capture of planned positions 0 to 12 of the sealed plan (12 sources, 480 fresh
+peers, 2,880 assigned cohorts), then the outcome-free `status`, then the sealed interim with
+the recorded custodian value. The run is logged in the
+[capture log](NATIVE_PHASE_N1_CAPTURE_LOG.md).
