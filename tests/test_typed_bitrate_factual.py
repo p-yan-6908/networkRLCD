@@ -5,7 +5,7 @@ import pytest
 
 from media_rl.networks import MLP
 from media_rl.typed_bitrate import FEATURE_DIM, TypedConfig, TypedModel, load_config
-from media_rl.typed_bitrate_experiment import run
+from media_rl.typed_bitrate_experiment import register, run, transfer
 from media_rl.typed_bitrate_factual import (
     NEVER,
     block_episode,
@@ -241,3 +241,30 @@ def test_study_reports_learning_curves_paired_with_the_frozen_run(tmp_path):
     assert "120 blocks" in headline(report)
     with pytest.raises(FileExistsError):
         study(tmp_path / "run", tmp_path / "factual", settings)
+    # The same heads on families the run never trained on: a transfer's traces and frozen outcomes.
+    register(tmp_path / "run", tmp_path / "registration.json", "tiny-unseen", "d", [5])
+    transfer(tmp_path / "run", tmp_path / "unseen", tmp_path / "registration.json")
+    wider = study(
+        tmp_path / "run", tmp_path / "factual-unseen", settings, samples=30, panels=[tmp_path / "unseen"]
+    )
+    there = wider["unseen"]["tiny-unseen"]
+    assert (
+        there["families"] == 64
+        and there["trace_seeds"] == 1
+        and there["never_acting_head_matches_fixed"] == 0
+    )
+    assert set(there["reference"]) == {"regress", "head"}
+    small, large = (b["unseen"]["tiny-unseen"] for b in wider["budgets"])
+    assert set(small) == {"factual_vs_fixed", "rollout_vs_fixed", "factual_vs_rollout"}
+    assert set(large) == {"factual_vs_fixed"} and large["factual_vs_fixed"]["utility"]["families"] == 64
+    assert "unseen tiny-unseen factual_vs_fixed" in headline(wider)
+    assert [b["contrasts"]["factual_vs_fixed"] for b in wider["budgets"]] == [
+        b["contrasts"]["factual_vs_fixed"] for b in report["budgets"]
+    ]  # scoring more panels leaves the fits and the validation contrasts as they were
+    other = tmp_path / "other"
+    other.mkdir()
+    changed = json.loads((tmp_path / "unseen" / "config.json").read_text()) | dict(seed=1)
+    (other / "config.json").write_text(json.dumps(changed))
+    (other / "test_episodes.json").write_text((tmp_path / "unseen" / "test_episodes.json").read_text())
+    with pytest.raises(ValueError):
+        study(tmp_path / "run", tmp_path / "refused", settings, panels=[other])  # not a transfer of this run

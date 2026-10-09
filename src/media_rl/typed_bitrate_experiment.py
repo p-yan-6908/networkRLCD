@@ -707,6 +707,9 @@ def main(argv=None):
     p = sub.add_parser("factual", help="Factual-only supervision against a rollout-labelled control")
     p.add_argument("--run", required=True, type=Path)
     p.add_argument("--settings", type=Path)
+    p.add_argument(
+        "--panel", action="append", default=[], type=Path, help="Transfer of the run to unseen families"
+    )
     p.add_argument("--out", required=True, type=Path)
     p = sub.add_parser("register", help="Write the registration a transfer of a finished run must match")
     p.add_argument("--run", required=True, type=Path)
@@ -765,7 +768,7 @@ def main(argv=None):
         if args.command == "factual":
             from . import typed_bitrate_factual as factual
 
-            print(factual.headline(factual.study(args.run, args.out, args.settings)))
+            print(factual.headline(factual.study(args.run, args.out, args.settings, panels=args.panel)))
             return
         if args.command == "register":
             first, last = (int(v) for v in args.seeds.split("-"))

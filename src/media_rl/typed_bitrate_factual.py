@@ -358,14 +358,56 @@ def frozen_panel(config, run, method):
     return out
 
 
-def study(run, out, settings=None, samples=5000):
-    """Learning curves of the factual pipeline and its rollout-labelled control on shared rows."""
+def load_unseen(path, config):
+    """A finished transfer of the same run: its test traces as an unseen-family panel, with frozen outcomes."""
+    path = Path(path)
+    other = load_config(path / "config.json")
+    same = ("seed", "steps", "dt_ms", "bwe", "ratios", "base_ratio", "train_scenarios", "residual")
+    if any(getattr(other, k) != getattr(config, k) for k in same) or set(other.scenarios) & set(
+        config.train_scenarios
+    ):
+        raise ValueError("an unseen panel must be a transfer of the same run to families it never trained on")
+    rows = json.loads((path / "test_episodes.json").read_text())
+    families, seeds = other.scenarios, other.test_seeds
+
+    def cube(method):
+        mine = [r for r in rows if r["method"] == method]
+        models = sorted({r["model_seed"] for r in mine}, key=lambda m: -1 if m is None else m)
+        out = {k: np.full((len(families), len(models), len(seeds)), np.nan) for k in ("utility", "unsafe")}
+        for r in mine:
+            cell = families.index(r["scenario"]), models.index(r["model_seed"]), seeds.index(r["trace_seed"])
+            for k in out:
+                out[k][cell] = r[k]
+        if not mine or any(np.isnan(v).any() for v in out.values()):
+            raise ValueError(f"unseen panel is incomplete for {method}")
+        return out
+
+    frozen = dict(regress=cube("regress_greedy"), head=cube("choice_rlcd_bayes"))
+    return dict(name=other.name, config=other, fixed=cube(f"fixed_{other.base_ratio:.2f}"), frozen=frozen)
+
+
+def unseen_loop(panel, bundle):
+    """Closed-loop outcomes on an unseen panel's traces as [family, trace seed]; no hindsight is computed."""
+    config = panel["config"]
+    traces = panel_traces(config, "test")
+    results = run_many(config, bundle, [(s, trace, SPEC) for s, _, trace in traces])
+    shape = (len(config.scenarios), len(config.test_seeds))
+    return {k: np.asarray([r[k] for r in results]).reshape(shape) for k in ("utility", "unsafe")}
+
+
+def study(run, out, settings=None, samples=5000, panels=()):
+    """Learning curves of the factual pipeline and its rollout-labelled control on shared rows.
+
+    ``panels`` are finished transfers of the same run; every head is also scored closed-loop on
+    their test traces, paired with the frozen outcomes there.
+    """
     run, out = Path(run), Path(out)
     if out.exists():
         raise FileExistsError(out)
     config, settings = load_config(run / "config.json"), load_settings(settings)
     if config.base_ratio is None:
         raise ValueError("the run's config must record its selected base ratio")
+    unseen = [load_unseen(p, config) for p in panels]
     base, started = config.ratios.index(config.base_ratio), time.time()
     out.mkdir(parents=True)
     dump(out / "settings.json", settings)
@@ -388,6 +430,22 @@ def study(run, out, settings=None, samples=5000):
     for name, method in (("v3_regress", "regress_greedy"), ("v3_head", "choice_rlcd_bayes")):
         panel = frozen_panel(config, run, method)
         report["reference"][name] = {k: contrast(panel[k] - fixed[k], rng, samples) for k in panel}
+    if unseen:
+        report["unseen"] = {}
+        idle = package(config, *_idle(config), NEVER, 0)
+        for panel in unseen:
+            replay = unseen_loop(panel, idle)
+            report["unseen"][panel["name"]] = dict(
+                families=len(panel["config"].scenarios),
+                trace_seeds=len(panel["config"].test_seeds),
+                never_acting_head_matches_fixed=float(
+                    np.abs(replay["utility"] - panel["fixed"]["utility"][:, 0]).max()
+                ),
+                reference={
+                    name: {k: contrast(frozen[k] - panel["fixed"][k], rng, samples) for k in frozen}
+                    for name, frozen in panel["frozen"].items()
+                },
+            )
     cells = {}  # (blocks, source, variant) -> per-seed entries and panels
     for seed in settings["seeds"]:
         data = collect(
@@ -422,9 +480,11 @@ def study(run, out, settings=None, samples=5000):
                     if variant == "selected":
                         entry["fit"] = info
                         dump(out / f"model_{source}_{blocks}_seed_{seed}.json", bundle)
-                    cell = cells.setdefault((blocks, source, variant), dict(seeds=[], panels=[]))
+                    cell = cells.setdefault((blocks, source, variant), dict(seeds=[], panels=[], unseen={}))
                     cell["seeds"].append(entry)
                     cell["panels"].append(panel)
+                    for other in unseen:
+                        cell["unseen"].setdefault(other["name"], []).append(unseen_loop(other, bundle))
             del parts
         del data
     seconds = config.steps * config.dt_ms / 1000
@@ -459,6 +519,25 @@ def study(run, out, settings=None, samples=5000):
                 entry["contrasts"][name] = {
                     k: contrast(cube[a][k] - cube[b][k], rng, samples) for k in ("utility", "unsafe")
                 }
+        if unseen:
+            entry["unseen"] = {}
+        for other in unseen:
+            there, keys = {}, ("utility", "unsafe")
+            for source in SOURCES:  # the deployed pipelines only: the margin each selected for itself
+                if (blocks, source, "selected") in cells:
+                    loops = cells[(blocks, source, "selected")]["unseen"][other["name"]]
+                    there[source] = {k: np.stack([p[k] for p in loops], axis=1) for k in keys}
+            contrasts = {
+                f"{name}_vs_fixed": {
+                    k: contrast(there[name][k] - other["fixed"][k], rng, samples) for k in keys
+                }
+                for name in there
+            }
+            if len(there) == 2:
+                contrasts["factual_vs_rollout"] = {
+                    k: contrast(there["factual"][k] - there["rollout"][k], rng, samples) for k in keys
+                }
+            entry["unseen"][other["name"]] = contrasts
         report["budgets"].append(entry)
     report["elapsed_s"] = time.time() - started
     dump(out / "report.json", report)
@@ -501,4 +580,12 @@ def headline(report):
                 f"  closed loop {u['mean']:+.3f} family t [{t[0]:+.3f}, {t[1]:+.3f}] {u['positive_families']}/{u['families']}"
                 f"  margins {margins}"
             )
+        for panel, contrasts in entry.get("unseen", {}).items():
+            for name, c in contrasts.items():
+                u = c["utility"]
+                t = u["family_t_interval95"]
+                lines.append(
+                    f"  unseen {panel} {name}: {u['mean']:+.3f} family t [{t[0]:+.3f}, {t[1]:+.3f}]"
+                    f" {u['positive_families']}/{u['families']}"
+                )
     return "\n".join(lines)
