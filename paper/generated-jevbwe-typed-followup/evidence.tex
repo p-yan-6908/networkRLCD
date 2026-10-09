@@ -736,6 +736,279 @@
 \newcommand{\TypedFactControlTopPriceFamily}{[$-$0.070, $-$0.017]}
 \newcommand{\TypedFactControlTopPriceT}{[$-$0.058, $-$0.030]}
 \newcommand{\TypedFactControlTopPriceLeaveOut}{[$-$0.046, $-$0.040]}
+\newcommand{\TypedUnseenSeeds}{3}
+\newcommand{\TypedUnseenBudgets}{3}
+\newcommand{\TypedUnseenStates}{8{,}192}
+\newcommand{\TypedUnseenOracleAdvantage}{$+$0.055}
+\newcommand{\TypedUnseenBlocksPerEpisode}{5.6}
+\newcommand{\TypedUnseenLabelDifference}{0.0}
+\newcommand{\TypedUnseenControlBlocks}{80{,}000}
+\newcommand{\TypedUnseenRefRegress}{$+$0.046}
+\newcommand{\TypedUnseenRefRegressSeed}{[$+$0.034, $+$0.058]}
+\newcommand{\TypedUnseenRefRegressPositive}{40 of 64}
+\newcommand{\TypedUnseenRefRegressFamily}{[$+$0.023, $+$0.071]}
+\newcommand{\TypedUnseenRefRegressT}{[$+$0.023, $+$0.069]}
+\newcommand{\TypedUnseenRefRegressLeaveOut}{[$+$0.041, $+$0.048]}
+\newcommand{\TypedUnseenRefHead}{$+$0.029}
+\newcommand{\TypedUnseenRefHeadSeed}{[$+$0.021, $+$0.038]}
+\newcommand{\TypedUnseenRefHeadPositive}{33 of 64}
+\newcommand{\TypedUnseenRefHeadFamily}{[$+$0.007, $+$0.054]}
+\newcommand{\TypedUnseenRefHeadT}{[$+$0.007, $+$0.052]}
+\newcommand{\TypedUnseenRefHeadLeaveOut}{[$+$0.025, $+$0.033]}
+\newcommand{\TypedUnseenOneBlocks}{20{,}000}
+\newcommand{\TypedUnseenOneHours}{36}
+\newcommand{\TypedUnseenOneGain}{$-$0.013}
+\newcommand{\TypedUnseenOneGainSeed}{[$-$0.025, $+$0.000]}
+\newcommand{\TypedUnseenOneGainPositive}{25 of 64}
+\newcommand{\TypedUnseenOneGainFamily}{[$-$0.036, $+$0.009]}
+\newcommand{\TypedUnseenOneGainT}{[$-$0.031, $+$0.004]}
+\newcommand{\TypedUnseenOneGainLeaveOut}{[$-$0.016, $-$0.010]}
+\newcommand{\TypedUnseenOneUnsafe}{$-$0.61}
+\newcommand{\TypedUnseenOneUnsafeSeed}{[$-$0.75, $-$0.44]}
+\newcommand{\TypedUnseenOneUnsafePositive}{4 of 64}
+\newcommand{\TypedUnseenOneUnsafeFamily}{[$-$0.88, $-$0.37]}
+\newcommand{\TypedUnseenOneUnsafeT}{[$-$0.84, $-$0.38]}
+\newcommand{\TypedUnseenOneUnsafeLeaveOut}{[$-$0.62, $-$0.56]}
+\newcommand{\TypedUnseenOneOffline}{$-$0.003}
+\newcommand{\TypedUnseenOneCorrelation}{0.15}
+\newcommand{\TypedUnseenOneControlGain}{$+$0.043}
+\newcommand{\TypedUnseenOneControlGainSeed}{[$+$0.031, $+$0.056]}
+\newcommand{\TypedUnseenOneControlGainPositive}{38 of 64}
+\newcommand{\TypedUnseenOneControlGainFamily}{[$+$0.022, $+$0.066]}
+\newcommand{\TypedUnseenOneControlGainT}{[$+$0.022, $+$0.064]}
+\newcommand{\TypedUnseenOneControlGainLeaveOut}{[$+$0.039, $+$0.045]}
+\newcommand{\TypedUnseenOnePrice}{$-$0.056}
+\newcommand{\TypedUnseenOnePriceSeed}{[$-$0.069, $-$0.043]}
+\newcommand{\TypedUnseenOnePricePositive}{4 of 64}
+\newcommand{\TypedUnseenOnePriceFamily}{[$-$0.076, $-$0.038]}
+\newcommand{\TypedUnseenOnePriceT}{[$-$0.070, $-$0.043]}
+\newcommand{\TypedUnseenOnePriceLeaveOut}{[$-$0.058, $-$0.054]}
+\newcommand{\TypedUnseenOneControlOffline}{$+$0.020}
+\newcommand{\TypedUnseenOneControlCorrelation}{0.50}
+\newcommand{\TypedUnseenTwoBlocks}{80{,}000}
+\newcommand{\TypedUnseenTwoHours}{143}
+\newcommand{\TypedUnseenTwoGain}{$+$0.020}
+\newcommand{\TypedUnseenTwoGainSeed}{[$+$0.004, $+$0.033]}
+\newcommand{\TypedUnseenTwoGainPositive}{30 of 64}
+\newcommand{\TypedUnseenTwoGainFamily}{[$-$0.003, $+$0.042]}
+\newcommand{\TypedUnseenTwoGainT}{[$+$0.002, $+$0.037]}
+\newcommand{\TypedUnseenTwoGainLeaveOut}{[$+$0.016, $+$0.021]}
+\newcommand{\TypedUnseenTwoUnsafe}{$-$0.45}
+\newcommand{\TypedUnseenTwoUnsafeSeed}{[$-$0.58, $-$0.32]}
+\newcommand{\TypedUnseenTwoUnsafePositive}{6 of 64}
+\newcommand{\TypedUnseenTwoUnsafeFamily}{[$-$0.69, $-$0.25]}
+\newcommand{\TypedUnseenTwoUnsafeT}{[$-$0.64, $-$0.25]}
+\newcommand{\TypedUnseenTwoUnsafeLeaveOut}{[$-$0.46, $-$0.40]}
+\newcommand{\TypedUnseenTwoOffline}{$+$0.007}
+\newcommand{\TypedUnseenTwoCorrelation}{0.24}
+\newcommand{\TypedUnseenTwoControlGain}{$+$0.046}
+\newcommand{\TypedUnseenTwoControlGainSeed}{[$+$0.037, $+$0.056]}
+\newcommand{\TypedUnseenTwoControlGainPositive}{38 of 64}
+\newcommand{\TypedUnseenTwoControlGainFamily}{[$+$0.025, $+$0.070]}
+\newcommand{\TypedUnseenTwoControlGainT}{[$+$0.024, $+$0.068]}
+\newcommand{\TypedUnseenTwoControlGainLeaveOut}{[$+$0.041, $+$0.048]}
+\newcommand{\TypedUnseenTwoPrice}{$-$0.026}
+\newcommand{\TypedUnseenTwoPriceSeed}{[$-$0.042, $-$0.015]}
+\newcommand{\TypedUnseenTwoPricePositive}{5 of 64}
+\newcommand{\TypedUnseenTwoPriceFamily}{[$-$0.044, $-$0.011]}
+\newcommand{\TypedUnseenTwoPriceT}{[$-$0.034, $-$0.019]}
+\newcommand{\TypedUnseenTwoPriceLeaveOut}{[$-$0.027, $-$0.024]}
+\newcommand{\TypedUnseenTwoControlOffline}{$+$0.021}
+\newcommand{\TypedUnseenTwoControlCorrelation}{0.52}
+\newcommand{\TypedUnseenThreeBlocks}{320{,}000}
+\newcommand{\TypedUnseenThreeHours}{571}
+\newcommand{\TypedUnseenThreeGain}{$+$0.029}
+\newcommand{\TypedUnseenThreeGainSeed}{[$+$0.018, $+$0.039]}
+\newcommand{\TypedUnseenThreeGainPositive}{24 of 64}
+\newcommand{\TypedUnseenThreeGainFamily}{[$+$0.013, $+$0.049]}
+\newcommand{\TypedUnseenThreeGainT}{[$+$0.012, $+$0.046]}
+\newcommand{\TypedUnseenThreeGainLeaveOut}{[$+$0.025, $+$0.030]}
+\newcommand{\TypedUnseenThreeUnsafe}{$-$0.34}
+\newcommand{\TypedUnseenThreeUnsafeSeed}{[$-$0.45, $-$0.21]}
+\newcommand{\TypedUnseenThreeUnsafePositive}{2 of 64}
+\newcommand{\TypedUnseenThreeUnsafeFamily}{[$-$0.56, $-$0.15]}
+\newcommand{\TypedUnseenThreeUnsafeT}{[$-$0.52, $-$0.15]}
+\newcommand{\TypedUnseenThreeUnsafeLeaveOut}{[$-$0.35, $-$0.28]}
+\newcommand{\TypedUnseenThreeOffline}{$+$0.013}
+\newcommand{\TypedUnseenThreeCorrelation}{0.39}
+\newcommand{\TypedUnseenIdentifiedBlocks}{80{,}000}
+\newcommand{\TypedUnseenIdentifiedHours}{143}
+\newcommand{\TypedUnseenIdentifiedBudgets}{2}
+\newcommand{\TypedUnseenLastBlocks}{320{,}000}
+\newcommand{\TypedUnseenLastHours}{571}
+\newcommand{\TypedUnseenLastGain}{$+$0.029}
+\newcommand{\TypedUnseenLastGainSeed}{[$+$0.018, $+$0.039]}
+\newcommand{\TypedUnseenLastGainPositive}{24 of 64}
+\newcommand{\TypedUnseenLastGainFamily}{[$+$0.013, $+$0.049]}
+\newcommand{\TypedUnseenLastGainT}{[$+$0.012, $+$0.046]}
+\newcommand{\TypedUnseenLastGainLeaveOut}{[$+$0.025, $+$0.030]}
+\newcommand{\TypedUnseenControlHours}{143}
+\newcommand{\TypedUnseenControlTopGain}{$+$0.046}
+\newcommand{\TypedUnseenControlTopGainSeed}{[$+$0.037, $+$0.056]}
+\newcommand{\TypedUnseenControlTopGainPositive}{38 of 64}
+\newcommand{\TypedUnseenControlTopGainFamily}{[$+$0.025, $+$0.070]}
+\newcommand{\TypedUnseenControlTopGainT}{[$+$0.024, $+$0.068]}
+\newcommand{\TypedUnseenControlTopGainLeaveOut}{[$+$0.041, $+$0.048]}
+\newcommand{\TypedUnseenControlTopFactual}{$+$0.020}
+\newcommand{\TypedUnseenControlTopFactualSeed}{[$+$0.004, $+$0.033]}
+\newcommand{\TypedUnseenControlTopFactualPositive}{30 of 64}
+\newcommand{\TypedUnseenControlTopFactualFamily}{[$-$0.003, $+$0.042]}
+\newcommand{\TypedUnseenControlTopFactualT}{[$+$0.002, $+$0.037]}
+\newcommand{\TypedUnseenControlTopFactualLeaveOut}{[$+$0.016, $+$0.021]}
+\newcommand{\TypedUnseenControlTopPrice}{$-$0.026}
+\newcommand{\TypedUnseenControlTopPriceSeed}{[$-$0.042, $-$0.015]}
+\newcommand{\TypedUnseenControlTopPricePositive}{5 of 64}
+\newcommand{\TypedUnseenControlTopPriceFamily}{[$-$0.044, $-$0.011]}
+\newcommand{\TypedUnseenControlTopPriceT}{[$-$0.034, $-$0.019]}
+\newcommand{\TypedUnseenControlTopPriceLeaveOut}{[$-$0.027, $-$0.024]}
+\newcommand{\TypedUnseenPanelAFamilies}{48}
+\newcommand{\TypedUnseenPanelATraceSeeds}{16}
+\newcommand{\TypedUnseenPanelARefRegress}{$+$0.023}
+\newcommand{\TypedUnseenPanelARefRegressSeed}{[$+$0.019, $+$0.028]}
+\newcommand{\TypedUnseenPanelARefRegressPositive}{35 of 48}
+\newcommand{\TypedUnseenPanelARefRegressFamily}{[$+$0.004, $+$0.040]}
+\newcommand{\TypedUnseenPanelARefRegressT}{[$+$0.006, $+$0.041]}
+\newcommand{\TypedUnseenPanelARefRegressLeaveOut}{[$+$0.021, $+$0.029]}
+\newcommand{\TypedUnseenPanelARefHead}{$+$0.012}
+\newcommand{\TypedUnseenPanelARefHeadSeed}{[$+$0.006, $+$0.018]}
+\newcommand{\TypedUnseenPanelARefHeadPositive}{25 of 48}
+\newcommand{\TypedUnseenPanelARefHeadFamily}{[$-$0.016, $+$0.036]}
+\newcommand{\TypedUnseenPanelARefHeadT}{[$-$0.014, $+$0.038]}
+\newcommand{\TypedUnseenPanelARefHeadLeaveOut}{[$+$0.008, $+$0.020]}
+\newcommand{\TypedUnseenOnePanelAGain}{$-$0.033}
+\newcommand{\TypedUnseenOnePanelAGainSeed}{[$-$0.046, $-$0.021]}
+\newcommand{\TypedUnseenOnePanelAGainPositive}{14 of 48}
+\newcommand{\TypedUnseenOnePanelAGainFamily}{[$-$0.066, $-$0.005]}
+\newcommand{\TypedUnseenOnePanelAGainT}{[$-$0.062, $-$0.005]}
+\newcommand{\TypedUnseenOnePanelAGainLeaveOut}{[$-$0.036, $-$0.024]}
+\newcommand{\TypedUnseenOnePanelAUnsafe}{$-$0.68}
+\newcommand{\TypedUnseenOnePanelAUnsafeSeed}{[$-$0.78, $-$0.58]}
+\newcommand{\TypedUnseenOnePanelAUnsafePositive}{0 of 48}
+\newcommand{\TypedUnseenOnePanelAUnsafeFamily}{[$-$0.90, $-$0.48]}
+\newcommand{\TypedUnseenOnePanelAUnsafeT}{[$-$0.88, $-$0.49]}
+\newcommand{\TypedUnseenOnePanelAUnsafeLeaveOut}{[$-$0.70, $-$0.64]}
+\newcommand{\TypedUnseenOnePanelAControlGain}{$+$0.026}
+\newcommand{\TypedUnseenOnePanelAControlGainSeed}{[$+$0.021, $+$0.032]}
+\newcommand{\TypedUnseenOnePanelAControlGainPositive}{34 of 48}
+\newcommand{\TypedUnseenOnePanelAControlGainFamily}{[$+$0.009, $+$0.042]}
+\newcommand{\TypedUnseenOnePanelAControlGainT}{[$+$0.010, $+$0.042]}
+\newcommand{\TypedUnseenOnePanelAControlGainLeaveOut}{[$+$0.024, $+$0.031]}
+\newcommand{\TypedUnseenOnePanelAPrice}{$-$0.060}
+\newcommand{\TypedUnseenOnePanelAPriceSeed}{[$-$0.070, $-$0.048]}
+\newcommand{\TypedUnseenOnePanelAPricePositive}{3 of 48}
+\newcommand{\TypedUnseenOnePanelAPriceFamily}{[$-$0.084, $-$0.035]}
+\newcommand{\TypedUnseenOnePanelAPriceT}{[$-$0.081, $-$0.038]}
+\newcommand{\TypedUnseenOnePanelAPriceLeaveOut}{[$-$0.061, $-$0.055]}
+\newcommand{\TypedUnseenTwoPanelAGain}{$+$0.004}
+\newcommand{\TypedUnseenTwoPanelAGainSeed}{[$-$0.011, $+$0.015]}
+\newcommand{\TypedUnseenTwoPanelAGainPositive}{23 of 48}
+\newcommand{\TypedUnseenTwoPanelAGainFamily}{[$-$0.018, $+$0.021]}
+\newcommand{\TypedUnseenTwoPanelAGainT}{[$-$0.011, $+$0.018]}
+\newcommand{\TypedUnseenTwoPanelAGainLeaveOut}{[$+$0.001, $+$0.008]}
+\newcommand{\TypedUnseenTwoPanelAUnsafe}{$-$0.47}
+\newcommand{\TypedUnseenTwoPanelAUnsafeSeed}{[$-$0.62, $-$0.32]}
+\newcommand{\TypedUnseenTwoPanelAUnsafePositive}{1 of 48}
+\newcommand{\TypedUnseenTwoPanelAUnsafeFamily}{[$-$0.69, $-$0.27]}
+\newcommand{\TypedUnseenTwoPanelAUnsafeT}{[$-$0.62, $-$0.31]}
+\newcommand{\TypedUnseenTwoPanelAUnsafeLeaveOut}{[$-$0.48, $-$0.43]}
+\newcommand{\TypedUnseenTwoPanelAControlGain}{$+$0.024}
+\newcommand{\TypedUnseenTwoPanelAControlGainSeed}{[$+$0.018, $+$0.030]}
+\newcommand{\TypedUnseenTwoPanelAControlGainPositive}{33 of 48}
+\newcommand{\TypedUnseenTwoPanelAControlGainFamily}{[$+$0.004, $+$0.041]}
+\newcommand{\TypedUnseenTwoPanelAControlGainT}{[$+$0.006, $+$0.042]}
+\newcommand{\TypedUnseenTwoPanelAControlGainLeaveOut}{[$+$0.022, $+$0.029]}
+\newcommand{\TypedUnseenTwoPanelAPrice}{$-$0.020}
+\newcommand{\TypedUnseenTwoPanelAPriceSeed}{[$-$0.031, $-$0.012]}
+\newcommand{\TypedUnseenTwoPanelAPricePositive}{6 of 48}
+\newcommand{\TypedUnseenTwoPanelAPriceFamily}{[$-$0.034, $-$0.008]}
+\newcommand{\TypedUnseenTwoPanelAPriceT}{[$-$0.028, $-$0.013]}
+\newcommand{\TypedUnseenTwoPanelAPriceLeaveOut}{[$-$0.021, $-$0.019]}
+\newcommand{\TypedUnseenThreePanelAGain}{$+$0.009}
+\newcommand{\TypedUnseenThreePanelAGainSeed}{[$+$0.002, $+$0.016]}
+\newcommand{\TypedUnseenThreePanelAGainPositive}{31 of 48}
+\newcommand{\TypedUnseenThreePanelAGainFamily}{[$-$0.006, $+$0.022]}
+\newcommand{\TypedUnseenThreePanelAGainT}{[$-$0.003, $+$0.020]}
+\newcommand{\TypedUnseenThreePanelAGainLeaveOut}{[$+$0.006, $+$0.012]}
+\newcommand{\TypedUnseenThreePanelAUnsafe}{$-$0.25}
+\newcommand{\TypedUnseenThreePanelAUnsafeSeed}{[$-$0.31, $-$0.18]}
+\newcommand{\TypedUnseenThreePanelAUnsafePositive}{1 of 48}
+\newcommand{\TypedUnseenThreePanelAUnsafeFamily}{[$-$0.38, $-$0.13]}
+\newcommand{\TypedUnseenThreePanelAUnsafeT}{[$-$0.36, $-$0.13]}
+\newcommand{\TypedUnseenThreePanelAUnsafeLeaveOut}{[$-$0.26, $-$0.22]}
+\newcommand{\TypedUnseenPanelBFamilies}{48}
+\newcommand{\TypedUnseenPanelBTraceSeeds}{16}
+\newcommand{\TypedUnseenPanelBRefRegress}{$+$0.056}
+\newcommand{\TypedUnseenPanelBRefRegressSeed}{[$+$0.051, $+$0.060]}
+\newcommand{\TypedUnseenPanelBRefRegressPositive}{38 of 48}
+\newcommand{\TypedUnseenPanelBRefRegressFamily}{[$+$0.033, $+$0.082]}
+\newcommand{\TypedUnseenPanelBRefRegressT}{[$+$0.031, $+$0.081]}
+\newcommand{\TypedUnseenPanelBRefRegressLeaveOut}{[$+$0.050, $+$0.059]}
+\newcommand{\TypedUnseenPanelBRefHead}{$+$0.032}
+\newcommand{\TypedUnseenPanelBRefHeadSeed}{[$+$0.027, $+$0.037]}
+\newcommand{\TypedUnseenPanelBRefHeadPositive}{35 of 48}
+\newcommand{\TypedUnseenPanelBRefHeadFamily}{[$+$0.008, $+$0.057]}
+\newcommand{\TypedUnseenPanelBRefHeadT}{[$+$0.008, $+$0.056]}
+\newcommand{\TypedUnseenPanelBRefHeadLeaveOut}{[$+$0.028, $+$0.037]}
+\newcommand{\TypedUnseenOnePanelBGain}{$-$0.017}
+\newcommand{\TypedUnseenOnePanelBGainSeed}{[$-$0.032, $-$0.002]}
+\newcommand{\TypedUnseenOnePanelBGainPositive}{19 of 48}
+\newcommand{\TypedUnseenOnePanelBGainFamily}{[$-$0.045, $+$0.010]}
+\newcommand{\TypedUnseenOnePanelBGainT}{[$-$0.040, $+$0.007]}
+\newcommand{\TypedUnseenOnePanelBGainLeaveOut}{[$-$0.020, $-$0.010]}
+\newcommand{\TypedUnseenOnePanelBUnsafe}{$-$0.72}
+\newcommand{\TypedUnseenOnePanelBUnsafeSeed}{[$-$0.83, $-$0.60]}
+\newcommand{\TypedUnseenOnePanelBUnsafePositive}{1 of 48}
+\newcommand{\TypedUnseenOnePanelBUnsafeFamily}{[$-$0.95, $-$0.51]}
+\newcommand{\TypedUnseenOnePanelBUnsafeT}{[$-$0.91, $-$0.54]}
+\newcommand{\TypedUnseenOnePanelBUnsafeLeaveOut}{[$-$0.74, $-$0.69]}
+\newcommand{\TypedUnseenOnePanelBControlGain}{$+$0.054}
+\newcommand{\TypedUnseenOnePanelBControlGainSeed}{[$+$0.050, $+$0.059]}
+\newcommand{\TypedUnseenOnePanelBControlGainPositive}{38 of 48}
+\newcommand{\TypedUnseenOnePanelBControlGainFamily}{[$+$0.032, $+$0.079]}
+\newcommand{\TypedUnseenOnePanelBControlGainT}{[$+$0.031, $+$0.078]}
+\newcommand{\TypedUnseenOnePanelBControlGainLeaveOut}{[$+$0.050, $+$0.057]}
+\newcommand{\TypedUnseenOnePanelBPrice}{$-$0.071}
+\newcommand{\TypedUnseenOnePanelBPriceSeed}{[$-$0.086, $-$0.056]}
+\newcommand{\TypedUnseenOnePanelBPricePositive}{3 of 48}
+\newcommand{\TypedUnseenOnePanelBPriceFamily}{[$-$0.100, $-$0.043]}
+\newcommand{\TypedUnseenOnePanelBPriceT}{[$-$0.095, $-$0.047]}
+\newcommand{\TypedUnseenOnePanelBPriceLeaveOut}{[$-$0.073, $-$0.066]}
+\newcommand{\TypedUnseenTwoPanelBGain}{$+$0.027}
+\newcommand{\TypedUnseenTwoPanelBGainSeed}{[$+$0.011, $+$0.039]}
+\newcommand{\TypedUnseenTwoPanelBGainPositive}{31 of 48}
+\newcommand{\TypedUnseenTwoPanelBGainFamily}{[$+$0.003, $+$0.051]}
+\newcommand{\TypedUnseenTwoPanelBGainT}{[$+$0.008, $+$0.046]}
+\newcommand{\TypedUnseenTwoPanelBGainLeaveOut}{[$+$0.023, $+$0.030]}
+\newcommand{\TypedUnseenTwoPanelBUnsafe}{$-$0.53}
+\newcommand{\TypedUnseenTwoPanelBUnsafeSeed}{[$-$0.62, $-$0.44]}
+\newcommand{\TypedUnseenTwoPanelBUnsafePositive}{1 of 48}
+\newcommand{\TypedUnseenTwoPanelBUnsafeFamily}{[$-$0.72, $-$0.35]}
+\newcommand{\TypedUnseenTwoPanelBUnsafeT}{[$-$0.69, $-$0.36]}
+\newcommand{\TypedUnseenTwoPanelBUnsafeLeaveOut}{[$-$0.54, $-$0.49]}
+\newcommand{\TypedUnseenTwoPanelBControlGain}{$+$0.056}
+\newcommand{\TypedUnseenTwoPanelBControlGainSeed}{[$+$0.051, $+$0.062]}
+\newcommand{\TypedUnseenTwoPanelBControlGainPositive}{39 of 48}
+\newcommand{\TypedUnseenTwoPanelBControlGainFamily}{[$+$0.033, $+$0.082]}
+\newcommand{\TypedUnseenTwoPanelBControlGainT}{[$+$0.031, $+$0.082]}
+\newcommand{\TypedUnseenTwoPanelBControlGainLeaveOut}{[$+$0.051, $+$0.060]}
+\newcommand{\TypedUnseenTwoPanelBPrice}{$-$0.029}
+\newcommand{\TypedUnseenTwoPanelBPriceSeed}{[$-$0.043, $-$0.019]}
+\newcommand{\TypedUnseenTwoPanelBPricePositive}{4 of 48}
+\newcommand{\TypedUnseenTwoPanelBPriceFamily}{[$-$0.045, $-$0.015]}
+\newcommand{\TypedUnseenTwoPanelBPriceT}{[$-$0.037, $-$0.020]}
+\newcommand{\TypedUnseenTwoPanelBPriceLeaveOut}{[$-$0.030, $-$0.027]}
+\newcommand{\TypedUnseenThreePanelBGain}{$+$0.036}
+\newcommand{\TypedUnseenThreePanelBGainSeed}{[$+$0.032, $+$0.040]}
+\newcommand{\TypedUnseenThreePanelBGainPositive}{30 of 48}
+\newcommand{\TypedUnseenThreePanelBGainFamily}{[$+$0.017, $+$0.059]}
+\newcommand{\TypedUnseenThreePanelBGainT}{[$+$0.016, $+$0.057]}
+\newcommand{\TypedUnseenThreePanelBGainLeaveOut}{[$+$0.031, $+$0.038]}
+\newcommand{\TypedUnseenThreePanelBUnsafe}{$-$0.37}
+\newcommand{\TypedUnseenThreePanelBUnsafeSeed}{[$-$0.44, $-$0.29]}
+\newcommand{\TypedUnseenThreePanelBUnsafePositive}{5 of 48}
+\newcommand{\TypedUnseenThreePanelBUnsafeFamily}{[$-$0.57, $-$0.21]}
+\newcommand{\TypedUnseenThreePanelBUnsafeT}{[$-$0.54, $-$0.21]}
+\newcommand{\TypedUnseenThreePanelBUnsafeLeaveOut}{[$-$0.38, $-$0.33]}
 \newcommand{\TypedCrossLinks}{64}
 \newcommand{\TypedCrossSessions}{32}
 \newcommand{\TypedCrossSessionSeconds}{36}

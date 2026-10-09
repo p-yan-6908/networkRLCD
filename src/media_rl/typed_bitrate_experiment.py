@@ -723,6 +723,7 @@ def main(argv=None):
     p.add_argument("--replication", type=Path)
     p.add_argument("--replication-baselines", type=Path)
     p.add_argument("--factual", type=Path)
+    p.add_argument("--factual-unseen", type=Path)
     p.add_argument("--crossover", type=Path)
     p.add_argument("--panel", nargs=3, action="append", default=[], metavar=("PREFIX", "RUN", "BASELINES"))
     p.add_argument("--validation", nargs=2, action="append", default=[], metavar=("PREFIX", "RUN"))
@@ -791,6 +792,7 @@ def main(argv=None):
                 args.panel,
                 args.validation,
                 args.crossover,
+                args.factual_unseen,
             )
             print(json.dumps(written, indent=1))
             return

@@ -16,6 +16,7 @@ from .typed_bitrate_report import contrast_macros, plain, signed, span
 
 ORDINALS = ("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight")
 NUMBERS = ("none", "one", "two", "three", "four")
+PANEL_KEYS = ("PanelA", "PanelB", "PanelC", "PanelD")
 
 
 def count(value):
@@ -177,8 +178,56 @@ def identified(entry, name="factual"):
     return entry["contrasts"][f"{name}_vs_fixed"]["utility"]["family_t_interval95"][0] > 0
 
 
-def factual_macros(report):
+def factual_macros(report, prefix="TypedFact"):
     """Learning curves of the factual pipeline and its rollout-labelled control."""
+    rows = _factual_macros(report)
+    for key, (name, panel) in zip(PANEL_KEYS, report.get("unseen", {}).items()):
+        rows[f"TypedFact{key}Families"] = str(panel["families"])
+        rows[f"TypedFact{key}TraceSeeds"] = str(panel["trace_seeds"])
+        family_macros(rows, f"TypedFact{key}RefRegress", panel["reference"]["regress"]["utility"])
+        family_macros(rows, f"TypedFact{key}RefHead", panel["reference"]["head"]["utility"])
+        for ordinal, entry in zip(ORDINALS, report["budgets"]):
+            there, stem = entry["unseen"][name], f"TypedFact{ordinal}{key}"
+            family_macros(rows, stem + "Gain", there["factual_vs_fixed"]["utility"])
+            family_macros(rows, stem + "Unsafe", there["factual_vs_fixed"]["unsafe"], 2, 100)
+            if "rollout_vs_fixed" in there:
+                family_macros(rows, stem + "ControlGain", there["rollout_vs_fixed"]["utility"])
+                family_macros(rows, stem + "Price", there["factual_vs_rollout"]["utility"])
+    return {prefix + name.removeprefix("TypedFact"): value for name, value in rows.items()}
+
+
+def table_factual_unseen(report):
+    """Factual pipeline and control against the fixed ratio: in distribution and on each unseen panel."""
+    panels = list(report.get("unseen", {}))
+    heads = " & ".join(f"\\multicolumn{{2}}{{c}}{{Unseen panel {chr(65 + i)}}}" for i in range(len(panels)))
+    subs = " & ".join("factual & control" for _ in panels)
+    lines = [
+        "\\begin{tabular}{rr" + "ll" * (1 + len(panels)) + "}",
+        "\\toprule",
+        f"Blocks & Hours & \\multicolumn{{2}}{{c}}{{Training families}} & {heads} \\\\",
+        f" & & factual & control & {subs} \\\\",
+        "\\midrule",
+    ]
+    for entry in report["budgets"]:
+        c = entry["contrasts"]
+        cells = [count(entry["blocks"]), count(int(round(entry["link_hours"])))]
+        cells.append(with_interval(c["factual_vs_fixed"]["utility"]))
+        cells.append(
+            with_interval(c["rollout_vs_fixed"]["utility"]) if "rollout_vs_fixed" in c else "not run"
+        )
+        for name in panels:
+            there = entry["unseen"][name]
+            cells.append(with_interval(there["factual_vs_fixed"]["utility"]))
+            cells.append(
+                with_interval(there["rollout_vs_fixed"]["utility"])
+                if "rollout_vs_fixed" in there
+                else "not run"
+            )
+        lines.append(" & ".join(cells) + " \\\\")
+    return "\n".join([*lines, "\\bottomrule", "\\end{tabular}"]) + "\n"
+
+
+def _factual_macros(report):
     rows, budgets = {}, report["budgets"]
     rows.update(
         TypedFactSeeds=str(len(report["settings"]["seeds"])),
@@ -475,6 +524,7 @@ def export(
     panels=(),
     validations=(),
     crossover=None,
+    factual_unseen=None,
 ):
     """Write macros, tables and the learning-curve figure from the follow-up summaries.
 
@@ -517,6 +567,14 @@ def export(
         evidence.update(factual_macros(curves))
         (out / "followup_factual.tex").write_text(table_factual(curves))
         figure_factual(curves, out / "followup_factual.pdf")
+        sources.append(path)
+    if factual_unseen:
+        path = Path(factual_unseen) / "report.json"
+        wider = json.loads(path.read_text())
+        if not wider.get("synthetic_only") or not wider.get("unseen"):
+            raise ValueError("the unseen-family factual study must be synthetic and score unseen panels")
+        evidence.update(factual_macros(wider, "TypedUnseen"))
+        (out / "followup_factual_unseen.tex").write_text(table_factual_unseen(wider))
         sources.append(path)
     if crossover:
         path = Path(crossover) / "report.json"
