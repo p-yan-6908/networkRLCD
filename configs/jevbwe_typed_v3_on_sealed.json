@@ -1,0 +1,45 @@
+{
+  "name": "jevbwe-typed-v3-population-s",
+  "registered": "2026-10-08",
+  "source": "jevbwe-typed-v3-broad",
+  "base_ratio": 1.05,
+  "panel": "s",
+  "test_seeds": [
+    29401,
+    29402,
+    29403,
+    29404,
+    29405,
+    29406,
+    29407,
+    29408,
+    29409,
+    29410,
+    29411,
+    29412,
+    29413,
+    29414,
+    29415,
+    29416
+  ],
+  "population_seed": 20261008,
+  "population_hash": "fbfb8da06b15443679e4da1bb46a030d46be9a55caeafcca257df7ab5fdd679c",
+  "models": {
+    "model_seed_0.json": "c0a4ce0d464f7de67f576a3a87caa63a2d9fc109c6ea2ec7eadfbe23144f8f37",
+    "model_seed_1.json": "c0b7bf42ba5121893982ac9aae425fb74f1cb9070caff45e3355d7eb1b677ce9",
+    "model_seed_2.json": "9b53295e2d4dd50a199aab9bae75695c7a9f8f77ccd4e5d471afbb6e2d0bab3b",
+    "model_seed_3.json": "cc73c3e2f748057042226470aedf554593df900ee3c089626b644288cf1412d5",
+    "model_seed_4.json": "e7c3738f693dfc68a4983d68dc00173cdb48ced5941e2d28dfd01909f99905c0"
+  },
+  "primary_method": "choice_rlcd_bayes",
+  "rule_best": {
+    "kind": "delay",
+    "high": 1.05,
+    "low": 0.8,
+    "on_ms": 15,
+    "off_ms": 5
+  },
+  "sensitive_margin": 0.02,
+  "role": "secondary: the frozen V3 models on the sealed panel, on the traces of the V4 test, for the paired V4 minus V3 contrast",
+  "protocol": "docs/JEVBWE_TYPED_V4_POPULATION.md"
+}
