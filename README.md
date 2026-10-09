@@ -27,7 +27,11 @@ A small Jev-like head answers one typed question per second (which of six BWE-re
 
 - **[V2](docs/JEVBWE_TYPED_V2.md), trained on four families.** In distribution the head beats the fixed ratio selected on training families by **+0.213 utility**, positive in 4 of 4 families (family-level interval [+0.066, +0.361]). On seven held-out families the mean gain is +0.047 but its family-level interval [-0.027, +0.122] includes zero, and calibration degrades (ECE 0.152; pooled ID ECE 0.012 hides up to 0.181 per family).
 - **[V3](docs/JEVBWE_TYPED_V3_BROAD.md), trained on thirteen broader families, tested once on twelve untouched families** against criteria written down beforehand. Gain +0.054, positive in 7 of 12 families, family-level t interval [-0.005, +0.112]: not established. Pooled ECE 0.070: above the 0.05 threshold. Unsafe intervals down 0.72 points: met.
-- **The RLCD recipe is not what helps.** An exact-gradient control and an untyped regression match the head on every panel. What they share is rollout supervision.
+- **[Baseline audit](docs/JEVBWE_TYPED_BASELINE_AUDIT.md): the comparator was not weak.** The fixed ratio 1.05 is an interior optimum of an extended grid, and the best of 204 tuned reactive rules over the same options adds at most +0.008 on any panel.
+- **[V3 replication on a sampled family population](docs/JEVBWE_TYPED_V3_REPLICATION.md), registered before it ran.** The frozen V3 models, evaluated once on 48 families drawn from a stated population, meet three of four criteria: gain over the train-selected fixed ratio +0.019 (family-level t interval [+0.005, +0.034], 32 of 48 families) and +0.020 over the tuned rule; unsafe intervals down 0.26 points; pooled ECE 0.138, so calibration fails. The gain is 18% of the hindsight oracle's, absent in 19 families, and not established against the best fixed ratio in hindsight (+0.012, interval includes zero).
+- **[Factual supervision](docs/JEVBWE_TYPED_FACTUAL_V1.md): possible, and about sixty times as costly.** A learner that sees one randomised option per 5 s block, as a real network would allow, has an established in-distribution gain from 36 hours of link time and reaches +0.105 at 571 hours. A control trained on rollout labels reaches +0.109 at 9 hours. Development study; a floor for a real network, not an estimate.
+- **[V4](docs/JEVBWE_TYPED_V4_POPULATION.md), registered:** the V3 method trained on draws from the population, with one test on a sealed panel. See that document for its status.
+- **The RLCD recipe is not what helps.** An exact-gradient control and an untyped regression match the head on every panel, the replication included. What they share is rollout supervision.
 - **No hindsight at run time.** Replaying every learned test episode with rollouts switched off reproduces the frozen outcomes exactly.
 
 The V2 study also explains the earlier null results. The legacy GCC-like estimator grows without bound when the sender is below capacity, so the old `0.85 x BWE` fallback was an untuned baseline. Over that estimator a fixed 0.60 ratio is a constant cap that scores higher utility than the typed head over the bounded estimator (0.636 against 0.527) with more unsafe intervals (7.20% against 4.55%); neither dominates.
@@ -38,7 +42,11 @@ make jevbwe-typed            # V2: diagnosis, main study, ablation and replicati
 make jevbwe-typed-audit      # V2: replay checks and the family-level audit of the frozen panel
 make jevbwe-typed-broad      # V3: train, validation and development panels; about 90 minutes
 make jevbwe-typed-broad-test # V3: the untouched test panel, once
+make jevbwe-typed-baselines  # tuned reactive rules against the frozen V3 panels; about three minutes
+make jevbwe-typed-replication # frozen V3 models on the registered population panel, once; about 75 minutes
+make jevbwe-typed-factual    # factual supervision against a rollout-labelled control; about an hour
 make jevbwe-typed-evidence   # paper macros, tables and figures
+make jevbwe-typed-followup-evidence # the same for the audit, replication and factual study
 ```
 
 `results/` is ignored except for the small summaries the paper reads (config, report, audit and isolation JSON). On a clone those already occupy `results/jevbwe-typed-*`, so pass `TYPED=results/regen` to regenerate into fresh directories; see [what is tracked](docs/JEVBWE_TYPED_V2.md#what-is-tracked-and-regenerating-the-rest).

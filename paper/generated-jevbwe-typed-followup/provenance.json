@@ -1,0 +1,7 @@
+{
+ "results/jevbwe-typed-v3-replication-baselines/report.json": "8746a5d3207d03d4d3db57ca56faec0ba839760dc6da1b77606d5c69a353fece",
+ "results/jevbwe-typed-v3-replication/audit_test.json": "547341a0ce1cfa3482a70b14ab9bef3e0cdb41ad22493292c915475326fa8a34",
+ "results/jevbwe-typed-v3-replication/report.json": "f37c04240f235734b56d954c588344373060f9d0a68448ffa899704098c97234",
+ "results/typed-baseline-audit-v1/report.json": "42d8f19113fa1383c0e516f4c9887d9bc03e864b05f0c9c2919d794f1368722a",
+ "results/typed-factual-v1/report.json": "76825095efbd21048f040b2938060b5c7045a4d9665bf31b4094957ea48ad94a"
+}
