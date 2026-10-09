@@ -86,3 +86,87 @@ plan wait until the review is complete.
 1. Binding quotes that occur in the archived evidence, for every pass.
 2. The importer's assertion for every pass.
 3. A decision on each of the 20 inspection candidates.
+
+## 2026-10-08: final review, ingest, screening and sealed plan
+
+Still no outcome data. No native capture has been run.
+
+### The final review as submitted
+
+`rights-review-manifest-final.csv` and `contact-sheet-review-final.json`, recorded unchanged.
+
+| Decision | Candidates |
+|---|---:|
+| `pass` | 22 |
+| `fail` | 14 |
+
+The 16 earlier passes stay passes. Of the 20 inspection candidates, 6 pass and 14 fail. The
+reviewer of record for all 36 rows is "ChatGPT (OpenAI) — archived-evidence and contact-sheet
+copyright/licence review". The contact-sheet record states its basis: archived evidence plus
+the 30-frame contact sheets, with native-ready derivatives being video-only, and a fail
+meaning insufficient component-rights evidence under a strict screen, not infringement.
+
+Mechanical checks on the final review:
+
+- All 22 binding quotes now occur verbatim in the archived evidence, and all 22 titles do.
+  They are licence templates of the reviewed revision such as `{{self|cc-by-4.0}}`, or the
+  licence-review template for files that came from an external site.
+- `commons-29168975` is a pass with no decodable file, so it is not ingested. Its capture
+  group is represented by `commons-29267197`.
+
+**Importer flags.** Ingest records `rights_asserted_by_importer` and `reviewed_by_importer`
+in the importer's name. They are set for the 21 ingested assets on this basis: the
+repository owner submitted the final review for ingest after being told ingest needs them.
+The owner did not write a separate assertion, and the evidence review itself is by the
+reviewer of record. Each catalog carries both facts in `rights_review_provenance`. If the
+owner does not adopt the review, the ingest, screening and plan are discarded; nothing
+depends on them yet.
+
+### Ingest and screening, with the unchanged tools
+
+- `media-panel-assets ingest`: **21 independent source clusters, all native-ready** (H.264,
+  at least 80 seconds; the shortest is 84.9 s). Nine are CC BY 3.0, eight CC BY 4.0 and four
+  CC0 1.0.
+- `media-actuator-panel screen`, run once on the whole pool: 120 windows, no outcome data,
+  terciles at 0.0339 and 0.0453. **Seven sources per complexity tercile.**
+
+### Sealed plan
+
+`media-actuator-qualification plan`, sealed at
+`results/native-actuator-qualification-n1-plan/` with the recorded custodian value. This was
+the planner's first run on real catalogs. The sealed plan re-derives exactly from the
+registration, the screening file and the reservations.
+
+| | |
+|---|---:|
+| Sources (7 / 7 / 7) | 21 |
+| Stage one (4 / 4 / 4) | 12 |
+| Reserve blocks | 3 |
+| Maximum for the blinded rule | **21**, not 24 |
+| Planned peers | 840 |
+| Planned cohorts | 5,040 |
+| Planned arm counts (0.65 / 0.85 / 1.05) | 1,686 / 1,653 / 1,701 (p = 0.70 against equal shares) |
+| Smallest planned source x regime x arm cell | 11 |
+
+The queue supplied 21 eligible sources, short of the preferred 24, so the rule's maximum is
+21. Discovery was not expanded. The rule then reads 12, 15, 18 or 21 sources, with precision
+futility above a first-stage SD of 0.146. Simulated at the design effect, 10,000 studies:
+
+| Scenario | Qualified with maximum 21 | With maximum 24 |
+|---|---:|---:|
+| Smoke-level noise | 0.986 | 0.984 |
+| Heterogeneous sources (SD 0.08) | 0.893 | 0.921 |
+| Very heterogeneous (SD 0.12) | 0.556 | 0.632 |
+| Lower contrast exactly at the margin (false qualification) | 0.027 | 0.025 |
+
+The sources, their order, terciles, licences and hashes are in
+`acquisition/native-n1/pool-and-plan.json`, with the hashes of the review files, the ingest
+request and manifest, the screening file and the sealed plan. The plan's sources are reserved
+by the existing reservation scan, so a later plan, including Phase N2's, cannot draw them.
+
+### State of the gate
+
+Source pool, sealed plan, custodian record and acquisition provenance are complete. The
+native outcome experiment has not been started and is not started by this log. The capture
+path has still only run on test doubles; its first native run is also its first test against
+a browser.

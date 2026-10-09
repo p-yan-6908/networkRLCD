@@ -127,6 +127,9 @@ The browser/native outcome experiment does not run until all four are complete:
 | Item | State |
 |---|---|
 | Custodian record | this file |
-| Acquisition provenance | manifest exported; rights review, downloads and lineage outstanding |
-| Source pool | zero verified eligible sources |
-| Sealed plan | not created; needs the source pool |
+| Acquisition provenance | complete: manifest, both reviews as submitted, evidence extracts, lineage, pool and plan record |
+| Source pool | 21 verified eligible sources, 7 per complexity tercile |
+| Sealed plan | sealed 2026-10-08 with 21 sources; the blinded rule's maximum is 21 |
+
+Details are in the [acquisition log](NATIVE_PHASE_N1_ACQUISITION_LOG.md). Completing the gate
+does not start the experiment.

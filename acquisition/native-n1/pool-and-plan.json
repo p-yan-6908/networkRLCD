@@ -1,0 +1,465 @@
+{
+  "abi": "native_actuator_qualification_n1_verified_pool_and_plan",
+  "verified_eligible_source_clusters": 21,
+  "sources_per_tercile": {
+    "low": 7,
+    "medium": 7,
+    "high": 7
+  },
+  "stage_one_sources": 12,
+  "reserve_blocks": 3,
+  "rule_maximum_sources": 21,
+  "registered_maximum_sources": 24,
+  "interim_custodian": "pyan (repository owner; procedural interim custodian, not independent)",
+  "plan_checks": {
+    "sources": 21,
+    "sources_per_stratum": 7,
+    "reserve_blocks": 3,
+    "rule_maximum_sources": 21,
+    "planned_peers": 840,
+    "planned_cohorts": 5040,
+    "planned_arm_counts": [
+      1686,
+      1653,
+      1701
+    ],
+    "planned_arm_share_p_value": 0.6984242370154227,
+    "smallest_planned_cell": 11,
+    "propensity_per_arm": 0.3333333333333333,
+    "assignment_seeds_distinct": true,
+    "source_clusters_independent": true
+  },
+  "plan_rederives_from_inputs": true,
+  "n1_sources_reserved_against_later_plans": true,
+  "importer_flags": {
+    "rights_asserted_by_importer": true,
+    "reviewed_by_importer": true,
+    "basis": "the importer submitted the final review for ingest; the evidence review is by the reviewer of record",
+    "importer": [
+      "pyan (repository owner)"
+    ]
+  },
+  "hashes": {
+    "final_review_csv": "2097ce5840a0feeddf3567b4668a8df58c363f564673b2f65427fb7255925527",
+    "contact_sheet_review": "40e83c78864b4700b337cfdea487b3e022f2546370997e0862dfdf996b9d2296",
+    "ingest_request": "50c5ba84992282ba148275b2e1debee19102136f681180437508ce96b5d95999",
+    "ingest_manifest": "4c413c0dd482658ae81213fac85a5d6c34c410fe951f9551924c22c33f431317",
+    "screening": "b5164641ff6511c7e2665aa5d385d08b64977f452bd81b10cd1e5bd08a5802d3",
+    "screening_manifest": "4d3843ac5743f788f3f9d84a8d668c00e56a95e363725295e6a484619b538dfc",
+    "plan_protocol": "adf2dba53fad9e8f514d67aaecd6e32467d93478aa7f6a76d15d823b6e3a3af4",
+    "plan_manifest": "af0c23a0583ba55d39405056ae3a87d0bff678e5af5ce33bb5b48b11ec2a1c63",
+    "n1_freeze": "ae567d09e197ca701cf776267ce35d71f99429e5e94509921bb8324f8a5c26af",
+    "controller_freeze": "68f770b4dc561497bf7fa2e1ff17917bbc7c77df5c32a4ebe680d94a58db7fed"
+  },
+  "screening": {
+    "thresholds": [
+      0.03392201878406729,
+      0.0453298505482974
+    ],
+    "screened_windows": 120,
+    "outcome_data_used": false
+  },
+  "outcomes_observed": false,
+  "native_capture_run": false,
+  "sources": [
+    {
+      "analysis_order": 0,
+      "block": 0,
+      "stage": "one",
+      "complexity_stratum": "low",
+      "source_complexity_score": 0.009028354313958027,
+      "candidate_id": "commons-185002032",
+      "source_title": "OpenRefine3-10-presentation",
+      "cluster_id": "source-9b9ac24db20846eefa4e6d47",
+      "capture_group": "openrefine-3-10-presentation",
+      "license": "CC-BY-4.0",
+      "native_ready_sha256": "3e2ce5ec9259e03bd84681f6a17f217fa988ea3e28101e760007946909a4bd17",
+      "parent_sha256": "9e14d0458ec34cb921395d9300c6fb928309767d4f319edd22815415bbb97cb8",
+      "window_ms": [
+        480000,
+        500000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 1,
+      "block": 0,
+      "stage": "one",
+      "complexity_stratum": "medium",
+      "source_complexity_score": 0.0425917595970421,
+      "candidate_id": "commons-70401610",
+      "source_title": "G.E.M.\u3010\u611b\u5982\u610f\u3011MV (HD) \u9127\u7d2b\u68cb",
+      "cluster_id": "source-a0935dbdc97fb77fde6c1041",
+      "capture_group": "gem-ai-ruyi-music-video",
+      "license": "CC-BY-3.0",
+      "native_ready_sha256": "043461ad0046241de9397d25effae7fcdc927a007daed9f3cdae9eef25b588aa",
+      "parent_sha256": "2e853f2e29998baeaa8ca162056c5daf9b38eef8d09d3505674b59c47bd49c34",
+      "window_ms": [
+        160000,
+        180000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 2,
+      "block": 0,
+      "stage": "one",
+      "complexity_stratum": "high",
+      "source_complexity_score": 0.045800490055753214,
+      "candidate_id": "commons-194480872",
+      "source_title": "8200\ud638\ub300 \uc11c\uc6b8 \ucd9c\ubc1c \ubd80\uc0b0\ud589",
+      "cluster_id": "source-1f253c3e7a476525c526a21e",
+      "capture_group": "seoul-busan-8200-train-capture",
+      "license": "CC0-1.0",
+      "native_ready_sha256": "762333993e737e0d66c3ecb7f389fba2b156eb023b5f0c2ea42055f9dde1e1a6",
+      "parent_sha256": "b7599b83fe194ee0b0c769dbfe7faccc867188477905817a6f5c5d18e72b2ae0",
+      "window_ms": [
+        60000,
+        80000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 3,
+      "block": 1,
+      "stage": "one",
+      "complexity_stratum": "low",
+      "source_complexity_score": 0.030769534302699936,
+      "candidate_id": "commons-78181584",
+      "source_title": "Joy & Heron - Animated CGI Spot by Passion Pictures",
+      "cluster_id": "source-52a998e62868e63af7a92891",
+      "capture_group": "joy-heron-commercial-production-2018",
+      "license": "CC-BY-4.0",
+      "native_ready_sha256": "370ef6bc9c30a262de0c9bc1c4d81fc309c61bbdca6ffae4574ec8f331c815ec",
+      "parent_sha256": "7423691a2107fa3cdd07784141aeccb28689bb905220a17aceef46b7a865712e",
+      "window_ms": [
+        140000,
+        160000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 4,
+      "block": 1,
+      "stage": "one",
+      "complexity_stratum": "medium",
+      "source_complexity_score": 0.04508111987843025,
+      "candidate_id": "commons-146207667",
+      "source_title": "Castej\u00f3n - Gamazada urteurrena (2024) (16)",
+      "cluster_id": "source-4c2a0120550a8bcb622fb708",
+      "capture_group": "castejon-gamazada-2024-event",
+      "license": "CC-BY-4.0",
+      "native_ready_sha256": "032dd9e47a9ae0bf0cd07d1e30921e84f69bee6da7fe0fc617456069cd7a6981",
+      "parent_sha256": "4901062c2adb1aef1c23d800b329f6703386deaf4f4a0fbcd5a85b4ac6090640",
+      "window_ms": [
+        180000,
+        200000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 5,
+      "block": 1,
+      "stage": "one",
+      "complexity_stratum": "high",
+      "source_complexity_score": 0.06894468016074053,
+      "candidate_id": "commons-42522829",
+      "source_title": "WV0016-D13 FerteSaintCyr",
+      "cluster_id": "source-2b3267608b48ab5f7b446cdf",
+      "capture_group": "llann-we-wv-road-video-series",
+      "license": "CC-BY-3.0",
+      "native_ready_sha256": "edf10b3f644e5a074987ebb2afbde02694e228c92f39b32fe30abfb26cebf8e6",
+      "parent_sha256": "396311a25e236bd4c52f44c4371bac6fd059309bad2b8969c44ff55194dc36ac",
+      "window_ms": [
+        60000,
+        80000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 6,
+      "block": 2,
+      "stage": "one",
+      "complexity_stratum": "low",
+      "source_complexity_score": 0.008949122937319533,
+      "candidate_id": "commons-29832113",
+      "source_title": "Paroxysm at Etna, 16-17 November 2013",
+      "cluster_id": "source-32ae9968d8417f1c60fcd447",
+      "capture_group": "etna-paroxysm-2013-11-16-17",
+      "license": "CC-BY-3.0",
+      "native_ready_sha256": "6ed09879d44d9269e6f7a3f895d279d183cf29324e735cb227f8fc2ec3b547eb",
+      "parent_sha256": "2d8722c7164ce04c5325cae93d66521ecbbeb4440de71c8dc23499544a62d344",
+      "window_ms": [
+        400000,
+        420000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 7,
+      "block": 2,
+      "stage": "one",
+      "complexity_stratum": "medium",
+      "source_complexity_score": 0.04434393942902069,
+      "candidate_id": "commons-98763505",
+      "source_title": "Moscow trolleybus 9803 2021-01 GX010217",
+      "cluster_id": "source-71e9c546abfaeb7defba23fb",
+      "capture_group": "moscow-trolleybus-9803-2021-01",
+      "license": "CC0-1.0",
+      "native_ready_sha256": "52926ba157d3a8a1bc4f09764e11ff90c3b59b433fb92b83d8b100b73a411cc9",
+      "parent_sha256": "1e7065a8779e8a3776750f7e0ca6f4ce6a0d771c16a359e962c964b268baf151",
+      "window_ms": [
+        100000,
+        120000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 8,
+      "block": 2,
+      "stage": "one",
+      "complexity_stratum": "high",
+      "source_complexity_score": 0.06825225456518025,
+      "candidate_id": "commons-34935632",
+      "source_title": "\u0421\u0412-\u0414\u041d\u0420-110. \u0420\u0430\u0437\u0440\u0443\u0448\u0435\u043d\u0438\u044f \u0432 \u0446\u0435\u043d\u0442\u0440\u0435 \u0414\u043e\u043d\u0435\u0446\u043a\u0430",
+      "cluster_id": "source-5b8a21adf46485935afcfa8c",
+      "capture_group": "essence-of-time-donetsk-sv-dnr-110",
+      "license": "CC-BY-3.0",
+      "native_ready_sha256": "540448fe6270803214f1878c4676b8683de9383835cc04131f43ef44699f2202",
+      "parent_sha256": "888efcd10298ef84b1b3815a28c3f3ef8ce17373653f36e79cb71baa814d4b5c",
+      "window_ms": [
+        80000,
+        100000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 9,
+      "block": 3,
+      "stage": "one",
+      "complexity_stratum": "low",
+      "source_complexity_score": 0.02374660432017243,
+      "candidate_id": "commons-187234232",
+      "source_title": "Entrevista a Edson Canaza - 12\u00b0 Encuentro de cine Corriente. webm",
+      "cluster_id": "source-ba12ea67f20b3d59f1d825c5",
+      "capture_group": "corriente-12-encuentro-interviews",
+      "license": "CC-BY-4.0",
+      "native_ready_sha256": "04927267ca0e54534fb770d624be32ad656bea66bd313dd64357968fe7721bbc",
+      "parent_sha256": "6db50c711394c0236d4a6b619c26720da63f4561f138545c6cd0c12c1e9f777e",
+      "window_ms": [
+        60000,
+        80000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 10,
+      "block": 3,
+      "stage": "one",
+      "complexity_stratum": "medium",
+      "source_complexity_score": 0.03990340909090909,
+      "candidate_id": "commons-45099858",
+      "source_title": "Demolici\u00f3 Nou Ajuntament",
+      "cluster_id": "source-f55bdc65c82e58b0078829de",
+      "capture_group": "coentor-demolicio-nou-ajuntament-2015",
+      "license": "CC-BY-4.0",
+      "native_ready_sha256": "c2fecc01dcd9f45543561f6db2c59f084ef097c5438e1c7e84e3896a5b6d967c",
+      "parent_sha256": "cfbf7b5e025d05b0b8127ce66373bb4d404da8b86ffffeeb186f2e7421747007",
+      "window_ms": [
+        60000,
+        80000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 11,
+      "block": 3,
+      "stage": "one",
+      "complexity_stratum": "high",
+      "source_complexity_score": 0.0771018777368429,
+      "candidate_id": "commons-115782037",
+      "source_title": "Brajkovi\u010d na startu kronometra na Dirki po Sloveniji 2012",
+      "cluster_id": "source-f9dd9aa57c3815dbebf41ffc",
+      "capture_group": "tour-of-slovenia-2012-brajkovic-time-trial",
+      "license": "CC-BY-3.0",
+      "native_ready_sha256": "f2c8d299db1fbcaf527dbb5c2118d1ee224e18873a7d0960c8b0fac9e0721dd3",
+      "parent_sha256": "a45600453f1ff370c6a2531f6075865c8e791d3178a1912062d922c77758020e",
+      "window_ms": [
+        80000,
+        100000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 12,
+      "block": 4,
+      "stage": "reserve",
+      "complexity_stratum": "low",
+      "source_complexity_score": 0.014467585957214443,
+      "candidate_id": "commons-144186427",
+      "source_title": "Gnu Linux. Utilisation basique 6",
+      "cluster_id": "source-1d61b9c492486cd471b6447a",
+      "capture_group": "graineahumus-gnu-linux-utilisation-basique-series",
+      "license": "CC-BY-4.0",
+      "native_ready_sha256": "f6eda0290a3ed25d95d7f6afca279f89661b25522f360e4b0ff4c1282229fb1a",
+      "parent_sha256": "2f0b59ea817be026dbf9f69af36848edb39a7a8f68be0cfc07328a5a7b2ecf64",
+      "window_ms": [
+        60000,
+        80000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 13,
+      "block": 4,
+      "stage": "reserve",
+      "complexity_stratum": "medium",
+      "source_complexity_score": 0.03984137624859374,
+      "candidate_id": "commons-169274056",
+      "source_title": "IBAI Lecturer launch 2",
+      "cluster_id": "source-103ef6fc97182f8ab9ec9b38",
+      "capture_group": "ibai-lecturer-launch-2",
+      "license": "CC0-1.0",
+      "native_ready_sha256": "fa3351c47268c2c0d31015e0bd85b33a63c3c3955b54bec6360e0aa2a1083feb",
+      "parent_sha256": "552cf0c0173b6ed9f792c08b4ba4b61c128e292e827ce1254cb89c71d8375d61",
+      "window_ms": [
+        60000,
+        80000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 14,
+      "block": 4,
+      "stage": "reserve",
+      "complexity_stratum": "high",
+      "source_complexity_score": 0.050430382434329804,
+      "candidate_id": "commons-106384795",
+      "source_title": "Periodical Cicada emerging from underground 2021-05-15 233901977",
+      "cluster_id": "source-5002ea542588989e8ac82011",
+      "capture_group": "g-edward-johnson-brood-x-2021-05-15",
+      "license": "CC-BY-4.0",
+      "native_ready_sha256": "8e93f2a771f783183793dc969fe752ee7ac758be7aa0b06b2e4ac1e5a8090072",
+      "parent_sha256": "48925ace4182982e09ce9808ed0e38e96c9f105611e6ac677d4a908d23f446bc",
+      "window_ms": [
+        80000,
+        100000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 15,
+      "block": 5,
+      "stage": "reserve",
+      "complexity_stratum": "low",
+      "source_complexity_score": 0.026130467571644042,
+      "candidate_id": "commons-121308342",
+      "source_title": "Heli Schmilka Fire Fighting Elbe 30 7 2022",
+      "cluster_id": "source-c532d3ba74de1816d6e62011",
+      "capture_group": "schmilka-firefighting-2022-07-30",
+      "license": "CC0-1.0",
+      "native_ready_sha256": "c1f4f78e3d1af07b16a5f65d276ac671580d41f26c3ef2558064cb6edb525a88",
+      "parent_sha256": "f79d58f19159dacdee7f09b27a025dfbe74bbfa34785d1ac913c75a51a8069a9",
+      "window_ms": [
+        120000,
+        140000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 16,
+      "block": 5,
+      "stage": "reserve",
+      "complexity_stratum": "medium",
+      "source_complexity_score": 0.04509453079456949,
+      "candidate_id": "commons-64302110",
+      "source_title": "Red weaver ants transporting a dead gecko, in Laos (video)",
+      "cluster_id": "source-68fe29be846e538a3fd776d7",
+      "capture_group": "basile-morin-laos-weaver-ants-2017-10-13",
+      "license": "CC-BY-4.0",
+      "native_ready_sha256": "5db250a2cc96f8e570b768268bf3ee30d19a37c65b2c30e4d7423515f63e4058",
+      "parent_sha256": "4c2e96be05e6e12a1befa870b6e34a22033378214adc5e81b532ebd74ee5664b",
+      "window_ms": [
+        120000,
+        140000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 17,
+      "block": 5,
+      "stage": "reserve",
+      "complexity_stratum": "high",
+      "source_complexity_score": 0.05124700304425536,
+      "candidate_id": "commons-116101415",
+      "source_title": "\u0412\u0440\u0435\u043c\u044f Z- \u0437\u0430\u0431\u0430\u0439\u043a\u0430\u043b\u044c\u0446\u044b \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044e\u0442 \u0432\u043e\u0435\u043d\u043d\u043e\u0441\u043b\u0443\u0436\u0430\u0449\u0438\u0445 \u0441\u043b\u043e\u0432\u043e\u043c \u0438 \u0434\u0435\u043b\u043e\u043c",
+      "cluster_id": "source-c9998a95bf75fb2ee97f1de9",
+      "capture_group": "gtrk-chita-vremya-z-episode",
+      "license": "CC-BY-3.0",
+      "native_ready_sha256": "0d41f113e465a372d0373b5a11816d5b4d35147d1623915f7e2ce36dd1191f35",
+      "parent_sha256": "40f8eaf65c803e5564b8fa6aaced3c1ea540ff4536b6067af99c82575cb46ac1",
+      "window_ms": [
+        320000,
+        340000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 18,
+      "block": 6,
+      "stage": "reserve",
+      "complexity_stratum": "low",
+      "source_complexity_score": 0.014022369593770522,
+      "candidate_id": "commons-32353576",
+      "source_title": "D3.js-tutorial-14-The-Tree-Layout-(1-of-2)",
+      "cluster_id": "source-512c19807cbbc72fab8dbb9d",
+      "capture_group": "d3vienno-d3js-tutorial-series",
+      "license": "CC-BY-3.0",
+      "native_ready_sha256": "481ac635725fb0268855660f9818991b9d4cf40d0ea218368a0b89a4e07f0e0d",
+      "parent_sha256": "9ba772f26cb49d4905c81b7329a7ee1a713ebeb4e5a7d1f10ed6a4f6e5b601b3",
+      "window_ms": [
+        60000,
+        80000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 19,
+      "block": 6,
+      "stage": "reserve",
+      "complexity_stratum": "medium",
+      "source_complexity_score": 0.03549826102475097,
+      "candidate_id": "commons-44346310",
+      "source_title": "2015-09-25-F\u00e4hre-Bamberg",
+      "cluster_id": "source-b7b3ab3adea6fc43cf107c02",
+      "capture_group": "ermell-bamberg-ferry-2015-09-25",
+      "license": "CC-BY-3.0",
+      "native_ready_sha256": "e9f7e97a3e4d2972c7ca8fceb9ab11ace79b98a302eb12d8f34ee0a40870e094",
+      "parent_sha256": "280662304d15b792c1b37464dab557aec9d507cd4f7d5cc38f9aded061a6edc7",
+      "window_ms": [
+        80000,
+        100000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    },
+    {
+      "analysis_order": 20,
+      "block": 6,
+      "stage": "reserve",
+      "complexity_stratum": "high",
+      "source_complexity_score": 0.06676298748980639,
+      "candidate_id": "commons-29267197",
+      "source_title": "Na sjeveru Vi\u017eanice 20131027 103431",
+      "cluster_id": "source-8e554536968a8eddacc4be53",
+      "capture_group": "quahadi-orebic-2013-series",
+      "license": "CC-BY-3.0",
+      "native_ready_sha256": "ce4d35bd76e18c4800566138afc183fd5b79f8f2a7c0a72c7536a761c706fde1",
+      "parent_sha256": "de5437e21b50ac2dc0e73becb13cd31ebce0aa8e6e1c93bf187adacd299a620b",
+      "window_ms": [
+        140000,
+        160000
+      ],
+      "reviewer_of_record": "ChatGPT (OpenAI) \u2014 archived-evidence and contact-sheet copyright/licence review"
+    }
+  ]
+}

@@ -16,7 +16,7 @@ from pathlib import Path
 from urllib.parse import quote, urlparse
 
 from . import native_actuator_qualification_panel as n1
-from .native_panel_assets import _text
+from .native_panel_assets import LICENSE_URLS, _text
 from .native_protocol import digest, read_json, require, write_json
 
 ABI = "native_actuator_qualification_n1_rights_review_manifest"
@@ -462,6 +462,72 @@ def evidence_report(review_path, manifest_path, discovery_root):
     )
 
 
+def ingest_request(review_path, manifest_path, lineage_path, media_root, discovery_root, importer):
+    """The request the unchanged ingest takes, for every reviewed pass that has a native-ready file.
+
+    The importer flags are the importer's assertion. They are set here because the importer
+    submitted this review as final for ingest; the review itself is by the reviewer of record,
+    and both facts are written into each asset.
+    """
+    require(isinstance(importer, str) and importer.strip(), "name the importer who adopts the review")
+    decisions = reviewed(review_path, manifest_path)
+    rows = {r["candidate_id"]: r for r in read_json(manifest_path)["rows"]}
+    records = {r["candidate_id"]: r for r in read_json(lineage_path)["records"]}
+    with Path(review_path).open(newline="") as stream:
+        reviewed_at = {r["candidate_id"]: r["rights_reviewed_at_utc"] for r in csv.DictReader(stream)}
+    assets, skipped = [], []
+    for identifier, decision in decisions.items():
+        if not decision["rights_cleared"]:
+            continue
+        row, record = rows[identifier], records[identifier]
+        if record["native_ready"] is None:
+            skipped.append(identifier)  # reviewed as pass, but the original cannot be decoded
+            continue
+        media = (Path(media_root) / record["native_ready"]["file"]).resolve()
+        require(digest(media) == record["native_ready"]["sha256"], f"{identifier}: native-ready file changed")
+        snapshot = (Path(discovery_root) / row["rights_evidence_snapshot"]).resolve()
+        require(
+            digest(snapshot) == row["rights_evidence_snapshot_sha256"], "archived rights evidence changed"
+        )
+        assets.append(
+            dict(
+                path=str(media),
+                sha256=record["native_ready"]["sha256"],
+                parent_sha256=record["original"]["sha256"],
+                source="Wikimedia Commons",
+                source_title=row["title"],
+                capture_group=decision["capture_group"],
+                independence_basis=decision["independence_basis"],
+                source_url=row["source_url"],
+                license=row["declared_license"],
+                license_url=LICENSE_URLS[row["declared_license"]],
+                attribution=decision["attribution"],
+                rights_asserted_by_importer=True,
+                license_evidence=dict(
+                    path=str(snapshot),
+                    sha256=row["rights_evidence_snapshot_sha256"],
+                    scope="this_asset",
+                    source_title=row["title"],
+                    license=row["declared_license"],
+                    source_url=row["rights_evidence_revision_url"],
+                    checked_at_utc=reviewed_at[identifier],
+                    reviewed_by_importer=True,
+                    binding_quote=decision["binding_quote"],
+                ),
+                candidate_id=identifier,
+                rights_review_provenance=dict(
+                    reviewer_of_record=decision["rights_reviewer"],
+                    review_file_sha256=digest(review_path),
+                    importer=importer.strip(),
+                    importer_flags_basis="importer submitted this review as final for ingest",
+                    native_ready_is_derived_from_parent_sha256=True,
+                ),
+            )
+        )
+    require(assets, "no reviewed pass has a native-ready file")
+    return dict(abi="licensed_independent_panel_assets_v1_request", assets=assets), skipped
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Native Phase N1 acquisition records; downloads nothing")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -483,9 +549,19 @@ def main(argv=None):
     evidence.add_argument("--discovery", required=True, type=Path)
     get.add_argument("--inventory", required=True, type=Path)
     get.add_argument("--limit", type=int)
+    request = sub.add_parser("ingest-request", help="Write the request the unchanged ingest takes")
+    for name in ("review", "manifest", "lineage", "media", "discovery", "out"):
+        request.add_argument("--" + name, required=True, type=Path)
+    request.add_argument("--importer", required=True)
     args = parser.parse_args(argv)
     try:
-        if args.command == "evidence":
+        if args.command == "ingest-request":
+            body, skipped = ingest_request(
+                args.review, args.manifest, args.lineage, args.media, args.discovery, args.importer
+            )
+            write_json(args.out, body)
+            result = dict(assets=len(body["assets"]), reviewed_pass_without_native_ready_file=skipped)
+        elif args.command == "evidence":
             result = evidence_report(args.review, args.manifest, args.discovery)
             write_json(args.out, result)
             result = {k: v for k, v in result.items() if k != "extracts"}

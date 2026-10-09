@@ -292,3 +292,67 @@ def test_evidence_extract_lists_verbatim_quotes_and_flags_an_unanchored_review(t
     snapshot.write_text("tampered")
     with pytest.raises(ValueError, match="archived rights evidence changed"):
         acquisition.evidence_extract(row, dict(decision="pass", binding_quote=boilerplate), tmp_path)
+
+
+def test_ingest_request_covers_decodable_passes_and_says_who_reviewed_and_who_asserts(exported, tmp_path):
+    root, _ = exported
+    manifest = root / "review/rights-review-manifest.json"
+    rows = read_json(manifest)["rows"]
+    with (root / "review/rights-review-manifest.csv").open(newline="") as stream:
+        table = list(csv.DictReader(stream))
+    for row in table[:3]:
+        row.update(
+            rights_review_decision="pass",
+            rights_reviewer="An AI reviewer",
+            rights_reviewed_at_utc="2026-10-09T00:00:00Z",
+        )
+        row.update(
+            attribution="Someone, CC BY 4.0",
+            binding_quote="{{self|cc-by-4.0}}",
+            capture_group="capture-" + row["candidate_id"],
+        )
+        row.update(independence_basis="one creator, one session")
+    table[3].update(rights_review_decision="fail")
+    review = save_review(root / "final.csv", table)
+    media = tmp_path / "media"
+    (media / "native").mkdir(parents=True)
+    (root / "evidence").mkdir()
+    records = []
+    for index, row in enumerate(rows[:3]):
+        snapshot = root / row["rights_evidence_snapshot"]
+        snapshot.write_text("evidence for " + row["title"])
+        row["rights_evidence_snapshot_sha256"] = acquisition.digest(snapshot)
+        native = None
+        if index != 2:  # the third pass has an original that cannot be decoded
+            path = media / "native" / (row["candidate_id"] + ".mp4")
+            path.write_bytes(b"derived " + row["candidate_id"].encode())
+            native = dict(file="native/" + path.name, sha256=acquisition.digest(path))
+        records.append(
+            dict(candidate_id=row["candidate_id"], original=dict(sha256="b" * 64), native_ready=native)
+        )
+    manifest.unlink()
+    write_json(manifest, dict(rows=rows))
+    write_json(root / "lineage.json", dict(records=records))
+    body, skipped = acquisition.ingest_request(
+        review, manifest, root / "lineage.json", media, root, "the owner"
+    )
+    assert (
+        skipped == [rows[2]["candidate_id"]] and len(body["assets"]) == 2
+    )  # never the fail, never the undecodable
+    asset = body["assets"][0]
+    assert (
+        asset["parent_sha256"] == "b" * 64
+        and asset["license_url"] == "https://creativecommons.org/licenses/by/4.0/"
+    )
+    assert (
+        asset["rights_asserted_by_importer"] is True
+        and asset["license_evidence"]["reviewed_by_importer"] is True
+    )
+    provenance = asset["rights_review_provenance"]
+    assert provenance["reviewer_of_record"] == "An AI reviewer" and provenance["importer"] == "the owner"
+    assert asset["license_evidence"]["binding_quote"] == "{{self|cc-by-4.0}}"
+    with pytest.raises(ValueError, match="name the importer"):
+        acquisition.ingest_request(review, manifest, root / "lineage.json", media, root, " ")
+    (media / "native" / (rows[0]["candidate_id"] + ".mp4")).write_bytes(b"swapped")
+    with pytest.raises(ValueError, match="native-ready file changed"):
+        acquisition.ingest_request(review, manifest, root / "lineage.json", media, root, "the owner")
