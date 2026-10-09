@@ -16,3 +16,36 @@ and nothing labelled by arm. Outcomes are read only through the registered `inte
 - The collector runs one peer at a time. Nothing else heavy is run on the machine during the
   capture. The owner's own desktop session, including a Chrome window, stays open; that
   background load is not controlled.
+
+### Tooling pre-flight, not on an N1 source
+
+Before the capture, the unchanged collector was run once on the earlier smoke runtime
+(`results/native-actuator-identification-smoke-v3/discovery-f0.json`, the Sintel film, which
+is not an N1 source) into a scratch directory outside the repository. It exited cleanly in
+50 s against Chrome 154, and the unchanged raw audit replayed it: six cohorts, six complete.
+No rate was read. This checks that the collector still runs against today's browser; it is
+not N1 data and does not enter any analysis.
+
+### Freezes
+
+`media-actuator-qualification verify-freeze`: 4 files, `ae567d09...`, verified.
+`media-panel-assets verify-freeze`: 31 files, `68f770b4...`, verified.
+
+## 2026-10-09 16:54 EDT: stage-one capture started
+
+```sh
+caffeinate -dims uv run --frozen media-actuator-qualification capture \
+    --protocol results/native-actuator-qualification-n1-plan/protocol.json \
+    --start 0 --stop 12 --out results/native-actuator-qualification-n1-stage-one
+```
+
+This is the registered command. `caffeinate` only keeps the machine awake. Standard output
+and error go to `results/native-actuator-qualification-n1-stage-one.log`.
+
+- The first two peers were collected, audited and sealed within 100 s, so 480 peers should
+  take about six and a half hours.
+- Progress is followed by counting sealed peer directories and watching for `failure.json`.
+  No cohort file, summary or raw event file is opened.
+- The capture loop is all-or-nothing: an exception at any peer, including a collector
+  validity check or the 90 s limit, writes `failure.json` and ends the run, and a rerun needs
+  a fresh path. A failed prefix is kept and is never analysed.
