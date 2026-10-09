@@ -1,0 +1,60 @@
+% Study 13. Read by main.tex only when generated-native-n1/evidence.tex exists.
+% Every result below is a macro or table written by media_rl.native_actuator_qualification_report
+% from the registered final analysis; the outcome sentences were fixed there before the interim.
+\section{Study 13: does the requested ratio move a native encoder?}
+\label{sec:native-n1}
+Every controller in Studies 10 to 12 acts by requesting a bitrate as a ratio of the bandwidth estimate, and every result there comes from a fluid simulator in which the encoder follows the request. This study tests that one link of the chain on a native browser stack and nothing else. It fits no model, lets no learned controller act, and makes no claim about delivered quality or about which ratio is better in which state. Its question, estimator, test, stopping rule and the code for all of them were registered and hash-frozen before any of its data existed (\path{docs/NATIVE_PHASE_N1_ACTUATOR_QUALIFICATION.md}, tag \texttt{native-n1-preregistered}). The sentences below that state the outcome were fixed in the evidence exporter before the interim look, one per registered outcome.
+
+\paragraph{Why it comes first.}
+A powered native panel for a rate-to-quality effect is registered separately and needs 96 independently licensed sources. If three requested ratios do not move the encoder apart, that acquisition is not worth making, so the actuator question is asked first, on sources of its own.
+
+\paragraph{Protocol.}
+The harness is that of Appendix~\ref{app:native-frames}: two peers in one headless Chrome negotiate VP8 with transport-wide congestion feedback, and all media crosses an owned userspace UDP relay with a 30{,}000-byte drop-tail queue and 25\,ms of propagation delay per direction. Each fresh peer pair plays a 20-second window of a recorded source, drawn to a $640\times360$ canvas at 30\,Hz, for 18.6\,s under one of four capacity schedules: underutilised (4\,Mbps throughout), near capacity (0.85\,Mbps), queue building ($1.2\to0.6\to0.6$\,Mbps) and collapse with recovery ($1.2\to0.35\to1.2$\,Mbps). Six times per peer the sender's bandwidth estimate is read, and for the next 3\,s the encoder's maximum bitrate is held at 0.65, 0.85 or 1.05 times that value. The three arms are drawn independently with probability one third each from a seed fixed in the sealed plan, so every assignment was determined before capture. The outcome of a hold is the encoded video payload rate before packetisation, over the window from 1.8 to 2.6\,s after the request is acknowledged, divided by the estimate the request was based on. Holds with zero output, with an aliased or clipped request, or without a plateau stay in the analysis as assigned. The models of the earlier native studies run in shadow and never act.
+
+\paragraph{Unit of inference and sample.}
+The unit is the source: files sharing a title, a capture group or media lineage form one cluster, which contributes one 20-second window and one pair of numbers. Peers and holds are repeated measurements within a source, ten fresh peers per schedule and six holds per peer, 240 assigned holds per source. Sources are Wikimedia Commons videos under CC BY 3.0, CC BY 4.0 or CC0 1.0. A seeded queue of 36 candidates was fetched and reviewed for rights against archived licence evidence; the reviewer of record is an AI system, and the repository owner adopted the review as the importer's assertion. Twenty-two candidates passed and 21 were decodable. One screening of those 21, on frame statistics alone, fixed three complexity terciles of seven sources each, and a seeded draw fixed their order: twelve first-stage sources, four per tercile, and nine in reserve.
+
+\paragraph{Estimand and test.}
+Per source, the mean normalised rate is taken per schedule and arm over complete holds, the four schedules are averaged with equal weight, and the two adjacent differences are formed: 0.85 minus 0.65 and 1.05 minus 0.85. The estimand is the mean of each difference over sources with the three terciles weighted equally. It is an intention-to-treat effect of the assigned ratio, with no model and no covariate adjustment. A requested step is 0.20 of the estimate, so a difference of 0.10 means that half the step was realised. The registered margin is \NOneMargin{}. The outcome is \emph{qualified} if the one-sided 97.5\% lower bounds of both differences exceed the margin, \emph{not separable at the registered threshold} if either one-sided 98.75\% upper bound is below it, and \emph{inconclusive} otherwise or if a capture-support gate fails. The standard error is that of Stein's two-stage procedure: the standard deviation of the per-source differences over the first \NOneFirstStage{} sources, with \NOneDegrees{} degrees of freedom, whatever the final number of sources.
+
+\paragraph{Blinded sample size.}
+After the first \NOneFirstStage{} sources a routine computes the variance across sources of the per-source differences and releases one number, the prescribed total of 12, 15, 18 or \NOneMaximum{} sources, together with outcome-free capture-support figures. The variances go to a sealed record that only the final analysis opens. No mean, difference or arm-labelled figure is released, and the capture step computes no outcome statistic. The custodian of the sealed record is the repository owner, who also ran the analysis, so the blinding is procedural and not independent.
+
+\subsection{Result}
+The capture ran on one Apple M1 laptop with \NOneBrowser{}. It collected \NOnePeers{} fresh peer pairs, and the analysis covers \NOneCohorts{} assigned holds on \NOneSources{} sources (Table~\ref{tab:n1-sources}). \NOneInterimSentence{} Capture support \NOneSupport{}: \NOneComplete\% of assigned holds are complete (at least 95\% required), \NOneAlias\% are aliased or clipped (at most 10\%), completeness differs between arms by \NOneGap{} percentage points (at most 5), the test of arm shares against one third each gives $p$ of \NOneArmP{} (at least 0.001), and \NOneSkipped{} sources were passed over as not evaluable (at most 4).
+
+\begin{table}[t]
+\centering\small
+\resizebox{\linewidth}{!}{\input{generated-native-n1/n1_primary.tex}}
+\caption{Native actuator qualification. Mean over \NOneSources{} sources of the difference between adjacent assigned ratios in rate divided by the frozen bandwidth estimate, terciles weighted equally. Lower bounds are one-sided 97.5\% and upper bounds one-sided 98.75\%, both with the first-stage standard error on \NOneDegrees{} degrees of freedom; $p$ tests the difference against the margin of \NOneMargin{}. The last column is the mean as a share of the requested step of 0.20. The send-rate rows are secondary and do not enter the outcome.}
+\label{tab:n1-primary}
+\end{table}
+
+The difference between the two lower ratios is \NOneLowerMean{} with lower bound \NOneLowerLow{}, and between the two upper ratios \NOneUpperMean{} with lower bound \NOneUpperLow{} (Table~\ref{tab:n1-primary}): the encoder realises \NOneLowerShare\% and \NOneUpperShare\% of the requested steps. \NOneOutcomeSentence{} \NOneConsequenceSentence{}
+
+\paragraph{Secondary analyses.}
+None of these changes the outcome. The RTP send rate gives \NOneSendLowerMean{} and \NOneSendUpperMean{}, which the same rule would read as \NOneSendVerdict{}. Within each capacity schedule the same two differences are tested with Holm's correction over the eight tests (Table~\ref{tab:n1-regimes}). By complexity tercile the intervals are descriptive and are not adjusted for the two-stage design (Table~\ref{tab:n1-complexity}). \NOneDesignationSentence{} Of the \NOneSources{} sources, \NOneSeparating{} have both of their own differences above the margin, which gives an exact one-sided 97.5\% lower bound of \NOneSeparatingBound\% on that share. The standard deviation across sources of a per-source difference is \NOneLowerSd{} \NOneLowerSdInterval{} and \NOneUpperSd{} \NOneUpperSdInterval{}; the size of any later source panel depends on this quantity. The source-clustered first-stage $F$ is \NOneEncoderF{} with partial $R^2$ \NOneEncoderRsq{}, which are instrument-strength indicators for a later quality stage. A plateau was observed in \NOnePlateauLow\%, \NOnePlateauMid\% and \NOnePlateauHigh\% of holds at the three ratios.
+
+\begin{table}[t]
+\centering\small
+\input{generated-native-n1/n1_regimes.tex}
+\caption{Secondary: the two differences of Table~\ref{tab:n1-primary} within each capacity schedule, with the same bounds and Holm-corrected $p$ over the eight tests.}
+\label{tab:n1-regimes}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\input{generated-native-n1/n1_complexity.tex}
+\caption{Diagnostic: the two differences by complexity tercile, with 95\% intervals from the pooled within-tercile variance. The intervals are descriptive, and a tercile mean alone supports no conclusion.}
+\label{tab:n1-complexity}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\resizebox{\linewidth}{!}{\input{generated-native-n1/n1_sources.tex}}
+\caption{The analysed sources in the pre-drawn order. All are Wikimedia Commons files; authors, URLs, licence evidence and file hashes are recorded under \path{acquisition/native-n1/}.}
+\label{tab:n1-sources}
+\end{table}
+
+\subsection{What Study 13 shows and does not show}
+This is the only study here whose outcomes come from a real encoder and a real bandwidth estimator, and it is confirmatory: one sample, analysed once by rules fixed beforehand. Its scope is narrow. It concerns the actuator through which a ratio-of-estimate controller would act and not any controller. Nothing learned was the actor, no quality was measured and no state-dependent preference between ratios was tested, so it neither supports nor undermines the simulator gains of Studies 10 to 12. The network is a userspace relay on one machine, not a kernel emulator or an Internet path. The stack is one build of one browser with one codec at one resolution. The sources are \NOneSources{} Commons videos chosen by a seeded queue and a rights screen, not a representative corpus. The blinding was procedural, with one person as custodian and analyst, and the rights review rests on an AI reviewer's reading of archived evidence that the importer adopted. The effect is that of a 3\,s hold measured from 1.8 to 2.6\,s after the request and says nothing about shorter or longer holds. Whether a learned controller improves delivered quality on a real network remains untested.

@@ -1,4 +1,4 @@
-.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-factual jevbwe-typed-population jevbwe-typed-population-test jevbwe-typed-crossover jevbwe-typed-factual-unseen jevbwe-typed-followup-evidence jevbwe-typed-evidence paper-pdf
+.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-factual jevbwe-typed-population jevbwe-typed-population-test jevbwe-typed-crossover jevbwe-typed-factual-unseen jevbwe-typed-followup-evidence jevbwe-typed-evidence native-n1-evidence paper-pdf
 setup:
 	uv sync --frozen --extra dev
 
@@ -150,6 +150,11 @@ jevbwe-typed-followup-evidence:
 
 jevbwe-typed-evidence:
 	uv run --frozen jevbwe-typed export --run $(TYPED)/jevbwe-typed-v2 --diagnosis $(TYPED)/jevbwe-typed-v2-diagnosis --ablation $(TYPED)/jevbwe-typed-v2-ablation-no-summaries --robustness $(TYPED)/jevbwe-typed-v2-legacy --broadened $(TYPED)/jevbwe-typed-v3-broad --out paper/generated-jevbwe-typed-v2
+
+# Native Phase N1: macros and tables from the registered final analysis. Mock rows are refused.
+N1 ?= results
+native-n1-evidence:
+	uv run --frozen python -m media_rl.native_actuator_qualification_report --final $(N1)/native-actuator-qualification-n1-final.json --public $(N1)/n1-interim-public.json --protocol $(N1)/native-actuator-qualification-n1-plan/protocol.json --out paper/generated-native-n1
 
 # Compile from the exported evidence already under paper/generated-*; does not re-export the
 # nine archived studies, whose pruned results must be restored first (see ARCHIVED_RESULTS.md).

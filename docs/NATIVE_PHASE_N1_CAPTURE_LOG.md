@@ -49,3 +49,20 @@ and error go to `results/native-actuator-qualification-n1-stage-one.log`.
 - The capture loop is all-or-nothing: an exception at any peer, including a collector
   validity check or the 90 s limit, writes `failure.json` and ends the run, and a rerun needs
   a fresh path. A failed prefix is kept and is never analysed.
+
+### Reporting fixed while the capture ran
+
+Written and committed during the stage-one capture, before `status`, the interim or any
+outcome:
+
+- `src/media_rl/native_actuator_qualification_report.py` (outside the N1 freeze): reads the
+  registered final report, the public interim record, the sealed plan and the capture
+  manifests, and writes the paper's macros and tables. It refuses mock rows. The sentences
+  that state the outcome, its registered consequence, the heterogeneity designation, and the
+  one-sentence summaries for the abstract and the conclusion exist once per registered
+  outcome, and the verdict alone selects among them.
+- `paper/native-n1-qualification.tex` (Study 13): design and limits in prose, every result a
+  macro or generated table. The paper includes it only when the generated evidence exists.
+- `make native-n1-evidence`.
+
+The exporter was exercised on the registered mock dry run only (`dry-run`, synthetic rows).
