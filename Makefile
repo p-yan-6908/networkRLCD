@@ -1,4 +1,4 @@
-.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-evidence paper-pdf
+.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-factual jevbwe-typed-evidence paper-pdf
 setup:
 	uv sync --frozen --extra dev
 
@@ -108,6 +108,10 @@ jevbwe-typed-replication:
 	uv run --frozen jevbwe-typed rescore --run $(TYPED)/jevbwe-typed-v3-replication --split test
 	uv run --frozen jevbwe-typed audit --run $(TYPED)/jevbwe-typed-v3-replication --split test
 	uv run --frozen jevbwe-typed baselines --run $(TYPED)/jevbwe-typed-v3-replication --out $(TYPED)/jevbwe-typed-v3-replication-baselines
+# Factual-only supervision against a rollout-labelled control on shared rows (development study,
+# about an hour on 8 cores and under 4 GB). See docs/JEVBWE_TYPED_FACTUAL_V1.md.
+jevbwe-typed-factual:
+	uv run --frozen jevbwe-typed factual --run $(TYPED)/jevbwe-typed-v3-broad --settings configs/jevbwe_typed_factual_v1.json --out $(TYPED)/typed-factual-v1
 jevbwe-typed-evidence:
 	uv run --frozen jevbwe-typed export --run $(TYPED)/jevbwe-typed-v2 --diagnosis $(TYPED)/jevbwe-typed-v2-diagnosis --ablation $(TYPED)/jevbwe-typed-v2-ablation-no-summaries --robustness $(TYPED)/jevbwe-typed-v2-legacy --broadened $(TYPED)/jevbwe-typed-v3-broad --out paper/generated-jevbwe-typed-v2
 

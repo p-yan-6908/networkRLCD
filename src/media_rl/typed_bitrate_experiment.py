@@ -667,6 +667,10 @@ def main(argv=None):
     p = sub.add_parser("baselines", help="Tuned reactive rules replayed on a finished run's frozen panels")
     p.add_argument("--run", required=True, type=Path)
     p.add_argument("--out", required=True, type=Path)
+    p = sub.add_parser("factual", help="Factual-only supervision against a rollout-labelled control")
+    p.add_argument("--run", required=True, type=Path)
+    p.add_argument("--settings", type=Path)
+    p.add_argument("--out", required=True, type=Path)
     p = sub.add_parser("transfer", help="Evaluate a finished run's frozen models once on a registered panel")
     p.add_argument("--run", required=True, type=Path)
     p.add_argument("--registration", required=True, type=Path)
@@ -698,6 +702,11 @@ def main(argv=None):
             from . import typed_bitrate_baselines as baselines
 
             print(baselines.headline(baselines.audit(args.run, args.out)))
+            return
+        if args.command == "factual":
+            from . import typed_bitrate_factual as factual
+
+            print(factual.headline(factual.study(args.run, args.out, args.settings)))
             return
         if args.command == "transfer":
             print(headline(transfer(args.run, args.out, args.registration)))
