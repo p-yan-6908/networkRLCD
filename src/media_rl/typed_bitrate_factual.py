@@ -317,10 +317,11 @@ def offline(net, norm, scale, margin, truth, base):
     actual = truth["values"] - truth["values"][:, [base]]
     chosen, rows = choose(advantage, base, margin), np.arange(len(x))
     others = np.arange(actual.shape[1]) != base
+    correlation = np.corrcoef(advantage[:, others].ravel(), actual[:, others].ravel())[0, 1]
     return dict(
         advantage=float(actual[rows, chosen].mean()),
         override_share=float(np.mean(chosen != base)),
-        correlation=float(np.corrcoef(advantage[:, others].ravel(), actual[:, others].ravel())[0, 1]),
+        correlation=float(correlation) if np.isfinite(correlation) else 0.0,  # a constant prediction
     )
 
 

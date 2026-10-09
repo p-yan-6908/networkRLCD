@@ -468,6 +468,43 @@ def run(config, out, splits=("validation", "test")):
     return report
 
 
+def register(run, out, name, panel, test_seeds, protocol=None):
+    """Write the registration a later ``transfer`` of a finished run must match.
+
+    It names the run's model files by hash and records its base ratio and the rule tuned on its
+    training families. Commit the file before a sealed panel is evaluated.
+    """
+    from .typed_bitrate_baselines import tune
+    from .typed_bitrate_population import PANELS, SEED, table_hash
+
+    run, out = Path(run), Path(out)
+    if out.exists():
+        raise FileExistsError(out)
+    if panel not in PANELS or not test_seeds:
+        raise ValueError("a population panel and trace seeds are required")
+    config = load_config(run / "config.json")
+    record = dict(
+        name=name,
+        source=config.name,
+        base_ratio=config.base_ratio,
+        panel=panel,
+        test_seeds=list(test_seeds),
+        population_seed=SEED,
+        population_hash=table_hash(),
+        models={
+            f"model_seed_{s}.json": hashlib.sha256((run / f"model_seed_{s}.json").read_bytes()).hexdigest()
+            for s in config.model_seeds
+        },
+        primary_method="choice_rlcd_bayes",
+        rule_best=tune(config)["selected"]["rule_best"]["spec"],
+        sensitive_margin=config.margin,
+    )
+    if protocol:
+        record["protocol"] = str(protocol)
+    dump(out, record)
+    return record
+
+
 def transfer(run, out, registration):
     """One evaluation of a finished run's frozen models on a registered panel, in a new directory.
 
@@ -671,6 +708,19 @@ def main(argv=None):
     p.add_argument("--run", required=True, type=Path)
     p.add_argument("--settings", type=Path)
     p.add_argument("--out", required=True, type=Path)
+    p = sub.add_parser("register", help="Write the registration a transfer of a finished run must match")
+    p.add_argument("--run", required=True, type=Path)
+    p.add_argument("--name", required=True)
+    p.add_argument("--panel", required=True)
+    p.add_argument("--seeds", required=True, help="First and last trace seed, as FIRST-LAST")
+    p.add_argument("--protocol")
+    p.add_argument("--out", required=True, type=Path)
+    p = sub.add_parser("followup", help="LaTeX macros, tables and figure of the follow-up study")
+    p.add_argument("--baselines", required=True, type=Path)
+    p.add_argument("--replication", type=Path)
+    p.add_argument("--replication-baselines", type=Path)
+    p.add_argument("--factual", type=Path)
+    p.add_argument("--out", required=True, type=Path)
     p = sub.add_parser("transfer", help="Evaluate a finished run's frozen models once on a registered panel")
     p.add_argument("--run", required=True, type=Path)
     p.add_argument("--registration", required=True, type=Path)
@@ -707,6 +757,23 @@ def main(argv=None):
             from . import typed_bitrate_factual as factual
 
             print(factual.headline(factual.study(args.run, args.out, args.settings)))
+            return
+        if args.command == "register":
+            first, last = (int(v) for v in args.seeds.split("-"))
+            seeds = range(first, last + 1)
+            print(
+                json.dumps(
+                    register(args.run, args.out, args.name, args.panel, seeds, args.protocol), indent=1
+                )
+            )
+            return
+        if args.command == "followup":
+            from .typed_bitrate_followup_report import export as followup
+
+            written = followup(
+                args.out, args.baselines, args.replication, args.replication_baselines, args.factual
+            )
+            print(json.dumps(written, indent=1))
             return
         if args.command == "transfer":
             print(headline(transfer(args.run, args.out, args.registration)))

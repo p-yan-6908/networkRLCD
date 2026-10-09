@@ -1,4 +1,4 @@
-.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-factual jevbwe-typed-evidence paper-pdf
+.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-factual jevbwe-typed-population jevbwe-typed-population-test jevbwe-typed-followup-evidence jevbwe-typed-evidence paper-pdf
 setup:
 	uv sync --frozen --extra dev
 
@@ -112,6 +112,31 @@ jevbwe-typed-replication:
 # about an hour on 8 cores and under 4 GB). See docs/JEVBWE_TYPED_FACTUAL_V1.md.
 jevbwe-typed-factual:
 	uv run --frozen jevbwe-typed factual --run $(TYPED)/jevbwe-typed-v3-broad --settings configs/jevbwe_typed_factual_v1.json --out $(TYPED)/typed-factual-v1
+# Population training (V4): train, then read the development panel paired with the V3 replication.
+# About three hours on 8 cores. The development registration names the trained model files by
+# hash and is written after training. See docs/JEVBWE_TYPED_V4_POPULATION.md.
+jevbwe-typed-population:
+	uv run --frozen jevbwe-typed run --config configs/jevbwe_typed_v4_population.json --out $(TYPED)/jevbwe-typed-v4-population --splits validation
+	uv run --frozen jevbwe-typed register --run $(TYPED)/jevbwe-typed-v4-population --name jevbwe-typed-v4-development --panel r --seeds 29301-29316 --protocol docs/JEVBWE_TYPED_V4_POPULATION.md --out $(TYPED)/jevbwe-typed-v4-development-registration.json
+	uv run --frozen jevbwe-typed transfer --run $(TYPED)/jevbwe-typed-v4-population --registration $(TYPED)/jevbwe-typed-v4-development-registration.json --out $(TYPED)/jevbwe-typed-v4-development
+	uv run --frozen jevbwe-typed rescore --run $(TYPED)/jevbwe-typed-v4-development --split test
+	uv run --frozen jevbwe-typed audit --run $(TYPED)/jevbwe-typed-v4-development --split test --reference $(TYPED)/jevbwe-typed-v3-replication
+	uv run --frozen jevbwe-typed baselines --run $(TYPED)/jevbwe-typed-v4-development --out $(TYPED)/jevbwe-typed-v4-development-baselines
+
+# The sealed panel: V4 and the frozen V3 models, once each, on identical traces (about 2.5 hours).
+# Run only after configs/jevbwe_typed_v4_test.json has been committed with the frozen hashes.
+jevbwe-typed-population-test:
+	uv run --frozen jevbwe-typed transfer --run $(TYPED)/jevbwe-typed-v4-population --registration configs/jevbwe_typed_v4_test.json --out $(TYPED)/jevbwe-typed-v4-test
+	uv run --frozen jevbwe-typed transfer --run $(TYPED)/jevbwe-typed-v3-broad --registration configs/jevbwe_typed_v3_on_sealed.json --out $(TYPED)/jevbwe-typed-v3-on-sealed
+	uv run --frozen jevbwe-typed rescore --run $(TYPED)/jevbwe-typed-v4-test --split test
+	uv run --frozen jevbwe-typed rescore --run $(TYPED)/jevbwe-typed-v3-on-sealed --split test
+	uv run --frozen jevbwe-typed audit --run $(TYPED)/jevbwe-typed-v3-on-sealed --split test
+	uv run --frozen jevbwe-typed audit --run $(TYPED)/jevbwe-typed-v4-test --split test --reference $(TYPED)/jevbwe-typed-v3-on-sealed
+	uv run --frozen jevbwe-typed baselines --run $(TYPED)/jevbwe-typed-v4-test --out $(TYPED)/jevbwe-typed-v4-test-baselines
+	uv run --frozen jevbwe-typed baselines --run $(TYPED)/jevbwe-typed-v3-on-sealed --out $(TYPED)/jevbwe-typed-v3-on-sealed-baselines
+jevbwe-typed-followup-evidence:
+	uv run --frozen jevbwe-typed followup --baselines $(TYPED)/typed-baseline-audit-v1 --replication $(TYPED)/jevbwe-typed-v3-replication --replication-baselines $(TYPED)/jevbwe-typed-v3-replication-baselines --factual $(TYPED)/typed-factual-v1 --out paper/generated-jevbwe-typed-followup
+
 jevbwe-typed-evidence:
 	uv run --frozen jevbwe-typed export --run $(TYPED)/jevbwe-typed-v2 --diagnosis $(TYPED)/jevbwe-typed-v2-diagnosis --ablation $(TYPED)/jevbwe-typed-v2-ablation-no-summaries --robustness $(TYPED)/jevbwe-typed-v2-legacy --broadened $(TYPED)/jevbwe-typed-v3-broad --out paper/generated-jevbwe-typed-v2
 

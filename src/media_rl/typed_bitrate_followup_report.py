@@ -1,0 +1,405 @@
+"""Paper evidence for the typed-control follow-up: baseline audit, population replication, factual supervision.
+
+Every number is read from the result summaries; nothing is typed in by hand.
+"""
+
+import hashlib
+import json
+from pathlib import Path
+
+import numpy as np
+
+from .typed_bitrate_audit import PRIMARY
+from .typed_bitrate_factual import NEVER
+from .typed_bitrate_population import PANELS
+from .typed_bitrate_report import contrast_macros, plain, signed, span
+
+ORDINALS = ("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight")
+NUMBERS = ("none", "one", "two", "three", "four")
+
+
+def count(value):
+    return f"{value:,}".replace(",", "{,}")
+
+
+def rule_name(spec):
+    """A rule's parameters in words; the grid values are whole numbers of milliseconds."""
+    if spec["kind"] == "delay":
+        return (
+            f"delay hysteresis between {spec['high']:.2f} and {spec['low']:.2f}, "
+            f"reducing at {spec['on_ms']:g}\\,ms of excess round-trip delay and restoring at {spec['off_ms']:g}\\,ms"
+        )
+    detail = ", ".join(f"{k.replace('_', ' ')} {v:g}" for k, v in spec.items() if k != "kind")
+    return f"{spec['kind']} ({detail})"
+
+
+def family_macros(rows, name, pair, digits=3, scale=1):
+    """Macros of one audited contrast: the utility entry of a pair, or a plain contrast."""
+    contrast_macros(rows, name, pair, digits, scale)
+    if "leave_one_family_out" in pair:
+        rows[f"{name}LeaveOut"] = span(pair["leave_one_family_out"], digits, scale)
+
+
+def rule_macros(report):
+    """The baseline audit of the frozen broadened run."""
+    tuning, rows = report["tuning"], {}
+    sweep = {round(r["spec"]["ratio"], 2): r for r in report["extended"]["sweep"]}
+    best = tuning["selected"]["rule_best"]
+    rows.update(
+        TypedRuleCandidates=str(tuning["candidates"]),
+        TypedRuleTuneTraces=str(tuning["traces"]),
+        TypedRuleTuneBase=plain(tuning["base"]["utility"]),
+        TypedRuleTuneBest=plain(best["utility"]),
+        TypedRuleTuneGain=signed(best["utility"] - tuning["base"]["utility"]),
+        TypedRuleBestName=rule_name(best["spec"]),
+        TypedRuleTuneAbove=plain(sweep[1.1]["utility"]),
+        TypedRuleTuneTop=plain(sweep[1.5]["utility"]),
+        TypedRuleCeilingEffect=plain(report["extended"]["ceiling_effect"], 1),
+    )
+    for prefix, split, panel in (
+        ("TypedRuleVal", "validation", "all"),
+        ("TypedRuleDev", "development", "ood"),
+        ("TypedRuleTest", "test", "all"),
+    ):
+        if split not in report["panels"]:
+            continue
+        entry = report["panels"][split]["panels"][panel]
+        for label, pair in (("RuleVsFixed", "rule_best_vs_train_fixed"), ("HeadVsRule", "head_vs_rule_best")):
+            family_macros(rows, prefix + label, entry["contrasts"][pair]["utility"])
+        rows[prefix + "BestWide"] = max(entry["wide_fixed"], key=entry["wide_fixed"].get)
+    return rows
+
+
+def replication_macros(report, audit, rules):
+    """The frozen models on the registered population panel."""
+    rows, panel = {}, audit["panels"]["all"]
+    head, table = panel["methods"][PRIMARY], report["panels"]["test"]["all"]["methods"]
+    base, hindsight = panel["train_fixed"], panel["hindsight_fixed"]
+    families = len(panel["families"])
+    gain = head["utility_vs_train_fixed"]
+    by_family = np.asarray(gain["by_family"])
+    ece = [audit["families"][f]["methods"][PRIMARY]["ece"] for f in panel["families"]]
+    calibration = audit["calibration"][PRIMARY]["all"]
+    registered = report["transfer"]["registration"]
+    rows.update(
+        TypedRepFamilies=str(families),
+        TypedRepTraceSeeds=str(len(registered["test_seeds"])),
+        TypedRepTraces=count(families * len(registered["test_seeds"])),
+        TypedRepSealedFamilies=str(PANELS["s"]),
+        TypedRepPoolFamilies=str(PANELS["d"]),
+        TypedRepBaseRatio=f"{float(base.removeprefix('fixed_')):.2f}",
+        TypedRepHindsightRatio=f"{float(hindsight.removeprefix('fixed_')):.2f}",
+        TypedRepBaseUtility=plain(table[base]["utility"]),
+        TypedRepHindsightUtility=plain(table[hindsight]["utility"]),
+        TypedRepHeadUtility=plain(table[PRIMARY]["utility"]),
+        TypedRepOracleUtility=plain(table["oracle"]["utility"]),
+        TypedRepBaseUnsafe=plain(100 * table[base]["unsafe"], 2),
+        TypedRepHeadUnsafe=plain(100 * table[PRIMARY]["unsafe"], 2),
+        TypedRepOverride=plain(100 * table[PRIMARY]["override_share"], 1),
+        TypedRepEce=plain(calibration["ece"]),
+        TypedRepEceFamily=span(calibration["family_interval95"]).replace("$+$", ""),
+        TypedRepAccuracy=plain(calibration["accuracy"]),
+        TypedRepConfidence=plain(calibration["confidence"]),
+        TypedRepEceBest=plain(min(ece)),
+        TypedRepEceWorst=plain(max(ece)),
+        TypedRepEceMedian=plain(float(np.median(ece))),
+        TypedRepEceAbove=str(int(np.sum(np.asarray(ece) > 0.05))),
+        TypedRepFamilySd=plain(float(by_family.std(ddof=1))),
+        TypedRepNearZero=str(int(np.sum(np.abs(by_family) < 0.005))),
+        TypedRepLargest=signed(float(by_family.max())),
+        TypedRepSmallest=signed(float(by_family.min())),
+        TypedRepFloor=plain(
+            100 * float(np.mean([audit["families"][f]["floor"] for f in panel["families"]])), 1
+        ),
+        TypedRepIsolationEpisodes=count(audit["isolation"]["episodes"]),
+        TypedRepIsolationDifference=plain(audit["isolation"]["unlabelled_replay"], 1),
+    )
+    family_macros(rows, "TypedRepGain", gain)
+    family_macros(rows, "TypedRepGainVsHindsight", head["utility_vs_hindsight_fixed"])
+    family_macros(rows, "TypedRepUnsafe", head["unsafe_vs_train_fixed"], 2, 100)
+    family_macros(rows, "TypedRepOracleGain", panel["methods"]["oracle"]["utility_vs_train_fixed"])
+    oracle = panel["methods"]["oracle"]["utility_vs_train_fixed"]["mean"]
+    rows["TypedRepOracleShare"] = plain(100 * gain["mean"] / oracle, 0)
+    for label, pair in (
+        ("TypedRepRlcdVsAnalytic", "rlcd_vs_exact_gradient"),
+        ("TypedRepRlcdVsRegress", "rlcd_vs_regression"),
+        ("TypedRepBayesVsMap", "payoff_weighted_vs_map"),
+    ):
+        family_macros(rows, label, panel["pairs"][pair]["utility"])
+    panels = rules["panels"]["test"]["panels"]
+    family_macros(rows, "TypedRepGainVsRule", panels["all"]["contrasts"]["head_vs_rule_best"]["utility"])
+    family_macros(
+        rows, "TypedRepRuleVsFixed", panels["all"]["contrasts"]["rule_best_vs_train_fixed"]["utility"]
+    )
+    if "sensitive" in panels:
+        sensitive = panels["sensitive"]
+        rows["TypedRepSensitiveFamilies"] = str(len(sensitive["families"]))
+        rows["TypedRepSensitiveMargin"] = plain(registered["sensitive_margin"], 2)
+        family_macros(rows, "TypedRepSensitiveGain", sensitive["contrasts"]["head_vs_train_fixed"]["utility"])
+        family_macros(
+            rows, "TypedRepSensitiveGainVsRule", sensitive["contrasts"]["head_vs_rule_best"]["utility"]
+        )
+    return rows
+
+
+def identified(entry, name="factual"):
+    """The reading fixed in the design: the family-level t interval of the gain excludes zero."""
+    return entry["contrasts"][f"{name}_vs_fixed"]["utility"]["family_t_interval95"][0] > 0
+
+
+def factual_macros(report):
+    """Learning curves of the factual pipeline and its rollout-labelled control."""
+    rows, budgets = {}, report["budgets"]
+    rows.update(
+        TypedFactSeeds=str(len(report["settings"]["seeds"])),
+        TypedFactBudgets=str(len(budgets)),
+        TypedFactStates=count(report["truth"]["states"]),
+        TypedFactOracleAdvantage=signed(report["truth"]["oracle_advantage"]),
+        TypedFactBlocksPerEpisode=plain(
+            float(np.mean([c["blocks_per_episode"] for c in report["collection"]])), 1
+        ),
+        TypedFactLabelDifference=plain(max(c["factual_matches_rollout"] for c in report["collection"]), 1),
+        TypedFactControlBlocks=count(report["settings"]["control_blocks"]),
+    )
+    for name, label in (("v3_regress", "TypedFactRefRegress"), ("v3_head", "TypedFactRefHead")):
+        family_macros(rows, label, report["reference"][name]["utility"])
+    for ordinal, entry in zip(ORDINALS, budgets):
+        prefix = f"TypedFact{ordinal}"
+        rows[prefix + "Blocks"] = count(entry["blocks"])
+        rows[prefix + "Hours"] = count(int(round(entry["link_hours"])))
+        family_macros(rows, prefix + "Gain", entry["contrasts"]["factual_vs_fixed"]["utility"])
+        family_macros(rows, prefix + "Unsafe", entry["contrasts"]["factual_vs_fixed"]["unsafe"], 2, 100)
+        rows[prefix + "Offline"] = signed(entry["pipelines"]["factual"]["offline_advantage"])
+        rows[prefix + "Correlation"] = plain(entry["pipelines"]["factual"]["correlation"], 2)
+        if "rollout" in entry["pipelines"]:
+            family_macros(rows, prefix + "ControlGain", entry["contrasts"]["rollout_vs_fixed"]["utility"])
+            family_macros(rows, prefix + "Price", entry["contrasts"]["factual_vs_rollout"]["utility"])
+            rows[prefix + "ControlOffline"] = signed(entry["pipelines"]["rollout"]["offline_advantage"])
+            rows[prefix + "ControlCorrelation"] = plain(entry["pipelines"]["rollout"]["correlation"], 2)
+    first = next((e for e in budgets if identified(e)), None)
+    rows["TypedFactIdentifiedBlocks"] = count(first["blocks"]) if first else "none"
+    rows["TypedFactIdentifiedHours"] = count(int(round(first["link_hours"]))) if first else "none"
+    rows["TypedFactIdentifiedBudgets"] = str(sum(identified(e) for e in budgets))
+    last = budgets[-1]
+    rows["TypedFactLastBlocks"] = count(last["blocks"])
+    rows["TypedFactLastHours"] = count(int(round(last["link_hours"])))
+    family_macros(rows, "TypedFactLastGain", last["contrasts"]["factual_vs_fixed"]["utility"])
+    controlled = [e for e in budgets if "rollout" in e["pipelines"]]
+    if controlled:
+        top = controlled[-1]
+        rows["TypedFactControlHours"] = count(int(round(top["link_hours"])))
+        family_macros(rows, "TypedFactControlTopGain", top["contrasts"]["rollout_vs_fixed"]["utility"])
+        family_macros(rows, "TypedFactControlTopFactual", top["contrasts"]["factual_vs_fixed"]["utility"])
+        family_macros(rows, "TypedFactControlTopPrice", top["contrasts"]["factual_vs_rollout"]["utility"])
+    return rows
+
+
+def with_interval(c):
+    return f"{signed(c['mean'])} {span(c.get('family_t_interval95'))}"
+
+
+def table_rules(report, replication=None):
+    """Tuned rule against the fixed ratio and the head, per panel, with family-level t intervals."""
+    lines = [
+        "\\begin{tabular}{lrlll}",
+        "\\toprule",
+        "Panel & Families & Tuned rule $-$ fixed & Head $-$ tuned rule & Oracle $-$ tuned rule \\\\",
+        "\\midrule",
+    ]
+    panels = [
+        ("Validation (training families)", report, "validation", "all"),
+        ("Development, never trained on", report, "development", "ood"),
+        ("Former test families", report, "test", "all"),
+    ]
+    if replication:
+        panels.append(("Population panel (registered)", replication, "test", "all"))
+    for title, source, split, panel in panels:
+        if split not in source["panels"]:
+            continue
+        entry = source["panels"][split]["panels"][panel]
+        c = entry["contrasts"]
+        cells = (
+            c[k]["utility"] for k in ("rule_best_vs_train_fixed", "head_vs_rule_best", "oracle_vs_rule_best")
+        )
+        lines.append(
+            f"{title} & {len(entry['families'])} & " + " & ".join(with_interval(x) for x in cells) + " \\\\"
+        )
+    return "\n".join([*lines, "\\bottomrule", "\\end{tabular}"]) + "\n"
+
+
+def verdicts(audit, rules):
+    """Whether each registered criterion holds, from the audited numbers and the registered thresholds."""
+
+    def clear(c):
+        return all(low > 0 or high < 0 for low, high in (c["family_interval95"], c["family_t_interval95"]))
+
+    head = audit["panels"]["all"]["methods"][PRIMARY]
+    rule = rules["panels"]["test"]["panels"]["all"]["contrasts"]["head_vs_rule_best"]["utility"]
+    return dict(
+        gain=clear(head["utility_vs_train_fixed"]),
+        rule=clear(rule),
+        calibration=audit["calibration"][PRIMARY]["all"]["ece"] <= 0.05,
+        constraints=head["unsafe_vs_train_fixed"]["family_interval95"][1] <= 0.01,
+    )
+
+
+def table_replication(rows):
+    """The four registered criteria and the secondary contrasts, from the macros already computed."""
+
+    def line(label, name, verdict=None, t=True):
+        cells = [rows[name], rows[f"{name}Family"], rows[f"{name}T"] if t else "n/a"]
+        return f"{label} & " + " & ".join(cells) + f" & {rows[verdict] if verdict else ''} \\\\"
+
+    lines = [
+        "\\begin{tabular}{lrllr}",
+        "\\toprule",
+        "Quantity & Estimate & Family bootstrap & Family $t$ & Criterion \\\\",
+        "\\midrule",
+        line("1. Head $-$ train-selected fixed ratio", "TypedRepGain", "TypedRepMetGain"),
+        line("2. Head $-$ tuned rule", "TypedRepGainVsRule", "TypedRepMetRule"),
+        line("3. Pooled ECE (at most 0.05)", "TypedRepEce", "TypedRepMetCalibration", t=False),
+        line(
+            "4. Unsafe intervals, points (upper end at most $+$1.0)",
+            "TypedRepUnsafe",
+            "TypedRepMetConstraints",
+        ),
+        "\\midrule",
+        line("Head $-$ hindsight-best fixed ratio", "TypedRepGainVsHindsight"),
+        line("RLCD $-$ exact-gradient head", "TypedRepRlcdVsAnalytic"),
+        line("RLCD $-$ regression head", "TypedRepRlcdVsRegress"),
+        line("Tuned rule $-$ fixed ratio", "TypedRepRuleVsFixed"),
+        line("Hindsight oracle $-$ fixed ratio", "TypedRepOracleGain"),
+    ]
+    if "TypedRepSensitiveGain" in rows:
+        label = f"Head $-$ fixed ratio, {rows['TypedRepSensitiveFamilies']} action-sensitive families"
+        lines.append(line(label, "TypedRepSensitiveGain"))
+    return "\n".join([*lines, "\\bottomrule", "\\end{tabular}"]) + "\n"
+
+
+def margins(seeds):
+    return ", ".join("never" if s["margin"] == NEVER else f"{s['margin']:g}" for s in seeds)
+
+
+def table_factual(report):
+    lines = [
+        "\\begin{tabular}{rrlllrrl}",
+        "\\toprule",
+        "Blocks & Hours & Factual $-$ fixed & Rollout control $-$ fixed & Factual $-$ control"
+        " & \\multicolumn{2}{c}{Offline advantage} & Factual margins \\\\",
+        " & & & & & factual & control & \\\\",
+        "\\midrule",
+    ]
+    for entry in report["budgets"]:
+        c, p = entry["contrasts"], entry["pipelines"]
+        control = "rollout" in p
+        lines.append(
+            " & ".join(
+                [
+                    count(entry["blocks"]),
+                    count(int(round(entry["link_hours"]))),
+                    with_interval(c["factual_vs_fixed"]["utility"]),
+                    with_interval(c["rollout_vs_fixed"]["utility"]) if control else "not run",
+                    with_interval(c["factual_vs_rollout"]["utility"]) if control else "n/a",
+                    signed(p["factual"]["offline_advantage"]),
+                    signed(p["rollout"]["offline_advantage"]) if control else "n/a",
+                    margins(p["factual"]["seeds"]),
+                ]
+            )
+            + " \\\\"
+        )
+    return "\n".join([*lines, "\\bottomrule", "\\end{tabular}"]) + "\n"
+
+
+def figure_factual(report, path):
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    ink, muted, accent, warm = "#1f2933", "#9aa5b1", "#1f6fb2", "#c2571a"
+    plt.rcParams.update({"font.size": 8, "axes.spines.top": False, "axes.spines.right": False})
+    fig, axis = plt.subplots(figsize=(4.6, 2.9))
+    axis.axhline(0, color=muted, linewidth=0.8)
+    reference = report["reference"]["v3_regress"]["utility"]["mean"]
+    axis.axhline(reference, color=muted, linewidth=0.8, linestyle=":")
+    budgets = report["budgets"]
+    axis.annotate(
+        "frozen regression head (rollouts, on-policy aggregation)",
+        (budgets[0]["link_hours"], reference),
+        textcoords="offset points",
+        xytext=(0, 3),
+        fontsize=6,
+        color=ink,
+    )
+    for name, label, colour, marker in (
+        ("rollout", "Rollout-labelled control", warm, "s"),
+        ("factual", "Factual outcomes only", accent, "o"),
+    ):
+        rows = [e for e in budgets if name in e["pipelines"]]
+        hours = [e["link_hours"] for e in rows]
+        cells = [e["contrasts"][f"{name}_vs_fixed"]["utility"] for e in rows]
+        mean = np.asarray([c["mean"] for c in cells])
+        low, high = np.asarray([c["family_t_interval95"] for c in cells]).T
+        axis.errorbar(
+            hours,
+            mean,
+            yerr=[mean - low, high - mean],
+            color=colour,
+            marker=marker,
+            markersize=3.5,
+            linewidth=1.0,
+            elinewidth=0.8,
+            capsize=2,
+            label=label,
+        )
+    axis.set_xscale("log")
+    axis.set_xlabel("Randomised link time (hours, log scale)")
+    axis.set_ylabel("Utility gain over the fixed ratio")
+    axis.set_title("Validation traces; bars are family-level 95% t intervals", loc="left", color=ink)
+    axis.legend(frameon=False, fontsize=6, loc="best")
+    fig.tight_layout()
+    fig.savefig(path)
+    plt.close(fig)
+
+
+def export(out, baselines, replication=None, replication_baselines=None, factual=None):
+    """Write macros, tables and the learning-curve figure from the follow-up summaries."""
+    out = Path(out)
+    out.mkdir(parents=True, exist_ok=True)
+    sources = [Path(baselines) / "report.json"]
+    audited = json.loads(sources[0].read_text())
+    if not audited.get("synthetic_only"):
+        raise ValueError("the baseline audit must be marked synthetic")
+    evidence, rules = rule_macros(audited), None
+    if replication:
+        if not replication_baselines:
+            raise ValueError("the replication needs its baseline audit")
+        files = [Path(replication) / "report.json", Path(replication) / "audit_test.json"]
+        files.append(Path(replication_baselines) / "report.json")
+        report, audit, rules = (json.loads(p.read_text()) for p in files)
+        if "transfer" not in report or not all(d.get("synthetic_only") for d in (report, audit, rules)):
+            raise ValueError("the replication must be a registered synthetic transfer")
+        if not audit.get("isolation"):
+            raise ValueError("replay the replication panel before exporting its evidence")
+        evidence.update(replication_macros(report, audit, rules))
+        met = verdicts(audit, rules)
+        evidence.update({f"TypedRepMet{k.title()}": "met" if v else "not met" for k, v in met.items()})
+        evidence.update(TypedRepCriteriaMet=NUMBERS[sum(met.values())], TypedRepCriteria=NUMBERS[len(met)])
+        (out / "followup_replication.tex").write_text(table_replication(evidence))
+        sources += files
+    (out / "followup_rules.tex").write_text(table_rules(audited, rules))
+    if factual:
+        path = Path(factual) / "report.json"
+        curves = json.loads(path.read_text())
+        if not curves.get("synthetic_only"):
+            raise ValueError("the factual study must be marked synthetic")
+        evidence.update(factual_macros(curves))
+        (out / "followup_factual.tex").write_text(table_factual(curves))
+        figure_factual(curves, out / "followup_factual.pdf")
+        sources.append(path)
+    lines = ["% Generated by `jevbwe-typed followup`; do not edit."]
+    lines += [f"\\newcommand{{\\{name}}}{{{value}}}" for name, value in evidence.items()]
+    (out / "evidence.tex").write_text("\n".join(lines) + "\n")
+    provenance = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
+    (out / "provenance.json").write_text(json.dumps(provenance, indent=1, sort_keys=True) + "\n")
+    return dict(out=str(out), macros=len(evidence), sources=provenance)

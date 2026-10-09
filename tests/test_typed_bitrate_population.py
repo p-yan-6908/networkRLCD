@@ -6,7 +6,7 @@ import pytest
 
 from media_rl.typed_bitrate import TypedConfig, load_config
 from media_rl.typed_bitrate_baselines import audit
-from media_rl.typed_bitrate_experiment import main, run, transfer
+from media_rl.typed_bitrate_experiment import main, register, run, transfer
 from media_rl.typed_bitrate_families import FAMILIES, TEST_FAMILIES, TRAIN_FAMILIES, family_trace
 from media_rl.typed_bitrate_population import (
     EVENTS,
@@ -127,6 +127,13 @@ def test_transfer_evaluates_frozen_models_once_on_a_registered_panel(tmp_path):
         assert not (tmp_path / "refused").exists()  # nothing runs under a broken registration
     best = audit(source, tmp_path / "source-audit", samples=20)["tuning"]["selected"]["rule_best"]["spec"]
     record.write_text(json.dumps(registration(source, rule_best=best, sensitive_margin=0.02)))
+    made = register(source, tmp_path / "made.json", "tiny-transfer", "d", [5])  # the same record, derived
+    assert made == json.loads((tmp_path / "made.json").read_text())
+    assert made == {**json.loads(record.read_text()), "primary_method": "choice_rlcd_bayes"}
+    with pytest.raises(FileExistsError):
+        register(source, tmp_path / "made.json", "tiny-transfer", "d", [5])
+    with pytest.raises(ValueError):
+        register(source, tmp_path / "other.json", "tiny-transfer", "q", [5])
     report = transfer(source, tmp_path / "panel", record)
     out = tmp_path / "panel"
     assert (out / "model_seed_0.json").read_bytes() == (source / "model_seed_0.json").read_bytes()
