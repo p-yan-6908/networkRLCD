@@ -3,6 +3,18 @@
 Status: **protocol registered 2026-10-08, before any controller ran on any family of the
 population.** Results are appended below the protocol and do not change it.
 
+**Outcome.** Three of the four pre-specified criteria are met. On 48 families drawn from the
+stated population the frozen V3 head gains +0.019 utility over the train-selected fixed ratio,
+positive in 32 of 48 families, with family-level t interval [+0.005, +0.034] and bootstrap
+interval [+0.006, +0.036]. Against the tuned reactive rule the gain is +0.020
+[+0.004, +0.035]. Unsafe intervals fall by 0.26 points. Pooled ECE is 0.138, far above the 0.05
+threshold: the head is over-confident on unseen families and its probabilities are not
+calibrated there. The gain is small. It is about a third of the V3 point estimate, 18% of what
+the hindsight oracle gains, and absent in 19 of the 48 families. Against the fixed ratio that
+is best on this panel in hindsight (1.00) it is +0.012 with an interval that includes zero.
+Exact-gradient and regression controls match the RLCD head again. Synthetic only; the typed
+controller is not promoted.
+
 This is a simulator study in the synthetic track. It evaluates the five frozen V3 models. It
 fits nothing, changes no option set, decision rule or guard, and is not a V4. The native
 controller freeze and the registered native Phase N1 are untouched and are not informed by it.
@@ -144,4 +156,94 @@ make jevbwe-typed-replication TYPED=results/regen   # needs the frozen V3 run un
 
 ## Results
 
-None yet. The panel has not been run.
+Run on 2026-10-08 from commit `f305c90`, once, with no source change between the registration
+and the last of the four commands (`results/v3-replication.log`). The registered model and
+population hashes matched. Replaying all 19,200 learned episodes with rollouts switched off
+reproduces every outcome (largest difference 0), and recomputing the payoff-weighted rule from
+the recorded probabilities reproduces every executed option.
+
+### Panel means (48 families, 16 traces each, five model seeds)
+
+| Method | Utility | Unsafe intervals |
+|---|---:|---:|
+| fixed 0.90 | 0.092 | 7.30% |
+| fixed 1.00 (best fixed ratio on this panel, in hindsight) | 0.103 | 7.71% |
+| **fixed 1.05** (selected on training families; the comparator) | **0.096** | 8.07% |
+| fixed 1.10 | 0.095 | 8.27% |
+| tuned rule `delay(1.05, 0.8, 15 ms, 5 ms)` | 0.096 | 7.96% |
+| RLCD head, payoff-weighted (`choice_rlcd_bayes`) | 0.115 | 7.81% |
+| exact-gradient head | 0.115 | 7.83% |
+| regression head | 0.117 | 7.81% |
+| hindsight oracle | 0.203 | 7.31% |
+
+Utilities are lower than on the hand-written panels because the population is harsher: its
+median capacity is about 1.0 Mbps and 6.9% of control intervals violate a constraint whatever
+the sender does (more than 10% in 14 families).
+
+### Pre-specified criteria
+
+| # | Criterion | Result | Met |
+|---|---|---|---|
+| 1 | Gain over fixed 1.05; both family-level intervals exclude zero | +0.019; bootstrap [+0.006, +0.036]; t [+0.005, +0.034]; 32/48 families positive | yes |
+| 2 | Gain over the tuned rule; both intervals exclude zero | +0.020; bootstrap [+0.005, +0.037]; t [+0.004, +0.035]; 30/48 | yes |
+| 3 | Pooled ECE at most 0.05 | 0.138 (accuracy 0.816 at confidence 0.947); family-level interval [0.098, 0.188] | **no** |
+| 4 | Upper end of the unsafe-share difference at most +1.0 point | -0.26 points; family-level interval [-0.38, -0.16] | yes |
+
+By the table fixed in advance this is the row "1 and 2 met, 3 not": the gain replicates, and
+the reported probabilities are not calibrated on unseen families.
+
+### Secondary
+
+| Quantity | Result |
+|---|---|
+| Head minus the hindsight-best fixed ratio (1.00) | +0.012, t [-0.005, +0.029]: includes zero |
+| RLCD minus exact-gradient head | +0.000, t [-0.001, +0.001] |
+| RLCD minus regression head | -0.002, t [-0.006, +0.003] |
+| Payoff-weighted minus `map` and `gated` rules | +0.002, t [-0.012, +0.015] |
+| Hindsight oracle minus fixed 1.05 | +0.108, t [+0.080, +0.136]; the head realises 18% of it |
+| Tuned rule minus fixed 1.05 | -0.000, t [-0.004, +0.004] |
+| Leave-one-family-out range of the gain | +0.014 to +0.021 |
+| Family ECE | 0.004 to 0.660, median 0.116; above 0.05 in 35 of 48 families |
+| Decisions that leave the base ratio | 7.1% |
+
+**Action-sensitive families** (hindsight oracle gains at least 0.02 over fixed 1.05): 36 of 48.
+On them the head gains +0.026 over the fixed ratio (t [+0.008, +0.045], bootstrap
+[+0.009, +0.047], 30/36 positive) and +0.026 over the tuned rule (t [+0.006, +0.046], 23/36).
+Diagnostic only, as registered.
+
+### What the result does and does not show
+
+- **An established but small gain on unseen families.** This is the first panel in the track
+  where the family-level t interval excludes zero for families the head never trained on, and
+  it does so against a tuned reactive rule as well as against the fixed ratio. The estimate,
+  +0.019, is about a third of the +0.054 measured on V3's twelve hand-written families and far
+  below the +0.126 measured in distribution.
+- **Part of the gain is a lower average ratio.** On this population the ratio selected on
+  training families (1.05) is no longer the best fixed ratio: 1.00 scores 0.007 higher. Against
+  1.00 the head's gain is +0.012 and not established. The train-selected ratio is the
+  registered comparator and the hindsight-best ratio is an oracle, but the reading "the head
+  adapts where a fixed ratio cannot" is supported for only part of the +0.019.
+- **The gain is concentrated.** Nineteen families differ from the fixed ratio by less than
+  0.005, eleven gain more than 0.02, one loses more than 0.02 (-0.047), and one family supplies
+  +0.265. The seven families with persistent loss gain nothing on average (-0.001), as the
+  estimator pins the rate there. The four largest gains are on links with a buffer well below
+  the default depth; that observation was made after the result and is a description, not a
+  finding.
+- **Calibration fails.** Confidence 0.947 against accuracy 0.816. Pooled ECE doubles relative
+  to V3's test families (0.070 to 0.138). The payoff-weighted rule still acts sensibly because
+  it weighs probabilities by payoffs, but nothing here supports calling the probabilities
+  calibrated outside the training distribution.
+- **No evidence for RLCD-specific training**, for the third time: exact-gradient and regression
+  controls are indistinguishable from the RLCD head.
+- **The spread was overestimated.** The power calculation assumed a family standard deviation
+  of 0.092; the population's is 0.049, so the interval half-width is 0.014, not 0.027.
+- Simulator only. The labels behind these models are hindsight rollouts, which a real network
+  cannot provide. Nothing here is a native result and the typed controller is not promoted.
+
+### Status of the data
+
+`pop_r` has now been read and is a development panel. `pop_s` remains sealed: no controller,
+fixed ratio or oracle has run on it. `pop_d` remains the development pool.
+
+Tracked summaries: `results/jevbwe-typed-v3-replication/{config,report,audit_test,test_isolation}.json`
+and `results/jevbwe-typed-v3-replication-baselines/report.json`.
