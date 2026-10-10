@@ -1,0 +1,26 @@
+{
+  "name": "typed-b1-forecast-v1",
+  "seed": 261011,
+  "relay": {"rtt_ms": 50.0, "queue_mbit": 0.24},
+  "window_ms": [1800, 2600],
+  "replicates": 48,
+  "n1_reference": {
+    "source": "docs/NATIVE_PHASE_N1_EXPLORATORY.md and results/native-phase-b1-sizing.json",
+    "encoder_over_bwe": {
+      "all": [0.588, 0.732, 0.825],
+      "underutilized": [0.602, 0.777, 0.922],
+      "near-capacity": [0.611, 0.762, 0.822],
+      "queue-building": [0.585, 0.738, 0.782],
+      "collapse-recovery": [0.556, 0.651, 0.776]
+    },
+    "estimate_log_growth": {
+      "all": [0.123, 0.128, 0.310],
+      "underutilized": [0.165, 0.216, 0.693],
+      "near-capacity": [0.209, 0.141, 0.213],
+      "queue-building": [0.090, 0.161, 0.158],
+      "collapse-recovery": [0.029, -0.008, 0.174]
+    },
+    "flagged_share": 0.339,
+    "flagged_share_by_previous_arm": [0.514, 0.229, 0.275]
+  }
+}

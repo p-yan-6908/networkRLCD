@@ -1,4 +1,4 @@
-.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-factual jevbwe-typed-population jevbwe-typed-population-test jevbwe-typed-crossover jevbwe-typed-headroom jevbwe-typed-factual-unseen jevbwe-typed-followup-evidence jevbwe-typed-evidence native-n1-evidence paper-pdf
+.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-factual jevbwe-typed-population jevbwe-typed-population-test jevbwe-typed-crossover jevbwe-typed-headroom jevbwe-typed-b1-forecast jevbwe-typed-factual-unseen jevbwe-typed-followup-evidence jevbwe-typed-evidence native-n1-evidence paper-pdf
 setup:
 	uv sync --frozen --extra dev
 
@@ -143,6 +143,9 @@ jevbwe-typed-factual-unseen:
 # Hindsight headroom under truncated option sets (about twenty minutes; needs the V4 run; no model).
 jevbwe-typed-headroom:
 	uv run --frozen jevbwe-typed headroom --run $(TYPED)/jevbwe-typed-v4-population --settings configs/jevbwe_typed_headroom_v1.json --out $(TYPED)/typed-headroom-v1
+
+jevbwe-typed-b1-forecast:
+	uv run --frozen python -m media_rl.typed_bitrate_b1_forecast --settings configs/jevbwe_typed_b1_forecast_v1.json --out $(TYPED)/typed-b1-forecast-v1
 
 # Per-link crossover identification on the development pool (about five minutes; needs the V4 run).
 # See docs/JEVBWE_TYPED_CROSSOVER_V1.md.
