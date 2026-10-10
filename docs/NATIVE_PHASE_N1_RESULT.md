@@ -125,6 +125,14 @@ separately registered review of N2's sample size; that review is not enabled by 
   cap offers no such mechanism, so the simulator's gains do not transfer to this actuator as
   they stand.
 
+## Exploratory description
+
+A separate, unregistered description of the same rows is in
+[NATIVE_PHASE_N1_EXPLORATORY.md](NATIVE_PHASE_N1_EXPLORATORY.md). In short: the encoder sits
+at 0.59, 0.73 and 0.83 of the estimate at the three ratios; a cap below the estimate holds the
+estimate's growth back when the link has room; and in a pilot look at the on-time PSNR proxy no
+schedule shows a lower ratio to be better. None of it changes the outcome above.
+
 ## Limits
 
 - One machine, one browser build, VP8 at 640x360, a userspace relay with scripted capacity.

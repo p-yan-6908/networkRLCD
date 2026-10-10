@@ -7,6 +7,7 @@ import re
 import pytest
 
 from media_rl import native_actuator_qualification as qualification
+from media_rl import native_actuator_qualification_explore as explore
 from media_rl import native_actuator_qualification_panel as panel
 from media_rl import native_actuator_qualification_report as report
 
@@ -139,6 +140,57 @@ def test_regime_reading_counts_the_tests_that_clear_the_margin(records):
     made = report.macros(final, loaded["public"], loaded["protocol"], 0, [])
     assert made["NOneRegimeEstablished"] == "7"
     assert made["NOneRegimeOpen"] == "the upper difference under the queue-building schedule"
+
+
+def exploratory_rows(sources=4, peers=6):
+    """Synthetic rows: the top ratio helps under the free schedule and hurts under the others."""
+    rows = []
+    for s in range(sources):
+        for regime in explore.REGIMES:
+            for peer in range(peers):
+                for epoch in range(6):
+                    arm, held = (epoch + peer + s) % 3, regime != explore.REGIMES[0]
+                    rows.append(
+                        dict(
+                            cluster_id=f"source-{s}",
+                            trial_id=f"{s}-{regime}-{peer}",
+                            network_regime=regime,
+                            epoch=epoch,
+                            arm=arm,
+                            complete=True,
+                            base_bwe_bps=1e6 * (1 + 0.05 * epoch * (arm + 1)),
+                            encoder_bps=1e6 * (0.5 + 0.1 * arm + 0.01 * s),
+                            utility=30 + (-1.0 - 0.1 * s if held else 2.0 + 0.1 * s) * arm,
+                            ontime_fraction=0.9 - (0.05 + 0.01 * s) * arm * held,
+                        )
+                    )
+    return rows
+
+
+def test_exploratory_macros_are_marked_and_count_what_is_established():
+    described = explore.explore(exploratory_rows())
+    made = report.exploratory_macros(described)
+    assert all(name.startswith("NOneExp") for name in made)
+    assert made["NOneExpHeldSchedules"] == "3" and made["NOneExpHeldUtilityEstablished"] == "3"
+    assert made["NOneExpUtilityContrasts"] == "12" and made["NOneExpLowerBetter"] == "9"
+    assert made["NOneExpFreeBestTop"] == "4" and made["NOneExpFreeUtility"].startswith("$+$4.")
+    assert made["NOneExpSchedules"] == "4" and made["NOneExpEarlyAhead"] == "1"
+    assert made["NOneExpLaterCells"] == "8" and made["NOneExpLaterLowerBetter"] == "6"
+    for table in (report.table_exploratory(described), report.table_exploratory_holds(described)):
+        assert table.startswith("\\begin{tabular}") and table.rstrip().endswith("\\end{tabular}")
+    assert report.table_exploratory(described).count("\\\\") == 2 + 1 + len(explore.REGIMES)
+
+
+def test_exploratory_description_must_be_of_the_analysed_rows(records, tmp_path):
+    paths, _ = records
+    described = dict(explore.explore(exploratory_rows()), rows_sha256="0" * 64)
+    path = tmp_path / "exploratory.json"
+    path.write_text(json.dumps(described))
+    with pytest.raises(ValueError, match="not of the analysed capture"):
+        report.export(**paths, out=tmp_path / "evidence", allow_mock=True, exploratory=path)
+    path.write_text(json.dumps(dict(described, exploratory=False)))
+    with pytest.raises(ValueError, match="exploratory description of native rows"):
+        report.export(**paths, out=tmp_path / "evidence", allow_mock=True, exploratory=path)
 
 
 def test_titles_are_made_safe_for_latex():

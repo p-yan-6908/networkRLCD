@@ -9,6 +9,7 @@ alone selects among them.
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 
 from . import native_actuator_qualification as qualification
@@ -317,6 +318,96 @@ def table_sources(report, protocol, pool=None):
     return "\n".join(lines + ["\\bottomrule", "\\end{tabular}"]) + "\n"
 
 
+def exploratory_cell(entry, digits):
+    return f"{signed(entry['mean'], digits)} {span(entry['interval95'], digits)}"
+
+
+def exploratory_macros(described):
+    """Macros of the exploratory description. Every name carries Exp; none enters the outcome."""
+    level, growth = described["response_level"], described["estimate_growth"]
+    utility, free = described["quality"]["utility"], REGIMES[0]
+    top, low, wide = "1.05 - 0.85", "0.85 - 0.65", "1.05 - 0.65"
+    rows = {}
+    for key, name in zip(ARMS, ("0.65", "0.85", "1.05")):
+        rows[f"NOneExpLevel{key}"] = number(level["overall"]["arms"][name]["mean"], 2)
+        rows[f"NOneExpFreeLevel{key}"] = number(level["regimes"][free]["arms"][name]["mean"], 2)
+        grown = math.exp(growth["regimes"][free]["arms"][name]["mean"]) - 1
+        rows[f"NOneExpFreeGrowth{key}"] = percent(grown, 0)
+    held = [level["regimes"][r]["arms"]["1.05"]["mean"] for r in REGIMES[1:]]
+    rows["NOneExpHeldLevelMin"], rows["NOneExpHeldLevelMax"] = number(min(held), 2), number(max(held), 2)
+    entries = (
+        ("NOneExpGrowthTop", growth["overall"]["contrasts"][top], 3),
+        ("NOneExpGrowthLow", growth["overall"]["contrasts"][low], 3),
+        ("NOneExpFreeGrowthTop", growth["regimes"][free]["contrasts"][top], 3),
+        ("NOneExpUtility", utility["overall"]["contrasts"][wide], 2),
+        ("NOneExpUtilityTop", utility["overall"]["contrasts"][top], 2),
+        ("NOneExpFreeUtility", utility["regimes"][free]["contrasts"][wide], 2),
+    )
+    for name, entry, digits in entries:
+        rows[name] = signed(entry["mean"], digits)
+        rows[name + "T"] = span(entry["interval95"], digits)
+    contrasts = [c for r in REGIMES for c in utility["regimes"][r]["contrasts"].values()]
+    held_wide = [utility["regimes"][r]["contrasts"][wide]["interval95"] for r in REGIMES[1:]]
+    rows.update(
+        NOneExpHeldUtilityEstablished=str(sum(i[0] > 0 or i[1] < 0 for i in held_wide)),
+        NOneExpHeldSchedules=str(len(held_wide)),
+        NOneExpLowerBetter=str(sum(c["interval95"][1] < 0 for c in contrasts)),
+        NOneExpUtilityContrasts=str(len(contrasts)),
+        NOneExpInteractionP=number(min(v["holm_p_value"] for v in utility["regime_interaction"].values()), 2),
+        NOneExpFreeBestTop=str(utility["best_arm_by_source"][free]["1.05"]),
+    )
+    pairs = utility["highest_minus_lowest_by_hold_pair"]
+    first, *later = list(pairs[free])
+    later_cells = [pairs[r][name]["interval95"] for r in REGIMES for name in later]
+    rows.update(
+        NOneExpSchedules=str(len(REGIMES)),
+        NOneExpEarlyAhead=str(sum(pairs[r][first]["interval95"][0] > 0 for r in REGIMES)),
+        NOneExpLaterCells=str(len(later_cells)),
+        NOneExpLaterEstablished=str(sum(i[0] > 0 or i[1] < 0 for i in later_cells)),
+        NOneExpLaterLowerBetter=str(sum(i[1] < 0 for i in later_cells)),
+    )
+    return rows
+
+
+def table_exploratory(described):
+    level, growth = described["response_level"], described["estimate_growth"]
+    quality = described["quality"]
+    lines = [
+        "\\begin{tabular}{lrrrlll}",
+        "\\toprule",
+        " & \\multicolumn{3}{c}{Encoded rate / estimate at ratio} & Log growth of estimate & On-time PSNR & On-time fraction \\\\",
+        "Schedule & 0.65 & 0.85 & 1.05 & 1.05 $-$ 0.85 & 1.05 $-$ 0.65 & 1.05 $-$ 0.65 \\\\",
+        "\\midrule",
+    ]
+    scopes = [("all, equal weight", lambda e: e["overall"])] + [
+        (r, lambda e, r=r: e["regimes"][r]) for r in REGIMES
+    ]
+    for label, pick in scopes:
+        levels = " & ".join(number(pick(level)["arms"][a]["mean"], 2) for a in ("0.65", "0.85", "1.05"))
+        lines.append(
+            f"{label} & {levels} & {exploratory_cell(pick(growth)['contrasts']['1.05 - 0.85'], 2)} & "
+            f"{exploratory_cell(pick(quality['utility'])['contrasts']['1.05 - 0.65'], 1)} & "
+            f"{exploratory_cell(pick(quality['ontime_fraction'])['contrasts']['1.05 - 0.65'], 2)} \\\\"
+        )
+    return "\n".join(lines + ["\\bottomrule", "\\end{tabular}"]) + "\n"
+
+
+def table_exploratory_holds(described):
+    pairs = described["quality"]["utility"]["highest_minus_lowest_by_hold_pair"]
+    names = list(pairs[REGIMES[0]])
+    lines = [
+        "\\begin{tabular}{l" + "l" * len(names) + "}",
+        "\\toprule",
+        "Schedule & " + " & ".join(n.capitalize().replace("-", "--") for n in names) + " \\\\",
+        "\\midrule",
+    ]
+    for regime in REGIMES:
+        lines.append(
+            f"{regime} & " + " & ".join(exploratory_cell(pairs[regime][n], 1) for n in names) + " \\\\"
+        )
+    return "\n".join(lines + ["\\bottomrule", "\\end{tabular}"]) + "\n"
+
+
 def capture_facts(report):
     """Peers behind the analysis and the browser builds that produced them, read after the final."""
     peers, browsers, files = 0, set(), []
@@ -329,7 +420,7 @@ def capture_facts(report):
     return peers, sorted(browsers), files
 
 
-def export(final, public, protocol, out, allow_mock=False, pool=None):
+def export(final, public, protocol, out, allow_mock=False, pool=None, exploratory=None):
     """Write macros and tables for the paper from one registered final report."""
     final, public, protocol, out = Path(final), Path(public), Path(protocol), Path(out)
     report, interim, plan = (json.loads(p.read_text()) for p in (final, public, protocol))
@@ -340,6 +431,17 @@ def export(final, public, protocol, out, allow_mock=False, pool=None):
         raise ValueError("mock rows prove nothing about the native stack and never enter the paper")
     peers, browsers, manifests = capture_facts(report)
     evidence = macros(report, interim, plan, peers, browsers)
+    described = None
+    if exploratory:
+        described = json.loads(Path(exploratory).read_text())
+        captured = {
+            json.loads(m.read_text()).get("artifacts_sha256", {}).get("cohorts.json") for m in manifests
+        }
+        if described.get("exploratory") is not True or described.get("mock") is not False:
+            raise ValueError("an exploratory description of native rows is required")
+        if described["rows_sha256"] not in captured:
+            raise ValueError("the exploratory description is not of the analysed capture's rows")
+        evidence.update(exploratory_macros(described))
     out.mkdir(parents=True, exist_ok=True)
     tables = dict(
         n1_primary=table_primary(report),
@@ -347,12 +449,17 @@ def export(final, public, protocol, out, allow_mock=False, pool=None):
         n1_complexity=table_complexity(report),
         n1_sources=table_sources(report, plan, json.loads(Path(pool).read_text()) if pool else None),
     )
+    if described:
+        tables.update(
+            n1_exploratory=table_exploratory(described),
+            n1_exploratory_holds=table_exploratory_holds(described),
+        )
     for name, text in tables.items():
         (out / f"{name}.tex").write_text(text)
     lines = ["% Generated by `python -m media_rl.native_actuator_qualification_report`; do not edit."]
     lines += [f"\\newcommand{{\\{name}}}{{{value}}}" for name, value in evidence.items()]
     (out / "evidence.tex").write_text("\n".join(lines) + "\n")
-    sources = [final, public, protocol, *manifests, *([Path(pool)] if pool else [])]
+    sources = [final, public, protocol, *manifests, *(Path(p) for p in (pool, exploratory) if p)]
     provenance = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
     (out / "provenance.json").write_text(json.dumps(provenance, indent=1, sort_keys=True) + "\n")
     return dict(out=str(out), verdict=report["verdict"], macros=len(evidence), mock=report["mock"])
@@ -367,10 +474,13 @@ def main(argv=None):
     parser.add_argument(
         "--pool", type=Path, help="tracked pool record, for the sources' Commons page numbers"
     )
+    parser.add_argument("--exploratory", type=Path, help="exploratory description of the same rows")
     parser.add_argument("--allow-mock", action="store_true", help="tests only: never for the paper")
     args = parser.parse_args(argv)
     try:
-        result = export(args.final, args.public, args.protocol, args.out, args.allow_mock, args.pool)
+        result = export(
+            args.final, args.public, args.protocol, args.out, args.allow_mock, args.pool, args.exploratory
+        )
     except (ValueError, FileNotFoundError, KeyError) as error:
         parser.exit(2, f"error: {error}\n")
     print(json.dumps(result, indent=1, sort_keys=True))

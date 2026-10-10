@@ -58,5 +58,37 @@ None of these changes the outcome. The RTP send rate gives \NOneSendLowerMean{} 
 
 \paragraph{Reading the result.}
 This paragraph was written after the outcome was known and is descriptive. The qualification is an average over schedules and sources, and two features of it bear on controller design. First, the encoder follows a request only in part: it realises \NOneLowerShare\% of the lower step and \NOneUpperShare\% of the upper one, whereas the simulator of Studies 10 to 12 has the encoder take up any requested rate exactly, 1.5\,s after an increase and 0.1\,s after a decrease. Second, within single schedules what is not established above the margin after correction is \NOneRegimeOpen{}; these are the two schedules in which the link stays constrained, at 0.85\,Mbps throughout and at 0.6\,Mbps for the last two thirds of a session. Both features are consistent with the nature of the actuator. The request is a cap on the encoder's maximum bitrate, and a cap cannot raise the encoder above the rate the browser's own congestion controller allots, so a requested ratio above one is not expected to be realised in full. N1 does not separate that ceiling from encoder undershoot. The option sets of Studies 10 to 12 include a ratio above one, and their simulated sender follows it; this cap offers no such mechanism.
+\ifdefined\NOneExpLevelLow
+\subsection{Exploratory description of the same holds}
+\label{sec:native-n1-exploratory}
+This subsection is not part of the registration and supports no confirmatory claim. Its quantities were written down and committed after the final analysis had been read and before any of them was computed (\path{docs/NATIVE_PHASE_N1_EXPLORATORY.md}). The unit is the source, intervals are two-sided 95\% $t$ intervals over the \NOneSources{} sources, and they are not corrected for the number of quantities reported.
+
+\begin{table}[t]
+\centering\small
+\resizebox{\linewidth}{!}{\input{generated-native-n1/n1_exploratory.tex}}
+\caption{Exploratory. Per capacity schedule: the encoded rate as a share of the frozen estimate at each assigned ratio; the difference between ratios 1.05 and 0.85 in the log growth of the estimate from one hold to the next; and the difference between ratios 1.05 and 0.65 in the on-time sampled PSNR contribution and in the on-time fraction of the frames captured in the outcome window. Brackets are 95\% intervals over sources.}
+\label{tab:n1-exploratory}
+\end{table}
+
+\paragraph{Where the encoder sits.}
+At assigned ratios of 0.65, 0.85 and 1.05 the encoded rate is \NOneExpLevelLow{}, \NOneExpLevelMid{} and \NOneExpLevelHigh{} of the frozen estimate (Table~\ref{tab:n1-exploratory}). The encoder runs somewhat below each cap, and at the top ratio it stays below the estimate itself: at \NOneExpFreeLevelHigh{} under the unconstrained schedule and between \NOneExpHeldLevelMin{} and \NOneExpHeldLevelMax{} under the three others.
+
+\paragraph{The cap moves the estimate.}
+The arm of a hold is randomised independently of everything before it, so its effect on the estimate from which the next hold starts is identified. Under the unconstrained schedule the estimate grows over one hold by \NOneExpFreeGrowthLow\%, \NOneExpFreeGrowthMid\% and \NOneExpFreeGrowthHigh\% at the three ratios, and the difference in log growth between 1.05 and 0.85 is \NOneExpFreeGrowthTop{} \NOneExpFreeGrowthTopT{}. Over all schedules that difference is \NOneExpGrowthTop{} \NOneExpGrowthTopT{}, and between 0.85 and 0.65 it is \NOneExpGrowthLow{} \NOneExpGrowthLowT{}. A cap below the estimate holds the estimate back when the link has room. On this stack a ratio of the estimate is therefore not a fixed reference: a low request now lowers the base to which later requests are relative.
+
+\paragraph{A pilot look at delivered quality.}
+Each hold also carries the on-time sampled PSNR contribution of the frames captured in its outcome window. This is the proxy that the powered panel registers, and it is not perceptual quality. Over all schedules the top ratio scores \NOneExpUtility{} \NOneExpUtilityT{} above the bottom one and \NOneExpUtilityTop{} \NOneExpUtilityTopT{} above the middle one. Under the unconstrained schedule the top-against-bottom difference is \NOneExpFreeUtility{} \NOneExpFreeUtilityT{}, and \NOneExpFreeBestTop{} of the \NOneSources{} sources score best at the top ratio. Under the \NOneExpHeldSchedules{} other schedules its interval excludes zero in \NOneExpHeldUtilityEstablished{}, and a difference between schedules is not established (the smallest Holm-adjusted $p$ of the three interaction tests is \NOneExpInteractionP{}). Of the \NOneExpUtilityContrasts{} schedule-level contrasts, \NOneExpLowerBetter{} favour the lower ratio with an interval that excludes zero. Split by pairs of holds (Table~\ref{tab:n1-exploratory-holds}), the top ratio is ahead in the first two holds of a session under \NOneExpEarlyAhead{} of the \NOneExpSchedules{} schedules; of the \NOneExpLaterCells{} later cells, \NOneExpLaterEstablished{} have an interval that excludes zero and \NOneExpLaterLowerBetter{} favour the lower ratio.
+
+\begin{table}[t]
+\centering\small
+\input{generated-native-n1/n1_exploratory_holds.tex}
+\caption{Exploratory. Difference between ratios 1.05 and 0.65 in the on-time sampled PSNR contribution, by capacity schedule and pair of holds within a session, with 95\% intervals over sources. The pairs fall mostly in the first, second and third capacity phase.}
+\label{tab:n1-exploratory-holds}
+\end{table}
+
+\paragraph{What the pilot suggests.}
+In these data no schedule shows a lower ratio to be better, and where the ratios differ the higher one wins, most clearly while a session is starting and when the link has room. A controller that backs off below the estimate would have to earn its gain in moments that this pilot does not resolve, such as the seconds after a capacity drop, and against a browser that already adapts its own rate. The pilot could not have detected such a gain: it averages a 0.8\,s window late in each hold over whole schedules, with \NOneSources{} sources. It is a reason to measure that gain before building on it, which is what the powered panel is for, and it is not evidence that the gain is absent.
+\fi
+
 \subsection{What Study 13 shows and does not show}
 This is the only study here whose outcomes come from a real encoder and a real bandwidth estimator, and it is confirmatory: one sample, analysed once by rules fixed beforehand. Its scope is narrow. It concerns the actuator through which a ratio-of-estimate controller would act and not any controller. Nothing learned was the actor, no quality was measured and no state-dependent preference between ratios was tested, so it neither supports nor undermines the simulator gains of Studies 10 to 12. The network is a userspace relay on one machine, not a kernel emulator or an Internet path. The stack is one build of one browser with one codec at one resolution. The sources are \NOneSources{} Commons videos chosen by a seeded queue and a rights screen, not a representative corpus. The blinding was procedural, with one person as custodian and analyst, and the rights review rests on an AI reviewer's reading of archived evidence that the importer adopted. The effect is that of a 3\,s hold measured from 1.8 to 2.6\,s after the request and says nothing about shorter or longer holds. Whether a learned controller improves delivered quality on a real network remains untested.
