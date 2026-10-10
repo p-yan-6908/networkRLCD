@@ -1,0 +1,18 @@
+{
+ "assigned_cohorts": 2880,
+ "blocker": null,
+ "captured_sources": 12,
+ "interim_can_run": true,
+ "mock": false,
+ "not_evaluable_sources": [],
+ "outcome_free": true,
+ "planned_cohorts": 2880,
+ "support": {
+  "alias_fraction": 0.0006944444444444445,
+  "arm_completeness_gap": 0.0,
+  "arm_share_p_value": 0.9561966687230624,
+  "assigned_cohorts": 2880,
+  "complete_fraction": 1.0,
+  "passed": true
+ }
+}

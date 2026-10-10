@@ -66,3 +66,48 @@ outcome:
 - `make native-n1-evidence`.
 
 The exporter was exercised on the registered mock dry run only (`dry-run`, synthetic rows).
+
+## 2026-10-09 23:16 EDT: stage-one capture complete
+
+The capture ended normally after 6 h 22 min and sealed its root. Its own summary, which holds
+no outcome:
+
+| | |
+|---|---:|
+| Sources | 12 |
+| Native peers | 480 |
+| Assigned cohorts | 2,880 |
+| Failures | none (`failure.json` absent) |
+| Capture root | `results/native-actuator-qualification-n1-stage-one`, 8.3 GB |
+
+- Chrome stayed at 154.0.8037.98 on disk at every check during the run.
+- Nothing else was run on the machine by this study during the capture apart from the
+  progress checks, the mock dry run (a few seconds) and the exporter's unit tests.
+- After the capture and before `status`: the full test suite passes (1,205 passed, 107
+  skipped), and the paper compiles with mock evidence in a scratch copy. That check found one
+  LaTeX error in a table caption of the Study 13 section, which was corrected; no wording
+  changed.
+
+## 2026-10-09 23:28 EDT: `status`, outcome-free
+
+```sh
+uv run --frozen media-actuator-qualification status \
+    --protocol results/native-actuator-qualification-n1-plan/protocol.json \
+    --capture results/native-actuator-qualification-n1-stage-one
+```
+
+The command replays the raw audit of every peer (12 minutes) and reports no outcome by arm.
+
+| | Value | Gate |
+|---|---:|---:|
+| Captured sources | 12 | |
+| Sources not evaluable | 0 | at most 4 |
+| Assigned cohorts | 2,880 of 2,880 planned | |
+| Complete cohorts | 100.0% | at least 95% |
+| Aliased or clipped | 0.07% (2 cohorts) | at most 10% |
+| Completeness gap between arms | 0.0 points | at most 5 |
+| Arm shares against one third each | p = 0.956 | at least 0.001 |
+| Capture support | passed | |
+| Interim can run | yes | |
+
+The record is `results/n1-status.json`.
