@@ -726,6 +726,7 @@ def main(argv=None):
     p.add_argument("--factual-unseen", type=Path)
     p.add_argument("--crossover", type=Path)
     p.add_argument("--headroom", type=Path)
+    p.add_argument("--forecast", type=Path)
     p.add_argument("--panel", nargs=3, action="append", default=[], metavar=("PREFIX", "RUN", "BASELINES"))
     p.add_argument("--validation", nargs=2, action="append", default=[], metavar=("PREFIX", "RUN"))
     p.add_argument("--out", required=True, type=Path)
@@ -801,6 +802,7 @@ def main(argv=None):
                 args.crossover,
                 args.factual_unseen,
                 args.headroom,
+                args.forecast,
             )
             print(json.dumps(written, indent=1))
             return

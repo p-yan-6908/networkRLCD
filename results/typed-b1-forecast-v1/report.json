@@ -1,0 +1,602 @@
+{
+ "b1_freeze_sha256": "9b3ac6ca213e08b9702b3940facd219d85373925b3029209043f0f1c08ca1d9f",
+ "endpoint": "simulator's delivered on-time quality term in the outcome window; not the native PSNR proxy",
+ "flag": "frozen estimate below 1.05 times the previous hold's",
+ "holds_per_sender": 6,
+ "models_trained_or_evaluated": 0,
+ "native_evidence": false,
+ "readings_fixed_in_advance": {
+  "helps": {
+   "helps": "agrees in sign",
+   "hurts": "simulator misses the benefit",
+   "no_clear_benefit": "simulator misses the benefit"
+  },
+  "helps_below_practical_gate": {
+   "helps": "agrees in sign",
+   "hurts": "simulator misses the benefit",
+   "no_clear_benefit": "simulator misses the benefit"
+  },
+  "inconclusive": {
+   "helps": "not assessed",
+   "hurts": "not assessed",
+   "no_clear_benefit": "not assessed"
+  },
+  "no_practically_relevant_benefit": {
+   "helps": "simulator overstates the benefit",
+   "hurts": "agrees in sign",
+   "no_clear_benefit": "agrees in sign"
+  }
+ },
+ "seconds": 37.752399921417236,
+ "senders_per_schedule": 10,
+ "settings": {
+  "n1_reference": {
+   "encoder_over_bwe": {
+    "all": [
+     0.588,
+     0.732,
+     0.825
+    ],
+    "collapse-recovery": [
+     0.556,
+     0.651,
+     0.776
+    ],
+    "near-capacity": [
+     0.611,
+     0.762,
+     0.822
+    ],
+    "queue-building": [
+     0.585,
+     0.738,
+     0.782
+    ],
+    "underutilized": [
+     0.602,
+     0.777,
+     0.922
+    ]
+   },
+   "estimate_log_growth": {
+    "all": [
+     0.123,
+     0.128,
+     0.31
+    ],
+    "collapse-recovery": [
+     0.029,
+     -0.008,
+     0.174
+    ],
+    "near-capacity": [
+     0.209,
+     0.141,
+     0.213
+    ],
+    "queue-building": [
+     0.09,
+     0.161,
+     0.158
+    ],
+    "underutilized": [
+     0.165,
+     0.216,
+     0.693
+    ]
+   },
+   "flagged_share": 0.339,
+   "flagged_share_by_previous_arm": [
+    0.514,
+    0.229,
+    0.275
+   ],
+   "source": "docs/NATIVE_PHASE_N1_EXPLORATORY.md and results/native-phase-b1-sizing.json"
+  },
+  "name": "typed-b1-forecast-v1",
+  "relay": {
+   "queue_mbit": 0.24,
+   "rtt_ms": 50.0
+  },
+  "replicates": 48,
+  "seed": 261011,
+  "window_ms": [
+   1800,
+   2600
+  ]
+ },
+ "study": "typed_bitrate_b1_forecast_v1",
+ "synthetic": true,
+ "variants": {
+  "as_built": {
+   "exact": {
+    "contrasts": {
+     "after_lower": -0.1321250886799583,
+     "after_top": -0.02771902674956117,
+     "flagged_minus_other": -0.026531441907549524,
+     "immediate_plus_next": -0.20049428275985914,
+     "lower_065": -0.1799713875951251,
+     "lower_085": -0.06582671170550403,
+     "next_hold": -0.07759523310954453,
+     "ontime_fraction": 0.03618894582046672,
+     "other_holds": -0.0963676077427651,
+     "primary": -0.12289904965031462,
+     "regime:collapse-recovery": -0.038773735529788356,
+     "regime:near-capacity": -0.17821638325578104,
+     "regime:queue-building": -0.10012206798650292,
+     "regime:underutilized": -0.1940116493604267,
+     "simulator_qoe": 0.007924504050177417
+    },
+    "encoder_over_bwe": {
+     "all": [
+      0.6029373643280066,
+      0.7771252463147362,
+      0.9535582552987076
+     ],
+     "collapse-recovery": [
+      0.6256289652867605,
+      0.7862778655711044,
+      0.9535582552987076
+     ],
+     "near-capacity": [
+      0.5924631238520653,
+      0.7728038097362222,
+      0.9535582552987076
+     ],
+     "queue-building": [
+      0.6033594006073336,
+      0.7774911985193311,
+      0.9535582552987076
+     ],
+     "underutilized": [
+      0.5902979675658667,
+      0.7719281114322872,
+      0.9535582552987076
+     ]
+    },
+    "estimate_log_growth": {
+     "all": [
+      0.006953053446396514,
+      0.1140597244838591,
+      0.2179850448570467
+     ],
+     "collapse-recovery": [
+      0.019124605438385824,
+      0.025491221645504485,
+      0.03166453068373694
+     ],
+     "near-capacity": [
+      0.000869422101224003,
+      0.1516717113345089,
+      0.3062188823673155
+     ],
+     "queue-building": [
+      0.006939825069231571,
+      0.10436637889764942,
+      0.14979516138786156
+     ],
+     "underutilized": [
+      0.0008783611767446571,
+      0.1747095860577736,
+      0.3842616049892728
+     ]
+    },
+    "flag": {
+     "all": 0.36790123456790125,
+     "by_previous_arm": [
+      0.9623456790123457,
+      0.043827160493827164,
+      0.09753086419753086
+     ],
+     "by_regime": {
+      "collapse-recovery": 0.4090534979423868,
+      "near-capacity": 0.3497942386831276,
+      "queue-building": 0.3794238683127572,
+      "underutilized": 0.3333333333333333
+     }
+    },
+    "flagged_arm_means": [
+     0.7618525012188416,
+     0.8759971771084627,
+     0.9418238888139667
+    ],
+    "other_arm_means": [
+     0.8986849228343526,
+     1.0280686867742925,
+     1.0597444125470876
+    ],
+    "sessions": 2916
+   },
+   "exact_panel_agrees": true,
+   "forecast": "hurts",
+   "relative_benefit": -0.13049047821995752,
+   "requested_ratios": [
+    0.65,
+    0.85,
+    1.05
+   ],
+   "sampled": {
+    "contrasts": {
+     "after_lower": {
+      "interval": [
+       -0.14517881455124665,
+       -0.10578098154844628
+      ],
+      "mean": -0.12547989804984647,
+      "sources": 48
+     },
+     "after_top": {
+      "interval": null,
+      "mean": -0.0007686782271261183,
+      "sources": 1
+     },
+     "flagged_minus_other": {
+      "interval": [
+       -0.0306398485835195,
+       0.026239624400474768
+      ],
+      "mean": -0.002200112091522368,
+      "sources": 48
+     },
+     "immediate_plus_next": {
+      "interval": [
+       -0.215335793181274,
+       -0.14651957531128806
+      ],
+      "mean": -0.18092768424628103,
+      "sources": 48
+     },
+     "lower_065": {
+      "interval": [
+       -0.18657112698499068,
+       -0.1461519262328999
+      ],
+      "mean": -0.1663615266089453,
+      "sources": 48
+     },
+     "lower_085": {
+      "interval": [
+       -0.08307485806139658,
+       -0.039213983943033
+      ],
+      "mean": -0.06114442100221479,
+      "sources": 48
+     },
+     "next_hold": {
+      "interval": [
+       -0.08660458455544806,
+       -0.04774483632595385
+      ],
+      "mean": -0.06717471044070096,
+      "sources": 48
+     },
+     "ontime_fraction": {
+      "interval": [
+       0.030240733788218135,
+       0.05431644589444483
+      ],
+      "mean": 0.04227858984133148,
+      "sources": 48
+     },
+     "other_holds": {
+      "interval": [
+       -0.12764975854370983,
+       -0.09545596488440555
+      ],
+      "mean": -0.11155286171405769,
+      "sources": 48
+     },
+     "primary": {
+      "interval": [
+       -0.13360500348883328,
+       -0.09390094412232686
+      ],
+      "mean": -0.11375297380558007,
+      "sources": 48
+     },
+     "regime:collapse-recovery": {
+      "interval": [
+       -0.052442269109697154,
+       0.036157644812107426
+      ],
+      "mean": -0.008142312148794868,
+      "sources": 46
+     },
+     "regime:near-capacity": {
+      "interval": [
+       -0.20266147286845088,
+       -0.1403212323981386
+      ],
+      "mean": -0.17149135263329474,
+      "sources": 41
+     },
+     "regime:queue-building": {
+      "interval": [
+       -0.1328521335213622,
+       -0.060714470435150325
+      ],
+      "mean": -0.09678330197825626,
+      "sources": 46
+     },
+     "regime:underutilized": {
+      "interval": [
+       -0.21784357609043603,
+       -0.15774006290680137
+      ],
+      "mean": -0.1877918194986187,
+      "sources": 42
+     },
+     "simulator_qoe": {
+      "interval": [
+       -0.020179087687617524,
+       0.09739238163076494
+      ],
+      "mean": 0.03860664697157371,
+      "sources": 48
+     }
+    },
+    "flag": {
+     "all": 0.39385416666666667,
+     "by_previous_arm": [
+      0.9690184049079754,
+      0.1098448876226654,
+      0.08645080163470607
+     ],
+     "by_regime": {
+      "collapse-recovery": 0.43625,
+      "near-capacity": 0.36833333333333335,
+      "queue-building": 0.40958333333333335,
+      "underutilized": 0.36125
+     }
+    },
+    "replicates": 48,
+    "sessions": 1920
+   }
+  },
+  "n1_realised": {
+   "exact": {
+    "contrasts": {
+     "after_lower": -0.11051150947353272,
+     "after_top": 0.0,
+     "flagged_minus_other": 0.009597613092928614,
+     "immediate_plus_next": -0.18658430297592798,
+     "lower_065": -0.16106835024185573,
+     "lower_085": -0.05513275606455803,
+     "next_hold": -0.0784837498227211,
+     "ontime_fraction": 0.008861292818194366,
+     "other_holds": -0.1176981662461355,
+     "primary": -0.10810055315320688,
+     "regime:collapse-recovery": -0.06954895288510998,
+     "regime:near-capacity": -0.12171270671316503,
+     "regime:queue-building": -0.1214627832907561,
+     "regime:underutilized": -0.12171270671316503,
+     "simulator_qoe": -0.07609877136454368
+    },
+    "encoder_over_bwe": {
+     "all": [
+      0.5966766363230538,
+      0.7403200913230198,
+      0.833226331828048
+     ],
+     "collapse-recovery": [
+      0.6065287517932734,
+      0.7452836343328149,
+      0.8354421992431349
+     ],
+     "near-capacity": [
+      0.5933251366303071,
+      0.7386292517234435,
+      0.8324714927210942
+     ],
+     "queue-building": [
+      0.5935275202383276,
+      0.7387382275123775,
+      0.8325201426268684
+     ],
+     "underutilized": [
+      0.5933251366303071,
+      0.7386292517234435,
+      0.8324714927210942
+     ]
+    },
+    "estimate_log_growth": {
+     "all": [
+      0.00588980910806911,
+      0.12270539441081561,
+      0.21219059466250628
+     ],
+     "collapse-recovery": [
+      0.02092415290204248,
+      0.09786276746329631,
+      0.10514173119500782
+     ],
+     "near-capacity": [
+      0.0008783611767446534,
+      0.13101107153202232,
+      0.24958314159079611
+     ],
+     "queue-building": [
+      0.0008783611767446534,
+      0.1309366671159215,
+      0.24445436427342515
+     ],
+     "underutilized": [
+      0.0008783611767446534,
+      0.13101107153202232,
+      0.24958314159079611
+     ]
+    },
+    "flag": {
+     "all": 0.40555555555555556,
+     "by_previous_arm": [
+      0.9827160493827161,
+      0.2074074074074074,
+      0.02654320987654321
+     ],
+     "by_regime": {
+      "collapse-recovery": 0.4213991769547325,
+      "near-capacity": 0.4,
+      "queue-building": 0.4008230452674897,
+      "underutilized": 0.4
+     }
+    },
+    "flagged_arm_means": [
+     0.7538544285826112,
+     0.8597900227599089,
+     0.9149227788244669
+    ],
+    "other_arm_means": [
+     0.8458254143035305,
+     0.9605619682391383,
+     1.02089185751747
+    ],
+    "sessions": 2916
+   },
+   "exact_panel_agrees": true,
+   "forecast": "hurts",
+   "relative_benefit": -0.1181526525026508,
+   "requested_ratios": [
+    0.6533333333333333,
+    0.8133333333333332,
+    0.9166666666666666
+   ],
+   "sampled": {
+    "contrasts": {
+     "after_lower": {
+      "interval": [
+       -0.11743484051332623,
+       -0.10126248980261793
+      ],
+      "mean": -0.10934866515797208,
+      "sources": 48
+     },
+     "after_top": {
+      "interval": null,
+      "mean": null,
+      "sources": 0
+     },
+     "flagged_minus_other": {
+      "interval": [
+       -0.0028187667004105268,
+       0.02196515865317117
+      ],
+      "mean": 0.009573195976380322,
+      "sources": 48
+     },
+     "immediate_plus_next": {
+      "interval": [
+       -0.20171856259899315,
+       -0.16364333508680393
+      ],
+      "mean": -0.18268094884289854,
+      "sources": 48
+     },
+     "lower_065": {
+      "interval": [
+       -0.16738600552464186,
+       -0.14744591963978307
+      ],
+      "mean": -0.15741596258221247,
+      "sources": 48
+     },
+     "lower_085": {
+      "interval": [
+       -0.06647217179642363,
+       -0.046412914835229496
+      ],
+      "mean": -0.056442543315826564,
+      "sources": 48
+     },
+     "next_hold": {
+      "interval": [
+       -0.08831166323131608,
+       -0.06319172855644196
+      ],
+      "mean": -0.07575169589387902,
+      "sources": 48
+     },
+     "ontime_fraction": {
+      "interval": [
+       0.002590418144207537,
+       0.01407547839073548
+      ],
+      "mean": 0.008332948267471508,
+      "sources": 48
+     },
+     "other_holds": {
+      "interval": [
+       -0.12506741720944684,
+       -0.10793748064135285
+      ],
+      "mean": -0.11650244892539983,
+      "sources": 48
+     },
+     "primary": {
+      "interval": [
+       -0.11552171941477257,
+       -0.09833678648326646
+      ],
+      "mean": -0.10692925294901952,
+      "sources": 48
+     },
+     "regime:collapse-recovery": {
+      "interval": [
+       -0.09286541177455915,
+       -0.04565488141516019
+      ],
+      "mean": -0.06926014659485967,
+      "sources": 46
+     },
+     "regime:near-capacity": {
+      "interval": [
+       -0.14133242632835397,
+       -0.1051701618582008
+      ],
+      "mean": -0.12325129409327738,
+      "sources": 43
+     },
+     "regime:queue-building": {
+      "interval": [
+       -0.11664415938755306,
+       -0.0823761423448023
+      ],
+      "mean": -0.09951015086617768,
+      "sources": 43
+     },
+     "regime:underutilized": {
+      "interval": [
+       -0.12894341173016866,
+       -0.09796228475591513
+      ],
+      "mean": -0.11345284824304189,
+      "sources": 47
+     },
+     "simulator_qoe": {
+      "interval": [
+       -0.1010304969261624,
+       -0.05472335753998572
+      ],
+      "mean": -0.07787692723307406,
+      "sources": 48
+     }
+    },
+    "flag": {
+     "all": 0.4144791666666667,
+     "by_previous_arm": [
+      0.9837423312883435,
+      0.21462488129154797,
+      0.02955045583149953
+     ],
+     "by_regime": {
+      "collapse-recovery": 0.43875,
+      "near-capacity": 0.4033333333333333,
+      "queue-building": 0.40708333333333335,
+      "underutilized": 0.40875
+     }
+    },
+    "replicates": 48,
+    "sessions": 1920
+   }
+  }
+ }
+}

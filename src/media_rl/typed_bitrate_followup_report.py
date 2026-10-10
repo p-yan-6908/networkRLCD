@@ -5,6 +5,7 @@ Every number is read from the result summaries; nothing is typed in by hand.
 
 import hashlib
 import json
+import math
 from pathlib import Path
 
 import numpy as np
@@ -534,6 +535,127 @@ def table_headroom(report):
     return "\n".join([*lines, "\\bottomrule", "\\end{tabular}"]) + "\n"
 
 
+FORECAST_VARIANTS = dict(as_built="Built", n1_realised="Real")  # description of the actuator: macro key
+FORECAST_CLASS = dict(helps="helps", hurts="hurts", no_clear_benefit="shows no clear benefit")
+FORECAST_ARMS = ("Low", "Mid", "Top")
+FORECAST_CONTRASTS = dict(
+    Other="other_holds",
+    Gap="flagged_minus_other",
+    Next="next_hold",
+    Qoe="simulator_qoe",
+    Ontime="ontime_fraction",
+)
+
+
+def percent(value):
+    return f"{100 * value:.0f}"
+
+
+def spread(summary):
+    if summary["interval"] is None:  # fewer than two replicates could be scored
+        return "n/a"
+    low, high = summary["interval"]
+    return f"[{signed(low)}, {signed(high)}]"
+
+
+def forecast_macros(report):
+    """Simulator forecast of Native Phase B1, beside the N1 figures it is compared with."""
+    if set(report["variants"]) != set(FORECAST_VARIANTS):
+        raise ValueError("the forecast must hold both descriptions of the actuator")
+    reference = report["settings"]["n1_reference"]
+    rows = dict(
+        TypedCastReplicates=str(report["settings"]["replicates"]),
+        TypedCastNOneFlag=percent(reference["flagged_share"]),
+    )
+
+    def by_arm(prefix, flag_after, encoder, growth):
+        for arm, label in enumerate(FORECAST_ARMS):
+            rows[prefix + "FlagAfter" + label] = percent(flag_after[arm])
+            rows[prefix + "Enc" + label] = f"{encoder[arm]:.3f}"
+            rows[prefix + "Grow" + label] = percent(math.expm1(growth[arm]))
+
+    by_arm(
+        "TypedCastNOne",
+        reference["flagged_share_by_previous_arm"],
+        reference["encoder_over_bwe"]["all"],
+        reference["estimate_log_growth"]["underutilized"],
+    )
+    for key, name in FORECAST_VARIANTS.items():
+        made, prefix = report["variants"][key], "TypedCast" + name
+        exact, sampled = made["exact"], made["sampled"]["contrasts"]
+        rows[prefix + "Sessions"] = f"{exact['sessions']:,}".replace(",", "{,}")
+        rows[prefix + "Class"] = FORECAST_CLASS[made["forecast"]]
+        rows[prefix + "Stable"] = "agrees" if made["exact_panel_agrees"] else "disagrees"
+        rows[prefix + "Exact"] = signed(exact["contrasts"]["primary"])
+        rows[prefix + "Mean"] = signed(sampled["primary"]["mean"])
+        rows[prefix + "Interval"] = spread(sampled["primary"])
+        relative = made["relative_benefit"]
+        rows[prefix + "Relative"] = "n/a" if relative is None else percent(abs(relative))
+        for label, contrast in FORECAST_CONTRASTS.items():
+            rows[prefix + label] = signed(sampled[contrast]["mean"])
+            rows[prefix + label + "T"] = spread(sampled[contrast])
+        rows[prefix + "Flag"] = percent(exact["flag"]["all"])
+        by_arm(
+            prefix,
+            exact["flag"]["by_previous_arm"],
+            exact["encoder_over_bwe"]["all"],
+            exact["estimate_log_growth"]["underutilized"],
+        )
+    return rows
+
+
+def table_forecast(report):
+    reference = report["settings"]["n1_reference"]
+    made = [report["variants"][key] for key in FORECAST_VARIANTS]
+
+    def row(label, pick, cell, native):
+        cells = [" / ".join(cell(v) for v in pick(m["exact"])) for m in made]
+        return " & ".join([label, *cells, " / ".join(cell(v) for v in native)]) + " \\\\"
+
+    def growth(value):
+        return percent(math.expm1(value))
+
+    lines = [
+        "\\begin{tabular}{lrrr}",
+        "\\toprule",
+        "Quantity & As built & At N1's levels & Native (N1) \\\\",
+        "\\midrule",
+        row(
+            "Encoder over estimate, by arm",
+            lambda e: e["encoder_over_bwe"]["all"],
+            lambda v: f"{v:.3f}",
+            reference["encoder_over_bwe"]["all"],
+        ),
+        row(
+            "Estimate growth per hold with room, by arm (\\%)",
+            lambda e: e["estimate_log_growth"]["underutilized"],
+            growth,
+            reference["estimate_log_growth"]["underutilized"],
+        ),
+        row("Holds flagged (\\%)", lambda e: [e["flag"]["all"]], percent, [reference["flagged_share"]]),
+        row(
+            "Flagged after each arm (\\%)",
+            lambda e: e["flag"]["by_previous_arm"],
+            percent,
+            reference["flagged_share_by_previous_arm"],
+        ),
+        "\\midrule",
+    ]
+    contrasts = (
+        ("Benefit of backing off, flagged holds", "primary", "registered, not run"),
+        ("Same, unflagged holds", "other_holds", "---"),
+        ("Flagged minus unflagged", "flagged_minus_other", "---"),
+        ("Same contrast on the next hold", "next_hold", "---"),
+    )
+    for label, name, native in contrasts:
+        cells = [
+            f"{signed(m['sampled']['contrasts'][name]['mean'])} {spread(m['sampled']['contrasts'][name])}"
+            for m in made
+        ]
+        lines.append(" & ".join([label, *cells, native]) + " \\\\")
+    return "\n".join([*lines, "\\bottomrule", "\\end{tabular}"]) + "\n"
+
+
 def table_crossover(report, washout_ms=1000):
     lines = [
         "\\begin{tabular}{lrrrrrrl}",
@@ -585,6 +707,7 @@ def export(
     crossover=None,
     factual_unseen=None,
     headroom=None,
+    forecast=None,
 ):
     """Write macros, tables and the learning-curve figure from the follow-up summaries.
 
@@ -651,6 +774,18 @@ def export(
             raise ValueError("the headroom study must be synthetic and model-free")
         evidence.update(headroom_macros(room))
         (out / "followup_headroom.tex").write_text(table_headroom(room))
+        sources.append(path)
+    if forecast:
+        path = Path(forecast) / "report.json"
+        cast = json.loads(path.read_text())
+        if (
+            not cast.get("synthetic")
+            or cast.get("native_evidence")
+            or cast.get("models_trained_or_evaluated")
+        ):
+            raise ValueError("the B1 forecast must be synthetic, model-free and no native evidence")
+        evidence.update(forecast_macros(cast))
+        (out / "followup_b1_forecast.tex").write_text(table_forecast(cast))
         sources.append(path)
     lines = ["% Generated by `jevbwe-typed followup`; do not edit."]
     lines += [f"\\newcommand{{\\{name}}}{{{value}}}" for name, value in evidence.items()]

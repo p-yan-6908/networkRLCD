@@ -1,12 +1,14 @@
 """Simulator forecast of Native Phase B1: protocol mirror, registered estimator, pre-declared reading."""
 
 import json
+import re
 
 import numpy as np
 import pytest
 
 from media_rl import native_backoff_benefit as benefit
 from media_rl import typed_bitrate_b1_forecast as forecast
+from media_rl.typed_bitrate_followup_report import FORECAST_CLASS, forecast_macros, table_forecast
 
 SETTINGS = forecast.load_settings()
 CONFIG = forecast.simulator()
@@ -106,8 +108,13 @@ def test_forecast_class_and_reading_are_fixed_in_advance():
         forecast.reading("helps", "qualified")
 
 
-def test_study_reports_both_actuator_descriptions_and_claims_nothing_native():
-    report = forecast.study(dict(SETTINGS, replicates=3), holds=4, peers=10)
+@pytest.fixture(scope="module")
+def small():
+    return forecast.study(dict(SETTINGS, replicates=3), holds=4, peers=10)
+
+
+def test_study_reports_both_actuator_descriptions_and_claims_nothing_native(small):
+    report = small
     assert report["synthetic"] is True and report["native_evidence"] is False
     assert report["models_trained_or_evaluated"] == 0 and report["holds_per_sender"] == 4
     assert report["b1_freeze_sha256"] == json.loads(forecast.FREEZE.read_text())["sha256"]
@@ -122,6 +129,21 @@ def test_study_reports_both_actuator_descriptions_and_claims_nothing_native():
         assert {f"regime:{g}" for g in forecast.REGIMES} <= names
         assert len(made["exact"]["flag"]["by_previous_arm"]) == 3
     assert set(forecast.headline(report)) == {"as_built", "n1_realised"}
+
+
+def test_evidence_export_sets_the_forecast_beside_the_native_reference(small):
+    made = forecast_macros(small)
+    assert all(re.fullmatch(r"[A-Za-z]+", name) for name in made)
+    assert made["TypedCastBuiltClass"] in FORECAST_CLASS.values()
+    assert made["TypedCastRealClass"] in FORECAST_CLASS.values()
+    assert made["TypedCastNOneEncTop"] == "0.825" and made["TypedCastNOneGrowTop"] == "100"
+    assert made["TypedCastNOneFlagAfterLow"] == "51" and made["TypedCastBuiltSessions"] == "324"
+    assert made["TypedCastReplicates"] == "3" and "TypedCastRealGapT" in made
+    table = table_forecast(small)
+    assert table.count("\\\\") == 1 + 4 + 4 and "registered, not run" in table
+    assert "0.588 / 0.732 / 0.825" in table and "51 / 23 / 28" in table
+    with pytest.raises(ValueError, match="both descriptions"):
+        forecast_macros(dict(small, variants=dict(as_built=small["variants"]["as_built"])))
 
 
 def test_cli_refuses_an_existing_output(tmp_path):

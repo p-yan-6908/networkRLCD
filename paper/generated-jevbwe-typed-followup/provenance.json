@@ -12,6 +12,7 @@
  "results/jevbwe-typed-v4-test-baselines/report.json": "e04490c25760ed56209255ec2e2af03cd997afea0d73e286c2f3132894f607bc",
  "results/jevbwe-typed-v4-test/audit_test.json": "9f5671bf9b0421abe76536cff9de21569f62201a630fcf4f6abfddd35c1eaf8d",
  "results/jevbwe-typed-v4-test/report.json": "b4343108ccabadf151263ec18d4e600654e7847e115e2808fa5dcbfb1e846b23",
+ "results/typed-b1-forecast-v1/report.json": "b27df05ba9db4d69f116adffb334d0caf605201b0f18ba55746e248a51444cf4",
  "results/typed-baseline-audit-v1/report.json": "42d8f19113fa1383c0e516f4c9887d9bc03e864b05f0c9c2919d794f1368722a",
  "results/typed-crossover-v1/report.json": "5972c38c8394c63a2047623af0f4393d0c590b7e3099ec1c9062a4c2e8e05ec8",
  "results/typed-factual-v1/report.json": "76825095efbd21048f040b2938060b5c7045a4d9665bf31b4094957ea48ad94a",
