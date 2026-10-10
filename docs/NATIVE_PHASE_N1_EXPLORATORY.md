@@ -196,3 +196,59 @@ Read with that caution: a study aimed at the benefit of backing off after a capa
 needs on the order of 40 to 55 fresh sources to detect a difference of 1 unit, the size of
 the powered panel's practical-effect gate, and 12 to 15 to detect 2 units. The nine reserve
 sources of the sealed N1 plan are reserved to N1 and are not available for it.
+
+## Second pass: is backing off better in holds that the sender could tell apart?
+
+**A second look at the same rows, so weaker evidence than the first.** The first pass asked
+by configured schedule, which a controller does not observe. This pass asks by what the
+sender had observed before each hold. Its design below and its code were committed before
+it was run on native rows; the first pass's results had been read.
+
+### Fixed before it was computed
+
+**Holds.** Holds 2 to 6 of every peer (2,400), which have a pre-hold state and a previous hold.
+
+**Signals**, all available to a controller at decision time:
+
+| Signal | Source | Congestion side |
+|---|---|---|
+| `rtt_trend_ms` | the row's pre-hold state | top third |
+| `rtt_ms` | pre-hold state | top third |
+| `loss_fraction` | pre-hold state | top third |
+| `jitter_ms` | pre-hold state | top third |
+| estimate growth | log of this hold's frozen BWE over the previous hold's | bottom third |
+
+The thresholds are the pooled 2/3 quantile (1/3 for estimate growth) over all holds with the
+signal present. A hold is flagged when it lies strictly beyond the threshold, so a signal
+with many ties flags fewer than a third. Absent values are left out, not imputed.
+
+**Quantity.** The benefit of backing off: the on-time PSNR proxy at ratio 0.65 minus the proxy
+at ratio 1.05. Per source, over its flagged holds and over its other holds, pooling the four
+schedules, because a controller sees the state and not the schedule. Then:
+
+- the benefit among flagged holds, with a 95% t interval over sources;
+- the benefit among the other holds;
+- their difference (the interaction), with Holm over the five signals;
+- the same for the middle ratio (0.85 minus 1.05) among flagged holds, and everything again
+  for the on-time fraction, as secondary.
+
+The arm is randomised independently of the pre-hold state, so the benefit among flagged holds
+is a causal effect in that subpopulation. The interaction describes effect modification; the
+flag is not randomised.
+
+**Candidate rule.** A signal is named a candidate for a confirmatory study if its interaction
+on the PSNR proxy has a Holm-adjusted p below 0.10 and the benefit among its flagged holds is
+positive. If none qualifies, no candidate is named. A candidate is a hypothesis for fresh
+sources with the threshold frozen at the value found here. It is not a finding.
+
+### Command
+
+```sh
+uv run --frozen python -m media_rl.native_actuator_qualification_explore --conditional \
+    --rows results/native-actuator-qualification-n1-stage-one-cohorts.json.gz \
+    --out results/native-actuator-qualification-n1-conditional.json
+```
+
+### Results
+
+Not yet run at this commit.

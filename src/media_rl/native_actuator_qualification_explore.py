@@ -192,6 +192,114 @@ def explore(rows):
     )
 
 
+SIGNALS = ("rtt_trend_ms", "rtt_ms", "loss_fraction", "jitter_ms", "estimate_growth")
+CANDIDATE_LEVEL = 0.10
+
+
+def with_signals(rows):
+    """Holds after a peer's first, with what the sender had observed before the assignment.
+
+    Four telemetry values from the row's pre-hold state, and the log change of the frozen
+    estimate since the previous hold. All are available to a controller at decision time.
+    """
+    peers = defaultdict(dict)
+    for r in rows:
+        peers[r["trial_id"]][r["epoch"]] = r
+    out = []
+    for holds in peers.values():
+        for epoch, r in holds.items():
+            if epoch - 1 not in holds:
+                continue
+            signals = {
+                name: r["state"][name]["value"] if r["state"][name]["status"] == "present" else None
+                for name in SIGNALS[:-1]
+            }
+            signals["estimate_growth"] = math.log(r["base_bwe_bps"] / holds[epoch - 1]["base_bwe_bps"])
+            out.append(dict(r, signals=signals))
+    return out
+
+
+def flagged(values, name, share):
+    """The congestion side of a signal: its top share, or the bottom share of the estimate's growth."""
+    if name == "estimate_growth":
+        cut = float(np.quantile(values, share))
+        return cut, "below", values < cut
+    cut = float(np.quantile(values, 1 - share))
+    return cut, "above", values > cut
+
+
+def conditional(rows, share=1 / 3, outcomes=("utility", "ontime_fraction")):
+    """Second exploratory pass: is backing off better in holds that a pre-hold signal flags?
+
+    The arm is randomised independently of the pre-hold state, so the benefit of the low ratio
+    among flagged holds is a causal effect in that subpopulation. The difference between
+    flagged and other holds describes effect modification; the flag itself is not randomised.
+    """
+    held, report = with_signals(rows), {}
+    for name in SIGNALS:
+        known = [r for r in held if r["signals"][name] is not None]
+        cut, side, flag = flagged(np.array([r["signals"][name] for r in known], dtype=float), name, share)
+        by_regime = {
+            regime: float(np.mean([f for r, f in zip(known, flag) if r["network_regime"] == regime]))
+            for regime in REGIMES
+        }
+        entry = dict(
+            threshold=cut,
+            side=side,
+            holds=len(known),
+            flagged_share=float(flag.mean()),
+            flagged_share_by_regime=by_regime,
+        )
+        for outcome in outcomes:
+            cells = defaultdict(list)
+            for r, f in zip(known, flag):
+                cells[(r["cluster_id"], bool(f), r["arm"])].append(r[outcome])
+            means = {k: float(np.mean(v)) for k, v in cells.items()}
+            sources = sorted({k[0] for k in means})
+
+            def benefit(state, low, means=means, sources=sources):
+                """Per source: the outcome at a lower ratio minus the outcome at the top ratio."""
+                return {
+                    s: means[(s, state, low)] - means[(s, state, 2)]
+                    for s in sources
+                    if (s, state, low) in means and (s, state, 2) in means
+                }
+
+            strong, rest, mild = benefit(True, 0), benefit(False, 0), benefit(True, 1)
+            entry[outcome] = dict(
+                flagged=summary(list(strong.values())),
+                rest=summary(list(rest.values())),
+                interaction=summary([strong[s] - rest[s] for s in strong if s in rest]),
+                flagged_middle_ratio=summary(list(mild.values())),
+            )
+        report[name] = entry
+    for outcome in outcomes:
+        adjusted = holm([report[name][outcome]["interaction"]["p_value"] for name in SIGNALS])
+        for name, p in zip(SIGNALS, adjusted):
+            report[name][outcome]["interaction"]["holm_p_value"] = p
+    primary = outcomes[0]
+    candidates = [
+        name
+        for name in SIGNALS
+        if (report[name][primary]["interaction"]["holm_p_value"] or 1.0) < CANDIDATE_LEVEL
+        and report[name][primary]["flagged"]["mean"] > 0
+    ]
+    return dict(
+        abi=qualification.ABI + "_conditional",
+        exploratory=True,
+        registered=False,
+        changes_the_n1_outcome=False,
+        second_pass_on_the_same_rows=True,
+        unit="source",
+        flagged_share_target=share,
+        benefit="outcome at ratio 0.65 minus outcome at ratio 1.05",
+        candidate_rule=f"Holm-adjusted interaction p below {CANDIDATE_LEVEL:g} on {primary} with a positive benefit among flagged holds",
+        candidates=candidates,
+        signals=report,
+        mock=any(r.get("mock") for r in rows),
+    )
+
+
 def sources_needed(spread, effect, power, limit=2000):
     """Smallest number of sources at which a two-sided 5% t test of a mean detects ``effect``."""
     for n in range(3, limit + 1):
@@ -250,11 +358,15 @@ def main(argv=None):
     parser.add_argument("--rows", required=True, type=Path)
     parser.add_argument("--out", required=True, type=Path)
     parser.add_argument("--planning", action="store_true", help="write the sizing note instead")
+    parser.add_argument("--conditional", action="store_true", help="write the state-conditional pass instead")
     args = parser.parse_args(argv)
     if args.out.exists():
         parser.exit(2, "error: fresh output path required\n")
     rows, digest = load(args.rows)
-    report = dict(planning(rows) if args.planning else explore(rows), rows_sha256=digest)
+    if args.planning and args.conditional:
+        parser.exit(2, "error: one pass per output\n")
+    made = planning(rows) if args.planning else conditional(rows) if args.conditional else explore(rows)
+    report = dict(made, rows_sha256=digest)
     args.out.write_text(json.dumps(report, indent=1, sort_keys=True) + "\n")
     print(
         json.dumps(

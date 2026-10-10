@@ -92,6 +92,51 @@ def test_planning_sizes_a_later_study_from_the_spread_of_source_contrasts():
     assert needed["effect 1, power 0.9"] >= needed["effect 1, power 0.8"] >= needed["effect 2, power 0.8"]
 
 
+def with_state(rows, seed=3):
+    """Give synthetic rows a pre-hold state in which a rising RTT makes the low ratio the better one."""
+    rng, out = np.random.default_rng(seed), []
+    for r in rows:
+        rising = float(rng.uniform(0, 30))
+        hot = rising > 20
+        present = dict(status="present")
+        out.append(
+            dict(
+                r,
+                state=dict(
+                    rtt_trend_ms=dict(present, value=rising),
+                    rtt_ms=dict(present, value=float(rng.uniform(40, 60))),
+                    loss_fraction=dict(status="absent", value=None)
+                    if r["epoch"] == 1
+                    else dict(present, value=0.0),
+                    jitter_ms=dict(present, value=float(rng.uniform(1, 5))),
+                ),
+                utility=30.0 + (3.0 if hot else -3.0) * (2 - r["arm"]) / 2 + float(rng.normal(0, 0.1)),
+                ontime_fraction=0.9,
+            )
+        )
+    return out
+
+
+def test_conditional_pass_finds_a_signal_that_modifies_the_effect():
+    rows = with_state(synthetic(sources=5, peers=8))
+    held = explore.with_signals(rows)
+    assert len(held) == len(rows) * 5 // 6 and all(r["epoch"] > 0 for r in held)
+    report = explore.conditional(rows)
+    trend = report["signals"]["rtt_trend_ms"]
+    assert trend["side"] == "above" and trend["threshold"] == pytest.approx(20.0, abs=1.0)
+    assert trend["flagged_share"] == pytest.approx(1 / 3, abs=0.02) and set(
+        trend["flagged_share_by_regime"]
+    ) == set(REGIMES)
+    assert trend["utility"]["flagged"]["mean"] == pytest.approx(3.0, abs=0.3)
+    assert trend["utility"]["rest"]["mean"] == pytest.approx(-3.0, abs=0.3)
+    assert trend["utility"]["interaction"]["holm_p_value"] < 0.01
+    assert trend["utility"]["flagged_middle_ratio"]["mean"] == pytest.approx(1.5, abs=0.3)
+    assert report["candidates"] == ["rtt_trend_ms"] and report["second_pass_on_the_same_rows"] is True
+    growth = report["signals"]["estimate_growth"]
+    assert growth["side"] == "below" and growth["holds"] == len(held)
+    assert report["signals"]["loss_fraction"]["holds"] < len(held)  # absent values are left out, not imputed
+
+
 def test_holm_is_monotone_and_bounded():
     assert explore.holm([0.01, 0.04, 0.03]) == pytest.approx([0.03, 0.06, 0.06])
     assert explore.holm([0.9, 0.8]) == [1.0, 1.0]
