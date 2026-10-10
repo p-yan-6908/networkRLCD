@@ -1,0 +1,349 @@
+{
+  "abi": "native_actuator_qualification_n1_final",
+  "verdict": "qualified",
+  "designation": null,
+  "capture_support_passed": true,
+  "endpoint": "actual encoded payload rate / frozen BWE",
+  "primary": {
+    "verdict": "qualified",
+    "designation": null,
+    "sources": 12,
+    "degrees_of_freedom": 11,
+    "mean_contrasts": [
+      0.14353923622898426,
+      0.09359578182467261
+    ],
+    "lower_bounds": [
+      0.1277956729436823,
+      0.06729528299433954
+    ],
+    "upper_bounds": [
+      0.16208752973520318,
+      0.12458173861378258
+    ],
+    "p_values_above_margin": [
+      3.1370025202099805e-09,
+      0.00012200535871685648
+    ],
+    "realised_share_of_requested_step": [
+      0.7176961811449215,
+      0.46797890912336315
+    ],
+    "first_stage_contrast_sd": [
+      0.02477858733148721,
+      0.041394009432254485
+    ],
+    "complexity": {
+      "strata": [
+        "0",
+        "1",
+        "2"
+      ],
+      "sources_per_stratum": 4,
+      "means": [
+        [
+          0.13126367747163087,
+          0.0727691148805446
+        ],
+        [
+          0.14635584003199226,
+          0.08945019985085861
+        ],
+        [
+          0.15299819118332966,
+          0.11856803074261463
+        ]
+      ],
+      "intervals95": [
+        [
+          [
+            0.10264596231860529,
+            0.15988139262465645
+          ],
+          [
+            0.027291084979482363,
+            0.11824714478160685
+          ]
+        ],
+        [
+          [
+            0.11773812487896668,
+            0.17497355518501784
+          ],
+          [
+            0.04397216994979637,
+            0.13492822975192087
+          ]
+        ],
+        [
+          [
+            0.12438047603030408,
+            0.18161590633635524
+          ],
+          [
+            0.07309000084155239,
+            0.16404606064367688
+          ]
+        ]
+      ],
+      "heterogeneity_p_values": [
+        0.4891194425431306,
+        0.3120085823801413
+      ],
+      "heterogeneous_by_complexity": false,
+      "diagnostic_only": true,
+      "no_flag_is_not_evidence_of_uniformity": true
+    },
+    "separating_sources": 11,
+    "separating_share_lower_bound": 0.6152038348490559,
+    "rule": {
+      "total": 12,
+      "uncapped": 12,
+      "precision_futility": false
+    }
+  },
+  "support": {
+    "assigned_cohorts": 2880,
+    "complete_fraction": 1.0,
+    "alias_fraction": 0.0006944444444444445,
+    "arm_completeness_gap": 0.0,
+    "arm_share_p_value": 0.9561966687230624,
+    "passed": true,
+    "skipped_sources": 0
+  },
+  "interim": {
+    "precision_futility": false,
+    "uncapped_sources": 12,
+    "precision_futility_is_not_evidence_about_the_effect": true
+  },
+  "secondary": {
+    "send_rate": {
+      "verdict": "qualified",
+      "designation": null,
+      "sources": 12,
+      "degrees_of_freedom": 11,
+      "mean_contrasts": [
+        0.14532600773456425,
+        0.09231245313148817
+      ],
+      "lower_bounds": [
+        0.13054220112466156,
+        0.06564307243274532
+      ],
+      "upper_bounds": [
+        0.1627435630344917,
+        0.12373300843177348
+      ],
+      "p_values_above_margin": [
+        1.3642261015018138e-09,
+        0.00016097571046187956
+      ],
+      "realised_share_of_requested_step": [
+        0.7266300386728214,
+        0.46156226565744096
+      ],
+      "first_stage_contrast_sd": [
+        0.02326803891449949,
+        0.04197458775659908
+      ],
+      "complexity": {
+        "strata": [
+          "0",
+          "1",
+          "2"
+        ],
+        "sources_per_stratum": 4,
+        "means": [
+          [
+            0.13611731120609832,
+            0.06733862840850582
+          ],
+          [
+            0.1465492653379957,
+            0.08633484342322786
+          ],
+          [
+            0.15331144665959878,
+            0.12326388756273082
+          ]
+        ],
+        "intervals95": [
+          [
+            [
+              0.10852691858241564,
+              0.163707703829781
+            ],
+            [
+              0.024498653123324526,
+              0.11017860369368712
+            ]
+          ],
+          [
+            [
+              0.11895887271431302,
+              0.17413965796167838
+            ],
+            [
+              0.043494868138046566,
+              0.12917481870840916
+            ]
+          ],
+          [
+            [
+              0.1257210540359161,
+              0.18090183928328146
+            ],
+            [
+              0.08042391227754953,
+              0.16610386284791212
+            ]
+          ]
+        ],
+        "heterogeneity_p_values": [
+          0.6199720295020632,
+          0.16075117346324766
+        ],
+        "heterogeneous_by_complexity": false,
+        "diagnostic_only": true,
+        "no_flag_is_not_evidence_of_uniformity": true
+      },
+      "separating_sources": 11,
+      "separating_share_lower_bound": 0.6152038348490559
+    },
+    "regime_map": {
+      "underutilized": {
+        "mean_contrasts": [
+          0.17436603000422313,
+          0.1452008798163036
+        ],
+        "lower_bounds": [
+          0.14387330216413277,
+          0.1120819588661035
+        ],
+        "upper_bounds": [
+          0.21029106524140329,
+          0.18421996687184192
+        ],
+        "holm_p_values": [
+          1.7120104866755827e-06,
+          2.4742938518358973e-05
+        ]
+      },
+      "near-capacity": {
+        "mean_contrasts": [
+          0.15182030994870224,
+          0.05931619678576566
+        ],
+        "lower_bounds": [
+          0.12593739455432149,
+          0.033158713178639616
+        ],
+        "upper_bounds": [
+          0.18231429043022435,
+          0.09013366005864745
+        ],
+        "holm_p_values": [
+          1.7120104866755827e-06,
+          0.0313003623075491
+        ]
+      },
+      "queue-building": {
+        "mean_contrasts": [
+          0.15323743447030125,
+          0.04399121023147948
+        ],
+        "lower_bounds": [
+          0.12816357071384718,
+          0.013255566354249234
+        ],
+        "upper_bounds": [
+          0.18277823002348115,
+          0.08020243722033533
+        ],
+        "holm_p_values": [
+          1.3409357990076668e-06,
+          0.1689581085210835
+        ]
+      },
+      "collapse-recovery": {
+        "mean_contrasts": [
+          0.09473317049271035,
+          0.12587484046514177
+        ],
+        "lower_bounds": [
+          0.053070360609580286,
+          0.055992851080650774
+        ],
+        "upper_bounds": [
+          0.14381824812107347,
+          0.20820637027276323
+        ],
+        "holm_p_values": [
+          0.01145135281780793,
+          0.017494530815062897
+        ]
+      }
+    },
+    "first_stage_strength": {
+      "encoder": {
+        "cluster_F": 187.87126619606585,
+        "partial_R2": 0.33651583219290937
+      },
+      "send": {
+        "cluster_F": 201.0616267773602,
+        "partial_R2": 0.3440388004464645
+      }
+    },
+    "per_source_contrast_sd": [
+      0.02477858733148721,
+      0.041394009432254485
+    ],
+    "per_source_contrast_sd_interval95": [
+      [
+        0.017553031110842714,
+        0.04207101874038667
+      ],
+      [
+        0.029323315556555974,
+        0.07028197868048505
+      ]
+    ],
+    "plateau_share_by_arm": [
+      0.770199370409234,
+      0.8043478260869565,
+      0.8126951092611863
+    ],
+    "none_of_these_changes_the_verdict": true
+  },
+  "sources": [
+    "source-9b9ac24db20846eefa4e6d47",
+    "source-a0935dbdc97fb77fde6c1041",
+    "source-1f253c3e7a476525c526a21e",
+    "source-52a998e62868e63af7a92891",
+    "source-4c2a0120550a8bcb622fb708",
+    "source-2b3267608b48ab5f7b446cdf",
+    "source-32ae9968d8417f1c60fcd447",
+    "source-71e9c546abfaeb7defba23fb",
+    "source-5b8a21adf46485935afcfa8c",
+    "source-ba12ea67f20b3d59f1d825c5",
+    "source-f55bdc65c82e58b0078829de",
+    "source-f9dd9aa57c3815dbebf41ffc"
+  ],
+  "protocol_sha256": "adf2dba53fad9e8f514d67aaecd6e32467d93478aa7f6a76d15d823b6e3a3af4",
+  "registration_sha256": "ec8d5025744a5df08eeb2068ad9640234731e52a703b7981228872e393af2824",
+  "n1_code_and_registration_sha256": {
+    "configs/native_actuator_qualification_n1.json": "ec8d5025744a5df08eeb2068ad9640234731e52a703b7981228872e393af2824",
+    "docs/NATIVE_PHASE_N1_ACTUATOR_QUALIFICATION.md": "90b19c88bc58c3ba4cda014067cbb153c4be7791ecaac29bcceb316f53558016",
+    "src/media_rl/native_actuator_qualification.py": "2f8d69e3434f7ea37c65a0ac3fa5ddce45380006d49acccbf367c091956160a2",
+    "src/media_rl/native_actuator_qualification_panel.py": "ef819b208a3565a065e0910fa0e4233c220053dc2613654d1d2d3ab08b631235"
+  },
+  "n1_freeze_sha256": "ae567d09e197ca701cf776267ce35d71f99429e5e94509921bb8324f8a5c26af",
+  "input_manifests_sha256": {
+    "/Users/pyan/networkRLCD/results/native-actuator-qualification-n1-stage-one": "910a5d473f51fb4aea32d560916746c30ff687598fcc81f697be150d1cf0740a"
+  },
+  "interim_custodian": "pyan (repository owner; procedural interim custodian, not independent)",
+  "mock": false,
+  "QoE_claims": false,
+  "policy_models_fitted": 0,
+  "learned_controller_promoted": false
+}

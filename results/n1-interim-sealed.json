@@ -1,0 +1,39 @@
+{
+  "abi": "native_actuator_qualification_n1_interim_sealed",
+  "contrast_variances": [
+    0.0006139783901441385,
+    0.0017134640168775734
+  ],
+  "uncapped_sources": 12,
+  "precision_futility": false,
+  "prescribed_total_sources": 12,
+  "first_stage_sources": [
+    "source-9b9ac24db20846eefa4e6d47",
+    "source-a0935dbdc97fb77fde6c1041",
+    "source-1f253c3e7a476525c526a21e",
+    "source-52a998e62868e63af7a92891",
+    "source-4c2a0120550a8bcb622fb708",
+    "source-2b3267608b48ab5f7b446cdf",
+    "source-32ae9968d8417f1c60fcd447",
+    "source-71e9c546abfaeb7defba23fb",
+    "source-5b8a21adf46485935afcfa8c",
+    "source-ba12ea67f20b3d59f1d825c5",
+    "source-f55bdc65c82e58b0078829de",
+    "source-f9dd9aa57c3815dbebf41ffc"
+  ],
+  "skipped_sources": 0,
+  "protocol_sha256": "adf2dba53fad9e8f514d67aaecd6e32467d93478aa7f6a76d15d823b6e3a3af4",
+  "registration_sha256": "ec8d5025744a5df08eeb2068ad9640234731e52a703b7981228872e393af2824",
+  "n1_code_and_registration_sha256": {
+    "configs/native_actuator_qualification_n1.json": "ec8d5025744a5df08eeb2068ad9640234731e52a703b7981228872e393af2824",
+    "docs/NATIVE_PHASE_N1_ACTUATOR_QUALIFICATION.md": "90b19c88bc58c3ba4cda014067cbb153c4be7791ecaac29bcceb316f53558016",
+    "src/media_rl/native_actuator_qualification.py": "2f8d69e3434f7ea37c65a0ac3fa5ddce45380006d49acccbf367c091956160a2",
+    "src/media_rl/native_actuator_qualification_panel.py": "ef819b208a3565a065e0910fa0e4233c220053dc2613654d1d2d3ab08b631235"
+  },
+  "n1_freeze_sha256": "ae567d09e197ca701cf776267ce35d71f99429e5e94509921bb8324f8a5c26af",
+  "input_manifests_sha256": {
+    "/Users/pyan/networkRLCD/results/native-actuator-qualification-n1-stage-one": "910a5d473f51fb4aea32d560916746c30ff687598fcc81f697be150d1cf0740a"
+  },
+  "interim_custodian": "pyan (repository owner; procedural interim custodian, not independent)",
+  "mock": false
+}

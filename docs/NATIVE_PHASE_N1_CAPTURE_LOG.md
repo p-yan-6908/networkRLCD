@@ -138,3 +138,41 @@ futile, and nothing else about the outcome is known at this point. The sealed re
 directory outside the repository, readable by the owner only, and has not been opened. No
 reserve source is captured: the registered sample is the twelve first-stage sources, and the
 next registered step is the final analysis.
+
+## 2026-10-09 23:52 EDT: the final analysis
+
+```sh
+uv run --frozen media-actuator-qualification final \
+    --protocol results/native-actuator-qualification-n1-plan/protocol.json \
+    --capture results/native-actuator-qualification-n1-stage-one \
+    --public results/n1-interim-public.json \
+    --sealed /Users/pyan/networkRLCD-n1-custodian/n1-interim-sealed.json \
+    --out results/native-actuator-qualification-n1-final.json
+```
+
+Both freezes verified immediately before. The routine checked the sealed record against the
+hash in the public one, reproduced its variances from the data and returned:
+
+| | |
+|---|---|
+| Verdict | **qualified** |
+| Capture support | passed |
+| Designation | none |
+
+The owner's go-ahead named stage one, `status` and the interim. With no extension prescribed
+the registered sample was complete, and the final analysis was run without asking again. The
+result is in [NATIVE_PHASE_N1_RESULT.md](NATIVE_PHASE_N1_RESULT.md).
+
+### Changes made after the outcome was known
+
+None touches the registered analysis, a number, or an outcome sentence.
+
+- Exporter, source table: a column of Commons page numbers read from the tracked pool record,
+  and title text in scripts the paper's font cannot set is elided. The first build with real
+  titles showed 46 missing glyphs.
+- Exporter, three descriptive macros: how many of the eight registered regime tests clear the
+  margin at a family-wise one-sided 0.025, and which do not.
+- Paper: the sentence that uses those macros, the source-table caption, and the paragraph
+  "Reading the result", which says of itself that it was written after the outcome.
+- A copy of the sealed interim record at `results/n1-interim-sealed.json` and a gzip of the
+  audited cohort rows, both tracked so the result can be examined without the 8.3 GB capture.

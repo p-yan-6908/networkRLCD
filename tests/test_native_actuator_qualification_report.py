@@ -110,5 +110,36 @@ def test_refuses_records_that_do_not_belong_together(records, tmp_path):
         report.export(paths["final"], paths["public"], other, tmp_path / "evidence", allow_mock=True)
 
 
+def test_titles_outside_the_latin_font_are_elided_not_transliterated():
+    assert report.typeset("G.E.M.【愛如意】MV (HD) 鄧紫棋") == "G.E.M. [\\ldots] MV (HD) [\\ldots]"
+    assert report.typeset("Brajkovič na startu 12°") == "Brajkovič na startu 12°"
+    assert report.typeset("Joy & Heron") == "Joy \\& Heron"
+    assert report.typeset("8200호대 서울 출발") == "8200 [\\ldots]"
+
+
+def test_sources_carry_their_commons_page_numbers(records):
+    _, loaded = records
+    names = loaded["final"]["sources"]
+    pool = dict(sources=[dict(cluster_id=n, candidate_id=f"commons-{i + 100}") for i, n in enumerate(names)])
+    table = report.table_sources(loaded["final"], loaded["protocol"], pool)
+    assert "1 & 100 & " in table and f"{len(names)} & {len(names) + 99} & " in table
+    assert " & n/a & " in report.table_sources(loaded["final"], loaded["protocol"])
+
+
+def test_regime_reading_counts_the_tests_that_clear_the_margin(records):
+    _, loaded = records
+    final = copy.deepcopy(loaded["final"])
+    made = report.macros(final, loaded["public"], loaded["protocol"], 0, [])
+    assert (
+        made["NOneRegimeTests"] == "8"
+        and made["NOneRegimeEstablished"] == "8"
+        and made["NOneRegimeOpen"] == "none"
+    )
+    final["secondary"]["regime_map"]["queue-building"]["holm_p_values"][1] = 0.2
+    made = report.macros(final, loaded["public"], loaded["protocol"], 0, [])
+    assert made["NOneRegimeEstablished"] == "7"
+    assert made["NOneRegimeOpen"] == "the upper difference under the queue-building schedule"
+
+
 def test_titles_are_made_safe_for_latex():
     assert report.escape("A_b & 50% #1 {x}") == "A\\_b \\& 50\\% \\#1 (x)"
