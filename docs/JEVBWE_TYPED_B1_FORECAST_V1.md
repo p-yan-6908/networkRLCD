@@ -179,6 +179,10 @@ Arms are 0.65 / 0.85 / 1.05. Simulator figures are from the exact panel.
   while the acked rate stays below two thirds of it. Natively the estimate still grew by 18%
   per hold at 0.65, and only half of those holds were flagged.
 - **The simulated estimator grows too slowly when the link has room,** at every arm.
+  *Note added 2026-10-10 after the [within-hold pass](NATIVE_PHASE_N1_DYNAMICS.md):* the
+  native figures in this row pool the first hold, in which the estimate grows by 70% to 110%
+  at every ratio, and so does the simulator's row. After the first hold the native figures
+  are 5%, 14% and 94%, and at the top ratio the growth is a jump within 0.6 s, not a ramp.
 - **The overall flagged share is similar (37% against 34%) for different reasons.** In the
   simulator it barely depends on the schedule; natively it is twice as high under the
   constrained schedules.

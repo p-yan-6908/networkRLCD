@@ -242,6 +242,35 @@ def test_cli_writes_the_report_and_per_hold_curves_once(tmp_path, capsys):
         dynamics.main(["--rows", str(path), "--capture", str(capture), "--out", str(out)])
 
 
+def test_cli_joins_several_captures_and_reads_each_ones_own_rows(tmp_path, capsys):
+    blocks = [tmp_path / "block-1", tmp_path / "block-2"]
+    for index, block in enumerate(blocks):
+        rows = []
+        for regime in dynamics.REGIMES:
+            for p in range(3):
+                arms = [(p + epoch) % 3 for epoch in range(6)]
+                rows += make_peer(block, f"b{index}-{regime}-p{p}", f"source-{index}", regime, arms)
+        (block / "cohorts.json").write_text(json.dumps(rows))
+    out = tmp_path / "out"
+    dynamics.main(["--capture", str(blocks[0]), "--capture", str(blocks[1]), "--out", str(out)])
+    report = json.loads((out / "report.json").read_text())
+    assert report["sources"] == 2 and report["peers"] == 2 * 4 * 3 and len(report["rows_sha256"]) == 2
+    assert json.loads(capsys.readouterr().out)["holds"] == 2 * 4 * 3 * 6
+    with pytest.raises(SystemExit):
+        dynamics.main(
+            [
+                "--capture",
+                str(blocks[0]),
+                "--capture",
+                str(blocks[1]),
+                "--rows",
+                str(blocks[0] / "cohorts.json"),
+                "--out",
+                str(tmp_path / "other"),
+            ]
+        )
+
+
 def test_window_and_dropped_share_skip_empty_bins():
     values = [math.nan] * 4 + [2.0, 4.0] + [math.nan] * 9
     assert dynamics.window(values, (800, 1200)) == 3.0 and math.isnan(dynamics.window(values, (0, 800)))

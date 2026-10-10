@@ -330,8 +330,8 @@ def mean_curves(holds):
     return out
 
 
-def study(capture, rows):
-    holds = collect(capture, rows)
+def summarise(holds):
+    """The report for a set of holds, from one capture or from several."""
     offsets = np.array([h["relay_offset_ms"] for h in holds])
     report = dict(
         abi=ABI,
@@ -352,7 +352,12 @@ def study(capture, rows):
         tables=describe(holds),
         curves=mean_curves(holds),
     )
-    return report, holds
+    return report
+
+
+def study(capture, rows):
+    holds = collect(capture, rows)
+    return summarise(holds), holds
 
 
 def headline(report):
@@ -374,22 +379,34 @@ def headline(report):
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="Inside a hold: exploratory description of the N1 raw logs")
-    parser.add_argument("--rows", required=True, type=Path)
-    parser.add_argument("--capture", required=True, type=Path)
+    parser = argparse.ArgumentParser(description="Inside a hold: description of a capture's raw logs")
+    parser.add_argument("--capture", required=True, type=Path, action="append")
+    parser.add_argument(
+        "--rows",
+        type=Path,
+        action="append",
+        help="audited rows per capture, in order (default: its cohorts.json)",
+    )
     parser.add_argument("--out", required=True, type=Path)
     args = parser.parse_args(argv)
     if args.out.exists():
         parser.exit(2, "error: fresh output directory required\n")
-    rows, digest = load(args.rows)
-    report, holds = study(args.capture, rows)
-    report["rows_sha256"] = digest
+    sources = args.rows or [capture / "cohorts.json" for capture in args.capture]
+    if len(sources) != len(args.capture):
+        parser.exit(2, "error: one rows file per capture\n")
+    holds, digests = [], []
+    for capture, source in zip(args.capture, sources, strict=True):
+        rows, digest = load(source)
+        holds += collect(capture, rows)
+        digests.append(digest)
+    report = summarise(holds)
+    report["rows_sha256"] = digests[0] if len(digests) == 1 else digests
     args.out.mkdir(parents=True)
     (args.out / "report.json").write_text(json.dumps(report, indent=1, sort_keys=True) + "\n")
     kept = [{k: _plain(v) if isinstance(v, np.ndarray) else v for k, v in h.items()} for h in holds]
     with gzip.open(
         args.out / "holds.json.gz", "wt"
-    ) as stream:  # per-hold curves, so the raw logs are not needed again
+    ) as stream:  # per-hold curves: the raw logs are not needed again
         json.dump(kept, stream)
     print(json.dumps(headline(report), indent=1))
 

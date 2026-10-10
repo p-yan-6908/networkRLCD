@@ -312,3 +312,13 @@ A confirmatory test of whether backing off helps in holds the sender can flag wo
 therefore need roughly 40 to 60 fresh sources to detect a benefit of 1 unit and 20 to 30 for
 1.5 units. Discovery V2 holds 74 candidates that the N1 queue did not draw; at N1's rate of
 21 eligible from 36 queued, that is about 43 eligible sources, with no new discovery.
+
+## Third pass: what happens inside a hold
+
+Recorded separately in [NATIVE_PHASE_N1_DYNAMICS.md](NATIVE_PHASE_N1_DYNAMICS.md). It reads
+the raw per-peer logs for mechanism only and no quality label. Two statements above are
+refined there. The growth of the estimate by 18%, 24% and 100% per hold in section 2 pools
+the first hold; after it the figures are 5%, 14% and 94%, and at the top ratio the growth is a
+jump within 0.6 s. And the encoder levels of section 1 are taken 1.8 to 2.6 s into a hold,
+before the encoder has settled; with room it reaches the cap by the end of the hold.
+

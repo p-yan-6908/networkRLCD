@@ -232,3 +232,14 @@ for sizing, and every other quantity was checked for shape and finiteness withou
 
 No frozen file needed a change.
 
+## 13. An addendum to B1, added by the agent (2026-10-10)
+
+Not asked for and not a decision of the owner's. After the registration was frozen and before
+any B1 data exist, the agent described what happens inside an N1 hold from the raw logs
+([NATIVE_PHASE_N1_DYNAMICS.md](NATIVE_PHASE_N1_DYNAMICS.md), mechanism only, no quality label
+read) and then fixed an addendum to B1:
+[NATIVE_PHASE_B1_ADDENDUM_POSITIONS.md](NATIVE_PHASE_B1_ADDENDUM_POSITIONS.md). It splits B1's
+holds by their position in the schedule and repeats the within-hold tables on B1's capture.
+It changes no registered quantity or outcome and none of the four frozen files, and it runs
+only after the registered final report. The owner can strike it; nothing depends on it.
+
