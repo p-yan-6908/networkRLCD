@@ -70,3 +70,65 @@ rsync -aH --ignore-existing --dry-run --itemize-changes \
 ```
 
 Existing changed files are deliberately not overwritten; a run with such changes may need separate recovery/audit. Absolute workspace paths inside historical metadata are preserved, not rewritten. Hardlinks across different runs may not be preserved by a one-run merge, so restoring the complete snapshot to a separate location is preferred.
+
+## Second snapshot: Native Phase N1 stage-one capture (2026-10-10, backed up, nothing pruned)
+
+Added after the repository owner pointed to this archive as the place for old data, to make
+room for the Native Phase B1 capture. It is a separate snapshot in the same private dataset.
+The first snapshot and its pinned revision above are unchanged.
+
+**Folder:** `n1-stage-one-2026-10-10/` in `p-yan/networkrlcd-results-archive`  
+**Verified immutable revision:** `aa1b8d80fd66a3f52e88b59d589825f50d5e5dd2`  
+**Snapshot created:** `2026-10-10T18:56:41Z`  
+**Contents:** 20,194 files in one tar stream split into 9 parts (8.85 GB).
+
+What it holds:
+
+- `results/native-actuator-qualification-n1-stage-one/` in full (20,175 files): per-peer event
+  logs, audit records and harness snapshots, the capture manifest and the audited cohort rows.
+  It contains no source media.
+- `results/native-actuator-qualification-n1-plan/`, the sealed plan.
+- The N1 status, interim, final and exploratory records and logs directly under `results/`.
+
+Verification, all passed:
+
+- every part's SHA-256 as the Hub records it at that revision equals the local `SHA256SUMS`;
+- no file is missing from the folder and none is extra;
+- the six inventory and recovery files are byte-identical to the local ones;
+- one part was downloaded afresh and its SHA-256 matched.
+
+Receipt: `.tools/results-archive-receipts-n1-v1/archive-receipt.json`. The SHA-256 of every
+archived file is in `file-sha256.txt` beside it and in the archive folder. The scripts are
+`.tools/offload-n1-stage-one-v1.sh` and `.tools/verify-n1-stage-one-archive-v1.py`. The
+temporary staged parts were removed after verification.
+
+**No result file has been deleted.** The capture is still complete under `results/`. If the
+B1 capture needs the room, local copies may be removed under the rules of the first cleanup:
+
+- only after the owner has seen the list;
+- only files whose bytes still equal the hash in `file-sha256.txt`, rehashed just before removal;
+- never `manifest.json`, `cohorts.json` or anything under the plan directory: they are small,
+  and the sealed plan is a reservation ledger that later planners read;
+- never the tracked N1 records in the repository.
+
+After such a removal, replaying N1's `status`, `interim` or `final` needs a restore first.
+
+### Restore this snapshot
+
+```sh
+hf auth login
+archive=$(mktemp -d /tmp/networkrlcd-n1-archive.XXXXXX)
+hf download p-yan/networkrlcd-results-archive \
+  --type dataset \
+  --revision aa1b8d80fd66a3f52e88b59d589825f50d5e5dd2 \
+  --include 'n1-stage-one-2026-10-10/*' \
+  --local-dir "$archive"
+
+# Use a new, empty directory. This recreates EMPTY_RECOVERY_DIRECTORY/results/.
+bash "$archive/n1-stage-one-2026-10-10/restore.sh" /path/to/EMPTY_RECOVERY_DIRECTORY
+```
+
+`restore.sh` checks all nine part SHA-256s before extraction and refuses a populated
+destination. Allow about 9 GB for the download and as much again for the restored tree. To
+refill the local run, merge missing files only, as described above for the first snapshot.
+
