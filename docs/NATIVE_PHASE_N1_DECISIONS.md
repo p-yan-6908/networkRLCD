@@ -215,3 +215,20 @@ What follows from the three answers:
   stay tracked in the repository either way.
 - Source media are not results and are not put in the archive.
 
+### Mechanical check of B1's analysis on real rows (2026-10-10)
+
+B1's frozen row handling had read only mock rows. Before any B1 data exist, N1's 2,880 real
+audited rows and N1's sealed plan were passed through it to exercise the code paths. This is
+not a B1 result and not a new look at N1: the only statistic read was the one already recorded
+for sizing, and every other quantity was checked for shape and finiteness without being shown.
+
+- Every field B1 reads is present in a real audited row, and all 2,880 rows were accepted.
+- The registered estimator reproduces the sizing record exactly on those rows: mean 1.2719,
+  per-source SD 2.2674, flagged share 0.3392, smallest flagged cell 13.
+- Every secondary path ran and returned finite values.
+- One thing to expect: under the unconstrained schedule only 3 of the 12 N1 sources had three
+  flagged holds in every arm, so B1's by-schedule secondary for that schedule will rest on
+  few sources.
+
+No frozen file needed a change.
+
