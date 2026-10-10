@@ -1,6 +1,7 @@
 """The undrawn-candidate manifest continues the seeded N1 order and clears nothing."""
 
 import csv
+import json
 
 import pytest
 from test_native_qualification_acquisition import inventory
@@ -54,3 +55,24 @@ def test_refuses_an_inventory_the_n1_queue_was_not_drawn_from(drawn):
     write_json(drawn / "foreign.json", dict(foreign, abi="something_else"))
     with pytest.raises(ValueError, match="registered N1 queue"):
         backoff.continuation(drawn / "inventory.json", drawn / "foreign.json")
+
+
+def test_b1_budget_is_the_owners_and_keeps_the_stop_rule(tmp_path):
+    settings = acquisition.load_settings(acquisition.B1_SETTINGS)
+    budget = settings["budget"]
+    assert (
+        budget["maximum_download_bytes"] == 10_000_000_000 and budget["maximum_file_bytes"] == 1_000_000_000
+    )
+    assert (
+        settings["expand_discovery_automatically"] is False and settings["download_only_after_rights_review"]
+    )
+    assert settings["native_ready"] == {
+        **acquisition.load_settings()["native_ready"],
+        "note": settings["native_ready"]["note"],
+    }
+    assert settings["eligible_sources_per_tercile"]["required"] * 3 == 30  # B1's registered minimum
+    for change in (dict(maximum_file_bytes=0), dict(maximum_file_bytes=11_000_000_000)):
+        path = tmp_path / "bad.json"
+        path.write_text(json.dumps(dict(settings, budget=dict(budget, **change))))
+        with pytest.raises(ValueError, match="budget and stop rule"):
+            acquisition.load_settings(path)

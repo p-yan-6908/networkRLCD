@@ -10,6 +10,7 @@ import argparse
 import csv
 import hashlib
 import json
+import math
 import re
 import subprocess
 from pathlib import Path
@@ -22,6 +23,8 @@ from .native_protocol import digest, read_json, require, write_json
 ABI = "native_actuator_qualification_n1_rights_review_manifest"
 ROOT = Path(__file__).resolve().parents[2]
 SETTINGS = ROOT / "configs/native_actuator_qualification_n1_acquisition.json"
+B1_SETTINGS = ROOT / "configs/native_backoff_benefit_b1_acquisition.json"
+ABIS = ("native_actuator_qualification_n1_acquisition", "native_backoff_benefit_b1_acquisition")
 DECISIONS = ("", "pass", "fail", "needs_media_inspection")
 # Filled by the reviewer. The last five are what the unchanged ingest request then needs.
 REVIEW = (
@@ -72,14 +75,15 @@ def load_settings(path=SETTINGS):
     settings = read_json(path)
     budget = settings["budget"]
     require(
-        settings["abi"] == "native_actuator_qualification_n1_acquisition"
+        settings["abi"] in ABIS
         and 0 < budget["maximum_download_bytes"] <= budget["maximum_temporary_storage_bytes"]
+        and 0 < budget.get("maximum_file_bytes", 1) <= budget["maximum_download_bytes"]
         and budget["retain_unnecessary_transcode_variants"] is False
         and settings["expand_discovery_automatically"] is False
         and 0
         < settings["eligible_sources_per_tercile"]["required"]
         <= settings["eligible_sources_per_tercile"]["preferred"],
-        "N1 acquisition settings must keep their budget and stop rule",
+        "acquisition settings must keep their budget and stop rule",
     )
     return settings
 
@@ -310,6 +314,7 @@ def fetch(review_path, manifest_path, inventory_path, out, settings_path=SETTING
     download is checked against the SHA-1 that Commons reported for the reviewed revision. The
     H.264 file is a derived verification artifact whose record carries the original's SHA-256
     as parent. Fetching stops at the download or storage budget and never widens the queue.
+    Where the budget sets a per-file cap, a larger candidate is passed over and listed.
     It clears no rights and collects no outcome.
     """
     settings = load_settings(settings_path)
@@ -322,11 +327,14 @@ def fetch(review_path, manifest_path, inventory_path, out, settings_path=SETTING
     version = subprocess.run(
         ["ffmpeg", "-version"], check=True, capture_output=True, text=True
     ).stdout.splitlines()[0]
-    done = 0
+    done, capped = 0, []
     for row in read_json(manifest_path)["rows"]:
         identifier = row["candidate_id"]
         record_path = out / "records" / f"{identifier}.json"
         if not decisions[identifier]["may_download"] or record_path.exists():
+            continue
+        if row["catalogue_bytes"] > budget.get("maximum_file_bytes", math.inf):
+            capped.append(identifier)
             continue
         if limit is not None and done >= limit:
             break
@@ -398,7 +406,7 @@ def fetch(review_path, manifest_path, inventory_path, out, settings_path=SETTING
             inspection_sheet=str(sheet.relative_to(out)),
         )
         write_json(record_path, record)
-    return lineage(out, settings)
+    return dict(lineage(out, settings), passed_over_the_file_cap=capped)
 
 
 def evidence_extract(row, review, discovery_root):
@@ -549,6 +557,7 @@ def main(argv=None):
     evidence.add_argument("--discovery", required=True, type=Path)
     get.add_argument("--inventory", required=True, type=Path)
     get.add_argument("--limit", type=int)
+    get.add_argument("--settings", type=Path, default=SETTINGS)
     request = sub.add_parser("ingest-request", help="Write the request the unchanged ingest takes")
     for name in ("review", "manifest", "lineage", "media", "discovery", "out"):
         request.add_argument("--" + name, required=True, type=Path)
@@ -566,7 +575,7 @@ def main(argv=None):
             write_json(args.out, result)
             result = {k: v for k, v in result.items() if k != "extracts"}
         elif args.command == "fetch":
-            result = fetch(args.review, args.manifest, args.inventory, args.out, limit=args.limit)
+            result = fetch(args.review, args.manifest, args.inventory, args.out, args.settings, args.limit)
             result = {k: v for k, v in result.items() if k != "records"}
         elif args.command == "rights-manifest":
             result = export(args.inventory, args.queue, args.out)

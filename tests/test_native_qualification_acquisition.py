@@ -247,6 +247,20 @@ def test_fetch_touches_only_reviewed_candidates_checks_identity_and_stops_at_the
     with pytest.raises(ValueError, match="download budget reached"):
         acquisition.fetch(review, manifest, root / "inventory.json", root / "other", root / "tight.json")
     assert len(fetched) == 2  # stopped before touching the network
+    capped = read_json(acquisition.B1_SETTINGS)
+    assert (
+        capped["abi"] == acquisition.ABIS[1] and capped["native_ready"]["crf"] == tight["native_ready"]["crf"]
+    )
+    sizes = {r["candidate_id"]: r["catalogue_bytes"] for r in read_json(manifest)["rows"]}
+    larger = max(table[:2], key=lambda r: sizes[r["candidate_id"]])["candidate_id"]
+    capped["budget"].update(maximum_file_bytes=sizes[larger] - 1)  # a per-file cap just under the larger one
+    write_json(root / "capped.json", capped)
+    passed = acquisition.fetch(
+        review, manifest, root / "inventory.json", root / "capped", root / "capped.json"
+    )
+    assert larger in passed["passed_over_the_file_cap"] and larger not in fetched[2:]  # listed, never fetched
+    assert passed["fetched_candidates"] + len(passed["passed_over_the_file_cap"]) == 2
+    del fetched[2:]
     stock["records"] = [dict(r, reported_media_sha1="0" * 40) for r in stock["records"]]
     (root / "inventory.json").unlink()
     write_json(root / "inventory.json", stock)

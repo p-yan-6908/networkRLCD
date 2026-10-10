@@ -1,0 +1,35 @@
+{
+  "abi": "native_backoff_benefit_b1_acquisition",
+  "queue": {
+    "continuation_of": "acquisition/native-n1/queue.json",
+    "candidates": 74,
+    "inventory": "results/native-panel-acquisition-discovery-v2-final/inventory.json"
+  },
+  "budget": {
+    "maximum_download_bytes": 10000000000,
+    "maximum_file_bytes": 1000000000,
+    "maximum_temporary_storage_bytes": 20000000000,
+    "retain_unnecessary_transcode_variants": false
+  },
+  "eligible_sources_per_tercile": {
+    "required": 10,
+    "preferred": 10
+  },
+  "expand_discovery_automatically": false,
+  "download_only_after_rights_review": true,
+  "native_ready_conversion_is_a_derived_artifact_with_lineage_to_the_original_hash": true,
+  "user_agent": "networkRLCD-b1-acquisition/1.0 (rights-reviewed research verification; https://github.com/p-yan-6908/networkRLCD)",
+  "native_ready": {
+    "codec": "libx264",
+    "preset": "veryfast",
+    "crf": 18,
+    "profile": "main",
+    "pixel_format": "yuv420p",
+    "maximum_width": 1280,
+    "maximum_height": 720,
+    "audio": false,
+    "frame_rate": "unchanged",
+    "aspect_ratio": "unchanged",
+    "note": "The same conversion as the N1 acquisition, so B1's native-ready files match N1's."
+  }
+}

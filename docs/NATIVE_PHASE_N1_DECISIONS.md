@@ -181,3 +181,37 @@ unchanged ingest accepts a binding quote only if it is one of those, which none 
 first sixteen were. It reviews and clears nothing: all 74 rows are `not_reviewed`. For one
 candidate the title does not occur in the archived evidence, so ingest would refuse it as
 it stands.
+
+## 12. B1 acquisition gate (2026-10-10)
+
+Asked three questions, the owner answered:
+
+| Question | Answer |
+|---|---|
+| How the rights review of the 74 candidates is done | "I return a reviewed CSV": the owner or their reviewer fills in the manifest and returns it, and the agent checks it mechanically |
+| Download budget once the review is back | "10 GB, files under 1 GB" |
+| Where the space for the capture comes from | in the owner's words, "you can store old data here: /Users/pyan/networkRLCD/ARCHIVED_RESULTS.md" |
+
+The budget is recorded in `configs/native_backoff_benefit_b1_acquisition.json`: at most 10 GB
+of download, at most 1 GB per file, the same conversion as N1, and no automatic expansion of
+discovery. Seventy candidates are under 1 GB and total 9.65 GB by catalogue. The four larger
+ones are passed over and listed, never fetched.
+
+The third answer is read as follows, and the reading is the agent's.
+[ARCHIVED_RESULTS.md](../ARCHIVED_RESULTS.md) documents the private offsite archive of
+results and the byte-verified procedure by which archived files were removed locally, and it
+asks that any further cleanup make a new backup and receipt and review active dependencies
+again. So old results may be moved to that archive to make room for the capture.
+
+What follows from the three answers:
+
+- Nothing is downloaded until the reviewed CSV is returned. Then only candidates marked
+  `pass` or `needs_media_inspection`, under the cap and within the budget, are fetched.
+- Of the 32 GB free, about 14 GB go to B1's media. The capture needs 20 to 33 GB, depending on
+  how many sources screen as eligible. N1's raw stage-one capture (8.3 GB of event logs and
+  per-peer harness snapshots, no source media) is the old data that can move to the archive.
+- It is backed up and verified first. Local copies are removed only when the capture needs the
+  room and after the owner has seen the list. N1's result records and the audited cohort rows
+  stay tracked in the repository either way.
+- Source media are not results and are not put in the archive.
+
