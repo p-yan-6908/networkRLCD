@@ -734,6 +734,12 @@ def main(argv=None):
     p.add_argument("--run", required=True, type=Path)
     p.add_argument("--settings", type=Path)
     p.add_argument("--out", required=True, type=Path)
+    p = sub.add_parser(
+        "headroom", help="Hindsight headroom when the option set stops at or below the estimate"
+    )
+    p.add_argument("--run", required=True, type=Path)
+    p.add_argument("--settings", type=Path)
+    p.add_argument("--out", required=True, type=Path)
     p = sub.add_parser("transfer", help="Evaluate a finished run's frozen models once on a registered panel")
     p.add_argument("--run", required=True, type=Path)
     p.add_argument("--registration", required=True, type=Path)
@@ -800,6 +806,11 @@ def main(argv=None):
             from . import typed_bitrate_crossover as crossover
 
             print(crossover.headline(crossover.study(args.run, args.out, args.settings)))
+            return
+        if args.command == "headroom":
+            from . import typed_bitrate_headroom as headroom
+
+            print(headroom.headline(headroom.study(args.run, args.out, args.settings)))
             return
         if args.command == "transfer":
             print(headline(transfer(args.run, args.out, args.registration)))
