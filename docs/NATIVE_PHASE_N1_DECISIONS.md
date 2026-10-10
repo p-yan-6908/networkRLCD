@@ -172,3 +172,12 @@ other two. It changes no outcome.
 Still the owner's, and not started: the rights review of the 74 candidates and its explicit
 adoption, a download budget, the storage decision, and the instruction to fetch, screen, plan
 and capture.
+
+Prepared for the reviewer, from files already on disk and with nothing downloaded:
+`acquisition/native-b1/rights-review/evidence-extracts.json`, written by the unchanged
+`media-n1-acquisition evidence` on the unreviewed manifest. Per candidate it lists the
+strings that occur verbatim in the archived evidence (`verbatim_quote_candidates`). The
+unchanged ingest accepts a binding quote only if it is one of those, which none of N1's
+first sixteen were. It reviews and clears nothing: all 74 rows are `not_reviewed`. For one
+candidate the title does not occur in the archived evidence, so ingest would refuse it as
+it stands.
