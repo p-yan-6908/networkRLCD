@@ -111,3 +111,30 @@ The command replays the raw audit of every peer (12 minutes) and reports no outc
 | Interim can run | yes | |
 
 The record is `results/n1-status.json`.
+
+## 2026-10-09 23:40 EDT: the blinded interim
+
+```sh
+uv run --frozen media-actuator-qualification interim \
+    --protocol results/native-actuator-qualification-n1-plan/protocol.json \
+    --capture results/native-actuator-qualification-n1-stage-one \
+    --public results/n1-interim-public.json \
+    --sealed /Users/pyan/networkRLCD-n1-custodian/n1-interim-sealed.json
+```
+
+Both freezes verified immediately before. The routine printed the public record only:
+
+| | |
+|---|---:|
+| First-stage sources | 12 |
+| **Prescribed total sources** | **12** |
+| Sources passed over | 0 |
+| Capture support | passed, the figures of `status` |
+| Custodian bound into the record | `pyan (repository owner; procedural interim custodian, not independent)` |
+| Hash of the sealed record | `8503928c...` |
+
+A total of 12 reads the same whether the first-stage variance was small or precision was
+futile, and nothing else about the outcome is known at this point. The sealed record is in a
+directory outside the repository, readable by the owner only, and has not been opened. No
+reserve source is captured: the registered sample is the twelve first-stage sources, and the
+next registered step is the final analysis.
