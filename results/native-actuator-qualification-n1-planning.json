@@ -1,0 +1,42 @@
+{
+ "abi": "native_actuator_qualification_n1_planning",
+ "added_after_the_exploratory_results": true,
+ "assumes": "the N1 design per source: ten peers per schedule, six holds per peer",
+ "contrasts": {
+  "all schedules, ratio 1.05 minus 0.65": {
+   "interval95": [
+    0.33477336837593075,
+    2.1839959833863523
+   ],
+   "mean": 1.2593846758811416,
+   "p_value": 0.012125388172524182,
+   "per_source_sd": 1.4552335843873097,
+   "sources": 12,
+   "sources_needed": {
+    "effect 1, power 0.8": 19,
+    "effect 1, power 0.9": 25,
+    "effect 2, power 0.8": 7,
+    "effect 2, power 0.9": 8
+   }
+  },
+  "constrained schedules, holds 3-4, ratio 0.65 minus 1.05": {
+   "interval95": [
+    -0.16231338002188211,
+    2.6559298192491503
+   ],
+   "mean": 1.246808219613634,
+   "p_value": 0.07745203492274814,
+   "per_source_sd": 2.21779796508017,
+   "sources": 12,
+   "sources_needed": {
+    "effect 1, power 0.8": 41,
+    "effect 1, power 0.9": 54,
+    "effect 2, power 0.8": 12,
+    "effect 2, power 0.9": 15
+   }
+  }
+ },
+ "exploratory": true,
+ "for_planning_only": true,
+ "rows_sha256": "037aaa7e377ef2c84996dd931d898abedbd05a1f5dd7867b61d0801a9b7aff11"
+}

@@ -192,19 +192,73 @@ def explore(rows):
     )
 
 
+def sources_needed(spread, effect, power, limit=2000):
+    """Smallest number of sources at which a two-sided 5% t test of a mean detects ``effect``."""
+    for n in range(3, limit + 1):
+        critical, shift = stats.t.ppf(0.975, n - 1), effect * math.sqrt(n) / spread
+        reached = stats.nct.sf(critical, n - 1, shift) + stats.nct.cdf(-critical, n - 1, shift)
+        if reached >= power:
+            return n
+    return None
+
+
+def planning(rows, effects=(1.0, 2.0), powers=(0.8, 0.9)):
+    """A sizing note added after the exploratory results were read. For planning only.
+
+    How many sources a later study with this design per source would need to detect a given
+    difference in the on-time PSNR proxy, from the spread of per-source contrasts seen here.
+    The second contrast was chosen after seeing where the pilot's point estimates were
+    negative, so its mean is biased toward an effect and only its spread is used.
+    """
+    whole = source_means(rows, lambda r: r["utility"], key=lambda r: r["network_regime"])
+    cells = source_means(rows, lambda r: r["utility"], key=lambda r: (r["network_regime"], r["epoch"] // 2))
+    sources = sorted({k[0] for k in whole})
+    contrasts = {
+        "all schedules, ratio 1.05 minus 0.65": [
+            float(np.mean([whole[(s, r, 2)] - whole[(s, r, 0)] for r in REGIMES])) for s in sources
+        ],
+        "constrained schedules, holds 3-4, ratio 0.65 minus 1.05": [
+            float(np.mean([cells[(s, (r, 1), 0)] - cells[(s, (r, 1), 2)] for r in REGIMES[1:]]))
+            for s in sources
+            if all((s, (r, 1), arm) in cells for r in REGIMES[1:] for arm in (0, 2))
+        ],
+    }
+    out = {}
+    for name, values in contrasts.items():
+        spread = float(np.std(values, ddof=1))
+        out[name] = dict(
+            summary(values),
+            per_source_sd=spread,
+            sources_needed={
+                f"effect {effect:g}, power {power:g}": sources_needed(spread, effect, power)
+                for effect in effects
+                for power in powers
+            },
+        )
+    return dict(
+        abi=qualification.ABI + "_planning",
+        exploratory=True,
+        added_after_the_exploratory_results=True,
+        for_planning_only=True,
+        assumes="the N1 design per source: ten peers per schedule, six holds per peer",
+        contrasts=out,
+    )
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Exploratory description of the N1 cohort rows")
     parser.add_argument("--rows", required=True, type=Path)
     parser.add_argument("--out", required=True, type=Path)
+    parser.add_argument("--planning", action="store_true", help="write the sizing note instead")
     args = parser.parse_args(argv)
     if args.out.exists():
         parser.exit(2, "error: fresh output path required\n")
     rows, digest = load(args.rows)
-    report = dict(explore(rows), rows_sha256=digest)
+    report = dict(planning(rows) if args.planning else explore(rows), rows_sha256=digest)
     args.out.write_text(json.dumps(report, indent=1, sort_keys=True) + "\n")
     print(
         json.dumps(
-            {k: report[k] for k in ("exploratory", "complete_cohorts", "sources", "mock")}, sort_keys=True
+            {k: report.get(k) for k in ("exploratory", "complete_cohorts", "sources", "mock")}, sort_keys=True
         )
     )
 

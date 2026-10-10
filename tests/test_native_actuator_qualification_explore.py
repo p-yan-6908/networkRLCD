@@ -78,6 +78,20 @@ def test_regime_interaction_and_best_arm_tally():
     )
 
 
+def test_planning_sizes_a_later_study_from_the_spread_of_source_contrasts():
+    assert explore.sources_needed(1.0, 1.0, 0.8) == 10 and explore.sources_needed(1.0, 0.5, 0.8) == 34
+    assert explore.sources_needed(1.0, 1e-6, 0.8, limit=50) is None
+    note = explore.planning(synthetic(sources=6))
+    assert note["for_planning_only"] is True and note["added_after_the_exploratory_results"] is True
+    first, second = note["contrasts"].values()
+    assert first["sources"] == 6 and first["per_source_sd"] > 0
+    assert second["mean"] == pytest.approx(
+        4.0, abs=0.2
+    )  # the synthetic rows favour the low ratio when constrained
+    needed = second["sources_needed"]
+    assert needed["effect 1, power 0.9"] >= needed["effect 1, power 0.8"] >= needed["effect 2, power 0.8"]
+
+
 def test_holm_is_monotone_and_bounded():
     assert explore.holm([0.01, 0.04, 0.03]) == pytest.approx([0.03, 0.06, 0.06])
     assert explore.holm([0.9, 0.8]) == [1.0, 1.0]

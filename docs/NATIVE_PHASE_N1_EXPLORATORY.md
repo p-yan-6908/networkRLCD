@@ -170,3 +170,29 @@ registered Phase N2's job. The pilot suggests that the effect N2 would look for 
 few units under constrained schedules, and that a study aimed at it should condition on the
 moment within a session and not only on the schedule. Any change to N2 on that basis needs
 its own registration, and is the owner's decision.
+
+## Planning note, added afterwards
+
+This section was added after the results above had been read. It is for sizing a later study
+and supports no claim. `--planning` on the same command writes
+`results/native-actuator-qualification-n1-planning.json`.
+
+It asks how many sources a later study would need, with N1's design per source (ten peers per
+schedule, six holds per peer), for a two-sided 5% test of a mean difference in the on-time
+PSNR proxy.
+
+| Contrast | Per-source SD | Sources for a difference of 1 (80% / 90% power) | For a difference of 2 |
+|---|---:|---:|---:|
+| All schedules, ratio 1.05 minus 0.65 | 1.46 | 19 / 25 | 7 / 8 |
+| Constrained schedules, holds 3-4, ratio 0.65 minus 1.05 | 2.22 | 41 / 54 | 12 / 15 |
+
+The second contrast pools the three constrained schedules in the middle pair of holds, where
+a benefit of backing off would be expected. It was defined after seeing that the pilot's
+point estimates there were below zero, so its mean in N1, +1.25 [-0.16, +2.66] in favour of
+the lower ratio, is biased toward an effect and is not evidence of one. Only its spread is
+used.
+
+Read with that caution: a study aimed at the benefit of backing off after a capacity drop
+needs on the order of 40 to 55 fresh sources to detect a difference of 1 unit, the size of
+the powered panel's practical-effect gate, and 12 to 15 to detect 2 units. The nine reserve
+sources of the sealed N1 plan are reserved to N1 and are not available for it.
