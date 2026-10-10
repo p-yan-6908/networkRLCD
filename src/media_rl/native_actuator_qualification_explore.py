@@ -353,19 +353,66 @@ def planning(rows, effects=(1.0, 2.0), powers=(0.8, 0.9)):
     )
 
 
+PROPOSED_GROWTH = math.log(1.05)  # the flag proposed for Native Phase B1: the estimate grew by less than 5%
+
+
+def flag_sizing(rows, growth=PROPOSED_GROWTH, effects=(1.0, 1.5, 2.0), powers=(0.8, 0.9)):
+    """Sizing of a confirmatory study of backing off in flagged holds. For planning only.
+
+    A hold is flagged when the frozen estimate grew by less than 5% since the previous hold. The
+    quantity is the mean of the two lower ratios minus the top ratio in the on-time PSNR proxy
+    among a source's flagged holds. This is a third look at the same rows: its mean is not
+    evidence, and only the spread over sources and the cell counts are used.
+    """
+    held = with_signals(rows)
+    cells = defaultdict(list)
+    for r in held:
+        if r["signals"]["estimate_growth"] < growth:
+            cells[(r["cluster_id"], r["arm"])].append(r["utility"])
+    sources = sorted({k[0] for k in cells})
+    kept = [s for s in sources if all((s, arm) in cells for arm in ARMS)]
+    benefit = [
+        float((np.mean(cells[(s, 0)]) + np.mean(cells[(s, 1)])) / 2 - np.mean(cells[(s, 2)])) for s in kept
+    ]
+    spread = float(np.std(benefit, ddof=1))
+    return dict(
+        abi=qualification.ABI + "_flag_sizing",
+        exploratory=True,
+        for_planning_only=True,
+        third_look_at_the_same_rows=True,
+        flag=f"log growth of the frozen estimate since the previous hold below {growth:.4f}",
+        quantity="mean of the proxy at ratios 0.65 and 0.85 minus the proxy at ratio 1.05, flagged holds",
+        holds=len(held),
+        flagged_share=sum(len(v) for v in cells.values()) / len(held),
+        flagged_holds_per_source=[
+            sum(len(cells[(s, arm)]) for arm in ARMS if (s, arm) in cells) for s in sources
+        ],
+        smallest_flagged_cell=min(len(v) for v in cells.values()),
+        benefit=summary(benefit),
+        per_source_sd=spread,
+        sources_needed={
+            f"effect {effect:g}, power {power:g}": sources_needed(spread, effect, power)
+            for effect in effects
+            for power in powers
+        },
+    )
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Exploratory description of the N1 cohort rows")
     parser.add_argument("--rows", required=True, type=Path)
     parser.add_argument("--out", required=True, type=Path)
     parser.add_argument("--planning", action="store_true", help="write the sizing note instead")
     parser.add_argument("--conditional", action="store_true", help="write the state-conditional pass instead")
+    parser.add_argument("--sizing", action="store_true", help="write the sizing of the proposed flag instead")
     args = parser.parse_args(argv)
     if args.out.exists():
         parser.exit(2, "error: fresh output path required\n")
     rows, digest = load(args.rows)
-    if args.planning and args.conditional:
+    if args.planning + args.conditional + args.sizing > 1:
         parser.exit(2, "error: one pass per output\n")
-    made = planning(rows) if args.planning else conditional(rows) if args.conditional else explore(rows)
+    passes = ((args.planning, planning), (args.conditional, conditional), (args.sizing, flag_sizing))
+    made = next((run for chosen, run in passes if chosen), explore)(rows)
     report = dict(made, rows_sha256=digest)
     args.out.write_text(json.dumps(report, indent=1, sort_keys=True) + "\n")
     print(

@@ -137,6 +137,18 @@ def test_conditional_pass_finds_a_signal_that_modifies_the_effect():
     assert report["signals"]["loss_fraction"]["holds"] < len(held)  # absent values are left out, not imputed
 
 
+def test_flag_sizing_uses_flagged_holds_and_pools_the_lower_ratios():
+    rows = with_state(synthetic(sources=5, peers=8))
+    note = explore.flag_sizing(rows, growth=0.0)  # in the synthetic rows the estimate falls after ratio 0.65
+    assert note["for_planning_only"] is True and note["third_look_at_the_same_rows"] is True
+    assert 0 < note["flagged_share"] < 1 and note["smallest_flagged_cell"] >= 1
+    assert len(note["flagged_holds_per_source"]) == note["benefit"]["sources"] == 5
+    assert note["per_source_sd"] > 0 and set(note["sources_needed"]) >= {
+        "effect 1, power 0.8",
+        "effect 2, power 0.9",
+    }
+
+
 def test_holm_is_monotone_and_bounded():
     assert explore.holm([0.01, 0.04, 0.03]) == pytest.approx([0.03, 0.06, 0.06])
     assert explore.holm([0.9, 0.8]) == [1.0, 1.0]

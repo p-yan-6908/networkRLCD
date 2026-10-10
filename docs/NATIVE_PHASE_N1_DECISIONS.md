@@ -140,3 +140,13 @@ The repository owner adopted the final rights review as their own importer asser
 21 ingested sources, and instructed that stage one be captured as registered. Both answers
 are quoted in the acquisition log. The custodian record of section 3 applies to the interim
 unchanged.
+
+## 10. After the N1 result (2026-10-10)
+
+Asked which native phase should come next, the owner chose "Targeted backoff test": a draft
+registration for the owner's review, and a rights-review manifest for the 74 Discovery V2
+candidates that the N1 queue did not draw, with nothing downloaded or captured until the owner
+approves. The draft is
+[NATIVE_PHASE_B1_BACKOFF_BENEFIT_DRAFT.md](NATIVE_PHASE_B1_BACKOFF_BENEFIT_DRAFT.md). Phase N2
+stays registered and untouched. Asked whether to push the local commits, the owner chose "Not
+yet".

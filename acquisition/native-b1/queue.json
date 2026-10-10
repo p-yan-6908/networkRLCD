@@ -1,0 +1,1271 @@
+{
+  "abi": "native_phase_b1_acquisition_queue",
+  "seed": 260107,
+  "candidate_clusters": 110,
+  "drawn_by_n1": 36,
+  "queue": [
+    {
+      "position": 0,
+      "source_cluster_id": "candidate-960b7a4238ded57c01f2d745",
+      "asset_id": "commons-25079647",
+      "source_title": "Cheetahs on the Edge (Director's Cut)",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 426.5416666666667,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Cheetahs_on_the_Edge_(Director%27s_Cut).ogv",
+      "estimated_bytes": 468601214,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 36
+    },
+    {
+      "position": 1,
+      "source_cluster_id": "candidate-04eb9888197fe2fe591f13b2",
+      "asset_id": "commons-126926708",
+      "source_title": "Milking Adult Malayan Pit Viper (Calloselasma rhodostoma) Venom, in Slow Motion",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 318.608,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Milking_Adult_Malayan_Pit_Viper_(Calloselasma_rhodostoma)_Venom,_in_Slow_Motion.webm",
+      "estimated_bytes": 360864804,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 37
+    },
+    {
+      "position": 2,
+      "source_cluster_id": "candidate-efd533d28e62091a93465608",
+      "asset_id": "commons-197021465",
+      "source_title": "AVX to SNA in a Cessna 177-RG time lapse video by Don Ramey Logan",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 177.544,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:AVX_to_SNA_in_a_Cessna_177-RG_time_lapse_video_by_Don_Ramey_Logan.webm",
+      "estimated_bytes": 351602207,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 38
+    },
+    {
+      "position": 3,
+      "source_cluster_id": "candidate-991b3530cbffb37bea065140",
+      "asset_id": "commons-16347124",
+      "source_title": "Jarry - M\u00e9tro de Montr\u00e9al (1280\u00d7720)",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 110.144,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Jarry_-_M%C3%A9tro_de_Montr%C3%A9al_(1280%C3%97720).ogv",
+      "estimated_bytes": 64992572,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 39
+    },
+    {
+      "position": 4,
+      "source_cluster_id": "candidate-7e2aeabad63c1bb8d6bb31e9",
+      "asset_id": "commons-31719855",
+      "source_title": "Eastern Metropolitan Bypass - Mathpukur to Sukanta Nagar - Kolkata 2014-02-12 2179",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 199,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Eastern_Metropolitan_Bypass_-_Mathpukur_to_Sukanta_Nagar_-_Kolkata_2014-02-12_2179.ogv",
+      "estimated_bytes": 199314514,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 40
+    },
+    {
+      "position": 5,
+      "source_cluster_id": "candidate-d769e27ae2b88986d7e3d477",
+      "asset_id": "commons-150246239",
+      "source_title": "Urumi in Kalaripayattu",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 82.322,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Urumi_in_Kalaripayattu.webm",
+      "estimated_bytes": 13133325,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 41
+    },
+    {
+      "position": 6,
+      "source_cluster_id": "candidate-5ab2f793a7e925558cb56e5f",
+      "asset_id": "commons-113376313",
+      "source_title": "2021-12-14 manif-antipasse-sanitaire-Strasbourg-apercu",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 91.96000000000001,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:2021-12-14_manif-antipasse-sanitaire-Strasbourg-apercu.webm",
+      "estimated_bytes": 10919599,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 42
+    },
+    {
+      "position": 7,
+      "source_cluster_id": "candidate-9e820221754f3b941ffa2a72",
+      "asset_id": "commons-195202565",
+      "source_title": "IAW Panel",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 2404.722,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:IAW_Panel.webm",
+      "estimated_bytes": 233164918,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 43
+    },
+    {
+      "position": 8,
+      "source_cluster_id": "candidate-7656aa0cc38d8a832b2c9962",
+      "asset_id": "commons-24643904",
+      "source_title": "Madonna speaks out in Russia about anti-gay law",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 302.55,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Madonna_speaks_out_in_Russia_about_anti-gay_law.webm",
+      "estimated_bytes": 45891932,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 44
+    },
+    {
+      "position": 9,
+      "source_cluster_id": "candidate-23e88baeb522a09c00d5540a",
+      "asset_id": "commons-29654117",
+      "source_title": "Caminandes- Llama Drama - Short Movie",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 89.90766439909297,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Caminandes-_Llama_Drama_-_Short_Movie.ogv",
+      "estimated_bytes": 31428271,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 45
+    },
+    {
+      "position": 10,
+      "source_cluster_id": "candidate-1a3b055f425eeb852fff9ce4",
+      "asset_id": "commons-37851200",
+      "source_title": "\u0423\u0436\u0430\u0441! \u0421\u0435\u0440\u0434\u0446\u0435 \u0443\u0436\u0435 \u043d\u0435 \u0432\u044b\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 - \u0443\u043a\u0440\u0430\u0438\u043d\u0441\u043a\u0438\u0435 \u0432\u043e\u0439\u0441\u043a\u0430 \u043e\u0431\u0441\u0442\u0440\u0435\u043b\u0438\u0432\u0430\u044e\u0442 \u0436\u0438\u043b\u044b\u0435 \u0434\u043e\u043c\u0430. \u0414\u043e\u043d\u0435\u0446\u043a 09.01.2015",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 326.7744217687075,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:%D0%A3%D0%B6%D0%B0%D1%81!_%D0%A1%D0%B5%D1%80%D0%B4%D1%86%D0%B5_%D1%83%D0%B6%D0%B5_%D0%BD%D0%B5_%D0%B2%D1%8B%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%B2%D0%B0%D0%B5%D1%82_-_%D1%83%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B5_%D0%B2%D0%BE%D0%B9%D1%81%D0%BA%D0%B0_%D0%BE%D0%B1%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%B8%D0%B2%D0%B0%D1%8E%D1%82_%D0%B6%D0%B8%D0%BB%D1%8B%D0%B5_%D0%B4%D0%BE%D0%BC%D0%B0._%D0%94%D0%BE%D0%BD%D0%B5%D1%86%D0%BA_09.01.2015.ogv",
+      "estimated_bytes": 97267781,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 46
+    },
+    {
+      "position": 11,
+      "source_cluster_id": "candidate-774ac7e8b723ebd8217a585e",
+      "asset_id": "commons-159120799",
+      "source_title": "Oystercatcher juvenile 15-06-24 2",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 88.44,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Oystercatcher_juvenile_15-06-24_2.webm",
+      "estimated_bytes": 38945767,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 47
+    },
+    {
+      "position": 12,
+      "source_cluster_id": "candidate-8f3005f3e77c87a38b1731d4",
+      "asset_id": "commons-164360284",
+      "source_title": "Entretien-avec-une-math\u00e9maticienne Camerounaise",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 1165.789,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Entretien-avec-une-math%C3%A9maticienne_Camerounaise.webm",
+      "estimated_bytes": 371851703,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 48
+    },
+    {
+      "position": 13,
+      "source_cluster_id": "candidate-f8ee703e0f08d909183b5f25",
+      "asset_id": "commons-90795798",
+      "source_title": "coffee-run",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 184.641,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Coffee_Run_-_Blender_Open_Movie-full_movie.webm",
+      "estimated_bytes": 29260881,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 49
+    },
+    {
+      "position": 14,
+      "source_cluster_id": "candidate-d74d88dc9d9dd5c8f22b2d90",
+      "asset_id": "commons-11763157",
+      "source_title": "Mata surdegar",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 280.82213151927436,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Mata_surdegar.ogv",
+      "estimated_bytes": 22324717,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 50
+    },
+    {
+      "position": 15,
+      "source_cluster_id": "candidate-009950f08c78b2d398e3b02a",
+      "asset_id": "commons-87513181",
+      "source_title": "Tamduvor - Ystad-2014",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 83.599164,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Tamduvor_-_Ystad-2014.ogv",
+      "estimated_bytes": 20971520,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 51
+    },
+    {
+      "position": 16,
+      "source_cluster_id": "candidate-b8c5fe27f6e13e0a7cb2826d",
+      "asset_id": "commons-145183808",
+      "source_title": "Monica Sex ,2024 video2",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 417707.158,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Monica_Sex_,2024_video2.webm",
+      "estimated_bytes": 765209,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 52
+    },
+    {
+      "position": 17,
+      "source_cluster_id": "candidate-380c5c0b5a400be74eac6274",
+      "asset_id": "commons-154034025",
+      "source_title": "Medical AI Decision support",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 92.145,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Medical_AI_Decision_support.webm",
+      "estimated_bytes": 1098353,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 53
+    },
+    {
+      "position": 18,
+      "source_cluster_id": "candidate-5bbcf25f8d04493f40aa63df",
+      "asset_id": "commons-196082706",
+      "source_title": "\u0642\u0637\u0639\u0647\u0654 \u067e\u0627\u06cc\u0627\u0646 (\u0627\u0648\u062a\u0631\u0648) \u0627\u0632 \u0622\u0644\u0628\u0648\u0645 \u0628\u0627\u0632\u06af\u0634\u062a \u0628\u0647 \u0637\u0628\u06cc\u0639\u062a \u0628\u062e\u0634, \u06a9\u0644\u0627\u0633\u06cc\u06a9\u0627\u0644 (\u0627\u062c\u0631\u0627\u06cc \u0632\u0646\u062f\u0647) (\u0628\u0646\u062f \u0645\u0631\u062a\u0627\u0636)",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 108.24666666666667,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:%D9%82%D8%B7%D8%B9%D9%87%D9%94_%D9%BE%D8%A7%DB%8C%D8%A7%D9%86_(%D8%A7%D9%88%D8%AA%D8%B1%D9%88)_%D8%A7%D8%B2_%D8%A2%D9%84%D8%A8%D9%88%D9%85_%D8%A8%D8%A7%D8%B2%DA%AF%D8%B4%D8%AA_%D8%A8%D9%87_%D8%B7%D8%A8%DB%8C%D8%B9%D8%AA_%D8%A8%D8%AE%D8%B4,_%DA%A9%D9%84%D8%A7%D8%B3%DB%8C%DA%A9%D8%A7%D9%84_(%D8%A7%D8%AC%D8%B1%D8%A7%DB%8C_%D8%B2%D9%86%D8%AF%D9%87)_(%D8%A8%D9%86%D8%AF_%D9%85%D8%B1%D8%AA%D8%A7%D8%B6).ogv",
+      "estimated_bytes": 234090270,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 54
+    },
+    {
+      "position": 19,
+      "source_cluster_id": "candidate-e0ffa10caf787d8440a2ed16",
+      "asset_id": "commons-164345744",
+      "source_title": "Entrevista Victoria von der Meden - TecMTY",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 271.62,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Entrevista_Victoria_von_der_Meden_-_TecMTY.webm",
+      "estimated_bytes": 52434436,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 55
+    },
+    {
+      "position": 20,
+      "source_cluster_id": "candidate-d55baeeef167b66ffcfed87c",
+      "asset_id": "commons-54320092",
+      "source_title": "FULL DOCUMENTARY - Panopticon privacy - Peter Vlemmix",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 3434.587,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:FULL_DOCUMENTARY_-_Panopticon_privacy_-_Peter_Vlemmix.webm",
+      "estimated_bytes": 662709069,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 56
+    },
+    {
+      "position": 21,
+      "source_cluster_id": "candidate-a15908abd3fd80910a8bade3",
+      "asset_id": "commons-36216685",
+      "source_title": "Robotik- Schalten elektrischer Verbraucher und Sensorerfassung-1280x720",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 1261.042,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Robotik-_Schalten_elektrischer_Verbraucher_und_Sensorerfassung-1280x720.webm",
+      "estimated_bytes": 125352008,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 57
+    },
+    {
+      "position": 22,
+      "source_cluster_id": "candidate-6799facbc8b35d5ebfd72aa8",
+      "asset_id": "commons-4397513",
+      "source_title": "Tropical Low George",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 96.632367,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Tropical_Low_George.ogv",
+      "estimated_bytes": 10193214,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 58
+    },
+    {
+      "position": 23,
+      "source_cluster_id": "candidate-ea741c9e4e73b38b65fa7bc6",
+      "asset_id": "commons-164428565",
+      "source_title": "Signature - Weinkuelschrank-1",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 182.952,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Signature_-_Weinkuelschrank-1.webm",
+      "estimated_bytes": 2927232,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 59
+    },
+    {
+      "position": 24,
+      "source_cluster_id": "candidate-6dfb20a5e20a5957438719b6",
+      "asset_id": "commons-11608613",
+      "source_title": "Planning a mobile screencast - tools needed",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 132.96666666666667,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Planning_a_mobile_screencast_-_tools_needed.ogv",
+      "estimated_bytes": 7935923,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 60
+    },
+    {
+      "position": 25,
+      "source_cluster_id": "candidate-31048d204018a9443099e305",
+      "asset_id": "commons-192891560",
+      "source_title": "Viktor Pinchuk in the National Library of Bhutan",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 83.60000000000001,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Viktor_Pinchuk_in_the_National_Library_of_Bhutan.webm",
+      "estimated_bytes": 9892570,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 61
+    },
+    {
+      "position": 26,
+      "source_cluster_id": "candidate-7020f8a551a941fde53e96fe",
+      "asset_id": "commons-182867554",
+      "source_title": "\u0411\u043e\u043b\u0432\u0430\u043d\u0447\u0438\u043a",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 200.87665664054225,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D0%BB%D0%B2%D0%B0%D0%BD%D1%87%D0%B8%D0%BA.mpg",
+      "estimated_bytes": 474169348,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 62
+    },
+    {
+      "position": 27,
+      "source_cluster_id": "candidate-2efc99169c8598a60642c2fd",
+      "asset_id": "commons-37737440",
+      "source_title": "Y Z \u00c5 \u00c4 \u00d6",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 106.916,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Y_Z_%C3%85_%C3%84_%C3%96.webm",
+      "estimated_bytes": 1649838,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 63
+    },
+    {
+      "position": 28,
+      "source_cluster_id": "candidate-498bc47bd6eab625646334b9",
+      "asset_id": "commons-104688649",
+      "source_title": "Rotifera 4 \u041a\u043e\u043b\u043e\u0432\u0440\u0430\u0442\u043a\u0430 1",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 136.96,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Rotifera_4_%D0%9A%D0%BE%D0%BB%D0%BE%D0%B2%D1%80%D0%B0%D1%82%D0%BA%D0%B0_1.webm",
+      "estimated_bytes": 83027000,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 64
+    },
+    {
+      "position": 29,
+      "source_cluster_id": "candidate-87b7b1e8a55ae44599d4474a",
+      "asset_id": "commons-32943080",
+      "source_title": "02-aula-04-720",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 643.3530000000001,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:02-aula-04-720.webm",
+      "estimated_bytes": 83419978,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 65
+    },
+    {
+      "position": 30,
+      "source_cluster_id": "candidate-856dd0ec42ee25a8d5c0524c",
+      "asset_id": "commons-149633107",
+      "source_title": "Entrevista Pariamarca",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 86.336,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Entrevista_Pariamarca.webm",
+      "estimated_bytes": 18952934,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 66
+    },
+    {
+      "position": 31,
+      "source_cluster_id": "candidate-b7ec6fb1b34b1798e367403a",
+      "asset_id": "commons-177506213",
+      "source_title": "Property Creation Helper Demo 2025",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 140.284,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Property_Creation_Helper_Demo_2025.webm",
+      "estimated_bytes": 14930598,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 67
+    },
+    {
+      "position": 32,
+      "source_cluster_id": "candidate-83c45f1fe5b0e6cf88c7ce69",
+      "asset_id": "commons-103469799",
+      "source_title": "Laiuse loss 2021",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 87.42066666666666,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Laiuse_loss_2021.ogv",
+      "estimated_bytes": 261680792,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 68
+    },
+    {
+      "position": 33,
+      "source_cluster_id": "candidate-46ad2c3c79f02dbe6af8e146",
+      "asset_id": "commons-12664157",
+      "source_title": "Wielka Orkiestra \u015awi\u0105tecznej Pomocy - \u015awiate\u0142ko do nieba, Warszawa 2011",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 256.7898666666667,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Wielka_Orkiestra_%C5%9Awi%C4%85tecznej_Pomocy_-_%C5%9Awiate%C5%82ko_do_nieba,_Warszawa_2011.ogv",
+      "estimated_bytes": 87506004,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 69
+    },
+    {
+      "position": 34,
+      "source_cluster_id": "candidate-bda23beebb3c92ab5f8a9bc8",
+      "asset_id": "commons-52325031",
+      "source_title": "caminandes-3",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 150.104,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm",
+      "estimated_bytes": 59968030,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 70
+    },
+    {
+      "position": 35,
+      "source_cluster_id": "candidate-c131596f377171aa15528525",
+      "asset_id": "commons-34869802",
+      "source_title": "Abschleppfahrzeug PKW Kran",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 160.4,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Abschleppfahrzeug_PKW_Kran.ogv",
+      "estimated_bytes": 37456185,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 71
+    },
+    {
+      "position": 36,
+      "source_cluster_id": "candidate-be30760ab3d4ada254d92c85",
+      "asset_id": "commons-50409539",
+      "source_title": "Galaxy Collision Animation- James Webb Space Telescope Science",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 101.133,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Galaxy_Collision_Animation-_James_Webb_Space_Telescope_Science.webm",
+      "estimated_bytes": 36014518,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 72
+    },
+    {
+      "position": 37,
+      "source_cluster_id": "candidate-30990492ba35312e6dc1864b",
+      "asset_id": "commons-193231073",
+      "source_title": "Az Orsz\u00e1ggy\u0171l\u00e9s megalakul\u00e1sa - 2026.05.09 (12)",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 215.4721549636804,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Az_Orsz%C3%A1ggy%C5%B1l%C3%A9s_megalakul%C3%A1sa_-_2026.05.09_(12).ogg",
+      "estimated_bytes": 129846363,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 73
+    },
+    {
+      "position": 38,
+      "source_cluster_id": "candidate-8d4061c65e9473ae5570145a",
+      "asset_id": "commons-142165496",
+      "source_title": "Animation of the anatomy and physiology of the human brain AS",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 113.423,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Animation_of_the_anatomy_and_physiology_of_the_human_brain_AS.webm",
+      "estimated_bytes": 137389508,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 74
+    },
+    {
+      "position": 39,
+      "source_cluster_id": "candidate-d2c6033f304275c26c773f14",
+      "asset_id": "commons-141992469",
+      "source_title": "Quinta do Lavrado, \u201cum buraco\u201d no centro de Lisboa onde tudo falta e pouco funciona",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 266.601,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Quinta_do_Lavrado,_%E2%80%9Cum_buraco%E2%80%9D_no_centro_de_Lisboa_onde_tudo_falta_e_pouco_funciona.webm",
+      "estimated_bytes": 157509096,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 75
+    },
+    {
+      "position": 40,
+      "source_cluster_id": "candidate-cef440b14ea6396d95c697c6",
+      "asset_id": "commons-65564698",
+      "source_title": "Ayatollah Khamenei narrates Ali Akbar's martyrdom",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 287.961,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Ayatollah_Khamenei_narrates_Ali_Akbar%27s_martyrdom.webm",
+      "estimated_bytes": 31705494,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 76
+    },
+    {
+      "position": 41,
+      "source_cluster_id": "candidate-846efd94d17fa7eab33ce897",
+      "asset_id": "commons-115398295",
+      "source_title": "Strategije delavskega organiziranja in viri mo\u010di - Andra\u017e Mali",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 1895.0810000000001,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Strategije_delavskega_organiziranja_in_viri_mo%C4%8Di_-_Andra%C5%BE_Mali.webm",
+      "estimated_bytes": 338617144,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 77
+    },
+    {
+      "position": 42,
+      "source_cluster_id": "candidate-42a40eb275043c6428ce7fff",
+      "asset_id": "commons-28291714",
+      "source_title": "Little tombstone",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 322.08399092970524,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Little_tombstone.ogv",
+      "estimated_bytes": 106717265,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 78
+    },
+    {
+      "position": 43,
+      "source_cluster_id": "candidate-0c65904767e1920c601dd11e",
+      "asset_id": "commons-116030477",
+      "source_title": "Kolesarska praprotna pot z Golovca",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 193.012,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Kolesarska_praprotna_pot_z_Golovca.webm",
+      "estimated_bytes": 706906293,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 79
+    },
+    {
+      "position": 44,
+      "source_cluster_id": "candidate-d8c88bf3ea5b519ce20f7eea",
+      "asset_id": "commons-150122144",
+      "source_title": "Entrevistaaa",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 116.307,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Entrevistaaa.webm",
+      "estimated_bytes": 149694759,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 80
+    },
+    {
+      "position": 45,
+      "source_cluster_id": "candidate-882c6571f32c9894880d11e5",
+      "asset_id": "commons-125729780",
+      "source_title": "Saggat mit Untertiteln mpeg2video",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 125.94744888888889,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Saggat_mit_Untertiteln_mpeg2video.mpg",
+      "estimated_bytes": 28338176,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 81
+    },
+    {
+      "position": 46,
+      "source_cluster_id": "candidate-a57403d318ce4c12bfa33f29",
+      "asset_id": "commons-123079769",
+      "source_title": "Beispiel animierte Textur Visualisierung Cyberspace 4500p60 20220916",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 80.016,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Beispiel_animierte_Textur_Visualisierung_Cyberspace_4500p60_20220916.webm",
+      "estimated_bytes": 4285351468,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 82
+    },
+    {
+      "position": 47,
+      "source_cluster_id": "candidate-4bd625c1ae8ec46270dd5251",
+      "asset_id": "commons-46448573",
+      "source_title": "Wikipedia 15 for 15- Cathy Casserly",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 900.466,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Wikipedia_15_for_15-_Cathy_Casserly.webm",
+      "estimated_bytes": 53560885,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 83
+    },
+    {
+      "position": 48,
+      "source_cluster_id": "candidate-6d8558e1868dd9f3666320f5",
+      "asset_id": "commons-151517460",
+      "source_title": "St Moling's Well Mullinakill",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 165.653,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:St_Moling%27s_Well_Mullinakill.webm",
+      "estimated_bytes": 1308356555,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 84
+    },
+    {
+      "position": 49,
+      "source_cluster_id": "candidate-db9c3fadbd2b4f891873c2f0",
+      "asset_id": "commons-149883368",
+      "source_title": "Entrevista a Invitada del Inti Raymi -San Marcos (1)",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 112.869,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Entrevista_a_Invitada_del_Inti_Raymi_-San_Marcos_(1).webm",
+      "estimated_bytes": 22676754,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 85
+    },
+    {
+      "position": 50,
+      "source_cluster_id": "candidate-dde2677761687e5b726ea50c",
+      "asset_id": "commons-120089455",
+      "source_title": "Address by Volodymyr Zelensky at the end of the 130-th day of the full-scale war",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 364.621,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Address_by_Volodymyr_Zelensky_at_the_end_of_the_130-th_day_of_the_full-scale_war.webm",
+      "estimated_bytes": 10987725,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 86
+    },
+    {
+      "position": 51,
+      "source_cluster_id": "candidate-68e50b02453249d167cf1c0a",
+      "asset_id": "commons-149456375",
+      "source_title": "Z.ENTREVISTA A UNA DE LAS PRINCIPALES BAILARINAS DE LA FESTIVIDAD",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 145.968,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Z.ENTREVISTA_A_UNA_DE_LAS_PRINCIPALES_BAILARINAS_DE_LA_FESTIVIDAD.webm",
+      "estimated_bytes": 139657254,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 87
+    },
+    {
+      "position": 52,
+      "source_cluster_id": "candidate-3d25d1302e98629416efcd3e",
+      "asset_id": "commons-77585130",
+      "source_title": "Inside TransJakarta Corridor 13 bus",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 109.678,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Inside_TransJakarta_Corridor_13_bus.webm",
+      "estimated_bytes": 31758631,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 88
+    },
+    {
+      "position": 53,
+      "source_cluster_id": "candidate-288796336ada037e08315466",
+      "asset_id": "commons-177538713",
+      "source_title": "What-Is-Public-Relations 1 1",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 476.312,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:What-Is-Public-Relations_1_1.webm",
+      "estimated_bytes": 21958476,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 89
+    },
+    {
+      "position": 54,
+      "source_cluster_id": "candidate-e55141622b398bc402795e81",
+      "asset_id": "commons-140997968",
+      "source_title": "Wp-ta-plant-project1-short-IPNI-POWO-WFO",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 397.23900000000003,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Wp-ta-plant-project1-short-IPNI-POWO-WFO.webm",
+      "estimated_bytes": 130633319,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 90
+    },
+    {
+      "position": 55,
+      "source_cluster_id": "candidate-927a8cb48ef2bf0b8d6f203a",
+      "asset_id": "commons-46671233",
+      "source_title": "glass-half",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 193.223,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Glass_Half_-_3D_animation_with_OpenGL_cartoon_rendering.webm",
+      "estimated_bytes": 163245839,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 91
+    },
+    {
+      "position": 56,
+      "source_cluster_id": "candidate-baee04f066504fd2e981a8b8",
+      "asset_id": "commons-26755912",
+      "source_title": "2011 08 07 Falling down in sandhill crossing and a kind Aussie in Simpson desert .",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 258.038,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:2011_08_07_Falling_down_in_sandhill_crossing_and_a_kind_Aussie_in_Simpson_desert_..webm",
+      "estimated_bytes": 102291276,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 92
+    },
+    {
+      "position": 57,
+      "source_cluster_id": "candidate-0799d116b859dc535d897a6f",
+      "asset_id": "commons-48263008",
+      "source_title": "English Grammar \u2014 Past Continuous \u2014 Structure",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 149.748,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:English_Grammar_%E2%80%94_Past_Continuous_%E2%80%94_Structure.webm",
+      "estimated_bytes": 5605156,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 93
+    },
+    {
+      "position": 58,
+      "source_cluster_id": "candidate-c58f80c4d24705cc38a76c89",
+      "asset_id": "commons-74471324",
+      "source_title": "Rally for the termination of construction and restoration of the square (2018;11;17 video) 04",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 165.43333333333334,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Rally_for_the_termination_of_construction_and_restoration_of_the_square_(2018;11;17_video)_04.ogv",
+      "estimated_bytes": 161609905,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 94
+    },
+    {
+      "position": 59,
+      "source_cluster_id": "candidate-c4a1cf42e3e6276ad0f259f6",
+      "asset_id": "commons-19354077",
+      "source_title": "WPA Oslo 2012-05-23 HM Presentation Lennart Guldbrandsson",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 1218.552,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:WPA_Oslo_2012-05-23_HM_Presentation_Lennart_Guldbrandsson.ogv",
+      "estimated_bytes": 95826315,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 95
+    },
+    {
+      "position": 60,
+      "source_cluster_id": "candidate-9486e38c5de90191704127bd",
+      "asset_id": "commons-197166252",
+      "source_title": "Seirbh\u00eds\u00ed st\u00e1it as Gaeilge \u2013 P\u00e1id\u00ed \u00d3 Lion\u00e1ird, Oifig an Choimisin\u00e9ara Teanga \u2013 Near FM (2026)",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 1878.247,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Seirbh%C3%ADs%C3%AD_st%C3%A1it_as_Gaeilge_%E2%80%93_P%C3%A1id%C3%AD_%C3%93_Lion%C3%A1ird,_Oifig_an_Choimisin%C3%A9ara_Teanga_%E2%80%93_Near_FM_(2026).webm",
+      "estimated_bytes": 70251220,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 96
+    },
+    {
+      "position": 61,
+      "source_cluster_id": "candidate-2c82de841b42535b6db06734",
+      "asset_id": "commons-145402460",
+      "source_title": "Health, Culture, AI Access to Knowledge, Right to Research in Africa Conf., Cape Town, 26Jan2023",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 7019.7480000000005,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Health,_Culture,_AI_Access_to_Knowledge,_Right_to_Research_in_Africa_Conf.,_Cape_Town,_26Jan2023.webm",
+      "estimated_bytes": 583213573,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 97
+    },
+    {
+      "position": 62,
+      "source_cluster_id": "candidate-fca12d914c7d230893d3432e",
+      "asset_id": "commons-48664236",
+      "source_title": "Por qu\u00e9 hay desabastecimiento en Venezuela",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 521.0325623582767,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Por_qu%C3%A9_hay_desabastecimiento_en_Venezuela.ogv",
+      "estimated_bytes": 277343827,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 98
+    },
+    {
+      "position": 63,
+      "source_cluster_id": "candidate-f90d4799f7a2794c04aa923d",
+      "asset_id": "commons-11607306",
+      "source_title": "CamsStudio demo",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 147,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:CamsStudio_demo.ogv",
+      "estimated_bytes": 3786088,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 99
+    },
+    {
+      "position": 64,
+      "source_cluster_id": "candidate-fa1e3221f969dda560c370d8",
+      "asset_id": "commons-77900952",
+      "source_title": "spring",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 464.141,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Spring_-_Blender_Open_Movie.webm",
+      "estimated_bytes": 81781205,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 100
+    },
+    {
+      "position": 65,
+      "source_cluster_id": "candidate-29c78e8563c12b0f549d6487",
+      "asset_id": "commons-155597209",
+      "source_title": "Video en dron de la UAA para estudiantes de quinto semestre EAyGC 06",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 327.448,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Video_en_dron_de_la_UAA_para_estudiantes_de_quinto_semestre_EAyGC_06.webm",
+      "estimated_bytes": 189820236,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 101
+    },
+    {
+      "position": 66,
+      "source_cluster_id": "candidate-a0c4f8732e69e728674899b6",
+      "asset_id": "commons-10885699",
+      "source_title": "Skillshare 2010 Fossa 04",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 104.96,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Skillshare_2010_Fossa_04.ogv",
+      "estimated_bytes": 3411708,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 102
+    },
+    {
+      "position": 67,
+      "source_cluster_id": "candidate-1faa50882ef33c6b3fd79582",
+      "asset_id": "commons-80019828",
+      "source_title": "\u0414\u0438\u0441\u043a\u0443\u0441\u0441\u0438\u044f \u043f\u043e\u0441\u043b\u0435 \u043b\u0435\u043a\u0446\u0438\u0438 6",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 1249.84,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:%D0%94%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D0%B8%D1%8F_%D0%BF%D0%BE%D1%81%D0%BB%D0%B5_%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8_6.ogv",
+      "estimated_bytes": 1041056482,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 103
+    },
+    {
+      "position": 68,
+      "source_cluster_id": "candidate-a62f9d4719b166903e06070d",
+      "asset_id": "commons-177208188",
+      "source_title": "Aula 003 Uso de arquivos do Wikimedia Commnos",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 387.084,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Aula_003_Uso_de_arquivos_do_Wikimedia_Commnos.webm",
+      "estimated_bytes": 43745660,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 104
+    },
+    {
+      "position": 69,
+      "source_cluster_id": "candidate-c05566e555fffd20c25dfe3e",
+      "asset_id": "commons-76290015",
+      "source_title": "\u041b\u0435\u043a\u0446\u0438\u044f \u041a\u043e\u043d\u0441\u0442\u0430\u043d\u0442\u0438\u043d\u0430 \u042e\u0440\u0447\u0435\u043d\u043a\u043e 24.01.2019 \u0447\u0430\u0441\u0442\u044c1",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 2961.64,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:%D0%9B%D0%B5%D0%BA%D1%86%D0%B8%D1%8F_%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%B0_%D0%AE%D1%80%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_24.01.2019_%D1%87%D0%B0%D1%81%D1%82%D1%8C1.ogv",
+      "estimated_bytes": 2336999090,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 105
+    },
+    {
+      "position": 70,
+      "source_cluster_id": "candidate-50917927a8aba164f85c4404",
+      "asset_id": "commons-31979593",
+      "source_title": "Entrevista a Pablo Mieres del 2 de abril de 2014 - Parte 1",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 420,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Entrevista_a_Pablo_Mieres_del_2_de_abril_de_2014_-_Parte_1.webm",
+      "estimated_bytes": 43216009,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 106
+    },
+    {
+      "position": 71,
+      "source_cluster_id": "candidate-78f2e957c7774d325fb88e77",
+      "asset_id": "commons-149460293",
+      "source_title": "Entrevista a la se\u00f1orita Kelly, danzante en la fiesta patronal",
+      "license_type": "CC0-1.0",
+      "duration_seconds": 86.566671875,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Entrevista_a_la_se%C3%B1orita_Kelly,_danzante_en_la_fiesta_patronal.webm",
+      "estimated_bytes": 53385606,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 107
+    },
+    {
+      "position": 72,
+      "source_cluster_id": "candidate-1f3231d6a3ad40f5622b7d80",
+      "asset_id": "commons-185787170",
+      "source_title": "Graf Wernher von Hohenberg",
+      "license_type": "CC-BY-4.0",
+      "duration_seconds": 131.321,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Graf_Wernher_von_Hohenberg.webm",
+      "estimated_bytes": 18702712,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 108
+    },
+    {
+      "position": 73,
+      "source_cluster_id": "candidate-1c5265ca4dcd3fb231f61bac",
+      "asset_id": "commons-60522756",
+      "source_title": "Brown bag - Panthea from Reboot",
+      "license_type": "CC-BY-3.0",
+      "duration_seconds": 3577.503,
+      "source_uri": "https://commons.wikimedia.org/wiki/File:Brown_bag_-_Panthea_from_Reboot.webm",
+      "estimated_bytes": 925813365,
+      "still_blocking": [
+        "actual_original_and_normalized_sha256_missing",
+        "native_media_probe_not_performed",
+        "independent_capture_or_asset_lineage_review_pending",
+        "owned_quantitative_complexity_unmeasured"
+      ],
+      "seeded_position": 109
+    }
+  ],
+  "estimated_bytes": 18619479671,
+  "verified_eligible_sources": 0,
+  "media_downloaded": false,
+  "rights_reviewed": false,
+  "purpose": "every discovered candidate the N1 queue did not draw, in the registered seeded order"
+}

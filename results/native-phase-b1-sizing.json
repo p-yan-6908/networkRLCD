@@ -1,0 +1,44 @@
+{
+ "abi": "native_actuator_qualification_n1_flag_sizing",
+ "benefit": {
+  "interval95": [
+   -0.16868711940915926,
+   2.7125399700376702
+  ],
+  "mean": 1.2719264253142555,
+  "p_value": 0.07800720151644432,
+  "sources": 12
+ },
+ "exploratory": true,
+ "flag": "log growth of the frozen estimate since the previous hold below 0.0488",
+ "flagged_holds_per_source": [
+  67,
+  75,
+  55,
+  74,
+  56,
+  56,
+  65,
+  105,
+  48,
+  67,
+  78,
+  68
+ ],
+ "flagged_share": 0.33916666666666667,
+ "for_planning_only": true,
+ "holds": 2400,
+ "per_source_sd": 2.2673627235441827,
+ "quantity": "mean of the proxy at ratios 0.65 and 0.85 minus the proxy at ratio 1.05, flagged holds",
+ "rows_sha256": "037aaa7e377ef2c84996dd931d898abedbd05a1f5dd7867b61d0801a9b7aff11",
+ "smallest_flagged_cell": 13,
+ "sources_needed": {
+  "effect 1, power 0.8": 43,
+  "effect 1, power 0.9": 56,
+  "effect 1.5, power 0.8": 20,
+  "effect 1.5, power 0.9": 27,
+  "effect 2, power 0.8": 13,
+  "effect 2, power 0.9": 16
+ },
+ "third_look_at_the_same_rows": true
+}

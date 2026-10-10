@@ -114,6 +114,8 @@ The [N1 preregistration](docs/NATIVE_PHASE_N1_ACTUATOR_QUALIFICATION.md) isolate
 
 An [exploratory description](docs/NATIVE_PHASE_N1_EXPLORATORY.md) of the same rows, fixed before it was computed and not confirmatory, adds two things. A cap below the estimate holds back the estimate itself when the link has room (it grows 18%, 24% and 100% per 3 s hold at ratios 0.65, 0.85 and 1.05 under the unconstrained schedule), so a ratio of the estimate is not a fixed reference. And in a pilot look at the on-time PSNR proxy, no schedule shows a lower ratio to be better: the top ratio is ahead by +1.26 [+0.33, +2.18] overall, mostly in the first two holds of a session. A second pass by what the sender had seen before each hold names no candidate signal under its pre-declared rule; in the third of holds flagged by high jitter, high RTT or a stalled estimate the point estimates favour backing off by 0.5 to 1.5 and are not established (smallest Holm-adjusted p 0.27). A confirmatory study of that would need roughly 40 to 60 fresh sources to detect a difference of 1.
 
+The owner chose that study as the next native step. It exists only as a [draft for review](docs/NATIVE_PHASE_B1_BACKOFF_BENEFIT_DRAFT.md): nothing is registered, frozen, downloaded or captured. A rights-review manifest for the 74 undrawn Discovery V2 candidates is ready to fill in under `acquisition/native-b1/rights-review/`.
+
 The planner, a capture path that computes no outcome statistic, the sealed interim and the final analysis are hash-frozen (`configs/native_actuator_qualification_n1_freeze.json`) and were not changed for the run.
 
 ```sh
