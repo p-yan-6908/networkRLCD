@@ -1,0 +1,38 @@
+{
+  "abi": "native_backoff_benefit_b1",
+  "growth_limit": 1.05,
+  "weights": [0.5, 0.5, -1.0],
+  "practical_gate": 1.0,
+  "alpha": 0.025,
+  "strata": 3,
+  "minimum_sources": 30,
+  "regimes": 4,
+  "peers_per_regime": 10,
+  "holds_per_peer": 6,
+  "minimum_cell_cohorts": 3,
+  "minimum_flagged_cell": 3,
+  "minimum_complete_fraction": 0.95,
+  "maximum_alias_fraction": 0.1,
+  "maximum_arm_completeness_gap": 0.05,
+  "maximum_skipped_share": 0.1,
+  "secondary_flags": {"jitter_ms": 12.0, "rtt_ms": 57.0},
+  "capture": {
+    "seed": 261010,
+    "template": "results/native-action-excitation-train-sintel-v1/runtime.json",
+    "reservation_root": "results"
+  },
+  "planning": {
+    "source": "spread of the per-source benefit under this flag over the twelve N1 sources; a third look at those rows, used for sizing only",
+    "per_source_sd": 2.27,
+    "pessimistic_sd": 2.8,
+    "sources": [30, 36, 42, 54],
+    "effects": [1.0, 1.5]
+  },
+  "scenarios": [
+    {"name": "benefit_at_the_gate", "flagged_benefit": 1.0, "other_benefit": -0.8, "source_sd": 2.27, "cohort_sd": 6.0},
+    {"name": "benefit_above_the_gate", "flagged_benefit": 2.5, "other_benefit": -0.8, "source_sd": 2.27, "cohort_sd": 6.0},
+    {"name": "small_benefit", "flagged_benefit": 0.4, "other_benefit": -0.8, "source_sd": 0.5, "cohort_sd": 2.0},
+    {"name": "no_benefit", "flagged_benefit": 0.0, "other_benefit": -0.8, "source_sd": 0.8, "cohort_sd": 3.0},
+    {"name": "backing_off_hurts", "flagged_benefit": -1.0, "other_benefit": -1.5, "source_sd": 2.27, "cohort_sd": 6.0}
+  ]
+}

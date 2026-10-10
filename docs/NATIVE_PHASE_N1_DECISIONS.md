@@ -146,7 +146,29 @@ unchanged.
 Asked which native phase should come next, the owner chose "Targeted backoff test": a draft
 registration for the owner's review, and a rights-review manifest for the 74 Discovery V2
 candidates that the N1 queue did not draw, with nothing downloaded or captured until the owner
-approves. The draft is
-[NATIVE_PHASE_B1_BACKOFF_BENEFIT_DRAFT.md](NATIVE_PHASE_B1_BACKOFF_BENEFIT_DRAFT.md). Phase N2
+approves. The draft, since registered (section 11), is
+[NATIVE_PHASE_B1_BACKOFF_BENEFIT.md](NATIVE_PHASE_B1_BACKOFF_BENEFIT.md). Phase N2
 stays registered and untouched. Asked whether to push the local commits, the owner chose "Not
 yet".
+
+## 11. B1 design choices and registration (2026-10-10)
+
+Asked four questions about the draft, the owner chose the recommended option in each:
+
+| Question | Chosen |
+|---|---|
+| Which pre-hold rule flags a hold as congested | Stalled estimate: the estimate grew by less than 5% since the previous hold, or fell |
+| The single primary contrast among flagged holds | Both lower ratios (0.65 and 0.85) against 1.05 |
+| Whether B1 may conclude that any benefit is too small to matter | Yes, with the gate at 1.0 |
+| Smallest number of eligible sources for a confirmatory run | 30 |
+
+The draft then became the registration,
+[NATIVE_PHASE_B1_BACKOFF_BENEFIT.md](NATIVE_PHASE_B1_BACKOFF_BENEFIT.md), implemented and
+hash-frozen before any B1 data existed. One secondary analysis was added by the agent before
+the freeze without being asked: a split of the flagged holds by the previous hold's ratio,
+because in N1 a hold is flagged about twice as often after a request of 0.65 as after the
+other two. It changes no outcome.
+
+Still the owner's, and not started: the rights review of the 74 candidates and its explicit
+adoption, a download budget, the storage decision, and the instruction to fetch, screen, plan
+and capture.

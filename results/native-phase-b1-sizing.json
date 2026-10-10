@@ -26,11 +26,17 @@
   68
  ],
  "flagged_share": 0.33916666666666667,
+ "flagged_share_by_previous_arm": {
+  "0": 0.5144291091593476,
+  "1": 0.22934648581997533,
+  "2": 0.27525252525252525
+ },
  "for_planning_only": true,
  "holds": 2400,
  "per_source_sd": 2.2673627235441827,
  "quantity": "mean of the proxy at ratios 0.65 and 0.85 minus the proxy at ratio 1.05, flagged holds",
  "rows_sha256": "037aaa7e377ef2c84996dd931d898abedbd05a1f5dd7867b61d0801a9b7aff11",
+ "share_of_flagged_holds_after_the_top_arm": 0.2678132678132678,
  "smallest_flagged_cell": 13,
  "sources_needed": {
   "effect 1, power 0.8": 43,

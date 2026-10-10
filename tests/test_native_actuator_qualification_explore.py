@@ -143,6 +143,8 @@ def test_flag_sizing_uses_flagged_holds_and_pools_the_lower_ratios():
     assert note["for_planning_only"] is True and note["third_look_at_the_same_rows"] is True
     assert 0 < note["flagged_share"] < 1 and note["smallest_flagged_cell"] >= 1
     assert len(note["flagged_holds_per_source"]) == note["benefit"]["sources"] == 5
+    assert set(note["flagged_share_by_previous_arm"]) == {"0", "1", "2"}
+    assert 0 <= note["share_of_flagged_holds_after_the_top_arm"] <= 1
     assert note["per_source_sd"] > 0 and set(note["sources_needed"]) >= {
         "effect 1, power 0.8",
         "effect 2, power 0.9",

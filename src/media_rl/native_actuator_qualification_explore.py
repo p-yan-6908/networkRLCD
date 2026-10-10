@@ -215,7 +215,7 @@ def with_signals(rows):
                 for name in SIGNALS[:-1]
             }
             signals["estimate_growth"] = math.log(r["base_bwe_bps"] / holds[epoch - 1]["base_bwe_bps"])
-            out.append(dict(r, signals=signals))
+            out.append(dict(r, signals=signals, previous_arm=holds[epoch - 1]["arm"]))
     return out
 
 
@@ -365,8 +365,9 @@ def flag_sizing(rows, growth=PROPOSED_GROWTH, effects=(1.0, 1.5, 2.0), powers=(0
     evidence, and only the spread over sources and the cell counts are used.
     """
     held = with_signals(rows)
-    cells = defaultdict(list)
+    cells, marks = defaultdict(list), defaultdict(list)
     for r in held:
+        marks[r["previous_arm"]].append(r["signals"]["estimate_growth"] < growth)
         if r["signals"]["estimate_growth"] < growth:
             cells[(r["cluster_id"], r["arm"])].append(r["utility"])
     sources = sorted({k[0] for k in cells})
@@ -388,6 +389,9 @@ def flag_sizing(rows, growth=PROPOSED_GROWTH, effects=(1.0, 1.5, 2.0), powers=(0
             sum(len(cells[(s, arm)]) for arm in ARMS if (s, arm) in cells) for s in sources
         ],
         smallest_flagged_cell=min(len(v) for v in cells.values()),
+        # Outcome-free: how often a hold is flagged, by the arm of the hold before it.
+        flagged_share_by_previous_arm={str(arm): float(np.mean(marks[arm])) for arm in sorted(marks)},
+        share_of_flagged_holds_after_the_top_arm=sum(marks[max(marks)]) / sum(sum(v) for v in marks.values()),
         benefit=summary(benefit),
         per_source_sd=spread,
         sources_needed={

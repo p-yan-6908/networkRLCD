@@ -1,0 +1,14 @@
+{
+  "abi": "native_backoff_benefit_b1_freeze",
+  "files": {
+    "configs/native_backoff_benefit_b1.json": "5b10f600ac5caa43e4512838cd93e20c49ed0ab1e16a4b2378d2c44a8aeb324f",
+    "docs/NATIVE_PHASE_B1_BACKOFF_BENEFIT.md": "9da61d4078efd8126a8d4efdfea1d2b448f694abda1d059bbcd1a94e5f4c1d48",
+    "src/media_rl/native_backoff_benefit.py": "8ffe4e5115b43cfc8fcd7ce253cfe169f151151f5f04a378ae4f1290c5c1cf98",
+    "src/media_rl/native_backoff_benefit_panel.py": "af7cb800ba95e1a207de3df109996bd64800935566331e93d7b21b9cc653b040"
+  },
+  "sha256": "9b3ac6ca213e08b9702b3940facd219d85373925b3029209043f0f1c08ca1d9f",
+  "controller_freeze_sha256": "68f770b4dc561497bf7fa2e1ff17917bbc7c77df5c32a4ebe680d94a58db7fed",
+  "n1_freeze_sha256": "ae567d09e197ca701cf776267ce35d71f99429e5e94509921bb8324f8a5c26af",
+  "registered_before_any_outcome": true,
+  "native_data_collected": false
+}
