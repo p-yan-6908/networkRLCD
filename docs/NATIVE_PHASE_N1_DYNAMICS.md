@@ -98,4 +98,196 @@ It needs the raw capture, which is on this machine and in the private archive de
 
 ## Results
 
-Not run at this commit. The design, the reader and its tests are committed first.
+Run once on 2026-10-10 over all 480 peers and 2,880 holds, at commit `47601ff`. The first
+attempt stopped before reading any log, because the reader appended a suffix that the trial
+names already carry; that was fixed and committed before the run. Output:
+`results/native-actuator-qualification-n1-dynamics/report.json`, with the per-hold curves in
+`holds.json.gz` beside it. The relay's clock ran 0.44 to 2.37 s ahead of the page's (median
+0.76 s), measured per peer. Brackets are 95% intervals over the twelve sources.
+
+Holds are numbered 1 to 6. In the two schedules with a drop, capacity falls a few tenths of
+a second before hold 3 begins and, in collapse-recovery, returns a few tenths of a second
+before hold 5 begins.
+
+### 1. The encoder needs most of a hold to settle
+
+Holds 2 to 6, all schedules, over the frozen estimate:
+
+| | Ratio | 0.2 to 0.6 s | 0.8 to 1.2 s | 1.8 to 2.6 s |
+|---|---:|---:|---:|---:|
+| Encoder target | 0.65 | 0.536 | 0.533 | 0.616 |
+| | 0.85 | 0.687 | 0.683 | 0.768 |
+| | 1.05 | 0.772 | 0.776 | 0.889 |
+| Encoder output | 0.65 | 0.586 | 0.516 | 0.584 |
+| | 0.85 | 0.667 | 0.625 | 0.719 |
+| | 1.05 | 0.683 | 0.692 | 0.800 |
+
+The curves with room on the link show the shape. For about a second after a request the
+target sits below the new cap: at 0.54, 0.70 and 0.80 of the estimate, which is 0.83, 0.82 and
+0.76 of the cap. It reaches the cap at about 1.7 to 1.9 s. The output climbs through the whole hold and reaches the cap only in
+the last 0.4 s: 0.65, 0.82 and 1.04 of the estimate at 2.8 to 3.0 s in hold 2.
+
+- **The registered window sees the encoder before it has settled.** N1's finding that 72% and
+  47% of the requested steps were realised is a statement about 1.8 to 2.6 s. With room, by
+  the end of the hold the steps are nearly complete.
+- **At the top ratio the encoder does reach 1.04 of the frozen estimate when the link has
+  room,** because by then the live estimate has risen far above the cap (next table). Under
+  constraint it does not: the target stays at 0.87 to 0.92, held by the browser's own
+  allocation and not by the cap. So "the encoder sat at 0.83 of the estimate at ratio 1.05"
+  was a mid-hold average over schedules, and it hides two different regimes.
+
+### 2. With room, a cap above the estimate makes the estimate jump
+
+Underutilized schedule, live estimate over its frozen value:
+
+| Holds | Ratio | 0.8 to 1.2 s | 1.8 to 2.2 s | 2.8 to 3.0 s |
+|---|---:|---:|---:|---:|
+| first | 0.65 | 1.69 | 1.69 | 1.69 |
+| | 0.85 | 1.89 | 1.89 | 1.90 |
+| | 1.05 | 2.12 | 2.12 | 2.13 |
+| later | 0.65 | 1.03 | 1.04 | 1.05 [1.03, 1.07] |
+| | 0.85 | 1.04 | 1.08 | 1.14 [1.12, 1.17] |
+| | 1.05 | 1.90 | 1.92 | 1.94 [1.89, 1.98] |
+
+Mean curve in hold 2, by 200 ms bin from the acknowledgement:
+
+| Ratio | 0.1 s | 0.3 | 0.5 | 0.7 | 0.9 | 1.5 | 2.1 | 2.9 |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 0.65 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.01 |
+| 0.85 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.03 | 1.06 | 1.11 |
+| 1.05 | 1.00 | 1.24 | 1.84 | 1.94 | 1.97 | 1.97 | 1.99 | 2.02 |
+
+- **At the top ratio the estimate nearly doubles within 0.6 s of the request and is then
+  flat.** It is a step, not a ramp. In the same first 200 ms the sender puts 0.78 of the
+  estimate on the wire while the encoder produces 0.50; at the lower ratios the two differ by
+  about 0.05. That is consistent with the browser probing when the cap is raised above its
+  estimate, though the logs do not name probes.
+- **Below the estimate the cap holds it nearly still:** about +5% per hold at 0.65 and +14% at
+  0.85, after the first hold.
+- **This refines an earlier statement.** The first pass reported growth of 18%, 24% and 100%
+  per hold at the three ratios. Those figures pooled the first hold, in which the estimate
+  grows by 70% to 110% at every ratio while the session starts. After the first hold the
+  figures are 5%, 14% and 94%.
+- **Backing off costs headroom.** After the return of capacity (hold 5 of collapse-recovery)
+  the estimate ends the hold at 1.13, 1.24 and 1.80 of its frozen value at the three ratios:
+  top minus lower +0.65 [+0.47, +0.83]. Only the top ratio lets it recover.
+
+### 3. When capacity drops, every ratio overshoots and the browser cuts within a second
+
+Hold 3 of the two schedules with a drop. The request is a ratio of an estimate frozen before
+the browser could see the drop, so even 0.65 of it is above the new capacity.
+
+| Schedule | Quantity | 0.65 | 0.85 | 1.05 | Top minus lower |
+|---|---|---:|---:|---:|---|
+| queue-building (1.2 to 0.6) | peak sojourn, ms | 107 | 136 | 142 | +25 [-19, +69] |
+| | sojourn at 1.8 to 2.6 s, ms | 28 | 38 | 23 | -11 [-19, -3] |
+| | dropped share over the hold | 0.000 | 0.001 | 0.003 | +0.003 [-0.000, +0.005] |
+| | estimate over capacity at the end | 0.90 | 0.90 | 0.82 | -0.07 [-0.12, -0.02] |
+| collapse-recovery (1.2 to 0.35) | peak sojourn, ms | 332 | 403 | 407 | +39 [-6, +84] |
+| | sojourn at 1.8 to 2.6 s, ms | 73 | 131 | 131 | +29 [-70, +128] |
+| | dropped share over the hold | 0.019 | 0.052 | 0.050 | +0.015 [-0.024, +0.053] |
+| | estimate over capacity at the end | 0.85 | 0.84 | 0.81 | -0.04 [-0.11, +0.03] |
+
+Mean curves in the deeper drop, by 200 ms bin:
+
+| Quantity | Ratio | 0.1 s | 0.3 | 0.5 | 0.7 | 0.9 | 1.3 | 1.7 | 2.1 | 2.5 | 2.9 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| estimate over capacity | 0.65 | 2.46 | 2.06 | 1.25 | 1.02 | 0.89 | 0.84 | 0.84 | 0.85 | 0.85 | 0.85 |
+| | 0.85 | 2.74 | 2.35 | 1.39 | 1.08 | 0.90 | 0.83 | 0.83 | 0.84 | 0.83 | 0.84 |
+| | 1.05 | 2.80 | 2.06 | 1.31 | 1.03 | 0.89 | 0.82 | 0.82 | 0.80 | 0.80 | 0.80 |
+| sojourn, ms | 0.65 | 223 | 303 | 313 | 296 | 265 | 204 | 134 | 85 | 36 | 34 |
+| | 0.85 | 281 | 386 | 382 | 351 | 314 | 272 | 234 | 153 | 71 | 27 |
+| | 1.05 | 279 | 388 | 384 | 361 | 329 | 262 | 199 | 141 | 98 | 66 |
+| dropped share | 0.65 | 0.007 | 0.097 | 0.039 | 0.000 | 0 | 0 | 0 | 0 | 0 | 0 |
+| | 0.85 | 0.039 | 0.255 | 0.076 | 0.002 | 0 | 0 | 0 | 0 | 0 | 0 |
+| | 1.05 | 0.078 | 0.189 | 0.060 | 0.010 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+- **By the rule fixed above, no mechanism for backing off is established in the drop hold:**
+  the top ratio does not carry more queue or loss than the two lower ones taken together, in
+  either schedule, and the registered window does not show one either.
+- **The browser's own controller does the work.** At every ratio the live estimate is below
+  the new capacity within 0.4 to 0.6 s in the shallower drop and within about 0.9 s in the
+  deeper one. All loss falls in the first 0.8 s.
+- **Described, not tested: the lowest ratio stands apart in the deeper drop.** It loses 2% of
+  its bytes over the hold against 5% at the other two, and its queue peaks lower and drains
+  sooner. The two higher ratios are alike. The contrast fixed in advance does not isolate
+  this, and none is added after seeing it.
+- **In the shallower drop the top ratio's queue drains faster,** because its estimate was cut
+  deeper: in the registered window it has less queue than the lower ratios, not more.
+
+### 4. Under steady constraint the link is not congested at any ratio
+
+Near-capacity from hold 3 on, and hold 4 of the two schedules with a drop:
+
+| Quantity | 0.65 | 0.85 | 1.05 | Top minus lower |
+|---|---:|---:|---:|---|
+| peak sojourn, ms | 32 | 35 | 37 | +3.6 [-4.7, +11.9] |
+| sojourn at 1.8 to 2.6 s, ms | 17.4 | 22.9 | 25.5 | +5.4 [+3.8, +6.9] |
+| dropped share | 0.000 | 0.000 | 0.000 | 0 |
+
+- **No packet is dropped at any ratio, and a packet spends about 20 ms in the relay.** That
+  is close to the time the link needs to send one frame.
+- **By the rule, the registered window sees a difference: 5 ms more at the top ratio.** It is
+  established and very small. The rule's first test, on the peak, is not met.
+- **The browser's estimate sits near or a little below capacity whatever the cap:** between
+  0.9 and 1.0 of it in hold 4 under near-capacity, and 0.94 at the end of the hold after the
+  shallower drop, in the curves. The table's own
+  figure for this quantity, 0.72 at every ratio, is not usable: in collapse-recovery the last
+  bin of hold 4 falls after capacity has returned, so the average mixes two capacities.
+
+### 5. Which holds B1's flag marks (no outcome is read)
+
+Computed from the frozen estimates and the plan with B1's registered flag. Share of holds
+flagged, by schedule and hold:
+
+| Schedule | Hold 2 | Hold 3 | Hold 4 | Hold 5 | Hold 6 |
+|---|---:|---:|---:|---:|---:|
+| underutilized | 0% | 32% | 20% | 23% | 19% |
+| near-capacity | 0% | 50% | 29% | 55% | 39% |
+| queue-building | 0% | 47% | 89% | 32% | 44% |
+| collapse-recovery | 0% | 47% | 99% | 46% | 7% |
+
+Of the 814 flagged holds:
+
+| Kind of hold | Share of flagged holds | What the logs show there |
+|---|---:|---|
+| the hold after a drop (hold 4 of the two drop schedules) | 28% | the browser has already cut; no loss, short queue at every ratio |
+| near-capacity, any hold | 26% | no loss, short queue at every ratio |
+| later holds of the two drop schedules | 19% | no loss, short queue; after the return of capacity only the top ratio recovers |
+| the hold of the drop itself (hold 3) | 14% | the overshoot of section 3 |
+| underutilized, any hold | 14% | nothing to relieve; flagged almost only after a request of 0.65 |
+
+- **Hold 2 is never flagged,** because the estimate always grows while the session starts.
+- **The hold of the drop is flagged about half the time, and not because the flag sees the
+  drop.** It is flagged 91% to 94% of the time after a request of 0.65 and 17% to 33% of the
+  time otherwise. The drop comes a few tenths of a second before the hold begins, too late for
+  the frozen estimate to show it.
+- **The flag does mark the hold after a drop,** almost always. By then the browser has cut.
+
+## Reading
+
+- **Mechanism.** On this stack the logs show one place where a lower cap leaves less queue and
+  loss: the first second after capacity collapses, and there it is the lowest ratio that
+  differs. Everywhere else the browser keeps the link below capacity by itself and a cap
+  lowers the rate without relieving anything. By the rule fixed in advance, no mechanism is
+  established in the drop hold, and under steady constraint the registered window sees 5 ms.
+- **What it suggests about B1, and what it does not.** About a seventh of the holds B1's flag
+  marks are of the one kind where a mechanism was seen. This pass read no quality label, so it
+  cannot say whether that is enough for a benefit, and the earlier pilot leaned toward one in
+  flagged holds without establishing it. It does say where a benefit would have to come
+  from. If B1 finds one, the question is whether it sits in the hold of the scripted drop,
+  which the flag does not anticipate. An addendum to B1, fixed before B1 has data, splits its
+  flagged holds by position to answer that.
+- **What a controller could do with a cap.** The drop cannot be seen in the estimate before
+  the hold in which it hits, and the browser reacts within a second. A cap could gain only by
+  being faster than the browser inside that second, or by predicting the drop. A 3 s hold
+  decided at its start can do neither.
+- **What backing off costs.** After a request below the estimate the estimate barely grows,
+  and after capacity returns only the top ratio lets it recover. A controller that backs off
+  pays for it in the following holds.
+- **For the simulator.** These curves are what a native-like simulated estimator and encoder
+  would have to reproduce: a jump of the estimate within 0.6 s of a cap above it, near
+  standstill under a cap below it, a cut to below capacity within a second of a drop, a target
+  that needs about 1.8 s to reach a new cap, and an output that needs the whole hold.
+
+Nothing here is confirmatory, and nothing about delivered quality was measured.
