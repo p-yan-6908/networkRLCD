@@ -112,3 +112,39 @@ def test_addendum_runs_after_the_registered_final_and_changes_nothing(tmp_path, 
     )
     with pytest.raises(SystemExit):
         positions.main(args)
+
+
+def test_flag_composition_reads_no_outcome_and_counts_by_position(tmp_path, capsys):
+    rows = []
+    for regime in b1.REGIMES:
+        for p in range(6):
+            estimate = 1_000_000.0
+            for epoch in range(6):
+                arm = (p + epoch) % 3
+                rows.append(
+                    dict(
+                        trial_id=f"{regime}-{p}",
+                        epoch=epoch,
+                        arm=arm,
+                        base_bwe_bps=estimate,
+                        network_regime=regime,
+                        cluster_id="s",
+                        complete=True,
+                    )
+                )
+                estimate *= 1.0 if arm == 0 else 1.5  # the invented estimate stalls after the lowest ratio
+    made = positions.composition(rows, PLAN)
+    assert made["outcome_free"] and made["holds_with_a_predecessor"] == 4 * 6 * 5
+    assert made["flagged_holds"] == sum(v["flagged_holds"] for v in made["kinds"].values()) == 4 * 6 * 5 // 3
+    assert sum(v["share_of_flagged_holds"] for v in made["kinds"].values()) == pytest.approx(1.0)
+    assert made["drop_hold_by_previous_ratio"] == {"0.65": 1.0, "0.85": 0.0, "1.05": 0.0}
+    assert set(made["by_schedule_and_hold"]) == set(b1.REGIMES) and set(
+        made["by_schedule_and_hold"]["underutilized"]
+    ) == {"2", "3", "4", "5", "6"}
+    assert not {"utility", "ontime_fraction"} & set(json.dumps(made).replace('"', " ").split())
+    path, out = tmp_path / "rows.json", tmp_path / "composition.json"
+    path.write_text(json.dumps(rows))
+    positions.main(["--composition", str(path), "--out", str(out)])
+    assert len(json.loads(out.read_text())["rows_sha256"]) == 64 and "drop" in capsys.readouterr().out
+    with pytest.raises(SystemExit):
+        positions.main(["--out", str(tmp_path / "nothing.json")])

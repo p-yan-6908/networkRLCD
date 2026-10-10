@@ -102,6 +102,38 @@ A controller does not observe the schedule. A second pass over the same rows, wi
 By schedule, no lower ratio is shown to be better, and where the ratios differ the higher one wins, most clearly while a session is starting and when the link has room. By what the sender had seen, the estimates lean the other way in the flagged third of holds and are not established. A controller that backs off below the estimate would have to earn its gain in those moments, against a browser that already adapts its own rate, and \NOneSources{} sources cannot say whether it would. This is a reason to measure that gain on fresh sources before building on it. It is not evidence that the gain is present, and not evidence that it is absent. That measurement is registered as a separate confirmatory phase with one flag, one endpoint and a fixed sample (\path{docs/NATIVE_PHASE_B1_BACKOFF_BENEFIT.md}). It has not been run, and no source for it has been acquired.
 \fi
 
+\ifdefined\NOneDynPeers
+\subsection{Inside a hold}
+\label{sec:n1-dynamics}
+A cap below the estimate can raise delivered quality in one way only: by leaving less in the queue and losing fewer packets than the browser would on its own. A third exploratory pass looks for that mechanism in the raw logs of the same capture: the sender's polls, the encoded-frame meter and the relay's packet log of all \NOneDynPeers{} peers, in 200~ms bins from the acknowledgement of each request (\path{docs/NATIVE_PHASE_N1_DYNAMICS.md}). Its curves, tables and reading were committed before it ran. It reads no quality or on-time label, so it is about mechanism and cannot show a benefit. The rule fixed in advance calls a mechanism present in a state when the top ratio carries more queue or more loss there than the two lower ratios, with an interval above zero.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{generated-native-n1/n1_dynamics.pdf}
+\caption{Mean curves over the \NOneSources{} sources by requested ratio, in 200~ms bins from the acknowledgement of the request. Left: the browser's estimate over its frozen value in the second hold of the schedule with room. Middle and right: the estimate over the new capacity, and the time a packet spends in the relay, in the hold in which capacity falls from 1.2 to 0.35~Mbit/s. The band marks the registered window. Exploratory; no quality label was read.}
+\label{fig:n1-dynamics}
+\end{figure}
+
+\begin{table}[t]
+\centering\small
+\resizebox{\linewidth}{!}{\input{generated-native-n1/n1_dynamics.tex}}
+\caption{Queue and loss by requested ratio inside a hold, and the estimate at its end over its frozen value. Sojourn is the time from a packet's arrival at the relay to the end of its service. The window is the registered one, 1.8 to 2.6~s after the request. Brackets are 95\% $t$ intervals over sources for the top ratio minus the mean of the two lower ones. Exploratory; no quality label was read.}
+\label{tab:n1-dynamics}
+\end{table}
+
+The encoder needs most of a hold to settle. For about a second after a request its target sits below the new cap, at \NOneDynTargetEarlyLow{}, \NOneDynTargetEarlyMid{} and \NOneDynTargetEarlyTop{} of the frozen estimate at the three ratios, and in the registered window it is at \NOneDynTargetWindowLow{}, \NOneDynTargetWindowMid{} and \NOneDynTargetWindowTop{}. With room on the link the output reaches \NOneDynEncoderEndLow{}, \NOneDynEncoderEndMid{} and \NOneDynEncoderEndTop{} only in the last 200~ms of the hold. The registered window therefore sees the encoder before it has settled, and the realised shares of the requested steps reported above are statements about that window.
+
+With room, a cap above the estimate makes the estimate jump. At the top ratio it stands at \NOneDynRoomJump{} of its frozen value within 0.6~s of the request and is nearly flat afterwards (Figure~\ref{fig:n1-dynamics}, left). After the first hold it grows by \NOneDynRoomLaterTop\% over a hold at the top ratio, against \NOneDynRoomLaterLow\% and \NOneDynRoomLaterMid\% at the two lower ones. In the first hold, while the session starts, it grows by \NOneDynRoomFirstLow\% to \NOneDynRoomFirstTop\% at every ratio, and the growth figures of the first pass above pooled that hold. After capacity returns, the estimate ends the hold \NOneDynRecoveryLow\%, \NOneDynRecoveryMid\% and \NOneDynRecoveryTop\% above its frozen value at the three ratios (top minus lower \NOneDynRecoveryDiff{} \NOneDynRecoveryDiffT{}). Backing off is paid for in the holds that follow.
+
+When capacity drops, every ratio overshoots, because the request is a ratio of an estimate frozen before the browser could see the drop. The browser then cuts by itself: at every ratio its estimate is below the new capacity within \NOneDynShallowBelow{}~s in the shallower drop and within \NOneDynDeepBelow{}~s in the deeper one (Figure~\ref{fig:n1-dynamics}, middle). By the rule, a mechanism for backing off is \NOneDynShallowMechanism{} in the shallower drop and \NOneDynDeepMechanism{} in the deeper one. In the deeper drop a packet spends at most \NOneDynDeepPeakLow{}, \NOneDynDeepPeakMid{} and \NOneDynDeepPeakTop{}~ms in the relay at the three ratios, top minus lower \NOneDynDeepPeakDiff{}~ms \NOneDynDeepPeakDiffT{} (Table~\ref{tab:n1-dynamics}). Described and not tested, the lowest ratio stands apart there: it loses \NOneDynDeepLossLow\% of its bytes against \NOneDynDeepLossMid\% and \NOneDynDeepLossTop\%. Under steady constraint \NOneDynSteadyLoss\% of bytes are dropped at any ratio, a packet spends \NOneDynSteadySojournLow{} to \NOneDynSteadySojournTop{}~ms in the relay, and the registered window \NOneDynSteadyWindow{} a difference of \NOneDynSteadyDiff{}~ms \NOneDynSteadyDiffT{} between the top ratio and the lower ones.
+
+\ifdefined\NOneDynFlagged
+These states can be set against the holds that the flag of the registered native test marks, counted from the frozen estimates with no outcome read. Of \NOneDynFlagged{} flagged holds, \NOneDynFlagAfter\% are the hold after a drop, \NOneDynFlagNear\% lie under the near-capacity schedule, \NOneDynFlagLate\% later in the two schedules with a drop, \NOneDynFlagRoom\% under the schedule with room, and \NOneDynFlagDrop\% are the hold of a drop itself. That hold is flagged \NOneDynFlagDropAfterLow\% of the time after a request of 0.65 and \NOneDynFlagDropAfterMid\% and \NOneDynFlagDropAfterTop\% of the time after the other two. The drop comes a few tenths of a second before the hold begins, too late for the frozen estimate to show it. So the one state in which a lower cap left less queue and loss makes up about a seventh of the flagged holds, and the flag does not anticipate it. An addendum to the registered test, fixed before that test has data and outside its frozen registration, splits its holds by position in the schedule (\path{docs/NATIVE_PHASE_B1_ADDENDUM_POSITIONS.md}).
+\fi
+
+On this stack the browser's own congestion control leaves a cap little to do. A cap could gain only inside the first second after a drop that it cannot see coming, and a 3~s hold decided at its start is not built for that. This is a description of one sample that has now been looked at several times, and nothing about delivered quality was measured in it.
+\fi
+
 \ifdefined\TypedHeadFamilies
 \subsection{What a cap leaves of the simulator's headroom}
 \label{sec:typed-headroom}

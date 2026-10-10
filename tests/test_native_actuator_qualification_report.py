@@ -238,3 +238,35 @@ def test_second_pass_macros_are_marked_and_skip_signals_that_flag_too_few_holds(
 
 def test_titles_are_made_safe_for_latex():
     assert report.escape("A_b & 50% #1 {x}") == "A\\_b \\& 50\\% \\#1 (x)"
+
+
+def test_within_hold_macros_table_and_figure_come_from_the_mechanism_report(records, tmp_path):
+    from test_native_actuator_qualification_dynamics import panel as invented_peers
+
+    from media_rl import native_actuator_qualification_dynamics as dynamics
+    from media_rl import native_backoff_benefit as benefit
+    from media_rl import native_backoff_benefit_positions as positions
+
+    rows = invented_peers(tmp_path / "capture")
+    inside = json.loads(json.dumps(dynamics.study(tmp_path / "capture", rows)[0]))  # as read back from disk
+    flags = positions.composition(rows, benefit.Plan())
+    made = report.dynamics_macros(inside, flags)
+    assert all(re.fullmatch(r"NOneDyn[A-Za-z]+", name) for name in made)
+    assert made["NOneDynDeepMechanism"] == "present" and made["NOneDynSteadyMechanism"] == "not established"
+    assert made["NOneDynDeepBelow"] == "more than 3.0"  # the invented estimate never falls below capacity
+    assert made["NOneDynDeepLossTop"] == "20.0" and made["NOneDynDeepLossLow"] == "0.0"
+    assert "NOneDynFlagDrop" in made and "NOneDynFlagged" not in report.dynamics_macros(inside)
+    table = report.table_dynamics(inside)
+    assert table.count("\\\\") == 1 + 11 and "Deeper drop" in table and "Return of capacity" in table
+    report.figure_dynamics(inside, tmp_path / "a.pdf")
+    report.figure_dynamics(inside, tmp_path / "b.pdf")
+    drawn = (tmp_path / "a.pdf").read_bytes()
+    assert drawn[:4] == b"%PDF" and drawn == (tmp_path / "b.pdf").read_bytes()  # the same bytes every time
+    paths, _ = records
+    path = tmp_path / "inside.json"
+    path.write_text(json.dumps(dict(inside, rows_sha256="0" * 64)))
+    with pytest.raises(ValueError, match="same rows as the exploratory description"):
+        report.export(**paths, out=tmp_path / "evidence", allow_mock=True, dynamics=path)
+    path.write_text(json.dumps(dict(inside, quality_or_ontime_labels_read=True)))
+    with pytest.raises(ValueError, match="mechanism-only"):
+        report.export(**paths, out=tmp_path / "evidence", allow_mock=True, dynamics=path)

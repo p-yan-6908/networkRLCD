@@ -467,6 +467,195 @@ def table_conditional(passed):
     return "\n".join(lines + ["\\bottomrule", "\\end{tabular}"]) + "\n"
 
 
+DYNAMICS_RATIOS = dict(Low="0.65", Mid="0.85", Top="1.05")
+DYNAMICS_DROPS = {"queue-building": "Shallow", "collapse-recovery": "Deep"}
+POSITION_KINDS = dict(
+    drop="Drop", after_drop="After", late_drop_schedules="Late", near_capacity="Near", room="Room"
+)
+DYNAMICS_BIN_S = 0.2
+
+
+def _below_capacity(curves, regime):
+    """Seconds after the acknowledgement by which the mean estimate is below the new capacity at every ratio."""
+    ends = []
+    for ratio in DYNAMICS_RATIOS.values():
+        curve = curves[f"{regime}|2|{ratio}"]["estimate_over_capacity"]
+        first = next((i for i, v in enumerate(curve) if v is not None and v < 1), None)
+        if first is None:  # never below within the hold
+            return None
+        ends.append((first + 1) * DYNAMICS_BIN_S)
+    return max(ends)
+
+
+def dynamics_macros(inside, flags=None):
+    """Macros of the within-hold pass. Every name carries Dyn; no quality label is behind any of them."""
+    tables, curves = inside["tables"], inside["curves"]
+    settling, room, steady = (
+        tables["encoder_settling"],
+        tables["estimate_with_room"],
+        tables["steady_constraint"],
+    )
+    rows = dict(NOneDynPeers=count(inside["peers"]), NOneDynHolds=count(inside["holds"]))
+    for label, ratio in DYNAMICS_RATIOS.items():
+        rows["NOneDynTargetEarly" + label] = number(settling["target"]["early"][ratio]["mean"], 2)
+        rows["NOneDynTargetWindow" + label] = number(settling["target"]["outcome"][ratio]["mean"], 2)
+        rows["NOneDynEncoderWindow" + label] = number(settling["encoder"]["outcome"][ratio]["mean"], 2)
+        rows["NOneDynEncoderEnd" + label] = number(curves[f"underutilized|1|{ratio}"]["encoder"][-1], 2)
+        rows["NOneDynRoomFirst" + label] = percent(room["first hold"]["end"][ratio]["mean"] - 1, 0)
+        rows["NOneDynRoomLater" + label] = percent(room["later holds"]["end"][ratio]["mean"] - 1, 0)
+        rows["NOneDynRecovery" + label] = percent(tables["recovery"]["estimate_at_end"][ratio]["mean"] - 1, 0)
+        rows["NOneDynSteadySojourn" + label] = number(steady["outcome_sojourn_ms"][ratio]["mean"], 1)
+    rows["NOneDynRoomJump"] = number(
+        curves["underutilized|1|1.05"]["estimate"][2], 2
+    )  # 0.4 to 0.6 s in hold 2
+    recovery = tables["recovery"]["estimate_at_end"]["top_minus_lower"]
+    rows["NOneDynRecoveryDiff"] = signed(recovery["mean"], 2)
+    rows["NOneDynRecoveryDiffT"] = span(recovery["interval95"], 2)
+    rows["NOneDynSteadyDiff"] = signed(steady["outcome_sojourn_ms"]["top_minus_lower"]["mean"], 1)
+    rows["NOneDynSteadyDiffT"] = span(steady["outcome_sojourn_ms"]["top_minus_lower"]["interval95"], 1)
+    rows["NOneDynSteadyLoss"] = percent(
+        max(steady["dropped_share"][r]["mean"] for r in DYNAMICS_RATIOS.values()), 1
+    )
+    rows["NOneDynSteadyMechanism"] = "present" if steady["mechanism_present"] else "not established"
+    rows["NOneDynSteadyWindow"] = "sees" if steady["visible_in_the_outcome_window"] else "does not see"
+    for regime, name in DYNAMICS_DROPS.items():
+        drop, key = tables["capacity_drop"][regime], "NOneDyn" + name
+        for label, ratio in DYNAMICS_RATIOS.items():
+            rows[key + "Peak" + label] = number(drop["peak_sojourn_ms"][ratio]["mean"], 0)
+            rows[key + "Loss" + label] = percent(drop["dropped_share"][ratio]["mean"], 1)
+        rows[key + "PeakDiff"] = signed(drop["peak_sojourn_ms"]["top_minus_lower"]["mean"], 0)
+        rows[key + "PeakDiffT"] = span(drop["peak_sojourn_ms"]["top_minus_lower"]["interval95"], 0)
+        rows[key + "Mechanism"] = "present" if drop["mechanism_present"] else "not established"
+        below = _below_capacity(curves, regime)
+        rows[key + "Below"] = "more than 3.0" if below is None else number(below, 1)
+    if flags:
+        rows["NOneDynFlagged"] = count(flags["flagged_holds"])
+        for kind, label in POSITION_KINDS.items():
+            rows["NOneDynFlag" + label] = percent(flags["kinds"][kind]["share_of_flagged_holds"], 0)
+        for label, ratio in DYNAMICS_RATIOS.items():
+            rows["NOneDynFlagDropAfter" + label] = percent(flags["drop_hold_by_previous_ratio"][ratio], 0)
+    return rows
+
+
+def table_dynamics(inside):
+    tables = inside["tables"]
+
+    def row(state, label, entry, digits, scale=1.0):
+        cells = [number(scale * entry[ratio]["mean"], digits) for ratio in DYNAMICS_RATIOS.values()]
+        gap = entry["top_minus_lower"]
+        between = (
+            f"{signed(scale * gap['mean'], digits)} {span([scale * v for v in gap['interval95']], digits)}"
+        )
+        return " & ".join([state, label, *cells, between]) + " \\\\"
+
+    shallow, deep = (tables["capacity_drop"][regime] for regime in DYNAMICS_DROPS)
+    steady = tables["steady_constraint"]
+    lines = [
+        "\\begin{tabular}{llrrrl}",
+        "\\toprule",
+        "State & Quantity & 0.65 & 0.85 & 1.05 & Top $-$ lower \\\\",
+        "\\midrule",
+        row("Shallower drop", "peak sojourn (ms)", shallow["peak_sojourn_ms"], 0),
+        row("", "sojourn in the window (ms)", shallow["outcome_sojourn_ms"], 0),
+        row("", "dropped (\\%)", shallow["dropped_share"], 1, 100),
+        row("Deeper drop", "peak sojourn (ms)", deep["peak_sojourn_ms"], 0),
+        row("", "sojourn in the window (ms)", deep["outcome_sojourn_ms"], 0),
+        row("", "dropped (\\%)", deep["dropped_share"], 1, 100),
+        row("Steady constraint", "peak sojourn (ms)", steady["peak_sojourn_ms"], 1),
+        row("", "sojourn in the window (ms)", steady["outcome_sojourn_ms"], 1),
+        row("", "dropped (\\%)", steady["dropped_share"], 1, 100),
+        "\\midrule",
+        row(
+            "Room, later holds", "estimate at the end", tables["estimate_with_room"]["later holds"]["end"], 2
+        ),
+        row("Return of capacity", "estimate at the end", tables["recovery"]["estimate_at_end"], 2),
+    ]
+    return "\n".join([*lines, "\\bottomrule", "\\end{tabular}"]) + "\n"
+
+
+def figure_dynamics(inside, path):
+    """Three small multiples of the mean curves: one y-axis each, the registered window as a wash."""
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    ink, quiet, grid = "#1f2933", "#52606d", "#e4e7eb"
+    series = (
+        ("0.65", "#2a78d6", "-"),
+        ("0.85", "#eb6834", (0, (5, 2))),
+        ("1.05", "#1baf7a", (0, (1.2, 1.6))),
+    )
+    panels = (
+        ("underutilized|1", "estimate", "Estimate over its frozen value", "Room on the link (hold 2)"),
+        (
+            "collapse-recovery|2",
+            "estimate_over_capacity",
+            "Estimate over the new capacity",
+            "Deeper drop (hold 3)",
+        ),
+        ("collapse-recovery|2", "sojourn_ms", "Time in the relay (ms)", "Deeper drop (hold 3)"),
+    )
+    plt.rcParams.update({"font.size": 7.5, "axes.spines.top": False, "axes.spines.right": False})
+    fig, axes = plt.subplots(1, 3, figsize=(7.0, 2.35))
+    seconds = [DYNAMICS_BIN_S * (i + 0.5) for i in range(inside["bins"])]
+    low, high = (v / 1000 for v in inside["windows_ms"]["outcome"])
+    for axis, (key, name, label, title) in zip(axes, panels, strict=True):
+        axis.axvspan(low, high, color=quiet, alpha=0.10, linewidth=0)
+        for ratio, colour, dash in series:
+            values = [float("nan") if v is None else v for v in inside["curves"][f"{key}|{ratio}"][name]]
+            axis.plot(
+                seconds,
+                values,
+                color=colour,
+                linestyle=dash,
+                linewidth=1.5,
+                solid_capstyle="round",
+                label=ratio,
+            )
+            axis.plot(
+                seconds[-1],
+                values[-1],
+                "o",
+                color=colour,
+                markersize=4.5,
+                markeredgecolor="white",
+                markeredgewidth=1.0,
+            )
+        if name == "estimate_over_capacity":
+            axis.axhline(1, color=quiet, linewidth=0.6)
+        axis.set_title(title, fontsize=7.5, color=ink, loc="left")
+        axis.set_xlabel("Seconds since the request", color=quiet)
+        axis.set_ylabel(label, color=quiet)
+        axis.set_xlim(0, 3.0)
+        axis.set_ylim(bottom=0)
+        axis.grid(axis="y", color=grid, linewidth=0.5)
+        axis.set_axisbelow(True)
+        axis.tick_params(colors=quiet, length=2)
+        for side in ("left", "bottom"):
+            axis.spines[side].set_color(grid)
+    top = axes[0].get_ylim()[1]
+    axes[0].text(
+        (low + high) / 2, 0.04 * top, "registered\nwindow", ha="center", va="bottom", fontsize=6, color=quiet
+    )
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(
+        handles,
+        labels,
+        title="Requested ratio",
+        ncol=3,
+        frameon=False,
+        loc="upper center",
+        bbox_to_anchor=(0.5, 1.02),
+        fontsize=7,
+        title_fontsize=7,
+        handlelength=3.2,
+    )
+    fig.tight_layout(rect=(0, 0, 1, 0.9))
+    fig.savefig(path, metadata={"CreationDate": None})
+    plt.close(fig)
+
+
 def capture_facts(report):
     """Peers behind the analysis and the browser builds that produced them, read after the final."""
     peers, browsers, files = 0, set(), []
@@ -479,7 +668,18 @@ def capture_facts(report):
     return peers, sorted(browsers), files
 
 
-def export(final, public, protocol, out, allow_mock=False, pool=None, exploratory=None, conditional=None):
+def export(
+    final,
+    public,
+    protocol,
+    out,
+    allow_mock=False,
+    pool=None,
+    exploratory=None,
+    conditional=None,
+    dynamics=None,
+    flags=None,
+):
     """Write macros and tables for the paper from one registered final report."""
     final, public, protocol, out = Path(final), Path(public), Path(protocol), Path(out)
     report, interim, plan = (json.loads(p.read_text()) for p in (final, public, protocol))
@@ -509,6 +709,20 @@ def export(final, public, protocol, out, allow_mock=False, pool=None, explorator
         if not described or passed["rows_sha256"] != described["rows_sha256"]:
             raise ValueError("the second pass must be of the same rows as the exploratory description")
         evidence.update(conditional_macros(passed))
+    inside = marked = None
+    if dynamics:
+        inside = json.loads(Path(dynamics).read_text())
+        if not (
+            inside.get("mechanism_only") is True and inside.get("quality_or_ontime_labels_read") is False
+        ):
+            raise ValueError("a mechanism-only within-hold description is required")
+        if not described or inside["rows_sha256"] != described["rows_sha256"]:
+            raise ValueError("the within-hold pass must be of the same rows as the exploratory description")
+        if flags:
+            marked = json.loads(Path(flags).read_text())
+            if marked.get("outcome_free") is not True or marked["rows_sha256"] != inside["rows_sha256"]:
+                raise ValueError("an outcome-free flag composition of the same rows is required")
+        evidence.update(dynamics_macros(inside, marked))
     out.mkdir(parents=True, exist_ok=True)
     tables = dict(
         n1_primary=table_primary(report),
@@ -523,12 +737,16 @@ def export(final, public, protocol, out, allow_mock=False, pool=None, explorator
         )
     if passed:
         tables.update(n1_conditional=table_conditional(passed))
+    if inside:
+        tables.update(n1_dynamics=table_dynamics(inside))
+        figure_dynamics(inside, out / "n1_dynamics.pdf")
     for name, text in tables.items():
         (out / f"{name}.tex").write_text(text)
     lines = ["% Generated by `python -m media_rl.native_actuator_qualification_report`; do not edit."]
     lines += [f"\\newcommand{{\\{name}}}{{{value}}}" for name, value in evidence.items()]
     (out / "evidence.tex").write_text("\n".join(lines) + "\n")
-    sources = [final, public, protocol, *manifests, *(Path(p) for p in (pool, exploratory, conditional) if p)]
+    extra = (pool, exploratory, conditional, dynamics, flags if dynamics else None)
+    sources = [final, public, protocol, *manifests, *(Path(p) for p in extra if p)]
     provenance = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
     (out / "provenance.json").write_text(json.dumps(provenance, indent=1, sort_keys=True) + "\n")
     return dict(out=str(out), verdict=report["verdict"], macros=len(evidence), mock=report["mock"])
@@ -545,6 +763,8 @@ def main(argv=None):
     )
     parser.add_argument("--exploratory", type=Path, help="exploratory description of the same rows")
     parser.add_argument("--conditional", type=Path, help="state-conditional second pass over the same rows")
+    parser.add_argument("--dynamics", type=Path, help="within-hold description of the same capture")
+    parser.add_argument("--flags", type=Path, help="outcome-free count of the holds the B1 flag marks")
     parser.add_argument("--allow-mock", action="store_true", help="tests only: never for the paper")
     args = parser.parse_args(argv)
     try:
@@ -557,6 +777,8 @@ def main(argv=None):
             args.pool,
             args.exploratory,
             args.conditional,
+            args.dynamics,
+            args.flags,
         )
     except (ValueError, FileNotFoundError, KeyError) as error:
         parser.exit(2, f"error: {error}\n")

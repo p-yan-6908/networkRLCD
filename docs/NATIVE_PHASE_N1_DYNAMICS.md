@@ -183,7 +183,7 @@ the browser could see the drop, so even 0.65 of it is above the new capacity.
 | | sojourn at 1.8 to 2.6 s, ms | 28 | 38 | 23 | -11 [-19, -3] |
 | | dropped share over the hold | 0.000 | 0.001 | 0.003 | +0.003 [-0.000, +0.005] |
 | | estimate over capacity at the end | 0.90 | 0.90 | 0.82 | -0.07 [-0.12, -0.02] |
-| collapse-recovery (1.2 to 0.35) | peak sojourn, ms | 332 | 403 | 407 | +39 [-6, +84] |
+| collapse-recovery (1.2 to 0.35) | peak sojourn, ms | 332 | 403 | 406 | +39 [-6, +84] |
 | | sojourn at 1.8 to 2.6 s, ms | 73 | 131 | 131 | +29 [-70, +128] |
 | | dropped share over the hold | 0.019 | 0.052 | 0.050 | +0.015 [-0.024, +0.053] |
 | | estimate over capacity at the end | 0.85 | 0.84 | 0.81 | -0.04 [-0.11, +0.03] |
@@ -237,8 +237,10 @@ Near-capacity from hold 3 on, and hold 4 of the two schedules with a drop:
 
 ### 5. Which holds B1's flag marks (no outcome is read)
 
-Computed from the frozen estimates and the plan with B1's registered flag. Share of holds
-flagged, by schedule and hold:
+Computed from the frozen estimates and the plan with B1's registered flag, by
+`python -m media_rl.native_backoff_benefit_positions --composition` on the tracked rows
+(`results/native-phase-b1-flag-composition.json`). Share of holds flagged, by schedule and
+hold:
 
 | Schedule | Hold 2 | Hold 3 | Hold 4 | Hold 5 | Hold 6 |
 |---|---:|---:|---:|---:|---:|
@@ -259,8 +261,8 @@ Of the 814 flagged holds:
 
 - **Hold 2 is never flagged,** because the estimate always grows while the session starts.
 - **The hold of the drop is flagged about half the time, and not because the flag sees the
-  drop.** It is flagged 91% to 94% of the time after a request of 0.65 and 17% to 33% of the
-  time otherwise. The drop comes a few tenths of a second before the hold begins, too late for
+  drop.** Over the two schedules it is flagged 93% of the time after a request of 0.65, and 18%
+  and 29% of the time after the other two. The drop comes a few tenths of a second before the hold begins, too late for
   the frozen estimate to show it.
 - **The flag does mark the hold after a drop,** almost always. By then the browser has cut.
 

@@ -7,6 +7,8 @@ the frozen panel code and runs only after the registered final report has been w
 """
 
 import argparse
+import gzip
+import hashlib
 import json
 from dataclasses import replace
 from pathlib import Path
@@ -81,6 +83,64 @@ def reading(made):
     )
 
 
+def composition(rows, plan):
+    """Which holds the registered flag marks, by position. No outcome is read.
+
+    Only the frozen estimates, the arms and the plan enter, so this can be computed for any
+    capture without looking at a result.
+    """
+    shaped = [
+        dict(
+            trial_id=r["trial_id"],
+            epoch=r["epoch"],
+            arm=r["arm"],
+            base_bwe_bps=r["base_bwe_bps"],
+            regime=r["network_regime"],
+            source=r["cluster_id"],
+            complete=r["complete"],
+        )
+        for r in rows
+    ]
+    held = [dict(h, kind=kind(h["regime"], h["epoch"])) for h in benefit.flag_rows(shaped, plan)]
+    total = sum(h["flagged"] for h in held)
+    require(total > 0, "the flag marks no hold")
+
+    def share(members):
+        return sum(h["flagged"] for h in members) / len(members) if members else None
+
+    kinds = {}
+    for name in KINDS:
+        members = [h for h in held if h["kind"] == name]
+        marked = sum(h["flagged"] for h in members)
+        kinds[name] = dict(
+            holds=len(members),
+            flagged_holds=marked,
+            flagged_share=share(members),
+            share_of_flagged_holds=marked / total,
+        )
+    epochs = sorted({h["epoch"] for h in held})
+    drop = [h for h in held if h["kind"] == "drop"]
+    return dict(
+        abi=ABI + "_flag_composition",
+        outcome_free=True,
+        flag=f"frozen estimate below {plan.growth_limit:g} times the previous hold's",
+        holds_with_a_predecessor=len(held),
+        flagged_holds=total,
+        kinds=kinds,
+        by_schedule_and_hold={
+            regime: {
+                str(epoch + 1): share([h for h in held if h["regime"] == regime and h["epoch"] == epoch])
+                for epoch in epochs
+            }
+            for regime in b1.REGIMES
+        },
+        drop_hold_by_previous_ratio={
+            f"{ratio:.2f}": share([h for h in drop if h["previous_arm"] == arm])
+            for arm, ratio in enumerate(benefit.RATIOS)
+        },
+    )
+
+
 def positions(protocol_path, roots, final_path):
     """The split for one B1 study. The registered final report has to exist already."""
     final = read_json(final_path)
@@ -110,19 +170,38 @@ def positions(protocol_path, roots, final_path):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description="B1 addendum: where in the schedule a benefit sits")
-    parser.add_argument("--protocol", required=True, type=Path)
-    parser.add_argument("--capture", required=True, type=Path, action="append")
-    parser.add_argument("--final", required=True, type=Path)
+    parser.add_argument("--protocol", type=Path)
+    parser.add_argument("--capture", type=Path, action="append")
+    parser.add_argument("--final", type=Path)
+    parser.add_argument(
+        "--composition", type=Path, help="audited rows: only count which holds the flag marks"
+    )
     parser.add_argument("--out", required=True, type=Path)
     args = parser.parse_args(argv)
     if args.out.exists():
         parser.exit(2, "error: fresh output path required\n")
     try:
-        report = positions(args.protocol, args.capture, args.final)
+        if args.composition:
+            raw = args.composition.read_bytes()
+            rows = json.loads(gzip.decompress(raw) if args.composition.suffix == ".gz" else raw)
+            report = dict(
+                composition(rows, benefit.load_registration(b1.REGISTRATION).plan),
+                rows_sha256=hashlib.sha256(
+                    gzip.decompress(raw) if args.composition.suffix == ".gz" else raw
+                ).hexdigest(),
+            )
+            shown = {name: entry["share_of_flagged_holds"] for name, entry in report["kinds"].items()}
+        else:
+            require(
+                args.protocol and args.capture and args.final,
+                "the split needs --protocol, --capture and --final",
+            )
+            report = positions(args.protocol, args.capture, args.final)
+            shown = report["reading"]
     except (ValueError, FileNotFoundError, KeyError) as error:
         parser.exit(2, f"error: {error}\n")
     write_json(args.out, report)
-    print(json.dumps(report["reading"], indent=1))
+    print(json.dumps(shown, indent=1))
 
 
 if __name__ == "__main__":
