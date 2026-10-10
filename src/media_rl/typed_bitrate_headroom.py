@@ -80,6 +80,8 @@ def score(config, families, seeds):
 
 def reading(share, loss, settings):
     """Where the hindsight opportunity lies, by thresholds fixed before the run."""
+    if share is None:  # the reference set offers no headroom to compare with
+        return "mixed"
     if share >= settings["below_share"]:
         return "below"
     if share < settings["above_share"] and loss["family_t_interval95"][1] < 0:
@@ -120,7 +122,8 @@ def measure(config, settings, panels):
             base, oracle = scored[entry["base_ratio"]]["utility"], scored["oracle"]["utility"]
             far_base, far_oracle = wide[name][wide_base]["utility"], wide[name]["oracle"]["utility"]
             loss = contrast(((oracle - base) - (far_oracle - far_base))[:, :, None], rng, samples)
-            share = float((oracle - base).mean() / (far_oracle - far_base).mean())
+            reference = float((far_oracle - far_base).mean())
+            share = float((oracle - base).mean()) / reference if reference > 0 else None
             entry["against_widest"][name] = dict(
                 base=contrast((base - far_base)[:, :, None], rng, samples),
                 oracle=contrast((oracle - far_oracle)[:, :, None], rng, samples),
@@ -168,8 +171,9 @@ def headline(report):
             )
             if "against_widest" in entry:
                 change = entry["against_widest"][name]
+                share = "n/a" if change["headroom_share"] is None else f"{change['headroom_share']:.2f}"
                 line += (
-                    f"; share of the widest set's headroom {change['headroom_share']:.2f} ({change['reading']}), "
+                    f"; share of the widest set's headroom {share} ({change['reading']}), "
                     f"fixed {change['base']['mean']:+.3f}, oracle {change['oracle']['mean']:+.3f}, "
                     f"oracle minus widest fixed {change['oracle_minus_widest_base']['mean']:+.3f}"
                 )

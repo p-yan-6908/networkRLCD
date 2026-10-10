@@ -9,7 +9,9 @@ from media_rl.typed_bitrate_audit import audit
 from media_rl.typed_bitrate_baselines import audit as rule_audit
 from media_rl.typed_bitrate_experiment import rescore, run, transfer
 from media_rl.typed_bitrate_factual import study
-from media_rl.typed_bitrate_followup_report import export, rule_name
+from media_rl.typed_bitrate_followup_report import export, headroom_macros, rule_name, table_headroom
+from media_rl.typed_bitrate_headroom import load_settings as headroom_settings
+from media_rl.typed_bitrate_headroom import measure
 from media_rl.typed_bitrate_population import SEED, table_hash
 
 TINY = dict(
@@ -134,3 +136,39 @@ def test_followup_evidence_is_generated_from_the_summaries(tmp_path):
     )
     with pytest.raises(ValueError):
         export(tmp_path / "broken", tmp_path / "rules", panel)  # a replication needs its rule audit
+
+
+def test_headroom_evidence_names_sets_and_panels(tmp_path):
+    config = load_config_from(TINY)
+    settings = headroom_settings()
+    settings.update(samples=50)
+    panels = {"r": (["steady", "collapse"], [11, 12]), "s": (["steady", "ramp"], [13, 14])}
+    report = dict(
+        synthetic_only=True,
+        models_trained=0,
+        families={"r": 2, "s": 2},
+        sets=measure(config, settings, panels),
+    )
+    made = headroom_macros(report)
+    assert (
+        made["TypedHeadRefTop"] == "1.05"
+        and made["TypedHeadCapTop"] == "1.00"
+        and made["TypedHeadLowTop"] == "0.90"
+    )
+    assert "TypedHeadRefRepShare" not in made and made["TypedHeadCapSealReading"] in (
+        "below",
+        "above",
+        "mixed",
+    )
+    assert all(re.fullmatch(r"[A-Za-z]+", name) for name in made)
+    table = table_headroom(report)
+    assert table.count("\\\\") == 1 + 6 and "replication" in table and "sealed" in table
+    with pytest.raises(ValueError, match="three option sets"):
+        headroom_macros(dict(report, sets=report["sets"][:2]))
+    json.dumps(report, allow_nan=False)  # a panel without reference headroom has no share, not a NaN
+
+
+def load_config_from(values):
+    from media_rl.typed_bitrate import TypedConfig
+
+    return TypedConfig(**{**values, "train_scenarios": ["steady", "collapse"]}).validate()

@@ -15,5 +15,6 @@
  "results/typed-baseline-audit-v1/report.json": "42d8f19113fa1383c0e516f4c9887d9bc03e864b05f0c9c2919d794f1368722a",
  "results/typed-crossover-v1/report.json": "5972c38c8394c63a2047623af0f4393d0c590b7e3099ec1c9062a4c2e8e05ec8",
  "results/typed-factual-v1/report.json": "76825095efbd21048f040b2938060b5c7045a4d9665bf31b4094957ea48ad94a",
- "results/typed-factual-v2-unseen/report.json": "7a9c50a011b384c8b88c651bf17133be520f44dad5b8a4827ab5a77f6be467d5"
+ "results/typed-factual-v2-unseen/report.json": "7a9c50a011b384c8b88c651bf17133be520f44dad5b8a4827ab5a77f6be467d5",
+ "results/typed-headroom-v1/report.json": "9bb604df22a7e9dd31d323e03a15a2f7078091404c6e2f56c6c0255ddc1967f6"
 }
