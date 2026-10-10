@@ -256,6 +256,23 @@ def test_within_hold_macros_table_and_figure_come_from_the_mechanism_report(reco
     assert made["NOneDynDeepBelow"] == "more than 3.0"  # the invented estimate never falls below capacity
     assert made["NOneDynDeepLossTop"] == "20.0" and made["NOneDynDeepLossLow"] == "0.0"
     assert "NOneDynFlagDrop" in made and "NOneDynFlagged" not in report.dynamics_macros(inside)
+    kept = json.loads(
+        json.dumps(
+            [
+                {k: (v.tolist() if hasattr(v, "tolist") else v) for k, v in h.items()}
+                for h in dynamics.collect(tmp_path / "capture", rows)
+            ],
+            default=float,
+        ).replace("NaN", "null")
+    )
+    bound = dynamics.binding(kept)
+    with_binding = report.dynamics_macros(inside, flags, bound)
+    assert all(re.fullmatch(r"NOneDyn[A-Za-z]+", name) for name in with_binding)
+    # The invented encoder stays at 0.9 of the estimate under a cap of 1.05, so no top-ratio cap binds.
+    assert with_binding["NOneDynBindRoom"] == "0" and with_binding["NOneDynBindRoomT"] == "[0, 0]"
+    assert with_binding["NOneDynBindCapOverLive"] == "n/a" and with_binding["NOneDynBrowserShare"].startswith(
+        "0."
+    )
     table = report.table_dynamics(inside)
     assert table.count("\\\\") == 1 + 11 and "Deeper drop" in table and "Return of capacity" in table
     report.figure_dynamics(inside, tmp_path / "a.pdf")

@@ -266,6 +266,44 @@ Of the 814 flagged holds:
   the frozen estimate to show it.
 - **The flag does mark the hold after a drop,** almost always. By then the browser has cut.
 
+### 6. Is the top ratio "no cap"? (added after the tables were read)
+
+Not in the design above. It is computed from the saved per-hold curves by
+`python -m media_rl.native_actuator_qualification_dynamics --binding` and recorded in
+`binding.json` beside the report. A hold's cap binds when the encoder's target at 2.4 to 3.0 s
+is at least 0.97 of the cap. Where it does not, the browser's own allocation is the limit and
+the cap changes nothing. Share of holds 2 to 6 whose cap binds:
+
+| Schedule | 0.65 | 0.85 | 1.05 | 1.05, over sources |
+|---|---:|---:|---:|---|
+| underutilized | 99% | 95% | 95% | 96% [93, 98] |
+| near-capacity | 95% | 78% | 34% | 33% [21, 45] |
+| queue-building | 77% | 73% | 24% | 24% [14, 35] |
+| collapse-recovery | 74% | 64% | 49% | 49% [40, 58] |
+
+- **With room the top ratio's cap binds almost always,** and it sits at a median 0.50 of the
+  live estimate. The request raised the estimate to twice its frozen value and then holds the
+  encoder at 1.05 of that frozen value.
+- **Where no cap binds, the browser allots the encoder a median 0.82 of its live estimate**
+  (quartiles 0.77 to 0.87).
+- **After capacity returns the top ratio binds again:** in 71% and 98% of holds 5 and 6 of
+  collapse-recovery.
+- **In the hold of a drop it never binds at the top ratio** (2% and 0%). There the top ratio
+  is the browser left alone.
+
+What follows:
+
+- **The top ratio is not the browser left alone.** B1's registration says the top ratio
+  stands in for "no cap". That holds where the browser's allocation is the limit: in the hold
+  of a drop and in most constrained holds. It fails with room and after capacity returns,
+  and there B1 compares three caps with each other.
+- **Every native condition in this repository has had an application cap.** The browser
+  without one has never been measured in this harness. It is the baseline that a cap
+  controller would have to beat, and whether any ratio of the estimate does as well as it is
+  not known.
+- A cap can only withhold rate from the browser. It can pay only where withholding relieves
+  congestion that the browser would not have relieved as fast.
+
 ## Reading
 
 - **Mechanism.** On this stack the logs show one place where a lower cap leaves less queue and

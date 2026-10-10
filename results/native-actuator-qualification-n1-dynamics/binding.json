@@ -1,0 +1,191 @@
+{
+ "abi": "native_actuator_qualification_n1_dynamics_binding",
+ "added_after_the_tables_were_read": true,
+ "browser_allocation_over_live_estimate": {
+  "holds": 693,
+  "median": 0.8216572833540192,
+  "quartiles": [
+   0.7662442841301287,
+   0.8702434584155085
+  ]
+ },
+ "by_schedule_and_ratio": {
+  "collapse-recovery": {
+   "0.65": 0.7438423645320197,
+   "0.85": 0.6435643564356436,
+   "1.05": 0.49230769230769234
+  },
+  "near-capacity": {
+   "0.65": 0.9482758620689655,
+   "0.85": 0.7844827586206896,
+   "1.05": 0.3402061855670103
+  },
+  "queue-building": {
+   "0.65": 0.7707317073170732,
+   "0.85": 0.7344632768361582,
+   "1.05": 0.23853211009174313
+  },
+  "underutilized": {
+   "0.65": 0.9891304347826086,
+   "0.85": 0.9452054794520548,
+   "1.05": 0.9543147208121827
+  }
+ },
+ "exploratory": true,
+ "holds_scored": 2880,
+ "holds_sha256": "5d5cb9e715d0c6c7ba59fdfe3fdfb64851616f9e9e34c453fa496fff605f6c09",
+ "mechanism_only": true,
+ "tolerance": 0.97,
+ "top_ratio_by_schedule_and_hold": {
+  "collapse-recovery": {
+   "1": {
+    "binding_share": 0.9705882352941176,
+    "cap_over_live_estimate": 0.40218514599009414
+   },
+   "2": {
+    "binding_share": 0.48717948717948717,
+    "cap_over_live_estimate": 0.9282342128287917
+   },
+   "3": {
+    "binding_share": 0.0,
+    "cap_over_live_estimate": 3.5695787209664425
+   },
+   "4": {
+    "binding_share": 0.2,
+    "cap_over_live_estimate": 1.0364947858270053
+   },
+   "5": {
+    "binding_share": 0.7073170731707317,
+    "cap_over_live_estimate": 0.6154808928890843
+   },
+   "6": {
+    "binding_share": 0.975609756097561,
+    "cap_over_live_estimate": 0.566369674986698
+   }
+  },
+  "near-capacity": {
+   "1": {
+    "binding_share": 1.0,
+    "cap_over_live_estimate": 0.4306290165929414
+   },
+   "2": {
+    "binding_share": 0.5384615384615384,
+    "cap_over_live_estimate": 0.9888800857998953
+   },
+   "3": {
+    "binding_share": 0.43902439024390244,
+    "cap_over_live_estimate": 1.0273639531917804
+   },
+   "4": {
+    "binding_share": 0.25,
+    "cap_over_live_estimate": 1.08332962149343
+   },
+   "5": {
+    "binding_share": 0.4146341463414634,
+    "cap_over_live_estimate": 0.9900392374265746
+   },
+   "6": {
+    "binding_share": 0.06666666666666667,
+    "cap_over_live_estimate": 1.126176596090197
+   }
+  },
+  "queue-building": {
+   "1": {
+    "binding_share": 0.9333333333333333,
+    "cap_over_live_estimate": 0.3888165696952946
+   },
+   "2": {
+    "binding_share": 0.4666666666666667,
+    "cap_over_live_estimate": 0.9073777854731885
+   },
+   "3": {
+    "binding_share": 0.022727272727272728,
+    "cap_over_live_estimate": 2.064772710794376
+   },
+   "4": {
+    "binding_share": 0.2641509433962264,
+    "cap_over_live_estimate": 1.0093909224952398
+   },
+   "5": {
+    "binding_share": 0.25,
+    "cap_over_live_estimate": 1.087694241050094
+   },
+   "6": {
+    "binding_share": 0.16666666666666666,
+    "cap_over_live_estimate": 1.0688625283227116
+   }
+  },
+  "underutilized": {
+   "1": {
+    "binding_share": 1.0,
+    "cap_over_live_estimate": 0.4966246602919516
+   },
+   "2": {
+    "binding_share": 0.9743589743589743,
+    "cap_over_live_estimate": 0.5380347748940728
+   },
+   "3": {
+    "binding_share": 0.96875,
+    "cap_over_live_estimate": 0.5565022366302375
+   },
+   "4": {
+    "binding_share": 1.0,
+    "cap_over_live_estimate": 0.5392378108150301
+   },
+   "5": {
+    "binding_share": 0.9545454545454546,
+    "cap_over_live_estimate": 0.5705048147643651
+   },
+   "6": {
+    "binding_share": 0.8936170212765957,
+    "cap_over_live_estimate": 0.6389699502892398
+   }
+  }
+ },
+ "top_ratio_over_sources": {
+  "collapse-recovery": {
+   "interval95": [
+    0.4041438624853668,
+    0.5760848956845679
+   ],
+   "mean": 0.49011437908496736,
+   "p_value": 7.343064264570808e-08,
+   "sources": 12
+  },
+  "near-capacity": {
+   "interval95": [
+    0.21192408034564458,
+    0.4515624152422443
+   ],
+   "mean": 0.33174324779394443,
+   "p_value": 7.805159370610333e-05,
+   "sources": 12
+  },
+  "queue-building": {
+   "interval95": [
+    0.13597217685088528,
+    0.3522086643897555
+   ],
+   "mean": 0.24409042062032038,
+   "p_value": 0.0004227266821225286,
+   "sources": 12
+  },
+  "underutilized": {
+   "interval95": [
+    0.9316998094265507,
+    0.9806264536350067
+   ],
+   "mean": 0.9561631315307787,
+   "p_value": 6.528318810242219e-17,
+   "sources": 12
+  }
+ },
+ "top_ratio_with_room_cap_over_live_estimate": {
+  "holds": 188,
+  "median": 0.5016364412227343
+ },
+ "window_ms": [
+  2400,
+  3000
+ ]
+}

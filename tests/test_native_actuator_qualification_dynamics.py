@@ -279,3 +279,46 @@ def test_window_and_dropped_share_skip_empty_bins():
     assert dynamics.dropped_share(hold) == pytest.approx(200 / 1500)
     assert dynamics.dropped_share(hold, dynamics.WINDOWS["outcome"]) == 0.5
     assert math.isnan(dynamics.dropped_share(dict(offered=[0.0] * 15, dropped=[0.0] * 15)))
+
+
+def test_binding_tells_a_cap_that_limits_the_encoder_from_one_that_does_not(tmp_path, capsys):
+    def hold(source, regime, epoch, arm, target, estimate):
+        return dict(
+            source=source,
+            regime=regime,
+            epoch=epoch,
+            arm=arm,
+            target=[target] * 15,
+            estimate=[estimate] * 14 + [None],
+        )
+
+    holds = []
+    for s in range(3):
+        for epoch in range(6):
+            holds.append(hold(f"s{s}", "underutilized", epoch, 2, 1.05, 2.1))  # at the cap, estimate twice it
+            holds.append(hold(f"s{s}", "underutilized", epoch, 0, 0.65, 1.0))
+            holds.append(
+                hold(f"s{s}", "near-capacity", epoch, 2, 0.84, 1.0)
+            )  # the browser's allocation limits
+            holds.append(hold(f"s{s}", "near-capacity", epoch, 1, 0.85, 1.0))
+    made = dynamics.binding(holds)
+    assert (
+        made["mechanism_only"]
+        and made["added_after_the_tables_were_read"]
+        and made["holds_scored"] == len(holds)
+    )
+    assert made["by_schedule_and_ratio"]["underutilized"] == {"0.65": 1.0, "0.85": None, "1.05": 1.0}
+    assert made["by_schedule_and_ratio"]["near-capacity"] == {"0.65": None, "0.85": 1.0, "1.05": 0.0}
+    assert made["top_ratio_over_sources"]["underutilized"]["mean"] == 1.0
+    assert made["top_ratio_over_sources"]["near-capacity"]["sources"] == 3
+    assert made["top_ratio_with_room_cap_over_live_estimate"]["median"] == pytest.approx(0.5)
+    assert made["browser_allocation_over_live_estimate"]["median"] == pytest.approx(0.84)
+    assert set(made["top_ratio_by_schedule_and_hold"]["underutilized"]) == {"1", "2", "3", "4", "5", "6"}
+    saved, out = tmp_path / "holds.json.gz", tmp_path / "binding.json"
+    saved.write_bytes(gzip.compress(json.dumps(holds).encode()))
+    dynamics.main(["--binding", str(saved), "--out", str(out)])
+    assert (
+        len(json.loads(out.read_text())["holds_sha256"]) == 64 and "underutilized" in capsys.readouterr().out
+    )
+    with pytest.raises(SystemExit):
+        dynamics.main(["--out", str(tmp_path / "nothing")])

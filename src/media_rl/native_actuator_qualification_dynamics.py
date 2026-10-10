@@ -9,6 +9,7 @@ here is confirmatory, no model is fitted and no controller is evaluated.
 
 import argparse
 import gzip
+import hashlib
 import json
 import math
 import warnings
@@ -360,6 +361,99 @@ def study(capture, rows):
     return summarise(holds), holds
 
 
+BINDING_WINDOW = (2400, 3000)  # late in the hold, once the encoder's target has settled
+BINDING_TOLERANCE = 0.97
+
+
+def binding(holds):
+    """Where the requested cap is what limits the encoder. Added after the tables were read.
+
+    A hold's cap binds when the encoder's target late in the hold is at the cap. Where it does
+    not, the browser's own allocation is the limit and the cap changes nothing. Mechanism only.
+    """
+    scored = []
+    for h in holds:
+        target, estimate = (
+            window(_filled(h["target"]), BINDING_WINDOW),
+            window(_filled(h["estimate"]), BINDING_WINDOW),
+        )
+        if math.isfinite(target) and math.isfinite(estimate) and estimate > 0:
+            cap = qualification.RATIOS[h["arm"]]
+            scored.append(
+                dict(
+                    source=h["source"],
+                    regime=h["regime"],
+                    epoch=h["epoch"],
+                    arm=h["arm"],
+                    binds=target >= BINDING_TOLERANCE * cap,
+                    cap_over_live=cap / estimate,
+                    target_over_live=target / estimate,
+                )
+            )
+    require(scored, "no hold could be scored")
+    later = [s for s in scored if s["epoch"] >= 1]
+    top = len(qualification.RATIOS) - 1
+
+    def share(members):
+        return float(np.mean([m["binds"] for m in members])) if members else None
+
+    over_sources = {}
+    for regime in REGIMES:
+        per = defaultdict(list)
+        for s in later:
+            if s["regime"] == regime and s["arm"] == top:
+                per[s["source"]].append(s["binds"])
+        over_sources[regime] = summary([float(np.mean(v)) for v in per.values()])
+    free = [s["target_over_live"] for s in later if not s["binds"]]
+    bound = [s["cap_over_live"] for s in later if s["binds"] and s["arm"] == top and s["regime"] == REFERENCE]
+    return dict(
+        abi=ABI + "_binding",
+        exploratory=True,
+        mechanism_only=True,
+        added_after_the_tables_were_read=True,
+        window_ms=list(BINDING_WINDOW),
+        tolerance=BINDING_TOLERANCE,
+        holds_scored=len(scored),
+        by_schedule_and_ratio={
+            regime: {
+                f"{qualification.RATIOS[arm]:.2f}": share(
+                    [s for s in later if s["regime"] == regime and s["arm"] == arm]
+                )
+                for arm in ARMS
+            }
+            for regime in REGIMES
+        },
+        top_ratio_over_sources=over_sources,
+        top_ratio_by_schedule_and_hold={
+            regime: {
+                str(epoch + 1): dict(
+                    binding_share=share(members),
+                    cap_over_live_estimate=float(np.mean([m["cap_over_live"] for m in members])),
+                )
+                for epoch in sorted({s["epoch"] for s in scored})
+                if (
+                    members := [
+                        s for s in scored if s["regime"] == regime and s["arm"] == top and s["epoch"] == epoch
+                    ]
+                )
+            }
+            for regime in REGIMES
+        },
+        browser_allocation_over_live_estimate=dict(
+            holds=len(free),
+            median=float(np.median(free)) if free else None,
+            quartiles=[float(v) for v in np.quantile(free, [0.25, 0.75])] if free else None,
+        ),
+        top_ratio_with_room_cap_over_live_estimate=dict(
+            holds=len(bound), median=float(np.median(bound)) if bound else None
+        ),
+    )
+
+
+def _filled(values):
+    return [math.nan if v is None else v for v in values]
+
+
 def headline(report):
     tables = report["tables"]
     drop = {
@@ -380,7 +474,8 @@ def headline(report):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Inside a hold: description of a capture's raw logs")
-    parser.add_argument("--capture", required=True, type=Path, action="append")
+    parser.add_argument("--capture", type=Path, action="append")
+    parser.add_argument("--binding", type=Path, help="saved per-hold curves: only report where the cap binds")
     parser.add_argument(
         "--rows",
         type=Path,
@@ -391,6 +486,14 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if args.out.exists():
         parser.exit(2, "error: fresh output directory required\n")
+    if args.binding:
+        raw = gzip.decompress(args.binding.read_bytes())
+        report = dict(binding(json.loads(raw)), holds_sha256=hashlib.sha256(raw).hexdigest())
+        args.out.write_text(json.dumps(report, indent=1, sort_keys=True) + "\n")
+        print(json.dumps(report["by_schedule_and_ratio"], indent=1))
+        return
+    if not args.capture:
+        parser.exit(2, "error: --capture or --binding is required\n")
     sources = args.rows or [capture / "cohorts.json" for capture in args.capture]
     if len(sources) != len(args.capture):
         parser.exit(2, "error: one rows file per capture\n")
