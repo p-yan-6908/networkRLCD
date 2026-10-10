@@ -1,0 +1,448 @@
+{
+ "abi": "native_actuator_qualification_n1_conditional",
+ "benefit": "outcome at ratio 0.65 minus outcome at ratio 1.05",
+ "candidate_rule": "Holm-adjusted interaction p below 0.1 on utility with a positive benefit among flagged holds",
+ "candidates": [],
+ "changes_the_n1_outcome": false,
+ "exploratory": true,
+ "flagged_share_target": 0.3333333333333333,
+ "mock": false,
+ "registered": false,
+ "rows_sha256": "037aaa7e377ef2c84996dd931d898abedbd05a1f5dd7867b61d0801a9b7aff11",
+ "second_pass_on_the_same_rows": true,
+ "signals": {
+  "estimate_growth": {
+   "flagged_share": 0.3333333333333333,
+   "flagged_share_by_regime": {
+    "collapse-recovery": 0.395,
+    "near-capacity": 0.3433333333333333,
+    "queue-building": 0.41833333333333333,
+    "underutilized": 0.17666666666666667
+   },
+   "holds": 2400,
+   "ontime_fraction": {
+    "flagged": {
+     "interval95": [
+      -0.012370320790219547,
+      0.08645562127460975
+     ],
+     "mean": 0.0370426502421951,
+     "p_value": 0.12718127825071077,
+     "sources": 12
+    },
+    "flagged_middle_ratio": {
+     "interval95": [
+      0.0201003752625118,
+      0.12344527998138116
+     ],
+     "mean": 0.07177282762194648,
+     "p_value": 0.010907146017025892,
+     "sources": 12
+    },
+    "interaction": {
+     "holm_p_value": 0.24841893553380415,
+     "interval95": [
+      -0.0026001984477688894,
+      0.08912381110147168
+     ],
+     "mean": 0.04326180632685139,
+     "p_value": 0.06210473388345104,
+     "sources": 12
+    },
+    "rest": {
+     "interval95": [
+      -0.03504252911718709,
+      0.0226042169478745
+     ],
+     "mean": -0.006219156084656295,
+     "p_value": 0.6441461281603054,
+     "sources": 12
+    }
+   },
+   "side": "below",
+   "threshold": 0.04743881878178774,
+   "utility": {
+    "flagged": {
+     "interval95": [
+      -0.8418603135811467,
+      1.8400827733282228
+     ],
+     "mean": 0.49911122987353806,
+     "p_value": 0.43005866652102603,
+     "sources": 12
+    },
+    "flagged_middle_ratio": {
+     "interval95": [
+      0.202634331903222,
+      3.433148516516264
+     ],
+     "mean": 1.817891424209743,
+     "p_value": 0.030731625262101322,
+     "sources": 12
+    },
+    "interaction": {
+     "holm_p_value": 0.27034867163201487,
+     "interval95": [
+      -0.1324502301872723,
+      2.6437196529149816
+     ],
+     "mean": 1.2556347113638546,
+     "p_value": 0.07190750511262199,
+     "sources": 12
+    },
+    "rest": {
+     "interval95": [
+      -1.7808420204691582,
+      0.26779505748852506
+     ],
+     "mean": -0.7565234814903166,
+     "p_value": 0.1323230843164328,
+     "sources": 12
+    }
+   }
+  },
+  "jitter_ms": {
+   "flagged_share": 0.3333333333333333,
+   "flagged_share_by_regime": {
+    "collapse-recovery": 0.25833333333333336,
+    "near-capacity": 0.5216666666666666,
+    "queue-building": 0.47333333333333333,
+    "underutilized": 0.08
+   },
+   "holds": 2400,
+   "ontime_fraction": {
+    "flagged": {
+     "interval95": [
+      0.005577946163640726,
+      0.11971928137573422
+     ],
+     "mean": 0.06264861376968747,
+     "p_value": 0.03449827917894876,
+     "sources": 11
+    },
+    "flagged_middle_ratio": {
+     "interval95": [
+      -0.02816660121040667,
+      0.11692425895799119
+     ],
+     "mean": 0.04437882887379226,
+     "p_value": 0.20277175691898996,
+     "sources": 11
+    },
+    "interaction": {
+     "holm_p_value": 0.39904617025810124,
+     "interval95": [
+      -0.02309454118127935,
+      0.15052553611339614
+     ],
+     "mean": 0.0637154974660584,
+     "p_value": 0.13301539008603375,
+     "sources": 11
+    },
+    "rest": {
+     "interval95": [
+      -0.05324806097925243,
+      0.0510150512876818
+     ],
+     "mean": -0.0011165048457853117,
+     "p_value": 0.9632476753631717,
+     "sources": 12
+    }
+   },
+   "side": "above",
+   "threshold": 11.988333333333339,
+   "utility": {
+    "flagged": {
+     "interval95": [
+      -0.20315394850285973,
+      3.251830089509039
+     ],
+     "mean": 1.5243380705030896,
+     "p_value": 0.07764474063337073,
+     "sources": 11
+    },
+    "flagged_middle_ratio": {
+     "interval95": [
+      -0.929631800735037,
+      3.454461509648368
+     ],
+     "mean": 1.2624148544566656,
+     "p_value": 0.22836172825887807,
+     "sources": 11
+    },
+    "interaction": {
+     "holm_p_value": 0.27034867163201487,
+     "interval95": [
+      -0.20434415496366398,
+      4.887540871743029
+     ],
+     "mean": 2.3415983583896827,
+     "p_value": 0.06758716790800372,
+     "sources": 11
+    },
+    "rest": {
+     "interval95": [
+      -2.3159846516797153,
+      0.7979281085253594
+     ],
+     "mean": -0.759028271577178,
+     "p_value": 0.3062476689615421,
+     "sources": 12
+    }
+   }
+  },
+  "loss_fraction": {
+   "flagged_share": 0.0016666666666666668,
+   "flagged_share_by_regime": {
+    "collapse-recovery": 0.005,
+    "near-capacity": 0.0,
+    "queue-building": 0.0,
+    "underutilized": 0.0016666666666666668
+   },
+   "holds": 2400,
+   "ontime_fraction": {
+    "flagged": {
+     "interval95": null,
+     "mean": null,
+     "p_value": null,
+     "sources": 0
+    },
+    "flagged_middle_ratio": {
+     "interval95": null,
+     "mean": null,
+     "p_value": null,
+     "sources": 0
+    },
+    "interaction": {
+     "holm_p_value": null,
+     "interval95": null,
+     "mean": null,
+     "p_value": null,
+     "sources": 0
+    },
+    "rest": {
+     "interval95": [
+      -0.013750231226893055,
+      0.054526190471603224
+     ],
+     "mean": 0.020387979622355085,
+     "p_value": 0.21543601332246193,
+     "sources": 12
+    }
+   },
+   "side": "above",
+   "threshold": 0.0,
+   "utility": {
+    "flagged": {
+     "interval95": null,
+     "mean": null,
+     "p_value": null,
+     "sources": 0
+    },
+    "flagged_middle_ratio": {
+     "interval95": null,
+     "mean": null,
+     "p_value": null,
+     "sources": 0
+    },
+    "interaction": {
+     "holm_p_value": null,
+     "interval95": null,
+     "mean": null,
+     "p_value": null,
+     "sources": 0
+    },
+    "rest": {
+     "interval95": [
+      -1.0242911967059827,
+      1.1069112807958599
+     ],
+     "mean": 0.04131004204493852,
+     "p_value": 0.9335359550551973,
+     "sources": 12
+    }
+   }
+  },
+  "rtt_ms": {
+   "flagged_share": 0.3325,
+   "flagged_share_by_regime": {
+    "collapse-recovery": 0.4533333333333333,
+    "near-capacity": 0.36,
+    "queue-building": 0.465,
+    "underutilized": 0.051666666666666666
+   },
+   "holds": 2400,
+   "ontime_fraction": {
+    "flagged": {
+     "interval95": [
+      -0.008463082259366907,
+      0.10450643894641007
+     ],
+     "mean": 0.04802167834352158,
+     "p_value": 0.08813360557966436,
+     "sources": 12
+    },
+    "flagged_middle_ratio": {
+     "interval95": [
+      -0.011436344852701737,
+      0.09615121738041588
+     ],
+     "mean": 0.04235743626385707,
+     "p_value": 0.11098707786327827,
+     "sources": 12
+    },
+    "interaction": {
+     "holm_p_value": 0.39904617025810124,
+     "interval95": [
+      -0.022291338755671262,
+      0.13543780299159264
+     ],
+     "mean": 0.05657323211796069,
+     "p_value": 0.14267110932654264,
+     "sources": 12
+    },
+    "rest": {
+     "interval95": [
+      -0.05285978537608083,
+      0.03575667782720259
+     ],
+     "mean": -0.008551553774439122,
+     "p_value": 0.6791773674249747,
+     "sources": 12
+    }
+   },
+   "side": "above",
+   "threshold": 56.992,
+   "utility": {
+    "flagged": {
+     "interval95": [
+      -0.6703797688224011,
+      2.7430964511705014
+     ],
+     "mean": 1.03635834117405,
+     "p_value": 0.20838144971033815,
+     "sources": 12
+    },
+    "flagged_middle_ratio": {
+     "interval95": [
+      -0.6364762791796783,
+      2.7888077425629243
+     ],
+     "mean": 1.076165731691623,
+     "p_value": 0.19408573443078297,
+     "sources": 12
+    },
+    "interaction": {
+     "holm_p_value": 0.27034867163201487,
+     "interval95": [
+      -0.5759172053827581,
+      4.5384061083571625
+     ],
+     "mean": 1.9812444514872023,
+     "p_value": 0.11618345828185629,
+     "sources": 12
+    },
+    "rest": {
+     "interval95": [
+      -2.415817357690442,
+      0.5260451370641369
+     ],
+     "mean": -0.9448861103131524,
+     "p_value": 0.18507698444054912,
+     "sources": 12
+    }
+   }
+  },
+  "rtt_trend_ms": {
+   "flagged_share": 0.051666666666666666,
+   "flagged_share_by_regime": {
+    "collapse-recovery": 0.04666666666666667,
+    "near-capacity": 0.05,
+    "queue-building": 0.055,
+    "underutilized": 0.055
+   },
+   "holds": 2400,
+   "ontime_fraction": {
+    "flagged": {
+     "interval95": [
+      -0.2202802554751641,
+      0.1333538485487572
+     ],
+     "mean": -0.04346320346320345,
+     "p_value": 0.5959125823358095,
+     "sources": 11
+    },
+    "flagged_middle_ratio": {
+     "interval95": [
+      -0.23697441895205185,
+      0.027167540645173474
+     ],
+     "mean": -0.10490343915343918,
+     "p_value": 0.10823863962155779,
+     "sources": 12
+    },
+    "interaction": {
+     "holm_p_value": 0.436701421454918,
+     "interval95": [
+      -0.26649813541817025,
+      0.12437472060756771
+     ],
+     "mean": -0.07106170740530127,
+     "p_value": 0.436701421454918,
+     "sources": 11
+    },
+    "rest": {
+     "interval95": [
+      -0.016103673615515738,
+      0.0620557150441243
+     ],
+     "mean": 0.02297602071430428,
+     "p_value": 0.22216742014698512,
+     "sources": 12
+    }
+   },
+   "side": "above",
+   "threshold": 0.0,
+   "utility": {
+    "flagged": {
+     "interval95": [
+      -8.041587488502532,
+      4.473749138462002
+     ],
+     "mean": -1.783919175020265,
+     "p_value": 0.5395648552206492,
+     "sources": 11
+    },
+    "flagged_middle_ratio": {
+     "interval95": [
+      -7.60279480148216,
+      0.801160596014515
+     ],
+     "mean": -3.4008171027338228,
+     "p_value": 0.1024524760605023,
+     "sources": 12
+    },
+    "interaction": {
+     "holm_p_value": 0.4887254779720398,
+     "interval95": [
+      -8.790006756121228,
+      4.502038484340044
+     ],
+     "mean": -2.1439841358905913,
+     "p_value": 0.4887254779720398,
+     "sources": 11
+    },
+    "rest": {
+     "interval95": [
+      -1.0592523004369607,
+      1.3207947990470819
+     ],
+     "mean": 0.13077124930506065,
+     "p_value": 0.8133342346470107,
+     "sources": 12
+    }
+   }
+  }
+ },
+ "unit": "source"
+}

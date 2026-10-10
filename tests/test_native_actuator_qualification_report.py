@@ -193,5 +193,48 @@ def test_exploratory_description_must_be_of_the_analysed_rows(records, tmp_path)
         report.export(**paths, out=tmp_path / "evidence", allow_mock=True, exploratory=path)
 
 
+def conditional_rows():
+    """Synthetic rows with a pre-hold state: a stalled estimate makes the low ratio the better one."""
+    rows = []
+    for s in range(5):
+        for peer in range(8):
+            for epoch in range(6):
+                arm, stalled = (epoch + peer + s) % 3, (epoch * 7 + peer * 3 + s) % 3 == 0
+                present = dict(status="present")
+                rows.append(
+                    dict(
+                        cluster_id=f"source-{s}",
+                        trial_id=f"{s}-{peer}",
+                        network_regime=explore.REGIMES[peer % 4],
+                        epoch=epoch,
+                        arm=arm,
+                        complete=True,
+                        base_bwe_bps=1e6 * (0.5 if stalled else 1.0 + 0.2 * epoch),
+                        encoder_bps=5e5,
+                        utility=30.0 + (2.0 + 0.1 * s if stalled else -1.0) * (2 - arm) / 2,
+                        ontime_fraction=0.9,
+                        state=dict(
+                            rtt_trend_ms=dict(present, value=0.0),
+                            rtt_ms=dict(present, value=40.0 + epoch + peer),
+                            loss_fraction=dict(present, value=0.0),
+                            jitter_ms=dict(present, value=3.0 + (peer * 5 + epoch) % 7),
+                        ),
+                    )
+                )
+    return rows
+
+
+def test_second_pass_macros_are_marked_and_skip_signals_that_flag_too_few_holds():
+    passed = explore.conditional(conditional_rows())
+    made = report.conditional_macros(passed)
+    assert all(name.startswith("NOneCond") for name in made)
+    assert made["NOneCondSignals"] == "5" and made["NOneCondUnusable"] == "2"  # trend and loss never rise
+    assert "NOneCondTrendFlagged" not in made and "NOneCondGrowthFlagged" in made
+    assert made["NOneCondCandidates"] == str(len(passed["candidates"]))
+    assert made["NOneCondCandidateSentence"].startswith("The rule named ")
+    table = report.table_conditional(passed)
+    assert table.count("too few holds") == 2 and table.count("\\\\") == 1 + 5
+
+
 def test_titles_are_made_safe_for_latex():
     assert report.escape("A_b & 50% #1 {x}") == "A\\_b \\& 50\\% \\#1 (x)"

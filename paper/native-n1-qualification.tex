@@ -86,8 +86,20 @@ Each hold also carries the on-time sampled PSNR contribution of the frames captu
 \label{tab:n1-exploratory-holds}
 \end{table}
 
+\ifdefined\NOneCondSignals
+\paragraph{A second pass, by what the sender had seen.}
+A controller does not observe the schedule. A second pass over the same rows, with its design and its rule for naming a candidate again fixed before it was computed, asks whether backing off is better in the holds that a signal observed before the hold would flag: the top third of round-trip time, of its trend, of loss and of jitter, and the bottom third of the estimate's growth since the previous hold (Table~\ref{tab:n1-conditional}). The benefit of backing off is the proxy at ratio 0.65 minus the proxy at 1.05. The arm is randomised independently of the state before the hold, so within the flagged holds that benefit is a causal effect; the difference between flagged and other holds describes effect modification. \NOneCondCandidateSentence{} Of the \NOneCondSignals{} signals, \NOneCondUnusable{} flag fewer than a tenth of holds and say nothing. For the other three the benefit among flagged holds is \NOneCondGrowthFlagged{} \NOneCondGrowthFlaggedT{}, \NOneCondJitterFlagged{} \NOneCondJitterFlaggedT{} and \NOneCondRttFlagged{} \NOneCondRttFlaggedT{}, against \NOneCondGrowthRest{}, \NOneCondJitterRest{} and \NOneCondRttRest{} among the other holds, and the smallest Holm-adjusted $p$ of a difference is \NOneCondBestHolm{}. The three signals overlap, so their agreement in sign is one observation and not three. A second look at one sample that names no candidate is weak evidence. What it adds is a direction and a size for a confirmatory study on fresh sources.
+
+\begin{table}[t]
+\centering\small
+\resizebox{\linewidth}{!}{\input{generated-native-n1/n1_conditional.tex}}
+\caption{Exploratory, second pass. Benefit of backing off, defined as the on-time sampled PSNR contribution at ratio 0.65 minus that at ratio 1.05, among holds flagged by a signal observed before the hold and among the other holds, with 95\% intervals over sources and Holm-adjusted $p$ for their difference. Thresholds are pooled tercile cut-offs.}
+\label{tab:n1-conditional}
+\end{table}
+\fi
+
 \paragraph{What the pilot suggests.}
-In these data no schedule shows a lower ratio to be better, and where the ratios differ the higher one wins, most clearly while a session is starting and when the link has room. A controller that backs off below the estimate would have to earn its gain in moments that this pilot does not resolve, such as the seconds after a capacity drop, and against a browser that already adapts its own rate. The pilot could not have detected such a gain: it averages a 0.8\,s window late in each hold over whole schedules, with \NOneSources{} sources. It is a reason to measure that gain before building on it, which is what the powered panel is for, and it is not evidence that the gain is absent.
+By schedule, no lower ratio is shown to be better, and where the ratios differ the higher one wins, most clearly while a session is starting and when the link has room. By what the sender had seen, the estimates lean the other way in the flagged third of holds and are not established. A controller that backs off below the estimate would have to earn its gain in those moments, against a browser that already adapts its own rate, and \NOneSources{} sources cannot say whether it would. This is a reason to measure that gain on fresh sources before building on it. It is not evidence that the gain is present, and not evidence that it is absent.
 \fi
 
 \ifdefined\TypedHeadFamilies

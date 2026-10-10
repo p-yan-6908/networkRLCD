@@ -251,4 +251,64 @@ uv run --frozen python -m media_rl.native_actuator_qualification_explore --condi
 
 ### Results
 
-Not yet run at this commit.
+Run on 2026-10-10 on the same rows. Output:
+`results/native-actuator-qualification-n1-conditional.json`.
+
+**No candidate is named.** No signal's interaction reaches a Holm-adjusted p below 0.10.
+
+Benefit of backing off (PSNR proxy at 0.65 minus at 1.05), 95% intervals over sources:
+
+| Signal before the hold | Flagged when | Flagged | Benefit, flagged | Benefit, other holds | Difference | p | Holm p |
+|---|---|---:|---|---|---|---:|---:|
+| Estimate growth (log) | below +0.047 | 33% | +0.50 [-0.84, +1.84] | -0.76 [-1.78, +0.27] | +1.26 [-0.13, +2.64] | 0.072 | 0.27 |
+| Jitter | above 12.0 ms | 33% | +1.52 [-0.20, +3.25] | -0.76 [-2.32, +0.80] | +2.34 [-0.20, +4.89] | 0.068 | 0.27 |
+| RTT | above 57.0 ms | 33% | +1.04 [-0.67, +2.74] | -0.94 [-2.42, +0.53] | +1.98 [-0.58, +4.54] | 0.116 | 0.27 |
+| RTT trend | above 0 ms | 5% | too few holds | +0.13 [-1.06, +1.32] | | | |
+| Loss fraction | above 0 | 0.2% | too few holds | +0.04 [-1.02, +1.11] | | | |
+
+Two signals are unusable. The RTT trend is zero in most holds, so its top third is the 5%
+of holds where it is positive, and loss is positive in 0.2% of holds.
+
+Secondary, among flagged holds:
+
+| Signal | Middle ratio (0.85 minus 1.05), PSNR proxy | On-time fraction, 0.65 minus 1.05 | On-time fraction, 0.85 minus 1.05 |
+|---|---|---|---|
+| Estimate growth | +1.82 [+0.20, +3.43] | +0.037 [-0.012, +0.086] | +0.072 [+0.020, +0.123] |
+| Jitter | +1.26 [-0.93, +3.45] | +0.063 [+0.006, +0.120] | +0.044 [-0.028, +0.117] |
+| RTT | +1.08 [-0.64, +2.79] | +0.048 [-0.008, +0.105] | +0.042 [-0.011, +0.096] |
+
+Share of holds flagged by schedule (underutilized / near-capacity / queue-building /
+collapse-recovery): estimate growth 18% / 34% / 42% / 40%; jitter 8% / 52% / 47% / 26%; RTT
+5% / 36% / 47% / 45%.
+
+### Reading
+
+- **By the rule fixed in advance, there is no candidate.** That is the result.
+- **The direction is the one the hypothesis predicts, in all three usable signals.** Among
+  flagged holds the point estimate favours backing off by 0.5 to 1.5; among the others it
+  favours the top ratio by 0.8 to 0.9; the differences are +1.3 to +2.3 with unadjusted p of
+  0.07 to 0.12.
+- **That is one observation, not three.** The three signals flag overlapping holds, mostly
+  under the constrained schedules.
+- **Some secondary intervals exclude zero** (the middle ratio under a stalled estimate, for
+  both outcomes; the on-time fraction under high jitter). They are unadjusted, secondary and
+  come from a second look, and are not counted as findings.
+- **The first pass and this one do not conflict.** By schedule the top ratio is ahead or
+  level; within the flagged third of holds the lean reverses. Averaging over a schedule mixes
+  the two.
+
+### Sizing a confirmatory study
+
+From the spread over sources of the benefit among flagged holds, with N1's design per source
+and a two-sided 5% test:
+
+| Flag | Per-source SD | Sources for a benefit of 1 (80% / 90%) | Of 1.5 | Of 2 |
+|---|---:|---:|---:|---:|
+| Estimate growth below +0.047 | 2.11 | 37 / 49 | 18 / 23 | 11 / 14 |
+| Jitter above 12.0 ms | 2.57 | 54 / 72 | 26 / 33 | 16 / 20 |
+| RTT above 57.0 ms | 2.69 | 59 / 78 | 28 / 36 | 17 / 21 |
+
+A confirmatory test of whether backing off helps in holds the sender can flag would
+therefore need roughly 40 to 60 fresh sources to detect a benefit of 1 unit and 20 to 30 for
+1.5 units. Discovery V2 holds 74 candidates that the N1 queue did not draw; at N1's rate of
+21 eligible from 36 queued, that is about 43 eligible sources, with no new discovery.

@@ -158,7 +158,7 @@ jevbwe-typed-evidence:
 # Native Phase N1: macros and tables from the registered final analysis. Mock rows are refused.
 N1 ?= results
 native-n1-evidence:
-	uv run --frozen python -m media_rl.native_actuator_qualification_report --final $(N1)/native-actuator-qualification-n1-final.json --public $(N1)/n1-interim-public.json --protocol $(N1)/native-actuator-qualification-n1-plan/protocol.json --pool acquisition/native-n1/pool-and-plan.json --exploratory $(N1)/native-actuator-qualification-n1-exploratory.json --out paper/generated-native-n1
+	uv run --frozen python -m media_rl.native_actuator_qualification_report --final $(N1)/native-actuator-qualification-n1-final.json --public $(N1)/n1-interim-public.json --protocol $(N1)/native-actuator-qualification-n1-plan/protocol.json --pool acquisition/native-n1/pool-and-plan.json --exploratory $(N1)/native-actuator-qualification-n1-exploratory.json --conditional $(N1)/native-actuator-qualification-n1-conditional.json --out paper/generated-native-n1
 
 # Compile from the exported evidence already under paper/generated-*; does not re-export the
 # nine archived studies, whose pruned results must be restored first (see ARCHIVED_RESULTS.md).

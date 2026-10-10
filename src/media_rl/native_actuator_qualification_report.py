@@ -408,6 +408,65 @@ def table_exploratory_holds(described):
     return "\n".join(lines + ["\\bottomrule", "\\end{tabular}"]) + "\n"
 
 
+CONDITIONAL_SIGNALS = {
+    "estimate_growth": ("Growth", "growth of the estimate since the previous hold (log)"),
+    "jitter_ms": ("Jitter", "jitter (ms)"),
+    "rtt_ms": ("Rtt", "round-trip time (ms)"),
+    "rtt_trend_ms": ("Trend", "round-trip time trend (ms)"),
+    "loss_fraction": ("Loss", "loss fraction"),
+}
+CONDITIONAL_MINIMUM_SHARE = 0.1  # a signal that flags fewer holds than this says nothing
+
+
+def conditional_macros(passed):
+    """Macros of the state-conditional second pass. Every name carries Cond; none enters the outcome."""
+    signals, names = passed["signals"], passed["candidates"]
+    usable = [n for n in signals if signals[n]["flagged_share"] >= CONDITIONAL_MINIMUM_SHARE]
+    labels = [CONDITIONAL_SIGNALS[n][1].split(" (")[0] for n in names]
+    rows = dict(
+        NOneCondSignals=str(len(signals)),
+        NOneCondUnusable=str(len(signals) - len(usable)),
+        NOneCondCandidates=str(len(names)),
+        NOneCondCandidateSentence=(
+            f"The rule named {' and '.join(labels)} as a candidate for a confirmatory study."
+            if names
+            else "The rule named no signal as a candidate for a confirmatory study."
+        ),
+        NOneCondBestHolm=number(min(signals[n]["utility"]["interaction"]["holm_p_value"] for n in usable), 2),
+    )
+    for name in usable:
+        key, entry = "NOneCond" + CONDITIONAL_SIGNALS[name][0], signals[name]
+        rows[key + "Share"] = percent(entry["flagged_share"], 0)
+        for part, label in (("flagged", "Flagged"), ("rest", "Rest"), ("interaction", "Interaction")):
+            rows[key + label] = signed(entry["utility"][part]["mean"], 2)
+            rows[key + label + "T"] = span(entry["utility"][part]["interval95"], 2)
+    return rows
+
+
+def table_conditional(passed):
+    lines = [
+        "\\begin{tabular}{llrlllr}",
+        "\\toprule",
+        "Signal before the hold & Flagged when & Flagged (\\%) & Benefit, flagged & Benefit, other holds & Difference & Holm $p$ \\\\",
+        "\\midrule",
+    ]
+    for name, (_, label) in CONDITIONAL_SIGNALS.items():
+        entry = passed["signals"][name]
+        utility = entry["utility"]
+        cells = [
+            label,
+            f"{entry['side']} {number(entry['threshold'], 3 if abs(entry['threshold']) < 1 else 1)}",
+        ]
+        cells.append(percent(entry["flagged_share"], 0))
+        if entry["flagged_share"] < CONDITIONAL_MINIMUM_SHARE:
+            cells += ["too few holds", exploratory_cell(utility["rest"], 1), "--", "--"]
+        else:
+            cells += [exploratory_cell(utility[k], 1) for k in ("flagged", "rest", "interaction")]
+            cells.append(number(utility["interaction"]["holm_p_value"], 2))
+        lines.append(" & ".join(cells) + " \\\\")
+    return "\n".join(lines + ["\\bottomrule", "\\end{tabular}"]) + "\n"
+
+
 def capture_facts(report):
     """Peers behind the analysis and the browser builds that produced them, read after the final."""
     peers, browsers, files = 0, set(), []
@@ -420,7 +479,7 @@ def capture_facts(report):
     return peers, sorted(browsers), files
 
 
-def export(final, public, protocol, out, allow_mock=False, pool=None, exploratory=None):
+def export(final, public, protocol, out, allow_mock=False, pool=None, exploratory=None, conditional=None):
     """Write macros and tables for the paper from one registered final report."""
     final, public, protocol, out = Path(final), Path(public), Path(protocol), Path(out)
     report, interim, plan = (json.loads(p.read_text()) for p in (final, public, protocol))
@@ -442,6 +501,14 @@ def export(final, public, protocol, out, allow_mock=False, pool=None, explorator
         if described["rows_sha256"] not in captured:
             raise ValueError("the exploratory description is not of the analysed capture's rows")
         evidence.update(exploratory_macros(described))
+    passed = None
+    if conditional:
+        passed = json.loads(Path(conditional).read_text())
+        if passed.get("second_pass_on_the_same_rows") is not True or passed.get("mock") is not False:
+            raise ValueError("a state-conditional pass over native rows is required")
+        if not described or passed["rows_sha256"] != described["rows_sha256"]:
+            raise ValueError("the second pass must be of the same rows as the exploratory description")
+        evidence.update(conditional_macros(passed))
     out.mkdir(parents=True, exist_ok=True)
     tables = dict(
         n1_primary=table_primary(report),
@@ -454,12 +521,14 @@ def export(final, public, protocol, out, allow_mock=False, pool=None, explorator
             n1_exploratory=table_exploratory(described),
             n1_exploratory_holds=table_exploratory_holds(described),
         )
+    if passed:
+        tables.update(n1_conditional=table_conditional(passed))
     for name, text in tables.items():
         (out / f"{name}.tex").write_text(text)
     lines = ["% Generated by `python -m media_rl.native_actuator_qualification_report`; do not edit."]
     lines += [f"\\newcommand{{\\{name}}}{{{value}}}" for name, value in evidence.items()]
     (out / "evidence.tex").write_text("\n".join(lines) + "\n")
-    sources = [final, public, protocol, *manifests, *(Path(p) for p in (pool, exploratory) if p)]
+    sources = [final, public, protocol, *manifests, *(Path(p) for p in (pool, exploratory, conditional) if p)]
     provenance = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
     (out / "provenance.json").write_text(json.dumps(provenance, indent=1, sort_keys=True) + "\n")
     return dict(out=str(out), verdict=report["verdict"], macros=len(evidence), mock=report["mock"])
@@ -475,11 +544,19 @@ def main(argv=None):
         "--pool", type=Path, help="tracked pool record, for the sources' Commons page numbers"
     )
     parser.add_argument("--exploratory", type=Path, help="exploratory description of the same rows")
+    parser.add_argument("--conditional", type=Path, help="state-conditional second pass over the same rows")
     parser.add_argument("--allow-mock", action="store_true", help="tests only: never for the paper")
     args = parser.parse_args(argv)
     try:
         result = export(
-            args.final, args.public, args.protocol, args.out, args.allow_mock, args.pool, args.exploratory
+            args.final,
+            args.public,
+            args.protocol,
+            args.out,
+            args.allow_mock,
+            args.pool,
+            args.exploratory,
+            args.conditional,
         )
     except (ValueError, FileNotFoundError, KeyError) as error:
         parser.exit(2, f"error: {error}\n")
