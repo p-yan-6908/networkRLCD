@@ -20,7 +20,7 @@ def make_peer(capture, trial, source, regime, arms, *, congested=None, cutoff=No
     ``congested`` names a hold in which the top arm meets a long queue and loses a fifth of its
     packets. ``drop_to`` lowers the relay capacity just before the third hold.
     """
-    root = capture / f"{trial}-instrument"
+    root = capture / trial
     root.mkdir(parents=True)
     cutoff = START + 6 * SPACING + 100 if cutoff is None else cutoff
     rows = [
@@ -107,7 +107,7 @@ def make_peer(capture, trial, source, regime, arms, *, congested=None, cutoff=No
 
 def test_relay_reader_keeps_the_media_direction_and_times_each_packet(tmp_path):
     make_peer(tmp_path, "t", "s", "queue-building", [2, 2, 2, 0, 1, 2], congested=2, drop_to=0.6)
-    phases, packets = dynamics.read_relay(tmp_path / "t-instrument/events.jsonl.gz")
+    phases, packets = dynamics.read_relay(tmp_path / "t/events.jsonl.gz")
     assert phases == [(START + OFFSET, 2.0), (START + OFFSET + 2 * SPACING - 100, 0.6)]
     assert set(np.round(packets["wire"])) == {
         round(LEVEL[a] * FROZEN * 0.02 / 8) for a in (0, 1, 2)
@@ -132,7 +132,7 @@ def test_hold_curves_are_over_the_frozen_estimate_and_on_the_pages_clock(tmp_pat
         drop_to=0.6,
         cutoff=START + 5 * SPACING + 2502,
     )
-    holds = dynamics.peer_holds(tmp_path / "t-instrument", rows)
+    holds = dynamics.peer_holds(tmp_path / "t", rows)
     assert [h["epoch"] for h in holds] == list(range(6)) and {h["relay_offset_ms"] for h in holds} == {OFFSET}
     for h in holds[:5]:
         level = LEVEL[h["arm"]]
@@ -158,7 +158,7 @@ def test_hold_curves_are_over_the_frozen_estimate_and_on_the_pages_clock(tmp_pat
 def test_raw_logs_must_belong_to_the_audited_rows(tmp_path):
     rows = make_peer(tmp_path, "t", "s", "near-capacity", [0, 1, 2, 0, 1, 2])
     with pytest.raises(ValueError, match="do not belong to the audited rows"):
-        dynamics.peer_holds(tmp_path / "t-instrument", [dict(rows[0], arm=1), *rows[1:]])
+        dynamics.peer_holds(tmp_path / "t", [dict(rows[0], arm=1), *rows[1:]])
     with pytest.raises(ValueError, match="no raw logs"):
         dynamics.collect(tmp_path, [dict(r, trial_id="missing") for r in rows])
 

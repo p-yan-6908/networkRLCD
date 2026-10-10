@@ -171,7 +171,7 @@ def collect(capture, rows):
         peers[r["trial_id"]].append(r)
     holds = []
     for trial, own in sorted(peers.items()):
-        root = Path(capture) / f"{trial}-instrument"
+        root = Path(capture) / trial  # a peer's directory carries its trial's name
         require(root.is_dir(), f"no raw logs for {trial}")
         holds += peer_holds(root, own)
     return holds
