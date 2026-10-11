@@ -81,7 +81,9 @@ capacity.
 | collapse-recovery | 0.85 | 0.25 | disagrees | unclear | unclear | agrees |
 
 Of 20 comparisons 4 agree, 6 disagree and 10 are unclear. **No schedule has the same best
-level.** Every "unclear" comes from the pilot's side, whose intervals rest on twelve sources.
+level.** Nine of the ten "unclear" come from the pilot's side, whose intervals rest on twelve
+sources. The tenth is 0.65 under collapse-recovery, where the simulator sees no difference from
+1.05 and the pilot a gain.
 
 ## Reading
 
