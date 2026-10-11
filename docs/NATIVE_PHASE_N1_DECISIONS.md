@@ -243,3 +243,39 @@ holds by their position in the schedule and repeats the within-hold tables on B1
 It changes no registered quantity or outcome and none of the four frozen files, and it runs
 only after the registered final report. The owner can strike it; nothing depends on it.
 
+
+## 14. An uncapped pilot, approved on a wrong premise and not run (2026-10-10)
+
+After the within-hold pass the agent put two questions to the owner.
+
+- *"Should I first check, on N1's twelve already-used sources, whether the uncapped browser
+  simply beats the caps?"* The owner chose **"Uncapped pilot first"**: a development pilot,
+  not confirmatory, of sessions with no effective cap against sessions held at 1.05, 0.85 and
+  0.65 of the estimate on the four schedules; about 190 sessions, 2.6 hours of capture, 3 GB,
+  no fresh sources and no download; new harness files only; B1 stays registered and waits.
+- *"May I run short native smoke tests during development (a few sessions, a few minutes,
+  already-used sources only) without asking each time?"* The owner chose **"Yes, short
+  ones"**: up to about ten minutes of local browser sessions at a time, to check new harness
+  code before a real capture. Any capture of record still needs the owner's go-ahead.
+
+**The first answer rested on a statement of the agent's that was false.** The question said
+that the browser without an application cap had never been measured in this harness. Earlier
+development diagnostics ran it under a 4 Mbit/s ceiling, and it was the worst condition of
+each: 10% to 51% of frames on time against 56% to 92% for the capped senders of the same
+studies. The agent found this while reading the harness for the pilot, before any pilot code
+was written. The figures and their limits are in the correction at the top of
+[NATIVE_PHASE_N1_DYNAMICS.md](NATIVE_PHASE_N1_DYNAMICS.md).
+
+**So the approval is not acted on.** No pilot code exists and nothing was captured. This is
+the agent's reading, not the owner's instruction: a go-ahead given on a false premise is not
+a go-ahead, and the pilot goes back to the owner with the corrected facts.
+
+- The pilot's stated question is answered in direction by the earlier records. On this
+  endpoint the uncapped browser does not beat a capped sender.
+- Not known: where between N1's top ratio and the ceiling on-time delivery falls, by which
+  path, and how a fixed cap chosen for the link compares with a ratio of the estimate on N1's
+  schedules.
+- The agent's recommendation is not to run the pilot as described, and to read the receiver
+  side of N1's existing capture first, which needs no capture and no go-ahead.
+
+The second answer does not depend on the false statement and stands. It has not been used.
