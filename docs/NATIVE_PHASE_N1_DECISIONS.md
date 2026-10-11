@@ -371,3 +371,21 @@ What the agent would put to the owner next, none of it decided:
   owner's decision.
 - This capture is 8.1 GB on local disk beside the range pilot's 4.1 GB; neither is in the
   archive.
+
+## 17. A receiver for the simulator, approved (2026-10-11)
+
+After the controller pilot's negative result the agent asked the owner what to work on next,
+with three options: fix the simulator first; design a native pilot with longer sessions and
+recurring capacity changes; or hold until B1's reviewed rights CSV arrives.
+
+The owner chose **"Fix the simulator first"**, described as: synthetic modelling, no capture;
+give the simulator a receiver buffer that rises fast and falls slowly, fitted on the range
+pilot only; then test whether it predicts the controller pilot, the order of the five arms and
+the sign of each rule-against-fixed difference; the test rule committed before it runs; if it
+passes, use it to look for a rule worth a capture; if it fails, record that as a negative
+result.
+
+What this allows: new modelling code beside the simulator, fitted on the range pilot's local
+capture and compared with the two pilots' reports. No capture, no download, no change to a
+frozen file or to an earlier study. The design is
+[JEVBWE_TYPED_RECEIVER_V1.md](JEVBWE_TYPED_RECEIVER_V1.md), committed before any fit.
