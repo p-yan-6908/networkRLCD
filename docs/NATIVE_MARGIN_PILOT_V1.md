@@ -183,6 +183,50 @@ The layer's own test ended negative by one difference, and it does not model how
 starts under a low cap. The forecast is given all the same, as it stands, so that this capture
 tests it blind.
 
+### The forecast, committed before any session of record (2026-10-11)
+
+`results/typed-margin-forecast-v1/forecast.json`, written by code committed at `45c7a72` with
+the layer of `2d4e3f9`. Synthetic. Whole session.
+
+| Endpoint | rule | 0.25 | 0.65 | 1.05 |
+|---|---|---|---|---|
+| All schedules | 28.4 | 27.9 | 28.0 | 10.5 |
+| steady-room | 32.6 | 27.9 | 31.5 | 21.8 |
+| steady-tight | 31.5 | 27.9 | 31.4 | 8.6 |
+| recurring-drops | 24.6 | 27.9 | 24.4 | 5.3 |
+| one-drop | 24.9 | 27.9 | 24.7 | 6.3 |
+
+| Difference over all schedules | Forecast | With path noise: mean, and share of 48 replicates at +0.5 or more |
+|---|---|---|
+| rule − 0.25 | +0.54 | +0.12, 40% (27% at −0.5 or less) |
+| rule − 0.65 | +0.41 | +0.43, 31% |
+| rule − 1.05 | +17.9 | +16.5, 100% |
+| 0.25 − 1.05 | +17.3 | +16.3, 100% |
+| 0.65 − 1.05 | +17.5 | +16.0, 100% |
+| 0.25 − 0.65 | −0.14 | +0.31, 38% (15% at −0.5 or less) |
+
+What the rule does in the simulator: with room it steps up to 0.85 at 9 s and comes back at
+36 s; near capacity it cruises throughout; under both schedules with a drop it cuts at 7 s,
+and returns at 52 s under one-drop and not at all when drops recur.
+
+**What the forecast says, plainly.**
+
+- **No clear gain for the rule over either tuned fixed level:** about half a point, which is
+  the size from which a difference counts, and less with path noise. It gains on the steady
+  schedules over 0.25 (+3.6 and +4.7) and loses its first drop to it where capacity falls
+  (−2.9 and −3.2). Against 0.65 it is level everywhere but with room (+1.1).
+- **In the simulator a fixed 0.65 remembers a drop by itself.** After the first drop its
+  estimate has sunk and 0.65 of it is near the floor, so later drops no longer reach it. The
+  controller pilot showed the same natively: after the drop the request at 0.65 fell from about
+  510 to about 200 kbit/s and stayed there. If that holds over a minute, the rule's memory
+  adds little to what a fixed ratio below one already does.
+- **The arm at 1.05 is forecast far below everything else.** The layer's test showed the
+  simulator too hard on 1.05 near a steady capacity (13.4 against 27.0), so this part of the
+  forecast is the one most likely to be wrong in size.
+- This agrees with what the author expected above. The capture would most likely show a rule
+  that neither beats nor loses to the tuned fixed levels. What it would add is a blind test of
+  the layer, the fixed levels over a minute with recurring drops, and what the rule does.
+
 ## Limits
 
 - **The schedules are the author's.** How much a fixed level is worth depends on how often
