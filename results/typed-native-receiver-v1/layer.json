@@ -1,0 +1,809 @@
+{
+ "beside_the_range_pilot": {
+  "comparison": {
+   "all_schedules": {
+    "best_level": {
+     "native": "0.25",
+     "simulator": "0.25"
+    },
+    "differences_from_the_reference": {
+     "0.25": {
+      "native": 5.156490302143382,
+      "simulated": 9.464551706743965,
+      "verdict": "agrees"
+     },
+     "0.65": {
+      "native": 4.918785198018148,
+      "simulated": 8.57612699278961,
+      "verdict": "agrees"
+     },
+     "0.85": {
+      "native": 2.409340136281698,
+      "simulated": 1.0090027983832641,
+      "verdict": "unclear"
+     },
+     "ceiling": {
+      "native": -8.374812760874024,
+      "simulated": -1.7961271727345753,
+      "verdict": "agrees"
+     }
+    }
+   },
+   "by_schedule": {
+    "collapse-recovery": {
+     "best_level": {
+      "native": "0.25",
+      "simulator": "0.25"
+     },
+     "differences_from_the_reference": {
+      "0.25": {
+       "native": 13.843787287629462,
+       "simulated": 21.832581628677982,
+       "verdict": "agrees"
+      },
+      "0.65": {
+       "native": 11.664014005281054,
+       "simulated": 10.961222829038785,
+       "verdict": "agrees"
+      },
+      "0.85": {
+       "native": 4.750035602090109,
+       "simulated": 0.23606058235165417,
+       "verdict": "unclear"
+      },
+      "ceiling": {
+       "native": -5.056782793984836,
+       "simulated": -0.21429312756756325,
+       "verdict": "unclear"
+      }
+     }
+    },
+    "near-capacity": {
+     "best_level": {
+      "native": "0.65",
+      "simulator": "0.65"
+     },
+     "differences_from_the_reference": {
+      "0.25": {
+       "native": 0.7420300646419946,
+       "simulated": 14.48718852106227,
+       "verdict": "unclear"
+      },
+      "0.65": {
+       "native": 2.8463486828556754,
+       "simulated": 17.935097020309463,
+       "verdict": "unclear"
+      },
+      "0.85": {
+       "native": 0.23546213052002685,
+       "simulated": 6.666928652509684,
+       "verdict": "unclear"
+      },
+      "ceiling": {
+       "native": 0.9672749620582408,
+       "simulated": -7.154906958151641,
+       "verdict": "unclear"
+      }
+     }
+    },
+    "queue-building": {
+     "best_level": {
+      "native": "0.25",
+      "simulator": "0.65"
+     },
+     "differences_from_the_reference": {
+      "0.25": {
+       "native": 8.870295865765318,
+       "simulated": 6.292715239369894,
+       "verdict": "agrees"
+      },
+      "0.65": {
+       "native": 3.6298322638200546,
+       "simulated": 6.625082137896328,
+       "verdict": "unclear"
+      },
+      "0.85": {
+       "native": 1.100270508392139,
+       "simulated": -2.5441904572436655,
+       "verdict": "unclear"
+      },
+      "ceiling": {
+       "native": -9.869606695927503,
+       "simulated": 0.298070254233334,
+       "verdict": "unclear"
+      }
+     }
+    },
+    "underutilized": {
+     "best_level": {
+      "native": "0.85",
+      "simulator": "1.05"
+     },
+     "differences_from_the_reference": {
+      "0.25": {
+       "native": -2.8301520094632466,
+       "simulated": -4.754278562134292,
+       "verdict": "agrees"
+      },
+      "0.65": {
+       "native": 1.534945840115807,
+       "simulated": -1.2168940160861403,
+       "verdict": "unclear"
+      },
+      "0.85": {
+       "native": 3.55159230412452,
+       "simulated": -0.3227875840846153,
+       "verdict": "unclear"
+      },
+      "ceiling": {
+       "native": -19.540136515642,
+       "simulated": -0.11337885945243897,
+       "verdict": "unclear"
+      }
+     }
+    }
+   }
+  },
+  "comparisons": {
+   "agrees": 7,
+   "disagrees": 0,
+   "unclear": 13
+  },
+  "fitted_cells": {
+   "jitter_buffer_ms": {
+    "0.25": {
+     "collapse-recovery": {
+      "native": [
+       15.382579946845768,
+       30.79536887784603,
+       41.85913631273366
+      ],
+      "simulated": [
+       21.302964052655163,
+       40.22302598829638,
+       40.494083175311594
+      ]
+     },
+     "near-capacity": {
+      "native": [
+       16.57512822406991,
+       33.66560930448017,
+       31.848403888927965
+      ],
+      "simulated": [
+       24.18068640812887,
+       25.566896590016427,
+       26.10475931436799
+      ]
+     },
+     "queue-building": {
+      "native": [
+       18.849575150370548,
+       26.615311633465407,
+       35.33876038752285
+      ],
+      "simulated": [
+       21.302964052655163,
+       29.42768589350225,
+       31.0174882950253
+      ]
+     },
+     "underutilized": {
+      "native": [
+       16.50172473252091,
+       17.67953544564485,
+       18.414984841242756
+      ],
+      "simulated": [
+       16.41083604834987,
+       16.70540571200098,
+       16.819701540925685
+      ]
+     }
+    },
+    "0.65": {
+     "collapse-recovery": {
+      "native": [
+       20.37119333241756,
+       81.11185033361409,
+       69.3629970558647
+      ],
+      "simulated": [
+       25.619006973034864,
+       97.02307058498211,
+       87.27586931632383
+      ]
+     },
+     "near-capacity": {
+      "native": [
+       25.927901080516495,
+       45.33661806927341,
+       49.762437099006284
+      ],
+      "simulated": [
+       30.273923472194323,
+       43.571126394580645,
+       44.969556178700756
+      ]
+     },
+     "queue-building": {
+      "native": [
+       24.35556586493747,
+       58.91349802485174,
+       72.05350774613171
+      ],
+      "simulated": [
+       25.619006973034864,
+       53.60895303047959,
+       57.74261718616338
+      ]
+     },
+     "underutilized": {
+      "native": [
+       15.727160701876992,
+       21.15907184372601,
+       29.51751051526354
+      ],
+      "simulated": [
+       17.705648924463777,
+       20.531304545470874,
+       20.828470874596405
+      ]
+     }
+    },
+    "0.85": {
+     "collapse-recovery": {
+      "native": [
+       27.195979309395366,
+       178.0986307658823,
+       155.4603617533285
+      ],
+      "simulated": [
+       28.56736673470935,
+       155.61383896785125,
+       139.4571993224928
+      ]
+     },
+     "near-capacity": {
+      "native": [
+       29.50873529733209,
+       54.896873224025136,
+       70.63269141481435
+      ],
+      "simulated": [
+       34.43631372397008,
+       56.44905927460156,
+       92.39539724428288
+      ]
+     },
+     "queue-building": {
+      "native": [
+       24.88006216453152,
+       75.2439346902463,
+       79.23776079235499
+      ],
+      "simulated": [
+       28.56736673470935,
+       76.12639173402941,
+       76.72554754386323
+      ]
+     },
+     "underutilized": {
+      "native": [
+       17.961044777706373,
+       30.20598714711961,
+       32.45796655770739
+      ],
+      "simulated": [
+       18.590156852966125,
+       23.26786528247532,
+       27.327493941500716
+      ]
+     }
+    },
+    "1.05": {
+     "collapse-recovery": {
+      "native": [
+       31.09953331826757,
+       258.36797193507067,
+       181.1589063203926
+      ],
+      "simulated": [
+       30.992553581184808,
+       200.00869238792345,
+       179.13803808347745
+      ]
+     },
+     "near-capacity": {
+      "native": [
+       29.20929258389934,
+       57.43145941483354,
+       68.91554589444613
+      ],
+      "simulated": [
+       37.860106918994255,
+       77.2046401907525,
+       102.79013926200317
+      ]
+     },
+     "queue-building": {
+      "native": [
+       26.20565562549548,
+       93.8147769583001,
+       94.89241788876569
+      ],
+      "simulated": [
+       30.992553581184808,
+       81.23077878690256,
+       74.68813091071297
+      ]
+     },
+     "underutilized": {
+      "native": [
+       16.065073811799156,
+       38.41254807274573,
+       85.06609997234911
+      ],
+      "simulated": [
+       19.317712906908763,
+       26.187007464276878,
+       39.199745916728105
+      ]
+     }
+    },
+    "ceiling": {
+     "collapse-recovery": {
+      "native": [
+       50.17584582197393,
+       488.0833287108166,
+       254.81024834672633
+      ],
+      "simulated": [
+       27.938383010291332,
+       200.0070993962229,
+       178.8905788219215
+      ]
+     },
+     "near-capacity": {
+      "native": [
+       45.473523225592025,
+       63.07820726506788,
+       61.87590572087428
+      ],
+      "simulated": [
+       33.54833670126227,
+       113.22293971108856,
+       129.7611186273549
+      ]
+     },
+     "queue-building": {
+      "native": [
+       46.37384289685054,
+       214.48503516353787,
+       170.56304934506736
+      ],
+      "simulated": [
+       27.938383010291332,
+       81.23166067756186,
+       74.18109512766632
+      ]
+     },
+     "underutilized": {
+      "native": [
+       65.01113762410695,
+       129.1138198517631,
+       136.0166587096089
+      ],
+      "simulated": [
+       18.401461735640716,
+       28.742157158654255,
+       37.42232919957995
+      ]
+     }
+    }
+   }
+  },
+  "levels": {
+   "encoder_over_capacity": {
+    "0.25": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 0.18852306559953846,
+       "simulated": 0.26135679047708194
+      },
+      "near-capacity": {
+       "native": 0.24080359848993863,
+       "simulated": 0.19281182711129058
+      },
+      "queue-building": {
+       "native": 0.29800030951597595,
+       "simulated": 0.2480626791894696
+      },
+      "underutilized": {
+       "native": 0.036794544562918925,
+       "simulated": 0.04097251326114925
+      }
+     },
+     "native": 0.19103037954209298,
+     "simulated": 0.18580095250974785
+    },
+    "0.65": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 0.2673115047908453,
+       "simulated": 0.2877011448103572
+      },
+      "near-capacity": {
+       "native": 0.510516283710007,
+       "simulated": 0.4800524678121555
+      },
+      "queue-building": {
+       "native": 0.4965531565766381,
+       "simulated": 0.6299044160897574
+      },
+      "underutilized": {
+       "native": 0.08007813040289447,
+       "simulated": 0.10201114941008302
+      }
+     },
+     "native": 0.3386147688700962,
+     "simulated": 0.3749172945305883
+    },
+    "0.85": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 0.3398343446408118,
+       "simulated": 0.3272394941417324
+      },
+      "near-capacity": {
+       "native": 0.6280625696776839,
+       "simulated": 0.6027223185935405
+      },
+      "queue-building": {
+       "native": 0.6236094685866199,
+       "simulated": 0.5630777352119422
+      },
+      "underutilized": {
+       "native": 0.14920484793226235,
+       "simulated": 0.17726874089576874
+      }
+     },
+     "native": 0.4351778077093445,
+     "simulated": 0.41757707221074597
+    },
+    "1.05": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 0.39573853240487905,
+       "simulated": 0.36835259365825945
+      },
+      "near-capacity": {
+       "native": 0.6327504234576278,
+       "simulated": 0.5345767951294161
+      },
+      "queue-building": {
+       "native": 0.6501573705425517,
+       "simulated": 0.4328714814840194
+      },
+      "underutilized": {
+       "native": 0.44731451390029137,
+       "simulated": 0.2897730121013414
+      }
+     },
+     "native": 0.5314902100763376,
+     "simulated": 0.4063934705932591
+    },
+    "ceiling": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 0.42839673609792767,
+       "simulated": 0.34484207906069414
+      },
+      "near-capacity": {
+       "native": 0.7544898043239172,
+       "simulated": 0.51169673662632
+      },
+      "queue-building": {
+       "native": 0.7200870776524241,
+       "simulated": 0.39315376170086097
+      },
+      "underutilized": {
+       "native": 0.6891643008250643,
+       "simulated": 0.2926489029763854
+      }
+     },
+     "native": 0.6480344797248333,
+     "simulated": 0.3855853700910651
+    }
+   },
+   "on_time": {
+    "0.25": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 0.8678072707937785,
+       "simulated": 0.9343770720061035
+      },
+      "near-capacity": {
+       "native": 0.8975525884819658,
+       "simulated": 0.9345584714105792
+      },
+      "queue-building": {
+       "native": 0.9192264974676679,
+       "simulated": 0.9345583904267242
+      },
+      "underutilized": {
+       "native": 0.8541013204024144,
+       "simulated": 0.9345584715639979
+      }
+     },
+     "native": 0.8846719192864567,
+     "simulated": 0.9345131013518513
+    },
+    "0.65": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 0.7606411037034208,
+       "simulated": 0.5601919970519474
+      },
+      "near-capacity": {
+       "native": 0.900061258750141,
+       "simulated": 0.9659961772996585
+      },
+      "queue-building": {
+       "native": 0.6928613525430571,
+       "simulated": 0.8708581647640821
+      },
+      "underutilized": {
+       "native": 0.9350773215658957,
+       "simulated": 0.9687267167160263
+      }
+     },
+     "native": 0.8221602591406286,
+     "simulated": 0.8414432639579286
+    },
+    "0.85": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 0.48795836873338744,
+       "simulated": 0.19596410954774782
+      },
+      "near-capacity": {
+       "native": 0.7889837519660444,
+       "simulated": 0.612930640744955
+      },
+      "queue-building": {
+       "native": 0.588009211355271,
+       "simulated": 0.5986001291632548
+      },
+      "underutilized": {
+       "native": 0.9500972938725734,
+       "simulated": 0.9541146855614445
+      }
+     },
+     "native": 0.7037621564818192,
+     "simulated": 0.5904023912543506
+    },
+    "1.05": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 0.34441749352410894,
+       "simulated": 0.1851710234816684
+      },
+      "near-capacity": {
+       "native": 0.7868257241967395,
+       "simulated": 0.4176419474514895
+      },
+      "queue-building": {
+       "native": 0.5517500872160485,
+       "simulated": 0.6928780529185818
+      },
+      "underutilized": {
+       "native": 0.7904591800173922,
+       "simulated": 0.9385206929283297
+      }
+     },
+     "native": 0.6183631212385723,
+     "simulated": 0.5585529291950174
+    },
+    "ceiling": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 0.20216718794632407,
+       "simulated": 0.1821730067209374
+      },
+      "near-capacity": {
+       "native": 0.7879470954598595,
+       "simulated": 0.19515006572281393
+      },
+      "queue-building": {
+       "native": 0.25371984833747435,
+       "simulated": 0.712323603581581
+      },
+      "underutilized": {
+       "native": 0.20687243428255778,
+       "simulated": 0.9291221552908376
+      }
+     },
+     "native": 0.36267664150655404,
+     "simulated": 0.5046922078290424
+    }
+   },
+   "utility": {
+    "0.25": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 26.048350958744198,
+       "simulated": 27.858491970366043
+      },
+      "near-capacity": {
+       "native": 27.005558980825658,
+       "simulated": 27.8639004012923
+      },
+      "queue-building": {
+       "native": 28.029816433874544,
+       "simulated": 27.86389798675523
+      },
+      "underutilized": {
+       "native": 25.311465792764825,
+       "simulated": 27.863900405866477
+      }
+     },
+     "native": 26.59879804155231,
+     "simulated": 27.862547691070013
+    },
+    "0.65": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 23.86857767639579,
+       "simulated": 16.987133170726846
+      },
+      "near-capacity": {
+       "native": 29.10987759903934,
+       "simulated": 31.311808900539493
+      },
+      "queue-building": {
+       "native": 22.789352831929282,
+       "simulated": 28.196264885281664
+      },
+      "underutilized": {
+       "native": 29.676563642343876,
+       "simulated": 31.40128495191463
+      }
+     },
+     "native": 26.361092937427074,
+     "simulated": 26.97412297711566
+    },
+    "0.85": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 16.95459927320485,
+       "simulated": 6.261970924039714
+      },
+      "near-capacity": {
+       "native": 26.498991046703694,
+       "simulated": 20.043640532739715
+      },
+      "queue-building": {
+       "native": 20.25979107650137,
+       "simulated": 19.02699229014167
+      },
+      "underutilized": {
+       "native": 31.693210106352584,
+       "simulated": 32.295391383916154
+      }
+     },
+     "native": 23.851647875690627,
+     "simulated": 19.406998782709312
+    },
+    "1.05": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 12.204563671114741,
+       "simulated": 6.02591034168806
+      },
+      "near-capacity": {
+       "native": 26.26352891618367,
+       "simulated": 13.376711880230031
+      },
+      "queue-building": {
+       "native": 19.159520568109233,
+       "simulated": 21.571182747385336
+      },
+      "underutilized": {
+       "native": 28.141617802228065,
+       "simulated": 32.61817896800077
+      }
+     },
+     "native": 21.44230773940893,
+     "simulated": 18.397995984326048
+    },
+    "ceiling": {
+     "by_schedule": {
+      "collapse-recovery": {
+       "native": 7.147780877129904,
+       "simulated": 5.8116172141204965
+      },
+      "near-capacity": {
+       "native": 27.23080387824191,
+       "simulated": 6.22180492207839
+      },
+      "queue-building": {
+       "native": 9.289913872181726,
+       "simulated": 21.86925300161867
+      },
+      "underutilized": {
+       "native": 8.601481286586063,
+       "simulated": 32.50480010854833
+      }
+     },
+     "native": 13.067494978534901,
+     "simulated": 16.601868811591473
+    }
+   }
+  },
+  "schedules_with_the_same_best_level": 2,
+  "span": "after_startup"
+ },
+ "fitted_on": "the native range pilot only",
+ "layer": {
+  "b0": 14.314209760790456,
+  "c0": 14.463036818125556,
+  "cu": 39.12725557685199,
+  "e0_bps": 743778.3020833333,
+  "gq": 0.2778895679244143,
+  "gu": 55.25440192670253,
+  "never_encoded": [
+   0.06544152843600204,
+   0.02674402820921216,
+   0.028183753505940944,
+   0.03921142007772014,
+   0.08060654514781322
+  ],
+  "psnr_db": [
+   29.815042347468978,
+   31.730805536128248,
+   32.988292664996315,
+   33.97668977590914,
+   36.01498962866033
+  ],
+  "rate_kbps": [
+   182.32183578063803,
+   335.48834747799157,
+   468.08052048485393,
+   784.1622389592927,
+   1071.5021399845589
+  ],
+  "return_ms": 28.299999952316284,
+  "s0": 3.247193096803095,
+  "s1": 0.09541256316939964,
+  "tau_s": 35.06431337940106
+ },
+ "pilot_report_sha256": "c638fdd3d220b5334976eb95e61953dbcf22bc7086c357da29352d8ef130b87a",
+ "stages": {
+  "age": {
+   "cells": 93,
+   "rms_ms": 16.949927964551268
+  },
+  "buffer": {
+   "at_a_bound": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "cells": 48,
+   "rms_log": 0.22248952963734614,
+   "rms_ms": 14.800809169823507
+  },
+  "return_time": {
+   "points": 35353
+  },
+  "spread": {
+   "points": 1333,
+   "rms_ms": 10.19286269612299
+  }
+ },
+ "study": "typed_bitrate_native_receiver_v1_layer",
+ "synthetic": true,
+ "targets_sha256": "5b071718dff438f5443b53b68bc27133e54bfa60d6b73e5ed2f74a6026efdb4c"
+}
