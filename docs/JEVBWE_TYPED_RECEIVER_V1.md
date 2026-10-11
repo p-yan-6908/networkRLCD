@@ -337,10 +337,11 @@ the replicates. The fast ladder against the ladder agrees in 56%.
   native sizes, with all five endpoints inside the native intervals, and rules that never step
   up. It was fitted on fixed levels only and had not seen a rule.
 - **What it misses.** That cutting fast helps. In the simulator the fast ladder and the ladder
-  end at the same value. This is a reading and not a tested claim: once the cap is only a cap,
-  the simulator's estimate falls at a drop within a few steps and takes the encoder with it,
-  so a rule's own cut changes nothing that the estimate has not already done. Natively the
-  browser's estimate fell more slowly after the milder drop, and the cut bought something.
+  end at the same value. This is a reading and not a tested claim. Once the cap is only a cap,
+  the simulator's estimate falls well under the new capacity at a drop and takes the encoder
+  with it: under queue-building the arm at 1.05 requests 244 to 377 kbit/s against a capacity
+  of 600 kbit/s. A rule's own cut then changes little. Natively the arm at 1.05 went on
+  offering about 82% of the capacity after that drop, and a cut to the bottom bought something.
   This is the limit of the estimator recorded before the test.
 - **Where it is off by schedule.** Near capacity at 1.05 the simulated estimator overshoots a
   steady capacity (13.4 against 27.0). With room it never reaches the top of the link, so it
