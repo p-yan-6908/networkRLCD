@@ -310,22 +310,22 @@ def run_session(child, runtime_path, runtime, trial):
     seal_directory(child, files, PEER_STAGE, policy_models_fitted=0, SOTA_achieved=False)
 
 
-def _sealed(child):
+def _sealed(child, stage=PEER_STAGE):
     try:
-        verify_seal(child, PEER_STAGE)
+        verify_seal(child, stage)
     except (OSError, ValueError, KeyError):
         return False
     return True
 
 
-def capture(plan_path, out, limit=None, run=run_session):
+def capture(plan_path, out, limit=None, run=run_session, plan_reader=None, stage=PEER_STAGE):
     """Collect the planned sessions in planned order. Can be stopped and started again.
 
     A sealed session is never repeated. A session that fails is kept under ``failed/`` with its
     error and run once more after all the others; a second failure leaves its cell empty. No
     outcome is computed here.
     """
-    made = sealed_plan(plan_path)
+    made = (plan_reader or sealed_plan)(plan_path)
     out = Path(out).resolve()
     out.mkdir(parents=True, exist_ok=True)
     if (out / "protocol.json").exists():
@@ -339,7 +339,7 @@ def capture(plan_path, out, limit=None, run=run_session):
         for key, trial_id in made["order"]:
             child = out / trial_id
             failures = sorted((out / "failed").glob(trial_id + "-*"))
-            if _sealed(child) or len(failures) >= ATTEMPTS:
+            if _sealed(child, stage) or len(failures) >= ATTEMPTS:
                 continue
             if limit is not None and attempted >= limit:
                 break
@@ -363,13 +363,13 @@ def capture(plan_path, out, limit=None, run=run_session):
                     )
                     + "\n"
                 )
-    return status(out)
+    return status(out, stage)
 
 
-def status(out):
+def status(out, stage=PEER_STAGE):
     out = Path(out)
     made = read_json(out / "protocol.json")
-    done = [trial_id for _, trial_id in made["order"] if _sealed(out / trial_id)]
+    done = [trial_id for _, trial_id in made["order"] if _sealed(out / trial_id, stage)]
     failed = sorted(p.name for p in (out / "failed").iterdir()) if (out / "failed").is_dir() else []
     return dict(planned=len(made["order"]), sealed=len(done), failed_attempts=failed)
 
