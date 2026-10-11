@@ -80,6 +80,22 @@ queue or loss there than the two lower ones, and the registered window sees it w
 holds inside 1.8 to 2.6 s. On N1 these tables were exploratory. On B1 they are fixed in
 advance, on fresh sources. They remain mechanism only and read no quality label.
 
+## 3. Where frames and time go, repeated on B1's capture
+
+*Added on 2026-10-10 after the first two parts, still before any B1 data exist.*
+
+The reader and the tables of the [delivery pass over N1](NATIVE_PHASE_N1_DELIVERY.md) are
+run unchanged on B1's capture blocks: what became of each window's capture requests (never
+encoded, encoded and not shown, shown late, on time), how old the shown frames were and where
+that time went, and the receiver's jitter-buffer delay per capacity phase as a slope on the
+requested ratio. The four statements and their rule are the ones fixed there. The split of
+the first hold from the later ones, which on N1 was added after its tables had been read, is
+fixed in advance here.
+
+On N1 these tables were exploratory. On B1 they are fixed in advance, on fresh sources. They
+read the auditor's timing labels and no PSNR, they do not compute B1's endpoint, and they
+change nothing in what B1's outcome is or leads to.
+
 ## Limits
 
 - The positions are positions in four scripted schedules. There is a "hold of the drop"
@@ -100,7 +116,13 @@ uv run --frozen python -m media_rl.native_backoff_benefit_positions \
 uv run --frozen python -m media_rl.native_actuator_qualification_dynamics \
     --capture results/native-backoff-benefit-b1-block-1 [--capture ...] \
     --out results/native-backoff-benefit-b1-dynamics
+uv run --frozen python -m media_rl.native_actuator_qualification_delivery \
+    --capture results/native-backoff-benefit-b1-block-1 [--capture ...] \
+    --out results/native-backoff-benefit-b1-delivery
+uv run --frozen python -m media_rl.native_actuator_qualification_delivery \
+    --first-hold results/native-backoff-benefit-b1-delivery/holds.json.gz \
+    --out results/native-backoff-benefit-b1-delivery/first_hold.json
 ```
 
-The split has run on invented rows and on the mock dry run. The within-hold reader has run on
-N1's capture.
+The split has run on invented rows and on the mock dry run. The within-hold reader and the
+delivery reader have run on N1's capture.

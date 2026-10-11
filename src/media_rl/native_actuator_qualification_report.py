@@ -552,6 +552,119 @@ def dynamics_macros(inside, flags=None, bound=None):
     return rows
 
 
+DELIVERY_SCHEDULES = {"underutilized": "Room", "near-capacity": "Near", **DYNAMICS_DROPS}
+DELIVERY_FATES = dict(OnTime="on_time", Late="shown_late", Never="never_encoded", Lost="encoded_not_shown")
+DELIVERY_STATEMENTS = dict(
+    NOneDelEncoderCost="a_lower_cap_costs_frames_at_the_encoder",
+    NOneDelRestCost="a_higher_cap_costs_time_after_the_relay",
+    NOneDelDeadline="it_reaches_the_deadline",
+)
+
+
+def _shown(value, digits, scale=1.0, sign=False):
+    if value is None:  # a state without data, as on invented peers
+        return "n/a"
+    return (signed if sign else number)(scale * value, digits)
+
+
+def _between(entry, digits, scale=1.0):
+    """A difference and its interval as two cells."""
+    pair = entry["interval95"]
+    return (
+        _shown(entry["mean"], digits, scale, sign=True),
+        "" if pair is None else span([scale * v for v in pair], digits),
+    )
+
+
+def _across(entry):
+    """Mean over the three ratios of a by-ratio entry."""
+    values = [entry[ratio]["mean"] for ratio in DYNAMICS_RATIOS.values()]
+    return None if any(v is None for v in values) else sum(values) / len(values)
+
+
+def delivery_macros(delivered, first=None):
+    """Macros of the delivery pass. Every name carries Del; timing labels are behind them and no PSNR."""
+    tables = delivered["tables"]
+    state = tables["all_schedules"]
+    seen, receiver = state["outcome"], tables["receiver_per_phase"]
+    rows = dict(
+        NOneDelPeers=count(delivered["peers"]),
+        NOneDelHolds=count(delivered["holds"]),
+        NOneDelPhases=count(delivered["phases"]),
+    )
+    for label, ratio in DYNAMICS_RATIOS.items():
+        for name, key in DELIVERY_FATES.items():
+            rows[f"NOneDel{name}{label}"] = _shown(seen[key][ratio]["mean"], 1, 100)
+        for name, key in (("Age", "age_median_ms"), ("Relay", "relay_ms"), ("Rest", "rest_ms")):
+            rows[f"NOneDel{name}{label}"] = _shown(seen[key][ratio]["mean"], 0)
+    for name, key in DELIVERY_FATES.items():
+        rows[f"NOneDel{name}Diff"], rows[f"NOneDel{name}DiffT"] = _between(
+            seen[key]["top_minus_lower"], 1, 100
+        )
+    rows["NOneDelRestDiff"], rows["NOneDelRestDiffT"] = _between(seen["rest_ms"]["top_minus_lower"], 1)
+    for name, statement in DELIVERY_STATEMENTS.items():
+        rows[name] = "holds" if state[statement] else "is not established"
+    groups = {"": receiver["all_phases"]}
+    groups.update({name: receiver["by_schedule"][regime] for regime, name in DELIVERY_SCHEDULES.items()})
+    if "2" in receiver["by_phase_position"]:  # the phase that holds the drop
+        groups["PhaseTwo"] = receiver["by_phase_position"]["2"]
+    for name, table in groups.items():
+        buffer = table["jitter_buffer_ms"]
+        rows[f"NOneDel{name}Buffer"] = _shown(buffer["level"]["mean"], 0)
+        rows[f"NOneDel{name}BufferSlope"], rows[f"NOneDel{name}BufferSlopeT"] = _between(
+            buffer["slope_per_span_of_ratio"], 1
+        )
+    fills = receiver["all_phases"]["a_higher_cap_fills_the_receiver_buffer"]
+    rows["NOneDelBufferFills"] = "holds" if fills else "is not established"
+    for regime, name in DELIVERY_SCHEDULES.items():
+        own = tables["by_schedule"][regime]["outcome"]
+        rows[f"NOneDel{name}OnTime"] = _shown(_across(own["on_time"]), 0, 100)
+        rows[f"NOneDel{name}Rest"] = _shown(_across(own["rest_ms"]), 0)
+    if first:
+        skipped = first["first_hold_frames"]["never_encoded"]["by_ratio"]
+        timely = first["on_time"]["first_hold"]["by_ratio"]
+        for label, ratio in DYNAMICS_RATIOS.items():
+            rows["NOneDelStartNever" + label] = _shown(skipped[ratio]["mean"], 0, 100)
+            rows["NOneDelStartOnTime" + label] = _shown(timely[ratio]["mean"], 0, 100)
+        for name, key in (("Start", "first_hold"), ("After", "later_holds"), ("Pooled", "all_holds")):
+            rows[f"NOneDel{name}Diff"], rows[f"NOneDel{name}DiffT"] = _between(
+                first["on_time"][key]["highest_minus_lowest"], 1, 100
+            )
+    return rows
+
+
+def table_delivery(delivered):
+    tables = delivered["tables"]
+
+    def row(state, label, entry, digits, scale=1.0):
+        cells = [_shown(entry[ratio]["mean"], digits, scale) for ratio in DYNAMICS_RATIOS.values()]
+        return (
+            " & ".join([state, label, *cells, " ".join(_between(entry["top_minus_lower"], digits, scale))])
+            + " \\\\"
+        )
+
+    seen = tables["all_schedules"]["outcome"]
+    lines = [
+        "\\begin{tabular}{llrrrl}",
+        "\\toprule",
+        "Schedule & Quantity & 0.65 & 0.85 & 1.05 & Top $-$ lower \\\\",
+        "\\midrule",
+        row("All", "on time (\\%)", seen["on_time"], 1, 100),
+        row("", "shown late (\\%)", seen["shown_late"], 1, 100),
+        row("", "never encoded (\\%)", seen["never_encoded"], 1, 100),
+        row("", "encoded, not shown (\\%)", seen["encoded_not_shown"], 1, 100),
+        row("", "median age (ms)", seen["age_median_ms"], 0),
+        row("", "relay (ms)", seen["relay_ms"], 0),
+        row("", "rest (ms)", seen["rest_ms"], 0),
+        "\\midrule",
+    ]
+    for regime in DELIVERY_SCHEDULES:
+        own = tables["by_schedule"][regime]["outcome"]
+        lines.append(row(regime.capitalize(), "on time (\\%)", own["on_time"], 1, 100))
+        lines.append(row("", "rest (ms)", own["rest_ms"], 0))
+    return "\n".join([*lines, "\\bottomrule", "\\end{tabular}"]) + "\n"
+
+
 def table_dynamics(inside):
     tables = inside["tables"]
 
@@ -695,6 +808,8 @@ def export(
     dynamics=None,
     flags=None,
     binding=None,
+    delivery=None,
+    first_hold=None,
 ):
     """Write macros and tables for the paper from one registered final report."""
     final, public, protocol, out = Path(final), Path(public), Path(protocol), Path(out)
@@ -742,6 +857,18 @@ def export(
         if bound and bound.get("mechanism_only") is not True:
             raise ValueError("a mechanism-only record of where the cap binds is required")
         evidence.update(dynamics_macros(inside, marked, bound))
+    delivered = started = None
+    if delivery:
+        delivered = json.loads(Path(delivery).read_text())
+        if not (delivered.get("exploratory") is True and delivered.get("psnr_read") is False):
+            raise ValueError("an exploratory delivery description that reads no PSNR is required")
+        if not described or delivered["rows_sha256"] != described["rows_sha256"]:
+            raise ValueError("the delivery pass must be of the same rows as the exploratory description")
+        if first_hold:
+            started = json.loads(Path(first_hold).read_text())
+            if started.get("added_after_the_tables_were_read") is not True:
+                raise ValueError("the first-hold split must be marked as added after the tables were read")
+        evidence.update(delivery_macros(delivered, started))
     out.mkdir(parents=True, exist_ok=True)
     tables = dict(
         n1_primary=table_primary(report),
@@ -759,6 +886,8 @@ def export(
     if inside:
         tables.update(n1_dynamics=table_dynamics(inside))
         figure_dynamics(inside, out / "n1_dynamics.pdf")
+    if delivered:
+        tables.update(n1_delivery=table_delivery(delivered))
     for name, text in tables.items():
         (out / f"{name}.tex").write_text(text)
     lines = ["% Generated by `python -m media_rl.native_actuator_qualification_report`; do not edit."]
@@ -771,6 +900,8 @@ def export(
         dynamics,
         flags if dynamics else None,
         binding if dynamics else None,
+        delivery,
+        first_hold if delivery else None,
     )
     sources = [final, public, protocol, *manifests, *(Path(p) for p in extra if p)]
     provenance = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
@@ -792,6 +923,8 @@ def main(argv=None):
     parser.add_argument("--dynamics", type=Path, help="within-hold description of the same capture")
     parser.add_argument("--flags", type=Path, help="outcome-free count of the holds the B1 flag marks")
     parser.add_argument("--binding", type=Path, help="where the requested cap limits the encoder")
+    parser.add_argument("--delivery", type=Path, help="where frames and time go, from the same capture")
+    parser.add_argument("--delivery-first-hold", type=Path, help="the first hold against the later ones")
     parser.add_argument("--allow-mock", action="store_true", help="tests only: never for the paper")
     args = parser.parse_args(argv)
     try:
@@ -807,6 +940,8 @@ def main(argv=None):
             args.dynamics,
             args.flags,
             args.binding,
+            args.delivery,
+            args.delivery_first_hold,
         )
     except (ValueError, FileNotFoundError, KeyError) as error:
         parser.exit(2, f"error: {error}\n")

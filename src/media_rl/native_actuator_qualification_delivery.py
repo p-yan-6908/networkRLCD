@@ -10,6 +10,7 @@ ratio. Nothing here is confirmatory, no model is fitted and no controller is eva
 
 import argparse
 import gzip
+import hashlib
 import json
 import math
 from collections import defaultdict
@@ -26,6 +27,7 @@ from .native_actuator_qualification_dynamics import (
     by_arm,
     capacity_at,
     read_relay,
+    source_values,
 )
 from .native_actuator_qualification_explore import load, summary
 from .native_actuator_qualification_panel import REGIMES
@@ -360,9 +362,63 @@ def headline(report):
     )
 
 
+def highest_minus_lowest(holds, value, where):
+    """Per source: the top ratio minus the lowest one, the contrast of the first exploratory pass."""
+    low, top = (
+        source_values(holds, value, lambda h, arm=arm: h["arm"] == arm and where(h))
+        for arm in (0, len(qualification.RATIOS) - 1)
+    )
+    return summary([top[s] - low[s] for s in sorted(set(low) & set(top))])
+
+
+def first_hold(holds):
+    """Added after the tables were read: the first hold against the later ones, in the registered window.
+
+    The tables fixed in advance start at the second hold. The first exploratory pass pooled all
+    six, and its on-time contrast has the other sign. This separates the two.
+    """
+
+    def both(name, where):
+        def value(h):
+            return h["outcome"][name]
+
+        return dict(
+            by_ratio=by_arm(holds, value, where),
+            highest_minus_lowest=highest_minus_lowest(holds, value, where),
+        )
+
+    def later(h):
+        return h["epoch"] >= 1
+
+    return dict(
+        abi=ABI + "_first_hold",
+        exploratory=True,
+        added_after_the_tables_were_read=True,
+        on_time=dict(
+            all_holds=both("on_time", lambda h: True),
+            first_hold=both("on_time", lambda h: h["epoch"] == 0),
+            later_holds=both("on_time", later),
+        ),
+        on_time_by_position={
+            str(epoch + 1): both("on_time", lambda h, epoch=epoch: h["epoch"] == epoch)
+            for epoch in sorted({h["epoch"] for h in holds})
+        },
+        on_time_in_later_holds_by_schedule={
+            regime: both("on_time", lambda h, regime=regime: h["regime"] == regime and later(h))
+            for regime in REGIMES
+        },
+        first_hold_frames={name: both(name, lambda h: h["epoch"] == 0) for name in FATES},
+    )
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--capture", type=Path, action="append", required=True)
+    parser.add_argument("--capture", type=Path, action="append")
+    parser.add_argument(
+        "--first-hold",
+        type=Path,
+        help="saved per-hold figures: only report the first hold against later ones",
+    )
     parser.add_argument(
         "--rows",
         type=Path,
@@ -373,6 +429,14 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if args.out.exists():
         parser.exit(2, "error: fresh output directory required\n")
+    if args.first_hold:
+        raw = gzip.decompress(args.first_hold.read_bytes())
+        report = dict(first_hold(json.loads(raw)["holds"]), holds_sha256=hashlib.sha256(raw).hexdigest())
+        args.out.write_text(json.dumps(report, indent=1, sort_keys=True) + "\n")
+        print(json.dumps(report["on_time"], indent=1))
+        return
+    if not args.capture:
+        parser.exit(2, "error: --capture or --first-hold is required\n")
     sources = args.rows or [capture / "cohorts.json" for capture in args.capture]
     if len(sources) != len(args.capture):
         parser.exit(2, "error: one rows file per capture\n")

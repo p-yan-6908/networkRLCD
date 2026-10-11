@@ -58,6 +58,9 @@ the two that ran a fixed cap of 450 or 600 kbit/s that cap was the best.
   room the top ratio holds the encoder at about half of the browser's live estimate, and the
   lower ratios hold the estimate itself down. N1 and B1 compare caps with each other. Neither
   reaches the rates at which the earlier studies saw delivery fail.
+  *Refined later the same day by the [delivery pass](NATIVE_PHASE_N1_DELIVERY.md):* those two
+  figures pool the first hold, where a low cap costs frames at the encoder (+21.0 points for
+  the top ratio). From the second hold on the contrast is -2.2 points [-5.0, +0.5].
 - Where between N1's top ratio and the ceiling the on-time fraction falls, and by which path,
   is not known from any of this.
 

@@ -322,3 +322,13 @@ the first hold; after it the figures are 5%, 14% and 94%, and at the top ratio t
 jump within 0.6 s. And the encoder levels of section 1 are taken 1.8 to 2.6 s into a hold,
 before the encoder has settled; with room it reaches the cap by the end of the hold.
 
+## Fourth pass: where a hold's frames and time go
+
+Recorded separately in [NATIVE_PHASE_N1_DELIVERY.md](NATIVE_PHASE_N1_DELIVERY.md). It reads
+the auditor's per-request timing labels and no PSNR. One statement above is refined there. The
+on-time contrast of section 3 (1.05 - 0.65: +0.025 overall, +0.054 with room) pools the first
+hold, in which the lowest ratio's encoder never encodes 29% of the requests against 5% at the
+top ratio. In the first hold the contrast is +0.210 [+0.088, +0.331]; from the second hold on
+it is -0.022 [-0.050, +0.005], negative under every schedule and never established. The
+by-hold-pair table of section 3 shows the same for the utility.
+

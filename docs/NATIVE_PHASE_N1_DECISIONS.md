@@ -243,6 +243,11 @@ holds by their position in the schedule and repeats the within-hold tables on B1
 It changes no registered quantity or outcome and none of the four frozen files, and it runs
 only after the registered final report. The owner can strike it; nothing depends on it.
 
+Later the same day, still before any B1 data, the agent added a third part to the addendum:
+the tables of the [delivery pass](NATIVE_PHASE_N1_DELIVERY.md) (what became of the frames,
+where the time went, the receiver's buffer per phase, and the first hold apart from the
+later ones), to be run unchanged on B1's capture. They read timing labels and no PSNR.
+
 
 ## 14. An uncapped pilot, approved on a wrong premise and not run (2026-10-10)
 

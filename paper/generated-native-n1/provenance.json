@@ -3,6 +3,8 @@
  "acquisition/native-n1/pool-and-plan.json": "1fadde48e535fc1ab5d2ea3886925b041fceacaa18948abcfede04649b7cc359",
  "results/n1-interim-public.json": "bd7055c9197188d70e2691cd7054b8a5d5b8eeccad0a751b39127936c254f61a",
  "results/native-actuator-qualification-n1-conditional.json": "3450e173d1e52af2d0f730ddbf3e9c8fafde5f5bf3f6bb0813d79ea3f30ddffe",
+ "results/native-actuator-qualification-n1-delivery/first_hold.json": "96556270881808d24187aa5d8b3db6784d2d535ee5429710c648473409780697",
+ "results/native-actuator-qualification-n1-delivery/report.json": "77ea687f70f109596346328421e47c8dd0dced9124b403bbb4e0e698104c3d67",
  "results/native-actuator-qualification-n1-dynamics/binding.json": "035920ea1b75e4dc0626137bec9d52a4ca9ca2f07399228c1a0c39347e159cd4",
  "results/native-actuator-qualification-n1-dynamics/report.json": "7b5cdcb20fa2cf0de03e8097ddd2eb155583a68289e4a5ea959ba204296d8f53",
  "results/native-actuator-qualification-n1-exploratory.json": "00bb6175e421d76fdd513a5c53f60bf9d5591056c09b25c3b78cbaa5d8afdf37",

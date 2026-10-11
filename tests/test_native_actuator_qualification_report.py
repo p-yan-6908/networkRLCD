@@ -287,3 +287,33 @@ def test_within_hold_macros_table_and_figure_come_from_the_mechanism_report(reco
     path.write_text(json.dumps(dict(inside, quality_or_ontime_labels_read=True)))
     with pytest.raises(ValueError, match="mechanism-only"):
         report.export(**paths, out=tmp_path / "evidence", allow_mock=True, dynamics=path)
+
+
+def test_delivery_macros_and_table_come_from_the_timing_report(records, tmp_path):
+    from test_native_actuator_qualification_delivery import panel as timed_peers
+
+    from media_rl import native_actuator_qualification_delivery as delivery
+
+    holds, spans = delivery.collect(tmp_path / "capture", timed_peers(tmp_path / "capture"))
+    delivered = json.loads(json.dumps(delivery.summarise(holds, spans)))  # as read back from disk
+    first = json.loads(json.dumps(delivery.first_hold(holds)))
+    made = report.delivery_macros(delivered, first)
+    assert all(re.fullmatch(r"NOneDel[A-Za-z]+", name) for name in made)
+    # The invented lowest arm skips a fifth of its frames; the top arm shows a quarter late.
+    assert made["NOneDelNeverLow"] == "20.0" and made["NOneDelLateTop"] == "25.0"
+    assert made["NOneDelNeverDiff"] == "$-$10.0" and made["NOneDelEncoderCost"] == "holds"
+    assert made["NOneDelBufferSlope"] == "$+$20.0" and made["NOneDelBufferFills"] == "holds"
+    assert made["NOneDelNearOnTime"] == "n/a" and made["NOneDelNearBufferSlopeT"] == ""  # no such peers
+    assert made["NOneDelRoomOnTime"] == "82"  # the mean of 80%, 100% and 65%
+    assert made["NOneDelAfterDiff"] == "$-$15.0" and made["NOneDelStartNeverLow"] == "20"
+    assert "NOneDelStartDiff" not in report.delivery_macros(delivered)
+    table = report.table_delivery(delivered)
+    assert table.count("\\\\") == 1 + 7 + 8 and "Collapse-recovery" in table and "n/a" in table
+    paths, _ = records
+    path = tmp_path / "delivered.json"
+    path.write_text(json.dumps(dict(delivered, rows_sha256="0" * 64)))
+    with pytest.raises(ValueError, match="same rows as the exploratory description"):
+        report.export(**paths, out=tmp_path / "evidence", allow_mock=True, delivery=path)
+    path.write_text(json.dumps(dict(delivered, psnr_read=True)))
+    with pytest.raises(ValueError, match="reads no PSNR"):
+        report.export(**paths, out=tmp_path / "evidence", allow_mock=True, delivery=path)

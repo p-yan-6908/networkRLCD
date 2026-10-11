@@ -147,8 +147,163 @@ uv run --frozen python -m media_rl.native_actuator_qualification_delivery \
     --rows results/native-actuator-qualification-n1-stage-one-cohorts.json.gz \
     --capture results/native-actuator-qualification-n1-stage-one \
     --out results/native-actuator-qualification-n1-delivery
+# Added after the tables were read (section 5 of the results):
+uv run --frozen python -m media_rl.native_actuator_qualification_delivery \
+    --first-hold results/native-actuator-qualification-n1-delivery/holds.json.gz \
+    --out results/native-actuator-qualification-n1-delivery/first_hold.json
 ```
 
 ## Results
 
-Not yet computed when this was committed.
+Run on 2026-10-10 from the design committed as `e553c60`: 480 peers, 2,880 holds, 1,440
+capacity phases, 12 sources. Every hold's labels reproduced its audited on-time fraction.
+Report, per-hold figures and the split of section 5 are in
+`results/native-actuator-qualification-n1-delivery/`. Brackets are 95% t intervals over
+sources. "Top minus lower" is the top ratio minus the mean of the two lower ones.
+
+### 1. All schedules, holds 2 to 6, registered window
+
+| | 0.65 | 0.85 | 1.05 | Top minus lower |
+|---|---:|---:|---:|---|
+| never encoded | 2.8% | 4.1% | 2.8% | -0.7 pt [-1.8, +0.4] |
+| encoded, not shown | 3.6% | 3.5% | 3.7% | +0.2 pt [-0.2, +0.5] |
+| shown late | 17.3% | 17.5% | 19.5% | +2.1 pt [-0.6, +4.7] |
+| on time | 76.3% | 74.9% | 74.0% | -1.5 pt [-4.1, +1.0] |
+| median age, ms | 136 | 149 | 145 | +2.0 [-4.6, +8.6] |
+| 90th percentile age, ms | 147 | 160 | 156 | +2.2 [-4.8, +9.1] |
+| encode, ms | 1.9 | 2.0 | 2.0 | +0.1 [+0.0, +0.1] |
+| pacer, ms | 2.7 | 9.0 | 6.3 | +0.4 [-6.1, +6.9] |
+| relay, ms | 40.9 | 48.5 | 45.9 | +1.2 [-2.7, +5.0] |
+| rest, ms | 91.0 | 89.9 | 90.8 | +0.4 [-5.9, +6.7] |
+| frame wire time, ms | 14.5 | 17.6 | 18.1 | +2.1 [+1.7, +2.4] |
+
+The ages are means over sources of per-hold figures, across four very different schedules.
+
+- **None of the three statements about the window holds.** Never encoded, rest and shown late
+  do not differ between the top ratio and the lower ones by the rule.
+- **A request that misses the deadline was mostly shown, late.** 17% to 20% of requests,
+  against 3% to 4% never encoded and under 4% encoded and not shown. The relay dropped nothing
+  in the window.
+- **Most of the age is after the relay.** Of about 140 ms, the relay accounts for 41 to 49 ms,
+  25 of them propagation, the encoder and the pacer for under 12 ms, and about 90 ms is left.
+- Over the whole hold the picture is the same, with one difference: "rest" is 4.0 ms [+0.6,
+  +7.3] larger at the top ratio. The rule was fixed on the registered window, so this is noted
+  and not counted as a statement.
+
+### 2. By schedule, holds 2 to 6, registered window
+
+| Schedule | On time, 0.65 / 0.85 / 1.05 | Top minus lower | Shown late | Median age, ms | Relay, ms | Rest, ms |
+|---|---|---|---|---|---|---|
+| underutilized | 93.9% / 93.3% / 92.7% | -0.9 pt [-3.2, +1.4] | 1.2% / 1.7% / 2.1% | 80 / 82 / 83 | 30 / 31 / 32 | 49 / 49 / 49 |
+| near-capacity | 89.4% / 86.3% / 86.5% | -1.3 pt [-3.9, +1.2] | 6.2% / 9.3% / 8.5% | 115 / 121 / 119 | 41 / 49 / 48 | 72 / 69 / 69 |
+| queue-building | 69.2% / 67.5% / 66.2% | -2.1 pt [-8.6, +4.4] | 25.8% / 27.8% / 29.5% | 137 / 141 / 140 | 44 / 48 / 47 | 90 / 90 / 90 |
+| collapse-recovery | 52.5% / 52.5% / 50.7% | -1.8 pt [-9.1, +5.5] | 36.1% / 31.3% / 37.8% | 213 / 253 / 237 | 49 / 67 / 57 | 153 / 151 / 156 |
+
+- **The schedule moves on-time delivery from 93% to 52%. The ratio moves it by one or two
+  points,** and no interval excludes zero.
+- **"Rest" follows the schedule and not the ratio:** 49 ms with room, then 70, 90 and 153 ms,
+  alike at the three ratios. Under collapse-recovery it alone exceeds the deadline.
+- At the relay the top ratio waits a little longer where the within-hold pass also saw it:
+  +3.2 ms [+1.0, +5.4] under near-capacity, +1.4 ms [+0.8, +2.0] with room, +1.4 ms [+0.0,
+  +2.9] under queue-building.
+- Under collapse-recovery the encoder skips more: 7.6%, 13.2% and 8.0% never encoded, and the
+  pacer holds packets for 9, 33 and 24 ms. Neither contrast is established.
+
+### 3. The receiver per capacity phase
+
+Level, and slope per 0.40 of requested ratio.
+
+| Phases | Jitter buffer, ms | Slope | Jitter target, ms | Slope |
+|---|---:|---|---:|---|
+| all | 64.9 | +10.5 [+4.6, +16.3] | 56.1 | +4.7 [-1.7, +11.0] |
+| underutilized | 27.2 | +0.6 [-3.7, +4.9] | 37.5 | -2.1 [-12.6, +8.3] |
+| near-capacity | 48.8 | +2.5 [-2.6, +7.5] | 50.7 | +0.5 [-3.4, +4.4] |
+| queue-building | 60.1 | +2.8 [-11.0, +16.5] | 52.7 | -1.6 [-20.2, +17.1] |
+| collapse-recovery | 123.6 | +36.0 [+15.1, +56.9] | 83.6 | +21.8 [+1.0, +42.7] |
+| first phase (holds 1 and 2) | 23.6 | +3.8 [+0.6, +7.0] | 29.6 | +2.7 [-0.2, +5.6] |
+| second phase (holds 3 and 4) | 87.0 | +23.6 [+3.7, +43.6] | 63.4 | +7.2 [-5.1, +19.6] |
+| third phase (holds 5 and 6) | 84.2 | +3.9 [-14.1, +22.0] | 75.4 | +4.1 [-12.8, +20.9] |
+
+- **A higher cap fills the receiver's buffer,** by the rule: +10.5 ms [+4.6, +16.3] from the
+  lowest to the top ratio over all phases. The slope comes from collapse-recovery (+36 ms) and
+  from the phase that contains the drop (+24 ms). With room and under near-capacity it is
+  near zero.
+- **The buffer's level follows the schedule** as "rest" does: 27 ms with room, then 49, 60 and
+  124 ms. The two differ by 20 to 30 ms throughout, so most of what grows in "rest" is the
+  receiver's jitter buffer. (The buffer is per phase over all six holds, "rest" is the
+  registered window of holds 2 to 6, so the comparison is rough.)
+- The decoded share falls slightly with the ratio (-0.003 [-0.006, -0.001] overall) and the
+  second phase has more freezes at a higher ratio (+0.31 [+0.05, +0.56] per phase).
+
+### 4. The hold of a capacity drop, whole hold
+
+| | 0.65 | 0.85 | 1.05 | Top minus lower |
+|---|---:|---:|---:|---|
+| **collapse-recovery,** on time | 34.5% | 25.1% | 20.1% | -9.7 pt [-21.9, +2.5] |
+| never encoded | 18.8% | 30.4% | 29.3% | +4.7 pt [-3.0, +12.4] |
+| shown late | 38.9% | 35.8% | 42.9% | +5.6 pt [-11.4, +22.5] |
+| median age, ms | 335 | 523 | 562 | +133 [-164, +429] |
+| pacer, ms | 21 | 57 | 59 | +19 [-37, +75] |
+| relay, ms | 219 | 284 | 279 | +28 [-32, +87] |
+| rest, ms | 114 | 191 | 229 | +76 [-87, +240] |
+| **queue-building,** on time | 57.2% | 53.8% | 55.4% | -2.5 pt [-14.0, +9.0] |
+| encoded, not shown | 4.2% | 4.4% | 7.3% | +3.2 pt [+0.4, +6.0] |
+| median age, ms | 148 | 166 | 167 | +12 [-19, +43] |
+
+- **Nothing is established in the deeper drop.** The lowest ratio is ahead on every line and
+  every interval is wide: a hold of this kind occurs once per peer.
+- In the shallower drop the top ratio has more frames encoded and not shown over the whole
+  hold (+3.2 pt [+0.4, +6.0]), one interval among many that were not corrected.
+
+### 5. The first hold (added after the tables were read)
+
+Not in the design above. The on-time contrast of section 1 has the opposite sign from the
+first exploratory pass (1.05 minus 0.65: +0.025). The estimator is the same. That pass pooled
+all six holds and the tables here start at the second. The split is computed by
+`--first-hold` from the saved per-hold figures and recorded in `first_hold.json`.
+
+| Holds | 0.65 | 0.85 | 1.05 | 1.05 minus 0.65 |
+|---|---:|---:|---:|---|
+| all six | 74.0% | 76.5% | 76.5% | +2.5 pt [-0.6, +5.5] |
+| the first | 67.0% | 82.6% | 87.9% | +21.0 pt [+8.8, +33.1] |
+| the second to the sixth | 76.3% | 74.9% | 74.0% | -2.2 pt [-5.0, +0.5] |
+
+- **In the first hold a low cap costs frames at the encoder.** The session starts under a cap
+  of 300 kbit/s, so the lowest ratio asks for 195 kbit/s. Never encoded: 28.7%, 12.8% and 5.5%
+  of requests (1.05 minus 0.65: -23.2 pt [-37.6, -8.7]). Almost nothing is shown late.
+- **From the second hold on the sign is the other way,** at every position (-0.2 to -4.2 pt)
+  and under every schedule (-1.2 to -3.0 pt), and never established. At the fourth hold the
+  top ratio minus the lower ones is -5.2 pt [-9.7, -0.6], one of six positions, not corrected.
+- The first pass's own table by pair of holds shows the same for the utility: +3.3 to +5.1 in
+  holds 1 and 2, mixed and mostly negative afterwards.
+
+## Reading
+
+- **On-time delivery in N1 is set by the schedule, at the receiver.** From 93% of requests on
+  time with room to 52% under collapse-recovery, the frames are encoded, cross the relay and
+  are shown, too late. What grows is the time after the relay, and most of that is the
+  receiver's jitter buffer: 27 ms with room, 124 ms under collapse-recovery. This agrees with
+  where the earlier diagnostics put the cost.
+- **Between N1's three ratios the cap moves little of it.** One statement of four holds by the
+  rule: a higher cap fills the receiver's buffer, after a collapse. The share on time differs
+  by a point or two against the top ratio from the second hold on, with intervals that include
+  zero.
+- **The first hold is a different regime.** There a low cap makes the encoder skip frames, and
+  the top ratio is 21 points ahead. The earlier statement that the top ratio is no worse on
+  timing was an average of this and of a small disadvantage afterwards.
+- **For B1.** B1's flag handles holds 2 to 6, so the first hold's effect is outside it. B1's
+  endpoint weighs each on-time frame by its PSNR. On these sources the timing side of backing
+  off is a point or two with an interval that includes zero; whether the quality of the frames
+  outweighs that is what B1 measures. This pass does not predict it.
+- **For a controller.** A choice among 0.65, 0.85 and 1.05 of the estimate does not reach what
+  makes frames late here. The receiver's buffer followed the schedule at all three. Whether a
+  cap well below 0.65 of the estimate would shrink it under constraint was not tested: N1
+  varied the ratio over a narrow range. The earlier diagnostics, in which fixed caps far below
+  capacity did best, point that way and do not establish it.
+- **For the simulator.** The simulator's latency is half the round trip, the relay queue, the
+  trace's jitter and a fixed 8 or 25 ms at the receiver (`environment.py`). Natively the
+  receiver's buffer ran from 27 to 124 ms with the schedule. On this evidence the simulator
+  leaves out the place where most native frames are lost to the deadline.
+
+Nothing here is confirmatory. It is a fourth look at one sample, and section 5 was added
+after the tables were read.

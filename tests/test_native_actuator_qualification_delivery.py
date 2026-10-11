@@ -322,3 +322,39 @@ def test_command_writes_the_report_and_refuses_to_overwrite(tmp_path, capsys):
     assert len(kept["holds"]) == 108 and len(kept["phases"]) == 54
     with pytest.raises(SystemExit):
         delivery.main(["--capture", str(capture), "--rows", str(table), "--out", str(out)])
+
+
+def test_first_hold_is_reported_apart_from_the_later_ones(tmp_path, capsys):
+    capture = tmp_path / "capture"
+    rows = panel(capture)
+    holds, _ = delivery.collect(capture, rows)
+    for h in holds:  # invented: at start-up the lowest arm delivers nothing on time
+        if h["epoch"] == 0 and h["arm"] == 0:
+            h["outcome"] = dict(h["outcome"], on_time=0.0, never_encoded=1.0)
+    split = delivery.first_hold(holds)
+    assert split["added_after_the_tables_were_read"] is True
+    first, later = split["on_time"]["first_hold"], split["on_time"]["later_holds"]
+    assert first["by_ratio"]["0.65"]["mean"] == pytest.approx(0)
+    assert first["highest_minus_lowest"]["mean"] == pytest.approx(0.65)
+    assert later["highest_minus_lowest"]["mean"] == pytest.approx(0.65 - 0.8)
+    assert later["by_ratio"]["top_minus_lower"]["mean"] == pytest.approx(0.65 - 0.9)
+    pooled = split["on_time"]["all_holds"]["highest_minus_lowest"]["mean"]
+    assert later["highest_minus_lowest"]["mean"] < pooled < first["highest_minus_lowest"]["mean"]
+    assert set(split["on_time_by_position"]) == {"1", "2", "3", "4", "5", "6"}
+    assert split["first_hold_frames"]["never_encoded"]["by_ratio"]["0.65"]["mean"] == pytest.approx(1)
+    assert (
+        split["on_time_in_later_holds_by_schedule"]["near-capacity"]["highest_minus_lowest"]["sources"] == 0
+    )
+
+    table = tmp_path / "rows.json"
+    table.write_text(json.dumps(rows))
+    out = tmp_path / "out"
+    delivery.main(["--capture", str(capture), "--rows", str(table), "--out", str(out)])
+    capsys.readouterr()
+    target = tmp_path / "first.json"
+    delivery.main(["--first-hold", str(out / "holds.json.gz"), "--out", str(target)])
+    written = json.loads(target.read_text())
+    assert written["abi"].endswith("_delivery_first_hold") and len(written["holds_sha256"]) == 64
+    assert written["on_time"]["later_holds"]["highest_minus_lowest"]["mean"] == pytest.approx(0.65 - 0.8)
+    with pytest.raises(SystemExit):
+        delivery.main(["--out", str(tmp_path / "nothing.json")])
