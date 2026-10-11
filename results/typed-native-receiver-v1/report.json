@@ -1,0 +1,2696 @@
+{
+ "ablations": {
+  "buffer_held_at_its_base": {
+   "agreeing_over_all_schedules": 3,
+   "differences_over_all_schedules": {
+    "0.25 minus 0.65": {
+     "native": -0.1748649709405874,
+     "native_interval95": [
+      -1.5325853476664157,
+      1.182855405785241
+     ],
+     "simulated": -2.531857267770352,
+     "verdict": "not established"
+    },
+    "0.25 minus 1.05": {
+     "native": 5.890490113584794,
+     "native_interval95": [
+      3.492457801736578,
+      8.28852242543301
+     ],
+     "simulated": -1.1571595763694091,
+     "verdict": "disagrees"
+    },
+    "0.65 minus 1.05": {
+     "native": 6.065355084525382,
+     "native_interval95": [
+      3.435003479985309,
+      8.695706689065455
+     ],
+     "simulated": 1.374697691400943,
+     "verdict": "agrees"
+    },
+    "fast ladder minus 0.25": {
+     "native": -3.4258561465164017,
+     "native_interval95": [
+      -5.572082153380123,
+      -1.2796301396526801
+     ],
+     "simulated": 1.168484464165072,
+     "verdict": "disagrees"
+    },
+    "fast ladder minus 0.65": {
+     "native": -3.6007211174569895,
+     "native_interval95": [
+      -5.8122221174130395,
+      -1.38922011750094
+     ],
+     "simulated": -1.3633728036052801,
+     "verdict": "agrees"
+    },
+    "fast ladder minus 1.05": {
+     "native": 2.464633967068393,
+     "native_interval95": [
+      0.4956490539536469,
+      4.433618880183139
+     ],
+     "simulated": 0.011324887795662875,
+     "verdict": "flat"
+    },
+    "fast ladder minus ladder": {
+     "native": 1.372123622787571,
+     "native_interval95": [
+      0.1685800828767512,
+      2.575667162698391
+     ],
+     "simulated": 0.033668982007576176,
+     "verdict": "flat"
+    },
+    "ladder minus 0.25": {
+     "native": -4.797979769303972,
+     "native_interval95": [
+      -6.513005211192798,
+      -3.082954327415146
+     ],
+     "simulated": 1.1348154821574958,
+     "verdict": "disagrees"
+    },
+    "ladder minus 0.65": {
+     "native": -4.972844740244561,
+     "native_interval95": [
+      -6.918699695116856,
+      -3.0269897853722663
+     ],
+     "simulated": -1.3970417856128563,
+     "verdict": "agrees"
+    },
+    "ladder minus 1.05": {
+     "native": 1.0925103442808222,
+     "native_interval95": [
+      -0.47451898236447065,
+      2.659539670926115
+     ],
+     "simulated": -0.0223440942119133,
+     "verdict": "not established"
+    }
+   },
+   "endpoint": {
+    "0.25": 27.863900405687613,
+    "0.65": 30.395757673457965,
+    "1.05": 29.02105998205702,
+    "fast ladder": 29.032384869852685,
+    "ladder": 28.99871588784511
+   },
+   "established_over_all_schedules": 8,
+   "established_under_the_schedules": 22,
+   "rule_against_tuned_level_reversed": [
+    "queue-building: ladder minus 0.25"
+   ],
+   "share_agreeing_under_the_schedules": 0.5909090909090909,
+   "verdict": "the layer does not predict the controller pilot"
+  },
+  "simulator_as_built": {
+   "native_order_of_the_fixed_arms": [
+    "0.65",
+    "0.25",
+    "1.05"
+   ],
+   "order_of_the_fixed_arms": [
+    "1.05",
+    "0.65",
+    "0.25"
+   ],
+   "own_utility": {
+    "0.25": 0.5269940830856508,
+    "0.65": 0.6359897476264348,
+    "1.05": 0.9717635354847497
+   }
+  }
+ },
+ "layer_sha256": "923e5a2304b800c0a65c2311d291adab547d4537aeaf3cf00389cddbc060a22f",
+ "learned_controller_promoted": false,
+ "native_evidence": false,
+ "pilot_report_sha256": "0034a5427c30ab9a1a6701347e9c21183d0a0695c66df016fdbdb742af6ac582",
+ "robustness": {
+  "replicates": 48,
+  "share_of_replicates_agreeing": {
+   "0.25 minus 1.05": 1.0,
+   "0.65 minus 1.05": 1.0,
+   "fast ladder minus 0.25": 1.0,
+   "fast ladder minus 0.65": 0.9791666666666666,
+   "fast ladder minus 1.05": 1.0,
+   "fast ladder minus ladder": 0.5625,
+   "ladder minus 0.25": 1.0,
+   "ladder minus 0.65": 0.9791666666666666
+  }
+ },
+ "spans": {
+  "after_startup": {
+   "agreeing_over_all_schedules": 7,
+   "differences_over_all_schedules": {
+    "0.25 minus 0.65": {
+     "native": -0.1748649709405874,
+     "native_interval95": [
+      -1.5325853476664157,
+      1.182855405785241
+     ],
+     "simulated": 0.888424713954354,
+     "verdict": "not established"
+    },
+    "0.25 minus 1.05": {
+     "native": 5.890490113584794,
+     "native_interval95": [
+      3.492457801736578,
+      8.28852242543301
+     ],
+     "simulated": 9.464551706743965,
+     "verdict": "agrees"
+    },
+    "0.65 minus 1.05": {
+     "native": 6.065355084525382,
+     "native_interval95": [
+      3.435003479985309,
+      8.695706689065455
+     ],
+     "simulated": 8.57612699278961,
+     "verdict": "agrees"
+    },
+    "fast ladder minus 0.25": {
+     "native": -3.4258561465164017,
+     "native_interval95": [
+      -5.572082153380123,
+      -1.2796301396526801
+     ],
+     "simulated": -5.178054127008828,
+     "verdict": "agrees"
+    },
+    "fast ladder minus 0.65": {
+     "native": -3.6007211174569895,
+     "native_interval95": [
+      -5.8122221174130395,
+      -1.38922011750094
+     ],
+     "simulated": -4.289629413054474,
+     "verdict": "agrees"
+    },
+    "fast ladder minus 1.05": {
+     "native": 2.464633967068393,
+     "native_interval95": [
+      0.4956490539536469,
+      4.433618880183139
+     ],
+     "simulated": 4.286497579735137,
+     "verdict": "agrees"
+    },
+    "fast ladder minus ladder": {
+     "native": 1.372123622787571,
+     "native_interval95": [
+      0.1685800828767512,
+      2.575667162698391
+     ],
+     "simulated": 0.03463055570070139,
+     "verdict": "flat"
+    },
+    "ladder minus 0.25": {
+     "native": -4.797979769303972,
+     "native_interval95": [
+      -6.513005211192798,
+      -3.082954327415146
+     ],
+     "simulated": -5.212684682709529,
+     "verdict": "agrees"
+    },
+    "ladder minus 0.65": {
+     "native": -4.972844740244561,
+     "native_interval95": [
+      -6.918699695116856,
+      -3.0269897853722663
+     ],
+     "simulated": -4.324259968755175,
+     "verdict": "agrees"
+    },
+    "ladder minus 1.05": {
+     "native": 1.0925103442808222,
+     "native_interval95": [
+      -0.47451898236447065,
+      2.659539670926115
+     ],
+     "simulated": 4.251867024034436,
+     "verdict": "not established"
+    }
+   },
+   "differences_under_each_schedule": {
+    "collapse-recovery": {
+     "0.25 minus 0.65": {
+      "native": 4.757456194827707,
+      "native_interval95": [
+       0.6917682465277286,
+       8.823144143127685
+      ],
+      "simulated": 10.871358799639196,
+      "verdict": "agrees"
+     },
+     "0.25 minus 1.05": {
+      "native": 14.092963085765794,
+      "native_interval95": [
+       10.735181403583875,
+       17.450744767947715
+      ],
+      "simulated": 21.832581628677982,
+      "verdict": "agrees"
+     },
+     "0.65 minus 1.05": {
+      "native": 9.335506890938086,
+      "native_interval95": [
+       4.792396118296084,
+       13.878617663580089
+      ],
+      "simulated": 10.961222829038785,
+      "verdict": "agrees"
+     },
+     "fast ladder minus 0.25": {
+      "native": -12.4164844072751,
+      "native_interval95": [
+       -15.567500785411386,
+       -9.265468029138813
+      ],
+      "simulated": -21.829224230499204,
+      "verdict": "agrees"
+     },
+     "fast ladder minus 0.65": {
+      "native": -7.65902821244739,
+      "native_interval95": [
+       -11.924404137776548,
+       -3.3936522871182317
+      ],
+      "simulated": -10.957865430860007,
+      "verdict": "agrees"
+     },
+     "fast ladder minus 1.05": {
+      "native": 1.676478678490696,
+      "native_interval95": [
+       0.16222468957826175,
+       3.19073266740313
+      ],
+      "simulated": 0.003357398178779114,
+      "verdict": "flat"
+     },
+     "fast ladder minus ladder": {
+      "native": 1.2022406125317255,
+      "native_interval95": [
+       -0.18377774546857872,
+       2.5882589705320296
+      ],
+      "simulated": 0.0,
+      "verdict": "not established"
+     },
+     "ladder minus 0.25": {
+      "native": -13.618725019806824,
+      "native_interval95": [
+       -16.99258935102837,
+       -10.244860688585277
+      ],
+      "simulated": -21.829224230499204,
+      "verdict": "agrees"
+     },
+     "ladder minus 0.65": {
+      "native": -8.861268824979117,
+      "native_interval95": [
+       -13.398903408281301,
+       -4.323634241676933
+      ],
+      "simulated": -10.957865430860007,
+      "verdict": "agrees"
+     },
+     "ladder minus 1.05": {
+      "native": 0.47423806595897045,
+      "native_interval95": [
+       -0.8763613679303315,
+       1.8248374998482724
+      ],
+      "simulated": 0.003357398178779114,
+      "verdict": "not established"
+     }
+    },
+    "near-capacity": {
+     "0.25 minus 0.65": {
+      "native": -2.0885183278741217,
+      "native_interval95": [
+       -3.4690876904329206,
+       -0.707948965315323
+      ],
+      "simulated": -3.447908499247191,
+      "verdict": "agrees"
+     },
+     "0.25 minus 1.05": {
+      "native": 1.022267872283784,
+      "native_interval95": [
+       -2.8507920314994113,
+       4.8953277760669796
+      ],
+      "simulated": 14.48718852106227,
+      "verdict": "not established"
+     },
+     "0.65 minus 1.05": {
+      "native": 3.110786200157906,
+      "native_interval95": [
+       -0.6906530967612365,
+       6.912225497077048
+      ],
+      "simulated": 17.935097020309463,
+      "verdict": "not established"
+     },
+     "fast ladder minus 0.25": {
+      "native": -0.024212022977215437,
+      "native_interval95": [
+       -2.853910369814367,
+       2.805486323859936
+      ],
+      "simulated": 0.8369391425721311,
+      "verdict": "not established"
+     },
+     "fast ladder minus 0.65": {
+      "native": -2.1127303508513373,
+      "native_interval95": [
+       -4.766244210829754,
+       0.5407835091270798
+      ],
+      "simulated": -2.61096935667506,
+      "verdict": "not established"
+     },
+     "fast ladder minus 1.05": {
+      "native": 0.9980558493065684,
+      "native_interval95": [
+       -3.2714318385227057,
+       5.267543537135842
+      ],
+      "simulated": 15.324127663634401,
+      "verdict": "not established"
+     },
+     "fast ladder minus ladder": {
+      "native": 1.1255638979891884,
+      "native_interval95": [
+       -2.4554491869332913,
+       4.706576982911669
+      ],
+      "simulated": 0.10991636057145371,
+      "verdict": "not established"
+     },
+     "ladder minus 0.25": {
+      "native": -1.1497759209664038,
+      "native_interval95": [
+       -3.7986767619714543,
+       1.499124920038647
+      ],
+      "simulated": 0.7270227820006774,
+      "verdict": "not established"
+     },
+     "ladder minus 0.65": {
+      "native": -3.238294248840526,
+      "native_interval95": [
+       -5.862560680661747,
+       -0.6140278170193056
+      ],
+      "simulated": -2.7208857172465137,
+      "verdict": "agrees"
+     },
+     "ladder minus 1.05": {
+      "native": -0.12750804868262003,
+      "native_interval95": [
+       -2.73841284440506,
+       2.48339674703982
+      ],
+      "simulated": 15.214211303062948,
+      "verdict": "not established"
+     }
+    },
+    "queue-building": {
+     "0.25 minus 0.65": {
+      "native": 1.1729823585474533,
+      "native_interval95": [
+       -2.0413970722631714,
+       4.387361789358078
+      ],
+      "simulated": -0.3323668985264341,
+      "verdict": "not established"
+     },
+     "0.25 minus 1.05": {
+      "native": 10.269411401413677,
+      "native_interval95": [
+       5.398986215287979,
+       15.139836587539374
+      ],
+      "simulated": 6.292715239369894,
+      "verdict": "agrees"
+     },
+     "0.65 minus 1.05": {
+      "native": 9.096429042866221,
+      "native_interval95": [
+       4.311484822872759,
+       13.881373262859682
+      ],
+      "simulated": 6.625082137896328,
+      "verdict": "agrees"
+     },
+     "fast ladder minus 0.25": {
+      "native": -5.06441585404066,
+      "native_interval95": [
+       -9.322447191858034,
+       -0.8063845162232859
+      ],
+      "simulated": -4.475580297250833,
+      "verdict": "agrees"
+     },
+     "fast ladder minus 0.65": {
+      "native": -3.891433495493206,
+      "native_interval95": [
+       -9.0759714577563,
+       1.2931044667698877
+      ],
+      "simulated": -4.807947195777267,
+      "verdict": "not established"
+     },
+     "fast ladder minus 1.05": {
+      "native": 5.204995547373016,
+      "native_interval95": [
+       1.740158729361991,
+       8.66983236538404
+      ],
+      "simulated": 1.8171349421190612,
+      "verdict": "agrees"
+     },
+     "fast ladder minus ladder": {
+      "native": 2.723387718920437,
+      "native_interval95": [
+       0.06153730378604472,
+       5.38523813405483
+      ],
+      "simulated": 0.027235547223043,
+      "verdict": "flat"
+     },
+     "ladder minus 0.25": {
+      "native": -7.787803572961097,
+      "native_interval95": [
+       -12.043923291876128,
+       -3.531683854046065
+      ],
+      "simulated": -4.502815844473876,
+      "verdict": "agrees"
+     },
+     "ladder minus 0.65": {
+      "native": -6.6148212144136425,
+      "native_interval95": [
+       -11.467374294593586,
+       -1.7622681342336994
+      ],
+      "simulated": -4.83518274300031,
+      "verdict": "agrees"
+     },
+     "ladder minus 1.05": {
+      "native": 2.4816078284525793,
+      "native_interval95": [
+       0.14808649328712686,
+       4.815129163618032
+      ],
+      "simulated": 1.7898993948960182,
+      "verdict": "agrees"
+     }
+    },
+    "underutilized": {
+     "0.25 minus 0.65": {
+      "native": -4.541380109263389,
+      "native_interval95": [
+       -6.50347895007412,
+       -2.5792812684526574
+      ],
+      "simulated": -3.537384546048152,
+      "verdict": "agrees"
+     },
+     "0.25 minus 1.05": {
+      "native": -1.822681905124073,
+      "native_interval95": [
+       -4.458866934212724,
+       0.8135031239645774
+      ],
+      "simulated": -4.754278562134292,
+      "verdict": "not established"
+     },
+     "0.65 minus 1.05": {
+      "native": 2.718698204139315,
+      "native_interval95": [
+       0.636973321217515,
+       4.800423087061115
+      ],
+      "simulated": -1.2168940160861403,
+      "verdict": "disagrees"
+     },
+     "fast ladder minus 0.25": {
+      "native": 3.801687698227365,
+      "native_interval95": [
+       0.9802784399383673,
+       6.623096956516363
+      ],
+      "simulated": 4.755648877142601,
+      "verdict": "agrees"
+     },
+     "fast ladder minus 0.65": {
+      "native": -0.7396924110360233,
+      "native_interval95": [
+       -2.8533700588331454,
+       1.373985236761099
+      ],
+      "simulated": 1.2182643310944492,
+      "verdict": "not established"
+     },
+     "fast ladder minus 1.05": {
+      "native": 1.979005793103292,
+      "native_interval95": [
+       -0.1896095632221393,
+       4.147621149428724
+      ],
+      "simulated": 0.0013703150083088644,
+      "verdict": "not established"
+     },
+     "fast ladder minus ladder": {
+      "native": 0.4373022617089332,
+      "native_interval95": [
+       -1.9902878243428732,
+       2.8648923477607395
+      ],
+      "simulated": 0.0013703150083088644,
+      "verdict": "not established"
+     },
+     "ladder minus 0.25": {
+      "native": 3.364385436518431,
+      "native_interval95": [
+       1.069664212519319,
+       5.659106660517543
+      ],
+      "simulated": 4.754278562134292,
+      "verdict": "agrees"
+     },
+     "ladder minus 0.65": {
+      "native": -1.1769946727449565,
+      "native_interval95": [
+       -3.655961333877393,
+       1.3019719883874796
+      ],
+      "simulated": 1.2168940160861403,
+      "verdict": "not established"
+     },
+     "ladder minus 1.05": {
+      "native": 1.5417035313943588,
+      "native_interval95": [
+       -1.2066071714174882,
+       4.290014234206206
+      ],
+      "simulated": 0.0,
+      "verdict": "not established"
+     }
+    }
+   },
+   "endpoints_inside_the_native_interval": 5,
+   "established_over_all_schedules": 8,
+   "established_under_the_schedules": 22,
+   "levels": {
+    "on_time": {
+     "0.25": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 0.8719357978303909,
+        "simulated": 0.9343770720061035
+       },
+       "near-capacity": {
+        "native": 0.9255058345882633,
+        "simulated": 0.9345584714105792
+       },
+       "queue-building": {
+        "native": 0.8922668398313132,
+        "simulated": 0.9345583904267242
+       },
+       "underutilized": {
+        "native": 0.8434546256764529,
+        "simulated": 0.9345584715639979
+       }
+      },
+      "native": 0.8832907744816052,
+      "native_interval95": [
+       0.8396947231400085,
+       0.9268868258232019
+      ],
+      "simulated": 0.9345131013518513
+     },
+     "0.65": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 0.6721432799742305,
+        "simulated": 0.5601919970519474
+       },
+       "near-capacity": {
+        "native": 0.9269524840991427,
+        "simulated": 0.9659961772996585
+       },
+       "queue-building": {
+        "native": 0.7982804092737165,
+        "simulated": 0.8708581647640821
+       },
+       "underutilized": {
+        "native": 0.9302244613484275,
+        "simulated": 0.9687267167160263
+       }
+      },
+      "native": 0.8319001586738791,
+      "native_interval95": [
+       0.7668646110702251,
+       0.8969357062775332
+      ],
+      "simulated": 0.8414432639579286
+     },
+     "1.05": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 0.34588324727099123,
+        "simulated": 0.1851710234816684
+       },
+       "near-capacity": {
+        "native": 0.805195857993334,
+        "simulated": 0.4176419474514895
+       },
+       "queue-building": {
+        "native": 0.46917352806077234,
+        "simulated": 0.6928780529185818
+       },
+       "underutilized": {
+        "native": 0.7554613103443297,
+        "simulated": 0.9385206929283297
+       }
+      },
+      "native": 0.5939284859173568,
+      "native_interval95": [
+       0.49698181484578474,
+       0.6908751569889289
+      ],
+      "simulated": 0.5585529291950174
+     },
+     "fast ladder": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 0.41347620328542556,
+        "simulated": 0.18529131074118338
+       },
+       "near-capacity": {
+        "native": 0.8698270149304087,
+        "simulated": 0.9318663022198155
+       },
+       "queue-building": {
+        "native": 0.6869247528034417,
+        "simulated": 0.7670750050532182
+       },
+       "underutilized": {
+        "native": 0.8085793850224262,
+        "simulated": 0.9385587413915514
+       }
+      },
+      "native": 0.6947018390104255,
+      "native_interval95": [
+       0.6128251496164127,
+       0.7765785284044383
+      ],
+      "simulated": 0.7056978398514422
+     },
+     "ladder": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 0.37504550899991057,
+        "simulated": 0.18529131074118338
+       },
+       "near-capacity": {
+        "native": 0.8189118278909618,
+        "simulated": 0.9257758844698396
+       },
+       "queue-building": {
+        "native": 0.5773054274767774,
+        "simulated": 0.7661615216207401
+       },
+       "underutilized": {
+        "native": 0.7937376424553485,
+        "simulated": 0.9385206929283297
+       }
+      },
+      "native": 0.6412501017057496,
+      "native_interval95": [
+       0.5545591923383418,
+       0.7279410110731573
+      ],
+      "simulated": 0.7039373524400232
+     }
+    },
+    "utility": {
+     "0.25": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 26.349388637145022,
+        "simulated": 27.858491970366043
+       },
+       "near-capacity": {
+        "native": 28.007526292178166,
+        "simulated": 27.8639004012923
+       },
+       "queue-building": {
+        "native": 27.21119294983934,
+        "simulated": 27.86389798675523
+       },
+       "underutilized": {
+        "native": 24.951246366355317,
+        "simulated": 27.863900405866477
+       }
+      },
+      "native": 26.62983856137946,
+      "native_interval95": [
+       22.509300022422988,
+       30.750377100335935
+      ],
+      "simulated": 27.862547691070013
+     },
+     "0.65": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 21.591932442317315,
+        "simulated": 16.987133170726846
+       },
+       "near-capacity": {
+        "native": 30.096044620052286,
+        "simulated": 31.311808900539493
+       },
+       "queue-building": {
+        "native": 26.03821059129189,
+        "simulated": 28.196264885281664
+       },
+       "underutilized": {
+        "native": 29.492626475618707,
+        "simulated": 31.40128495191463
+       }
+      },
+      "native": 26.804703532320048,
+      "native_interval95": [
+       22.348354710910385,
+       31.26105235372971
+      ],
+      "simulated": 26.97412297711566
+     },
+     "1.05": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 12.25642555137923,
+        "simulated": 6.02591034168806
+       },
+       "near-capacity": {
+        "native": 26.98525841989439,
+        "simulated": 13.376711880230031
+       },
+       "queue-building": {
+        "native": 16.941781548425663,
+        "simulated": 21.571182747385336
+       },
+       "underutilized": {
+        "native": 26.773928271479388,
+        "simulated": 32.61817896800077
+       }
+      },
+      "native": 20.739348447794665,
+      "native_interval95": [
+       15.4169498616676,
+       26.06174703392173
+      ],
+      "simulated": 18.397995984326048
+     },
+     "fast ladder": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 13.932904229869928,
+        "simulated": 6.029267739866839
+       },
+       "near-capacity": {
+        "native": 27.98331426920095,
+        "simulated": 28.700839543864433
+       },
+       "queue-building": {
+        "native": 22.146777095798683,
+        "simulated": 23.388317689504397
+       },
+       "underutilized": {
+        "native": 28.752934064582686,
+        "simulated": 32.61954928300908
+       }
+      },
+      "native": 23.203982414863063,
+      "native_interval95": [
+       18.12856399413049,
+       28.279400835595634
+      ],
+      "simulated": 22.684493564061185
+     },
+     "ladder": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 12.730663617338202,
+        "simulated": 6.029267739866839
+       },
+       "near-capacity": {
+        "native": 26.85775037121176,
+        "simulated": 28.59092318329298
+       },
+       "queue-building": {
+        "native": 19.423389376878244,
+        "simulated": 23.361082142281354
+       },
+       "underutilized": {
+        "native": 28.315631802873742,
+        "simulated": 32.61817896800077
+       }
+      },
+      "native": 21.83185879207549,
+      "native_interval95": [
+       16.641912634343285,
+       27.021804949807695
+      ],
+      "simulated": 22.649863008360484
+     }
+    }
+   },
+   "rule_against_tuned_level_reversed": [],
+   "share_agreeing_under_the_schedules": 0.8636363636363636,
+   "verdict": "the layer does not predict the controller pilot"
+  },
+  "session": {
+   "agreeing_over_all_schedules": 6,
+   "differences_over_all_schedules": {
+    "0.25 minus 0.65": {
+     "native": -0.7180098441911822,
+     "native_interval95": [
+      -1.9461742556584716,
+      0.5101545672761072
+     ],
+     "simulated": 0.7289936523379339,
+     "verdict": "not established"
+    },
+    "0.25 minus 1.05": {
+     "native": 3.4682440369883154,
+     "native_interval95": [
+      1.4964673753966147,
+      5.440020698580016
+     ],
+     "simulated": 7.744277681639623,
+     "verdict": "agrees"
+    },
+    "0.65 minus 1.05": {
+     "native": 4.186253881179497,
+     "native_interval95": [
+      1.9444510221876303,
+      6.428056740171364
+     ],
+     "simulated": 7.015284029301689,
+     "verdict": "agrees"
+    },
+    "fast ladder minus 0.25": {
+     "native": -1.397725845662109,
+     "native_interval95": [
+      -3.1200547270773553,
+      0.32460303575313754
+     ],
+     "simulated": -4.149150679281121,
+     "verdict": "not established"
+    },
+    "fast ladder minus 0.65": {
+     "native": -2.1157356898532913,
+     "native_interval95": [
+      -3.9923195461360703,
+      -0.23915183357051228
+     ],
+     "simulated": -3.420157026943187,
+     "verdict": "agrees"
+    },
+    "fast ladder minus 1.05": {
+     "native": 2.0705181913262067,
+     "native_interval95": [
+      0.42826123698423646,
+      3.712775145668177
+     ],
+     "simulated": 3.5951270023585025,
+     "verdict": "agrees"
+    },
+    "fast ladder minus ladder": {
+     "native": 1.1493906925119857,
+     "native_interval95": [
+      0.13250564925787356,
+      2.1662757357660976
+     ],
+     "simulated": 0.029044982200591818,
+     "verdict": "flat"
+    },
+    "ladder minus 0.25": {
+     "native": -2.5471165381740946,
+     "native_interval95": [
+      -3.7986084290217845,
+      -1.2956246473264046
+     ],
+     "simulated": -4.178195661481713,
+     "verdict": "agrees"
+    },
+    "ladder minus 0.65": {
+     "native": -3.265126382365277,
+     "native_interval95": [
+      -4.843662104736477,
+      -1.6865906599940765
+     ],
+     "simulated": -3.4492020091437787,
+     "verdict": "agrees"
+    },
+    "ladder minus 1.05": {
+     "native": 0.9211274988142213,
+     "native_interval95": [
+      -0.35991204629011553,
+      2.202167043918558
+     ],
+     "simulated": 3.5660820201579106,
+     "verdict": "not established"
+    }
+   },
+   "differences_under_each_schedule": {
+    "collapse-recovery": {
+     "0.25 minus 0.65": {
+      "native": 3.4034578655721184,
+      "native_interval95": [
+       -0.05500363082017312,
+       6.86191936196441
+      ],
+      "simulated": 9.101777078543652,
+      "verdict": "not established"
+     },
+     "0.25 minus 1.05": {
+      "native": 10.221977559824976,
+      "native_interval95": [
+       7.473057469947763,
+       12.97089764970219
+      ],
+      "simulated": 18.117460416472007,
+      "verdict": "agrees"
+     },
+     "0.65 minus 1.05": {
+      "native": 6.818519694252859,
+      "native_interval95": [
+       2.8429137756484386,
+       10.794125612857279
+      ],
+      "simulated": 9.015683337928357,
+      "verdict": "agrees"
+     },
+     "fast ladder minus 0.25": {
+      "native": -8.927252833373908,
+      "native_interval95": [
+       -11.34810149057198,
+       -6.506404176175836
+      ],
+      "simulated": -18.114644534128516,
+      "verdict": "agrees"
+     },
+     "fast ladder minus 0.65": {
+      "native": -5.52379496780179,
+      "native_interval95": [
+       -9.227334625870963,
+       -1.8202553097326168
+      ],
+      "simulated": -9.012867455584866,
+      "verdict": "agrees"
+     },
+     "fast ladder minus 1.05": {
+      "native": 1.294724726451068,
+      "native_interval95": [
+       -0.01295441328386282,
+       2.6024038661859987
+      ],
+      "simulated": 0.0028158823434907276,
+      "verdict": "not established"
+     },
+     "fast ladder minus ladder": {
+      "native": 0.9543770501269325,
+      "native_interval95": [
+       -0.18742896331981174,
+       2.096183063573677
+      ],
+      "simulated": 0.0,
+      "verdict": "not established"
+     },
+     "ladder minus 0.25": {
+      "native": -9.88162988350084,
+      "native_interval95": [
+       -12.632798638963962,
+       -7.13046112803772
+      ],
+      "simulated": -18.114644534128516,
+      "verdict": "agrees"
+     },
+     "ladder minus 0.65": {
+      "native": -6.478172017928723,
+      "native_interval95": [
+       -10.44128888979428,
+       -2.5150551460631676
+      ],
+      "simulated": -9.012867455584866,
+      "verdict": "agrees"
+     },
+     "ladder minus 1.05": {
+      "native": 0.3403476763241354,
+      "native_interval95": [
+       -0.742480414528992,
+       1.4231757671772627
+      ],
+      "simulated": 0.0028158823434907276,
+      "verdict": "not established"
+     }
+    },
+    "near-capacity": {
+     "0.25 minus 0.65": {
+      "native": -2.33684298068168,
+      "native_interval95": [
+       -3.478786066419723,
+       -1.1948998949436374
+      ],
+      "simulated": -2.9079309765915013,
+      "verdict": "agrees"
+     },
+     "0.25 minus 1.05": {
+      "native": -0.615461784306283,
+      "native_interval95": [
+       -4.079785729329665,
+       2.8488621607170996
+      ],
+      "simulated": 11.956822763165635,
+      "verdict": "not established"
+     },
+     "0.65 minus 1.05": {
+      "native": 1.7213811963753969,
+      "native_interval95": [
+       -1.6295512118135171,
+       5.072313604564311
+      ],
+      "simulated": 14.864753739757136,
+      "verdict": "not established"
+     },
+     "fast ladder minus 0.25": {
+      "native": 1.5088482527407931,
+      "native_interval95": [
+       -0.8633839148155014,
+       3.8810804202970877
+      ],
+      "simulated": 0.8956714063341913,
+      "verdict": "not established"
+     },
+     "fast ladder minus 0.65": {
+      "native": -0.8279947279408869,
+      "native_interval95": [
+       -2.9548000989679735,
+       1.2988106430861994
+      ],
+      "simulated": -2.01225957025731,
+      "verdict": "not established"
+     },
+     "fast ladder minus 1.05": {
+      "native": 0.8933864684345102,
+      "native_interval95": [
+       -2.6648074211171977,
+       4.451580357986218
+      ],
+      "simulated": 12.852494169499826,
+      "verdict": "not established"
+     },
+     "fast ladder minus ladder": {
+      "native": 0.9567216674974773,
+      "native_interval95": [
+       -2.0029596514172,
+       3.9164029864121543
+      ],
+      "simulated": 0.09218791531800008,
+      "verdict": "not established"
+     },
+     "ladder minus 0.25": {
+      "native": 0.5521265852433158,
+      "native_interval95": [
+       -1.8411127791784798,
+       2.9453659496651117
+      ],
+      "simulated": 0.8034834910161912,
+      "verdict": "not established"
+     },
+     "ladder minus 0.65": {
+      "native": -1.7847163954383642,
+      "native_interval95": [
+       -4.030062629904702,
+       0.46062983902797283
+      ],
+      "simulated": -2.10444748557531,
+      "verdict": "not established"
+     },
+     "ladder minus 1.05": {
+      "native": -0.06333519906296721,
+      "native_interval95": [
+       -2.241290209206463,
+       2.1146198110805283
+      ],
+      "simulated": 12.760306254181826,
+      "verdict": "not established"
+     }
+    },
+    "queue-building": {
+     "0.25 minus 0.65": {
+      "native": 0.40760606273231675,
+      "native_interval95": [
+       -2.308793087170898,
+       3.1240052126355313
+      ],
+      "simulated": -0.29489608765978303,
+      "verdict": "not established"
+     },
+     "0.25 minus 1.05": {
+      "native": 7.156607732079087,
+      "native_interval95": [
+       3.423948657046527,
+       10.889266807111648
+      ],
+      "simulated": 5.084024089955545,
+      "verdict": "agrees"
+     },
+     "0.65 minus 1.05": {
+      "native": 6.749001669346771,
+      "native_interval95": [
+       2.896878874030392,
+       10.60112446466315
+      ],
+      "simulated": 5.378920177615328,
+      "verdict": "agrees"
+     },
+     "fast ladder minus 0.25": {
+      "native": -2.787069794357412,
+      "native_interval95": [
+       -6.180644590791662,
+       0.6065050020768381
+      ],
+      "simulated": -3.5599754288234315,
+      "verdict": "not established"
+     },
+     "fast ladder minus 0.65": {
+      "native": -2.3794637316250946,
+      "native_interval95": [
+       -6.732847774875957,
+       1.973920311625768
+      ],
+      "simulated": -3.8548715164832146,
+      "verdict": "not established"
+     },
+     "fast ladder minus 1.05": {
+      "native": 4.369537937721676,
+      "native_interval95": [
+       1.4676086622283413,
+       7.2714672132150096
+      ],
+      "simulated": 1.5240486611321131,
+      "verdict": "agrees"
+     },
+     "fast ladder minus ladder": {
+      "native": 2.257856586303229,
+      "native_interval95": [
+       0.04148297228609943,
+       4.474230200320358
+      ],
+      "simulated": 0.022842717025778114,
+      "verdict": "flat"
+     },
+     "ladder minus 0.25": {
+      "native": -5.04492638066064,
+      "native_interval95": [
+       -8.136905060055968,
+       -1.952947701265312
+      ],
+      "simulated": -3.5828181458492097,
+      "verdict": "agrees"
+     },
+     "ladder minus 0.65": {
+      "native": -4.6373203179283236,
+      "native_interval95": [
+       -8.531088879662166,
+       -0.7435517561944818
+      ],
+      "simulated": -3.8777142335089927,
+      "verdict": "agrees"
+     },
+     "ladder minus 1.05": {
+      "native": 2.1116813514184467,
+      "native_interval95": [
+       0.14088683423494341,
+       4.08247586860195
+      ],
+      "simulated": 1.501205944106335,
+      "verdict": "agrees"
+     }
+    },
+    "underutilized": {
+     "0.25 minus 0.65": {
+      "native": -4.346260324387484,
+      "native_interval95": [
+       -6.023583485009519,
+       -2.6689371637654493
+      ],
+      "simulated": -2.9829754049406283,
+      "verdict": "agrees"
+     },
+     "0.25 minus 1.05": {
+      "native": -2.890147359644517,
+      "native_interval95": [
+       -5.286418856705064,
+       -0.49387586258397054
+      ],
+      "simulated": -4.181196543034687,
+      "verdict": "agrees"
+     },
+     "0.65 minus 1.05": {
+      "native": 1.4561129647429667,
+      "native_interval95": [
+       -0.22547346766762044,
+       3.137699397153554
+      ],
+      "simulated": -1.198221138094059,
+      "verdict": "not established"
+     },
+     "fast ladder minus 0.25": {
+      "native": 4.614570992342091,
+      "native_interval95": [
+       2.0391879923897505,
+       7.189953992294431
+      ],
+      "simulated": 4.182345839493273,
+      "verdict": "agrees"
+     },
+     "fast ladder minus 0.65": {
+      "native": 0.2683106679546074,
+      "native_interval95": [
+       -1.475416344453894,
+       2.012037680363109
+      ],
+      "simulated": 1.1993704345526446,
+      "verdict": "not established"
+     },
+     "fast ladder minus 1.05": {
+      "native": 1.7244236326975741,
+      "native_interval95": [
+       -0.02955321520943399,
+       3.4784004806045825
+      ],
+      "simulated": 0.0011492964585855248,
+      "verdict": "not established"
+     },
+     "fast ladder minus ladder": {
+      "native": 0.42860746612030426,
+      "native_interval95": [
+       -1.541179137871324,
+       2.3983940701119324
+      ],
+      "simulated": 0.0011492964585855248,
+      "verdict": "not established"
+     },
+     "ladder minus 0.25": {
+      "native": 4.185963526221786,
+      "native_interval95": [
+       2.2278184902362046,
+       6.144108562207368
+      ],
+      "simulated": 4.181196543034687,
+      "verdict": "agrees"
+     },
+     "ladder minus 0.65": {
+      "native": -0.16029679816569686,
+      "native_interval95": [
+       -1.9552208345644224,
+       1.6346272382330287
+      ],
+      "simulated": 1.198221138094059,
+      "verdict": "not established"
+     },
+     "ladder minus 1.05": {
+      "native": 1.2958161665772698,
+      "native_interval95": [
+       -0.9311815939484338,
+       3.5228139271029733
+      ],
+      "simulated": 0.0,
+      "verdict": "not established"
+     }
+    }
+   },
+   "endpoints_inside_the_native_interval": 5,
+   "established_over_all_schedules": 7,
+   "established_under_the_schedules": 18,
+   "levels": {
+    "on_time": {
+     "0.25": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 0.8225648745634211,
+        "simulated": 0.9344063299993084
+       },
+       "near-capacity": {
+        "native": 0.8663769007155636,
+        "simulated": 0.9345584714344003
+       },
+       "queue-building": {
+        "native": 0.8407578371241162,
+        "simulated": 0.9345584035133775
+       },
+       "underutilized": {
+        "native": 0.8003363521168754,
+        "simulated": 0.9345584715639977
+       }
+      },
+      "native": 0.8325089911299942,
+      "native_interval95": [
+       0.7765742734562443,
+       0.8884437088037441
+      ],
+      "simulated": 0.934520419127771
+     },
+     "0.65": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 0.6742012469120028,
+        "simulated": 0.6207854155868778
+       },
+       "near-capacity": {
+        "native": 0.8867487648010903,
+        "simulated": 0.9611373086303137
+       },
+       "queue-building": {
+        "native": 0.7811019890961752,
+        "simulated": 0.8813441368938293
+       },
+       "underutilized": {
+        "native": 0.8905999765738137,
+        "simulated": 0.9634274385311005
+       }
+      },
+      "native": 0.8081629943457705,
+      "native_interval95": [
+       0.7341365239697664,
+       0.8821894647217747
+      ],
+      "simulated": 0.8566735749105304
+     },
+     "1.05": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 0.4325162119856887,
+        "simulated": 0.3085326883975946
+       },
+       "near-capacity": {
+        "native": 0.8128422086634296,
+        "simulated": 0.5035078369383642
+       },
+       "queue-building": {
+        "native": 0.532880782008689,
+        "simulated": 0.7343514872801672
+       },
+       "underutilized": {
+        "native": 0.7707895423375075,
+        "simulated": 0.9403743474467531
+       }
+      },
+      "native": 0.6372571862488287,
+      "native_interval95": [
+       0.5509302562029262,
+       0.7235841162947311
+      ],
+      "simulated": 0.6216915900157197
+     },
+     "fast ladder": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 0.48567275747508304,
+        "simulated": 0.30863357448622014
+       },
+       "near-capacity": {
+        "native": 0.8689199729534032,
+        "simulated": 0.9347927796472826
+       },
+       "queue-building": {
+        "native": 0.7152476520572449,
+        "simulated": 0.7965811890705075
+       },
+       "underutilized": {
+        "native": 0.8168995974955279,
+        "simulated": 0.940406259061068
+       }
+      },
+      "native": 0.7216849949953147,
+      "native_interval95": [
+       0.6484141316093769,
+       0.7949558583812525
+      ],
+      "simulated": 0.7451034505662696
+     },
+     "ladder": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 0.4551617471675611,
+        "simulated": 0.30863357448622014
+       },
+       "near-capacity": {
+        "native": 0.8255982994718462,
+        "simulated": 0.9296846873408514
+       },
+       "queue-building": {
+        "native": 0.6247665367578158,
+        "simulated": 0.7958150416755257
+       },
+       "underutilized": {
+        "native": 0.8028421554220971,
+        "simulated": 0.9403743474467531
+       }
+      },
+      "native": 0.6770921847048301,
+      "native_interval95": [
+       0.5997798942797684,
+       0.7544044751298918
+      ],
+      "simulated": 0.7436269127373376
+     }
+    },
+    "utility": {
+     "0.25": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 25.08933900928935,
+        "simulated": 27.85936429867245
+       },
+       "near-capacity": {
+        "native": 26.446492416264253,
+        "simulated": 27.863900402002518
+       },
+       "queue-building": {
+        "native": 25.85321862569693,
+        "simulated": 27.863898376934348
+       },
+       "underutilized": {
+        "native": 23.969752472357758,
+        "simulated": 27.86390040586648
+       }
+      },
+      "native": 25.339700630902076,
+      "native_interval95": [
+       20.915891471590115,
+       29.763509790214037
+      ],
+      "simulated": 27.862765870868948
+     },
+     "0.65": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 21.685881143717236,
+        "simulated": 18.757587220128798
+       },
+       "near-capacity": {
+        "native": 28.783335396945933,
+        "simulated": 30.77183137859402
+       },
+       "queue-building": {
+        "native": 25.445612562964612,
+        "simulated": 28.15879446459413
+       },
+       "underutilized": {
+        "native": 28.316012796745245,
+        "simulated": 30.84687581080711
+       }
+      },
+      "native": 26.05771047509326,
+      "native_interval95": [
+       21.420901750520876,
+       30.694519199665642
+      ],
+      "simulated": 27.133772218531014
+     },
+     "1.05": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 14.867361449464374,
+        "simulated": 9.741903882200441
+       },
+       "near-capacity": {
+        "native": 27.061954200570536,
+        "simulated": 15.907077638836883
+       },
+       "queue-building": {
+        "native": 18.69661089361784,
+        "simulated": 22.779874286978803
+       },
+       "underutilized": {
+        "native": 26.85989983200228,
+        "simulated": 32.04509694890117
+       }
+      },
+      "native": 21.87145659391376,
+      "native_interval95": [
+       16.909572078835026,
+       26.833341108992492
+      ],
+      "simulated": 20.118488189229325
+     },
+     "fast ladder": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 16.162086175915444,
+        "simulated": 9.744719764543932
+       },
+       "near-capacity": {
+        "native": 27.95534066900505,
+        "simulated": 28.75957180833671
+       },
+       "queue-building": {
+        "native": 23.066148831339518,
+        "simulated": 24.303922948110916
+       },
+       "underutilized": {
+        "native": 28.584323464699853,
+        "simulated": 32.046246245359754
+       }
+      },
+      "native": 23.941974785239967,
+      "native_interval95": [
+       19.16817881711529,
+       28.715770753364644
+      ],
+      "simulated": 23.713615191587827
+     },
+     "ladder": {
+      "by_schedule": {
+       "collapse-recovery": {
+        "native": 15.207709125788512,
+        "simulated": 9.744719764543932
+       },
+       "near-capacity": {
+        "native": 26.998619001507567,
+        "simulated": 28.66738389301871
+       },
+       "queue-building": {
+        "native": 20.808292245036288,
+        "simulated": 24.281080231085138
+       },
+       "underutilized": {
+        "native": 28.155715998579552,
+        "simulated": 32.04509694890117
+       }
+      },
+      "native": 22.792584092727978,
+      "native_interval95": [
+       17.93388639905033,
+       27.651281786405626
+      ],
+      "simulated": 23.684570209387235
+     }
+    }
+   },
+   "rule_against_tuned_level_reversed": [],
+   "share_agreeing_under_the_schedules": 0.9444444444444444,
+   "verdict": "the layer does not predict the controller pilot"
+  }
+ },
+ "study": "typed_bitrate_native_receiver_v1_test",
+ "synthetic": true,
+ "timeline": {
+  "0.25": {
+   "collapse-recovery": {
+    "age_median_ms": [
+     73.12403211216917,
+     75.09657033654815,
+     104.46995426982383,
+     106.47803528533447,
+     94.85867522282597,
+     92.7017769462396
+    ],
+    "jitter_buffer_ms": [
+     21.302964052655163,
+     40.22302598829638,
+     40.494083175311594
+    ],
+    "on_time": [
+     0.9345584715639739,
+     0.9345584715637935,
+     0.9342765589217612,
+     0.933901643005089,
+     0.9345550929120109,
+     0.934557405092108
+    ],
+    "ratio": [
+     0.25,
+     0.25,
+     0.25,
+     0.25,
+     0.25,
+     0.25
+    ],
+    "requested_kbps": [
+     150.0,
+     185.945,
+     185.945,
+     185.945,
+     185.945,
+     185.945
+    ],
+    "utility": [
+     27.863900405865767,
+     27.863900405860385,
+     27.85549516849991,
+     27.844317034567585,
+     27.86379967121442,
+     27.86386860896193
+    ]
+   },
+   "near-capacity": {
+    "age_median_ms": [
+     77.7962379199793,
+     80.5809977661614,
+     80.11450426945589,
+     80.59031778876341,
+     81.92488955958525,
+     81.13595099715717
+    ],
+    "jitter_buffer_ms": [
+     24.18068640812887,
+     25.566896590016427,
+     26.10475931436799
+    ],
+    "on_time": [
+     0.934558471558269,
+     0.9345584714924617,
+     0.9345584714935555,
+     0.9345584714494883,
+     0.9345584712222632,
+     0.9345584713841885
+    ],
+    "ratio": [
+     0.25,
+     0.25,
+     0.25,
+     0.25,
+     0.25,
+     0.25
+    ],
+    "requested_kbps": [
+     150.0,
+     185.945,
+     185.945,
+     185.945,
+     185.945,
+     185.945
+    ],
+    "utility": [
+     27.86390040569567,
+     27.863900403733624,
+     27.863900403766237,
+     27.863900402452366,
+     27.86390039567765,
+     27.863900400505454
+    ]
+   },
+   "queue-building": {
+    "age_median_ms": [
+     73.12403211216917,
+     75.09657033654815,
+     86.68132606527891,
+     87.85270665766011,
+     90.31974080153077,
+     89.20207783809099
+    ],
+    "jitter_buffer_ms": [
+     21.302964052655163,
+     29.42768589350225,
+     31.0174882950253
+    ],
+    "on_time": [
+     0.9345584715639739,
+     0.9345584715637935,
+     0.9345584522921258,
+     0.9345584154330435,
+     0.9345582513848184,
+     0.9345583574824514
+    ],
+    "ratio": [
+     0.25,
+     0.25,
+     0.25,
+     0.25,
+     0.25,
+     0.25
+    ],
+    "requested_kbps": [
+     150.0,
+     185.945,
+     185.945,
+     185.945,
+     185.945,
+     185.945
+    ],
+    "utility": [
+     27.863900405865767,
+     27.863900405860385,
+     27.863899831274793,
+     27.8638987323197,
+     27.86389384121492,
+     27.863897004520346
+    ]
+   },
+   "underutilized": {
+    "age_median_ms": [
+     65.18128223889195,
+     65.77304370620567,
+     65.67391383815574,
+     65.7750242110086,
+     66.05862071230823,
+     65.89097126779227
+    ],
+    "jitter_buffer_ms": [
+     16.41083604834987,
+     16.70540571200098,
+     16.819701540925685
+    ],
+    "on_time": [
+     0.9345584715639982,
+     0.9345584715639982,
+     0.9345584715639982,
+     0.9345584715639982,
+     0.9345584715639982,
+     0.9345584715639982
+    ],
+    "ratio": [
+     0.25,
+     0.25,
+     0.25,
+     0.25,
+     0.25,
+     0.25
+    ],
+    "requested_kbps": [
+     150.0,
+     185.945,
+     185.945,
+     185.945,
+     185.945,
+     185.945
+    ],
+    "utility": [
+     27.863900405866488,
+     27.863900405866488,
+     27.863900405866488,
+     27.863900405866488,
+     27.863900405866488,
+     27.863900405866488
+    ]
+   }
+  },
+  "0.65": {
+   "collapse-recovery": {
+    "age_median_ms": [
+     76.52806777214512,
+     96.40741671831103,
+     164.43570143048652,
+     159.3544898371888,
+     143.26052060920364,
+     137.0652977308605
+    ],
+    "jitter_buffer_ms": [
+     25.619006973034864,
+     97.02307058498211,
+     87.27586931632383
+    ],
+    "on_time": [
+     0.9358711919685151,
+     0.9542815215075068,
+     0.16665943767834224,
+     0.28439115072609833,
+     0.6141330875314114,
+     0.7346737752865978
+    ],
+    "ratio": [
+     0.65,
+     0.65,
+     0.65,
+     0.65,
+     0.65,
+     0.65
+    ],
+    "requested_kbps": [
+     195.0,
+     483.456,
+     483.456,
+     157.65,
+     158.119,
+     158.119
+    ],
+    "utility": [
+     27.963948277018925,
+     29.91716860184634,
+     4.985655856023295,
+     8.479134202144055,
+     18.310404011730903,
+     21.904329721744816
+    ]
+   },
+   "near-capacity": {
+    "age_median_ms": [
+     82.60193532229829,
+     110.66689854041486,
+     109.4337628922136,
+     110.59040854647496,
+     114.11040076199251,
+     111.99950731265453
+    ],
+    "jitter_buffer_ms": [
+     30.273923472194323,
+     43.571126394580645,
+     44.969556178700756
+    ],
+    "on_time": [
+     0.935871191549721,
+     0.9529594048612391,
+     0.9708798782672313,
+     0.9698833560323009,
+     0.9664165893112217,
+     0.9689530919251622
+    ],
+    "ratio": [
+     0.65,
+     0.65,
+     0.65,
+     0.65,
+     0.65,
+     0.65
+    ],
+    "requested_kbps": [
+     195.0,
+     483.456,
+     483.456,
+     483.456,
+     483.456,
+     483.456
+    ],
+    "utility": [
+     27.963948264477526,
+     29.873870767505156,
+     31.479071314345017,
+     31.685104208619432,
+     31.877698975865552,
+     31.62202886707604
+    ]
+   },
+   "queue-building": {
+    "age_median_ms": [
+     76.52806777214512,
+     96.40741671831103,
+     126.4910512060334,
+     129.21878688261427,
+     135.91588167160774,
+     132.9254492850456
+    ],
+    "jitter_buffer_ms": [
+     25.619006973034864,
+     53.60895303047959,
+     57.74261718616338
+    ],
+    "on_time": [
+     0.9358711919685151,
+     0.9542815215075068,
+     0.9095052577829265,
+     0.8740485681217487,
+     0.7865657743171545,
+     0.8314576939527015
+    ],
+    "ratio": [
+     0.65,
+     0.65,
+     0.65,
+     0.65,
+     0.65,
+     0.65
+    ],
+    "requested_kbps": [
+     195.0,
+     483.456,
+     483.456,
+     483.456,
+     483.456,
+     483.456
+    ],
+    "utility": [
+     27.963948277018925,
+     29.91716860184634,
+     29.48880945078173,
+     28.549527286318984,
+     25.945060349045384,
+     27.131936034424044
+    ]
+   },
+   "underutilized": {
+    "age_median_ms": [
+     66.20249293688474,
+     72.16629762073451,
+     71.90425629549175,
+     72.15004349702228,
+     72.89804184281978,
+     72.44947698483546
+    ],
+    "jitter_buffer_ms": [
+     17.705648924463777,
+     20.531304545470874,
+     20.828470874596405
+    ],
+    "on_time": [
+     0.9358711919694862,
+     0.9542868606536505,
+     0.9724631666836893,
+     0.9721816728577602,
+     0.9717233179052873,
+     0.972220271819
+    ],
+    "ratio": [
+     0.65,
+     0.65,
+     0.65,
+     0.65,
+     0.65,
+     0.65
+    ],
+    "requested_kbps": [
+     195.0,
+     483.456,
+     483.456,
+     483.456,
+     483.456,
+     483.456
+    ],
+    "utility": [
+     27.96394827704801,
+     29.917343467648788,
+     31.53041972916864,
+     31.76029241017114,
+     32.052753586630665,
+     31.728777569698806
+    ]
+   }
+  },
+  "1.05": {
+   "collapse-recovery": {
+    "age_median_ms": [
+     73.12403211216917,
+     86.04125206601107,
+     307.65472333249556,
+     263.56611370303835,
+     241.06146941920247,
+     229.76290750947533
+    ],
+    "jitter_buffer_ms": [
+     30.992553581184808,
+     200.00869238792345,
+     179.13803808347745
+    ],
+    "on_time": [
+     0.950013345960411,
+     0.9613435522325863,
+     0.00016088792295991373,
+     2.9382412968016616e-05,
+     0.00026952991330683653,
+     0.0007791390530446507
+    ],
+    "ratio": [
+     1.05,
+     1.05,
+     1.05,
+     1.05,
+     1.05,
+     1.05
+    ],
+    "requested_kbps": [
+     315.0,
+     780.967,
+     1083.613,
+     196.251,
+     294.432,
+     302.903
+    ],
+    "utility": [
+     29.065070292864814,
+     31.286867934412854,
+     0.005384876306392439,
+     0.0008762423297155338,
+     0.008071265578389681,
+     0.024083802803152702
+    ]
+   },
+   "near-capacity": {
+    "age_median_ms": [
+     77.7962379199793,
+     96.03231314893257,
+     136.8320106712005,
+     199.52459652298612,
+     161.08248639339337,
+     156.6111186284925
+    ],
+    "jitter_buffer_ms": [
+     37.860106918994255,
+     77.2046401907525,
+     102.79013926200317
+    ],
+    "on_time": [
+     0.9500104622701125,
+     0.8520512501702054,
+     0.5631624513660952,
+     0.07674244980439358,
+     0.2617052507616376,
+     0.3354895807334751
+    ],
+    "ratio": [
+     1.05,
+     1.05,
+     1.05,
+     1.05,
+     1.05,
+     1.05
+    ],
+    "requested_kbps": [
+     315.0,
+     780.967,
+     1083.613,
+     1338.75,
+     225.042,
+     231.517
+    ],
+    "utility": [
+     29.064979583592518,
+     27.60491656549735,
+     19.058503630205436,
+     2.526889101576471,
+     7.802753134013212,
+     10.092049181407459
+    ]
+   },
+   "queue-building": {
+    "age_median_ms": [
+     73.12403211216917,
+     86.04125206601107,
+     140.5594854272334,
+     138.8356024299344,
+     139.55272083840225,
+     142.02546382009098
+    ],
+    "jitter_buffer_ms": [
+     30.992553581184808,
+     81.23077878690256,
+     74.68813091071297
+    ],
+    "on_time": [
+     0.950013345960411,
+     0.9613435522325863,
+     0.43367416880194926,
+     0.7008151585673092,
+     0.7036973933988088,
+     0.6614161997377404
+    ],
+    "ratio": [
+     1.05,
+     1.05,
+     1.05,
+     1.05,
+     1.05,
+     1.05
+    ],
+    "requested_kbps": [
+     315.0,
+     780.967,
+     1083.613,
+     244.018,
+     366.095,
+     376.629
+    ],
+    "utility": [
+     29.065070292864814,
+     31.286867934412854,
+     12.998952930521618,
+     20.945192572907683,
+     21.557284178847492,
+     20.910727351680237
+    ]
+   },
+   "underutilized": {
+    "age_median_ms": [
+     65.18128223889195,
+     69.05644822504453,
+     77.72638394852648,
+     83.37192931559191,
+     92.9979084212472,
+     114.22200280618256
+    ],
+    "jitter_buffer_ms": [
+     19.317712906908763,
+     26.187007464276878,
+     39.199745916728105
+    ],
+    "on_time": [
+     0.9500133509425542,
+     0.9654640478461709,
+     0.957865268767051,
+     0.9386722493886218,
+     0.9193350063108677,
+     0.9163004741387772
+    ],
+    "ratio": [
+     1.05,
+     1.05,
+     1.05,
+     1.05,
+     1.05,
+     1.05
+    ],
+    "requested_kbps": [
+     315.0,
+     780.967,
+     1083.613,
+     1350.221,
+     1782.66,
+     2724.151
+    ],
+    "utility": [
+     29.06507044958325,
+     31.425693675700057,
+     32.58752494197483,
+     32.91204101779123,
+     33.109840717550284,
+     33.000552072844606
+    ]
+   }
+  },
+  "fast ladder": {
+   "collapse-recovery": {
+    "age_median_ms": [
+     73.12403211216917,
+     86.04125206601107,
+     307.65472333249556,
+     263.6977238869264,
+     239.44038802730228,
+     225.32046485395477
+    ],
+    "jitter_buffer_ms": [
+     30.992553581184808,
+     200.0070993962229,
+     178.86232377060958
+    ],
+    "on_time": [
+     0.950013345960411,
+     0.9613435522325863,
+     0.00016088792295991373,
+     3.115469090432099e-05,
+     0.0003136113473717339,
+     0.0011896759233991493
+    ],
+    "ratio": [
+     1.05,
+     1.05,
+     0.25,
+     0.25,
+     0.25,
+     0.25
+    ],
+    "requested_kbps": [
+     315.0,
+     780.967,
+     150.0,
+     150.0,
+     150.0,
+     150.0
+    ],
+    "utility": [
+     29.065070292864814,
+     31.286867934412854,
+     0.005384876306392439,
+     0.0009288784286346371,
+     0.00935033560253505,
+     0.03547023803590989
+    ]
+   },
+   "near-capacity": {
+    "age_median_ms": [
+     77.7962379199793,
+     96.03231314893257,
+     115.25676465647504,
+     113.5447284031859,
+     112.59174302315705,
+     109.51363476751506
+    ],
+    "jitter_buffer_ms": [
+     37.822645944676694,
+     56.74984792883525,
+     52.31367428004165
+    ],
+    "on_time": [
+     0.9500104622701125,
+     0.8763690656453383,
+     0.9378406974604196,
+     0.9445533469734296,
+     0.9511711182178655,
+     0.9470856516615999
+    ],
+    "ratio": [
+     1.05,
+     1.05,
+     0.25,
+     0.25,
+     0.25,
+     0.25
+    ],
+    "requested_kbps": [
+     315.0,
+     780.967,
+     258.003,
+     258.003,
+     258.003,
+     258.003
+    ],
+    "utility": [
+     29.064979583592518,
+     28.032256422135017,
+     28.448541462728144,
+     28.84579162733491,
+     29.305274133007128,
+     28.896458661409785
+    ]
+   },
+   "queue-building": {
+    "age_median_ms": [
+     73.12403211216917,
+     86.04125206601107,
+     140.5594854272334,
+     136.3172720795899,
+     132.901596791672,
+     127.96609605420394
+    ],
+    "jitter_buffer_ms": [
+     30.992553581184808,
+     81.16128264866268,
+     73.41629928858427
+    ],
+    "on_time": [
+     0.950013345960411,
+     0.9613435522325863,
+     0.43623620873468366,
+     0.7476531377278771,
+     0.8038390715219258,
+     0.8621462224157919
+    ],
+    "ratio": [
+     1.05,
+     1.05,
+     0.25,
+     0.25,
+     0.25,
+     0.25
+    ],
+    "requested_kbps": [
+     315.0,
+     780.967,
+     150.0,
+     150.0,
+     150.0,
+     150.0
+    ],
+    "utility": [
+     29.065070292864814,
+     31.286867934412854,
+     13.075340259612,
+     22.29130996257472,
+     23.96649595797636,
+     25.704926131037237
+    ]
+   },
+   "underutilized": {
+    "age_median_ms": [
+     65.18128223889195,
+     69.05644822504453,
+     77.72638394852648,
+     83.37192931559191,
+     92.9979084212472,
+     114.22200280618256
+    ],
+    "jitter_buffer_ms": [
+     19.317712906908763,
+     26.187007464276878,
+     39.19911195764393
+    ],
+    "on_time": [
+     0.9500133509425542,
+     0.9654640478461709,
+     0.957865268767051,
+     0.9386722493886218,
+     0.9193350063108677,
+     0.9163004741387772
+    ],
+    "ratio": [
+     1.05,
+     1.05,
+     1.05,
+     1.05,
+     1.05,
+     1.05
+    ],
+    "requested_kbps": [
+     315.0,
+     780.967,
+     1083.613,
+     1350.221,
+     1782.66,
+     2724.151
+    ],
+    "utility": [
+     29.06507044958325,
+     31.425693675700057,
+     32.58752494197483,
+     32.91204101779123,
+     33.109840717550284,
+     33.000552072844606
+    ]
+   }
+  },
+  "ladder": {
+   "collapse-recovery": {
+    "age_median_ms": [
+     73.12403211216917,
+     86.04125206601107,
+     307.65472333249556,
+     263.6977238869264,
+     239.44038802730228,
+     225.32046485395477
+    ],
+    "jitter_buffer_ms": [
+     30.992553581184808,
+     200.0070993962229,
+     178.86232377060958
+    ],
+    "on_time": [
+     0.950013345960411,
+     0.9613435522325863,
+     0.00016088792295991373,
+     3.115469090432099e-05,
+     0.0003136113473717339,
+     0.0011896759233991493
+    ],
+    "ratio": [
+     1.05,
+     1.05,
+     0.85,
+     0.25,
+     0.25,
+     0.25
+    ],
+    "requested_kbps": [
+     315.0,
+     780.967,
+     877.211,
+     150.0,
+     150.0,
+     150.0
+    ],
+    "utility": [
+     29.065070292864814,
+     31.286867934412854,
+     0.005384876306392439,
+     0.0009288784286346371,
+     0.00935033560253505,
+     0.03547023803590989
+    ]
+   },
+   "near-capacity": {
+    "age_median_ms": [
+     77.7962379199793,
+     96.03231314893257,
+     115.63424483864208,
+     113.89026863958193,
+     112.90985515129978,
+     109.8056619394201
+    ],
+    "jitter_buffer_ms": [
+     37.860106918994255,
+     57.11215349864293,
+     52.61594834721927
+    ],
+    "on_time": [
+     0.9500104622701125,
+     0.8520512501702054,
+     0.931378209135365,
+     0.9441267075194352,
+     0.950862805302351,
+     0.9469460615831392
+    ],
+    "ratio": [
+     1.05,
+     1.05,
+     0.25,
+     0.25,
+     0.25,
+     0.25
+    ],
+    "requested_kbps": [
+     315.0,
+     780.967,
+     258.003,
+     258.003,
+     258.003,
+     258.003
+    ],
+    "utility": [
+     29.064979583592518,
+     27.60491656549735,
+     28.33156939129548,
+     28.83276636172807,
+     29.2957746597784,
+     28.8921945478715
+    ]
+   },
+   "queue-building": {
+    "age_median_ms": [
+     73.12403211216917,
+     86.04125206601107,
+     140.5594854272334,
+     136.34013703170274,
+     132.92258683483772,
+     127.98536492955186
+    ],
+    "jitter_buffer_ms": [
+     30.992553581184808,
+     81.17302789990833,
+     73.43623999964106
+    ],
+    "on_time": [
+     0.950013345960411,
+     0.9613435522325863,
+     0.43367416880194926,
+     0.7459847009430288,
+     0.803537475549588,
+     0.8619550556655271
+    ],
+    "ratio": [
+     1.05,
+     1.05,
+     0.85,
+     0.25,
+     0.25,
+     0.25
+    ],
+    "requested_kbps": [
+     315.0,
+     780.967,
+     877.211,
+     150.0,
+     150.0,
+     150.0
+    ],
+    "utility": [
+     29.065070292864814,
+     31.286867934412854,
+     12.998952930521618,
+     22.241565449180385,
+     23.957503861289286,
+     25.699226486282672
+    ]
+   },
+   "underutilized": {
+    "age_median_ms": [
+     65.18128223889195,
+     69.05644822504453,
+     77.72638394852648,
+     83.37192931559191,
+     92.9979084212472,
+     114.22200280618256
+    ],
+    "jitter_buffer_ms": [
+     19.317712906908763,
+     26.187007464276878,
+     39.199745916728105
+    ],
+    "on_time": [
+     0.9500133509425542,
+     0.9654640478461709,
+     0.957865268767051,
+     0.9386722493886218,
+     0.9193350063108677,
+     0.9163004741387772
+    ],
+    "ratio": [
+     1.05,
+     1.05,
+     1.05,
+     1.05,
+     1.05,
+     1.05
+    ],
+    "requested_kbps": [
+     315.0,
+     780.967,
+     1083.613,
+     1350.221,
+     1782.66,
+     2724.151
+    ],
+    "utility": [
+     29.06507044958325,
+     31.425693675700057,
+     32.58752494197483,
+     32.91204101779123,
+     33.109840717550284,
+     33.000552072844606
+    ]
+   }
+  }
+ },
+ "verdict": "the layer does not predict the controller pilot",
+ "what_the_rules_did": {
+  "fast ladder": {
+   "collapse-recovery": {
+    "share_of_decisions": {
+     "cut": 0.16666666666666666,
+     "down": 0.16666666666666666,
+     "hold": 0.6666666666666666,
+     "up": 0.0
+    },
+    "share_of_later_assignments_at_each_ratio": {
+     "0.25": 0.6666666666666666,
+     "0.65": 0.0,
+     "0.85": 0.16666666666666666,
+     "1.05": 0.16666666666666666
+    }
+   },
+   "near-capacity": {
+    "share_of_decisions": {
+     "cut": 0.16666666666666666,
+     "down": 0.0,
+     "hold": 0.8333333333333334,
+     "up": 0.0
+    },
+    "share_of_later_assignments_at_each_ratio": {
+     "0.25": 0.8333333333333334,
+     "0.65": 0.0,
+     "0.85": 0.0,
+     "1.05": 0.16666666666666666
+    }
+   },
+   "queue-building": {
+    "share_of_decisions": {
+     "cut": 0.16666666666666666,
+     "down": 0.16666666666666666,
+     "hold": 0.6666666666666666,
+     "up": 0.0
+    },
+    "share_of_later_assignments_at_each_ratio": {
+     "0.25": 0.6666666666666666,
+     "0.65": 0.0,
+     "0.85": 0.16666666666666666,
+     "1.05": 0.16666666666666666
+    }
+   },
+   "underutilized": {
+    "share_of_decisions": {
+     "cut": 0.0,
+     "down": 0.16666666666666666,
+     "hold": 0.8333333333333334,
+     "up": 0.0
+    },
+    "share_of_later_assignments_at_each_ratio": {
+     "0.25": 0.0,
+     "0.65": 0.0,
+     "0.85": 0.16666666666666666,
+     "1.05": 0.8333333333333334
+    }
+   }
+  },
+  "ladder": {
+   "collapse-recovery": {
+    "share_of_decisions": {
+     "cut": 0.0,
+     "down": 0.4,
+     "hold": 0.6,
+     "up": 0.0
+    },
+    "share_of_later_assignments_at_each_ratio": {
+     "0.25": 0.6,
+     "0.65": 0.0,
+     "0.85": 0.2,
+     "1.05": 0.2
+    }
+   },
+   "near-capacity": {
+    "share_of_decisions": {
+     "cut": 0.0,
+     "down": 0.2,
+     "hold": 0.8,
+     "up": 0.0
+    },
+    "share_of_later_assignments_at_each_ratio": {
+     "0.25": 0.8,
+     "0.65": 0.0,
+     "0.85": 0.0,
+     "1.05": 0.2
+    }
+   },
+   "queue-building": {
+    "share_of_decisions": {
+     "cut": 0.0,
+     "down": 0.4,
+     "hold": 0.6,
+     "up": 0.0
+    },
+    "share_of_later_assignments_at_each_ratio": {
+     "0.25": 0.6,
+     "0.65": 0.0,
+     "0.85": 0.2,
+     "1.05": 0.2
+    }
+   },
+   "underutilized": {
+    "share_of_decisions": {
+     "cut": 0.0,
+     "down": 0.0,
+     "hold": 1.0,
+     "up": 0.0
+    },
+    "share_of_later_assignments_at_each_ratio": {
+     "0.25": 0.0,
+     "0.65": 0.0,
+     "0.85": 0.0,
+     "1.05": 1.0
+    }
+   }
+  }
+ }
+}

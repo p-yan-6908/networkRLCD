@@ -4,6 +4,10 @@
 approved this step on 2026-10-11 ([decisions, section 17](NATIVE_PHASE_N1_DECISIONS.md)). This
 design is fixed before anything is fitted and before any rule is run in the simulator.
 
+**Status, 2026-10-11: fitted, revised once as allowed, and tested once. By the rule fixed below
+the layer does not predict the controller pilot: seven of the eight established differences
+agree and one is flat.** See [Results](#results-2026-10-11).
+
 ## Why
 
 - The simulator ranks the fixed ratios in the reverse order of the native range pilot
@@ -207,6 +211,153 @@ uv run --frozen python -m media_rl.typed_bitrate_native_receiver test \
     --out results/typed-native-receiver-v1/report.json
 ```
 
-## Results
+## Results (2026-10-11)
 
-Not fitted and not run.
+**By the rule fixed above, the layer does not predict the controller pilot.** Over all
+schedules one of the eight established differences is flat in the simulator: the fast ladder
+against the ladder. The other seven agree. The verdict is recorded as the rule gives it; what
+the layer does and does not reproduce is set out below.
+
+Files: `results/typed-native-receiver-v1/` holds `targets.json` (from the range pilot's 240
+sessions), `layer_first_fit.json` (the fit as first designed), `layer.json` (the fit as revised,
+committed at `2d4e3f9` before the test) and `report.json` (the test, run once).
+
+### The fitted layer
+
+| Number | Value |
+|---|---|
+| `E0`, the estimate after start-up | 744 kbit/s |
+| `b0`, the buffer's base | 14.3 ms |
+| `gu`, per unit of rate over capacity | 55.3 ms |
+| `gq`, per ms of queue delay | 0.28 |
+| `tau`, the time constant of its fall | 35.1 s |
+| `c0`, `cu`, the rest of a frame's age | 14.5 ms and 39.1 ms per unit of rate over capacity |
+| `s0`, `s1`, the spread of ages | 3.2 ms and 0.095 per ms of age |
+| `r`, the acknowledgement's way back | 28.3 ms |
+
+What is left after each stage: 14.8 ms on the buffer over 48 cells (0.22 in logarithms), 17 ms
+on the age over 93 stretches, 10 ms on the spread over 1,333 stretches. No number sits at a
+bound.
+
+### Beside the range pilot (in sample, never fitted to these)
+
+From the second hold on, simulated and native.
+
+| Level | Endpoint | On time (%) | Rate over capacity (%) |
+|---|---|---|---|
+| 0.25 | 27.9 and 26.6 | 93.5 and 88.5 | 19 and 19 |
+| 0.65 | 27.0 and 26.4 | 84.1 and 82.2 | 38 and 34 |
+| 0.85 | 19.4 and 23.9 | 59.0 and 70.4 | 42 and 44 |
+| 1.05 | 18.4 and 21.4 | 55.9 and 61.8 | 41 and 53 |
+| ceiling (not in the fit) | 16.6 and 13.1 | 50.5 and 36.3 | 39 and 65 |
+
+- The five levels are in the native order.
+- Of the 20 comparisons of a level with 1.05: 7 agree, none disagrees, 13 are unclear. The
+  simulator as built had 4, 6 and 10.
+- The best level is the pilot's under 2 of the 4 schedules. Under queue-building the simulator
+  has 0.65 a little ahead of 0.25 (28.2 and 27.9) where the pilot has 0.25 well ahead (28.0
+  and 22.8). With room it has 1.05 best where the pilot has 0.85.
+- By schedule it is off most at 1.05 near capacity (13.4 against 26.3) and at 0.85 in
+  collapse-recovery (6.3 against 17.0).
+
+### The test on the controller pilot, run once
+
+From the second change on, the span of the verdict. Simulated and native.
+
+| Arm | Endpoint | Native 95% interval | On time (%) |
+|---|---|---|---|
+| ladder | 22.6 and 21.8 | [16.6, 27.0] | 70.4 and 64.1 |
+| fast ladder | 22.7 and 23.2 | [18.1, 28.3] | 70.6 and 69.5 |
+| 0.25 | 27.9 and 26.6 | [22.5, 30.8] | 93.5 and 88.3 |
+| 0.65 | 27.0 and 26.8 | [22.4, 31.3] | 84.1 and 83.2 |
+| 1.05 | 18.4 and 20.7 | [15.4, 26.1] | 55.9 and 59.4 |
+
+All five simulated endpoints lie inside the native intervals.
+
+| Difference | Simulated | Native | Judged |
+|---|---|---|---|
+| ladder − 0.25 | −5.21 | −4.80 [−6.51, −3.08] | agrees |
+| ladder − 0.65 | −4.32 | −4.97 [−6.92, −3.03] | agrees |
+| ladder − 1.05 | +4.25 | +1.09 [−0.47, +2.66] | not established natively |
+| fast ladder − 0.25 | −5.18 | −3.43 [−5.57, −1.28] | agrees |
+| fast ladder − 0.65 | −4.29 | −3.60 [−5.81, −1.39] | agrees |
+| fast ladder − 1.05 | +4.29 | +2.46 [+0.50, +4.43] | agrees |
+| fast ladder − ladder | +0.03 | +1.37 [+0.17, +2.58] | **flat** |
+| 0.25 − 1.05 | +9.46 | +5.89 [+3.49, +8.29] | agrees |
+| 0.65 − 1.05 | +8.58 | +6.07 [+3.44, +8.70] | agrees |
+| 0.25 − 0.65 | +0.89 | −0.17 [−1.53, +1.18] | not established natively |
+
+- **Over all schedules: 7 of 8 established differences agree, 1 is flat.** That is the third
+  row of the verdict table.
+- **Under the schedules: 19 of 22 established differences agree (86%)**, and no difference
+  between a rule and a tuned fixed level disagrees. The three that do not agree: the fast
+  ladder against 1.05 in collapse-recovery is flat (0.0 against +1.68); the fast ladder against
+  the ladder in queue-building is flat (+0.03 against +2.72); and with room 0.65 against 1.05
+  disagrees (−1.22 against +2.72).
+
+Endpoint by schedule, simulated and native.
+
+| Schedule | ladder | fast ladder | 0.25 | 0.65 | 1.05 |
+|---|---|---|---|---|---|
+| Underutilized | 32.6 and 28.3 | 32.6 and 28.8 | 27.9 and 25.0 | 31.4 and 29.5 | 32.6 and 26.8 |
+| Near-capacity | 28.6 and 26.9 | 28.7 and 28.0 | 27.9 and 28.0 | 31.3 and 30.1 | 13.4 and 27.0 |
+| Queue-building | 23.4 and 19.4 | 23.4 and 22.1 | 27.9 and 27.2 | 28.2 and 26.0 | 21.6 and 16.9 |
+| Collapse-recovery | 6.0 and 12.7 | 6.0 and 13.9 | 27.9 and 26.3 | 17.0 and 21.6 | 6.0 and 12.3 |
+
+**The whole session, beside it.** 6 of 7 established differences agree over all schedules; the
+fast ladder against the ladder is flat again (+0.03 against +1.15). Under the schedules 17 of
+18 agree. All five endpoints are inside the native intervals.
+
+### What the rules did in the simulator
+
+- **Neither rule stepped up**, as natively.
+- With room the ladder stayed at 1.05 throughout and the fast ladder was there in 83% of its
+  later assignments (natively 79% and 73%). In the other three schedules 60% to 80% of the
+  ladder's and 67% to 83% of the fast ladder's later assignments were at the bottom (natively
+  42% to 60% and 55% to 67%).
+
+### The two ablations
+
+- **With the buffer held at its base** the order is wrong: 30.4 at 0.65, 29.0 at 1.05 and under
+  both rules, 27.9 at 0.25. Three established differences disagree: 0.25 against 1.05, and each
+  rule against 0.25. The native valuation, the start and the cap alone do not give the pilot's
+  order; the buffer's rise and slow fall do.
+- **The simulator as built**, with its own utility, orders the fixed arms 1.05, 0.65, 0.25. The
+  pilot has 0.65, 0.25, 1.05.
+
+### Robustness
+
+Over 48 replicates with path noise, the seven differences that agree do so in 98% to 100% of
+the replicates. The fast ladder against the ladder agrees in 56%.
+
+### Reading
+
+- **The verdict stands as the rule gives it: the layer does not predict the controller pilot.**
+- **What it reproduces.** Both rules below both tuned fixed levels and above 1.05, at about the
+  native sizes, with all five endpoints inside the native intervals, and rules that never step
+  up. It was fitted on fixed levels only and had not seen a rule.
+- **What it misses.** That cutting fast helps. In the simulator the fast ladder and the ladder
+  end at the same value. This is a reading and not a tested claim: once the cap is only a cap,
+  the simulator's estimate falls at a drop within a few steps and takes the encoder with it,
+  so a rule's own cut changes nothing that the estimate has not already done. Natively the
+  browser's estimate fell more slowly after the milder drop, and the cut bought something.
+  This is the limit of the estimator recorded before the test.
+- **Where it is off by schedule.** Near capacity at 1.05 the simulated estimator overshoots a
+  steady capacity (13.4 against 27.0). With room it never reaches the top of the link, so it
+  misses the loss the top arms take there (32.6 against 26.8 to 28.8). After a deep drop its
+  buffer keeps every arm that started at the top off time for the rest of the session (6.0
+  against 12.3 to 13.9).
+
+### What follows
+
+Proposals for the owner, not decisions.
+
+- By the design, a layer that does not pass leaves the synthetic track set aside for native
+  claims. That holds.
+- The layer is not to be used to rank rules that differ in how fast they cut. For the question
+  of a rule against a fixed level it agreed with the pilot in every established case, over all
+  schedules and under each; whether that is worth building on is the owner's call.
+- The next thing to model would be the estimator: how the browser's estimate behaves at a
+  steady capacity and after a drop. That is new modelling under a new design.
+- Both pilots are now used, one for fitting and one for testing. A further test of any
+  revised layer needs native sessions it has not seen.
