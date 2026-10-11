@@ -406,3 +406,22 @@ What the agent would put to the owner next, none of it decided:
   new modelling under a new design.
 - Both pilots are used. Any further test of a revised layer needs native sessions it has not
   seen, which means a new capture.
+
+## 18. A long-session pilot with a forecast, approved to design (2026-10-11)
+
+After the receiver layer's verdict the agent asked the owner what to work on next, with three
+options: design a native pilot with long sessions and recurring capacity changes, with the
+simulator's forecast committed first; model the simulator's estimator first; or hold until
+B1's reviewed rights CSV arrives.
+
+The owner chose **"Long-session pilot + forecast"**, described as: design and smoke-test a
+native development pilot where history can matter, with sessions of about a minute and
+recurring capacity changes, on the twelve used sources, with fixed 0.25, 0.65 and 1.05 against
+one rule that widens its margin after it has seen a drop; before any capture the forecast of
+the simulator with the layer for every arm is committed, so that the capture is also a blind
+test of the layer on sessions it has not seen; nothing is downloaded; the agent comes back for
+the capture go-ahead with the measured cost.
+
+What this allows: a design, new harness files beside the frozen ones, short smoke tests under
+the standing permission, and a committed forecast. **It does not allow the capture**, which is
+a further decision of the owner's.
