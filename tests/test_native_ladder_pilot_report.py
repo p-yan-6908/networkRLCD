@@ -107,6 +107,12 @@ def test_tables_have_a_column_per_arm_and_tolerate_empty_schedules(made):
     differences = report.table_differences(found)
     assert differences.count("\\\\") == 1 + 10 and differences.count("\\midrule") == 1 + 3
     assert "fast ladder $-$ ladder" in differences and "0.25 $-$ 0.65" in differences
+    assert "Utility & On time (points) & Utility from the second change on" in differences
+    assert "fast ladder $-$ ladder & $+$2.00 [$+$2.00, $+$2.00] & $+$0.0 " in differences
+    by_schedule = report.table_by_schedule(found)
+    assert by_schedule.count("\\\\") == 1 + 10 and by_schedule.count("\\midrule") == 1 + 3
+    assert "Underutilized & Near-capacity & Queue-building & Collapse-recovery" in by_schedule
+    assert "n/a" in by_schedule  # no near-capacity sessions
     over_time = report.table_timeline(timeline)
     assert over_time.count("\\\\") == 1 + 4 * 5 and "0--3~s" in over_time and "15--18~s" in over_time
     assert "Utility, all schedules & ladder & 20.0 & 21.0" in over_time
@@ -132,6 +138,7 @@ def test_export_writes_evidence_and_refuses_other_records(made, tmp_path):
         "provenance.json",
         "ladder_pilot_arms.tex",
         "ladder_pilot_differences.tex",
+        "ladder_pilot_by_schedule.tex",
         "ladder_pilot_timeline.tex",
         "ladder_pilot_phases.tex",
     }
