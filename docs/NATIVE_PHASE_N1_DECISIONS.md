@@ -349,3 +349,25 @@ The owner chose **"Yes, two repetitions"**: 480 sessions, about 6.4 hours of cap
 What this allows: that one capture, on N1's twelve used sources only. The marks of the rules
 stay as committed. Whatever it finds is development evidence; it cannot promote a controller,
 and a confirmatory test on fresh sources would be a further decision of the owner's.
+
+**Outcome (2026-10-11).** The capture ran from 08:13 to 14:34 EDT: 480 of 480 sessions sealed
+and audited, two first attempts failed and succeeded on the retry, 8.1 GB on local disk. The
+analysis fixed in the design was run once. **The result is negative**
+([results](NATIVE_LADDER_PILOT_V1.md#results-2026-10-11)): the ladder loses to both tuned
+fixed levels, the fast ladder loses to 0.65 and is not separated from 0.25, and neither rule
+ever stepped up. The fixed levels repeat the range pilot's order on the same sources. A
+description added after the report was read shows that after a drop the receiver's jitter
+buffer stays high through the rest of the session whatever the sender then does.
+
+What the agent would put to the owner next, none of it decided:
+
+- The rules are not changed and not run again. A changed rule needs a new design.
+- These schedules have one change of capacity at most, 6 s into an 18.6 s session. Whether
+  history can serve a controller needs longer sessions with recurring changes: new schedules,
+  a new harness file, a new capture to approve.
+- A confirmatory test of a sustained fixed level against 1.05 still needs fresh sources, and
+  the only ones in sight are B1's.
+- The simulator has no receiver buffer that grows. Giving it one is new modelling and the
+  owner's decision.
+- This capture is 8.1 GB on local disk beside the range pilot's 4.1 GB; neither is in the
+  archive.
