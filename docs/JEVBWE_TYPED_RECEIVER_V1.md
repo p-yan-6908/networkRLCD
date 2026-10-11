@@ -38,6 +38,13 @@ that hold the simulated estimate is led from 300 kbit/s to `E0`, because the bro
 start-up probing is not in the simulator's estimator. From the second hold on the estimator
 runs free.
 
+**The cap is a cap.** The encoder's target in a step is the smaller of the requested cap and
+the simulator's estimate at that step. Natively the browser's encoder does not exceed its own
+estimate and follows it down inside a hold ([within-hold pass](NATIVE_PHASE_N1_DYNAMICS.md));
+the sustained-levels check held the simulated sender at the hold's request whatever the
+estimate did. *Added on 2026-10-11 before any code of this design was run and before anything
+was fitted. It is not the one revision allowed below.*
+
 **The receiver's buffer**, in ms, with four numbers `b0`, `gu`, `gq`, `tau`:
 
 - its target is `b0 + gu * min(1, rate / capacity) + gq * queue delay`;
