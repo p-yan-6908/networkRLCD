@@ -14,6 +14,13 @@ that B1's flag does not anticipate that hold. The flag marks it about half the t
 because the previous request was 0.65, and that hold makes up about a seventh of all flagged
 holds. Elsewhere the browser keeps the link below capacity by itself.
 
+*Correction, 2026-10-10, before any B1 data exist.* That pass read the sender and the relay
+only, and its record first called the relay the only path by which a cap can help. It is not:
+earlier development diagnostics put the cost of a high rate at the receiver (see the
+correction in that record). A benefit in B1 need not come by way of the relay, so it need not
+sit in the hold of the drop. The split below is by position whatever the path, and its
+reading rule is unchanged.
+
 So if B1 finds that backing off helps, its registered analysis cannot say whether the benefit
 sits in the hold of the scripted drop or in a state the sender can recognise. A split chosen
 after seeing B1's data would be worth little. Chosen now, it is a pre-specified secondary.
@@ -60,8 +67,8 @@ What each would mean:
   only for a sender that happened to be capped when capacity fell.
 - **The flag finds a usable state:** the estimate's stall marks holds in which a lower cap
   pays, which is what a controller would need.
-- **Helps in the drop hold whatever the flag:** the mechanism seen in N1's logs reaches
-  delivered quality. That is about the actuator, not about the flag.
+- **Helps in the drop hold whatever the flag:** consistent with the relay mechanism seen in
+  N1's logs reaching delivered quality. That is about the actuator, not about the flag.
 
 None of these changes B1's outcome or what the registration says each outcome leads to.
 

@@ -6,10 +6,66 @@ mechanism: the encoder, the browser's estimate and the relay's queue. **It reads
 or on-time label**, fits no model, evaluates no controller and changes nothing in
 [Native Phase B1](NATIVE_PHASE_B1_BACKOFF_BENEFIT.md), which is frozen.
 
+## Correction (2026-10-10, after the results were recorded)
+
+Two statements in the first version of this record were wrong. The agent found both the same
+day, while reading the frozen harness and the repository's earlier native records for a
+follow-up. No number in the tables below changes. What changes is what they can be taken to
+mean. The wrong sentences are struck through where they stood, and the passages that leaned
+on them are reworded and marked.
+
+**1. "A cap can raise delivered quality in only one way", by less queue and loss at the
+relay.** The endpoint counts a frame when its pixels are read back within 150 ms of the
+capture request. That time passes through the encoder, the relay and the receiver, which
+holds frames before it shows them. The earlier records put the cost of a high rate at the
+receiver:
+
+- [Repair V5](NATIVE_REPAIR_V5.md), on the Repair V4 peers and a steady 1.48 Mbit/s link: the
+  browser under a 4 Mbit/s ceiling had no relay drops and sent about 1 Mbit/s, yet built up
+  108 to 121 ms of receiver buffering, against about 38 ms under a fixed cap of 300 kbit/s.
+- [Dense probe](NATIVE_DENSE_PROBE.md): "higher adaptive rates can accumulate native playout
+  delay and late frames even when they satisfy current BWE".
+
+This pass reads the sender and the relay. It reads nothing at the receiver and no frame's
+time to display. So it describes one path of at least two, and the rule fixed below ("a
+mechanism for backing off is present") is a rule about the relay path only.
+
+**2. "The browser without an application cap has never been measured in this harness."** It
+has, in development diagnostics, as the browser under a ceiling of 4 Mbit/s. On the
+constrained links of those studies that ceiling is no effective cap. Share of frames on time,
+and the on-time PSNR utility where the record gives it:
+
+| Record | Conditions | Under the 4 Mbit/s ceiling | Capped senders of the same study |
+|---|---|---|---|
+| [Development V1](NATIVE_DEVELOPMENT_V1.md) | six source and schedule configurations, 18 executions | 45.66%, 14.891 | cap at 85% of the estimate: 69.45%, 18.921 |
+| [Repair V4](NATIVE_REPAIR_V4.md) | one clip, steady 1.48 Mbit/s, two repetitions | 9.61% | 85% of the estimate: 80.87%; fixed 300 kbit/s: 81.16% |
+| [Repair V5](NATIVE_REPAIR_V5.md) | one clip, steady 2.31 Mbit/s, two repetitions | 21.98%, 8.182 | fixed 600 kbit/s: 91.50%, 29.366; 85% of the estimate: 85.67%, 25.616; fixed 300 kbit/s: 88.17%, 26.353 |
+| [Dense probe](NATIVE_DENSE_PROBE.md) | one group, two repetitions | 51.02% (the two repetitions: 79.85% and 22.18%) | fixed 450 kbit/s: 75.35%; 85% of the estimate: 56.01% and 58.87% |
+
+These were development diagnostics and not confirmatory: mostly one clip and one link, two
+repetitions, no intervals, earlier versions of the harness, and the dense probe's two
+repetitions under the ceiling lie 58 points apart. They do not give a size. They agree on a
+direction. The browser under the ceiling was the worst condition of every one of them, and in
+the two that ran a fixed cap of 450 or 600 kbit/s that cap was the best.
+
+**What that changes.**
+
+- On this endpoint the baseline a cap controller has to beat is not the uncapped browser. It
+  is a tuned cap: 85% of the estimate, and a fixed cap chosen for the link.
+- N1's own rows fit this. Between its three ratios the on-time fraction barely moves: 1.05
+  minus 0.65 is +0.025 [-0.006, +0.055] overall and +0.054 [+0.010, +0.098] with room
+  ([exploratory record](NATIVE_PHASE_N1_EXPLORATORY.md)). Section 6 below shows that with
+  room the top ratio holds the encoder at about half of the browser's live estimate, and the
+  lower ratios hold the estimate itself down. N1 and B1 compare caps with each other. Neither
+  reaches the rates at which the earlier studies saw delivery fail.
+- Where between N1's top ratio and the ceiling the on-time fraction falls, and by which path,
+  is not known from any of this.
+
 ## Why
 
-- A cap below the estimate can raise delivered quality in only one way: by leaving less in
-  the queue and losing fewer packets than the browser would on its own. Whether that happens,
+- ~~A cap below the estimate can raise delivered quality in only one way: by leaving less in
+  the queue and losing fewer packets than the browser would on its own.~~ *Wrong; see the
+  correction above. That is one way, and the one this pass looks at.* Whether that happens,
   and when inside a hold, has not been looked at. The earlier passes used one number per hold,
   taken 1.8 to 2.6 s after the request.
 - The [simulator's forecast of B1](JEVBWE_TYPED_B1_FORECAST_V1.md) showed that the simulated
@@ -76,10 +132,15 @@ curves are kept so that the 8 GB of raw logs are not needed again.
   to 2.6 s.
 - Neither statement is about delivered quality. A mechanism can be present and too small or
   too brief to matter, and this pass cannot tell.
+- *Added with the correction:* both statements are about the relay path. "No mechanism" by
+  this rule means no more queue or loss at the relay. It does not mean that a cap has nothing
+  to act on.
 
 ## What this cannot show
 
 - Whether backing off helps delivered quality. That is B1's question, on fresh sources.
+- *Added with the correction:* anything at the receiver. How long the receiver holds a frame
+  before showing it, and whether a frame is shown at all, are not read.
 - Anything beyond one browser build, one relay and four scripted schedules.
 - It is a further look at twelve sources that have been looked at three times. The quantities
   here are physical and were not chosen after seeing them, but they are still exploratory.
@@ -297,31 +358,38 @@ What follows:
   stands in for "no cap". That holds where the browser's allocation is the limit: in the hold
   of a drop and in most constrained holds. It fails with room and after capacity returns,
   and there B1 compares three caps with each other.
-- **Every native condition in this repository has had an application cap.** The browser
+- ~~**Every native condition in this repository has had an application cap.** The browser
   without one has never been measured in this harness. It is the baseline that a cap
   controller would have to beat, and whether any ratio of the estimate does as well as it is
-  not known.
-- A cap can only withhold rate from the browser. It can pay only where withholding relieves
-  congestion that the browser would not have relieved as fast.
+  not known.~~ *Wrong; see the correction at the top.* Earlier development diagnostics ran
+  the browser under a 4 Mbit/s ceiling. It delivered 10% to 51% of frames on time, against 56%
+  to 92% for the capped senders of the same studies, and was the worst condition of each.
+- ~~A cap can only withhold rate from the browser. It can pay only where withholding relieves
+  congestion that the browser would not have relieved as fast.~~ *Too narrow.* That holds at
+  the relay. Those diagnostics put the cost of a high rate at the receiver, where withholding
+  rate may pay without any congestion at the relay.
 
 ## Reading
 
 - **Mechanism.** On this stack the logs show one place where a lower cap leaves less queue and
   loss: the first second after capacity collapses, and there it is the lowest ratio that
   differs. Everywhere else the browser keeps the link below capacity by itself and a cap
-  lowers the rate without relieving anything. By the rule fixed in advance, no mechanism is
-  established in the drop hold, and under steady constraint the registered window sees 5 ms.
+  lowers the rate without relieving anything at the relay. By the rule fixed in advance, no
+  mechanism is established in the drop hold, and under steady constraint the registered window
+  sees 5 ms. *Corrected:* this is the relay path. The receiver was not read.
 - **What it suggests about B1, and what it does not.** About a seventh of the holds B1's flag
   marks are of the one kind where a mechanism was seen. This pass read no quality label, so it
   cannot say whether that is enough for a benefit, and the earlier pilot leaned toward one in
-  flagged holds without establishing it. It does say where a benefit would have to come
-  from. If B1 finds one, the question is whether it sits in the hold of the scripted drop,
+  flagged holds without establishing it. It does say where a benefit by way of the relay
+  would have to come from. *Corrected:* a benefit by way of the receiver could sit in any
+  hold. If B1 finds one, the question is whether it sits in the hold of the scripted drop,
   which the flag does not anticipate. An addendum to B1, fixed before B1 has data, splits its
   flagged holds by position to answer that.
 - **What a controller could do with a cap.** The drop cannot be seen in the estimate before
-  the hold in which it hits, and the browser reacts within a second. A cap could gain only by
-  being faster than the browser inside that second, or by predicting the drop. A 3 s hold
-  decided at its start can do neither.
+  the hold in which it hits, and the browser reacts within a second. At the relay a cap could
+  gain only by being faster than the browser inside that second, or by predicting the drop. A
+  3 s hold decided at its start can do neither. *Corrected:* whether a cap gains at the
+  receiver is a separate question that this pass does not touch.
 - **What backing off costs.** After a request below the estimate the estimate barely grows,
   and after capacity returns only the top ratio lets it recover. A controller that backs off
   pays for it in the following holds.
@@ -330,4 +398,5 @@ What follows:
   standstill under a cap below it, a cut to below capacity within a second of a drop, a target
   that needs about 1.8 s to reach a new cap, and an output that needs the whole hold.
 
-Nothing here is confirmatory, and nothing about delivered quality was measured.
+Nothing here is confirmatory, nothing about delivered quality was measured, and nothing at the
+receiver was read.
