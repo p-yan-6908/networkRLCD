@@ -55,6 +55,7 @@ ARMS = (  # name, policy; the arm's index is its number in every record
 )
 NAMES = tuple(name for name, _ in ARMS)
 CANDIDATES = ("ladder", "fast ladder")
+FIXED_PAIRS = (("0.25", "1.05"), ("0.65", "1.05"), ("0.25", "0.65"))
 TUNED = ("0.25", "0.65")  # the fixed levels the leave-one-source-out choice of the range pilot landed on
 SOURCES = pilot.SOURCES
 REGIMES = pilot.REGIMES
@@ -457,6 +458,9 @@ def by_arm(sessions, value, where=lambda s: True):
             else:
                 paired = {cell: own[cell] - other[cell] for cell in own if cell in other}
                 contrasts[f"{candidate} minus {name}"] = _over_sources(paired)
+    for high, low in FIXED_PAIRS:  # the fixed levels against each other: the range pilot's comparison again
+        own, other = cells.get(NAMES.index(high), {}), cells.get(NAMES.index(low), {})
+        contrasts[f"{high} minus {low}"] = _over_sources({c: own[c] - other[c] for c in own if c in other})
     return dict(arms=levels, contrasts=contrasts)
 
 

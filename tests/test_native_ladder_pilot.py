@@ -245,6 +245,11 @@ def test_report_sets_each_candidate_against_each_fixed_level_within_source_and_s
     assert seen["contrasts"]["ladder minus 0.65"]["mean"] == pytest.approx(-0.9)
     assert seen["contrasts"]["fast ladder minus ladder"]["mean"] == pytest.approx(3)
     assert "ladder minus fast ladder" not in seen["contrasts"]  # each pair of candidates once
+    assert seen["contrasts"]["0.25 minus 1.05"]["mean"] == pytest.approx(
+        5
+    )  # the fixed levels against each other
+    assert seen["contrasts"]["0.65 minus 1.05"]["mean"] == pytest.approx(10)
+    assert seen["contrasts"]["0.25 minus 0.65"]["mean"] == pytest.approx(-5)
     read = report["reading"]
     assert read["ladder"]["against_each_fixed_level"] == {"0.25": 1, "0.65": -1, "1.05": 1}
     assert (
