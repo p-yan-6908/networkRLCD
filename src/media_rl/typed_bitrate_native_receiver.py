@@ -120,7 +120,7 @@ def on_time_share(age, spread):
     return 0.5 * (1 + math.erf((DEADLINE_MS - age) / spread / math.sqrt(2)))
 
 
-def run(config, trace, policy, layer, moving=True):
+def run(config, trace, policy, layer, moving=True, replay=ladder.PolicyReplay):
     """One simulated session under a policy with the layer on top: a row per step, and the assignments.
 
     ``policy`` is a policy of the controller pilot or "ceiling". With ``moving`` false the buffer
@@ -128,7 +128,7 @@ def run(config, trace, policy, layer, moving=True):
     """
     link = Link(config, ID_SCENARIOS[0], 0)
     link.env = MediaEnvironment(link.env.config, trace)
-    rule = Ceiling() if policy == "ceiling" else ladder.PolicyReplay(policy)
+    rule = Ceiling() if policy == "ceiling" else replay(policy)  # the class that audits the native sessions
     dt, buffer, pending, seen = config.dt_ms, layer.b0, [], None
     rows, assignments = [], []
     for k in range(config.steps):
@@ -203,7 +203,7 @@ def _mean(values, weights=None):
     return float((values * weights).sum() / weights.sum()) if weights.sum() > 0 else None
 
 
-def summarise(made, schedule):
+def summarise(made, schedule, bin_ms=BIN_MS, stretches=BINS):
     """A simulated session as the pilots report theirs: two spans, six stretches, three capacity phases."""
     s, assignments = made["steps"], made["assignments"]
     second = assignments[1]["at_ms"] if len(assignments) > 1 else math.inf
@@ -218,9 +218,9 @@ def summarise(made, schedule):
         )
 
     bins = []
-    for k in range(BINS):
-        keep = (s["now"] >= k * BIN_MS) & (s["now"] < (k + 1) * BIN_MS)
-        in_force = [a for a in assignments if a["at_ms"] <= (k + 0.5) * BIN_MS]
+    for k in range(stretches):
+        keep = (s["now"] >= k * bin_ms) & (s["now"] < (k + 1) * bin_ms)
+        in_force = [a for a in assignments if a["at_ms"] <= (k + 0.5) * bin_ms]
         bins.append(
             dict(
                 utility=_mean(s["utility"][keep]),
@@ -530,7 +530,7 @@ def judge(simulated, entry):
     )
 
 
-def decide(everywhere, by_schedule):
+def decide(everywhere, by_schedule, rule_pairs=None):
     """The verdict fixed in the design, from the judged differences over all schedules and under each."""
     established = [e for e in everywhere.values() if e["verdict"] != "not established"]
     order = bool(established) and all(e["verdict"] == "agrees" for e in established)
@@ -540,7 +540,7 @@ def decide(everywhere, by_schedule):
         f"{regime}: {pair}"
         for regime, block in by_schedule.items()
         for pair, e in block.items()
-        if e["verdict"] == "disagrees" and pair in RULE_AGAINST_TUNED
+        if e["verdict"] == "disagrees" and pair in (RULE_AGAINST_TUNED if rule_pairs is None else rule_pairs)
     ]
     schedules = share is not None and share >= 0.8 and not reversed_rule
     if not order:
