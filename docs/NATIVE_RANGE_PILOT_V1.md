@@ -308,6 +308,13 @@ recorded in `supplement.json`. From the second hold on.
   estimate" does not hold natively for a sustained level, and the place that makes the
   difference, a receiver buffer that grows with the rate, is not in the simulator. Which ratio
   is best is not something the synthetic studies can be trusted on.
+  *Checked directly afterwards* ([sustained levels in the simulator](JEVBWE_TYPED_SUSTAINED_LEVELS_V1.md)):
+  over all schedules the simulator ranks the four ratios in the reverse order of this pilot,
+  no schedule has the same best level in both, and with room the simulator rates the ceiling
+  best where it is worst here. The simulator does agree on one thing: after a drop of capacity
+  a level below 1.05 beats 1.05, though it stops at 0.85 where the pilot goes on to 0.25. Its
+  sent rates over capacity are close to the native ones. What differs is the valuation: its
+  quality term rises steeply with the rate and its frames are on time until the queue fills.
 - **What this does not show.** One session per cell, on sources that were already used and
   that led to this design. One machine carries sender, relay and receiver: the encoder's time
   per frame does not grow with the level, but the pilot cannot separate the receiver's cost of
