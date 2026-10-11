@@ -282,12 +282,17 @@ def test_timeline_averages_each_stretch_over_sources_and_is_marked_as_added_afte
             dict(
                 utility=None if v is None else 30.0 * v,
                 on_time=v,
+                age_median_ms=None if v is None else 200.0 - 100.0 * v,
                 ratio=1.05 if k < 2 else 0.25,
                 requested_kbps=300.0 + k,
             )
             for k, v in enumerate(on_time)
         ]
-        return dict(source=source, regime=regime, arm=arm, bins=bins)
+        phases = [
+            dict(jitter_buffer_ms=20.0 + 10 * arm + 30 * k, relay_dropped=0.1 * k, offered_over_capacity=0.5)
+            for k in range(3)
+        ]
+        return dict(source=source, regime=regime, arm=arm, bins=bins, phases=phases)
 
     sessions = [
         session("a", "queue-building", 0, [1, 1, 0.2, 0.4, 0.6, None]),
@@ -307,3 +312,74 @@ def test_timeline_averages_each_stretch_over_sources_and_is_marked_as_added_afte
     assert drop["0.25"]["on_time"] == pytest.approx([0.9] * 6) and drop["0.65"]["on_time"] == [None] * 6
     assert made["all_schedules"]["ladder"]["on_time"][2] == pytest.approx(((0.3 + 1) / 2 + 0.0) / 2)
     assert made["by_schedule"]["near-capacity"]["ladder"]["utility"] == [None] * 6
+    assert drop["ladder"]["age_median_ms"][2] == pytest.approx((170.0 + 200.0) / 2)
+    held = made["phases_by_schedule"]["queue-building"]
+    assert made["phases"] == ("high", "collapse", "recovery")
+    assert held["ladder"]["jitter_buffer_ms"] == pytest.approx([20.0, 50.0, 80.0])
+    assert held["0.25"]["jitter_buffer_ms"] == pytest.approx([40.0, 70.0, 100.0])
+    assert held["ladder"]["relay_dropped"] == pytest.approx([0.0, 0.1, 0.2])
+    assert made["phases_by_schedule"]["near-capacity"]["ladder"]["offered_over_capacity"] == [None] * 3
+
+
+def test_a_session_s_stretches_and_phases_come_from_its_labels_and_cumulative_snapshots(tmp_path):
+    def label(at, age, worth):
+        return dict(
+            capture_request_ms=at,
+            readback_age_ms=age,
+            identifiable_ontime=age is not None and age <= 150,
+            ontime_sampled_psnr_contribution=worth,
+        )
+
+    def row(epoch, ack, ratio, bps):
+        return dict(
+            epoch=epoch,
+            ack_ms=ack,
+            ratio=ratio,
+            requested_bps=bps,
+            cluster_id="a",
+            network_regime="queue-building",
+            arm=1,
+        )
+
+    def snapshot(phase, capacity, decoded, buffer_s, offered, dropped):
+        return dict(
+            phase=phase,
+            capacity_mbps=capacity,
+            interval_ms=4000,
+            frames_decoded=decoded,
+            frames_encoded=decoded,
+            mean_native_jitter_buffer_s=buffer_s,
+            mean_native_jitter_buffer_target_s=buffer_s,
+            freeze_count=0,
+            network=dict(a_to_b=dict(offered_wire_bytes=offered, dropped_wire_bytes=dropped)),
+        )
+
+    labels = [label(1000, 100, 30.0), label(2000, 120, 30.0), label(3999, None, 0.0), label(4000, 300, 0.0)]
+    rows = [
+        row(1, 5600, 0.25, 150000),
+        row(0, 1000, 1.05, 315000),
+    ]  # the cut comes 1.6 s into the second stretch
+    snapshots = [
+        snapshot("high", 0.8, 100, 0.02, 100000, 0),
+        snapshot("collapse", 0.4, 200, 0.05, 300000, 50000),
+        snapshot("recovery", 0.8, 200, 0.05, 300000, 50000),  # nothing decoded and nothing offered
+    ]
+    (tmp_path / "cohorts.json").write_text(json.dumps(rows))
+    (tmp_path / "native_derived.json").write_text(json.dumps(dict(quality=dict(source_labels=labels))))
+    (tmp_path / "summary.json").write_text(json.dumps(dict(snapshots=snapshots)))
+    made = ladder.session_bins(tmp_path)
+    assert (made["source"], made["regime"], made["arm"]) == ("a", "queue-building", 1)
+    first, second, third = made["bins"][:3]
+    assert first["on_time"] == pytest.approx(2 / 3) and first["utility"] == pytest.approx(20.0)
+    assert first["age_median_ms"] == pytest.approx(110.0)  # of the frames shown; the third never was
+    assert second["on_time"] == 0 and second["age_median_ms"] == pytest.approx(300.0)
+    assert (first["ratio"], second["ratio"], third["ratio"]) == (1.05, 1.05, 0.25)  # the ratio at the middle
+    assert third["on_time"] is None and third["requested_kbps"] == pytest.approx(150.0)
+    high, collapse, recovery = made["phases"]
+    assert high["jitter_buffer_ms"] == pytest.approx(20.0) and high["relay_dropped"] == 0
+    assert collapse["jitter_buffer_ms"] == pytest.approx(80.0)  # (200 * 50 - 100 * 20) ms over 100 frames
+    assert collapse["relay_dropped"] == pytest.approx(0.25) and collapse[
+        "offered_over_capacity"
+    ] == pytest.approx(1.0)
+    assert high["offered_over_capacity"] == pytest.approx(0.25)
+    assert recovery == dict(jitter_buffer_ms=None, relay_dropped=None, offered_over_capacity=0.0)

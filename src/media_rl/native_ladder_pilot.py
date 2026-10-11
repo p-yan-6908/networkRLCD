@@ -23,6 +23,7 @@ import numpy as np
 from . import native_action_excitation as donor
 from . import native_actuator_control as control
 from . import native_actuator_panel as panel
+from . import native_actuator_qualification_delivery as delivery
 from . import native_actuator_qualification_panel as n1
 from . import native_actuator_study as physical
 from . import native_range_pilot as pilot
@@ -568,63 +569,96 @@ def analyse(sessions, planned=None):
 
 
 BIN_MS, BINS = 3000, 6  # the session in six stretches of 3 s from its first acknowledgement
+PHASES = ("high", "collapse", "recovery")  # the relay's three capacity phases, by N1's names
+
+
+def session_phases(root):
+    """The receiver's buffer and the relay's sender-to-receiver queue in each capacity phase of a session.
+
+    The page's snapshots are cumulative, so a phase is the difference between two of them.
+    """
+    path = Path(root) / "summary.json"
+    phases, before = [], dict(offered=0.0, dropped=0.0)
+    for own, snapshot in zip(delivery.read_phases(path), read_json(path)["snapshots"], strict=True):
+        now = {k: float(snapshot["network"]["a_to_b"][k + "_wire_bytes"]) for k in before}
+        offered, dropped = now["offered"] - before["offered"], now["dropped"] - before["dropped"]
+        room = snapshot["capacity_mbps"] * 1e6 / 8 * snapshot["interval_ms"] / 1000
+        phases.append(
+            dict(
+                jitter_buffer_ms=own["jitter_buffer_ms"] if math.isfinite(own["jitter_buffer_ms"]) else None,
+                relay_dropped=dropped / offered if offered > 0 else None,
+                offered_over_capacity=offered / room,
+            )
+        )
+        before = now
+    return phases
 
 
 def session_bins(root):
-    """One sealed session in stretches of 3 s: the endpoint, the share on time and the ratio in force."""
+    """One sealed session in stretches of 3 s, and its capacity phases.
+
+    Per stretch: the endpoint, the share on time, the median age of the frames shown, and the
+    ratio in force at its middle.
+    """
     root = Path(root)
     rows = sorted(read_json(root / "cohorts.json"), key=lambda r: r["epoch"])
     labels = read_json(root / "native_derived.json")["quality"]["source_labels"]
     at = np.array([x["capture_request_ms"] for x in labels], dtype=float)
     worth = np.array([x["ontime_sampled_psnr_contribution"] for x in labels], dtype=float)
     timely = np.array([x["identifiable_ontime"] is True for x in labels], dtype=bool)
+    age = np.array([math.nan if x["readback_age_ms"] is None else x["readback_age_ms"] for x in labels])
     start = float(rows[0]["ack_ms"])
     bins = []
     for k in range(BINS):
         low, high = start + k * BIN_MS, start + (k + 1) * BIN_MS
         asked = (at >= low) & (at < high)
+        shown = asked & np.isfinite(age)
         in_force = [r for r in rows if r["ack_ms"] <= (low + high) / 2]
         bins.append(
             dict(
                 utility=float(worth[asked].mean()) if asked.any() else None,
                 on_time=float(timely[asked].mean()) if asked.any() else None,
+                age_median_ms=float(np.median(age[shown])) if shown.any() else None,
                 ratio=in_force[-1]["ratio"] if in_force else None,
                 requested_kbps=in_force[-1]["requested_bps"] / 1000 if in_force else None,
             )
         )
-    return dict(source=rows[0]["cluster_id"], regime=rows[0]["network_regime"], arm=rows[0]["arm"], bins=bins)
+    return dict(
+        source=rows[0]["cluster_id"],
+        regime=rows[0]["network_regime"],
+        arm=rows[0]["arm"],
+        bins=bins,
+        phases=session_phases(root),
+    )
 
 
 def timeline(sessions):
     """Added after the report was read: delivery over the session, per arm and schedule.
 
-    Per stretch the mean over sources of a cell's sessions. It shows where in a session an arm
-    wins or loses; it is a description and no statement of the reading rests on it.
+    Per stretch, and per capacity phase, the mean over sources of a cell's sessions. It shows
+    where in a session an arm wins or loses and what the receiver and the relay held at the
+    time; it is a description and no statement of the reading rests on it.
     """
 
-    def over_sources(arm, regime, k, key):
+    def over_sources(arm, regime, part, k, key):
         cells = defaultdict(list)
         for s in sessions:
-            if (
-                s["arm"] == arm
-                and (regime is None or s["regime"] == regime)
-                and s["bins"][k][key] is not None
-            ):
-                cells[(s["source"], s["regime"])].append(s["bins"][k][key])
+            if s["arm"] == arm and (regime is None or s["regime"] == regime) and s[part][k][key] is not None:
+                cells[(s["source"], s["regime"])].append(s[part][k][key])
         grouped = defaultdict(list)
         for (source, _), values in cells.items():
             grouped[source].append(float(np.mean(values)))
         values = [float(np.mean(v)) for v in grouped.values()]
         return float(np.mean(values)) if values else None
 
-    def block(regime):
+    def block(regime, part="bins", keys=("utility", "on_time", "age_median_ms", "ratio", "requested_kbps")):
+        count = BINS if part == "bins" else len(PHASES)
         return {
-            name: {
-                key: [over_sources(arm, regime, k, key) for k in range(BINS)]
-                for key in ("utility", "on_time", "ratio", "requested_kbps")
-            }
+            name: {key: [over_sources(arm, regime, part, k, key) for k in range(count)] for key in keys}
             for arm, name in enumerate(NAMES)
         }
+
+    held = ("jitter_buffer_ms", "relay_dropped", "offered_over_capacity")
 
     return dict(
         abi=ABI + "_timeline",
@@ -634,6 +668,8 @@ def timeline(sessions):
         bin_ms=BIN_MS,
         all_schedules=block(None),
         by_schedule={regime: block(regime) for regime in REGIMES},
+        phases=PHASES,
+        phases_by_schedule={regime: block(regime, "phases", held) for regime in REGIMES},
     )
 
 
