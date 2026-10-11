@@ -274,3 +274,36 @@ def test_report_sets_each_candidate_against_each_fixed_level_within_source_and_s
         empty["reading"]["ladder"]["beats_the_tuned_fixed_levels"] is False
     )  # nothing is claimed without data
     assert empty["reading"]["fast_minus_slow"] == 0
+
+
+def test_timeline_averages_each_stretch_over_sources_and_is_marked_as_added_afterwards():
+    def session(source, regime, arm, on_time):
+        bins = [
+            dict(
+                utility=None if v is None else 30.0 * v,
+                on_time=v,
+                ratio=1.05 if k < 2 else 0.25,
+                requested_kbps=300.0 + k,
+            )
+            for k, v in enumerate(on_time)
+        ]
+        return dict(source=source, regime=regime, arm=arm, bins=bins)
+
+    sessions = [
+        session("a", "queue-building", 0, [1, 1, 0.2, 0.4, 0.6, None]),
+        session("a", "queue-building", 0, [1, 1, 0.4, 0.4, 0.6, 0.8]),  # the cell's second repetition
+        session("b", "queue-building", 0, [1, 0.8, 0.0, 0.2, 0.4, 0.6]),
+        session("a", "underutilized", 0, [1, 1, 1, 1, 1, 1]),
+        session("a", "queue-building", 2, [0.9] * 6),
+    ]
+    made = ladder.timeline(sessions)
+    assert (
+        made["added_after_the_report_was_read"] is True and made["bin_ms"] == 3000 and made["sessions"] == 5
+    )
+    drop = made["by_schedule"]["queue-building"]
+    assert drop["ladder"]["on_time"][2] == pytest.approx((0.3 + 0.0) / 2)  # repetitions first, then sources
+    assert drop["ladder"]["on_time"][5] == pytest.approx((0.8 + 0.6) / 2)  # a missing stretch is left out
+    assert drop["ladder"]["ratio"][:3] == pytest.approx([1.05, 1.05, 0.25])
+    assert drop["0.25"]["on_time"] == pytest.approx([0.9] * 6) and drop["0.65"]["on_time"] == [None] * 6
+    assert made["all_schedules"]["ladder"]["on_time"][2] == pytest.approx(((0.3 + 1) / 2 + 0.0) / 2)
+    assert made["by_schedule"]["near-capacity"]["ladder"]["utility"] == [None] * 6

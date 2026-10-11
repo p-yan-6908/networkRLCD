@@ -567,6 +567,76 @@ def analyse(sessions, planned=None):
     )
 
 
+BIN_MS, BINS = 3000, 6  # the session in six stretches of 3 s from its first acknowledgement
+
+
+def session_bins(root):
+    """One sealed session in stretches of 3 s: the endpoint, the share on time and the ratio in force."""
+    root = Path(root)
+    rows = sorted(read_json(root / "cohorts.json"), key=lambda r: r["epoch"])
+    labels = read_json(root / "native_derived.json")["quality"]["source_labels"]
+    at = np.array([x["capture_request_ms"] for x in labels], dtype=float)
+    worth = np.array([x["ontime_sampled_psnr_contribution"] for x in labels], dtype=float)
+    timely = np.array([x["identifiable_ontime"] is True for x in labels], dtype=bool)
+    start = float(rows[0]["ack_ms"])
+    bins = []
+    for k in range(BINS):
+        low, high = start + k * BIN_MS, start + (k + 1) * BIN_MS
+        asked = (at >= low) & (at < high)
+        in_force = [r for r in rows if r["ack_ms"] <= (low + high) / 2]
+        bins.append(
+            dict(
+                utility=float(worth[asked].mean()) if asked.any() else None,
+                on_time=float(timely[asked].mean()) if asked.any() else None,
+                ratio=in_force[-1]["ratio"] if in_force else None,
+                requested_kbps=in_force[-1]["requested_bps"] / 1000 if in_force else None,
+            )
+        )
+    return dict(source=rows[0]["cluster_id"], regime=rows[0]["network_regime"], arm=rows[0]["arm"], bins=bins)
+
+
+def timeline(sessions):
+    """Added after the report was read: delivery over the session, per arm and schedule.
+
+    Per stretch the mean over sources of a cell's sessions. It shows where in a session an arm
+    wins or loses; it is a description and no statement of the reading rests on it.
+    """
+
+    def over_sources(arm, regime, k, key):
+        cells = defaultdict(list)
+        for s in sessions:
+            if (
+                s["arm"] == arm
+                and (regime is None or s["regime"] == regime)
+                and s["bins"][k][key] is not None
+            ):
+                cells[(s["source"], s["regime"])].append(s["bins"][k][key])
+        grouped = defaultdict(list)
+        for (source, _), values in cells.items():
+            grouped[source].append(float(np.mean(values)))
+        values = [float(np.mean(v)) for v in grouped.values()]
+        return float(np.mean(values)) if values else None
+
+    def block(regime):
+        return {
+            name: {
+                key: [over_sources(arm, regime, k, key) for k in range(BINS)]
+                for key in ("utility", "on_time", "ratio", "requested_kbps")
+            }
+            for arm, name in enumerate(NAMES)
+        }
+
+    return dict(
+        abi=ABI + "_timeline",
+        development_pilot=True,
+        added_after_the_report_was_read=True,
+        sessions=len(sessions),
+        bin_ms=BIN_MS,
+        all_schedules=block(None),
+        by_schedule={regime: block(regime) for regime in REGIMES},
+    )
+
+
 def collect(out):
     out = Path(out)
     made = read_json(out / "protocol.json")
@@ -594,6 +664,11 @@ def main(argv=None):
     analysis = commands.add_parser("analyse", help="the report fixed in the design")
     analysis.add_argument("--capture", required=True, type=Path)
     analysis.add_argument("--out", required=True, type=Path)
+    profile = commands.add_parser(
+        "timeline", help="delivery over the session, added after the report was read"
+    )
+    profile.add_argument("--capture", required=True, type=Path)
+    profile.add_argument("--out", required=True, type=Path)
     args = parser.parse_args(argv)
     if args.command == "plan":
         result = plan(args.n1_protocol, args.out, args.repetitions)
@@ -601,6 +676,16 @@ def main(argv=None):
         result = capture(args.protocol, args.out, args.limit)
     elif args.command == "status":
         result = pilot.status(args.capture, PEER_STAGE)
+    elif args.command == "timeline":
+        if args.out.exists():
+            parser.exit(2, "error: fresh output file required\n")
+        made = read_json(args.capture / "protocol.json")
+        roots = [args.capture / t for _, t in made["order"] if pilot._sealed(args.capture / t, PEER_STAGE)]
+        result = dict(
+            timeline([session_bins(r) for r in roots]), plan_sha256=digest(args.capture / "protocol.json")
+        )
+        args.out.write_text(json.dumps(result, indent=1, sort_keys=True) + "\n")
+        result = dict(sessions=result["sessions"], bins=result["bin_ms"])
     else:
         if args.out.exists():
             parser.exit(2, "error: fresh output directory required\n")
