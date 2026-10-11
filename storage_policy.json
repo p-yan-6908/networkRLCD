@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "max_project_bytes": 10000000000,
+  "soft_project_bytes": 8000000000,
+  "archive_dataset": "p-yan/networkrlcd-results-archive",
+  "archive_private": true,
+  "external_work_root": "~/.cache/networkrlcd",
+  "large_runs_must_use_external_work_root": true,
+  "prune_requires_pinned_remote_checksum_verification": true,
+  "keep_locally": ["code", "reports", "summaries", "protocols", "manifests", "checksums", "small_models"],
+  "never_prune_active_capture": true
+}

@@ -1,5 +1,36 @@
 # Archived experiment results
 
+## Current owner-approved storage policy (2026-10-11)
+
+Keep the physical project tree below **10 GB (10,000,000,000 bytes)**; start cleanup
+at 8 GB. Keep compact reports, summaries, protocols, manifests, checksums and archive
+receipts locally/in GitHub. Store large raw evidence in the private HF dataset below,
+then prune local raw files only after pinned remote checksum and recovery verification.
+See [AGENTS.md](AGENTS.md), [docs/STORAGE_POLICY.md](docs/STORAGE_POLICY.md), and
+`storage_policy.json`. Compact new receipts are recorded in `docs/storage-receipts/`.
+
+### Current cleanup record
+
+The project-budget check fell from about **45.0 GB to 4.8 GB** after relocating
+untracked raw working trees outside the repository. Relocation alone reclaimed no
+device space. The separately verified N1 cleanup removed 1,440 raw trace files
+(8,116,250,827 logical bytes); compact proof is in
+[docs/storage-receipts/n1-stage-one-pruning-2026-10-11.json](docs/storage-receipts/n1-stage-one-pruning-2026-10-11.json).
+Device free space rose from roughly 14 GiB to 21 GiB before new upload staging.
+
+Range and ladder snapshots are being uploaded/verified before any pruning. The
+margin snapshot is queued only after its collector exits and final reports exist.
+These new backups are **not yet claimed complete**; their verified pinned receipts
+will appear under `docs/storage-receipts/`. Live handoff details are in
+[docs/STORAGE_OPERATIONS_2026-10-11.md](docs/STORAGE_OPERATIONS_2026-10-11.md).
+
+Large active/required working data may live in `~/.cache/networkrlcd/working/` through
+path-preserving ignored symlinks in `results/`. This is **still local disk**, not an
+archive; the new policy does not falsely count relocation as recovered disk space.
+Never prune the running margin capture before its final report, or delete licensed
+source media / active donor dependencies blindly. Historical receipts below remain
+valid for their exact immutable snapshots; old footprint numbers are historical.
+
 Historical results from `/Users/pyan/networkRLCD/results/` are backed up on Hugging Face:
 
 **Private dataset:** https://huggingface.co/datasets/p-yan/networkrlcd-results-archive  
@@ -71,7 +102,7 @@ rsync -aH --ignore-existing --dry-run --itemize-changes \
 
 Existing changed files are deliberately not overwritten; a run with such changes may need separate recovery/audit. Absolute workspace paths inside historical metadata are preserved, not rewritten. Hardlinks across different runs may not be preserved by a one-run merge, so restoring the complete snapshot to a separate location is preferred.
 
-## Second snapshot: Native Phase N1 stage-one capture (2026-10-10, backed up, nothing pruned)
+## Second snapshot: Native Phase N1 stage-one capture (2026-10-10 backup; 2026-10-11 raw cleanup)
 
 Added after the repository owner pointed to this archive as the place for old data, to make
 room for the Native Phase B1 capture. It is a separate snapshot in the same private dataset.
@@ -102,8 +133,14 @@ archived file is in `file-sha256.txt` beside it and in the archive folder. The s
 `.tools/offload-n1-stage-one-v1.sh` and `.tools/verify-n1-stage-one-archive-v1.py`. The
 temporary staged parts were removed after verification.
 
-**No result file has been deleted.** The capture is still complete under `results/`. If the
-B1 capture needs the room, local copies may be removed under the rules of the first cleanup:
+**At backup verification on 2026-10-10, no result file had been deleted.** On
+2026-10-11 the owner-approved storage cleanup reverified that exact private revision
+and removed **1,440 byte-matched raw trace files (8,116,250,827 logical bytes)**.
+See [the new pruning receipt](docs/storage-receipts/n1-stage-one-pruning-2026-10-11.json).
+Derived/cohort/manifest JSON, models, frozen source snapshots, plans and tracked records
+remain. The raw capture is now **partial locally**, marked `ARCHIVED_RAW.json`, and
+requires restoration before a full seal audit or raw replay. The original backup and
+its immutable receipt were not changed. The reviewed removal rules were:
 
 - only after the owner has seen the list;
 - only files whose bytes still equal the hash in `file-sha256.txt`, rehashed just before removal;

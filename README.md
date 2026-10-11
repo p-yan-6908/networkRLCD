@@ -2,6 +2,20 @@
 
 A reproducible **simulation research framework**, not a certified safety system or a WebRTC/GCC implementation. An actual NumPy Double DQN chooses bitrate, FEC and media mode. A separate episode-bootstrap safety ensemble estimates the probability that its proposed action meets next-interval latency/loss constraints. Held-out Platt/temperature calibration, a telemetry-support guard and hysteresis determine when to use a deterministic conservative controller.
 
+## Storage policy: keep the project below 10 GB
+
+**Owner-approved:** keep this entire project tree below **10 GB (10,000,000,000 bytes)**;
+start cleanup at 8 GB. Large raw captures, source working copies, downloads and archive
+staging belong outside the repository (`~/.cache/networkrlcd/`), while compact reports,
+summaries, protocols, manifests, checksums and archive receipts stay in Git. Raw evidence
+is archived in the existing **private** Hugging Face dataset before checksum-verified
+local pruning. Moving data outside the tree alone is not a backup or disk-space saving.
+
+Read [AGENTS.md](AGENTS.md), [the storage policy](docs/STORAGE_POLICY.md), and
+[archive/recovery records](ARCHIVED_RESULTS.md) before a large job. Budget check:
+`python tools/results_storage.py status --check`. Never prune active captures or rewrite
+historical seals. New multi-GB jobs must use an external output directory.
+
 ## Run
 
 Requires Python 3.11+ (locked reference: Python 3.12) and [uv](https://docs.astral.sh/uv/).
