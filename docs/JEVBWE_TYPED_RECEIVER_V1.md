@@ -86,6 +86,46 @@ The fitted layer is written to a file and committed before the test.
 residuals alone, with the reason recorded here before the test is run. After the test is run
 nothing is revised under this design.
 
+## The one revision, recorded before the test (2026-10-11)
+
+The layer was fitted once exactly as written above (code at `76d699a`; kept as
+`results/typed-native-receiver-v1/layer_first_fit.json`). The controller pilot was not touched.
+The fit sits poorly on the range pilot, and the reasons are visible in its residuals:
+
+- **The ceiling is not the browser left to itself.** In the simulator the ceiling runs at 45%
+  of capacity, natively at 65%; with room at 37% against 69%. The simulator's estimator cannot
+  grow the way the browser's does, so the ceiling's residuals are the estimator's and not the
+  receiver's. Its cells carried the largest errors of the buffer (488 ms native against 291 ms)
+  and its one cell with room raised `E0` from 744 to 955 kbit/s for every level.
+- **A few overloaded stretches rule the two regressions.** Native median ages reach 1.3 s. The
+  age regression is left with 93 ms and puts 84 ms per unit of rate over capacity on every
+  frame; the spread regression gets an intercept of −32 ms. With a deadline of 150 ms nothing
+  beyond 300 ms is on time whatever these constants are.
+- **The buffer is fitted in ms, and the deadline is felt in proportion.** An error of 20 ms
+  matters at 60 ms and not at 300 ms. Least squares in ms left 42 ms and put the base at 28 ms,
+  where the range pilot has 15 to 19 ms at the low levels.
+
+The revision, in three parts, all on the fitting and none on the layer's form:
+
+1. Stages 1, 3 and 4 use the four ratio levels (16 cells of level and schedule). The ceiling is
+   left out of the fit and stays in the tables shown beside the range pilot. Stage 2 is
+   unchanged.
+2. Stage 3 minimises the squared differences of the logarithms of the buffer.
+3. Stages 4 and 5 use only stretches whose native median age is at most 300 ms.
+
+What the first fit already showed on the range pilot, for the record: 7 agreements, 1
+disagreement (the ceiling against 1.05) and 12 unclear, where the simulator as built had 4, 6
+and 10; the same best level under 3 of the 4 schedules; and the four ratios in the native
+order, with the endpoint too low at the higher levels (13.0 against 21.4 at 1.05).
+
+**A limit this revision does not remove.** At a fixed ratio the simulator's estimate stands
+still when the link is not congested, and its sender then runs closer to capacity after a drop
+than the native one (0.65 under queue-building: 81% of capacity against 50%). At 1.05 it
+overshoots a steady capacity in a way the browser does not (near capacity: a buffer of 122 ms
+against 57 ms). These are the estimator's, and the layer leaves the estimator as built.
+
+No further revision is made under this design.
+
 ## Checks on the range pilot (in sample)
 
 Reported, and no part of the verdict on the controller pilot:

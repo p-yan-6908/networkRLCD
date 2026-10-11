@@ -713,7 +713,9 @@ def robustness(layer, native, config, settings):
 def collect(capture):
     """The range pilot's sealed sessions as targets for the fit."""
     capture = Path(capture)
-    made = pilot.sealed_plan(capture / "protocol.json")
+    made = read_json(capture / "protocol.json")
+    if made.get("abi") != pilot.PLAN_STAGE:
+        raise ValueError("a capture of the range pilot is required")
     roots = [capture / trial for _, trial in made["order"] if pilot._sealed(capture / trial)]
     return dict(
         targets([session_targets(root) for root in roots]), plan_sha256=digest(capture / "protocol.json")
