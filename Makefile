@@ -1,4 +1,4 @@
-.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-factual jevbwe-typed-population jevbwe-typed-population-test jevbwe-typed-crossover jevbwe-typed-headroom jevbwe-typed-b1-forecast jevbwe-typed-factual-unseen jevbwe-typed-followup-evidence jevbwe-typed-evidence native-n1-evidence native-range-pilot-evidence native-ladder-pilot-evidence paper-pdf
+.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-factual jevbwe-typed-population jevbwe-typed-population-test jevbwe-typed-crossover jevbwe-typed-headroom jevbwe-typed-b1-forecast jevbwe-typed-factual-unseen jevbwe-typed-followup-evidence jevbwe-typed-evidence native-n1-evidence native-range-pilot-evidence native-ladder-pilot-evidence typed-native-receiver-evidence paper-pdf
 setup:
 	uv sync --frozen --extra dev
 
@@ -168,6 +168,9 @@ native-range-pilot-evidence:
 
 native-ladder-pilot-evidence:
 	uv run --frozen python -m media_rl.native_ladder_pilot_report --report $(N1)/native-ladder-pilot-v1-report/report.json --timeline $(N1)/native-ladder-pilot-v1-report/timeline.json --headroom $(N1)/native-range-pilot-v1-report/headroom.json --out paper/generated-native-ladder-pilot
+
+typed-native-receiver-evidence:
+	uv run --frozen python -m media_rl.typed_bitrate_native_receiver_report --layer $(N1)/typed-native-receiver-v1/layer.json --report $(N1)/typed-native-receiver-v1/report.json --out paper/generated-typed-native-receiver
 
 # Compile from the exported evidence already under paper/generated-*; does not re-export the
 # nine archived studies, whose pruned results must be restored first (see ARCHIVED_RESULTS.md).

@@ -389,3 +389,20 @@ What this allows: new modelling code beside the simulator, fitted on the range p
 capture and compared with the two pilots' reports. No capture, no download, no change to a
 frozen file or to an earlier study. The design is
 [JEVBWE_TYPED_RECEIVER_V1.md](JEVBWE_TYPED_RECEIVER_V1.md), committed before any fit.
+
+**Outcome (2026-10-11).** The layer was designed and committed (`11963a5`, amended at `4173972`
+before any code ran), fitted on the range pilot, revised once from that pilot's residuals with
+the reasons recorded first (`884a80b`), refitted and committed (`2d4e3f9`), and tested once on
+the controller pilot (`ffd0e91`). **By the rule fixed beforehand the verdict is negative: the
+layer does not predict the controller pilot.** Seven of the eight established differences over
+all schedules agree; the fast ladder against the ladder is flat. It does reproduce both rules
+below both tuned fixed levels and above 1.05, with all five endpoints inside the native
+intervals ([results](JEVBWE_TYPED_RECEIVER_V1.md#results-2026-10-11)).
+
+What the agent would put to the owner next, none of it decided:
+
+- By the design the synthetic track stays set aside for native claims.
+- The miss lies in the simulator's estimator, not in the receiver. Modelling the estimator is
+  new modelling under a new design.
+- Both pilots are used. Any further test of a revised layer needs native sessions it has not
+  seen, which means a new capture.

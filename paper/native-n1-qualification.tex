@@ -242,6 +242,39 @@ Tables~\ref{tab:ladder-pilot-timeline} and~\ref{tab:ladder-pilot-phases} were ad
 We read this with caution. The rules did not lose by cutting too little. They lost because a cut that waits until lateness is visible comes after the receiver's buffer has grown, and the buffer then shrinks more slowly than these sessions last. A fixed low level never lets it grow: what it buys is prevention. This also limits what the pilot's schedules can show about control. Each has at most one change of capacity, 6~s into a session of 18.6~s; nothing in the history before the change announces it, and too little session remains after it for a reaction to pay. Whether history can serve a controller here, for example through a margin that widens once a drop has been seen, needs longer sessions with recurring changes, which would be a new design and a new capture. The simulator of the synthetic studies has no receiver buffer that grows, as noted above, and cannot show the effect. Nothing is promoted. On this harness the tuned fixed ratio stands unbeaten, the marks of the rules were tuned on the sources they ran on, and those sources have been looked at many times.
 \fi
 
+\ifdefined\ReceiverLayerVerdict
+\subsection{A receiver for the simulator, fitted on one pilot and tested on the other (synthetic; negative by its own rule)}
+\label{sec:receiver-layer}
+The simulator's receiver is a fixed delay, and as built the simulator ranks the fixed ratios in the reverse order of the range pilot. With the owner's approval we put a small layer on top of it and asked whether it then predicts native sessions it was not fitted on (\path{docs/JEVBWE_TYPED_RECEIVER_V1.md}; the layer, its fitting procedure, the test and the rule of the verdict were committed before anything was fitted). The simulator's own code is unchanged. The layer makes the cap a cap, so that the encoder's target is the smaller of the cap and the simulated estimate. It adds a receiver buffer whose target grows with the rate over capacity and with the queue's delay; the buffer rises to a higher target at once and falls towards a lower one exponentially. And it values a step as the native endpoint values frames: a frame is on time when its age, spread normally within the step, is at most 150~ms, and an on-time frame counts its PSNR, read off the range pilot by encoder rate. Every number is fitted on the range pilot only, each to the observable it stands for: the estimate after start-up, the jitter buffer per capacity phase, the median age and the spread of ages per stretch of 3~s, and the way back of an acknowledgement. The endpoint and the share on time are never fitted. The results of both pilots were known when the layer was designed, and its form follows what the controller pilot's timeline had shown. What the test protects is the numbers and not the idea.
+
+Fitted exactly as first written, the layer sat poorly on the range pilot, and the design allowed one revision from that pilot's residuals before the test. It was recorded with its reasons before refitting: the ceiling is left out of the fit, because in the simulator it is not the browser left to itself; the buffer is fitted in logarithms; and ages and spreads are fitted on stretches within twice the deadline. The fitted buffer has a base of \ReceiverLayerBase~ms, adds \ReceiverLayerPerLoad~ms per unit of rate over capacity and \ReceiverLayerPerQueue~ms per ms of queue delay, and falls with a time constant of \ReceiverLayerFall~s; \ReceiverLayerBufferLeft~ms of the buffer and \ReceiverLayerAgeLeft~ms of the age are left unexplained. Beside the range pilot, on quantities it was not fitted to, it puts the five levels in the native order (Table~\ref{tab:receiver-layer-levels}). Of the twenty comparisons of a level with 1.05 it has \ReceiverLayerInAgree{} agreements, \ReceiverLayerInDisagree{} disagreements and \ReceiverLayerInUnclear{} unclear, where the simulator as built had 4, 6 and 10, and it has the pilot's best level under \ReceiverLayerInBest{} of the four schedules.
+
+\begin{table}[t]
+\centering\small
+\input{generated-typed-native-receiver/receiver_layer_levels.tex}
+\caption{Synthetic. The simulator with the fitted receiver layer beside the native range pilot, from the second hold on, on quantities the layer was not fitted to. The ceiling was left out of the fit.}
+\label{tab:receiver-layer-levels}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\input{generated-typed-native-receiver/receiver_layer_arms.tex}
+\caption{Synthetic against native. The controller pilot's five arms in the simulator with the layer fitted on the range pilot, and natively, from the second change on.}
+\label{tab:receiver-layer-arms}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\input{generated-typed-native-receiver/receiver_layer_differences.tex}
+\caption{Synthetic against native. The controller pilot's ten differences of the endpoint over all schedules. A native difference is established when its 95\% interval excludes zero; a simulated one agrees when it has the same sign and is at least 0.5 in size, and is flat when it is smaller.}
+\label{tab:receiver-layer-differences}
+\end{table}
+
+The test ran the five arms of the controller pilot in the simulator with the fitted layer, the two rules through the same code that audited the native sessions, once (Tables~\ref{tab:receiver-layer-arms} and~\ref{tab:receiver-layer-differences}). By the rule fixed in advance, \ReceiverLayerVerdict. Of the \ReceiverLayerEstablished{} differences established natively over all schedules, \ReceiverLayerAgreeing{} agree and one, the fast ladder against the ladder, is \ReceiverLayerFastJudged{} (\ReceiverLayerFastSim{} against \ReceiverLayerFastNative): the simulator does not reproduce that cutting fast helps. The rest it reproduces. Both rules lie below both tuned fixed levels and above 1.05, all \ReceiverLayerInside{} simulated endpoints lie inside the native 95\% intervals, \ReceiverLayerLocalAgreeing{} of the \ReceiverLayerLocalEstablished{} differences established under single schedules agree, and neither rule steps up. With the buffer held at its base the same layer reverses \ReceiverLayerHeldDisagree{} of the established differences, so the pilot's order is carried by the buffer's rise and slow fall and not by the valuation. Over \ReceiverLayerReplicates{} replicates with path noise the agreeing differences agree in at least \ReceiverLayerRobustMin\% of the replicates, and the flat one in \ReceiverLayerRobustFast\%.
+
+The miss has a visible cause, which we give as a reading. In the simulator the estimate falls well below the new capacity at a drop and takes the encoder with it, so that a rule's own cut changes little; natively the arm at 1.05 went on offering most of the capacity. The simulated estimator is also off at a steady capacity, which it overshoots at 1.05, and with room, where it never reaches the top of the link. These are limits of the estimator, which the layer leaves as built. As the design says for this verdict, the synthetic track stays set aside for native claims. The layer was fitted on fixed levels and had seen no rule; that it places both rules correctly against the fixed levels suggests that the receiver's buffer is the main thing the simulator lacked and the estimator the next. Both pilots are now used, one for fitting and one for testing, so a further test of any revised layer needs native sessions it has not seen.
+\fi
+
 
 
 \ifdefined\TypedHeadFamilies
