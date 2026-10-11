@@ -277,6 +277,29 @@ def test_a_session_is_read_over_its_whole_length_and_from_the_second_hold_on(tmp
         pilot.session_outcomes(capture / "rp-s1-underutilized-l1")
 
 
+def test_a_request_captured_exactly_a_deadline_before_the_cutoff_belongs_to_the_session(tmp_path):
+    capture = invented_capture(tmp_path)
+    root = capture / "rp-s0-underutilized-l1"
+    before = pilot.session_outcomes(root)
+    sender = json.loads((root / "sender_observations.json").read_text())
+    derived = json.loads((root / "native_derived.json").read_text())
+    labels = derived["quality"]["source_labels"]
+    edge = dict(
+        labels[-1], capture_request_ms=sender["measurement_cutoff_ms"] - 150
+    )  # as the audit labels it
+    labels.append(edge)
+    (root / "native_derived.json").write_text(json.dumps(derived))
+    native = json.loads((root / "native_row.json").read_text())
+    native.update(
+        utility=sum(x["ontime_sampled_psnr_contribution"] for x in labels) / len(labels),
+        ontime_fraction=sum(x["identifiable_ontime"] for x in labels) / len(labels),
+    )
+    (root / "native_row.json").write_text(json.dumps(native))
+    after = pilot.session_outcomes(root)  # the reader's own check passes: the edge request is counted
+    assert after["session"]["requests"] == before["session"]["requests"] + 1 == len(labels)
+    assert after["after_startup"]["requests"] == before["after_startup"]["requests"] + 1
+
+
 def test_report_compares_every_level_with_the_reference_within_source_and_schedule(tmp_path):
     capture = invented_capture(tmp_path, skip={("s2", "queue-building", 0)})
     sessions, made = pilot.collect(capture)

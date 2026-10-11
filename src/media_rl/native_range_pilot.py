@@ -54,6 +54,9 @@ ASSETS = ("range_control.mjs", "range_episode.mjs")
 ORDER_SEED = 20261010
 TIMEOUT_S = 90
 ATTEMPTS = 2  # a session that fails is run once more at the end
+EDGE_MS = (
+    0.001  # the audit labels a request captured exactly a deadline before the cutoff; clocks tick in 0.1 ms
+)
 RECIPE = {
     **copy.deepcopy(physical.RECIPE),
     "abi": ABI + "_measurement",
@@ -381,10 +384,20 @@ def _labels(path):
 
 
 def span_outcomes(start, labels, timing, sender, phases, packets, offset):
-    """One span of a session, from ``start`` to where labels stop: the endpoint, timing and rate."""
-    stop = sender["cutoff"] - control.DEADLINE_MS
+    """One span of a session, from ``start`` to where labels stop: the endpoint, timing and rate.
+
+    The last labelled request can be captured exactly one deadline before the cutoff, so the
+    span ends a microsecond after that instant.
+    """
+    stop = sender["cutoff"] - control.DEADLINE_MS + EDGE_MS
     out = delivery.window_delivery(
-        dict(ack_ms=start), (0, stop - start), timing, sender, phases, packets, offset
+        dict(ack_ms=start),
+        (0, stop - start),
+        timing,
+        dict(sender, cutoff=sender["cutoff"] + 2 * EDGE_MS),  # so that the span above is not cut short
+        phases,
+        packets,
+        offset,
     )
     asked = (labels["at"] >= start) & (labels["at"] < stop)
     made = (sender["encoded_at"] >= start) & (sender["encoded_at"] < stop)
