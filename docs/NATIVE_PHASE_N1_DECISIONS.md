@@ -330,3 +330,22 @@ What the agent would put to the owner next, none of it decided:
   sources. B1's 74 candidates are the only fresh sources in sight, and they are B1's. Whether
   such a test is registered beside B1, after it, or instead of some of it is the owner's call.
 - The capture of this pilot is 4.1 GB on local disk and is not in the archive.
+
+## 16. A first controller pilot, approved (2026-10-11)
+
+After the [headroom pass](NATIVE_RANGE_PILOT_HEADROOM_V1.md) the agent wrote down two
+rule-based candidates, built their harness as new files, smoke-tested it with five short
+sessions on used sources and committed the design
+([NATIVE_LADDER_PILOT_V1.md](NATIVE_LADDER_PILOT_V1.md), `56ad933`) before asking. The
+question to the owner described a rule that moves among four ratios of the estimate by the age
+of the presentation feedback, with a variant that cuts faster, to be run against the tuned
+fixed levels 0.25 and 0.65 and against 1.05 on N1's twelve used sources: the first native test
+of a controller against a tuned baseline here, development-grade, design already committed,
+new harness files only, B1 untouched.
+
+The owner chose **"Yes, two repetitions"**: 480 sessions, about 6.4 hours of capture, about
+8 GB. The other options were one repetition, and to hold it.
+
+What this allows: that one capture, on N1's twelve used sources only. The marks of the rules
+stay as committed. Whatever it finds is development evidence; it cannot promote a controller,
+and a confirmatory test on fresh sources would be a further decision of the owner's.
