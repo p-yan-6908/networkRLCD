@@ -425,3 +425,19 @@ the capture go-ahead with the measured cost.
 What this allows: a design, new harness files beside the frozen ones, short smoke tests under
 the standing permission, and a committed forecast. **It does not allow the capture**, which is
 a further decision of the owner's.
+
+## 19. The long-session pilot's capture, approved (2026-10-11)
+
+The agent returned with the design ([NATIVE_MARGIN_PILOT_V1.md](NATIVE_MARGIN_PILOT_V1.md),
+`7989a65`), the measured cost of a session (74 s, 54 MB) and the simulator's forecast, committed
+beforehand (`422afca`): the rule about level with both tuned fixed levels, 28.4 against 27.9
+and 28.0, so that the capture would most likely not show a winning controller. What it would
+give was described as a blind test of the simulator's receiver layer and the first native
+record of one-minute sessions with recurring drops.
+
+The owner chose **"Yes, one repetition"**: 192 sessions, about 4 hours of capture, about
+10.4 GB. The other options were two repetitions, which would have needed the two earlier
+captures archived first, and not to capture.
+
+What this allows: that one capture, on N1's twelve used sources only, with the rule and the
+schedules as committed. Plan sha256 `74c04c483ed88e19ffc31d6494afb63c004b12ea668def36ca6df1df13d0f0ae`. Whatever it finds is development evidence.
