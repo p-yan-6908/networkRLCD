@@ -102,4 +102,71 @@ uv run --frozen python -m media_rl.native_range_pilot_headroom \
 
 ## Results
 
-Not yet computed when this was committed.
+Run on 2026-10-11 from the design committed as `3dd7e08`, on all 240 sessions. Every session's
+holds from the second on add up to the utility the pilot's report has for it. Report:
+`results/native-range-pilot-v1-report/headroom.json`. Brackets are 95% t intervals over the
+twelve sources.
+
+### 1 to 3. A tuned fixed level and what could be added to it
+
+| Plan | Utility, one source left out | Difference | Utility, in sample |
+|---|---:|---|---:|
+| 1.05, the reference | 21.44 | | 21.44 |
+| a tuned fixed level | 25.68 | from 1.05: +4.24 [+1.40, +7.08] | 26.60 |
+| a level per schedule | 28.24 | from the tuned fixed level: +2.56 [+0.51, +4.61] | 28.72 |
+| a level per schedule and hold, stitched | 28.92 | from a level per schedule: +0.68 [-0.41, +1.77] | 29.58 |
+
+- **Tuning the fixed level pays out of sample.** The level is 0.25 in ten folds and 0.65 in
+  two. Leaving the scored source out costs about a fifth of the in-sample gain (5.16 to 4.24).
+- **Knowing the schedule adds to a tuned fixed level,** by about a tenth of it. The choice is
+  the same in nearly every fold: 0.85 with room and 0.25 under both schedules with a drop in
+  all twelve, 0.65 under near-capacity in eleven.
+- **Switching by hold is not established,** and its figure is the stitched one. In sample it
+  would take 1.05 in the second hold under every schedule, 0.25 from the hold of a drop on,
+  and with room 1.05 until the fourth hold and 0.85 after.
+
+### 4. What the sender can see as a hold begins
+
+Separation of holds with room from holds under a constrained schedule; 0.5 is none.
+
+| Level | Estimate growth | Feedback age | Round-trip time | Holds B1's flag marks: room / constrained |
+|---|---|---|---|---|
+| 0.25 | 0.51 [0.48, 0.54] | 0.86 [0.79, 0.92] | 0.73 [0.66, 0.80] | 78% / 75% to 78% |
+| 0.65 | 0.60 [0.57, 0.64] | 0.86 [0.80, 0.92] | 0.83 [0.76, 0.89] | 50% / 55% to 62% |
+| 0.85 | 0.68 [0.64, 0.73] | 0.84 [0.76, 0.91] | 0.84 [0.79, 0.90] | 3% / 23% to 28% |
+| 1.05 | 0.73 [0.71, 0.76] | 0.78 [0.72, 0.83] | 0.70 [0.61, 0.79] | 3% / 33% to 45% |
+| ceiling | 0.55 [0.51, 0.58] | 0.55 [0.41, 0.69] | 0.59 [0.47, 0.71] | 65% / 37% to 57% |
+
+Median feedback age with room and under constraint: 95 and 114 ms at 0.25, 100 and 131 ms at
+0.65, 110 and 153 ms at 0.85, 120 and 159 ms at 1.05.
+
+- **Held at a quarter of its estimate, a sender cannot learn from the estimate that there is
+  room.** The estimate stands still under every schedule (median growth 1.00), so its growth
+  separates nothing and B1's flag marks three quarters of all holds whatever the schedule.
+- **The age of the presentation feedback tells the two apart at every ratio level,** and best
+  at the low ones. The round-trip time does too, more weakly at the ends.
+- **The estimate's growth tells them apart only where the cap lets the estimate move,** at
+  0.85 and 1.05. That is where B1's flag works as intended: 3% of holds with room against a
+  quarter to a half under constraint.
+- **Under the ceiling no signal tells much.**
+
+## Reading
+
+- **The baseline to beat.** A fixed level chosen on other sources is worth about 20% over
+  1.05 on the source left out. That, not 1.05, is the fair comparator for a controller on this
+  endpoint, and the level it lands on is the low end of the range.
+- **The prize for a controller.** Telling the schedules apart perfectly would add about 10%
+  to the tuned fixed level. That is a bound from a label a sender does not have. A rule acting
+  on a noisy signal would get part of it and pays for its mistakes.
+- **Which case of the three fixed above.** The second: knowing the schedule adds, and a signal
+  tells the states apart at the levels involved, the lowest included. A simple rule-based
+  controller is worth writing down as a candidate and testing against the tuned fixed level.
+- **A caution about the signal.** The feedback age comes from this harness's own
+  presentation acknowledgements, sent by the receiver over the impaired path. A deployed
+  sender has it only if the application's receiver reports it. The round-trip time is a
+  standard statistic and separates less well at the lowest level.
+- **What stays unknown.** Whether a sender that changes level arrives where a sender kept at
+  that level is: no session here switched. Whether the separation survives on sources that did
+  not suggest it. And the schedules are four scripts.
+
+Nothing here is confirmatory, no controller was run, and nothing is promoted.

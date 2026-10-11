@@ -300,7 +300,9 @@ recorded in `supplement.json`. From the second hold on.
   the browser left under its ceiling. It is a lower fixed ratio, between a quarter and two
   thirds of the estimate, as the fixed caps of the earlier diagnostics suggested. A controller
   has to beat that, and the hindsight figure above puts what a schedule-aware choice could add
-  at about 8%.
+  at about 8%. *Followed up in the [headroom pass](NATIVE_RANGE_PILOT_HEADROOM_V1.md):* chosen
+  without the source it is scored on, the tuned fixed level is +4.24 [+1.40, +7.08] over 1.05
+  and a level per schedule adds +2.56 [+0.51, +4.61] to it.
 - **For the simulator.** The simulator orders the fixed ratios the other way round: its
   train-selected fixed ratio is 1.05, and its forecast for B1 is that backing off lowers the
   quality term by about 12%. The forecast is of B1's per-hold contrast and B1 has not run, so

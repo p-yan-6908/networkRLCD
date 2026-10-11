@@ -1,0 +1,705 @@
+{
+ "abi": "native_range_pilot_v1_headroom",
+ "confirmatory": false,
+ "development_pilot": true,
+ "exploratory": true,
+ "learned_controller_promoted": false,
+ "models_fitted": 0,
+ "pilot_sessions_sha256": "6e541ce74cb2919b1d4ef9112b5fce79efb33c66abaeb4f159b244debd854e16",
+ "plans": {
+  "in_sample": {
+   "fixed_minus_reference": {
+    "interval95": [
+     2.2525619741142497,
+     8.060418630172517
+    ],
+    "mean": 5.156490302143383,
+    "p_value": 0.002441556010279662,
+    "sources": 12
+   },
+   "schedule_aware_minus_fixed": {
+    "interval95": [
+     0.9462299966423526,
+     3.2968014692583667
+    ],
+    "mean": 2.1215157329503596,
+    "p_value": 0.0021847959720490873,
+    "sources": 12
+   },
+   "switching_minus_fixed": {
+    "interval95": [
+     1.833898532748492,
+     4.12911750966821
+    ],
+    "mean": 2.981508021208351,
+    "p_value": 0.00013452796911967365,
+    "sources": 12
+   },
+   "switching_minus_schedule_aware": {
+    "interval95": [
+     0.2647645727761184,
+     1.455220003739865
+    ],
+    "mean": 0.8599922882579918,
+    "p_value": 0.00876100426462448,
+    "sources": 12
+   },
+   "utility": {
+    "fixed": {
+     "interval95": [
+      22.414533628550235,
+      30.783062454554386
+     ],
+     "mean": 26.59879804155231,
+     "p_value": 2.3659863672299517e-08,
+     "sources": 12
+    },
+    "reference": {
+     "interval95": [
+      16.213372195474975,
+      26.671243283342882
+     ],
+     "mean": 21.44230773940893,
+     "p_value": 2.0387211514123227e-06,
+     "sources": 12
+    },
+    "schedule_aware": {
+     "interval95": [
+      25.152670615620817,
+      32.28795693338452
+     ],
+     "mean": 28.72031377450267,
+     "p_value": 1.9517618458648985e-09,
+     "sources": 12
+    },
+    "switching_by_hold": {
+     "interval95": [
+      26.030116577559046,
+      33.13049554796227
+     ],
+     "mean": 29.580306062760656,
+     "p_value": 1.3521376611169558e-09,
+     "sources": 12
+    }
+   }
+  },
+  "leaving_one_source_out": {
+   "fixed_minus_reference": {
+    "interval95": [
+     1.4027677329958896,
+     7.077194279662371
+    ],
+    "mean": 4.23998100632913,
+    "p_value": 0.007215084281915832,
+    "sources": 12
+   },
+   "schedule_aware_minus_fixed": {
+    "interval95": [
+     0.5084292066891516,
+     4.609816351266417
+    ],
+    "mean": 2.5591227789777844,
+    "p_value": 0.01900325536967678,
+    "sources": 12
+   },
+   "switching_minus_fixed": {
+    "interval95": [
+     1.7950330267561219,
+     4.68956755385614
+    ],
+    "mean": 3.242300290306131,
+    "p_value": 0.0004490608503074326,
+    "sources": 12
+   },
+   "switching_minus_schedule_aware": {
+    "interval95": [
+     -0.4054410519874837,
+     1.7717960746441772
+    ],
+    "mean": 0.6831775113283468,
+    "p_value": 0.19461257064180312,
+    "sources": 12
+   },
+   "utility": {
+    "fixed": {
+     "interval95": [
+      21.20246330899115,
+      30.162114182484956
+     ],
+     "mean": 25.682288745738052,
+     "p_value": 6.931159376794801e-08,
+     "sources": 12
+    },
+    "reference": {
+     "interval95": [
+      16.213372195474975,
+      26.671243283342882
+     ],
+     "mean": 21.44230773940893,
+     "p_value": 2.0387211514123227e-06,
+     "sources": 12
+    },
+    "schedule_aware": {
+     "interval95": [
+      24.715932318957673,
+      31.766890730474007
+     ],
+     "mean": 28.24141152471584,
+     "p_value": 2.0569439255443578e-09,
+     "sources": 12
+    },
+    "switching_by_hold": {
+     "interval95": [
+      25.274602872661927,
+      32.57457519942644
+     ],
+     "mean": 28.924589036044186,
+     "p_value": 2.307763737401735e-09,
+     "sources": 12
+    }
+   }
+  },
+  "levels_chosen_in_sample": {
+   "fixed": "0.25",
+   "schedule_aware": {
+    "collapse-recovery": "0.25",
+    "near-capacity": "0.65",
+    "queue-building": "0.25",
+    "underutilized": "0.85"
+   },
+   "switching_by_hold": {
+    "collapse-recovery": {
+     "2": "1.05",
+     "3": "0.25",
+     "4": "0.25",
+     "5": "0.25",
+     "6": "0.25"
+    },
+    "near-capacity": {
+     "2": "1.05",
+     "3": "0.85",
+     "4": "ceiling",
+     "5": "0.65",
+     "6": "0.65"
+    },
+    "queue-building": {
+     "2": "1.05",
+     "3": "0.25",
+     "4": "0.25",
+     "5": "0.25",
+     "6": "0.25"
+    },
+    "underutilized": {
+     "2": "1.05",
+     "3": "1.05",
+     "4": "1.05",
+     "5": "0.85",
+     "6": "0.85"
+    }
+   }
+  },
+  "levels_chosen_in_the_folds": {
+   "fixed": {
+    "0.25": 10,
+    "0.65": 2,
+    "0.85": 0,
+    "1.05": 0,
+    "ceiling": 0
+   },
+   "schedule_aware": {
+    "collapse-recovery": {
+     "0.25": 12,
+     "0.65": 0,
+     "0.85": 0,
+     "1.05": 0,
+     "ceiling": 0
+    },
+    "near-capacity": {
+     "0.25": 0,
+     "0.65": 11,
+     "0.85": 0,
+     "1.05": 0,
+     "ceiling": 1
+    },
+    "queue-building": {
+     "0.25": 12,
+     "0.65": 0,
+     "0.85": 0,
+     "1.05": 0,
+     "ceiling": 0
+    },
+    "underutilized": {
+     "0.25": 0,
+     "0.65": 0,
+     "0.85": 12,
+     "1.05": 0,
+     "ceiling": 0
+    }
+   }
+  }
+ },
+ "reading": {
+  "knowing_the_schedule_adds_to_a_tuned_fixed_level": true,
+  "signals_that_tell_room_from_constraint": {
+   "0.25": [
+    "feedback_age_ms",
+    "rtt_ms"
+   ],
+   "0.65": [
+    "estimate_growth",
+    "feedback_age_ms",
+    "rtt_ms"
+   ],
+   "0.85": [
+    "estimate_growth",
+    "feedback_age_ms",
+    "rtt_ms"
+   ],
+   "1.05": [
+    "estimate_growth",
+    "feedback_age_ms",
+    "rtt_ms"
+   ],
+   "ceiling": [
+    "estimate_growth"
+   ]
+  },
+  "switching_by_hold_could_add_more_at_best": false,
+  "tuning_the_fixed_level_pays_out_of_sample": true
+ },
+ "reference_level": "1.05",
+ "sessions": 240,
+ "signals": {
+  "0.25": {
+   "flagged_share_by_schedule": {
+    "collapse-recovery": {
+     "interval95": [
+      0.6925286493806957,
+      0.8074713506193043
+     ],
+     "mean": 0.75,
+     "p_value": 1.0699014747297831e-11,
+     "sources": 12
+    },
+    "near-capacity": {
+     "interval95": [
+      0.746650247331806,
+      0.8200164193348607
+     ],
+     "mean": 0.7833333333333333,
+     "p_value": 4.954703490819796e-14,
+     "sources": 12
+    },
+    "queue-building": {
+     "interval95": [
+      0.7178993221945319,
+      0.8487673444721348
+     ],
+     "mean": 0.7833333333333333,
+     "p_value": 2.729109816743877e-11,
+     "sources": 12
+    },
+    "underutilized": {
+     "interval95": [
+      0.7178993221945319,
+      0.8487673444721348
+     ],
+     "mean": 0.7833333333333333,
+     "p_value": 2.729109816743877e-11,
+     "sources": 12
+    }
+   },
+   "median_by_state": {
+    "estimate_growth": {
+     "constrained": 1.0,
+     "room": 1.0007619028425525
+    },
+    "feedback_age_ms": {
+     "constrained": 113.9138392843109,
+     "room": 94.51524470947565
+    },
+    "rtt_ms": {
+     "constrained": 55.54473148148147,
+     "room": 54.83723148148149
+    }
+   },
+   "separation": {
+    "estimate_growth": {
+     "interval95": [
+      0.4792295548919797,
+      0.5363260006635758
+     ],
+     "mean": 0.5077777777777778,
+     "p_value": 3.6597228519918573e-13,
+     "sources": 12,
+     "tells_room_from_constraint": false
+    },
+    "feedback_age_ms": {
+     "interval95": [
+      0.7935213841945508,
+      0.9242563935832266
+     ],
+     "mean": 0.8588888888888887,
+     "p_value": 9.93390376467084e-12,
+     "sources": 12,
+     "tells_room_from_constraint": true
+    },
+    "rtt_ms": {
+     "interval95": [
+      0.6574723260719153,
+      0.8025276739280847
+     ],
+     "mean": 0.73,
+     "p_value": 1.7797869276035407e-10,
+     "sources": 12,
+     "tells_room_from_constraint": true
+    }
+   }
+  },
+  "0.65": {
+   "flagged_share_by_schedule": {
+    "collapse-recovery": {
+     "interval95": [
+      0.49837704557998264,
+      0.6682896210866841
+     ],
+     "mean": 0.5833333333333334,
+     "p_value": 1.0533752340481626e-08,
+     "sources": 12
+    },
+    "near-capacity": {
+     "interval95": [
+      0.5317103789133159,
+      0.7016229544200173
+     ],
+     "mean": 0.6166666666666666,
+     "p_value": 5.858687077110182e-09,
+     "sources": 12
+    },
+    "queue-building": {
+     "interval95": [
+      0.439950741995418,
+      0.6600492580045818
+     ],
+     "mean": 0.5499999999999999,
+     "p_value": 2.830028134097917e-07,
+     "sources": 12
+    },
+    "underutilized": {
+     "interval95": [
+      0.4143267688376739,
+      0.5856732311623261
+     ],
+     "mean": 0.49999999999999994,
+     "p_value": 5.761528381478973e-08,
+     "sources": 12
+    }
+   },
+   "median_by_state": {
+    "estimate_growth": {
+     "constrained": 1.035233437515795,
+     "room": 1.0531377666197472
+    },
+    "feedback_age_ms": {
+     "constrained": 131.19120371866006,
+     "room": 99.87858795512606
+    },
+    "rtt_ms": {
+     "constrained": 56.45282407407407,
+     "room": 54.672138888888895
+    }
+   },
+   "separation": {
+    "estimate_growth": {
+     "interval95": [
+      0.5650860710975494,
+      0.6371361511246727
+     ],
+     "mean": 0.601111111111111,
+     "p_value": 7.353519165753339e-13,
+     "sources": 12,
+     "tells_room_from_constraint": true
+    },
+    "feedback_age_ms": {
+     "interval95": [
+      0.8048637125754359,
+      0.9173585096467862
+     ],
+     "mean": 0.861111111111111,
+     "p_value": 1.8813709988856325e-12,
+     "sources": 12,
+     "tells_room_from_constraint": true
+    },
+    "rtt_ms": {
+     "interval95": [
+      0.759425923033128,
+      0.8905740769668724
+     ],
+     "mean": 0.8250000000000002,
+     "p_value": 1.5918837856074858e-11,
+     "sources": 12,
+     "tells_room_from_constraint": true
+    }
+   }
+  },
+  "0.85": {
+   "flagged_share_by_schedule": {
+    "collapse-recovery": {
+     "interval95": [
+      0.2178993221945319,
+      0.34876734447213475
+     ],
+     "mean": 0.2833333333333333,
+     "p_value": 1.1929378895173497e-06,
+     "sources": 12
+    },
+    "near-capacity": {
+     "interval95": [
+      0.15674165163906814,
+      0.4099250150275986
+     ],
+     "mean": 0.2833333333333334,
+     "p_value": 0.0004524054008922876,
+     "sources": 12
+    },
+    "queue-building": {
+     "interval95": [
+      0.1838698702594194,
+      0.28279679640724736
+     ],
+     "mean": 0.2333333333333334,
+     "p_value": 5.073419458458452e-07,
+     "sources": 12
+    },
+    "underutilized": {
+     "interval95": [
+      -0.040032838669721287,
+      0.10669950533638795
+     ],
+     "mean": 0.03333333333333333,
+     "p_value": 0.33880069619620184,
+     "sources": 12
+    }
+   },
+   "median_by_state": {
+    "estimate_growth": {
+     "constrained": 1.1349473623589634,
+     "room": 1.2167247273182789
+    },
+    "feedback_age_ms": {
+     "constrained": 153.19134259875173,
+     "room": 109.86122685864017
+    },
+    "rtt_ms": {
+     "constrained": 57.41126851851851,
+     "room": 54.75613888888889
+    }
+   },
+   "separation": {
+    "estimate_growth": {
+     "interval95": [
+      0.6355595253967834,
+      0.7299960301587718
+     ],
+     "mean": 0.6827777777777776,
+     "p_value": 3.5041084911367747e-12,
+     "sources": 12,
+     "tells_room_from_constraint": true
+    },
+    "feedback_age_ms": {
+     "interval95": [
+      0.7637688129414272,
+      0.9140089648363502
+     ],
+     "mean": 0.8388888888888887,
+     "p_value": 5.7947770978404256e-11,
+     "sources": 12,
+     "tells_room_from_constraint": true
+    },
+    "rtt_ms": {
+     "interval95": [
+      0.785714464908618,
+      0.9031744239802709
+     ],
+     "mean": 0.8444444444444444,
+     "p_value": 3.7269060264748045e-12,
+     "sources": 12,
+     "tells_room_from_constraint": true
+    }
+   }
+  },
+  "1.05": {
+   "flagged_share_by_schedule": {
+    "collapse-recovery": {
+     "interval95": [
+      0.28256859821262026,
+      0.48409806845404646
+     ],
+     "mean": 0.38333333333333336,
+     "p_value": 4.223934039947883e-06,
+     "sources": 12
+    },
+    "near-capacity": {
+     "interval95": [
+      0.23440640718550534,
+      0.4322602594811613
+     ],
+     "mean": 0.3333333333333333,
+     "p_value": 1.3325045262573127e-05,
+     "sources": 12
+    },
+    "queue-building": {
+     "interval95": [
+      0.3399507419954181,
+      0.5600492580045819
+     ],
+     "mean": 0.45,
+     "p_value": 2.0961583670088055e-06,
+     "sources": 12
+    },
+    "underutilized": {
+     "interval95": [
+      -0.016130129740580645,
+      0.08279679640724731
+     ],
+     "mean": 0.03333333333333333,
+     "p_value": 0.1660868135182955,
+     "sources": 12
+    }
+   },
+   "median_by_state": {
+    "estimate_growth": {
+     "constrained": 1.1144145405135792,
+     "room": 1.9714631008390164
+    },
+    "feedback_age_ms": {
+     "constrained": 159.38724867882868,
+     "room": 119.53078704603293
+    },
+    "rtt_ms": {
+     "constrained": 58.254259259259264,
+     "room": 55.811453703703705
+    }
+   },
+   "separation": {
+    "estimate_growth": {
+     "interval95": [
+      0.7113605665971775,
+      0.7553061000694893
+     ],
+     "mean": 0.7333333333333334,
+     "p_value": 3.6998541712305096e-16,
+     "sources": 12,
+     "tells_room_from_constraint": true
+    },
+    "feedback_age_ms": {
+     "interval95": [
+      0.7224671085082262,
+      0.8308662248251073
+     ],
+     "mean": 0.7766666666666667,
+     "p_value": 3.867059986098525e-12,
+     "sources": 12,
+     "tells_room_from_constraint": true
+    },
+    "rtt_ms": {
+     "interval95": [
+      0.6058399897194323,
+      0.7852711213916789
+     ],
+     "mean": 0.6955555555555556,
+     "p_value": 2.9132580307920805e-09,
+     "sources": 12,
+     "tells_room_from_constraint": true
+    }
+   }
+  },
+  "ceiling": {
+   "flagged_share_by_schedule": {
+    "collapse-recovery": {
+     "interval95": [
+      0.4512326555278653,
+      0.5821006778054681
+     ],
+     "mean": 0.5166666666666667,
+     "p_value": 2.3982424816396747e-09,
+     "sources": 12
+    },
+    "near-capacity": {
+     "interval95": [
+      0.2605793572247901,
+      0.4727539761085433
+     ],
+     "mean": 0.3666666666666667,
+     "p_value": 1.0507996101859914e-05,
+     "sources": 12
+    },
+    "queue-building": {
+     "interval95": [
+      0.4933004946636119,
+      0.6400328386697212
+     ],
+     "mean": 0.5666666666666665,
+     "p_value": 3.0319888917756716e-09,
+     "sources": 12
+    },
+    "underutilized": {
+     "interval95": [
+      0.5710131836499004,
+      0.7289868163500994
+     ],
+     "mean": 0.6499999999999999,
+     "p_value": 1.543765576803371e-09,
+     "sources": 12
+    }
+   },
+   "median_by_state": {
+    "estimate_growth": {
+     "constrained": 1.051329977036465,
+     "room": 1.0162721755735216
+    },
+    "feedback_age_ms": {
+     "constrained": 170.2540013109723,
+     "room": 222.8964285497312
+    },
+    "rtt_ms": {
+     "constrained": 63.9964398148148,
+     "room": 61.56722222222223
+    }
+   },
+   "separation": {
+    "estimate_growth": {
+     "interval95": [
+      0.5135593848043563,
+      0.5797739485289772
+     ],
+     "mean": 0.5466666666666667,
+     "p_value": 8.244813298986163e-13,
+     "sources": 12,
+     "tells_room_from_constraint": true
+    },
+    "feedback_age_ms": {
+     "interval95": [
+      0.414685973948245,
+      0.6875362482739772
+     ],
+     "mean": 0.5511111111111111,
+     "p_value": 2.3605988898124206e-06,
+     "sources": 12,
+     "tells_room_from_constraint": false
+    },
+    "rtt_ms": {
+     "interval95": [
+      0.47084175874074363,
+      0.7124915745925897
+     ],
+     "mean": 0.5916666666666667,
+     "p_value": 3.479795639572644e-07,
+     "sources": 12,
+     "tells_room_from_constraint": false
+    }
+   }
+  }
+ },
+ "sources": 12
+}
