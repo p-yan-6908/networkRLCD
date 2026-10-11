@@ -284,3 +284,31 @@ a go-ahead, and the pilot goes back to the owner with the corrected facts.
   side of N1's existing capture first, which needs no capture and no go-ahead.
 
 The second answer does not depend on the false statement and stands. It has not been used.
+
+## 15. A wide-range development pilot, approved with the corrected facts (2026-10-10)
+
+After the [delivery pass](NATIVE_PHASE_N1_DELIVERY.md) the agent went back to the owner with
+the corrected facts: the uncapped browser had been measured in earlier diagnostics and did
+worst; in N1 frames miss the deadline mainly in the receiver's buffer; the schedule sets that;
+and ratios 0.65 to 1.05 barely move it. Asked what should happen while B1 waits for the
+reviewed CSV, the owner chose **"Wide-range pilot"**, as the agent described it:
+
+> Development pilot, not confirmatory: whole sessions held at five levels, from a quarter of
+> the estimate up to the browser under the 4 Mbit/s ceiling, on the four schedules and N1's
+> twelve already-used sources. About 240 sessions, 4.4 hours of capture, 4.5 GB, no download.
+> Asks whether any cap level moves on-time delivery here, which B1's narrow contrast cannot
+> show. Design committed before capture; new harness files only; nothing frozen changes.
+> Choosing this is the go-ahead for that capture.
+
+The other options were to capture nothing until B1, and the original pilot of section 14.
+
+What this does and does not allow:
+
+- One capture of about that size, on N1's twelve used sources only. N1's nine reserve sources
+  stay reserved to N1 and B1's candidates are not touched.
+- New harness files. The four N1 files, the 31 controller files and the four B1 files stay as
+  frozen.
+- The design is committed before the capture, and the pilot is labelled development evidence
+  wherever it appears. It promotes nothing and changes nothing in B1.
+- The exact levels are the agent's to fix in the design. Short smoke tests (section 14) may be
+  used to check the new harness and the rates the levels realise, not to look at outcomes.
