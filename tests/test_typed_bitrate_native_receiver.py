@@ -261,12 +261,10 @@ def test_the_fit_recovers_a_layer_from_sessions_the_simulator_made_itself():
     assert (fitted.s0, fitted.s1, fitted.return_ms) == pytest.approx((8.0, 0.1, 30.0))
     assert fitted.c0 + 0.5 * fitted.cu == pytest.approx(25.0, abs=3)  # a median against a mean: about right
     assert fitted.rate_kbps == truth.rate_kbps and fitted.psnr_db == truth.psnr_db
-    assert (
-        stages["buffer"]["cells"] == 60
-        and stages["buffer"]["rms_ms"] < 1
-        and not any(stages["buffer"]["at_a_bound"])
-    )
-    assert stages["age"]["cells"] > 100 and stages["spread"]["rms_ms"] < 1e-6
+    assert stages["buffer"]["cells"] == 48 and stages["buffer"]["rms_log"] < 0.02  # four ratios, three phases
+    assert stages["buffer"]["rms_ms"] < 1 and not any(stages["buffer"]["at_a_bound"])
+    assert 60 < stages["age"]["cells"] <= 96 and stages["spread"]["rms_ms"] < 1e-6
+    assert stages["spread"]["points"] == sum(age <= 300 for age in range(60, 400, 20))
     assert beside["comparisons"]["disagrees"] == 0 and beside["schedules_with_the_same_best_level"] == 4
     one = beside["levels"]["utility"]["0.65"]
     assert one["simulated"] == pytest.approx(one["native"], abs=1.0)

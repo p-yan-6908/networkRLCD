@@ -37,6 +37,8 @@ BIN_MS, BINS, PHASES = ladder.BIN_MS, ladder.BINS, ladder.PHASES
 REFERENCE = "1.05"
 MINIMUM = 0.5  # a simulated difference of the endpoint counts as a difference from this size on
 MIN_SPREAD_MS = 5.0
+FITTED = LEVELS[:-1]  # the four ratios; in the simulator the ceiling is not the browser left to itself
+NEAR_MS = 2 * DEADLINE_MS  # ages and spreads are fitted on stretches within twice the deadline
 BUFFER_START = (15.0, 60.0, 0.3, 10.0)  # b0 ms, gu ms, gq, tau s
 BUFFER_BOUNDS = ((0.0, 0.0, 0.0, 0.5), (60.0, 300.0, 3.0, 120.0))
 SPANS = ("after_startup", "session")  # the span of the verdict, and the one reported beside it
@@ -348,12 +350,16 @@ def over_schedules(made, span, quantity):
 
 
 def fit(seen, native, config, settings):
-    """The six stages of the design, on the range pilot only, and how the fitted layer sits on it."""
+    """The six stages of the design as revised, on the range pilot only, and how the layer sits on it.
+
+    Stages 1, 3 and 4 use the four ratio levels; stage 3 fits the buffer in logarithms; stages 4
+    and 5 use stretches whose native median age is within twice the deadline.
+    """
     cells = seen["cells"]
     if set(cells) != set(LEVELS) or any(set(own) != set(REGIMES) for own in cells.values()):
         raise ValueError("targets for every level and schedule of the range pilot are required")
     e0 = float(
-        np.mean([cells[level][regime]["estimate_hold2_bps"] for level in LEVELS for regime in REGIMES])
+        np.mean([cells[level][regime]["estimate_hold2_bps"] for level in FITTED for regime in REGIMES])
     )
     later = native["all_schedules"]["after_startup"]
     tables = {
@@ -372,13 +378,13 @@ def fit(seen, native, config, settings):
     # What a fixed level sends does not depend on the receiver, so one run a cell serves stage 3.
     drafts = {
         (level, regime): run(config, mirror(schedule, config, settings["relay"]), LEVEL_POLICIES[level], layer(*BUFFER_START))["steps"]
-        for level in LEVELS
+        for level in FITTED
         for regime, schedule in REGIMES.items()
     }  # fmt: skip
     edges = {regime: np.cumsum([0.0] + [ms for _, _, ms in schedule]) for regime, schedule in REGIMES.items()}
     wanted = [
         (level, regime, k, cells[level][regime]["phases"]["jitter_buffer_ms"][k])
-        for level in LEVELS
+        for level in FITTED
         for regime in REGIMES
         for k in range(len(PHASES))
         if cells[level][regime]["phases"]["jitter_buffer_ms"][k] is not None
@@ -391,40 +397,51 @@ def fit(seen, native, config, settings):
             out.append(buffer)
         return np.array(out)
 
-    def left(x):
-        held = {key: buffers(steps, *x) for key, steps in drafts.items()}
+    def held(x):
+        """The simulated buffer of each wanted cell and phase, over the frames shown."""
+        made = {key: buffers(steps, *x) for key, steps in drafts.items()}
         out = []
-        for level, regime, k, value in wanted:
+        for level, regime, k, _ in wanted:
             steps, low, high = drafts[(level, regime)], edges[regime][k], edges[regime][k + 1]
             keep = (steps["now"] >= low) & (steps["now"] < high)
-            mine = _mean(held[(level, regime)][keep], steps["shown"][keep])
-            out.append((held[(level, regime)][keep].mean() if mine is None else mine) - value)
+            mine = _mean(made[(level, regime)][keep], steps["shown"][keep])
+            out.append(made[(level, regime)][keep].mean() if mine is None else mine)
         return np.array(out)
 
-    solved = least_squares(left, BUFFER_START, bounds=BUFFER_BOUNDS)
+    measured = np.array([value for *_, value in wanted])
+    solved = least_squares(
+        lambda x: np.log(np.maximum(held(x), 1e-3)) - np.log(measured), BUFFER_START, bounds=BUFFER_BOUNDS
+    )
     b0, gu, gq, tau = (float(v) for v in solved.x)
-    made = exact(config, settings, LEVEL_POLICIES, layer(b0, gu, gq, tau))
+    made = exact(config, settings, {level: LEVEL_POLICIES[level] for level in FITTED}, layer(b0, gu, gq, tau))
     ages = [
         (own["load"], cells[level][regime]["bins"]["age_median_ms"][k] - own["delay_and_buffer_ms"])
-        for level in LEVELS
+        for level in FITTED
         for regime in REGIMES
         for k, own in enumerate(made[level][regime]["bins"])
         if own["delay_and_buffer_ms"] is not None
         and cells[level][regime]["bins"]["age_median_ms"][k] is not None
+        and cells[level][regime]["bins"]["age_median_ms"][k] <= NEAR_MS
     ]
     c0, cu, age_rms = _line(*zip(*ages, strict=True))
-    s0, s1, spread_rms = _line(*zip(*seen["spread_points"], strict=True))
+    near = [point for point in seen["spread_points"] if point[0] <= NEAR_MS]
+    s0, s1, spread_rms = _line(*zip(*near, strict=True))
     fitted = layer(b0, gu, gq, tau, c0, cu, s0, s1)
-    made = exact(config, settings, LEVEL_POLICIES, fitted)
-    return fitted, dict(
-        buffer=dict(cells=len(wanted), rms_ms=float(np.sqrt(np.mean(solved.fun**2))), at_a_bound=[
-            bool(math.isclose(v, low) or math.isclose(v, high))
-            for v, low, high in zip(solved.x, *BUFFER_BOUNDS, strict=True)
-        ]),
+    stages = dict(
+        buffer=dict(
+            cells=len(wanted),
+            rms_log=float(np.sqrt(np.mean(solved.fun**2))),
+            rms_ms=float(np.sqrt(np.mean((held(solved.x) - measured) ** 2))),
+            at_a_bound=[
+                bool(math.isclose(v, low) or math.isclose(v, high))
+                for v, low, high in zip(solved.x, *BUFFER_BOUNDS, strict=True)
+            ],
+        ),
         age=dict(cells=len(ages), rms_ms=age_rms),
-        spread=dict(points=len(seen["spread_points"]), rms_ms=spread_rms),
+        spread=dict(points=len(near), rms_ms=spread_rms),
         return_time=dict(points=seen["return_points"]),
-    ), in_sample(made, cells, native)  # fmt: skip
+    )
+    return fitted, stages, in_sample(exact(config, settings, LEVEL_POLICIES, fitted), cells, native)
 
 
 def in_sample(made, cells, native):
