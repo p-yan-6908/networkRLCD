@@ -191,6 +191,50 @@ This explains why N1 saw so little. After a hold at N1's top ratio the estimate 
 Two further consequences are stated with the same caution. On this endpoint the strong fixed baseline is neither N1's top ratio nor the browser under its ceiling but a lower fixed ratio, and a controller would have to beat that. And the simulator of the synthetic studies orders the fixed ratios the other way round. Its train-selected fixed ratio is 1.05, and a direct check made after the pilot was read (\path{docs/JEVBWE_TYPED_SUSTAINED_LEVELS_V1.md}) ran the same five sustained levels in the simulator on its mirrors of the four schedules: over all schedules it ranks the four ratios in the reverse order of the pilot, under no schedule does it share the pilot's best level, and with room it rates the ceiling best where the pilot has it worst. It agrees only that after a drop of capacity a level below 1.05 beats 1.05. Its sent rates over capacity are close to the native ones; what differs is the valuation, a quality term that rises steeply with the rate and frames that stay on time until the queue fills, with no receiver buffer that grows with the rate. The pilot has one session per cell and one machine carrying sender, relay and receiver, its lowest level sat on the 150~kbit/s floor of the cap domain in most holds, and its endpoint counts a late frame as nothing with a deadline of 150~ms. It promotes nothing.
 \fi
 
+\ifdefined\LadderPilotSessions
+\subsection{Two rule-based controllers against tuned fixed levels (development pilot, negative result)}
+\label{sec:ladder-pilot}
+The range pilot leaves a tuned fixed ratio as the baseline to beat. An exploratory pass over its sessions (\path{docs/NATIVE_RANGE_PILOT_HEADROOM_V1.md}) chose the fixed level without the scored source. The choice fell on 0.25 in \LadderPilotFoldsQuarter{} folds and on 0.65 in \LadderPilotFoldsLow, and the chosen level gains \LadderPilotTunedGain{} \LadderPilotTunedGainT{} over 1.05; knowing the schedule would add \LadderPilotScheduleGain{} \LadderPilotScheduleGainT{} to it. The same pass found that the age of the presentation acknowledgements the sender receives tells a link with room from a constrained one at every ratio. A second development pilot, again approved by the owner and designed before any of its sessions was run (\path{docs/NATIVE_LADDER_PILOT_V1.md}), tests two rules that act on that age against the tuned fixed levels. It is the first test of a controller against a tuned baseline on the native stack.
+
+Both rules choose among the ratios 0.25, 0.65, 0.85 and 1.05 and start at the top. At the start of each 3~s hold the \emph{ladder} goes one step up when the mean age of the last second's acknowledgements is below 104~ms, one step down from 132~ms, and to the bottom from 159~ms or without any acknowledgement. The \emph{fast ladder} also goes to the bottom inside a hold, as soon as the age reaches 159~ms. The three marks come from the range pilot's median ages by a rule stated in the design, so they are tuned on the sources the pilot runs on. The rules use no model, nothing about the relay and nothing after the decision. The fixed arms are 0.25, 0.65 and 1.05. The five arms ran twice on each of the \LadderPilotSources{} used sources and four schedules, with the same content for the arms of a source and schedule, in one seeded shuffle. All \LadderPilotSessions{} of \LadderPilotPlanned{} sessions sealed and passed the raw audit, in which the rule is replayed poll by poll from the recorded acknowledgements. The span of the reading, fixed in advance, is the whole session, because how a controller starts is its own doing.
+
+\begin{table}[t]
+\centering\small
+\resizebox{\linewidth}{!}{\input{generated-native-ladder-pilot/ladder_pilot_arms.tex}}
+\caption{Controller development pilot. Mean over sources of each arm over the whole session; one row gives the endpoint from the second change of the cap on. Utility is the endpoint, the on-time sampled PSNR contribution per capture request.}
+\label{tab:ladder-pilot-arms}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\resizebox{\linewidth}{!}{\input{generated-native-ladder-pilot/ladder_pilot_differences.tex}}
+\caption{Controller development pilot. Differences of the endpoint within source and schedule, with 95\% $t$ intervals over sources; not corrected for the number of comparisons.}
+\label{tab:ladder-pilot-differences}
+\end{table}
+
+Tables~\ref{tab:ladder-pilot-arms} and~\ref{tab:ladder-pilot-differences} give the result, and it is negative. The endpoint is \LadderPilotUtilityLadder{} under the ladder and \LadderPilotUtilityFast{} under the fast ladder, against \LadderPilotUtilityQuarter{} and \LadderPilotUtilityLow{} at the tuned fixed levels and \LadderPilotUtilityTop{} at 1.05. By the rule fixed in advance the ladder \LadderPilotReadingLadder, and the fast ladder \LadderPilotReadingFast: its difference from 0.65 is \LadderPilotUtilityDiffFastLow{} \LadderPilotUtilityDiffFastLowT{} and from 0.25 \LadderPilotUtilityDiffFastQuarter{} \LadderPilotUtilityDiffFastQuarterT. Cutting inside a hold \LadderPilotFastCut{} (\LadderPilotUtilityDiffFastLadder{} \LadderPilotUtilityDiffFastLadderT). The share of requests on time is \LadderPilotOnTimeLadder\% and \LadderPilotOnTimeFast\% under the rules and \LadderPilotOnTimeQuarter\% and \LadderPilotOnTimeLow\% at the tuned levels. The rules hold their own with room and near capacity and lose where capacity falls. Neither rule stepped up in any session: the largest share of upward moves over rules and schedules is \LadderPilotUpShare\%.
+
+The fixed arms repeat the range pilot's comparison on the same sources. Over the whole session 0.25 and 0.65 gain \LadderPilotUtilityDiffQuarterTop{} \LadderPilotUtilityDiffQuarterTopT{} and \LadderPilotUtilityDiffLowTop{} \LadderPilotUtilityDiffLowTopT{} on 1.05, and \LadderPilotLaterUtilityDiffQuarterTop{} and \LadderPilotLaterUtilityDiffLowTop{} from the second change on; they are not separated from each other (\LadderPilotUtilityDiffQuarterLow{} \LadderPilotUtilityDiffQuarterLowT). This is a second run on the same sources and the same machine, not a replication on fresh ones. Two sessions of the same cell differ in the endpoint by \LadderPilotRepeatQuarter{} at 0.25, \LadderPilotRepeatLow{} at 0.65 and \LadderPilotRepeatTop{} at 1.05 on average, and by \LadderPilotRepeatFast{} and \LadderPilotRepeatLadder{} under the two rules: a higher level is also a less repeatable one.
+
+\begin{table}[t]
+\centering\small
+\resizebox{\linewidth}{!}{\input{generated-native-ladder-pilot/ladder_pilot_timeline.tex}}
+\caption{Controller development pilot; added after the report was read. Means over sources in stretches of 3~s from a session's first acknowledgement. In collapse-recovery the capacity is 1.2~Mbit/s, 0.35~Mbit/s from 6~s and 1.2~Mbit/s from 12~s.}
+\label{tab:ladder-pilot-timeline}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\resizebox{\linewidth}{!}{\input{generated-native-ladder-pilot/ladder_pilot_phases.tex}}
+\caption{Controller development pilot; added after the report was read. Per capacity phase (6, 6 and 6.6~s): the receiver's jitter buffer per decoded frame, the bytes offered to the relay's sender-to-receiver queue over what its capacity could carry, and the share of them the relay dropped. Queue-building is 1.2, 0.6 and 0.6~Mbit/s; collapse-recovery is 1.2, 0.35 and 1.2~Mbit/s.}
+\label{tab:ladder-pilot-phases}
+\end{table}
+
+Tables~\ref{tab:ladder-pilot-timeline} and~\ref{tab:ladder-pilot-phases} were added after the report had been read, to show where in a session the rules lose. They are descriptions without intervals, computed by committed code, and the reading above does not rest on them. During the first 6~s the arms that start at the top do best. From then on they have lost, whatever they do next. In the schedule whose capacity falls from 1.2 to 0.35~Mbit/s at 6~s and returns at 12~s, the fast ladder is at the bottom of the ladder by the middle of the next stretch, and its offered load is \LadderPilotDropLoadCollapseFast\% of capacity in the phase of the drop and \LadderPilotDropLoadRecoveryFast\% in the phase after it. Its frames stay late all the same. The receiver's jitter buffer holds \LadderPilotDropBufferCollapseFast~ms per frame in the first of these phases and still \LadderPilotDropBufferRecoveryFast~ms in the second, against \LadderPilotDropBufferCollapseQuarter{} and \LadderPilotDropBufferRecoveryQuarter~ms at the fixed 0.25, whose load in the second is \LadderPilotDropLoadRecoveryQuarter\%. The arm at 1.05 fares only a little worse than the rules, because the browser's estimate falls after the drop and the cap, being a ratio of it, falls with it at the next hold.
+
+We read this with caution. The rules did not lose by cutting too little. They lost because a cut that waits until lateness is visible comes after the receiver's buffer has grown, and the buffer then shrinks more slowly than these sessions last. A fixed low level never lets it grow: what it buys is prevention. This also limits what the pilot's schedules can show about control. Each has at most one change of capacity, 6~s into a session of 18.6~s; nothing in the history before the change announces it, and too little session remains after it for a reaction to pay. Whether history can serve a controller here, for example through a margin that widens once a drop has been seen, needs longer sessions with recurring changes, which would be a new design and a new capture. The simulator of the synthetic studies has no receiver buffer that grows, as noted above, and cannot show the effect. Nothing is promoted. On this harness the tuned fixed ratio stands unbeaten, the marks of the rules were tuned on the sources they ran on, and those sources have been looked at many times.
+\fi
+
 
 
 \ifdefined\TypedHeadFamilies
