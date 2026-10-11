@@ -10,6 +10,7 @@ controller is evaluated or promoted.
 
 import argparse
 import copy
+import hashlib
 import json
 import math
 import shutil
@@ -592,6 +593,62 @@ def analyse(sessions, planned=None):
     )
 
 
+def supplement(sessions):
+    """Added after the report was read: three descriptions of the same sessions, from the second hold on.
+
+    How many sources agree with each difference in utility, which level does best under each
+    schedule, and where the time of the shown frames goes. None was in the design and none is a
+    statement of its reading.
+    """
+
+    def utility(s):
+        return None if s["after_startup"] is None else s["after_startup"]["utility"]
+
+    cells = _cells(sessions, utility, lambda s: True)
+    reference = cells.get(REFERENCE, {})
+    agreement = {}
+    for level, name in enumerate(NAMES):
+        if level == REFERENCE:
+            continue
+        grouped = defaultdict(list)
+        for cell, value in cells.get(level, {}).items():
+            if cell in reference:
+                grouped[cell[0]].append(value - reference[cell])
+        means = [float(np.mean(v)) for v in grouped.values()]
+        agreement[name] = dict(sources=len(means), above_reference=sum(m > 0 for m in means))
+    best = {}
+    for regime in REGIMES:
+        means = {
+            name: by_level(sessions, utility, lambda s, regime=regime: s["regime"] == regime)[name]["level"][
+                "mean"
+            ]
+            for name in NAMES
+        }
+        known = {name: mean for name, mean in means.items() if mean is not None}
+        best[regime] = dict(level=max(known, key=known.get) if known else None, utility_by_level=means)
+    overall = {name: entry["level"]["mean"] for name, entry in by_level(sessions, utility).items()}
+    known = {name: mean for name, mean in overall.items() if mean is not None}
+    chosen = [b["utility_by_level"][b["level"]] for b in best.values() if b["level"] is not None]
+    return dict(
+        abi=ABI + "_supplement",
+        development_pilot=True,
+        added_after_the_report_was_read=True,
+        sources_with_higher_utility_than_the_reference=agreement,
+        best_level_by_schedule=best,
+        utility_of_the_best_single_level=dict(
+            level=max(known, key=known.get) if known else None, by_level=overall
+        ),
+        utility_if_each_schedule_had_its_best_level=float(np.mean(chosen)) if chosen else None,
+        time_of_the_shown_frames_ms={
+            name: by_level(
+                sessions,
+                lambda s, name=name: None if s["after_startup"] is None else s["after_startup"][name],
+            )
+            for name in ("encode_ms", "pacer_ms", "relay_ms", "rest_ms", "frame_wire_ms")
+        },
+    )
+
+
 def collect(out):
     """Outcomes of every sealed session of a capture, in planned order."""
     out = Path(out)
@@ -616,6 +673,9 @@ def main(argv=None):
     analysis = commands.add_parser("analyse", help="the report fixed in the design")
     analysis.add_argument("--capture", required=True, type=Path)
     analysis.add_argument("--out", required=True, type=Path)
+    extra = commands.add_parser("supplement", help="descriptions added after the report was read")
+    extra.add_argument("--sessions", required=True, type=Path)
+    extra.add_argument("--out", required=True, type=Path)
     args = parser.parse_args(argv)
     if args.command == "plan":
         result = plan(args.n1_protocol, args.out)
@@ -623,6 +683,12 @@ def main(argv=None):
         result = capture(args.protocol, args.out, args.limit)
     elif args.command == "status":
         result = status(args.capture)
+    elif args.command == "supplement":
+        if args.out.exists():
+            parser.exit(2, "error: fresh output file required\n")
+        raw = args.sessions.read_bytes()
+        result = dict(supplement(json.loads(raw)), sessions_sha256=hashlib.sha256(raw).hexdigest())
+        args.out.write_text(json.dumps(result, indent=1, sort_keys=True) + "\n")
     else:
         if args.out.exists():
             parser.exit(2, "error: fresh output directory required\n")

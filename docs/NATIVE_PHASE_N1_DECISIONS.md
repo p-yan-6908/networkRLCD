@@ -312,3 +312,21 @@ What this does and does not allow:
   wherever it appears. It promotes nothing and changes nothing in B1.
 - The exact levels are the agent's to fix in the design. Short smoke tests (section 14) may be
   used to check the new harness and the rates the levels realise, not to look at outcomes.
+
+**Outcome (2026-10-11).** The pilot ran as approved: the design and harness were committed
+before any session of record (`bf73026`), all 240 sessions sealed, none failed, 4.1 GB,
+three hours and twelve minutes. A smoke test of ten short sessions on used sources preceded
+it. The record and its results are in [NATIVE_RANGE_PILOT_V1.md](NATIVE_RANGE_PILOT_V1.md).
+In short: kept for a whole session, the lower levels deliver far more frames on time and score
+higher on the endpoint than 1.05, and the browser under the ceiling is the worst level. It is
+development evidence on used sources with one session per cell.
+
+What the agent would put to the owner next, none of it decided:
+
+- B1 stays as registered. Its contrast is within a hold, and the pilot suggests the larger
+  effect belongs to a sustained level. A null in B1 would therefore not settle whether a lower
+  cap helps.
+- A confirmatory test of sustained levels needs whole sessions randomised to a level, on fresh
+  sources. B1's 74 candidates are the only fresh sources in sight, and they are B1's. Whether
+  such a test is registered beside B1, after it, or instead of some of it is the owner's call.
+- The capture of this pilot is 4.1 GB on local disk and is not in the archive.

@@ -163,6 +163,35 @@ The on-time contrast of Table~\ref{tab:n1-delivery} has the opposite sign from t
 On this stack and endpoint, then, frames are lost to the deadline mainly at the receiver, in a way that follows the schedule and that a choice among these three ratios hardly reaches. The registered test's flag handles the second to the sixth hold, so the first hold's effect lies outside it. Whether a cap well below the lowest ratio would shrink the receiver's buffer under constraint was not tested here. The simulator of the synthetic studies counts a fixed delay at the receiver and so leaves this place out. This is a fourth look at one sample. It reads timing and no quality, and it does not say whether backing off helps.
 \fi
 
+\ifdefined\RangePilotSessions
+\subsection{A wider range of cap levels, kept for a whole session (development pilot)}
+\label{sec:range-pilot}
+The passes above compare three ratios that N1 draws afresh for every hold, so that no level is ever sustained. A development pilot, approved by the owner and designed before any of its sessions was run (\path{docs/NATIVE_RANGE_PILOT_V1.md}), keeps one level for a whole session: 0.25, 0.65, 0.85 or 1.05 of the estimate frozen at the start of each hold, as in N1, or the 4~Mbit/s ceiling of the cap domain, which leaves the browser to itself. It uses the \RangePilotSources{} sources that N1 had already used, the same four schedules, and the same content for the five levels of a source and schedule, in one seeded shuffle of \RangePilotPlanned{} sessions. All \RangePilotSessions{} sealed and passed N1's raw audit. The pilot has its own instrument and an episode script that differs from N1's frozen one by seven listed replacements; no frozen file was changed. It is development evidence, with one session per cell, on sources whose earlier behaviour led to its design. It confirms nothing.
+
+\begin{table}[t]
+\centering\small
+\resizebox{\linewidth}{!}{\input{generated-native-range-pilot/range_pilot_levels.tex}}
+\caption{Development pilot. Mean over sources of each whole-session level, from the second hold on. Utility is the endpoint, the on-time sampled PSNR contribution per capture request. The ceiling is a cap of 4~Mbit/s throughout.}
+\label{tab:range-pilot-levels}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\resizebox{\linewidth}{!}{\input{generated-native-range-pilot/range_pilot_differences.tex}}
+\caption{Development pilot. Each level minus the level 1.05, within source and schedule, with 95\% $t$ intervals over sources; not corrected for the number of comparisons.}
+\label{tab:range-pilot-differences}
+\end{table}
+
+Tables~\ref{tab:range-pilot-levels} and~\ref{tab:range-pilot-differences} give the span fixed for the reading, from the second hold of a session on. The endpoint is \RangePilotUtilityQuarter, \RangePilotUtilityLow, \RangePilotUtilityMid, \RangePilotUtilityTop{} and \RangePilotUtilityCeiling{} at the five levels. Against 1.05, the level 0.65 gains \RangePilotUtilityDiffLow{} \RangePilotUtilityDiffLowT{} and the level 0.25 gains \RangePilotUtilityDiffQuarter{} \RangePilotUtilityDiffQuarterT, while the ceiling loses \RangePilotUtilityDiffCeiling{} \RangePilotUtilityDiffCeilingT. The share of requests on time is \RangePilotOnTimeQuarter\%, \RangePilotOnTimeLow\%, \RangePilotOnTimeMid\%, \RangePilotOnTimeTop\% and \RangePilotOnTimeCeiling\%. By the rule fixed in advance, on-time delivery is moved by \RangePilotMoves; the endpoint is raised by \RangePilotPays{} and lowered by \RangePilotCosts; the receiver's buffer is emptied by \RangePilotEmpties; and the ceiling \RangePilotCeilingWorst{} the worst of the five.
+
+What moves delivery is the rate relative to capacity. The encoder runs at \RangePilotRateShareQuarter\%, \RangePilotRateShareLow\%, \RangePilotRateShareMid\%, \RangePilotRateShareTop\% and \RangePilotRateShareCeiling\% of the relay's capacity at the five levels, and the receiver's jitter buffer holds \RangePilotBufferQuarter, \RangePilotBufferLow, \RangePilotBufferMid, \RangePilotBufferTop{} and \RangePilotBufferCeiling~ms per frame. The frames that arrive on time are better at a higher level, \RangePilotPsnrQuarter~dB at the lowest and \RangePilotPsnrCeiling~dB under the ceiling, but a frame that misses the deadline counts nothing. The schedules differ. After a drop of capacity the lowest level does best by a wide margin. With room the level 0.85 does best and both ends lose: a quarter of the estimate is too little for the encoder, and a sustained 1.05 doubles the estimate hold after hold until the rate is high enough for frames to arrive late. Under the near-capacity schedule nothing is established.
+
+This explains why N1 saw so little. After a hold at N1's top ratio the estimate is high, and the next 0.65 is 0.65 of a high estimate. A level that is kept also sets the estimate it is a ratio of. A contrast between ratios within a hold therefore leaves out the part of a cap's effect that passes through the estimate, and the contrast of the registered test is of that kind. The registered test is unchanged, but its outcome has to be read with this in mind: no benefit of backing off within a hold would not show that a lower sustained cap does not help. Testing a sustained level needs sessions randomised whole, on fresh sources.
+
+Two further consequences are stated with the same caution. On this endpoint the strong fixed baseline is neither N1's top ratio nor the browser under its ceiling but a lower fixed ratio, and a controller would have to beat that. And the simulator of the synthetic studies orders the fixed ratios the other way round, with 1.05 selected on its training traces; it has no receiver buffer that grows with the rate. The pilot has one session per cell and one machine carrying sender, relay and receiver, its lowest level sat on the 150~kbit/s floor of the cap domain in most holds, and its endpoint counts a late frame as nothing with a deadline of 150~ms. It promotes nothing.
+\fi
+
+
 
 \ifdefined\TypedHeadFamilies
 \subsection{What a cap leaves of the simulator's headroom}

@@ -350,3 +350,30 @@ def test_command_writes_the_report_and_refuses_to_overwrite(tmp_path, capsys):
         pilot.main(["analyse", "--capture", str(capture), "--out", str(out)])
     pilot.main(["status", "--capture", str(capture)])
     assert json.loads(capsys.readouterr().out)["sealed"] == 30
+
+
+def test_supplement_is_marked_as_added_afterwards_and_counts_agreeing_sources(tmp_path, capsys):
+    capture = invented_capture(tmp_path)
+    sessions, _ = pilot.collect(capture)
+    extra = pilot.supplement(sessions)
+    assert extra["added_after_the_report_was_read"] is True and extra["development_pilot"] is True
+    agree = extra["sources_with_higher_utility_than_the_reference"]
+    assert set(agree) == {"0.25", "0.65", "0.85", "ceiling"}  # the reference is not compared with itself
+    assert agree["0.65"] == dict(sources=3, above_reference=0)  # invented: 34 dB against 38 dB, all on time
+    best = extra["best_level_by_schedule"]
+    assert best["underutilized"]["level"] == "1.05" and best["near-capacity"]["level"] is None
+    assert extra["utility_of_the_best_single_level"]["level"] == "1.05"
+    assert extra["utility_if_each_schedule_had_its_best_level"] == pytest.approx(38)
+    parts = extra["time_of_the_shown_frames_ms"]
+    assert parts["encode_ms"]["1.05"]["level"]["mean"] == pytest.approx(2)
+    assert parts["relay_ms"]["ceiling"]["minus_reference"]["mean"] == pytest.approx(25)  # 30 ms against 5 ms
+
+    out = tmp_path / "report"
+    pilot.main(["analyse", "--capture", str(capture), "--out", str(out)])
+    capsys.readouterr()
+    target = tmp_path / "supplement.json"
+    pilot.main(["supplement", "--sessions", str(out / "sessions.json"), "--out", str(target)])
+    written = json.loads(target.read_text())
+    assert written["abi"] == pilot.ABI + "_supplement" and len(written["sessions_sha256"]) == 64
+    with pytest.raises(SystemExit):
+        pilot.main(["supplement", "--sessions", str(out / "sessions.json"), "--out", str(target)])

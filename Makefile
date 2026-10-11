@@ -1,4 +1,4 @@
-.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-factual jevbwe-typed-population jevbwe-typed-population-test jevbwe-typed-crossover jevbwe-typed-headroom jevbwe-typed-b1-forecast jevbwe-typed-factual-unseen jevbwe-typed-followup-evidence jevbwe-typed-evidence native-n1-evidence paper-pdf
+.PHONY: setup test smoke pilot paper-run improve tune-threshold policy-randomization-v4 safety-shield-v5 action-calibration-v6 uncertainty-shield-v7 resume-uncertainty-shield-v7 budget-shield-v8 delay-budget-v9 paper paper-evidence paper-status jevbwe-typed-smoke jevbwe-typed jevbwe-typed-audit jevbwe-typed-broad jevbwe-typed-broad-test jevbwe-typed-baselines jevbwe-typed-replication jevbwe-typed-factual jevbwe-typed-population jevbwe-typed-population-test jevbwe-typed-crossover jevbwe-typed-headroom jevbwe-typed-b1-forecast jevbwe-typed-factual-unseen jevbwe-typed-followup-evidence jevbwe-typed-evidence native-n1-evidence native-range-pilot-evidence paper-pdf
 setup:
 	uv sync --frozen --extra dev
 
@@ -162,6 +162,9 @@ jevbwe-typed-evidence:
 N1 ?= results
 native-n1-evidence:
 	uv run --frozen python -m media_rl.native_actuator_qualification_report --final $(N1)/native-actuator-qualification-n1-final.json --public $(N1)/n1-interim-public.json --protocol $(N1)/native-actuator-qualification-n1-plan/protocol.json --pool acquisition/native-n1/pool-and-plan.json --exploratory $(N1)/native-actuator-qualification-n1-exploratory.json --conditional $(N1)/native-actuator-qualification-n1-conditional.json --dynamics $(N1)/native-actuator-qualification-n1-dynamics/report.json --flags $(N1)/native-phase-b1-flag-composition.json --binding $(N1)/native-actuator-qualification-n1-dynamics/binding.json --delivery $(N1)/native-actuator-qualification-n1-delivery/report.json --delivery-first-hold $(N1)/native-actuator-qualification-n1-delivery/first_hold.json --out paper/generated-native-n1
+
+native-range-pilot-evidence:
+	uv run --frozen python -m media_rl.native_range_pilot_report --report $(N1)/native-range-pilot-v1-report/report.json --out paper/generated-native-range-pilot
 
 # Compile from the exported evidence already under paper/generated-*; does not re-export the
 # nine archived studies, whose pruned results must be restored first (see ARCHIVED_RESULTS.md).
