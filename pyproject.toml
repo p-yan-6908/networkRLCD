@@ -38,6 +38,7 @@ include = [
   "src/**", "tests/**", "benchmarks/native_rtc/**", "benchmarks/jevbwe/*.py", "configs/*.json", "docs/*.md", "paper/*.tex", "paper/*.md",
   "research/*.md", "research/*.bib", "README.md", "GOAL.md", "uv.lock",
   ".python-version", "pyproject.toml", "Makefile", ".github/workflows/*.yml",
+  "tools/*.py", "tools/*.sh", "AGENTS.md", "storage_policy.json",
 ]
 
 [tool.pytest.ini_options]

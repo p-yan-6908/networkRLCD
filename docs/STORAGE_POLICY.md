@@ -86,7 +86,9 @@ python tools/results_storage.py archive results/COMPLETED_RUN \
 - Pruned historical folders are partial evidence even when manifest.json remains.
   Restore first for raw replay or a full seal audit; NEVER change old seals.
 - Do not prune the current margin capture until it has finished and the final
-  `report.json` and `sessions.json` have been generated from complete evidence.
+  `report.json` and `sessions.json` have been generated. The gate rejects empty
+  placeholders and requires the report ABI, original plan SHA-256, planned count,
+  and reported/listed session counts to agree with that capture.
 
 ## Restoration and Codex Cloud
 

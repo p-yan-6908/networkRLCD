@@ -294,11 +294,23 @@ def prune(project, cache, files, receipt, log_path, apply=False):
 def require_final_reports(project, names):
     if any(PurePosixPath(n).parts[1] == "native-margin-pilot-v1" for n in names):
         report_root = project / "results" / "native-margin-pilot-v1-report"
+        values = {}
         for name in ("report.json", "sessions.json"):
             path = report_root / name
             if not path.is_file():
                 raise ValueError("Margin raw pruning waits for final report and sessions")
-            json.loads(path.read_text())
+            values[name] = json.loads(path.read_text())
+        protocol = project / "results" / "native-margin-pilot-v1" / "protocol.json"
+        if not protocol.is_file():
+            raise ValueError("Margin final report requires its original protocol")
+        report, sessions = values["report.json"], values["sessions.json"]
+        planned = len(json.loads(protocol.read_text())["order"])
+        if (not isinstance(report, dict) or not isinstance(sessions, list) or not sessions
+                or report.get("abi") != "native_margin_pilot_v1_report"
+                or report.get("plan_sha256") != digest(protocol)
+                or report.get("planned_sessions") != planned
+                or report.get("sessions") != len(sessions) or len(sessions) > planned):
+            raise ValueError("Margin final report must match the capture plan and nonempty session list")
 
 
 def wait_for_reports(project, names, pid, seconds):

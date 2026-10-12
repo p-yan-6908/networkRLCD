@@ -215,15 +215,29 @@ def test_wait_exit_handles_real_process_and_bounded_timeout():
             child.wait()
 
 
-def test_margin_raw_prune_waits_for_final_reports(layout):
+def test_margin_raw_prune_waits_for_matched_nonplaceholder_final_reports(layout):
     root, *_ = layout
     with pytest.raises(ValueError, match="final report"):
         storage.require_final_reports(root, ["results/native-margin-pilot-v1"])
     reports = root / "results/native-margin-pilot-v1-report"
     reports.mkdir()
+    run = root / "results/native-margin-pilot-v1"
+    run.mkdir()
+    protocol = run / "protocol.json"
+    protocol.write_text(json.dumps({"order": [["runtime", "peer"]]}))
     (reports / "report.json").write_text("{}")
     (reports / "sessions.json").write_text("[]")
+    with pytest.raises(ValueError, match="match the capture plan"):
+        storage.require_final_reports(root, ["results/native-margin-pilot-v1"])
+    report = {"abi": "native_margin_pilot_v1_report", "sessions": 1, "planned_sessions": 1,
+              "plan_sha256": storage.digest(protocol)}
+    (reports / "report.json").write_text(json.dumps(report))
+    (reports / "sessions.json").write_text('[{"id": "peer"}]')
     storage.require_final_reports(root, ["results/native-margin-pilot-v1"])
+    report["plan_sha256"] = "different plan"
+    (reports / "report.json").write_text(json.dumps(report))
+    with pytest.raises(ValueError, match="match the capture plan"):
+        storage.require_final_reports(root, ["results/native-margin-pilot-v1"])
 
 
 def test_capture_report_wait_is_bounded_and_has_no_side_effects(layout, monkeypatch):

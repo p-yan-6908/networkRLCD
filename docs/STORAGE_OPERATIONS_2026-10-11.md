@@ -27,10 +27,14 @@ Read AGENTS.md and STORAGE_POLICY.md before acting on these paths.
   Initial range prefix: `native-range-pilot-v1-20261011-233324`.
   Each snapshot receives its own pinned verified receipt before original pruning.
   A failure stops the queue safely; do not rerun against an existing prefix.
-- Sealed-peer watcher task: `ae19ca4a-5b7d-4375-8d24-4d8968ed1513`.
+- Durable sealed-peer watcher task: `99be6646-44aa-4c26-9ac4-d17479525651`.
+  Log: `~/.cache/networkrlcd/logs/sealed-peer-watch-2026-10-11.log`.
   Collector PID: `18770`; PID is a point-in-time identifier, not permanent.
-  The watcher scans sealed peers only and ends after the collector exits (four-hour
-  maximum from watcher startup). It does not delete raw capture data.
+  The prior ordinary watcher `ae19ca4a-5b7d-4375-8d24-4d8968ed1513` timed out;
+  it is no longer running. All 160 relocated peer aliases were checked intact
+  before this durable replacement was started (no duplicate watcher).
+  This watcher scans sealed peers only and ends after the collector exits (two-hour
+  maximum from replacement startup). It does not delete raw capture data.
 - The margin archive waits up to two hours after reaching that queue step for the
   collector to exit and report.json + sessions.json to exist under
   results/native-margin-pilot-v1-report/. It computes no interim outcomes.
