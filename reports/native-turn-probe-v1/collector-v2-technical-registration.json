@@ -1,0 +1,34 @@
+{
+  "abi": "native_turn_v2_technical_registration",
+  "excluded_from_study": true,
+  "purpose": "Verify atomic closing-ledger bookkeeping; no efficacy evaluation, fitting or validation.",
+  "source_sha256": {
+    "benchmarks/native_rtc/turn_probe_page.html": "80659dadeb943293a60d92631030cb152fb16c428bc4bd3ebb87e4670884a07a",
+    "benchmarks/native_rtc/turn_probe_v2.mjs": "663bd91e2c0f8aa519274b821f85467cbbc1f00e02939d56ad4d73f4609bd508"
+  },
+  "technical_only": true,
+  "trial": {
+    "exploration_seed": 8462781,
+    "id": "technical-turn-v2-9001",
+    "regime": "technical_excluded",
+    "repetition": 0,
+    "scene_seed": 9001,
+    "schedule": [
+      [
+        1.2,
+        "high",
+        6000
+      ],
+      [
+        0.35,
+        "collapse",
+        6000
+      ],
+      [
+        1.2,
+        "recovery",
+        6000
+      ]
+    ]
+  }
+}

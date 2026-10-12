@@ -1,0 +1,50 @@
+{
+  "abi": "native_turn_probe_v1_resealed_forgery_audit",
+  "added_after_capture": true,
+  "cases": {
+    "RGB": {
+      "reason": "native RGB replay/rgb_mse: different numeric values",
+      "rejected": true,
+      "resealed": true
+    },
+    "cap_readback": {
+      "reason": "native acknowledgment/readback mismatch",
+      "rejected": true,
+      "resealed": true
+    },
+    "feature": {
+      "reason": "causal sender feature reconstruction/0: different numeric values",
+      "rejected": true,
+      "resealed": true
+    },
+    "future_encoded_bytes": {
+      "reason": "causal encoded snapshot/total_bytes: different numeric values",
+      "rejected": true,
+      "resealed": true
+    },
+    "meter_counter": {
+      "reason": "encoded-event clock/counter mismatch",
+      "rejected": true,
+      "resealed": true
+    },
+    "propensity": {
+      "reason": "native assignment/propensity: different numeric values",
+      "rejected": true,
+      "resealed": true
+    },
+    "sidecar_clock": {
+      "reason": "sidecar sample/origin clocks differ",
+      "rejected": true,
+      "resealed": true
+    },
+    "wire_service": {
+      "reason": "native wire conservation/replay mismatch",
+      "rejected": true,
+      "resealed": true
+    }
+  },
+  "original_evidence_modified": false,
+  "source_manifest_sha256": "5f9b8fccd279d30146a83a351d5e37df2c8cfcf7809f9709df600b98f70d5b7c",
+  "trial": "turn-102-room-1",
+  "verifier_sha256": "9d7cdc95b9c226106e2f1fe446860f304cc40e0800a38eb00b4be5417a91d4ab"
+}

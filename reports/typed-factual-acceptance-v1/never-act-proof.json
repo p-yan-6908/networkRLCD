@@ -1,0 +1,24 @@
+{
+  "abi": "typed_factual_acceptance_v1_never_act_proof",
+  "added_after_run": true,
+  "all_non_base_upper_scores_negative": true,
+  "finite_normalized_state_domain": [
+    -12,
+    12
+  ],
+  "interpretation": "ReLU interval bound proves these packaged heads choose base for every finite clipped state; this supplements sample execution parity and is not a safety guarantee.",
+  "models": {
+    "model-20000-501-episode_lcb.json": -1347389.048052762,
+    "model-20000-501-family_lcb.json": -1347389.048052762,
+    "model-20000-502-episode_lcb.json": -1351045.237725949,
+    "model-20000-502-family_lcb.json": -1351045.237725949,
+    "model-20000-503-episode_lcb.json": -1357195.8037070264,
+    "model-20000-503-family_lcb.json": -1357195.8037070264,
+    "model-80000-501-episode_lcb.json": -1347332.1301925192,
+    "model-80000-501-family_lcb.json": -1347332.1301925192,
+    "model-80000-502-episode_lcb.json": -1363897.0525241527,
+    "model-80000-502-family_lcb.json": -1363897.0525241527,
+    "model-80000-503-episode_lcb.json": -1353219.4763252416,
+    "model-80000-503-family_lcb.json": -1353219.4763252416
+  }
+}

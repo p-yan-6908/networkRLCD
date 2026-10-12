@@ -1,0 +1,59 @@
+{
+  "abi": "typed_factual_acceptance_v1_verification",
+  "added_after_run": true,
+  "archive_verified": false,
+  "closed_loop_arrays_replayed": false,
+  "executed_label_files_verified": 3,
+  "factual_refits": [
+    {
+      "blocks": 20000,
+      "seed": 501,
+      "selection_and_weights_reproduced": true
+    },
+    {
+      "blocks": 80000,
+      "seed": 501,
+      "selection_and_weights_reproduced": true
+    },
+    {
+      "blocks": 20000,
+      "seed": 502,
+      "selection_and_weights_reproduced": true
+    },
+    {
+      "blocks": 80000,
+      "seed": 502,
+      "selection_and_weights_reproduced": true
+    },
+    {
+      "blocks": 20000,
+      "seed": 503,
+      "selection_and_weights_reproduced": true
+    },
+    {
+      "blocks": 80000,
+      "seed": 503,
+      "selection_and_weights_reproduced": true
+    }
+  ],
+  "interpretation": "Recomputes saved-array summaries and refits factual models; does not rerun closed-loop traces.",
+  "max_numeric_tolerance": 1e-12,
+  "never_act_global_upper_scores": {
+    "model-20000-501-episode_lcb.json": -1347389.048052762,
+    "model-20000-501-family_lcb.json": -1347389.048052762,
+    "model-20000-502-episode_lcb.json": -1351045.237725949,
+    "model-20000-502-family_lcb.json": -1351045.237725949,
+    "model-20000-503-episode_lcb.json": -1357195.8037070264,
+    "model-20000-503-family_lcb.json": -1357195.8037070264,
+    "model-80000-501-episode_lcb.json": -1347332.1301925192,
+    "model-80000-501-family_lcb.json": -1347332.1301925192,
+    "model-80000-502-episode_lcb.json": -1363897.0525241527,
+    "model-80000-502-family_lcb.json": -1363897.0525241527,
+    "model-80000-503-episode_lcb.json": -1353219.4763252416,
+    "model-80000-503-family_lcb.json": -1353219.4763252416
+  },
+  "packaged_models_reproduced": 18,
+  "raw_bytes_pruned": false,
+  "summaries_recomputed": 18,
+  "verifier_sha256": "9cf13c2fa313a57f0977ca00b558606b516f16fba2df3d842382b216f070f2ea"
+}

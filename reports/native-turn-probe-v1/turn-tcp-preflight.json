@@ -1,0 +1,23 @@
+{
+  "abi": "native_local_turn_tcp_preflight_v1",
+  "browser": "Chrome/154.0.8037.57",
+  "policy_modified": false,
+  "owned_loopback_only": true,
+  "authenticated_turn_tcp": true,
+  "controller_or_qoe_evaluated": false,
+  "turn_version": "4.6.1",
+  "ice": {
+    "state": "complete",
+    "candidates": [
+      {
+        "type": "relay",
+        "protocol": "udp",
+        "address": "127.0.0.1",
+        "port": 49234,
+        "relayProtocol": "tcp",
+        "url": "turn:127.0.0.1:34957?transport=tcp"
+      }
+    ],
+    "errors": []
+  }
+}

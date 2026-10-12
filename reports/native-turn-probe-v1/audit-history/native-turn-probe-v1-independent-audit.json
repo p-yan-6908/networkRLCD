@@ -1,0 +1,596 @@
+{
+  "abi": "native_turn_probe_v1_independent_audit",
+  "added_after_capture": true,
+  "archive_verified": false,
+  "audit_source_sha256": "2a1218e7ccfbb75127ca8eb3d4fbd8aa0869168a3249f92223441ea8198c2a23",
+  "controller_promoted": false,
+  "dependency_sha256": {
+    "src/media_rl/native_observations.py": "3b3d7d782b4034a35535c2396f380bcb1a33acd64e05db34cc3ee380d6b58fba",
+    "src/media_rl/native_wire.py": "06949e8586413b3c192b53b2ca47d52c4e26129a2b4e76bc7a9647c95507cde0"
+  },
+  "native_factual_only": true,
+  "numeric_tolerance": 1e-12,
+  "raw_bytes_pruned": false,
+  "real_network_validation": false,
+  "registered_source_hashes_unchanged": true,
+  "registered_spec_sha256": "090b6db748385eb9a0a069055342c1a3abeeb14ae691fadf4fc761242d32b217",
+  "sessions": [
+    {
+      "manifest_sha256": "5f9b8fccd279d30146a83a351d5e37df2c8cfcf7809f9709df600b98f70d5b7c",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 161
+      },
+      "trial": "turn-102-room-1",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 40861,
+        "minimum_observed_post_serialization_propagation_ms": 25.001947000000655,
+        "opaque_native_udp_packets": 2322,
+        "raw_events_replayed": 40843,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 18,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "baf393ef454a4f90eb6b36a0368be155f3073dfbc0c9bc5a46cbf3470af2f4b2",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 163
+      },
+      "trial": "turn-101-drop-0",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 37797,
+        "minimum_observed_post_serialization_propagation_ms": 25.002125999999407,
+        "opaque_native_udp_packets": 1142,
+        "raw_events_replayed": 37775,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 22,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "16d457b1f060c4b88a71262fc1c6511c2dacea653a7fd7f189d966cc1042bd8b",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 161
+      },
+      "trial": "turn-102-room-0",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 37964,
+        "minimum_observed_post_serialization_propagation_ms": 25.000545999999304,
+        "opaque_native_udp_packets": 1173,
+        "raw_events_replayed": 37936,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 28,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "f05ed63bc690d840fcede7a25bcaacc916f784e1e5a898033efebcc2d6b40872",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 169
+      },
+      "trial": "turn-102-drop-0",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 37865,
+        "minimum_observed_post_serialization_propagation_ms": 25.000895999999557,
+        "opaque_native_udp_packets": 1238,
+        "raw_events_replayed": 37845,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 20,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "d505d9c46c89d11da30f7677e26d7e213debaf7c45a936b80aca37f33275478f",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 169
+      },
+      "trial": "turn-103-drop-0",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 37824,
+        "minimum_observed_post_serialization_propagation_ms": 25.000514999999723,
+        "opaque_native_udp_packets": 1171,
+        "raw_events_replayed": 37788,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 36,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "cf2cc0f91dfc20e78b1bc5bd741b7001c80a571cb6450ae409fec97af55b7c71",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 166
+      },
+      "trial": "turn-101-drop-1",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 37934,
+        "minimum_observed_post_serialization_propagation_ms": 25.00097099999948,
+        "opaque_native_udp_packets": 1115,
+        "raw_events_replayed": 37902,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 32,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "eb394f61553693b252878bdb94a8f32afde55c8f0cfc9752d3bc33ad754812f8",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 163
+      },
+      "trial": "turn-102-drop-1",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 38278,
+        "minimum_observed_post_serialization_propagation_ms": 25.001328000000285,
+        "opaque_native_udp_packets": 1217,
+        "raw_events_replayed": 38252,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 26,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "4f140eaa448078c74db7da86d7a9624e7edbbf3bfc92d03386680a8cb8b2d1b7",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 164
+      },
+      "trial": "turn-101-room-1",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 39109,
+        "minimum_observed_post_serialization_propagation_ms": 25.00163800000155,
+        "opaque_native_udp_packets": 1572,
+        "raw_events_replayed": 39083,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 26,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "38cc198a5bef14d827ed1241b7ec4d65d879430b1e334da9077fa66309f8afd4",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 163
+      },
+      "trial": "turn-103-room-1",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 39230,
+        "minimum_observed_post_serialization_propagation_ms": 25.001161999998658,
+        "opaque_native_udp_packets": 1553,
+        "raw_events_replayed": 39204,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 26,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "38c42e5277c6dae8c1b896354c8efbbac9c768726ce168775f38ff598400d6b5",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 161
+      },
+      "trial": "turn-103-room-0",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 40894,
+        "minimum_observed_post_serialization_propagation_ms": 25.000950999999986,
+        "opaque_native_udp_packets": 2185,
+        "raw_events_replayed": 40884,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 10,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "ef693fd2d0ae1fe2ba102cfb73740794b6e2c64c389c9caf35a1ab318d820ba6",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 167
+      },
+      "trial": "turn-103-drop-1",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 37856,
+        "minimum_observed_post_serialization_propagation_ms": 25.000912999999855,
+        "opaque_native_udp_packets": 1129,
+        "raw_events_replayed": 37834,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 22,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "0f2c9bd9ac574b9b7c23a9cab82de968c6c601bdaf775d688ab8fc21eba8f8a0",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 162
+      },
+      "trial": "turn-104-drop-1",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 37725,
+        "minimum_observed_post_serialization_propagation_ms": 25.000812000000224,
+        "opaque_native_udp_packets": 1146,
+        "raw_events_replayed": 37701,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 24,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "e730add0a431581e09a9046a7554e7a954f291bc3eee6eaf8d5ec968284194c1",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 162
+      },
+      "trial": "turn-104-drop-0",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 37693,
+        "minimum_observed_post_serialization_propagation_ms": 25.00071299999945,
+        "opaque_native_udp_packets": 1166,
+        "raw_events_replayed": 37679,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 14,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "156a046a5f4dec2041b645ccbbc852f9c1c672bff0b5bf203bec97886ad27286",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 167
+      },
+      "trial": "turn-104-room-0",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 38448,
+        "minimum_observed_post_serialization_propagation_ms": 25.002880000000005,
+        "opaque_native_udp_packets": 1447,
+        "raw_events_replayed": 38438,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 10,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "db057b615064b71491007019df9ff82c53575a9b6fb111c25debd271d44d902f",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 163
+      },
+      "trial": "turn-101-room-0",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 38920,
+        "minimum_observed_post_serialization_propagation_ms": 25.001828999998907,
+        "opaque_native_udp_packets": 1577,
+        "raw_events_replayed": 38906,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 14,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    },
+    {
+      "manifest_sha256": "636e0fe4dd3ff7fb03328172ac64964c45ea7e5de6b7876441597a42859a958d",
+      "sender": {
+        "auxiliary_content_excluded_from_feature_vector": true,
+        "causal_sender_features_replayed": 177,
+        "encoded_snapshots_replayed": 177,
+        "encoder_field_present_counts": {
+          "bytesSent": 177,
+          "frameHeight": 177,
+          "frameWidth": 177,
+          "framesEncoded": 177,
+          "headerBytesSent": 177,
+          "keyFramesEncoded": 177,
+          "qpSum": 177,
+          "qualityLimitationReason": 177,
+          "retransmittedBytesSent": 177,
+          "targetBitrate": 177,
+          "totalEncodeTime": 177,
+          "totalEncodedBytesTarget": 177
+        },
+        "rtt_present_samples": 164
+      },
+      "trial": "turn-104-room-1",
+      "wire": {
+        "SOTA_achieved": false,
+        "closing_ledger_precedes_raw_end": true,
+        "fifo_capacity_accounting_verified": true,
+        "full_raw_event_count": 39098,
+        "minimum_observed_post_serialization_propagation_ms": 25.00096499999927,
+        "opaque_native_udp_packets": 1611,
+        "raw_events_replayed": 39064,
+        "raw_evidence_modified": false,
+        "trailing_empty_service_events": 34,
+        "trailing_timer_ticks_independently_verified": true
+      }
+    }
+  ],
+  "summaries_recomputed": true
+}

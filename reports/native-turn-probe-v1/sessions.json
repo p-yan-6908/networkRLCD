@@ -1,0 +1,2066 @@
+[
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 801.2999999998137,
+        "arm": 2,
+        "base_bwe_bps": 300000,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 293520.0,
+        "epoch": 0,
+        "on_time_requests": 84,
+        "on_time_share": 0.9130434782608695,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.9784,
+        "requested_bps": 315000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3848.7000000001863,
+        "arm": 2,
+        "base_bwe_bps": 633128,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 439460.0,
+        "epoch": 1,
+        "on_time_requests": 85,
+        "on_time_share": 0.9139784946236559,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.6941092480509471,
+        "requested_bps": 664784,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6911.9000000003725,
+        "arm": 0,
+        "base_bwe_bps": 1307142,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 807640.0,
+        "epoch": 2,
+        "on_time_requests": 87,
+        "on_time_share": 0.9354838709677419,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6178670718254022,
+        "requested_bps": 849642,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9975.100000000559,
+        "arm": 1,
+        "base_bwe_bps": 1313411,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 1021580.0,
+        "epoch": 3,
+        "on_time_requests": 84,
+        "on_time_share": 0.9130434782608695,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.7778067946743251,
+        "requested_bps": 1116399,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 13023.400000000373,
+        "arm": 0,
+        "base_bwe_bps": 1432510,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 793440.0,
+        "epoch": 4,
+        "on_time_requests": 89,
+        "on_time_share": 0.956989247311828,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.5538809502202428,
+        "requested_bps": 931132,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16082.299999999814,
+        "arm": 2,
+        "base_bwe_bps": 1703259,
+        "capture_requests": 78,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 1318760.0,
+        "epoch": 5,
+        "on_time_requests": 76,
+        "on_time_share": 0.9743589743589743,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.7742568804861738,
+        "requested_bps": 1788422,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 543,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 3352319294,
+      "id": "turn-102-room-1",
+      "regime": "room",
+      "repetition": 1,
+      "scene_seed": 102,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 770.3999999994412,
+        "arm": 2,
+        "base_bwe_bps": 300000,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 296520.0,
+        "epoch": 0,
+        "on_time_requests": 90,
+        "on_time_share": 0.967741935483871,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.9884,
+        "requested_bps": 315000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3832.0999999996275,
+        "arm": 0,
+        "base_bwe_bps": 630978,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 357950.0,
+        "epoch": 1,
+        "on_time_requests": 86,
+        "on_time_share": 0.9247311827956989,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.5672939468571012,
+        "requested_bps": 410136,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6901.299999999814,
+        "arm": 1,
+        "base_bwe_bps": 637073,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 220010.0,
+        "epoch": 2,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.34534503895158014,
+        "requested_bps": 541512,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9952.199999999255,
+        "arm": 1,
+        "base_bwe_bps": 311173,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 259850.0,
+        "epoch": 3,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.8350660243658672,
+        "requested_bps": 264497,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 13011.799999999814,
+        "arm": 0,
+        "base_bwe_bps": 358364,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 199860.0,
+        "epoch": 4,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.5577011083702604,
+        "requested_bps": 232937,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16057.199999999255,
+        "arm": 0,
+        "base_bwe_bps": 378064,
+        "capture_requests": 78,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 229350.0,
+        "epoch": 5,
+        "on_time_requests": 4,
+        "on_time_share": 0.05128205128205128,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6066433196495832,
+        "requested_bps": 245742,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 543,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 3747756672,
+      "id": "turn-101-drop-0",
+      "regime": "drop",
+      "repetition": 0,
+      "scene_seed": 101,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 748.8999999994412,
+        "arm": 0,
+        "base_bwe_bps": 300000,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 204860.0,
+        "epoch": 0,
+        "on_time_requests": 85,
+        "on_time_share": 0.9239130434782609,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6828666666666666,
+        "requested_bps": 195000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3801.2999999998137,
+        "arm": 0,
+        "base_bwe_bps": 413798,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 253170.0,
+        "epoch": 1,
+        "on_time_requests": 89,
+        "on_time_share": 0.956989247311828,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6118202601269218,
+        "requested_bps": 268969,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6857.899999999441,
+        "arm": 0,
+        "base_bwe_bps": 421735,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 253210.0,
+        "epoch": 2,
+        "on_time_requests": 91,
+        "on_time_share": 0.978494623655914,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6004007255741165,
+        "requested_bps": 274128,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9917.099999999627,
+        "arm": 0,
+        "base_bwe_bps": 444017,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 271100.0,
+        "epoch": 3,
+        "on_time_requests": 91,
+        "on_time_share": 0.978494623655914,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.61056220820374,
+        "requested_bps": 288611,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 12987.599999999627,
+        "arm": 1,
+        "base_bwe_bps": 458758,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 329820.0,
+        "epoch": 4,
+        "on_time_requests": 86,
+        "on_time_share": 0.9347826086956522,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.7189411410809184,
+        "requested_bps": 389944,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16038.699999999255,
+        "arm": 1,
+        "base_bwe_bps": 563920,
+        "capture_requests": 78,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 453810.0,
+        "epoch": 5,
+        "on_time_requests": 77,
+        "on_time_share": 0.9871794871794872,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.80474180734856,
+        "requested_bps": 479332,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 543,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 487541575,
+      "id": "turn-102-room-0",
+      "regime": "room",
+      "repetition": 0,
+      "scene_seed": 102,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 716.5,
+        "arm": 0,
+        "base_bwe_bps": 300000,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 200990.0,
+        "epoch": 0,
+        "on_time_requests": 85,
+        "on_time_share": 0.9139784946236559,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6699666666666667,
+        "requested_bps": 195000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3784.2999999998137,
+        "arm": 2,
+        "base_bwe_bps": 412964,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 418890.0,
+        "epoch": 1,
+        "on_time_requests": 88,
+        "on_time_share": 0.9565217391304348,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 1.0143499191212793,
+        "requested_bps": 433612,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6836.600000000559,
+        "arm": 1,
+        "base_bwe_bps": 867354,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 259420.0,
+        "epoch": 2,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.2990935650265059,
+        "requested_bps": 737251,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9904.400000000373,
+        "arm": 1,
+        "base_bwe_bps": 347177,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 288230.0,
+        "epoch": 3,
+        "on_time_requests": 8,
+        "on_time_share": 0.08602150537634409,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.8302105266189869,
+        "requested_bps": 295100,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 12969.200000000186,
+        "arm": 1,
+        "base_bwe_bps": 394906,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 299280.0,
+        "epoch": 4,
+        "on_time_requests": 84,
+        "on_time_share": 0.9032258064516129,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.7578512354838873,
+        "requested_bps": 335670,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16029.799999999814,
+        "arm": 1,
+        "base_bwe_bps": 457012,
+        "capture_requests": 77,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 372240.0,
+        "epoch": 5,
+        "on_time_requests": 74,
+        "on_time_share": 0.961038961038961,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.8145081529587844,
+        "requested_bps": 388460,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 543,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 2529381690,
+      "id": "turn-102-drop-0",
+      "regime": "drop",
+      "repetition": 0,
+      "scene_seed": 102,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 750,
+        "arm": 2,
+        "base_bwe_bps": 300000,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 269700.0,
+        "epoch": 0,
+        "on_time_requests": 86,
+        "on_time_share": 0.9247311827956989,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.899,
+        "requested_bps": 315000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3808.7999999998137,
+        "arm": 1,
+        "base_bwe_bps": 639795,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 418900.0,
+        "epoch": 1,
+        "on_time_requests": 85,
+        "on_time_share": 0.9239130434782609,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.6547409717175032,
+        "requested_bps": 543826,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6854.4000000003725,
+        "arm": 0,
+        "base_bwe_bps": 715097,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 236400.0,
+        "epoch": 2,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.33058452209979905,
+        "requested_bps": 464813,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9915.5,
+        "arm": 1,
+        "base_bwe_bps": 297178,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 236070.0,
+        "epoch": 3,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.7943723963415865,
+        "requested_bps": 252601,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 12980.900000000373,
+        "arm": 1,
+        "base_bwe_bps": 321519,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 262060.0,
+        "epoch": 4,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.8150684718476979,
+        "requested_bps": 273291,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16034,
+        "arm": 1,
+        "base_bwe_bps": 370099,
+        "capture_requests": 78,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 288860.0,
+        "epoch": 5,
+        "on_time_requests": 66,
+        "on_time_share": 0.8461538461538461,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.7804938678569788,
+        "requested_bps": 314584,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 524,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 2783845225,
+      "id": "turn-103-drop-0",
+      "regime": "drop",
+      "repetition": 0,
+      "scene_seed": 103,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 770.8999999994412,
+        "arm": 1,
+        "base_bwe_bps": 300000,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 256220.0,
+        "epoch": 0,
+        "on_time_requests": 84,
+        "on_time_share": 0.9130434782608695,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.8540666666666666,
+        "requested_bps": 255000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3820.2000000001863,
+        "arm": 0,
+        "base_bwe_bps": 499323,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 276820.0,
+        "epoch": 1,
+        "on_time_requests": 90,
+        "on_time_share": 0.967741935483871,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.5543906449332396,
+        "requested_bps": 324560,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6880.0999999996275,
+        "arm": 0,
+        "base_bwe_bps": 501703,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 216390.0,
+        "epoch": 2,
+        "on_time_requests": 88,
+        "on_time_share": 0.946236559139785,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.43131095488765264,
+        "requested_bps": 326107,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9938.899999999441,
+        "arm": 2,
+        "base_bwe_bps": 313599,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 291910.0,
+        "epoch": 3,
+        "on_time_requests": 89,
+        "on_time_share": 0.967391304347826,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.9308384274184548,
+        "requested_bps": 329279,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 12984.700000000186,
+        "arm": 0,
+        "base_bwe_bps": 373838,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 226690.0,
+        "epoch": 4,
+        "on_time_requests": 91,
+        "on_time_share": 0.978494623655914,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6063856536788662,
+        "requested_bps": 242995,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16046.399999999441,
+        "arm": 1,
+        "base_bwe_bps": 398297,
+        "capture_requests": 78,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 305660.0,
+        "epoch": 5,
+        "on_time_requests": 77,
+        "on_time_share": 0.9871794871794872,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.7674172790656218,
+        "requested_bps": 338552,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 543,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 1651758942,
+      "id": "turn-101-drop-1",
+      "regime": "drop",
+      "repetition": 1,
+      "scene_seed": 101,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 727,
+        "arm": 0,
+        "base_bwe_bps": 300000,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 208350.0,
+        "epoch": 0,
+        "on_time_requests": 90,
+        "on_time_share": 0.967741935483871,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6945,
+        "requested_bps": 195000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3785.7000000001863,
+        "arm": 2,
+        "base_bwe_bps": 440058,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 458640.0,
+        "epoch": 1,
+        "on_time_requests": 91,
+        "on_time_share": 0.9891304347826086,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 1.0422262519940553,
+        "requested_bps": 462061,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6836.399999999441,
+        "arm": 0,
+        "base_bwe_bps": 951111,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 270860.0,
+        "epoch": 2,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.28478274354938593,
+        "requested_bps": 618222,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9900.299999999814,
+        "arm": 1,
+        "base_bwe_bps": 331308,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 240260.0,
+        "epoch": 3,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.7251862315428543,
+        "requested_bps": 281612,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 12960.200000000186,
+        "arm": 2,
+        "base_bwe_bps": 307389,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 306710.0,
+        "epoch": 4,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.997791072549766,
+        "requested_bps": 322758,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16009,
+        "arm": 0,
+        "base_bwe_bps": 628923,
+        "capture_requests": 78,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 368160.0,
+        "epoch": 5,
+        "on_time_requests": 41,
+        "on_time_share": 0.5256410256410257,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.5853816762942363,
+        "requested_bps": 408800,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 542,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 4205911580,
+      "id": "turn-102-drop-1",
+      "regime": "drop",
+      "repetition": 1,
+      "scene_seed": 102,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 786.2000000001863,
+        "arm": 0,
+        "base_bwe_bps": 301000,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 196880.0,
+        "epoch": 0,
+        "on_time_requests": 86,
+        "on_time_share": 0.9247311827956989,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6540863787375415,
+        "requested_bps": 195650,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3847.5,
+        "arm": 0,
+        "base_bwe_bps": 423652,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 256940.0,
+        "epoch": 1,
+        "on_time_requests": 91,
+        "on_time_share": 0.9891304347826086,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6064883442070379,
+        "requested_bps": 275374,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6893.700000000186,
+        "arm": 0,
+        "base_bwe_bps": 438199,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 269990.0,
+        "epoch": 2,
+        "on_time_requests": 92,
+        "on_time_share": 0.989247311827957,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6161355913637412,
+        "requested_bps": 284829,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9956.600000000559,
+        "arm": 2,
+        "base_bwe_bps": 451058,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 441790.0,
+        "epoch": 3,
+        "on_time_requests": 92,
+        "on_time_share": 1.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.9794527533044531,
+        "requested_bps": 473611,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 13005.900000000373,
+        "arm": 2,
+        "base_bwe_bps": 938823,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 830030.0,
+        "epoch": 4,
+        "on_time_requests": 90,
+        "on_time_share": 0.967741935483871,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.8841176664823934,
+        "requested_bps": 985764,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16066.5,
+        "arm": 1,
+        "base_bwe_bps": 1748446,
+        "capture_requests": 78,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 1170520.0,
+        "epoch": 5,
+        "on_time_requests": 77,
+        "on_time_share": 0.9871794871794872,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.6694630546210749,
+        "requested_bps": 1486179,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 544,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 2445103011,
+      "id": "turn-101-room-1",
+      "regime": "room",
+      "repetition": 1,
+      "scene_seed": 101,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 830.8999999994412,
+        "arm": 2,
+        "base_bwe_bps": 300000,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 286380.0,
+        "epoch": 0,
+        "on_time_requests": 86,
+        "on_time_share": 0.9247311827956989,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.9546,
+        "requested_bps": 315000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3898.7000000001863,
+        "arm": 1,
+        "base_bwe_bps": 649193,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 462720.0,
+        "epoch": 1,
+        "on_time_requests": 86,
+        "on_time_share": 0.9347826086956522,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.7127618443205641,
+        "requested_bps": 551814,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6944.700000000186,
+        "arm": 0,
+        "base_bwe_bps": 738958,
+        "capture_requests": 94,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 476740.0,
+        "epoch": 2,
+        "on_time_requests": 92,
+        "on_time_share": 0.9787234042553191,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6451516865640538,
+        "requested_bps": 480323,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 10031.899999999441,
+        "arm": 0,
+        "base_bwe_bps": 789763,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 475500.0,
+        "epoch": 3,
+        "on_time_requests": 88,
+        "on_time_share": 0.9565217391304348,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6020793579846105,
+        "requested_bps": 513346,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 13084.200000000186,
+        "arm": 0,
+        "base_bwe_bps": 804978,
+        "capture_requests": 94,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 458730.0,
+        "epoch": 4,
+        "on_time_requests": 93,
+        "on_time_share": 0.9893617021276596,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.5698665056684779,
+        "requested_bps": 523236,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16169.700000000186,
+        "arm": 2,
+        "base_bwe_bps": 820457,
+        "capture_requests": 76,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 822870.0,
+        "epoch": 5,
+        "on_time_requests": 76,
+        "on_time_share": 1.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 1.0029410438328883,
+        "requested_bps": 861480,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 542,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 881917756,
+      "id": "turn-103-room-1",
+      "regime": "room",
+      "repetition": 1,
+      "scene_seed": 103,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 774.3000000007451,
+        "arm": 1,
+        "base_bwe_bps": 300000,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 235450.0,
+        "epoch": 0,
+        "on_time_requests": 88,
+        "on_time_share": 0.946236559139785,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.7848333333333334,
+        "requested_bps": 255000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3837.9000000003725,
+        "arm": 2,
+        "base_bwe_bps": 533980,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 547150.0,
+        "epoch": 1,
+        "on_time_requests": 89,
+        "on_time_share": 0.967391304347826,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 1.024663845087831,
+        "requested_bps": 560679,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6881.100000000559,
+        "arm": 0,
+        "base_bwe_bps": 1088571,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 636320.0,
+        "epoch": 2,
+        "on_time_requests": 90,
+        "on_time_share": 0.9782608695652174,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.5845461618948143,
+        "requested_bps": 707571,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9929,
+        "arm": 0,
+        "base_bwe_bps": 1088571,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 687370.0,
+        "epoch": 3,
+        "on_time_requests": 89,
+        "on_time_share": 0.956989247311828,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6314425058172595,
+        "requested_bps": 707571,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 12985.900000000373,
+        "arm": 2,
+        "base_bwe_bps": 1171774,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 993310.0,
+        "epoch": 4,
+        "on_time_requests": 89,
+        "on_time_share": 0.967391304347826,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.8476975935632639,
+        "requested_bps": 1230363,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16032.300000000745,
+        "arm": 2,
+        "base_bwe_bps": 2237250,
+        "capture_requests": 79,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 1641370.0,
+        "epoch": 5,
+        "on_time_requests": 77,
+        "on_time_share": 0.9746835443037974,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.7336551570007822,
+        "requested_bps": 2349113,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 543,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 223415917,
+      "id": "turn-103-room-0",
+      "regime": "room",
+      "repetition": 0,
+      "scene_seed": 103,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 694.7999999998137,
+        "arm": 1,
+        "base_bwe_bps": 300000,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 231340.0,
+        "epoch": 0,
+        "on_time_requests": 86,
+        "on_time_share": 0.9347826086956522,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.7711333333333333,
+        "requested_bps": 255000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3746.0999999996275,
+        "arm": 1,
+        "base_bwe_bps": 530313,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 427100.0,
+        "epoch": 1,
+        "on_time_requests": 89,
+        "on_time_share": 0.956989247311828,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.8053734304080797,
+        "requested_bps": 450766,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6800.200000000186,
+        "arm": 0,
+        "base_bwe_bps": 592384,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 267450.0,
+        "epoch": 2,
+        "on_time_requests": 64,
+        "on_time_share": 0.6956521739130435,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.4514807962402766,
+        "requested_bps": 385050,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9851.799999999814,
+        "arm": 2,
+        "base_bwe_bps": 343946,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 213980.0,
+        "epoch": 3,
+        "on_time_requests": 78,
+        "on_time_share": 0.8387096774193549,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.6221325440621492,
+        "requested_bps": 361143,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 12922.5,
+        "arm": 1,
+        "base_bwe_bps": 311138,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 240370.0,
+        "epoch": 4,
+        "on_time_requests": 88,
+        "on_time_share": 0.946236559139785,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.7725510866560819,
+        "requested_bps": 264467,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 15982.200000000186,
+        "arm": 0,
+        "base_bwe_bps": 362934,
+        "capture_requests": 78,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 223380.0,
+        "epoch": 5,
+        "on_time_requests": 77,
+        "on_time_share": 0.9871794871794872,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6154838069731686,
+        "requested_bps": 235907,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 544,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 751294699,
+      "id": "turn-103-drop-1",
+      "regime": "drop",
+      "repetition": 1,
+      "scene_seed": 103,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 801.2999999998137,
+        "arm": 2,
+        "base_bwe_bps": 300000,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 312890.0,
+        "epoch": 0,
+        "on_time_requests": 87,
+        "on_time_share": 0.9456521739130435,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 1.0429666666666666,
+        "requested_bps": 315000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3851,
+        "arm": 1,
+        "base_bwe_bps": 608000,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 392130.0,
+        "epoch": 1,
+        "on_time_requests": 91,
+        "on_time_share": 0.978494623655914,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.6449506578947368,
+        "requested_bps": 516800,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6910.200000000186,
+        "arm": 2,
+        "base_bwe_bps": 688984,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 181550.0,
+        "epoch": 2,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.2635039420363898,
+        "requested_bps": 723433,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9968.5,
+        "arm": 2,
+        "base_bwe_bps": 290858,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 245430.0,
+        "epoch": 3,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.8438138198021028,
+        "requested_bps": 305401,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 13019.799999999814,
+        "arm": 0,
+        "base_bwe_bps": 324714,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 178550.0,
+        "epoch": 4,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.5498684996643199,
+        "requested_bps": 211064,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16087,
+        "arm": 0,
+        "base_bwe_bps": 346675,
+        "capture_requests": 78,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 219890.0,
+        "epoch": 5,
+        "on_time_requests": 42,
+        "on_time_share": 0.5384615384615384,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6342828297396698,
+        "requested_bps": 225339,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 540,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 383844976,
+      "id": "turn-104-drop-1",
+      "regime": "drop",
+      "repetition": 1,
+      "scene_seed": 104,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 741.0999999996275,
+        "arm": 1,
+        "base_bwe_bps": 300000,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 255060.0,
+        "epoch": 0,
+        "on_time_requests": 87,
+        "on_time_share": 0.9354838709677419,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.8502,
+        "requested_bps": 255000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3809.5999999996275,
+        "arm": 1,
+        "base_bwe_bps": 506760,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 338720.0,
+        "epoch": 1,
+        "on_time_requests": 84,
+        "on_time_share": 0.9032258064516129,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.6684031888862578,
+        "requested_bps": 430746,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6879.799999999814,
+        "arm": 1,
+        "base_bwe_bps": 582722,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 229230.0,
+        "epoch": 2,
+        "on_time_requests": 0,
+        "on_time_share": 0.0,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.3933779744028885,
+        "requested_bps": 495314,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9946.899999999441,
+        "arm": 1,
+        "base_bwe_bps": 325739,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 259620.0,
+        "epoch": 3,
+        "on_time_requests": 2,
+        "on_time_share": 0.021505376344086023,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.7970184718440224,
+        "requested_bps": 276878,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 13004.099999999627,
+        "arm": 0,
+        "base_bwe_bps": 377685,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 214100.0,
+        "epoch": 4,
+        "on_time_requests": 53,
+        "on_time_share": 0.5698924731182796,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.5668745118286402,
+        "requested_bps": 245495,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16063.899999999441,
+        "arm": 1,
+        "base_bwe_bps": 399628,
+        "capture_requests": 76,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 319810.0,
+        "epoch": 5,
+        "on_time_requests": 70,
+        "on_time_share": 0.9210526315789473,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.8002692504028747,
+        "requested_bps": 339684,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 544,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 254607452,
+      "id": "turn-104-drop-0",
+      "regime": "drop",
+      "repetition": 0,
+      "scene_seed": 104,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 666.7000000001863,
+        "arm": 0,
+        "base_bwe_bps": 300000,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 197170.0,
+        "epoch": 0,
+        "on_time_requests": 90,
+        "on_time_share": 0.967741935483871,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6572333333333333,
+        "requested_bps": 195000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3733.5999999996275,
+        "arm": 0,
+        "base_bwe_bps": 412288,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 255010.0,
+        "epoch": 1,
+        "on_time_requests": 86,
+        "on_time_share": 0.9247311827956989,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6185239444271965,
+        "requested_bps": 267987,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6786.700000000186,
+        "arm": 1,
+        "base_bwe_bps": 416251,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 324230.0,
+        "epoch": 2,
+        "on_time_requests": 79,
+        "on_time_share": 0.8586956521739131,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.7789290596298868,
+        "requested_bps": 353813,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9836.400000000373,
+        "arm": 2,
+        "base_bwe_bps": 506266,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 470270.0,
+        "epoch": 3,
+        "on_time_requests": 87,
+        "on_time_share": 0.9354838709677419,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.9288990372649951,
+        "requested_bps": 531579,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 12896,
+        "arm": 2,
+        "base_bwe_bps": 695045,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 576550.0,
+        "epoch": 4,
+        "on_time_requests": 83,
+        "on_time_share": 0.9021739130434783,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.8295146357430094,
+        "requested_bps": 729797,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 15946.099999999627,
+        "arm": 1,
+        "base_bwe_bps": 1580000,
+        "capture_requests": 78,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 855960.0,
+        "epoch": 5,
+        "on_time_requests": 74,
+        "on_time_share": 0.9487179487179487,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.5417468354430379,
+        "requested_bps": 1343000,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 544,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 1014557575,
+      "id": "turn-104-room-0",
+      "regime": "room",
+      "repetition": 0,
+      "scene_seed": 104,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 744.2999999998137,
+        "arm": 0,
+        "base_bwe_bps": 300000,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 191050.0,
+        "epoch": 0,
+        "on_time_requests": 82,
+        "on_time_share": 0.8817204301075269,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6368333333333334,
+        "requested_bps": 195000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3803.5,
+        "arm": 1,
+        "base_bwe_bps": 459601,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 372900.0,
+        "epoch": 1,
+        "on_time_requests": 90,
+        "on_time_share": 0.967741935483871,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.8113559369975261,
+        "requested_bps": 390661,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6865.700000000186,
+        "arm": 1,
+        "base_bwe_bps": 508422,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 416790.0,
+        "epoch": 2,
+        "on_time_requests": 88,
+        "on_time_share": 0.9565217391304348,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.819771764400439,
+        "requested_bps": 432159,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9916.799999999814,
+        "arm": 1,
+        "base_bwe_bps": 634338,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 548830.0,
+        "epoch": 3,
+        "on_time_requests": 88,
+        "on_time_share": 0.946236559139785,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.8652012018829078,
+        "requested_bps": 539187,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 12970.5,
+        "arm": 2,
+        "base_bwe_bps": 768229,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 708920.0,
+        "epoch": 4,
+        "on_time_requests": 87,
+        "on_time_share": 0.9456521739130435,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.9227977595222258,
+        "requested_bps": 806640,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16022.899999999441,
+        "arm": 0,
+        "base_bwe_bps": 1534476,
+        "capture_requests": 78,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 908440.0,
+        "epoch": 5,
+        "on_time_requests": 75,
+        "on_time_share": 0.9615384615384616,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.5920196861990673,
+        "requested_bps": 997409,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 544,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 1986311790,
+      "id": "turn-101-room-0",
+      "regime": "room",
+      "repetition": 0,
+      "scene_seed": 101,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  },
+  {
+    "browser": "Chrome/154.0.8037.57",
+    "cohorts": [
+      {
+        "ack_ms": 745.3999999994412,
+        "arm": 0,
+        "base_bwe_bps": 300000,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 187910.0,
+        "epoch": 0,
+        "on_time_requests": 82,
+        "on_time_share": 0.8913043478260869,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.6263666666666666,
+        "requested_bps": 195000,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 3795.0999999996275,
+        "arm": 0,
+        "base_bwe_bps": 376480,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 212410.0,
+        "epoch": 1,
+        "on_time_requests": 86,
+        "on_time_share": 0.9247311827956989,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.5641999575010624,
+        "requested_bps": 244712,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 6856.299999999814,
+        "arm": 2,
+        "base_bwe_bps": 378299,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 340390.0,
+        "epoch": 2,
+        "on_time_requests": 85,
+        "on_time_share": 0.9139784946236559,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.8997909061350942,
+        "requested_bps": 397214,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 9914.799999999814,
+        "arm": 2,
+        "base_bwe_bps": 807529,
+        "capture_requests": 92,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 737740.0,
+        "epoch": 3,
+        "on_time_requests": 86,
+        "on_time_share": 0.9347826086956522,
+        "propensity": 0.3333333333333333,
+        "ratio": 1.05,
+        "realized_ratio": 0.9135770975407694,
+        "requested_bps": 847905,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 12968,
+        "arm": 1,
+        "base_bwe_bps": 1771764,
+        "capture_requests": 93,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 772630.0,
+        "epoch": 4,
+        "on_time_requests": 86,
+        "on_time_share": 0.9247311827956989,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.85,
+        "realized_ratio": 0.4360795230064501,
+        "requested_bps": 1505999,
+        "window_complete": true
+      },
+      {
+        "ack_ms": 16026.699999999255,
+        "arm": 0,
+        "base_bwe_bps": 1771764,
+        "capture_requests": 78,
+        "clipped_or_aliased": false,
+        "encoded_payload_bps": 837380.0,
+        "epoch": 5,
+        "on_time_requests": 70,
+        "on_time_share": 0.8974358974358975,
+        "propensity": 0.3333333333333333,
+        "ratio": 0.65,
+        "realized_ratio": 0.4726250222941656,
+        "requested_bps": 1151647,
+        "window_complete": true
+      }
+    ],
+    "encoded_frames": 543,
+    "known_marker_share": 1.0,
+    "resolved_capture_requests": 541,
+    "samples": 177,
+    "trial": {
+      "exploration_seed": 1543851745,
+      "id": "turn-104-room-1",
+      "regime": "room",
+      "repetition": 1,
+      "scene_seed": 104,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  }
+]

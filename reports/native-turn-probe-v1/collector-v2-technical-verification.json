@@ -1,0 +1,43 @@
+{
+  "abi": "native_turn_v2_technical_verification",
+  "excluded_from_study": true,
+  "manifest_sha256": "a55ed7957c8f93735d725f4ec6a0d4ce0f1cb70d866ad4909ceeaf874720b3b3",
+  "models_fitted": 0,
+  "no_raw_evidence_modified": true,
+  "raw_out": "/workspace/.cache/networkrlcd/working/native-turn-v2-technical",
+  "real_network_validation": false,
+  "registration_sha256": "fbd252e17eafb93b0e3afa35e615aac881416a80c11b46914f91b5c1a8b82fc6",
+  "sender": {
+    "auxiliary_content_excluded_from_feature_vector": true,
+    "causal_sender_features_replayed": 177,
+    "encoded_snapshots_replayed": 177,
+    "encoder_field_present_counts": {
+      "bytesSent": 177,
+      "frameHeight": 177,
+      "frameWidth": 177,
+      "framesEncoded": 177,
+      "headerBytesSent": 177,
+      "keyFramesEncoded": 177,
+      "qpSum": 177,
+      "qualityLimitationReason": 177,
+      "retransmittedBytesSent": 177,
+      "targetBitrate": 177,
+      "totalEncodeTime": 177,
+      "totalEncodedBytesTarget": 177
+    },
+    "rtt_present_samples": 170
+  },
+  "technical_only": true,
+  "wire": {
+    "SOTA_achieved": false,
+    "closing_ledger_precedes_raw_end": false,
+    "fifo_capacity_accounting_verified": true,
+    "full_raw_event_count": 37630,
+    "minimum_observed_post_serialization_propagation_ms": 25.002026999998634,
+    "opaque_native_udp_packets": 1109,
+    "raw_events_replayed": 37630,
+    "raw_evidence_modified": false,
+    "trailing_empty_service_events": 0,
+    "trailing_timer_ticks_independently_verified": true
+  }
+}

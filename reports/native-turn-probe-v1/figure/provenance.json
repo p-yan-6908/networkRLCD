@@ -1,0 +1,38 @@
+{
+  "abi": "native_turn_probe_v1_trajectory",
+  "actual_rate": "causal trailing 1000 ms pre-RTP payload; first incomplete second omitted",
+  "added_after_capture": true,
+  "controller_gain_claim": false,
+  "example_selection": "first registered trial, independent of outcomes",
+  "files_sha256": {
+    "trajectory.pdf": "9cb52b8f7eb0e52078bddbcde435d51489a4f561237375e1950889c9bb9d6b46",
+    "trajectory.png": "a7442fafc1a71fe91f66c57496d876e190cda19308349ebd5ebd407c0943161a"
+  },
+  "manifest_sha256": "5f9b8fccd279d30146a83a351d5e37df2c8cfcf7809f9709df600b98f70d5b7c",
+  "model_fitted": false,
+  "source_sha256": "b4bf1176aca76d130539be2389bc5ebc0d466e6dd6a820198c4038b05cd2a982",
+  "trial": {
+    "exploration_seed": 3352319294,
+    "id": "turn-102-room-1",
+    "regime": "room",
+    "repetition": 1,
+    "scene_seed": 102,
+    "schedule": [
+      [
+        4,
+        "high",
+        6000
+      ],
+      [
+        4,
+        "collapse",
+        6000
+      ],
+      [
+        4,
+        "recovery",
+        6000
+      ]
+    ]
+  }
+}

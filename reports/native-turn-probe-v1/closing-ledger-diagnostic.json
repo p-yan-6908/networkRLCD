@@ -1,0 +1,154 @@
+{
+  "abi": "native_turn_probe_v1_preserved_closing_ledger_defect",
+  "added_after_capture": true,
+  "collector_v1_preserved": true,
+  "peers": [
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 31919.926499998197,
+        "b_to_a": 31919.926499998197
+      },
+      "trailing_empty_ticks": 18,
+      "trial": "turn-102-room-1"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 12738.260250000283,
+        "b_to_a": 12738.260250000283
+      },
+      "trailing_empty_ticks": 22,
+      "trial": "turn-101-drop-0"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 35638.56400000118,
+        "b_to_a": 35638.56400000118
+      },
+      "trailing_empty_ticks": 28,
+      "trial": "turn-102-room-0"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 12934.84769999981,
+        "b_to_a": 12934.84769999981
+      },
+      "trailing_empty_ticks": 20,
+      "trial": "turn-102-drop-0"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 10630.817849999294,
+        "b_to_a": 10630.817849999294
+      },
+      "trailing_empty_ticks": 36,
+      "trial": "turn-103-drop-0"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 12578.396099999081,
+        "b_to_a": 12578.396099999081
+      },
+      "trailing_empty_ticks": 32,
+      "trial": "turn-101-drop-1"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 10121.126099999994,
+        "b_to_a": 10121.126099999994
+      },
+      "trailing_empty_ticks": 26,
+      "trial": "turn-102-drop-1"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 31266.10399999842,
+        "b_to_a": 31266.10399999842
+      },
+      "trailing_empty_ticks": 26,
+      "trial": "turn-101-room-1"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 29969.786499999464,
+        "b_to_a": 29969.786499999464
+      },
+      "trailing_empty_ticks": 26,
+      "trial": "turn-103-room-1"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 30715.92550000176,
+        "b_to_a": 30715.92550000176
+      },
+      "trailing_empty_ticks": 10,
+      "trial": "turn-103-room-0"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 9859.1236499995,
+        "b_to_a": 9859.1236499995
+      },
+      "trailing_empty_ticks": 22,
+      "trial": "turn-103-drop-1"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 9621.484200000297,
+        "b_to_a": 9621.484200000297
+      },
+      "trailing_empty_ticks": 24,
+      "trial": "turn-104-drop-1"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 10010.19690000033,
+        "b_to_a": 10010.19690000033
+      },
+      "trailing_empty_ticks": 14,
+      "trial": "turn-104-drop-0"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 26531.18449999951,
+        "b_to_a": 26531.18449999951
+      },
+      "trailing_empty_ticks": 10,
+      "trial": "turn-104-room-0"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 26354.63300000131,
+        "b_to_a": 26354.63300000131
+      },
+      "trailing_empty_ticks": 14,
+      "trial": "turn-101-room-0"
+    },
+    {
+      "new_packets_or_service_in_suffix": false,
+      "raw_capacity_budget_minus_saved_ledger_bytes": {
+        "a_to_b": 34552.390000000596,
+        "b_to_a": 34552.390000000596
+      },
+      "trailing_empty_ticks": 34,
+      "trial": "turn-104-room-1"
+    }
+  ],
+  "prospective_v2_technical_ticks": 0,
+  "raw_evidence_modified": false,
+  "unadapted_FIFO_audit": "fails final capacity-integral ledger equality"
+}

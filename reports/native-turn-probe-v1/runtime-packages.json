@@ -1,0 +1,30 @@
+[
+  {
+    "Package": "coturn",
+    "Version": "4.6.1-2",
+    "Filename": "pool/main/c/coturn/coturn_4.6.1-2_amd64.deb",
+    "Size": "361296",
+    "SHA256": "cb55194d0118d26035aa39aa7306fd810a47069643266724357e8da2a22612e0"
+  },
+  {
+    "Package": "libhiredis1.1.0",
+    "Version": "1.2.0-6+b3",
+    "Filename": "pool/main/h/hiredis/libhiredis1.1.0_1.2.0-6+b3_amd64.deb",
+    "Size": "50828",
+    "SHA256": "dae3af5380cb0c12e170271f19d318529331cfa17b5fa47971837b3e2a49bb83"
+  },
+  {
+    "Package": "libevent-extra-2.1-7t64",
+    "Version": "2.1.12-stable-10+b1",
+    "Filename": "pool/main/libe/libevent/libevent-extra-2.1-7t64_2.1.12-stable-10+b1_amd64.deb",
+    "Size": "107540",
+    "SHA256": "392fe59580185c879752cda884649146c0be68c409a30d92927863a4db97d5d9"
+  },
+  {
+    "Package": "libevent-openssl-2.1-7t64",
+    "Version": "2.1.12-stable-10+b1",
+    "Filename": "pool/main/libe/libevent/libevent-openssl-2.1-7t64_2.1.12-stable-10+b1_amd64.deb",
+    "Size": "61080",
+    "SHA256": "8f83a479191036f88f01ec754b5e0afc345850dc1363aac6840e967eaad1319c"
+  }
+]

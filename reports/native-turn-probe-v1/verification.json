@@ -1,0 +1,42 @@
+{
+  "N1_freeze_sha256": "ae567d09e197ca701cf776267ce35d71f99429e5e94509921bb8324f8a5c26af",
+  "abi": "native_turn_probe_v1_work_verification",
+  "archive_verified": false,
+  "controller_promoted": false,
+  "fresh_native_capture_unblocked": true,
+  "lint": "ruff check and format --check passed on six new Python files",
+  "native_registered_source_hashes_unchanged": true,
+  "next_scientific_step": "Developmental estimator/encoder diagnostics followed by a newly registered broader/blind native panel, then eventual real-network comparison",
+  "node_tests": {
+    "command": "node --test benchmarks/native_rtc/encoder_response.test.mjs benchmarks/native_rtc/sender_observation.test.mjs benchmarks/native_rtc/native_actuation.test.mjs benchmarks/native_rtc/margin_control.test.mjs",
+    "passed": 32
+  },
+  "original_research_files_verified_unchanged": 464,
+  "paper": {
+    "command": "latexmk -xelatex -bibtex- -interaction=nonstopmode -halt-on-error -outdir=build main.tex (cwd paper)",
+    "final_log_issues": [],
+    "pages": 80,
+    "path": "paper/build/main.pdf",
+    "scope": "Targeted new sections and figure, not whole-manuscript proofreading",
+    "sha256": "0fd3df217cdfab2284c1dae63d6ed6e315a441e3fa6c388d523430b685a22ffe",
+    "tables_and_provenance_reproduced_bit_exact": true,
+    "visually_reviewed_pages": [
+      42,
+      43,
+      60,
+      61
+    ]
+  },
+  "python_tests": {
+    "command": "uv run --frozen pytest -q tests/test_native_turn_audit.py tests/test_typed_factual_acceptance.py tests/test_native_margin_pilot_report.py tests/test_bwe_dynamics_diagnostic.py tests/test_native_actuator_identification.py tests/test_native_encoder_response.py tests/test_native_observations.py tests/test_native_frame_metrics.py tests/test_results_storage.py",
+    "passed": 112,
+    "post_format_native_audit_checks": 8,
+    "skip": "macOS-only kqueue storage check",
+    "skipped": 1
+  },
+  "raw_bytes_pruned": false,
+  "raw_inventory_sha256": "611ffe6c889e06193998c0c0f1f312585e5495e9bfb8acaea02cadef19c4e1f8",
+  "real_network_validation": false,
+  "registered_commit_before_capture": "d952e9a",
+  "resealed_semantic_forgeries_rejected": 8
+}

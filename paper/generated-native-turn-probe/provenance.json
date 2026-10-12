@@ -1,0 +1,12 @@
+{
+  "abi": "development_update_paper_export_v1",
+  "exporter_sha256": "3d670790f9f1905bab110bdbde6670158f1df8ef57b937a2b7d54986d5924195",
+  "input_sha256": {
+    "configs/native_turn_probe_v1.json": "090b6db748385eb9a0a069055342c1a3abeeb14ae691fadf4fc761242d32b217",
+    "reports/native-turn-probe-v1/independent-audit.json": "bee75198989b8ed29607907cc068e78bc22614073ccbd9b43984255d954706f4",
+    "reports/native-turn-probe-v1/report.json": "7605b43f9f4297095348a6692892eb81b6db7f9caa8ebd451b8740670ef58918",
+    "reports/native-turn-probe-v1/sessions.json": "bdfc45594bb70055d4c41f48024f6d008ea23699f8480b26d82b8f0b1dd7523b"
+  },
+  "no_capture_or_training_launched": true,
+  "table_sha256": "c6904260d9a92e4e138b37bae0c1b78fd317a5bb64dc0b75c33eaa006cc39530"
+}

@@ -201,5 +201,31 @@ passes 126 Python tests with one macOS-only skip. The current PDF has 78 pages a
 no undefined-reference, box or missing-character warnings. Its checksum and checks
 are in `reports/bwe-dynamics-diagnostic-v1/verification.json`; the earlier 77-page
 checksum is a historical build receipt. Timestamped encoder/sender reconstruction
-is blocked on raw evidence access, documented in `next-input.json` alongside that
-verification receipt.
+of the original UDP pilots still needs raw evidence access, documented in
+`next-input.json` alongside that historical verification receipt. A separate new
+TURN/TCP native history track is available below.
+
+## Factual acceptance and new native observability (2026-10-12 UTC)
+
+The Study 12 follow-up documents the synthetic factual-only acceptance experiment:
+three new seeds, 20k/80k nested blocks, original point selection versus episode/family
+lower bounds. Both stricter selectors reject all six fits and reproduce fixed
+control; low-data point policies again lose on the read unseen-family panels.
+All six refits/eighteen packaged models reproduce from executed labels alone.
+The table is `paper/generated-typed-factual-acceptance/table.tex`.
+
+Study 13 adds a distinct native TURN/TCP development probe: sixteen registered
+procedural peers, 96 randomized holds, actual encoder history and full causal
+feature replay. A closing-ledger timer defect is preserved and explicitly audited;
+the new collector version passes a separate excluded technical check. The
+descriptive table is `paper/generated-native-turn-probe/table.tex`, and the first
+registered peer provides an illustrative trajectory figure. Neither section
+changes frozen native experiments or makes a learned gain/real-network claim.
+
+`tools/export_development_updates.py` binds tables to the compact reports and
+independent verification receipts; exports require fresh directories and launch
+no fitting/capture. Protocols, commands, complete negative results and storage
+status: [acceptance](../docs/TYPED_FACTUAL_ACCEPTANCE_V1.md),
+[native probe](../docs/NATIVE_TURN_PROBE_V1.md),
+[active status](../docs/RESEARCH_STATUS.md). The new build receipt is
+`reports/native-turn-probe-v1/verification.json`; older PDF hashes remain historical.

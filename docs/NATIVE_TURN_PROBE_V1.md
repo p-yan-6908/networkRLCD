@@ -82,4 +82,77 @@ runtime/package provenance are recorded with the completed report.
 
 ## Results
 
-Pending the registered capture. The technical smoke is not a session of record.
+The registration was committed as `d952e9a` before capture. All **16/16 peers**
+completed without failures or retries: **96 assigned holds, 2,832 sender samples,
+8,669 encoded frames**. All windows complete, no clipped/aliased assignments, and
+known-marker coverage is 100% in each session. Descriptive actual payload rates:
+
+| Assigned BWE ratio | Assigned/complete holds | Mean actual payload / assignment BWE |
+| ---: | ---: | ---: |
+| 0.65 | 37 / 37 | 0.580 |
+| 0.85 | 34 / 34 | 0.721 |
+| 1.05 | 25 / 25 | 0.881 |
+
+These unbalanced IID counts and pooled means are observability evidence. They are
+not the registered N1 effect, a state-conditioned causal value, a safety estimate,
+or evidence that choosing one ratio improves delivered QoE. Each randomized hold's
+factual delivery count is retained, but no QoE effect test or model fit is made.
+
+Independent post-capture verification reconstructs all 2,832 causal sixteen-field
+sender vectors and pre-RTP snapshots from raw counters/encoded events, in addition
+to the original assignment, cap-readback, sidecar, marker and RGB replay. Optional
+RTT is present in 2,625 samples; missing observations remain explicit. Actual
+target, QP, RTP/header/retransmission bytes and encoder timing are recorded, but
+counter presence does not establish semantic usefulness: e.g. the browser reports
+`totalEncodedBytesTarget` as zero. Eight semantic forgeries against an actual peer
+are rejected even after recomputing their seals. All registered source hashes and
+original native experiments remain unchanged.
+
+### Preserved bookkeeping defect and prospective correction
+
+The stronger packet audit initially rejected closing-ledger equality. The V1
+collector records that ledger before fetching browser-version metadata and
+stopping the relay timer. Across all peers the immutable logs retain 10–36 extra
+empty service ticks. A read-only adapter identifies the exact closing-ledger
+prefix, runs the unchanged FIFO auditor on it, and independently checks every
+remaining tick's monotonic timing, capacity budget and zero queue/service. The
+full **617,496 raw events** are accounted for; no suffix adds packets or byte
+service. This is a documented post-capture audit, not a repaired raw seal or
+unqualified original-auditor pass.
+
+`turn_probe_v2.mjs` prospectively stops packet/timer production before taking the
+closing ledger. One separate excluded technical peer (scene 9001) verifies that
+correction with 37,630 raw events, six holds and **zero** trailing ticks. The V1
+collector, protocol and sixteen sessions of record are preserved. Neither
+technical smoke enters the table or any efficacy estimate. A future study must
+register the new collector hash before capture.
+
+### Reproduction and retained evidence
+
+Compact reports, independent audit, semantic-forgery receipt, package provenance,
+technical registrations and raw-file inventory are under
+`reports/native-turn-probe-v1`. The first registered trial, selected without
+reading outcomes, supplies `figure/trajectory.pdf`: BWE, requested cap, native
+target and causal trailing encoded rate are separate quantities. The figure is
+illustrative, not a fitted dynamics model.
+
+```sh
+# After configuring the verified external TURN binary and local library path:
+uv run --frozen python -m media_rl.native_turn_probe capture \
+  --spec configs/native_turn_probe_v1.json --out /external/fresh-native-raw
+uv run --frozen python -m media_rl.native_turn_probe analyse \
+  --capture /workspace/.cache/networkrlcd/working/native-turn-probe-v1 \
+  --out reports/fresh-native-turn-report
+uv run --frozen python -m media_rl.native_turn_audit \
+  --capture /workspace/.cache/networkrlcd/working/native-turn-probe-v1 \
+  --compact reports/native-turn-probe-v1 --out /external/fresh-native-audit.json
+```
+
+The inventory covers approximately 230 MB of fresh native/synthetic raw evidence
+and excluded technical captures outside the project. Private archive access is
+still unavailable; no bytes have been uploaded, verified remotely or pruned.
+Original licensed-video raw history still needs the targeted pinned restore.
+The fresh native path now works, and the next uncertainty is whether its observed
+estimator/encoder dynamics and action-dependent value generalize beyond four
+procedural settings and this TURN/TCP transport. No real-network validation or
+controller promotion follows.

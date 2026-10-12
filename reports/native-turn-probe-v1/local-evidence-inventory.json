@@ -1,0 +1,471 @@
+{
+  "abi": "native_turn_probe_v1_local_evidence_inventory",
+  "archive_verified": false,
+  "files": [
+    {
+      "bytes": 9047,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/spec.json",
+      "sha256": "090b6db748385eb9a0a069055342c1a3abeeb14ae691fadf4fc761242d32b217"
+    },
+    {
+      "bytes": 55679,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/summaries.json",
+      "sha256": "bdfc45594bb70055d4c41f48024f6d008ea23699f8480b26d82b8f0b1dd7523b"
+    },
+    {
+      "bytes": 666815,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-drop-0/events.jsonl.gz",
+      "sha256": "48f150a0307369c6303618259d364d38a22338ec8bd4cce07a1e864b573b0583"
+    },
+    {
+      "bytes": 685,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-drop-0/manifest.json",
+      "sha256": "baf393ef454a4f90eb6b36a0368be155f3073dfbc0c9bc5a46cbf3470af2f4b2"
+    },
+    {
+      "bytes": 10500326,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-drop-0/peer.json",
+      "sha256": "e4c1c86056b377304ceee01c21b7cc17c8ddde6e06a9d2f64e4b6d8c7caa1a31"
+    },
+    {
+      "bytes": 198,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-drop-0.json",
+      "sha256": "92cdad3ef3bcefa3e8c2540074d940548e36024c129f22a39a74b3f7db613ee3"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-drop-0.log",
+      "sha256": "3a4a50e9ddd2d579ff34a58a17d2995331303309c55984a38d752ef58a72d1d0"
+    },
+    {
+      "bytes": 664198,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-drop-1/events.jsonl.gz",
+      "sha256": "d6ff7e4dc3f1769f4480aee23797660daac2389f591d057da3f3e8bd94c21b1c"
+    },
+    {
+      "bytes": 685,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-drop-1/manifest.json",
+      "sha256": "cf2cc0f91dfc20e78b1bc5bd741b7001c80a571cb6450ae409fec97af55b7c71"
+    },
+    {
+      "bytes": 10524743,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-drop-1/peer.json",
+      "sha256": "297f9c3a58d7977fe06d59c13844f427dbf02683697bc5cad9700fdfa1227352"
+    },
+    {
+      "bytes": 198,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-drop-1.json",
+      "sha256": "54cdd287f84eb02e3dc7552ea42523b9a79193f0bbc9fe9f7377ec873f8d10bb"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-drop-1.log",
+      "sha256": "b1adc9771d5a089ad017ba9e387d326c37c14ee0800e2161fe2a56e19608adc6"
+    },
+    {
+      "bytes": 580976,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-room-0/events.jsonl.gz",
+      "sha256": "6b49f718cb4397c237ea68575cd89431b066d41f0a7e9648451336bbe0bb4a6a"
+    },
+    {
+      "bytes": 678,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-room-0/manifest.json",
+      "sha256": "db057b615064b71491007019df9ff82c53575a9b6fb111c25debd271d44d902f"
+    },
+    {
+      "bytes": 10218593,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-room-0/peer.json",
+      "sha256": "10520b2a88d22a3da4b6d945f5c991282471567511281617e996713c3a9bf0eb"
+    },
+    {
+      "bytes": 191,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-room-0.json",
+      "sha256": "f3a656a495a694c7723285582dbffd3041c8ea349909b541c9c6944df1753543"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-room-0.log",
+      "sha256": "21bbfc3be0d9abc16e8b6f36c12e3362b8f75d14f236bb1e11f43eff0f047b81"
+    },
+    {
+      "bytes": 580166,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-room-1/events.jsonl.gz",
+      "sha256": "a8eb789728c988e7ad3fad607bdc3376963d91cce2ee023525419c0272a0b21d"
+    },
+    {
+      "bytes": 678,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-room-1/manifest.json",
+      "sha256": "4f140eaa448078c74db7da86d7a9624e7edbbf3bfc92d03386680a8cb8b2d1b7"
+    },
+    {
+      "bytes": 10599256,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-room-1/peer.json",
+      "sha256": "f906c0eca1c4b4016187645d8501a051fc695c10f03374b079eb322b5dda3f50"
+    },
+    {
+      "bytes": 191,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-room-1.json",
+      "sha256": "83fd4e9eb219834db0c26536fbeb9b9d6d58f22ced76fa6ef4cbd5f94e0d5d4c"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-101-room-1.log",
+      "sha256": "b674a9cf63e91300941a865778eb8c6468c0244a571fc1495d7198b344f86fc1"
+    },
+    {
+      "bytes": 686687,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-drop-0/events.jsonl.gz",
+      "sha256": "05fc789400b48d66fc00a29a478ffb963f0a4eb396c1b738177957178382815e"
+    },
+    {
+      "bytes": 685,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-drop-0/manifest.json",
+      "sha256": "f05ed63bc690d840fcede7a25bcaacc916f784e1e5a898033efebcc2d6b40872"
+    },
+    {
+      "bytes": 10499718,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-drop-0/peer.json",
+      "sha256": "8700b4fa483823d1533f04e5492ffb63829789043707950b855430c6ca0dcfc2"
+    },
+    {
+      "bytes": 198,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-drop-0.json",
+      "sha256": "e44b5a41e06e02a7fdcc4b7ea9de8ed03dea352f46afeac0e467d2773c7618e0"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-drop-0.log",
+      "sha256": "b4c19deb03b6049c61b9137cd8c58aec6d6d32aacbfbce368b5b94db18c2b756"
+    },
+    {
+      "bytes": 684961,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-drop-1/events.jsonl.gz",
+      "sha256": "e79aa849d2769eea3a3ea9e60d4d4082c64a7848b547a5f8120747f102993735"
+    },
+    {
+      "bytes": 685,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-drop-1/manifest.json",
+      "sha256": "eb394f61553693b252878bdb94a8f32afde55c8f0cfc9752d3bc33ad754812f8"
+    },
+    {
+      "bytes": 10568129,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-drop-1/peer.json",
+      "sha256": "5fcd0904887657aa3a4e9fe91fcb5af212ecb64ae684d67c2d3ec7df864eac80"
+    },
+    {
+      "bytes": 198,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-drop-1.json",
+      "sha256": "db85c2790002a1096067c8f8b9daa15367e9a5c20b8ca6211ae926c2ff2dd0d0"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-drop-1.log",
+      "sha256": "ffa4d2e9140ca9b45dae9b8bff224b92f88d2316f3bea70d173eb12e6cc00025"
+    },
+    {
+      "bytes": 532134,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-room-0/events.jsonl.gz",
+      "sha256": "776840f1d16910213f85ed23d893f39602c41850ef2acc27cb4ae1d02e7479c4"
+    },
+    {
+      "bytes": 677,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-room-0/manifest.json",
+      "sha256": "16d457b1f060c4b88a71262fc1c6511c2dacea653a7fd7f189d966cc1042bd8b"
+    },
+    {
+      "bytes": 10526995,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-room-0/peer.json",
+      "sha256": "4af2fbc3d99fcf1e1706a8729fb8ef88d060becf240859f0cac8368b1a321ead"
+    },
+    {
+      "bytes": 190,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-room-0.json",
+      "sha256": "0a606924ccdc62ba1cf8c2731c23495f0ad113ff032dddffbe53f3b647c2078d"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-room-0.log",
+      "sha256": "f4b47bf294faa7f3c947fe62ed18711e5c5fa06a3239bd583acad1019b8a8bd5"
+    },
+    {
+      "bytes": 662646,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-room-1/events.jsonl.gz",
+      "sha256": "883e1ba0332e8456b47bff5024df12865a6756b2ce8d9045bd1c89ed39fa9d01"
+    },
+    {
+      "bytes": 678,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-room-1/manifest.json",
+      "sha256": "5f9b8fccd279d30146a83a351d5e37df2c8cfcf7809f9709df600b98f70d5b7c"
+    },
+    {
+      "bytes": 10184642,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-room-1/peer.json",
+      "sha256": "6f5f82937b6fcc2807a8c0a3c9fbd3c95445fe86103d5cc28e1ce16c3f161d3a"
+    },
+    {
+      "bytes": 191,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-room-1.json",
+      "sha256": "1b2aec46119a05a8fa28227361e82cd9f43f83c57241ba3fef8cb21219a86ea8"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-102-room-1.log",
+      "sha256": "4f075dc200127f42327e45a1ee56fc7da97f257930dfbc24430c3c1694324c81"
+    },
+    {
+      "bytes": 674255,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-drop-0/events.jsonl.gz",
+      "sha256": "6bfd64055676ddc8324f7f714f40ce688bbf3fa95a07c800d8f0fc5509e13ae3"
+    },
+    {
+      "bytes": 685,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-drop-0/manifest.json",
+      "sha256": "d505d9c46c89d11da30f7677e26d7e213debaf7c45a936b80aca37f33275478f"
+    },
+    {
+      "bytes": 9909050,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-drop-0/peer.json",
+      "sha256": "a44b90de58df98a37a344bef45cff6522b433ca68145fb9125ec3dae7df46401"
+    },
+    {
+      "bytes": 198,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-drop-0.json",
+      "sha256": "4dcb3f52b2bdae675c6883e773d81270e1136b47abcde15bf29c13a2fcbfa9a4"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-drop-0.log",
+      "sha256": "6a1e817479118b53181a0e4511d65cb641c4ac050b1888ad6d46c0ceb2379f2a"
+    },
+    {
+      "bytes": 671130,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-drop-1/events.jsonl.gz",
+      "sha256": "d630effdbf8f3db17e3de2b0ffe84e850bce6c3ff6d4aa3e5dfb26845ee13fab"
+    },
+    {
+      "bytes": 684,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-drop-1/manifest.json",
+      "sha256": "ef693fd2d0ae1fe2ba102cfb73740794b6e2c64c389c9caf35a1ab318d820ba6"
+    },
+    {
+      "bytes": 10612633,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-drop-1/peer.json",
+      "sha256": "394e89020a78c08e555806f35274aa2ff43e7892cd33fe6253865d09c21cdc03"
+    },
+    {
+      "bytes": 197,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-drop-1.json",
+      "sha256": "654af2370d92e368b6300862935a2027d97e0cbc16dae335e4909ea6a8dede61"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-drop-1.log",
+      "sha256": "c612f2c188c1dfdde965e8024be6aeeecd35e52ed52b02ee9175965a5d8cbaf2"
+    },
+    {
+      "bytes": 656795,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-room-0/events.jsonl.gz",
+      "sha256": "8da325cd0fc980b82da5b670296fdc1fd8b8ddec59c5d6c30cd732ae37c35ae2"
+    },
+    {
+      "bytes": 677,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-room-0/manifest.json",
+      "sha256": "38c42e5277c6dae8c1b896354c8efbbac9c768726ce168775f38ff598400d6b5"
+    },
+    {
+      "bytes": 10573697,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-room-0/peer.json",
+      "sha256": "1cf3a3d3e40f164dd85c207b83f95bf8dc104c7d854debd913c05fd9730c7bf0"
+    },
+    {
+      "bytes": 190,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-room-0.json",
+      "sha256": "ea58ab70423afcbe08ee061ac1f5ad542775ac9d71a60a4a2092bd3a5f37466c"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-room-0.log",
+      "sha256": "34b75fb78c2132857c7427cd97251c911dd7bb5b9530fbd3514de0036924acc6"
+    },
+    {
+      "bytes": 582550,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-room-1/events.jsonl.gz",
+      "sha256": "4f6d81213a40e12c6a98d23311a38d96f070bd958a25f8ad794b8b7b1202130e"
+    },
+    {
+      "bytes": 677,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-room-1/manifest.json",
+      "sha256": "38cc198a5bef14d827ed1241b7ec4d65d879430b1e334da9077fa66309f8afd4"
+    },
+    {
+      "bytes": 10564766,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-room-1/peer.json",
+      "sha256": "8c6988f848169fedd46ea523892786b2819f069213e24b5792c468f9ff5a1461"
+    },
+    {
+      "bytes": 190,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-room-1.json",
+      "sha256": "f9b9dae4e9079197aba9bff9ab2434339b074a50fbd22dc4bc65b5929ba6e662"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-103-room-1.log",
+      "sha256": "830dea46c370c1a4a7185d6de45e41ce6b684a36ca8bf802aab8ad940b1ca693"
+    },
+    {
+      "bytes": 669282,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-drop-0/events.jsonl.gz",
+      "sha256": "862e707ae13e74d4f5e8cf55435804805c72b284583aedf8196763f079405bc7"
+    },
+    {
+      "bytes": 684,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-drop-0/manifest.json",
+      "sha256": "e730add0a431581e09a9046a7554e7a954f291bc3eee6eaf8d5ec968284194c1"
+    },
+    {
+      "bytes": 10430583,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-drop-0/peer.json",
+      "sha256": "72718fe7f1a1a2371b985ba1094a73f6875c2c77aea99d77a4955cba94d89d74"
+    },
+    {
+      "bytes": 197,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-drop-0.json",
+      "sha256": "6576d8306d5eedf7a153ed5f8d70b3ccd36679d9a81c7dbd8cd99f32be4c8158"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-drop-0.log",
+      "sha256": "4855cf90d9515717b195a6ca9213a83571f106286f5c5427324e7dd26b25977d"
+    },
+    {
+      "bytes": 665631,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-drop-1/events.jsonl.gz",
+      "sha256": "e122b9c73aac4cb6237ee0dfb6351bcf4514e8862407e92f8d8be2e0b322fe9d"
+    },
+    {
+      "bytes": 684,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-drop-1/manifest.json",
+      "sha256": "0f2c9bd9ac574b9b7c23a9cab82de968c6c601bdaf775d688ab8fc21eba8f8a0"
+    },
+    {
+      "bytes": 10476815,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-drop-1/peer.json",
+      "sha256": "db82e8abb9f1c724770e4c2ce00b137bbb2dc72c981c1b4e329a8f066211b9fd"
+    },
+    {
+      "bytes": 197,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-drop-1.json",
+      "sha256": "04685084f4b2ef1e94a69852a8851095d4f687e0479a50235c1beb3695913c57"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-drop-1.log",
+      "sha256": "34e79c4a25456fe0991e8110de0459bfbe2c130e096fa04c55931843df44d82a"
+    },
+    {
+      "bytes": 561943,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-room-0/events.jsonl.gz",
+      "sha256": "afa2350bfeb8eaf2f95fc04afded2c2c22fa73b591b4cfa0447132673127919a"
+    },
+    {
+      "bytes": 678,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-room-0/manifest.json",
+      "sha256": "156a046a5f4dec2041b645ccbbc852f9c1c672bff0b5bf203bec97886ad27286"
+    },
+    {
+      "bytes": 10202170,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-room-0/peer.json",
+      "sha256": "4571e46192d323ae453d8895cbd35fb034c9bdffd43d7c9ae8d3afd3885913af"
+    },
+    {
+      "bytes": 191,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-room-0.json",
+      "sha256": "e6f6daf2f2e9711fb997bfe37f98a7c32eda4c050e426fd6ac8582390ff5e7f8"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-room-0.log",
+      "sha256": "1fc0e891cc309b980b03287a8bde7786b95f8cec1e5267b18d4c77e99b63837b"
+    },
+    {
+      "bytes": 585131,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-room-1/events.jsonl.gz",
+      "sha256": "712e4838735739f5904c0d92d37d0796cc14f937e6375455e378573813b23835"
+    },
+    {
+      "bytes": 678,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-room-1/manifest.json",
+      "sha256": "636e0fe4dd3ff7fb03328172ac64964c45ea7e5de6b7876441597a42859a958d"
+    },
+    {
+      "bytes": 10136055,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-room-1/peer.json",
+      "sha256": "9ff2fb0c78f3d9ad43aa736d52ac5d76f1db88cf4c0bfdff1d0476717b31e362"
+    },
+    {
+      "bytes": 191,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-room-1.json",
+      "sha256": "a1c0cfa95b390db0bbf1aaf46b17b9caa9cedac65b4c22e29a240e7fcbd37d68"
+    },
+    {
+      "bytes": 127,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-probe-v1/turn-104-room-1.log",
+      "sha256": "d4760cf1e5b27d64ca91b9c39789bac5faec3c5447d60c3acb3c9da0b8f4982c"
+    },
+    {
+      "bytes": 656012,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-v2-technical/events.jsonl.gz",
+      "sha256": "7a75fd191344941ac434c860e55ecdb5769a2c0b030cd75e5bc0a74d82eeb233"
+    },
+    {
+      "bytes": 704,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-v2-technical/manifest.json",
+      "sha256": "a55ed7957c8f93735d725f4ec6a0d4ce0f1cb70d866ad4909ceeaf874720b3b3"
+    },
+    {
+      "bytes": 9681391,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-v2-technical/peer.json",
+      "sha256": "4c23ce9c6a495cd1ce19027a3423c21c4aa7e03db5037c5b8e6eeb88991aee87"
+    },
+    {
+      "bytes": 298101,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-technical-smoke-v1/events.jsonl.gz",
+      "sha256": "5165833e2d7dfa2898e6310ed8de2960ce7378151b26f446da71621730b66c11"
+    },
+    {
+      "bytes": 634,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-technical-smoke-v1/manifest.json",
+      "sha256": "47b4032935ebd192867eda3f3154539614ea801e5152aa70f5e67cf9d6e0edc4"
+    },
+    {
+      "bytes": 4939627,
+      "path": "/workspace/.cache/networkrlcd/working/native-turn-technical-smoke-v1/peer.json",
+      "sha256": "85ba5ab0c0bd5ce231a3749e49e51fa1cc3ec49e55b1aec3b17f13af37bfc3e3"
+    },
+    {
+      "bytes": 164854,
+      "path": "/workspace/.cache/networkrlcd/working/typed-factual-acceptance-v1/closed-loop.npz",
+      "sha256": "8ce9d08815a313a84298515bc41a4b2c2e50f03a9138c9e15b989f7bfe0ec635"
+    },
+    {
+      "bytes": 12343944,
+      "path": "/workspace/.cache/networkrlcd/working/typed-factual-acceptance-v1/factual-501.npz",
+      "sha256": "b91307706f52f106b763d4cdbf12cc381bd76ad5583c9f0bb81dc7ba74460d88"
+    },
+    {
+      "bytes": 12335448,
+      "path": "/workspace/.cache/networkrlcd/working/typed-factual-acceptance-v1/factual-502.npz",
+      "sha256": "6a6e1d43263290760ec160513bd822c366751452e007e523e7351f22ca4ba2d8"
+    },
+    {
+      "bytes": 12411354,
+      "path": "/workspace/.cache/networkrlcd/working/typed-factual-acceptance-v1/factual-503.npz",
+      "sha256": "dfa2173bb9509449b33a756b4b455a3b66a2b58f00209a1711d630d997e2d2d1"
+    }
+  ],
+  "local_cache_is_not_backup": true,
+  "private_archive_target": "p-yan/networkrlcd-results-archive",
+  "raw_bytes_pruned": false,
+  "scope": "new TURN probe, excluded technical smokes and factual synthetic audit only",
+  "total_bytes": 229566302
+}

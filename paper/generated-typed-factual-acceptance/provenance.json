@@ -1,0 +1,11 @@
+{
+  "abi": "development_update_paper_export_v1",
+  "exporter_sha256": "3d670790f9f1905bab110bdbde6670158f1df8ef57b937a2b7d54986d5924195",
+  "input_sha256": {
+    "configs/typed_factual_acceptance_v1.json": "1832eeb9459e79722d6558333f1a54f4f4d3a9feab216472c30fcb7c681ffcdd",
+    "reports/typed-factual-acceptance-v1/report.json": "8da8ec86ae668f220e698c93757efb1acef3d04d44cebde64be6e10f8b790f07",
+    "reports/typed-factual-acceptance-v1/verification.json": "d82aec2b1ea8e11abd3abed0a6e1ef5aa057cd8229c2bdbd8da17745f9144968"
+  },
+  "no_capture_or_training_launched": true,
+  "table_sha256": "7c367888a5a32389c647a5c4442ffdd102ba5c263501b1c1b03436c14bd669da"
+}
