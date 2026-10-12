@@ -1,0 +1,38 @@
+{
+  "applied": true,
+  "archive_bytes": 4332759040,
+  "download_probe": "results.tar.part-0004",
+  "files": 720,
+  "logical_bytes": 3972108501,
+  "parts": {
+    "results.tar.part-0000": {
+      "sha256": "988e181ec8b7f8216cf7e05f2f82313164ebdcba39defa37cc75eebf8ca9d6fa",
+      "size": 1073741824
+    },
+    "results.tar.part-0001": {
+      "sha256": "4d43e905ab3e54938ef738a90a6af366f7749ded357a1b98b4de9733b5e18761",
+      "size": 1073741824
+    },
+    "results.tar.part-0002": {
+      "sha256": "8a5a3aa9bf4301301aa4005a419d1bcbe409dcee30afce7fbf4956e1131e9ea2",
+      "size": 1073741824
+    },
+    "results.tar.part-0003": {
+      "sha256": "f7802531fd74f172e8af0dd72f18d7d7c668421c100101b99ed307dcda61180b",
+      "size": 1073741824
+    },
+    "results.tar.part-0004": {
+      "sha256": "0e75d68634be2b90fc34a6254fa5c19915855d70828c73a4038a7d8c6e133782",
+      "size": 37791744
+    }
+  },
+  "prefix": "native-range-pilot-v1-20261011-233324",
+  "private": true,
+  "repo": "p-yan/networkrlcd-results-archive",
+  "retained_or_drifted": 9853,
+  "revision": "36b82e4045dc8f982930839c8528719ed30447ba",
+  "scopes": [
+    "results/native-range-pilot-v1"
+  ],
+  "verification": "passed"
+}
