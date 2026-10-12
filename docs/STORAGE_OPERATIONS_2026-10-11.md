@@ -38,14 +38,18 @@ Read AGENTS.md and STORAGE_POLICY.md before acting on these paths.
   pinned completed receipt to SKIP finished scopes; do not re-archive pruned
   partial folders. Interrupted uploads need a NEW prefix, and sealed raw bytes
   must still pass their original manifests before packaging.
-- Durable sealed-peer watcher task: `99be6646-44aa-4c26-9ac4-d17479525651`.
+- Completed durable sealed-peer watcher: `99be6646-44aa-4c26-9ac4-d17479525651` (exit 0).
+  After its exit, the native status command verified **192/192 sealed sessions**,
+  **no failed attempts**, and all 192 relocated aliases intact. The collector has
+  exited. Both final outcome files are still pending, so margin raw pruning is
+  NOT yet eligible. Ladder archival is still running.
   Log: `~/.cache/networkrlcd/logs/sealed-peer-watch-2026-10-11.log`.
   Collector PID: `18770`; PID is a point-in-time identifier, not permanent.
   The prior ordinary watcher `ae19ca4a-5b7d-4375-8d24-4d8968ed1513` timed out;
   it is no longer running. All 160 relocated peer aliases were checked intact
   before this durable replacement was started (no duplicate watcher).
-  This watcher scans sealed peers only and ends after the collector exits (two-hour
-  maximum from replacement startup). It does not delete raw capture data.
+  The watcher scanned sealed peers only and ended when the collector exited.
+  It deleted no raw capture data. Do not restart it for this completed capture.
 - The margin archive waits up to two hours after reaching that queue step for the
   collector to exit and report.json + sessions.json to exist under
   results/native-margin-pilot-v1-report/. It computes no interim outcomes.
