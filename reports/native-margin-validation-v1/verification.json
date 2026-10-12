@@ -1,0 +1,39 @@
+{
+  "abi": "native_margin_validation_v1_verification",
+  "controller_promoted": false,
+  "independent_reproduction": {
+    "audit_and_judgement": "identical",
+    "tables_and_macros": "bit-exact"
+  },
+  "lint_and_format": "passed for new module and tests",
+  "native_n1_freeze": {
+    "files": 4,
+    "sha256": "ae567d09e197ca701cf776267ce35d71f99429e5e94509921bb8324f8a5c26af",
+    "verified": true
+  },
+  "node_controller_tests": {
+    "failed": 0,
+    "passed": 9
+  },
+  "original_research_files": {
+    "changed": [],
+    "verified_unchanged": 464
+  },
+  "paper": {
+    "build_commands": [
+      "xelatex -no-pdf -interaction=nonstopmode -halt-on-error -output-directory=build main.tex",
+      "BIBINPUTS=/workspace/networkRLCD/paper: bibtex build/main",
+      "latexmk -g -xelatex -bibtex- -interaction=nonstopmode -halt-on-error -outdir=build main.tex"
+    ],
+    "file": "paper/build/main.pdf",
+    "pages": 77,
+    "sha256": "98b6bfa6674b06073de5a737158b5b646528bf902876a71c27c6931f2fe8568e",
+    "undefined_references_or_box_or_missing_character_warnings": false
+  },
+  "python_tests": {
+    "passed": 116,
+    "skip_reason": "macOS-only kqueue storage watcher test on Linux",
+    "skipped": 1
+  },
+  "raw_replay_performed": false
+}

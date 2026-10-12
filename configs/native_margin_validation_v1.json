@@ -1,0 +1,45 @@
+{
+  "abi": "native_margin_validation_v1_spec",
+  "analysis": "registered forecast verdict plus explicitly post-report sensitivity checks",
+  "controller_promoted": false,
+  "inputs": {
+    "forecast": {
+      "path": "results/typed-margin-forecast-v1/forecast.json",
+      "sha256": "d7729da05235eecdac20dfbc4eff606e85cb55caae510fd4be9b6a38457e617f"
+    },
+    "layer": {
+      "path": "results/typed-native-receiver-v1/layer.json",
+      "sha256": "923e5a2304b800c0a65c2311d291adab547d4537aeaf3cf00389cddbc060a22f"
+    },
+    "report": {
+      "path": "results/native-margin-pilot-v1-report/report.json",
+      "sha256": "59b689ac678c42ce87f995a2677b3e0055a82755f34dc8ecf9807bef6688c29a"
+    },
+    "sessions": {
+      "path": "results/native-margin-pilot-v1-report/sessions.json",
+      "sha256": "43b8aa38c8a837a0c37814834312f14e3071a2e0279c0d62d71155d0c081aac4"
+    }
+  },
+  "models_fitted": 0,
+  "plan_sha256": "74c04c483ed88e19ffc31d6494afb63c004b12ea668def36ca6df1df13d0f0ae",
+  "raw_replay_performed": false,
+  "registered_criteria": {
+    "criteria_implementation": "media_rl.typed_bitrate_margin_forecast.judged",
+    "forecast_minimum_absolute_difference": 0.5,
+    "git_commit": "422afca",
+    "native_established": "unadjusted source-level 95% t interval excludes zero",
+    "path": "docs/NATIVE_MARGIN_PILOT_V1.md",
+    "primary_span": "session",
+    "schedule_agreement_fraction": 0.8
+  },
+  "repetitions": 1,
+  "sessions": 192,
+  "sources": 12,
+  "supplement": {
+    "added_after_native_report_was_read": true,
+    "holm_family": "the six overall whole-session endpoint contrasts, two-sided, alpha 0.05",
+    "leave_one_source_out": "remove each entire source, keeping all schedules and arms paired; report margin-minus-0.65 mean range and negative-mean count; no refitting or policy selection",
+    "selection_or_promotion": false,
+    "trajectory_description": "fixed 0.65 final 54-60 s bin requested cap and jitter buffer against the committed forecast, all schedules; descriptive, no causal attribution"
+  }
+}

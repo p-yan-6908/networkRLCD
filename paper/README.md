@@ -154,3 +154,52 @@ The verified final PDF is **34 pages** with **17 bibliography entries**. All **n
 Tectonic 0.15.0's known **nonfatal bibliography consistency/rerun warning** remains documented in `paper/build.log`, not suppressed or described as warning-free. Current receipt: `results/jobs/delay-budget-v9-paper-check.json` (the separate V8 receipt is historical); complete verification: `docs/verification.md`. Independent all-page proofreading and author/venue metadata remain outstanding.
 
 Author/affiliation and venue/template are still placeholders. Real traces, packet/codec validation, WebRTC integration, fairness, stronger uncertainty analysis and full-budget physical/threshold ablations remain future work. Nothing has been submitted or published.
+
+## Long-session native pilot and blind forecast validation (2026-10-11)
+
+Study 13 now includes the completed 192-session development pilot and its unchanged
+registered forecast test. The rule loses to tuned fixed 0.65; the simulator misses
+that contrast and fails. No model is fitted or controller promoted.
+`paper/generated-native-margin-pilot/` contains two tables, macros and input/code
+provenance from `media_rl.native_margin_pilot_report`. The factual report is fully
+recomputed from committed compact session summaries; raw frames/seals are not
+restored or replayed. Holm and source-omission checks are explicitly post-report
+supplements, not independent confirmation or policy selection.
+
+`make native-margin-pilot-evidence` reproduces into fresh `*-reproduction` directories
+without downloading raw evidence. Set `MARGIN_VALIDATION` and `MARGIN_PAPER` to new
+paths for further reproductions. The manuscript reads the committed canonical
+export. See [results and limitations](../docs/NATIVE_MARGIN_PILOT_V1.md#results-2026-10-11)
+and [active research status](../docs/RESEARCH_STATUS.md).
+
+Cloud verification of the margin section, before the BWE diagnostic: 116 Python tests passed, one macOS-only storage test skipped,
+and nine Node controller tests passed. An independent export reproduced the audit
+and judgement and produced bit-exact tables/macros. All 464 pre-existing research
+code/config/result files remain unchanged. The 77-page PDF compiled with XeLaTeX,
+with no undefined references, box warnings or missing characters in the final log.
+The installed pdfLaTeX cannot render the manuscript's existing Unicode minus;
+XeLaTeX is the compatible engine. BibTeX was invoked from `paper/` to preserve the
+existing relative bibliography path, then `latexmk -g -xelatex -bibtex-` completed
+the build. Full commands and the PDF checksum are in
+`reports/native-margin-validation-v1/verification.json`.
+
+## Factual BWE dynamics diagnostic (development only)
+
+Study 13 also includes the small grouped prediction experiment documented in
+[BWE_DYNAMICS_DIAGNOSTIC_V1.md](../docs/BWE_DYNAMICS_DIAGNOSTIC_V1.md). Its table
+comes directly from `reports/bwe-dynamics-diagnostic-v1/table_bwe_dynamics.tex`,
+bound by the report's checksum. Source/regime CV are partitions of previously
+read development data, and ladder/margin reuse the same sources. The short-session
+fit loses to persistence on the one-minute panel; current cap gives no consistent
+predictive improvement. Predictive coefficients do not identify causal action value.
+No simulator, native controller or safety calibration is revised.
+
+`make native-bwe-diagnostic` reproduces into a fresh directory; set `BWE_DIAGNOSTIC`
+to another fresh path for further runs. Every model, factual numerical feature,
+target, prediction and table reproduces bit-exactly. The extended regression suite
+passes 126 Python tests with one macOS-only skip. The current PDF has 78 pages and
+no undefined-reference, box or missing-character warnings. Its checksum and checks
+are in `reports/bwe-dynamics-diagnostic-v1/verification.json`; the earlier 77-page
+checksum is a historical build receipt. Timestamped encoder/sender reconstruction
+is blocked on raw evidence access, documented in `next-input.json` alongside that
+verification receipt.

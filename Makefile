@@ -172,6 +172,19 @@ native-ladder-pilot-evidence:
 typed-native-receiver-evidence:
 	uv run --frozen python -m media_rl.typed_bitrate_native_receiver_report --layer $(N1)/typed-native-receiver-v1/layer.json --report $(N1)/typed-native-receiver-v1/report.json --out paper/generated-typed-native-receiver
 
+# Compact factual verification only; never restores raw captures or changes frozen evidence.
+# Outputs must be fresh. The manuscript reads the committed canonical export.
+MARGIN_VALIDATION ?= reports/native-margin-validation-v1-reproduction
+MARGIN_PAPER ?= paper/generated-native-margin-pilot-reproduction
+.PHONY: native-margin-pilot-evidence
+native-margin-pilot-evidence:
+	uv run --frozen python -m media_rl.native_margin_pilot_report --spec configs/native_margin_validation_v1.json --out $(MARGIN_VALIDATION) --paper-out $(MARGIN_PAPER)
+
+BWE_DIAGNOSTIC ?= reports/bwe-dynamics-diagnostic-v1-reproduction
+.PHONY: native-bwe-diagnostic
+native-bwe-diagnostic:
+	uv run --frozen python -m media_rl.bwe_dynamics_diagnostic --spec configs/bwe_dynamics_diagnostic_v1.json --out $(BWE_DIAGNOSTIC)
+
 # Compile from the exported evidence already under paper/generated-*; does not re-export the
 # nine archived studies, whose pruned results must be restored first (see ARCHIVED_RESULTS.md).
 paper-pdf:

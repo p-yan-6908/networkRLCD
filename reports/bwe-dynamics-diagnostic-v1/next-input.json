@@ -1,0 +1,54 @@
+{
+  "abi": "native_dynamics_targeted_input_v1",
+  "archive": {
+    "prefix": "native-range-pilot-v1-20261011-233324",
+    "private": true,
+    "repo": "p-yan/networkrlcd-results-archive",
+    "revision": "36b82e4045dc8f982930839c8528719ed30447ba"
+  },
+  "blockers": {
+    "archive_host_in_selected_network_policy": false,
+    "configured_private_archive_credentials": false,
+    "licensed_media_working_copies": "absent; required for new capture or source-dependent quality replay",
+    "local_raw_capture": "absent"
+  },
+  "controller_promoted": false,
+  "development_only": true,
+  "next_input": "A complete targeted native evidence bundle with retained metadata, or securely configured read-only access plus allowed archive hosts. No credential values belong in Git or chat.",
+  "no_new_native_capture": true,
+  "purpose": "minimum factual sender/encoded-payload observability and clock reconstruction probe before a larger estimator/actuator study",
+  "raw_replay_performed": false,
+  "receipt": "docs/storage-receipts/native-range-pilot-v1-20261011-233324.json",
+  "required_records": [
+    "timestamped causal sender observations and actual linked feedback",
+    "encoder payload meter events with pre-RTP byte counts and monotonic timestamps",
+    "assigned cap, native acknowledgment/readback and observation timing",
+    "original runtime/plan/session metadata and unmodified manifest checksums needed to interpret and verify selected records"
+  ],
+  "restoration": "Resolve exact paths through the pinned archive inventory and retained metadata; restore only needed records and dependencies into a fresh external directory, verify hashes, never overwrite or rewrite seals. This initial structured telemetry probe is not a full raw quality/frame replay.",
+  "selection": "lexically first already-used range-pilot source, all four schedules and five fixed levels; selected from IDs only",
+  "sessions": 20,
+  "source": "source-1f253c3e7a476525c526a21e",
+  "trials": [
+    "rp-656fe3407af041006f6f16eb-collapse-recovery-l0",
+    "rp-656fe3407af041006f6f16eb-collapse-recovery-l1",
+    "rp-656fe3407af041006f6f16eb-collapse-recovery-l2",
+    "rp-656fe3407af041006f6f16eb-collapse-recovery-l3",
+    "rp-656fe3407af041006f6f16eb-collapse-recovery-l4",
+    "rp-656fe3407af041006f6f16eb-near-capacity-l0",
+    "rp-656fe3407af041006f6f16eb-near-capacity-l1",
+    "rp-656fe3407af041006f6f16eb-near-capacity-l2",
+    "rp-656fe3407af041006f6f16eb-near-capacity-l3",
+    "rp-656fe3407af041006f6f16eb-near-capacity-l4",
+    "rp-656fe3407af041006f6f16eb-queue-building-l0",
+    "rp-656fe3407af041006f6f16eb-queue-building-l1",
+    "rp-656fe3407af041006f6f16eb-queue-building-l2",
+    "rp-656fe3407af041006f6f16eb-queue-building-l3",
+    "rp-656fe3407af041006f6f16eb-queue-building-l4",
+    "rp-656fe3407af041006f6f16eb-underutilized-l0",
+    "rp-656fe3407af041006f6f16eb-underutilized-l1",
+    "rp-656fe3407af041006f6f16eb-underutilized-l2",
+    "rp-656fe3407af041006f6f16eb-underutilized-l3",
+    "rp-656fe3407af041006f6f16eb-underutilized-l4"
+  ]
+}

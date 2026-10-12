@@ -1,6 +1,7 @@
 % Study 13. Read by main.tex only when generated-native-n1/evidence.tex exists.
-% Every result below is a macro or table written by media_rl.native_actuator_qualification_report
-% from the registered final analysis; the outcome sentences were fixed there before the interim.
+% N1 core results use macros/tables from the registered final analysis; its outcome
+% sentences were fixed before the interim. Development supplements use separate
+% generated evidence and retain their own explicit claim boundaries.
 \section{Study 13: does the requested ratio move a native encoder?}
 \label{sec:native-n1}
 Every controller in Studies 10 to 12 acts by requesting a bitrate as a ratio of the bandwidth estimate, and every result there comes from a fluid simulator in which the encoder follows the request. This study tests that one link of the chain on a native browser stack and nothing else. It fits no model, lets no learned controller act, and makes no claim about delivered quality or about which ratio is better in which state. Its question, estimator, test, stopping rule and the code for all of them were registered and hash-frozen before any of its data existed (\path{docs/NATIVE_PHASE_N1_ACTUATOR_QUALIFICATION.md}, tag \texttt{native-n1-preregistered}). The sentences below that state the outcome were fixed in the evidence exporter before the interim look, one per registered outcome.
@@ -277,6 +278,50 @@ The miss has a visible cause, which we give as a reading. In the simulator the e
 
 
 
+\ifdefined\MarginPilotSessions
+\subsection{Long sessions with recurring drops: a native loss and a failed blind forecast}
+\label{sec:native-margin}
+The short controller pilot left open whether a rule could benefit from remembering a drop over a longer call. A separately registered development pilot therefore ran four arms on \MarginPilotSources{} already-used sources: fixed ratios 0.25, 0.65 and 1.05, and one rule that cruises at 0.65, steps up to 0.85 after two calm holds, and cuts to 0.25 on late presentation feedback. After a cut it remembers lateness for 30\,s, doubling that memory after further drops up to 120\,s. Every arm uses the same native sampler and cap actuator. Whole sessions were randomised in a seeded order, one repetition per cell, under four equally weighted one-minute schedules: steady room, steady constraint, recurring drops and one drop (\path{docs/NATIVE_MARGIN_PILOT_V1.md}). The rule observes causal sender feedback; neither the relay capacity nor the schedule enters its decisions. The registered analysis uses source-level paired contrasts, without fitting a model.
+
+\begin{table}[t]
+\centering\small
+\input{generated-native-margin-pilot/margin_pilot_arms.tex}
+\caption{Completed \MarginPilotSessions{}-session development pilot. Endpoint: on-time sampled RGB-PSNR contribution per capture request, schedules weighted equally. Forecasts are synthetic, committed before capture; native outcomes are factual. Intervals are over twelve sources, not 192 independent sessions. The endpoint is not perceptual QoE.}\label{tab:margin-arms}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\resizebox{\linewidth}{!}{\input{generated-native-margin-pilot/margin_pilot_contrasts.tex}}
+\caption{Whole-session endpoint contrasts, with unadjusted source-level 95\% $t$ intervals. The unchanged forecast rule calls a simulated difference flat when its absolute size is below 0.5; native contrasts are established when their intervals exclude zero.}\label{tab:margin-contrasts}
+\end{table}
+
+The registered controller reading is negative (Table~\ref{tab:margin-contrasts}): the rule loses to tuned fixed 0.65 by 1.13 endpoint units [0.27, 1.99], is not separated from fixed 0.25, and beats 1.05. Its on-time share also loses 3.87 percentage points [0.96, 6.78] to 0.65. From the second change onward the endpoint loss is 1.44 [0.53, 2.34]. The rule therefore does not qualify by beating the top ratio. A supplementary check specified after the report was read applies Holm correction to the six overall endpoint contrasts; the loss to 0.65 remains at adjusted $p=\MarginPilotHolmLow{}$. Removing each source in turn leaves all twelve means negative, between $-1.26$ and $-0.95$. These checks do not correct all earlier development looks or constitute replication. One repetition per cell cannot estimate within-cell repeatability.
+
+The receiver layer remained exactly as fitted on the range pilot, and its forecast was committed before any session of record. By the rule fixed with that forecast, \emph{\MarginForecastVerdict{}}: \MarginForecastAgree{} of \MarginForecastEstablished{} established overall contrasts agree, but the rule against fixed 0.65 is forecast flat (+0.407) and is a native loss ($-1.131$). Under individual schedules \MarginForecastLocalAgree{} of \MarginForecastLocalEstablished{} established contrasts agree; the missed one is again the rule against 0.65, with recurring drops. All four forecast endpoints lie inside their native intervals (Table~\ref{tab:margin-arms}), so that coverage is not sufficient validation of a decision-relevant contrast. The secondary span also fails the unchanged forecast rule. No model is refitted and no controller is promoted.
+
+A descriptive trajectory check, added after the report was read, gives a more specific modelling question. At fixed 0.65, the cap requested in the final 54--60\,s bin after one drop is 377\,kbit/s natively against 158 in the forecast; with recurring drops it is 223 against 158, and with steady room 734 against 483. Requested cap is not actual encoded output. Native recovery differs from the simulated floor, but these traces do not separate estimator recovery, encoder response, the rule's higher starting ratio, its memory or scheduling noise as causes of the loss. All three native pilots are now development data. A revised dynamics model needs new blinded native evidence, and learned native control still needs factual action-value qualification and a fair closed-loop test against tuned baselines.
+
+The committed session summaries reproduce every field of the published native report within $10^{-12}$ rounding tolerance. The verification checks the complete source--schedule--arm matrix and pins input/code hashes (\path{reports/native-margin-validation-v1/audit.json}); it does not restore or replay raw native frames or seals. The native browser stack ran across an emulated relay on one machine, not real network conditions. The simulator verdict is a test of the frozen forecast, not evidence of native counterfactual outcomes or a safety guarantee.
+\fi
+
+\IfFileExists{../reports/bwe-dynamics-diagnostic-v1/table_bwe_dynamics.tex}{
+\subsection{A factual BWE prediction diagnostic: short-session skill does not transfer}
+\label{sec:native-bwe-dynamics}
+The margin forecast's failure leaves native estimator recovery and startup unresolved. The already-read pilots retain BWE and requested-cap sequences, though they omit actual encoder history. A small development diagnostic therefore predicts the log change of BWE at the next observed actuation epoch, using only present BWE, previous log change, previous cap relative to its estimate, and a history-available flag. A nested model adds the current requested cap relative to BWE. Source, schedule, latent capacity, receiver outcomes, future cap choices and future epoch duration never enter a predictor. The fixed specification precedes this diagnostic's calculation, not the original outcomes (\path{docs/BWE_DYNAMICS_DIAGNOSTIC_V1.md}). It identifies no native counterfactual or quality effect.
+
+\begin{table}[t]
+\centering\small
+\resizebox{\linewidth}{!}{\input{../reports/bwe-dynamics-diagnostic-v1/table_bwe_dynamics.tex}}
+\caption{Development-only source-balanced absolute log BWE prediction error; smaller is better. Persistence keeps current BWE, momentum continues its previous log change, and pooled drift predicts a fitted constant. State/history and state-plus-current-cap use ridge regression with a fixed penalty of 0.01 and training-only normalization. Both CV views reuse the same 1,200 factual range transitions. Ladder and margin contribute 2,496 and 3,687 transitions, respectively; they share all twelve sources and were read before design, so neither is a blind validation panel.}\label{tab:native-bwe-dynamics}
+\end{table}
+
+Models fit only on the 240 range sessions. Cross-validation holds out each entire source or, separately, each authored network regime; there is no parameter sweep or model selection. Fits on all range data are then frozen for prediction on ladder and margin summaries. Weighting gives equal sources, regimes and arms, equal sessions within a cell, and equal epochs within a session. Current cap adds no consistent benefit to history: its MAE difference is $-0.0056$ on source CV, $+0.0051$ on regime CV, $+0.0069$ on ladder and $-0.0006$ on margin; every descriptive source interval includes zero. History improves short-session prediction but loses to persistence on the long panel by 0.0208 log error [0.0111, 0.0305]. Intervals condition on these fits; overlapping CV training sets and previously read panels prevent confirmatory interpretation. Next-epoch duration can shorten under fast cuts, so this is not a fixed three-second forecast.
+
+The cap domain further limits interpreting nominal actions. Nominal 0.25 is clipped in 67.0\%, 65.8\% and 76.0\% of its reported epochs in range, ladder and margin, respectively; those descriptive proportions pool epochs. Fixed 0.65 clips in 0.0\%, 0.17\% and 0.83\%. Range sessions contain zero nominal action changes in 1,200 consecutive pairs; ladder and margin change in 13.5\% and 3.55\%. Whole-session randomization can estimate a total session effect, but a later cap is not independently randomized given its endogenous BWE history. Neither predictive coefficients nor the nominal ratio identify a state-conditioned causal action value. Requested cap is also distinct from actual encoded payload.
+
+Complete features, factual targets, predictions and every fitted fold are saved with input/code hashes and reproduce exactly. No predictor is selected for control, no safety probability is calibrated, and neither the simulator nor a native controller changes. Actual timestamped sender reports and encoded-payload histories are required for the next dynamics diagnostic; new blinded native evidence remains necessary for a revised model. The compact summaries cannot supply that missing encoder history.
+}{}
+
 \ifdefined\TypedHeadFamilies
 \subsection{What a cap leaves of the simulator's headroom}
 \label{sec:typed-headroom}
@@ -316,4 +361,4 @@ The forecast and the pilot's lean in flagged holds point in opposite directions,
 \fi
 
 \subsection{What Study 13 shows and does not show}
-This is the only study here whose outcomes come from a real encoder and a real bandwidth estimator, and it is confirmatory: one sample, analysed once by rules fixed beforehand. Its scope is narrow. It concerns the actuator through which a ratio-of-estimate controller would act and not any controller. Nothing learned was the actor, no quality was measured and no state-dependent preference between ratios was tested, so it neither supports nor undermines the simulator gains of Studies 10 to 12. The network is a userspace relay on one machine, not a kernel emulator or an Internet path. The stack is one build of one browser with one codec at one resolution. The sources are \NOneSources{} Commons videos chosen by a seeded queue and a rights screen, not a representative corpus. The blinding was procedural, with one person as custodian and analyst, and the rights review rests on an AI reviewer's reading of archived evidence that the importer adopted. The effect is that of a 3\,s hold measured from 1.8 to 2.6\,s after the request and says nothing about shorter or longer holds. Whether a learned controller improves delivered quality on a real network remains untested.
+The registered N1 core is confirmatory: one sample, analysed once by rules fixed beforehand, measuring the actuator through which a ratio-of-estimate controller would act. Its developmental extensions above measure delivery and quality and test simple causal rules, but do not qualify a learned controller. Nothing learned was the actor in N1 or these pilots, and no native learned gain follows from them. The failed blind forecasts limit using the simulator gains of Studies 10 to 12 to motivate native claims. The network is a userspace relay on one machine, not a kernel emulator or an Internet path. The stack is one build of one browser with one codec at one resolution. The sources are \NOneSources{} Commons videos chosen by a seeded queue and a rights screen, not a representative corpus. The blinding was procedural, with one person as custodian and analyst, and the rights review rests on an AI reviewer's reading of archived evidence that the importer adopted. The effect is that of a 3\,s hold measured from 1.8 to 2.6\,s after the request and says nothing about shorter or longer holds. Whether a learned controller improves delivered quality on a real network remains untested.

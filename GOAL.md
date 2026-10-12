@@ -1,5 +1,18 @@
 # Project objective and compute permission
 
+## Active research priority (2026-10-11)
+
+Independently advance a scientifically defensible Jev/RLCD-inspired bitrate
+controller using causal network and encoder history for safe BWE-relative actions.
+Keep synthetic counterfactual training separate from factual native validation;
+prioritize unseen network-family generalization, calibration, safety, causal action
+identifiability and strong tuned baselines over model complexity. Preserve frozen
+experiments and negative findings, never tune on held-out outcomes or expose
+simulator-only information at runtime, and require reproducible, statistically
+credible, safe gains followed by real-network evidence before promotion. The
+current uncertainty and next experiment are in [docs/RESEARCH_STATUS.md](docs/RESEARCH_STATUS.md).
+The implementation objective below records the original framework scope.
+
 ## Objective
 Build a complete, reproducible experimental framework for **Calibrated Reinforcement Learning for Safe Real-Time Media Adaptation**, verified by end-to-end CLI experiments, deterministic behavioral tests, saved models and per-step evidence, calibration diagnostics, seed-cluster uncertainty estimates, ablations, publication-quality plots and LaTeX tables, and a documented methodology with primary research references.
 

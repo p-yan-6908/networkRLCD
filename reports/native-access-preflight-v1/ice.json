@@ -1,0 +1,31 @@
+{
+  "abi": "native_cloud_ice_preflight_v1",
+  "browser": "Chrome/154.0.8037.57",
+  "chrome_flags": [
+    "--headless=new",
+    "--no-sandbox",
+    "--disable-background-networking",
+    "--disable-component-update",
+    "--no-first-run",
+    "--no-default-browser-check",
+    "--use-fake-device-for-media-stream",
+    "--use-fake-ui-for-media-stream",
+    "--remote-debugging-port=0",
+    "--remote-debugging-address=127.0.0.1",
+    "about:blank"
+  ],
+  "controller_or_qoe_evaluated": false,
+  "external_ice_servers": [],
+  "generated_media_only": true,
+  "local_only": true,
+  "modes": {
+    "no_media_permission": {
+      "candidates": [],
+      "state": "complete"
+    },
+    "owned_fake_media_permission": {
+      "candidates": [],
+      "state": "complete"
+    }
+  }
+}

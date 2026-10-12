@@ -1,0 +1,655 @@
+{
+  "spans": {
+    "after_startup": {
+      "agreeing_over_all_schedules": 3,
+      "differences_over_all_schedules": {
+        "0.25 minus 0.65": {
+          "native": -1.0175768142872128,
+          "native_interval95": [
+            -2.5998106133888412,
+            0.5646569848144156
+          ],
+          "simulated": -0.13795995908931502,
+          "verdict": "not established"
+        },
+        "0.25 minus 1.05": {
+          "native": 12.174111919871871,
+          "native_interval95": [
+            7.452755094905531,
+            16.89546874483821
+          ],
+          "simulated": 18.30902689282688,
+          "verdict": "agrees"
+        },
+        "0.65 minus 1.05": {
+          "native": 13.191688734159081,
+          "native_interval95": [
+            8.677950155602703,
+            17.705427312715457
+          ],
+          "simulated": 18.446986851916193,
+          "verdict": "agrees"
+        },
+        "margin minus 0.25": {
+          "native": -0.41840154589095846,
+          "native_interval95": [
+            -1.9687570221190132,
+            1.1319539303370962
+          ],
+          "simulated": 0.5083548324951863,
+          "verdict": "not established"
+        },
+        "margin minus 0.65": {
+          "native": -1.435978360178171,
+          "native_interval95": [
+            -2.340260344830562,
+            -0.5316963755257801
+          ],
+          "simulated": 0.3703948734058713,
+          "verdict": "flat"
+        },
+        "margin minus 1.05": {
+          "native": 11.75571037398091,
+          "native_interval95": [
+            7.497175654414817,
+            16.014245093547004
+          ],
+          "simulated": 18.817381725322065,
+          "verdict": "agrees"
+        }
+      },
+      "differences_under_each_schedule": {
+        "one-drop": {
+          "0.25 minus 0.65": {
+            "native": -0.11861575223941016,
+            "native_interval95": [
+              -2.1858353786216846,
+              1.9486038741428644
+            ],
+            "simulated": 3.3005551621561118,
+            "verdict": "not established"
+          },
+          "0.25 minus 1.05": {
+            "native": 12.353592554645864,
+            "native_interval95": [
+              5.196869628218163,
+              19.510315481073565
+            ],
+            "simulated": 22.715903197888004,
+            "verdict": "agrees"
+          },
+          "0.65 minus 1.05": {
+            "native": 12.472208306885273,
+            "native_interval95": [
+              5.780076382883741,
+              19.164340230886804
+            ],
+            "simulated": 19.415348035731895,
+            "verdict": "agrees"
+          },
+          "margin minus 0.25": {
+            "native": -1.7134238777974033,
+            "native_interval95": [
+              -3.2448845028833526,
+              -0.18196325271145408
+            ],
+            "simulated": -3.1455233391257558,
+            "verdict": "agrees"
+          },
+          "margin minus 0.65": {
+            "native": -1.8320396300368136,
+            "native_interval95": [
+              -3.510479689142439,
+              -0.15359957093118837
+            ],
+            "simulated": 0.155031823030356,
+            "verdict": "flat"
+          },
+          "margin minus 1.05": {
+            "native": 10.640168676848463,
+            "native_interval95": [
+              3.4960377270694787,
+              17.784299626627448
+            ],
+            "simulated": 19.57037985876225,
+            "verdict": "agrees"
+          }
+        },
+        "recurring-drops": {
+          "0.25 minus 0.65": {
+            "native": -1.3406406148484837,
+            "native_interval95": [
+              -4.8960144561567525,
+              2.2147332264597845
+            ],
+            "simulated": 3.689965185797277,
+            "verdict": "not established"
+          },
+          "0.25 minus 1.05": {
+            "native": 16.492487039642775,
+            "native_interval95": [
+              11.420816977948864,
+              21.564157101336686
+            ],
+            "simulated": 23.810835135063407,
+            "verdict": "agrees"
+          },
+          "0.65 minus 1.05": {
+            "native": 17.833127654491257,
+            "native_interval95": [
+              13.235297197431667,
+              22.430958111550847
+            ],
+            "simulated": 20.12086994926613,
+            "verdict": "agrees"
+          },
+          "margin minus 0.25": {
+            "native": -3.0107625595146685,
+            "native_interval95": [
+              -8.402660425697938,
+              2.3811353066686016
+            ],
+            "simulated": -3.4826260708000802,
+            "verdict": "not established"
+          },
+          "margin minus 0.65": {
+            "native": -4.351403174363152,
+            "native_interval95": [
+              -8.486670965054486,
+              -0.2161353836718165
+            ],
+            "simulated": 0.20733911499719682,
+            "verdict": "flat"
+          },
+          "margin minus 1.05": {
+            "native": 13.481724480128102,
+            "native_interval95": [
+              8.267834200275665,
+              18.69561475998054
+            ],
+            "simulated": 20.328209064263326,
+            "verdict": "agrees"
+          }
+        },
+        "steady-room": {
+          "0.25 minus 0.65": {
+            "native": -3.2057638000413,
+            "native_interval95": [
+              -5.21893156797276,
+              -1.19259603210984
+            ],
+            "simulated": -3.8264208142328044,
+            "verdict": "agrees"
+          },
+          "0.25 minus 1.05": {
+            "native": 12.932450692273145,
+            "native_interval95": [
+              7.5029001209738,
+              18.362001263572488
+            ],
+            "simulated": 6.403772130046498,
+            "verdict": "agrees"
+          },
+          "0.65 minus 1.05": {
+            "native": 16.138214492314443,
+            "native_interval95": [
+              9.940321229518776,
+              22.33610775511011
+            ],
+            "simulated": 10.230192944279302,
+            "verdict": "agrees"
+          },
+          "margin minus 0.25": {
+            "native": 4.245142055758495,
+            "native_interval95": [
+              2.6780657413646782,
+              5.812218370152312
+            ],
+            "simulated": 4.883345409428745,
+            "verdict": "agrees"
+          },
+          "margin minus 0.65": {
+            "native": 1.0393782557171967,
+            "native_interval95": [
+              -1.6992404000375012,
+              3.7779969114718943
+            ],
+            "simulated": 1.056924595195941,
+            "verdict": "not established"
+          },
+          "margin minus 1.05": {
+            "native": 17.177592748031643,
+            "native_interval95": [
+              10.985901759857388,
+              23.369283736205897
+            ],
+            "simulated": 11.287117539475243,
+            "verdict": "agrees"
+          }
+        },
+        "steady-tight": {
+          "0.25 minus 0.65": {
+            "native": 0.5947129099803429,
+            "native_interval95": [
+              -1.992536960282513,
+              3.181962780243199
+            ],
+            "simulated": -3.7159393700778445,
+            "verdict": "not established"
+          },
+          "0.25 minus 1.05": {
+            "native": 6.917917392925697,
+            "native_interval95": [
+              1.3306778227468712,
+              12.505156963104524
+            ],
+            "simulated": 20.305597108309595,
+            "verdict": "agrees"
+          },
+          "0.65 minus 1.05": {
+            "native": 6.323204482945354,
+            "native_interval95": [
+              -0.8136587086519942,
+              13.460067674542703
+            ],
+            "simulated": 24.02153647838744,
+            "verdict": "not established"
+          },
+          "margin minus 0.25": {
+            "native": -1.1945618020102582,
+            "native_interval95": [
+              -2.967444340780589,
+              0.5783207367600729
+            ],
+            "simulated": 3.7782233304778465,
+            "verdict": "not established"
+          },
+          "margin minus 0.65": {
+            "native": -0.5998488920299153,
+            "native_interval95": [
+              -3.947754506560859,
+              2.748056722501028
+            ],
+            "simulated": 0.06228396040000206,
+            "verdict": "not established"
+          },
+          "margin minus 1.05": {
+            "native": 5.723355590915439,
+            "native_interval95": [
+              1.0641893752518907,
+              10.382521806578987
+            ],
+            "simulated": 24.08382043878744,
+            "verdict": "agrees"
+          }
+        }
+      },
+      "endpoints_inside_the_native_interval": 4,
+      "established_over_all_schedules": 4,
+      "established_under_the_schedules": 16,
+      "levels": {
+        "0.25": {
+          "forecast": 27.86090245893834,
+          "native": 26.986202120032857,
+          "native_interval95": [
+            23.165418947961793,
+            30.80698529210392
+          ]
+        },
+        "0.65": {
+          "forecast": 27.998862418027656,
+          "native": 28.00377893432007,
+          "native_interval95": [
+            23.592143011781356,
+            32.41541485685879
+          ]
+        },
+        "1.05": {
+          "forecast": 9.551875566111464,
+          "native": 14.812090200160988,
+          "native_interval95": [
+            7.69319546517093,
+            21.930984935151045
+          ]
+        },
+        "margin": {
+          "forecast": 28.369257291433527,
+          "native": 26.567800574141902,
+          "native_interval95": [
+            21.889115536813254,
+            31.24648561147055
+          ]
+        }
+      },
+      "rule_against_tuned_level_reversed": [],
+      "share_agreeing_under_the_schedules": 0.875,
+      "verdict": "the layer did not forecast the pilot"
+    },
+    "session": {
+      "agreeing_over_all_schedules": 3,
+      "differences_over_all_schedules": {
+        "0.25 minus 0.65": {
+          "native": -1.1808649689779223,
+          "native_interval95": [
+            -2.7098728093368196,
+            0.3481428713809751
+          ],
+          "simulated": -0.1360643545382132,
+          "verdict": "not established"
+        },
+        "0.25 minus 1.05": {
+          "native": 11.080768931745196,
+          "native_interval95": [
+            6.584853623486005,
+            15.576684240004386
+          ],
+          "simulated": 17.333518185740388,
+          "verdict": "agrees"
+        },
+        "0.65 minus 1.05": {
+          "native": 12.261633900723114,
+          "native_interval95": [
+            7.946789699262669,
+            16.576478102183557
+          ],
+          "simulated": 17.4695825402786,
+          "verdict": "agrees"
+        },
+        "margin minus 0.25": {
+          "native": 0.05011415060921176,
+          "native_interval95": [
+            -1.3899145514223115,
+            1.490142852640735
+          ],
+          "simulated": 0.542994453315572,
+          "verdict": "not established"
+        },
+        "margin minus 0.65": {
+          "native": -1.1307508183687103,
+          "native_interval95": [
+            -1.987085404452671,
+            -0.27441623228474954
+          ],
+          "simulated": 0.40693009877735875,
+          "verdict": "flat"
+        },
+        "margin minus 1.05": {
+          "native": 11.130883082354408,
+          "native_interval95": [
+            7.080181910735635,
+            15.181584253973181
+          ],
+          "simulated": 17.87651263905596,
+          "verdict": "agrees"
+        }
+      },
+      "differences_under_each_schedule": {
+        "one-drop": {
+          "0.25 minus 0.65": {
+            "native": -0.36879044634619973,
+            "native_interval95": [
+              -2.4192116252496594,
+              1.68163073255726
+            ],
+            "simulated": 3.1305250104906506,
+            "verdict": "not established"
+          },
+          "0.25 minus 1.05": {
+            "native": 11.219430049977554,
+            "native_interval95": [
+              4.350345670528053,
+              18.088514429427054
+            ],
+            "simulated": 21.52004954364366,
+            "verdict": "agrees"
+          },
+          "0.65 minus 1.05": {
+            "native": 11.588220496323755,
+            "native_interval95": [
+              5.208852701860981,
+              17.96758829078653
+            ],
+            "simulated": 18.389524533153008,
+            "verdict": "agrees"
+          },
+          "margin minus 0.25": {
+            "native": -1.1627477873545564,
+            "native_interval95": [
+              -2.631685194043169,
+              0.3061896193340561
+            ],
+            "simulated": -2.9281886778195165,
+            "verdict": "not established"
+          },
+          "margin minus 0.65": {
+            "native": -1.5315382337007561,
+            "native_interval95": [
+              -3.1071225844146384,
+              0.04404611701312611
+            ],
+            "simulated": 0.20233633267113404,
+            "verdict": "not established"
+          },
+          "margin minus 1.05": {
+            "native": 10.056682262622997,
+            "native_interval95": [
+              3.239015005903794,
+              16.8743495193422
+            ],
+            "simulated": 18.591860865824138,
+            "verdict": "agrees"
+          }
+        },
+        "recurring-drops": {
+          "0.25 minus 0.65": {
+            "native": -1.4721882622536067,
+            "native_interval95": [
+              -4.893967189103228,
+              1.949590664596015
+            ],
+            "simulated": 3.5004645329497563,
+            "verdict": "not established"
+          },
+          "0.25 minus 1.05": {
+            "native": 15.201938465012162,
+            "native_interval95": [
+              10.399300234361336,
+              20.00457669566299
+            ],
+            "simulated": 22.560234883960288,
+            "verdict": "agrees"
+          },
+          "0.65 minus 1.05": {
+            "native": 16.674126727265772,
+            "native_interval95": [
+              12.288854622738885,
+              21.05939883179266
+            ],
+            "simulated": 19.05977035101053,
+            "verdict": "agrees"
+          },
+          "margin minus 0.25": {
+            "native": -2.3942465154544523,
+            "native_interval95": [
+              -7.480602612482568,
+              2.6921095815736633
+            ],
+            "simulated": -3.2484362729101264,
+            "verdict": "not established"
+          },
+          "margin minus 0.65": {
+            "native": -3.866434777708059,
+            "native_interval95": [
+              -7.721087065026994,
+              -0.011782490389124156
+            ],
+            "simulated": 0.25202826003962997,
+            "verdict": "flat"
+          },
+          "margin minus 1.05": {
+            "native": 12.807691949557713,
+            "native_interval95": [
+              7.847385797738607,
+              17.76799810137682
+            ],
+            "simulated": 19.31179861105016,
+            "verdict": "agrees"
+          }
+        },
+        "steady-room": {
+          "0.25 minus 0.65": {
+            "native": -3.223345700699569,
+            "native_interval95": [
+              -5.146377454780204,
+              -1.3003139466189342
+            ],
+            "simulated": -3.640102167080233,
+            "verdict": "agrees"
+          },
+          "0.25 minus 1.05": {
+            "native": 11.840569475505246,
+            "native_interval95": [
+              6.712127200882952,
+              16.969011750127542
+            ],
+            "simulated": 6.0235250213583384,
+            "verdict": "agrees"
+          },
+          "0.65 minus 1.05": {
+            "native": 15.063915176204816,
+            "native_interval95": [
+              9.178035518354605,
+              20.949794834055027
+            ],
+            "simulated": 9.663627188438571,
+            "verdict": "agrees"
+          },
+          "margin minus 0.25": {
+            "native": 4.423346188112764,
+            "native_interval95": [
+              2.8293334385366813,
+              6.017358937688847
+            ],
+            "simulated": 4.699236641143145,
+            "verdict": "agrees"
+          },
+          "margin minus 0.65": {
+            "native": 1.2000004874131942,
+            "native_interval95": [
+              -1.457232092014124,
+              3.8572330668405126
+            ],
+            "simulated": 1.0591344740629118,
+            "verdict": "not established"
+          },
+          "margin minus 1.05": {
+            "native": 16.26391566361801,
+            "native_interval95": [
+              10.350762207292568,
+              22.177069119943454
+            ],
+            "simulated": 10.722761662501483,
+            "verdict": "agrees"
+          }
+        },
+        "steady-tight": {
+          "0.25 minus 0.65": {
+            "native": 0.3408645333876878,
+            "native_interval95": [
+              -2.143422644747741,
+              2.8251517115231164
+            ],
+            "simulated": -3.5351447945130445,
+            "verdict": "not established"
+          },
+          "0.25 minus 1.05": {
+            "native": 6.061137736485812,
+            "native_interval95": [
+              0.7792190527441303,
+              11.343056420227494
+            ],
+            "simulated": 19.230263293999275,
+            "verdict": "agrees"
+          },
+          "0.65 minus 1.05": {
+            "native": 5.7202732030981265,
+            "native_interval95": [
+              -1.086424535905187,
+              12.526970942101439
+            ],
+            "simulated": 22.76540808851232,
+            "verdict": "not established"
+          },
+          "margin minus 0.25": {
+            "native": -0.6658952828669079,
+            "native_interval95": [
+              -2.332877899284995,
+              1.0010873335511792
+            ],
+            "simulated": 3.649366122848793,
+            "verdict": "not established"
+          },
+          "margin minus 0.65": {
+            "native": -0.3250307494792201,
+            "native_interval95": [
+              -3.5661887199480216,
+              2.9161272209895817
+            ],
+            "simulated": 0.1142213283357485,
+            "verdict": "not established"
+          },
+          "margin minus 1.05": {
+            "native": 5.395242453618906,
+            "native_interval95": [
+              0.983815477954253,
+              9.80666942928356
+            ],
+            "simulated": 22.87962941684807,
+            "verdict": "agrees"
+          }
+        }
+      },
+      "endpoints_inside_the_native_interval": 4,
+      "established_over_all_schedules": 4,
+      "established_under_the_schedules": 14,
+      "levels": {
+        "0.25": {
+          "forecast": 27.8610523562826,
+          "native": 26.492674053671053,
+          "native_interval95": [
+            22.562910751416887,
+            30.42243735592522
+          ]
+        },
+        "0.65": {
+          "forecast": 27.997116710820812,
+          "native": 27.673539022648978,
+          "native_interval95": [
+            23.16781312152637,
+            32.17926492377158
+          ]
+        },
+        "1.05": {
+          "forecast": 10.527534170542209,
+          "native": 15.41190512192586,
+          "native_interval95": [
+            8.45282533475393,
+            22.370984909097793
+          ]
+        },
+        "margin": {
+          "forecast": 28.40404680959817,
+          "native": 26.54278820428026,
+          "native_interval95": [
+            21.87900238512536,
+            31.20657402343516
+          ]
+        }
+      },
+      "rule_against_tuned_level_reversed": [],
+      "share_agreeing_under_the_schedules": 0.9285714285714286,
+      "verdict": "the layer did not forecast the pilot"
+    }
+  },
+  "verdict": "the layer did not forecast the pilot"
+}

@@ -1,0 +1,425 @@
+{
+  "abi": "native_turn_probe_v1_spec",
+  "analysis_window_ms": [
+    1800,
+    2600
+  ],
+  "content": "new owned procedural recipe; not licensed-video or representative content validation",
+  "controller_promoted": false,
+  "deadline_ms": 150,
+  "development_only": true,
+  "learned_policy": false,
+  "native_counterfactuals": false,
+  "planned_holds": 96,
+  "policy_modified": false,
+  "sessions": 16,
+  "source_groups_are_procedural_settings": true,
+  "source_sha256": {
+    "benchmarks/native_rtc/actuator_control.mjs": "5c36a21ef103f897c78fa28a9d97f663d83475117e3bdacfb78e5ec5b2f32f30",
+    "benchmarks/native_rtc/actuator_meter.mjs": "bf11d22cf17297fc33e63c6e2c99b6e8b7af1946b5541a73a63197aac996c533",
+    "benchmarks/native_rtc/dense_actuation.mjs": "b06b419dd7cd896b21f191ba6cd2f6258e0d1a8a04d053ade1107b357a276a67",
+    "benchmarks/native_rtc/encoder_response.mjs": "3dc0a73ecca6fd992d6b46964620b7f6026ed040fee96074ddda0721e074a9a9",
+    "benchmarks/native_rtc/episode.mjs": "7f0c1eed1bf2b9456f114e6ff9166746689af3e1a708056df45c5238b74645af",
+    "benchmarks/native_rtc/frame_marker.mjs": "4aeee008fc9f8dd9e9cc14feaaf54ae82ef3a5fd8cf04eedd086114caf8ec144",
+    "benchmarks/native_rtc/native_actuation.mjs": "5369c8ae4e9e9a8b3c6ce293429ad18db2bfd4e1f56037032cc1c7178fd4ad0e",
+    "benchmarks/native_rtc/repair3_policy.mjs": "11695528b8d46169b80242d73d888870dc150101305873f6f6a6c794368ff6ea",
+    "benchmarks/native_rtc/sender_observation.mjs": "2ffacd833560a900b9a2d6332813d522587c2db166434741ac2571486171e850",
+    "benchmarks/native_rtc/source_quality.mjs": "64bd696fb75e4a5b6d0412f3c9d5f1fb383f88b586db3b7d04eaa3ada7520b66",
+    "benchmarks/native_rtc/turn_probe.mjs": "c2ea7028f407338ca9724d82e4a44bb4ff03ccb3ea0c33487633ef5c3aa9a1cf",
+    "benchmarks/native_rtc/turn_probe_page.html": "80659dadeb943293a60d92631030cb152fb16c428bc4bd3ebb87e4670884a07a",
+    "src/media_rl/native_actuator_control.py": "3b22387e6105fa7bc61f66098d675deea7dd008976c9fa8b27ae0a1181ecb6c3",
+    "src/media_rl/native_encoder_response.py": "053132052bf245de1bc8060fe2e1347b94fd95b152f5557b28425dead1bcc0ab",
+    "src/media_rl/native_frame_metrics.py": "117127046ca1c1ac929181fd3a532db86ce561792cb72a41d18ab4b0aa9df350",
+    "src/media_rl/native_margin_pilot_report.py": "8059cd71fb4e8e3df81bc7bb3373110cbd41f0a18f5f8719d9478943cadd9245",
+    "src/media_rl/native_protocol.py": "323d2b0eb3a5617508356493b6ed80166789b2d46887b0e90296367ba50fc527",
+    "src/media_rl/native_quality.py": "0a0c9e7958c190e486e7259b9e15ae1d9f8bbc48f38c2772d6f4e5b05cf06576",
+    "src/media_rl/native_turn_probe.py": "e2250dcec62569ad332d54423f00796d0f585a07a38d74ce5e6a849d97d94184"
+  },
+  "transport": "authenticated localhost TURN/TCP plus original owned UDP bottleneck",
+  "trials": [
+    {
+      "exploration_seed": 3352319294,
+      "id": "turn-102-room-1",
+      "regime": "room",
+      "repetition": 1,
+      "scene_seed": 102,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 3747756672,
+      "id": "turn-101-drop-0",
+      "regime": "drop",
+      "repetition": 0,
+      "scene_seed": 101,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 487541575,
+      "id": "turn-102-room-0",
+      "regime": "room",
+      "repetition": 0,
+      "scene_seed": 102,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 2529381690,
+      "id": "turn-102-drop-0",
+      "regime": "drop",
+      "repetition": 0,
+      "scene_seed": 102,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 2783845225,
+      "id": "turn-103-drop-0",
+      "regime": "drop",
+      "repetition": 0,
+      "scene_seed": 103,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 1651758942,
+      "id": "turn-101-drop-1",
+      "regime": "drop",
+      "repetition": 1,
+      "scene_seed": 101,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 4205911580,
+      "id": "turn-102-drop-1",
+      "regime": "drop",
+      "repetition": 1,
+      "scene_seed": 102,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 2445103011,
+      "id": "turn-101-room-1",
+      "regime": "room",
+      "repetition": 1,
+      "scene_seed": 101,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 881917756,
+      "id": "turn-103-room-1",
+      "regime": "room",
+      "repetition": 1,
+      "scene_seed": 103,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 223415917,
+      "id": "turn-103-room-0",
+      "regime": "room",
+      "repetition": 0,
+      "scene_seed": 103,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 751294699,
+      "id": "turn-103-drop-1",
+      "regime": "drop",
+      "repetition": 1,
+      "scene_seed": 103,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 383844976,
+      "id": "turn-104-drop-1",
+      "regime": "drop",
+      "repetition": 1,
+      "scene_seed": 104,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 254607452,
+      "id": "turn-104-drop-0",
+      "regime": "drop",
+      "repetition": 0,
+      "scene_seed": 104,
+      "schedule": [
+        [
+          1.2,
+          "high",
+          6000
+        ],
+        [
+          0.35,
+          "collapse",
+          6000
+        ],
+        [
+          1.2,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 1014557575,
+      "id": "turn-104-room-0",
+      "regime": "room",
+      "repetition": 0,
+      "scene_seed": 104,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 1986311790,
+      "id": "turn-101-room-0",
+      "regime": "room",
+      "repetition": 0,
+      "scene_seed": 101,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    },
+    {
+      "exploration_seed": 1543851745,
+      "id": "turn-104-room-1",
+      "regime": "room",
+      "repetition": 1,
+      "scene_seed": 104,
+      "schedule": [
+        [
+          4,
+          "high",
+          6000
+        ],
+        [
+          4,
+          "collapse",
+          6000
+        ],
+        [
+          4,
+          "recovery",
+          6000
+        ]
+      ]
+    }
+  ]
+}

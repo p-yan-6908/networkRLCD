@@ -1,0 +1,1639 @@
+{
+  "full_range_fit": {
+    "models": {
+      "cap_ridge": {
+        "coef": [
+          -0.11539391786592243,
+          0.11306407287931537,
+          -0.16752883380348754,
+          -0.3313095513237054,
+          0.20141118021299503
+        ],
+        "features": [
+          "log_bwe_over_300kbps",
+          "previous_log_bwe_change",
+          "previous_log_requested_over_bwe",
+          "previous_observation_available",
+          "log_current_requested_over_bwe"
+        ],
+        "intercept": 0.16515922502504177,
+        "kind": "ridge",
+        "mean": [
+          0.692581485798388,
+          0.15002889263252556,
+          -0.004929300059945365,
+          0.799999999999995,
+          -0.006757919956872447
+        ],
+        "penalty": 0.01,
+        "scale": [
+          0.6758760122990738,
+          0.5849299365031283,
+          0.8714967653726826,
+          0.39999999999999974,
+          0.9829800933252608
+        ]
+      },
+      "momentum": {
+        "kind": "momentum"
+      },
+      "persistence": {
+        "kind": "persist"
+      },
+      "pooled_drift": {
+        "kind": "constant",
+        "value": 0.16515922502504177
+      },
+      "state_ridge": {
+        "coef": [
+          -0.1179250457441402,
+          0.06148126927842695,
+          -0.008310830697678032,
+          -0.3511490593482006
+        ],
+        "features": [
+          "log_bwe_over_300kbps",
+          "previous_log_bwe_change",
+          "previous_log_requested_over_bwe",
+          "previous_observation_available"
+        ],
+        "intercept": 0.16515922502504177,
+        "kind": "ridge",
+        "mean": [
+          0.692581485798388,
+          0.15002889263252556,
+          -0.004929300059945365,
+          0.799999999999995
+        ],
+        "penalty": 0.01,
+        "scale": [
+          0.6758760122990738,
+          0.5849299365031283,
+          0.8714967653726826,
+          0.39999999999999974
+        ]
+      }
+    },
+    "rows": 1200,
+    "training_regimes": [
+      "collapse-recovery",
+      "near-capacity",
+      "queue-building",
+      "underutilized"
+    ],
+    "training_sources": [
+      "source-1f253c3e7a476525c526a21e",
+      "source-2b3267608b48ab5f7b446cdf",
+      "source-32ae9968d8417f1c60fcd447",
+      "source-4c2a0120550a8bcb622fb708",
+      "source-52a998e62868e63af7a92891",
+      "source-5b8a21adf46485935afcfa8c",
+      "source-71e9c546abfaeb7defba23fb",
+      "source-9b9ac24db20846eefa4e6d47",
+      "source-a0935dbdc97fb77fde6c1041",
+      "source-ba12ea67f20b3d59f1d825c5",
+      "source-f55bdc65c82e58b0078829de",
+      "source-f9dd9aa57c3815dbebf41ffc"
+    ]
+  },
+  "regime_cv": {
+    "collapse-recovery": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.0445520785556954,
+            0.08243041162548291,
+            -0.190947623909051,
+            -0.3426551905647128,
+            0.22707809614007723
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.2059957725923802,
+          "kind": "ridge",
+          "mean": [
+            0.7918670144756955,
+            0.1990041692856666,
+            -0.028931030536063378,
+            0.7999999999999988,
+            -0.049588577030050686
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6799884376759687,
+            0.5300996952724673,
+            0.8445325123025206,
+            0.4,
+            0.9322849447278897
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.2059957725923802
+        },
+        "state_ridge": {
+          "coef": [
+            -0.04787136395294444,
+            0.022440373839738265,
+            -0.011672732629746906,
+            -0.3651405155177576
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.2059957725923802,
+          "kind": "ridge",
+          "mean": [
+            0.7918670144756955,
+            0.1990041692856666,
+            -0.028931030536063378,
+            0.7999999999999988
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6799884376759687,
+            0.5300996952724673,
+            0.8445325123025206,
+            0.4
+          ]
+        }
+      },
+      "rows": 900,
+      "training_regimes": [
+        "near-capacity",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "near-capacity": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.1334664391248634,
+            0.16967833629091195,
+            -0.21346535382621368,
+            -0.33283091817987803,
+            0.2562371119385068
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.15996732169268996,
+          "kind": "ridge",
+          "mean": [
+            0.6858021031692904,
+            0.13982360541857272,
+            -0.019406894474260444,
+            0.7999999999999988,
+            -0.019185245810529734
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.7321554877703645,
+            0.6218764544793871,
+            0.8552484468864953,
+            0.4,
+            0.9744509408931022
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.15996732169268996
+        },
+        "state_ridge": {
+          "coef": [
+            -0.13569456394005985,
+            0.09521086321676324,
+            -0.013885299721023113,
+            -0.35897284809425556
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.15996732169268996,
+          "kind": "ridge",
+          "mean": [
+            0.6858021031692904,
+            0.13982360541857272,
+            -0.019406894474260444,
+            0.7999999999999988
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.7321554877703645,
+            0.6218764544793871,
+            0.8552484468864953,
+            0.4
+          ]
+        }
+      },
+      "rows": 900,
+      "training_regimes": [
+        "collapse-recovery",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "queue-building": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.09838850941427144,
+            0.11901368377829345,
+            -0.18384674538501428,
+            -0.324453465997518,
+            0.22926725561451627
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.17643563280265886,
+          "kind": "ridge",
+          "mean": [
+            0.701861048958066,
+            0.15911692801369023,
+            -0.01569637433935335,
+            0.7999999999999988,
+            -0.022852241720364982
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.7233888291286877,
+            0.5900820292445469,
+            0.863112332911851,
+            0.4,
+            0.9710980308173355
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.17643563280265886
+        },
+        "state_ridge": {
+          "coef": [
+            -0.10033477269400784,
+            0.05574637534746345,
+            -0.0033792962847982487,
+            -0.3477305259746096
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.17643563280265886,
+          "kind": "ridge",
+          "mean": [
+            0.701861048958066,
+            0.15911692801369023,
+            -0.01569637433935335,
+            0.7999999999999988
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.7233888291286877,
+            0.5900820292445469,
+            0.863112332911851,
+            0.4
+          ]
+        }
+      },
+      "rows": 900,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "underutilized": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.2819638747644117,
+            0.13745136560010346,
+            -0.07766865597733962,
+            -0.27175069439466537,
+            0.08601686819741076
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.11823817301243794,
+          "kind": "ridge",
+          "mean": [
+            0.5907957765904999,
+            0.10217086781217231,
+            0.044317099109895765,
+            0.7999999999999988,
+            0.06459438473345597
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.534000175212331,
+            0.5897148473049242,
+            0.9192669129432862,
+            0.4,
+            1.0468615636621048
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.11823817301243794
+        },
+        "state_ridge": {
+          "coef": [
+            -0.28309373556873585,
+            0.12051682743909553,
+            -0.007966578235267389,
+            -0.27971645825709596
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.11823817301243794,
+          "kind": "ridge",
+          "mean": [
+            0.5907957765904999,
+            0.10217086781217231,
+            0.044317099109895765,
+            0.7999999999999988
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.534000175212331,
+            0.5897148473049242,
+            0.9192669129432862,
+            0.4
+          ]
+        }
+      },
+      "rows": 900,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "queue-building"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    }
+  },
+  "source_cv": {
+    "source-1f253c3e7a476525c526a21e": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.11223070981577803,
+            0.11061153997879586,
+            -0.16990056282252508,
+            -0.32438663214701624,
+            0.2052565626486819
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.16408365030484917,
+          "kind": "ridge",
+          "mean": [
+            0.6835966229862381,
+            0.1494075381676806,
+            -0.0037677792932197117,
+            0.7999999999999986,
+            -0.005676135652049836
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6753394344309958,
+            0.5784667298597076,
+            0.8699331053661145,
+            0.4000000000000007,
+            0.9808690557846063
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.16408365030484917
+        },
+        "state_ridge": {
+          "coef": [
+            -0.1145686724789969,
+            0.057604739300083974,
+            -0.0074905384633810945,
+            -0.3446941601933686
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.16408365030484917,
+          "kind": "ridge",
+          "mean": [
+            0.6835966229862381,
+            0.1494075381676806,
+            -0.0037677792932197117,
+            0.7999999999999986
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6753394344309958,
+            0.5784667298597076,
+            0.8699331053661145,
+            0.4000000000000007
+          ]
+        }
+      },
+      "rows": 1100,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "source-2b3267608b48ab5f7b446cdf": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.11448859975849719,
+            0.11236710747213319,
+            -0.16854986419004228,
+            -0.3296097485293581,
+            0.20284021514659886
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.1644723848832962,
+          "kind": "ridge",
+          "mean": [
+            0.6889719013807502,
+            0.149225011410164,
+            -0.004764357667887603,
+            0.7999999999999986,
+            -0.006550552264661867
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6757350703025805,
+            0.5841088774433826,
+            0.8702380103086488,
+            0.4000000000000007,
+            0.9811867286620078
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.1644723848832962
+        },
+        "state_ridge": {
+          "coef": [
+            -0.11669301724852511,
+            0.060327136480856865,
+            -0.00829003723034162,
+            -0.34982953633491337
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.1644723848832962,
+          "kind": "ridge",
+          "mean": [
+            0.6889719013807502,
+            0.149225011410164,
+            -0.004764357667887603,
+            0.7999999999999986
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6757350703025805,
+            0.5841088774433826,
+            0.8702380103086488,
+            0.4000000000000007
+          ]
+        }
+      },
+      "rows": 1100,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "source-32ae9968d8417f1c60fcd447": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.11713213935615631,
+            0.10916199935710316,
+            -0.1557956269262877,
+            -0.3450082430276156,
+            0.18821103143266424
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.16773182270044035,
+          "kind": "ridge",
+          "mean": [
+            0.7089843956467212,
+            0.15283082870547818,
+            -0.009521630242023188,
+            0.7999999999999986,
+            -0.012660642324020413
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.676974996033158,
+            0.5944760809817742,
+            0.8772547607534632,
+            0.4000000000000007,
+            0.9893394082574097
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.16773182270044035
+        },
+        "state_ridge": {
+          "coef": [
+            -0.11984790514546093,
+            0.06156499867631574,
+            -0.006956746459027756,
+            -0.36340688301099017
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.16773182270044035,
+          "kind": "ridge",
+          "mean": [
+            0.7089843956467212,
+            0.15283082870547818,
+            -0.009521630242023188,
+            0.7999999999999986
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.676974996033158,
+            0.5944760809817742,
+            0.8772547607534632,
+            0.4000000000000007
+          ]
+        }
+      },
+      "rows": 1100,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "source-4c2a0120550a8bcb622fb708": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.11155708124043667,
+            0.11298503371371642,
+            -0.17365763881382426,
+            -0.33038142107990326,
+            0.20528313320637906
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.16526974403597455,
+          "kind": "ridge",
+          "mean": [
+            0.6900106663300175,
+            0.14973547349781433,
+            -0.004256519526676992,
+            0.7999999999999986,
+            -0.006151081648541266
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6753557678217113,
+            0.5820498659591108,
+            0.8710120250926555,
+            0.4000000000000007,
+            0.98333829722659
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.16526974403597455
+        },
+        "state_ridge": {
+          "coef": [
+            -0.11399252939373415,
+            0.060677662038331574,
+            -0.0114357418054463,
+            -0.3506813981169295
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.16526974403597455,
+          "kind": "ridge",
+          "mean": [
+            0.6900106663300175,
+            0.14973547349781433,
+            -0.004256519526676992,
+            0.7999999999999986
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6753557678217113,
+            0.5820498659591108,
+            0.8710120250926555,
+            0.4000000000000007
+          ]
+        }
+      },
+      "rows": 1100,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "source-52a998e62868e63af7a92891": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.11927392871126727,
+            0.11342591753550918,
+            -0.1634884227664576,
+            -0.3396233097059032,
+            0.1962273583494244
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.1665837712227326,
+          "kind": "ridge",
+          "mean": [
+            0.7030088933091342,
+            0.1514668446205134,
+            -0.0053112813502441195,
+            0.7999999999999986,
+            -0.007194650323307405
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6769119411309708,
+            0.5932293945094579,
+            0.8722167732769932,
+            0.4000000000000007,
+            0.9835260938933944
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.1665837712227326
+        },
+        "state_ridge": {
+          "coef": [
+            -0.12222644524130412,
+            0.06349634102316187,
+            -0.008633727014022456,
+            -0.3587502071161647
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.1665837712227326,
+          "kind": "ridge",
+          "mean": [
+            0.7030088933091342,
+            0.1514668446205134,
+            -0.0053112813502441195,
+            0.7999999999999986
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6769119411309708,
+            0.5932293945094579,
+            0.8722167732769932,
+            0.4000000000000007
+          ]
+        }
+      },
+      "rows": 1100,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "source-5b8a21adf46485935afcfa8c": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.11711665806860583,
+            0.11640356114759363,
+            -0.1645351210351704,
+            -0.3312000355760139,
+            0.1979576965001962
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.1646603004694835,
+          "kind": "ridge",
+          "mean": [
+            0.6933564379555699,
+            0.14979957922755455,
+            -0.005959886425429807,
+            0.7999999999999986,
+            -0.008007529769478841
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6741927595835753,
+            0.5834295832471821,
+            0.8720382599816949,
+            0.4000000000000007,
+            0.9831817184238688
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.1646603004694835
+        },
+        "state_ridge": {
+          "coef": [
+            -0.11965050971427021,
+            0.06673773042619757,
+            -0.007930640699708145,
+            -0.35082248252777326
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.1646603004694835,
+          "kind": "ridge",
+          "mean": [
+            0.6933564379555699,
+            0.14979957922755455,
+            -0.005959886425429807,
+            0.7999999999999986
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6741927595835753,
+            0.5834295832471821,
+            0.8720382599816949,
+            0.4000000000000007
+          ]
+        }
+      },
+      "rows": 1100,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "source-71e9c546abfaeb7defba23fb": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.1172337154359536,
+            0.11690963138931815,
+            -0.17402697933357547,
+            -0.3231403419884388,
+            0.2092863007714279
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.16538650319906611,
+          "kind": "ridge",
+          "mean": [
+            0.6873434330501188,
+            0.14934991269548575,
+            -0.0038009678496035305,
+            0.7999999999999986,
+            -0.005489285578871801
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6754838819468549,
+            0.5800886570120702,
+            0.8690880585478427,
+            0.4000000000000007,
+            0.979779551365839
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.16538650319906611
+        },
+        "state_ridge": {
+          "coef": [
+            -0.1195416800575252,
+            0.06259809007557354,
+            -0.008543679236732715,
+            -0.34387623909291454
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.16538650319906611,
+          "kind": "ridge",
+          "mean": [
+            0.6873434330501188,
+            0.14934991269548575,
+            -0.0038009678496035305,
+            0.7999999999999986
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6754838819468549,
+            0.5800886570120702,
+            0.8690880585478427,
+            0.4000000000000007
+          ]
+        }
+      },
+      "rows": 1100,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "source-9b9ac24db20846eefa4e6d47": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.11549430608469637,
+            0.11449851510548954,
+            -0.17280216732505124,
+            -0.3294790551998387,
+            0.20517847545118437
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.1633906912441167,
+          "kind": "ridge",
+          "mean": [
+            0.6856204197907254,
+            0.14786474198598187,
+            -0.003469782584798243,
+            0.7999999999999986,
+            -0.004270409937068505
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6754200065932052,
+            0.5845764341067613,
+            0.8732022644318965,
+            0.4000000000000007,
+            0.9866774177805364
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.1633906912441167
+        },
+        "state_ridge": {
+          "coef": [
+            -0.11809647451892506,
+            0.06152409638329483,
+            -0.01046447898095083,
+            -0.34949959771665734
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.1633906912441167,
+          "kind": "ridge",
+          "mean": [
+            0.6856204197907254,
+            0.14786474198598187,
+            -0.003469782584798243,
+            0.7999999999999986
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6754200065932052,
+            0.5845764341067613,
+            0.8732022644318965,
+            0.4000000000000007
+          ]
+        }
+      },
+      "rows": 1100,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "source-a0935dbdc97fb77fde6c1041": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.1190854641211051,
+            0.11444545750571758,
+            -0.16133127539821412,
+            -0.34079360535360614,
+            0.1941737653342532
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.16619402541254424,
+          "kind": "ridge",
+          "mean": [
+            0.704089960841551,
+            0.15169405652543574,
+            -0.006897691450585532,
+            0.7999999999999986,
+            -0.008866609082519355
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6791199384496177,
+            0.5939875284130908,
+            0.8724320924785678,
+            0.4000000000000007,
+            0.9844603668984659
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.16619402541254424
+        },
+        "state_ridge": {
+          "coef": [
+            -0.12198455714898472,
+            0.06478679713086215,
+            -0.008101033337388331,
+            -0.359703857217733
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.16619402541254424,
+          "kind": "ridge",
+          "mean": [
+            0.704089960841551,
+            0.15169405652543574,
+            -0.006897691450585532,
+            0.7999999999999986
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6791199384496177,
+            0.5939875284130908,
+            0.8724320924785678,
+            0.4000000000000007
+          ]
+        }
+      },
+      "rows": 1100,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "source-ba12ea67f20b3d59f1d825c5": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.11350758897434933,
+            0.11054348997173855,
+            -0.1651524882746914,
+            -0.332136886967009,
+            0.20100126465282406
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.16651021366388055,
+          "kind": "ridge",
+          "mean": [
+            0.6953823466217453,
+            0.1504443855474082,
+            -0.004288075672281747,
+            0.7999999999999986,
+            -0.006045881048562665
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6756729072534866,
+            0.5843154839184916,
+            0.8711164686257871,
+            0.4000000000000007,
+            0.9815569856045514
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.16651021366388055
+        },
+        "state_ridge": {
+          "coef": [
+            -0.11622873242024796,
+            0.05918086814700652,
+            -0.006180222940432185,
+            -0.35184613054756275
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.16651021366388055,
+          "kind": "ridge",
+          "mean": [
+            0.6953823466217453,
+            0.1504443855474082,
+            -0.004288075672281747,
+            0.7999999999999986
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6756729072534866,
+            0.5843154839184916,
+            0.8711164686257871,
+            0.4000000000000007
+          ]
+        }
+      },
+      "rows": 1100,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-f55bdc65c82e58b0078829de",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "source-f55bdc65c82e58b0078829de": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.11434631152700517,
+            0.11405093842335508,
+            -0.1721208191694657,
+            -0.3243686385845498,
+            0.20738000820648872
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.16335975059345337,
+          "kind": "ridge",
+          "mean": [
+            0.6847139831141723,
+            0.14868381079358303,
+            -0.0032355190944244007,
+            0.7999999999999986,
+            -0.004597093904242452
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6759631461830435,
+            0.5807637223416825,
+            0.86938263614318,
+            0.4000000000000007,
+            0.9806859758091995
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.16335975059345337
+        },
+        "state_ridge": {
+          "coef": [
+            -0.1165378450358648,
+            0.060456182590227794,
+            -0.008182549543593542,
+            -0.34496981589133374
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.16335975059345337,
+          "kind": "ridge",
+          "mean": [
+            0.6847139831141723,
+            0.14868381079358303,
+            -0.0032355190944244007,
+            0.7999999999999986
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6759631461830435,
+            0.5807637223416825,
+            0.86938263614318,
+            0.4000000000000007
+          ]
+        }
+      },
+      "rows": 1100,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f9dd9aa57c3815dbebf41ffc"
+      ]
+    },
+    "source-f9dd9aa57c3815dbebf41ffc": {
+      "models": {
+        "cap_ridge": {
+          "coef": [
+            -0.11315524915912571,
+            0.11150911388560827,
+            -0.16915403123741546,
+            -0.32550896307928134,
+            0.2041434501849975
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available",
+            "log_current_requested_over_bwe"
+          ],
+          "intercept": 0.16426784257066412,
+          "kind": "ridge",
+          "mean": [
+            0.6858987685539074,
+            0.14984452841320692,
+            -0.0038781095621694102,
+            0.7999999999999986,
+            -0.005585167949144006
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6737336740436051,
+            0.5793346432030799,
+            0.8699948213649855,
+            0.4000000000000007,
+            0.9810870220120906
+          ]
+        },
+        "momentum": {
+          "kind": "momentum"
+        },
+        "persistence": {
+          "kind": "persist"
+        },
+        "pooled_drift": {
+          "kind": "constant",
+          "value": 0.16426784257066412
+        },
+        "state_ridge": {
+          "coef": [
+            -0.11553187123111278,
+            0.05879135002707398,
+            -0.00765952552538777,
+            -0.3456402009819317
+          ],
+          "features": [
+            "log_bwe_over_300kbps",
+            "previous_log_bwe_change",
+            "previous_log_requested_over_bwe",
+            "previous_observation_available"
+          ],
+          "intercept": 0.16426784257066412,
+          "kind": "ridge",
+          "mean": [
+            0.6858987685539074,
+            0.14984452841320692,
+            -0.0038781095621694102,
+            0.7999999999999986
+          ],
+          "penalty": 0.01,
+          "scale": [
+            0.6737336740436051,
+            0.5793346432030799,
+            0.8699948213649855,
+            0.4000000000000007
+          ]
+        }
+      },
+      "rows": 1100,
+      "training_regimes": [
+        "collapse-recovery",
+        "near-capacity",
+        "queue-building",
+        "underutilized"
+      ],
+      "training_sources": [
+        "source-1f253c3e7a476525c526a21e",
+        "source-2b3267608b48ab5f7b446cdf",
+        "source-32ae9968d8417f1c60fcd447",
+        "source-4c2a0120550a8bcb622fb708",
+        "source-52a998e62868e63af7a92891",
+        "source-5b8a21adf46485935afcfa8c",
+        "source-71e9c546abfaeb7defba23fb",
+        "source-9b9ac24db20846eefa4e6d47",
+        "source-a0935dbdc97fb77fde6c1041",
+        "source-ba12ea67f20b3d59f1d825c5",
+        "source-f55bdc65c82e58b0078829de"
+      ]
+    }
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "abi": "native_margin_validation_v1",
+  "confirmatory": false,
+  "controller_promoted": false,
+  "development_pilot": true,
+  "input_and_code_sha256": {
+    "configs/native_margin_validation_v1.json": "fd3cd5f5cff485f6ca3ca2b91796253c7b52846e2e676edb8e94dcd31579b09f",
+    "results/native-margin-pilot-v1-report/report.json": "59b689ac678c42ce87f995a2677b3e0055a82755f34dc8ecf9807bef6688c29a",
+    "results/native-margin-pilot-v1-report/sessions.json": "43b8aa38c8a837a0c37814834312f14e3071a2e0279c0d62d71155d0c081aac4",
+    "results/typed-margin-forecast-v1/forecast.json": "d7729da05235eecdac20dfbc4eff606e85cb55caae510fd4be9b6a38457e617f",
+    "results/typed-native-receiver-v1/layer.json": "923e5a2304b800c0a65c2311d291adab547d4537aeaf3cf00389cddbc060a22f",
+    "src/media_rl/native_actuator_qualification_explore.py": "74bf427d283ce9fd6c0114ed16a78f5097635d6a5cdb6ffad3cbe9a08aabb7f6",
+    "src/media_rl/native_ladder_pilot.py": "f0bfca5f44aa5ee7943bcd3d0b2e865e633dd63f651e8277e6081e2938b15b85",
+    "src/media_rl/native_margin_pilot.py": "5290a71e3499f3704894bd19f8de11368250d33e9998c9e45c36513881f6cdb1",
+    "src/media_rl/native_margin_pilot_report.py": "8059cd71fb4e8e3df81bc7bb3373110cbd41f0a18f5f8719d9478943cadd9245",
+    "src/media_rl/typed_bitrate_margin_forecast.py": "9bd0374517f0fd1bca135cc33b3d5a6b59c9afc6fac17c276ea82fd503761cdb",
+    "src/media_rl/typed_bitrate_native_receiver.py": "f23b44c9a05e35230655e93255697fa1b3f56d250d0ba870dbc594bf54b72382"
+  },
+  "limitation": "Compact outcome/statistic verification only; raw native seals and frames were not replayed.",
+  "models_fitted": 0,
+  "new_native_sessions": 0,
+  "plan_sha256": "74c04c483ed88e19ffc31d6494afb63c004b12ea668def36ca6df1df13d0f0ae",
+  "raw_replay_performed": false,
+  "registered_criteria": {
+    "criteria_implementation": "media_rl.typed_bitrate_margin_forecast.judged",
+    "forecast_minimum_absolute_difference": 0.5,
+    "git_commit": "422afca",
+    "native_established": "unadjusted source-level 95% t interval excludes zero",
+    "path": "docs/NATIVE_MARGIN_PILOT_V1.md",
+    "primary_span": "session",
+    "schedule_agreement_fraction": 0.8
+  },
+  "registered_verdict": "the layer did not forecast the pilot",
+  "report_numeric_tolerance": {
+    "absolute": 1e-12,
+    "relative": 1e-12
+  },
+  "report_recomputed_from_compact_factual_summaries": true,
+  "runtime": {
+    "numpy": "2.5.3",
+    "python": "3.12.14",
+    "scipy": "1.18.1"
+  },
+  "sessions": 192,
+  "sources": 12,
+  "supplementary": {
+    "added_after_native_report_was_read": true,
+    "holm": {
+      "0.25 minus 0.65": {
+        "adjusted_p_value": 0.2344550233094437,
+        "p_value": 0.11722751165472185,
+        "rejects_at_005": false
+      },
+      "0.25 minus 1.05": {
+        "adjusted_p_value": 0.0008348456144783309,
+        "p_value": 0.00020871140361958273,
+        "rejects_at_005": true
+      },
+      "0.65 minus 1.05": {
+        "adjusted_p_value": 0.00037319644755574584,
+        "p_value": 6.219940792595764e-05,
+        "rejects_at_005": true
+      },
+      "margin minus 0.25": {
+        "adjusted_p_value": 0.9403203128765945,
+        "p_value": 0.9403203128765945,
+        "rejects_at_005": false
+      },
+      "margin minus 0.65": {
+        "adjusted_p_value": 0.04284968450777982,
+        "p_value": 0.014283228169259938,
+        "rejects_at_005": true
+      },
+      "margin minus 1.05": {
+        "adjusted_p_value": 0.00041660400837352225,
+        "p_value": 8.332080167470445e-05,
+        "rejects_at_005": true
+      }
+    },
+    "holm_family": "six overall whole-session endpoint contrasts; two-sided alpha 0.05",
+    "leave_one_source_out": {
+      "mean_range": [
+        -1.2594974184740464,
+        -0.9459629938782569
+      ],
+      "negative_means": 12,
+      "omitted_sources": {
+        "source-1f253c3e7a476525c526a21e": {
+          "interval95": [
+            -1.9432312969769283,
+            -0.1119374093199238
+          ],
+          "mean": -1.027584353148426,
+          "p_value": 0.03141842141629991,
+          "sources": 11
+        },
+        "source-2b3267608b48ab5f7b446cdf": {
+          "interval95": [
+            -1.7816593154949945,
+            -0.1102666722615192
+          ],
+          "mean": -0.9459629938782569,
+          "p_value": 0.030276468464727358,
+          "sources": 11
+        },
+        "source-32ae9968d8417f1c60fcd447": {
+          "interval95": [
+            -2.1503025011473014,
+            -0.32213630374366553
+          ],
+          "mean": -1.2362194024454833,
+          "p_value": 0.013042368263601466,
+          "sources": 11
+        },
+        "source-4c2a0120550a8bcb622fb708": {
+          "interval95": [
+            -1.9449334520251655,
+            -0.11227661308498738
+          ],
+          "mean": -1.0286050325550764,
+          "p_value": 0.03138494482863495,
+          "sources": 11
+        },
+        "source-52a998e62868e63af7a92891": {
+          "interval95": [
+            -1.8048793066394668,
+            -0.10749589474202703
+          ],
+          "mean": -0.9561876006907469,
+          "p_value": 0.030893725014823858,
+          "sources": 11
+        },
+        "source-5b8a21adf46485935afcfa8c": {
+          "interval95": [
+            -2.090375309222935,
+            -0.19176222429350898
+          ],
+          "mean": -1.141068766758222,
+          "p_value": 0.023163060323054676,
+          "sources": 11
+        },
+        "source-71e9c546abfaeb7defba23fb": {
+          "interval95": [
+            -2.1509965666893733,
+            -0.32599974310897917
+          ],
+          "mean": -1.2384981548991763,
+          "p_value": 0.012804068280090225,
+          "sources": 11
+        },
+        "source-9b9ac24db20846eefa4e6d47": {
+          "interval95": [
+            -2.1456939015869905,
+            -0.3009644332386995
+          ],
+          "mean": -1.223329167412845,
+          "p_value": 0.014406593253335378,
+          "sources": 11
+        },
+        "source-a0935dbdc97fb77fde6c1041": {
+          "interval95": [
+            -1.963676666091081,
+            -0.11661426704148914
+          ],
+          "mean": -1.040145466566285,
+          "p_value": 0.030939849431551376,
+          "sources": 11
+        },
+        "source-ba12ea67f20b3d59f1d825c5": {
+          "interval95": [
+            -2.140900619975799,
+            -0.2839279075847738
+          ],
+          "mean": -1.2124142637802864,
+          "p_value": 0.015578166672864142,
+          "sources": 11
+        },
+        "source-f55bdc65c82e58b0078829de": {
+          "interval95": [
+            -2.1556375348763694,
+            -0.3633573020717231
+          ],
+          "mean": -1.2594974184740464,
+          "p_value": 0.01066177941202903,
+          "sources": 11
+        },
+        "source-f9dd9aa57c3815dbebf41ffc": {
+          "interval95": [
+            -2.155637503368628,
+            -0.36335689626271805
+          ],
+          "mean": -1.259497199815673,
+          "p_value": 0.010661801136988553,
+          "sources": 11
+        }
+      },
+      "pair": "margin minus 0.65"
+    },
+    "selection_or_promotion": false
+  },
+  "trajectory_description": {
+    "added_after_native_report_was_read": true,
+    "arm": "0.65",
+    "bin_seconds": [
+      54,
+      60
+    ],
+    "by_schedule": {
+      "one-drop": {
+        "forecast_jitter_buffer_ms": 41.08483739680779,
+        "forecast_requested_kbps": 158.119,
+        "native_jitter_buffer_ms": 45.09531236277868,
+        "native_requested_kbps": 376.62575
+      },
+      "recurring-drops": {
+        "forecast_jitter_buffer_ms": 44.26120849861157,
+        "forecast_requested_kbps": 158.119,
+        "native_jitter_buffer_ms": 53.850752710153934,
+        "native_requested_kbps": 222.74358333333336
+      },
+      "steady-room": {
+        "forecast_jitter_buffer_ms": 20.82114145819018,
+        "forecast_requested_kbps": 483.456,
+        "native_jitter_buffer_ms": 61.01686652768552,
+        "native_requested_kbps": 733.6438333333332
+      },
+      "steady-tight": {
+        "forecast_jitter_buffer_ms": 44.93506480737736,
+        "forecast_requested_kbps": 483.456,
+        "native_jitter_buffer_ms": 68.4495927873819,
+        "native_requested_kbps": 499.16416666666663
+      }
+    },
+    "causal_mechanism_identified": false
+  }
+}

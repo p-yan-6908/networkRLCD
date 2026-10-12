@@ -1,0 +1,24 @@
+{
+  "abi": "bwe_dynamics_diagnostic_v1_verification",
+  "controller_promoted": false,
+  "goal_status": "blocked on timestamped native evidence access; scientifically qualified controller remains unachieved",
+  "independent_reproduction": "report, models, prediction arrays and table bit-exact",
+  "lint_and_format": "passed for both new modules and tests",
+  "native_counterfactuals_used": false,
+  "next_input": "reports/bwe-dynamics-diagnostic-v1/next-input.json",
+  "node_tests_previously_passed": 9,
+  "original_research_files_verified_unchanged": 464,
+  "paper": {
+    "command": "latexmk -xelatex -bibtex- -interaction=nonstopmode -halt-on-error -outdir=build main.tex",
+    "file": "paper/build/main.pdf",
+    "pages": 78,
+    "sha256": "a393dd98929d453fac19825c6e91731ccd0382c1c6893ce99a2951763d0686c3",
+    "undefined_or_box_or_missing_character_warnings": false
+  },
+  "python_tests": {
+    "passed": 126,
+    "skip": "macOS-only kqueue test",
+    "skipped": 1
+  },
+  "raw_replay_performed": false
+}

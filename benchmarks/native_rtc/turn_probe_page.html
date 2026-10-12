@@ -1,0 +1,84 @@
+<!doctype html><meta charset="utf-8"><canvas id="c" width="640" height="360"></canvas><video id="v" autoplay muted playsinline></video>
+<script type="module">
+import {writeFrameMarker,readFrameMarker,FRAME_PROTOCOL} from '/frame_marker.mjs';
+import {samplePairedQuality,QUALITY_PROTOCOL} from '/source_quality.mjs';
+import {applyNativeAction} from '/dense_actuation.mjs';
+import {captureEncoderResponse} from '/encoder_response.mjs';
+import {installEncodedMeter} from '/actuator_meter.mjs';
+import {InstrumentSampler,captureLink} from '/actuator_control.mjs';
+import {selectSenderSource,SenderObservationEncoder} from '/sender_observation.mjs';
+import {SenderContentEncoder} from '/repair3_policy.mjs';
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+function drawScene(ctx,n,seed){
+ ctx.fillStyle=`rgb(${60+seed%60},${80+n%40},120)`;ctx.fillRect(0,0,640,360);
+ for(let k=0;k<12+(seed%4)*6;k++){
+  ctx.fillStyle=`rgb(${(seed+k*31)%255},${(n*2+k*17)%255},${(k*41+seed)%255})`;
+  ctx.fillRect((n*(2+seed%4)+k*37+seed)%640,(k*29+n*2+seed)%310,24+seed%17,18+seed%13);
+ }
+ ctx.fillStyle='white';ctx.font='22px monospace';ctx.fillText('owned TURN '+seed+' '+n,12,30);
+}
+globalThis.run=async()=>{
+ const cfg=await(await fetch('/config')).json(),canvas=document.getElementById('c'),ctx=canvas.getContext('2d',{willReadFrequently:true});
+ const pcConfig={iceTransportPolicy:'relay',iceServers:[cfg.ice_server]};
+ const a=new RTCPeerConnection({...pcConfig,encodedInsertableStreams:true}),b=new RTCPeerConnection(pcConfig);
+ const stream=canvas.captureStream(0),track=stream.getVideoTracks()[0],sender=a.addTrack(track,stream);
+ if(typeof track.requestFrame!=='function')throw Error('manual capture unavailable');
+ const meter=installEncodedMeter(sender),content=new SenderContentEncoder();
+ const initial=sender.getParameters();initial.encodings[0].maxBitrate=300000;await sender.setParameters(initial);
+ const video=document.getElementById('v'),readback=document.createElement('canvas'),reference=document.createElement('canvas');
+ for(const c of [readback,reference]){c.width=640;c.height=360;}
+ const read=readback.getContext('2d',{willReadFrequently:true}),ref=reference.getContext('2d',{willReadFrequently:true});
+ const sources=[],observations=[],sourceTimes=new Map();let n=0,observing=true,callback,phase='pre_connection';
+ const draw=()=>{n++;drawScene(ctx,n,cfg.scene_seed);drawScene(ref,n,cfg.scene_seed);const paired=samplePairedQuality(ctx,ref);writeFrameMarker(ctx,n);const now=performance.now();content.observe(paired.reference_rgb,now);sourceTimes.set(n,now);sources.push({source_id:n,capture_request_ms:now,phase});track.requestFrame();};
+ draw();const timer=setInterval(draw,1000/30);
+ const inspect=(time,meta)=>{if(!observing)return;read.drawImage(video,0,0,640,360);const marker=readFrameMarker(read),at=performance.now(),known=marker.source_id!==null&&sourceTimes.has(marker.source_id);let quality=null;
+  if(known){drawScene(ref,marker.source_id,cfg.scene_seed);quality=samplePairedQuality(read,ref);}
+  observations.push({...marker,known_source:known,readback_ms:at,callback_ms:time,presented_frames:meta.presentedFrames,quality});
+  callback=video.requestVideoFrameCallback(inspect);
+ };
+ b.ontrack=e=>{video.srcObject=e.streams[0];video.play();callback=video.requestVideoFrameCallback(inspect);};
+ const candidatesA=[],candidatesB=[];a.onicecandidate=e=>{if(e.candidate)candidatesA.push(e.candidate);};b.onicecandidate=e=>{if(e.candidate)candidatesB.push(e.candidate);};
+ const strip=s=>s.split('\r\n').filter(l=>!l.startsWith('a=candidate:')&&!l.startsWith('a=end-of-candidates')).join('\r\n');
+ const vp8=RTCRtpSender.getCapabilities('video').codecs.filter(c=>c.mimeType.toLowerCase()==='video/vp8');
+ a.getTransceivers()[0].setCodecPreferences(vp8);
+ await a.setLocalDescription(await a.createOffer());await b.setRemoteDescription({type:'offer',sdp:strip(a.localDescription.sdp)});
+ await b.setLocalDescription(await b.createAnswer());await a.setRemoteDescription({type:'answer',sdp:strip(b.localDescription.sdp)});
+ for(let k=0;k<100&&(a.iceGatheringState!=='complete'||b.iceGatheringState!=='complete');k++)await sleep(100);
+ const pick=cs=>cs.find(c=>c.type==='relay'&&c.relayProtocol==='tcp'&&c.address==='127.0.0.1');
+ const ca=pick(candidatesA),cb=pick(candidatesB);if(!ca||!cb)throw Error('authenticated localhost TURN/TCP candidate required');
+ const relay=await(await fetch('/relay',{method:'POST',body:JSON.stringify({a:{address:ca.address,port:ca.port},b:{address:cb.address,port:cb.port}})})).json();
+ if(relay.error)throw Error(relay.error);
+ const rewrite=(c,port)=>{const words=c.candidate.split(' ');words[4]='127.0.0.1';words[5]=String(port);return {candidate:words.join(' '),sdpMid:c.sdpMid,sdpMLineIndex:c.sdpMLineIndex};};
+ await b.addIceCandidate(rewrite(ca,relay.a_proxy_port));await a.addIceCandidate(rewrite(cb,relay.b_proxy_port));
+ for(let k=0;k<100&&a.connectionState!=='connected';k++)await sleep(100);
+ if(a.connectionState!=='connected')throw Error('owned proxied RTC did not connect: '+a.connectionState);
+ const receiver=b.getReceivers().find(r=>r.track.kind==='video');
+ await applyNativeAction(sender,receiver,{encoder_max_bitrate_bps:300000,receiver_jitter_buffer_target_ms:0});
+ const start=performance.now(),sampler=new InstrumentSampler(cfg.exploration_seed),encoder=new SenderObservationEncoder(),decisions=[],snapshots=[];
+ let collecting=true,lastEpoch=-1;
+ const samples=(async()=>{while(collecting){
+  const stats=await a.getStats();if(!collecting)break;const own={encoder_max_bitrate_bps:sender.getParameters().encodings[0].maxBitrate,receiver_jitter_buffer_target_ms:receiver.jitterBufferTarget};
+  const observation=encoder.observe(selectSenderSource(stats,own),performance.now());observation.content_features=content.snapshot(observation.sample_ms);
+  const encoder_response=captureEncoderResponse(stats,observation.raw_source,observation.sample_ms,performance.timeOrigin);
+  const encoded_snapshot=meter.snapshot(observation.sample_ms),link=captureLink(stats,observation.raw_source);
+  const assignment=await sampler.observe(observation,encoder_response,encoded_snapshot,link);
+  let readback=null,ack_ms=null;
+  if(assignment&&assignment.epoch!==lastEpoch){readback=await applyNativeAction(sender,receiver,{encoder_max_bitrate_bps:assignment.requested_bps,receiver_jitter_buffer_target_ms:0});ack_ms=performance.now();sampler.acknowledge(ack_ms,readback.encoder_max_bitrate_bps);lastEpoch=assignment.epoch;}
+  decisions.push({step_id:decisions.length,observation,encoder_response,encoded_snapshot,instrument_link:link,assignment,actuation_readback:readback,ack_ms});await sleep(100);
+ }})();
+ for(const [capacity,label,duration] of cfg.schedule){
+  await fetch('/phase',{method:'POST',body:JSON.stringify({capacity})});phase=label;await sleep(duration);
+  const tx=[...(await a.getStats()).values()],rx=[...(await b.getStats()).values()];
+  const sent=tx.find(x=>x.type==='outbound-rtp'&&x.kind==='video'),received=rx.find(x=>x.type==='inbound-rtp'&&x.kind==='video');
+  const transport=tx.find(x=>x.type==='transport'&&x.selectedCandidatePairId),pair=tx.find(x=>x.id===transport?.selectedCandidatePairId),remote=tx.find(x=>x.id===pair?.remoteCandidateId);
+  snapshots.push({phase,remote_candidate_address:remote?.address??remote?.ip??null,remote_candidate_type:remote?.candidateType??null,frames_encoded:sent?.framesEncoded??null,frames_decoded:received?.framesDecoded??null,bwe_bps:pair?.availableOutgoingBitrate??null});
+ }
+ const cutoff=performance.now();clearInterval(timer);observing=false;if(callback!==undefined)video.cancelVideoFrameCallback(callback);collecting=false;await samples;
+ const encoded_meter=meter.evidence(start,cutoff);
+ const result={abi:'native_turn_probe_peer_v1',native_rtc:true,transport:'authenticated localhost TURN/TCP plus owned UDP bottleneck',native_counterfactuals:false,learned_policy:false,
+  scene_seed:cfg.scene_seed,exploration_seed:cfg.exploration_seed,time_origin_epoch_ms:performance.timeOrigin,measurement_start_ms:start,measurement_cutoff_ms:cutoff,
+  frame_protocol:FRAME_PROTOCOL,quality_protocol:QUALITY_PROTOCOL,sources,observations,decisions,encoded_meter,snapshots,connection:a.connectionState,
+  transport_cc_negotiated:a.localDescription.sdp.includes('transport-cc')};
+ stream.getTracks().forEach(t=>t.stop());a.close();b.close();return result;
+};
+</script>

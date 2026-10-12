@@ -1,0 +1,15 @@
+{
+  "configs/native_margin_validation_v1.json": "fd3cd5f5cff485f6ca3ca2b91796253c7b52846e2e676edb8e94dcd31579b09f",
+  "reports/native-margin-validation-v1/audit.json": "8b51a7065bdb24bc92bd20f0f19865c967b443f2e03469210faa90ee47974fe0",
+  "reports/native-margin-validation-v1/judged.json": "9f4cb71dbf7cadaa8fc4804dfe9e7b40960ee437a8ef246775b74d1f2bdb5cbf",
+  "results/native-margin-pilot-v1-report/report.json": "59b689ac678c42ce87f995a2677b3e0055a82755f34dc8ecf9807bef6688c29a",
+  "results/native-margin-pilot-v1-report/sessions.json": "43b8aa38c8a837a0c37814834312f14e3071a2e0279c0d62d71155d0c081aac4",
+  "results/typed-margin-forecast-v1/forecast.json": "d7729da05235eecdac20dfbc4eff606e85cb55caae510fd4be9b6a38457e617f",
+  "results/typed-native-receiver-v1/layer.json": "923e5a2304b800c0a65c2311d291adab547d4537aeaf3cf00389cddbc060a22f",
+  "src/media_rl/native_actuator_qualification_explore.py": "74bf427d283ce9fd6c0114ed16a78f5097635d6a5cdb6ffad3cbe9a08aabb7f6",
+  "src/media_rl/native_ladder_pilot.py": "f0bfca5f44aa5ee7943bcd3d0b2e865e633dd63f651e8277e6081e2938b15b85",
+  "src/media_rl/native_margin_pilot.py": "5290a71e3499f3704894bd19f8de11368250d33e9998c9e45c36513881f6cdb1",
+  "src/media_rl/native_margin_pilot_report.py": "8059cd71fb4e8e3df81bc7bb3373110cbd41f0a18f5f8719d9478943cadd9245",
+  "src/media_rl/typed_bitrate_margin_forecast.py": "9bd0374517f0fd1bca135cc33b3d5a6b59c9afc6fac17c276ea82fd503761cdb",
+  "src/media_rl/typed_bitrate_native_receiver.py": "f23b44c9a05e35230655e93255697fa1b3f56d250d0ba870dbc594bf54b72382"
+}

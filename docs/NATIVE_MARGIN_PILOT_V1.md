@@ -2,7 +2,7 @@
 
 **A development pilot. Not confirmatory, and not part of Native Phase N1 or B1.** The owner
 approved designing it on 2026-10-11 ([decisions, section 18](NATIVE_PHASE_N1_DECISIONS.md)).
-**The capture is not approved.** The design is fixed here before any session of record and
+**The capture was subsequently approved for one repetition and completed (192/192).** The design was fixed here before any session of record and
 before the simulator's forecast is computed. It fits no model, promotes nothing and changes
 nothing in B1.
 
@@ -255,6 +255,92 @@ uv run --frozen python -m media_rl.native_margin_pilot analyse \
 node --test benchmarks/native_rtc/margin_control.test.mjs
 ```
 
-## Results
+## Results (2026-10-11)
 
-Not captured. Waiting for the owner's go-ahead.
+The owner approved one repetition in [decision 19](NATIVE_PHASE_N1_DECISIONS.md#19-the-long-session-pilots-capture-approved-2026-10-11).
+The completed capture has **192/192 sessions**, 48 per arm, on twelve used sources;
+the plan SHA-256 is `74c04c483ed88e19ffc31d6494afb63c004b12ea668def36ca6df1df13d0f0ae`.
+The final factual reports were published at `63bc3cb`. No capture was repeated for
+this analysis, and the rule, forecast, native reports and models remain unchanged.
+
+Whole-session endpoint and on-time delivery, schedules weighted equally:
+
+| Arm | Native endpoint | On time | Committed synthetic endpoint |
+|---|---:|---:|---:|
+| margin rule | 26.54 | 83.0% | 28.40 |
+| fixed 0.25 | 26.49 | 88.2% | 27.86 |
+| fixed 0.65 | 27.67 | 86.8% | 28.00 |
+| fixed 1.05 | 15.41 | 43.0% | 10.53 |
+
+The endpoint is on-time sampled RGB-PSNR contribution per capture request, not
+perceptual QoE or MOS. The registered reading is **negative for the rule**:
+
+| Rule minus fixed level | Endpoint difference | Source-level 95% t interval |
+|---|---:|---:|
+| 0.25 | +0.05 | [−1.39, +1.49] |
+| 0.65 | −1.13 | [−1.99, −0.27] |
+| 1.05 | +11.13 | [+7.08, +15.18] |
+
+Beating 1.05 does not qualify a controller that loses to a tuned comparator.
+Against 0.65 the rule also loses 3.87 on-time percentage points [−6.78, −0.96].
+From the second change onward its endpoint difference is −1.44 [−2.34, −0.53].
+Per schedule its endpoint differences from 0.65 are +1.20 with room, −0.33 near
+capacity, −3.87 with recurring drops, and −1.53 with one drop. Only the recurring-drop
+interval excludes zero at the unadjusted 95% level, narrowly [−7.72, −0.01]; this is
+not an independently confirmed network-family effect. With one repetition, within-cell
+repeatability cannot be estimated. No controller is promoted.
+
+### The blind forecast test
+
+The existing `typed_bitrate_margin_forecast judge` was run on the forecast committed
+at `422afca` and the final native report. **By the unchanged registered rule, the
+layer did not forecast the pilot.** Three of four established differences over all
+schedules agree. The missed difference is the rule against fixed 0.65: forecast
++0.407, classified *flat* because its size is below 0.5, against the native loss
+−1.131. Under individual schedules 13 of 14 established differences agree; the other
+is again the rule against 0.65, with recurring drops, forecast +0.252 (*flat*).
+All four forecast endpoints fall within their native intervals. Neither that coverage
+nor the many agreements rescues the missed primary contrast. The secondary span
+from the second change onward also fails the registered forecast rule.
+
+### Verification and supplements
+
+`reports/native-margin-validation-v1/` records the judgement, pinned input and code
+hashes, runtime versions, completeness checks and full recomputation of the published
+native report from its 192 compact session summaries. All fields agree within
+1e-12 relative/absolute rounding tolerance. This is **compact factual-outcome
+verification**, not a new raw seal/frame replay; raw evidence was not restored.
+The complete source × schedule × arm matrix is checked before statistics are read.
+
+The following checks were specified and run **after reading the native report**,
+in `configs/native_margin_validation_v1.json`, and cannot replace the registered
+reading or select a controller:
+
+- Holm correction over the six overall endpoint contrasts leaves the rule's loss
+  to 0.65 below 0.05 (adjusted p = 0.043). This six-comparison correction does not
+  account for every previous development look, metric or schedule comparison.
+- Removing each source in turn retains a negative mean in all twelve cases
+  (range −1.26 to −0.95). These are sensitivity checks, not twelve replications.
+- At fixed 0.65, the final 54–60 s bin's requested cap after one drop averages
+  377 kbit/s natively against 158 in the forecast; under recurring drops it is
+  223 against 158. With steady room it is 734 against 483. Requested cap is not
+  actual encoded output. The simulator's assumption that fixed 0.65 stays near
+  the floor after a drop does not describe these native trajectories.
+
+These records make estimator/actuator recovery and startup credible modelling
+questions. They do not identify whether startup, memory, feedback delays, encoder
+response or other browser scheduling effects cause the rule's loss. All three native
+pilots have now been read; they are development data for future work. Reusing any of
+them to test a revised model would not be another blind validation. Native outcomes
+remain factual; counterfactuals remain solely on the synthetic track.
+
+Reproduce into two fresh directories, without restoring raw captures:
+
+```sh
+uv run --frozen python -m media_rl.native_margin_pilot_report \
+    --spec configs/native_margin_validation_v1.json \
+    --out reports/native-margin-validation-v1-reproduction \
+    --paper-out paper/generated-native-margin-pilot-reproduction
+uv run --frozen pytest -q tests/test_native_margin_pilot_report.py \
+    tests/test_native_margin_pilot.py tests/test_typed_bitrate_margin_forecast.py
+```

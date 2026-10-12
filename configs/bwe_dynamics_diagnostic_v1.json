@@ -1,0 +1,66 @@
+{
+  "abi": "bwe_dynamics_diagnostic_v1_spec",
+  "aliasing": "for fixed ratio arms, compare requested cap to nominal ratio*observed BWE; ceiling separate; report clipping shares and current-vs-previous nominal action changes",
+  "all_panels_previously_read": true,
+  "causality_boundary": "observed BWE and present/past acknowledged-cap summaries only; no capacity, schedule, source identity, receiver outcomes, next actions, encoder output or future duration in predictors",
+  "contrasts": "source-mean paired MAE differences versus persistence and state_ridge; descriptive t intervals, conditional on fits, not independent model-training replication",
+  "controller_promoted": false,
+  "development_only": true,
+  "feature_names": [
+    "log_bwe_over_300kbps",
+    "previous_log_bwe_change",
+    "previous_log_requested_over_bwe",
+    "previous_observation_available",
+    "log_current_requested_over_bwe"
+  ],
+  "horizon_boundary": "short pilots use nominal 3 s holds; ladder fast cuts and margin can shorten the next epoch; prediction is next-epoch, not a fixed 3 s forecast",
+  "inputs": {
+    "ladder": {
+      "path": "results/native-ladder-pilot-v1-report/sessions.json",
+      "sha256": "ae1e01e8f62fa80945afcc6d7547086d4a5daadfaccfc2c3d6b3c8f90daf3e2e"
+    },
+    "margin": {
+      "path": "results/native-margin-pilot-v1-report/sessions.json",
+      "sha256": "43b8aa38c8a837a0c37814834312f14e3071a2e0279c0d62d71155d0c081aac4"
+    },
+    "range": {
+      "path": "results/native-range-pilot-v1-report/sessions.json",
+      "sha256": "6e541ce74cb2919b1d4ef9112b5fce79efb33c66abaeb4f159b244debd854e16"
+    }
+  },
+  "limitations": [
+    "No actual encoded payload history is available in the compact summaries.",
+    "Predictive incremental cap information is not a causal action-value or QoE effect.",
+    "All panels are previously read development evidence on four authored schedules and twelve sources.",
+    "Source/regime CV partitions do not create an untouched validation panel.",
+    "No calibrated safety probability, closed-loop learned policy, or revised simulator is evaluated."
+  ],
+  "metrics": [
+    "absolute log BWE prediction error",
+    "squared log BWE prediction error",
+    "signed log BWE prediction error"
+  ],
+  "models": [
+    "persistence",
+    "momentum",
+    "pooled_drift",
+    "state_ridge",
+    "cap_ridge"
+  ],
+  "partitions": {
+    "regime_cv": "train on range, leave each complete authored network regime out; no hyperparameter selection",
+    "source_cv": "train on range, leave each complete source out; no hyperparameter selection",
+    "transfer": "fit once on all range sessions, freeze, describe ladder and margin; both already read, same sources; not blind validation"
+  },
+  "raw_replay_performed": false,
+  "ridge_penalty": 0.01,
+  "sessions": {
+    "ladder": 480,
+    "margin": 192,
+    "range": 240
+  },
+  "sources": 12,
+  "state_features": 4,
+  "target": "log(next observed BWE / current BWE), at the next actuation epoch; no future duration input",
+  "weights": "equal source/regime/arm cells; equal sessions within a cell; equal epochs within a session"
+}

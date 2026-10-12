@@ -1,0 +1,56 @@
+{
+  "abi": "typed_factual_acceptance_v1_spec",
+  "baseline_report": {
+    "path": "results/jevbwe-typed-v4-development-baselines/report.json",
+    "sha256": "757abb1a598b18e022aa602c9d1a12cde9009c5892bc43917bde3d7b2dba81c7"
+  },
+  "blocks": [
+    20000,
+    80000
+  ],
+  "confidence_rule": "one-sided Student t cluster-robust lower bounds with Bonferroni alpha/6 across fixed margins, cluster by episode or sampled training family; choose largest lower bound if strictly positive, otherwise never act",
+  "controller_promoted": false,
+  "counterfactual_labels_collected": false,
+  "data_seeds": [
+    501,
+    502,
+    503
+  ],
+  "development_only": true,
+  "evaluation_trace_seeds": [
+    75101,
+    75102,
+    75103,
+    75104
+  ],
+  "familywise_alpha": 0.05,
+  "margins": [
+    0.0,
+    0.01,
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "native_validation": false,
+  "panels": {
+    "read_population_r": "pop_r",
+    "read_population_s": "pop_s",
+    "training_families": "pop_d"
+  },
+  "primary_question": "Does a conservative acceptance estimate avoid low-data false approvals without discarding every higher-data gain?",
+  "reading": "Report every selector, seed, budget and panel against training-selected fixed ratio and tuned reactive baseline. Conservative rules qualify neither a native policy nor guaranteed closed-loop value. No tuning or promotion on panel outcomes.",
+  "selection_methods": [
+    "point",
+    "episode_lcb",
+    "family_lcb"
+  ],
+  "source_config": {
+    "path": "results/jevbwe-typed-v4-population/config.json",
+    "sha256": "4f4f2367fd6b0a172bee10838f78ea70a7bb60958f4f5f037b7864d0ae9a11eb"
+  },
+  "synthetic_only": true,
+  "trace_namespace": "acceptance-audit-evaluation-v1",
+  "training_settings": "original factual helper defaults, unchanged; source factual only",
+  "workers": 8
+}

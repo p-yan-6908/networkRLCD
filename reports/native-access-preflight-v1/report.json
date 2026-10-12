@@ -1,0 +1,36 @@
+{
+  "abi": "native_access_preflight_v1",
+  "archive_access": {
+    "configured_credentials_observed": false,
+    "hugging_face_hosts_allowed": false,
+    "plugin": "Hugging Face available, suggested; installation/connection not confirmed"
+  },
+  "cloud_browser": {
+    "ice_candidates_after_owned_fake_media_permission": 0,
+    "ice_candidates_without_permission": 0,
+    "installed": true,
+    "managed_policy": {
+      "AudioCaptureAllowed": false,
+      "VideoCaptureAllowed": false,
+      "WebRtcIPHandling": "disable_non_proxied_udp"
+    },
+    "owned_loopback_udp_probe": "passed with Node",
+    "version": "Chrome/154.0.8037.57"
+  },
+  "generated_content_route": "native browser, ffmpeg and Node are installed; existing browser policy prevents owned-relay WebRTC capture",
+  "native_controller_or_qoe_evaluated": false,
+  "new_factual_outcomes_created": false,
+  "original_desktop_connector": {
+    "cwd": "/Users/pyan/syzygy",
+    "initial_read_only_call_succeeded": true,
+    "networkRLCD_capture_access_verified": false,
+    "subsequent_status": "Session terminated"
+  },
+  "platform_controls_modified": false,
+  "preflight_code_sha256": "82a8f3185dd7b7a1ec4c1e16ff8afb3d81be55d9cb7f8f37a3446190a33fd74e",
+  "recovery_options": [
+    "Reconnect the terminated Syzygy session on the Mac, then use original verified native evidence without cloud egress.",
+    "Use the supported environment configuration workflow for secure archive read access and archive hosts, or for permitted native localhost WebRTC execution."
+  ],
+  "synthetic_track_continues": "configs/typed_factual_acceptance_v1.json"
+}
