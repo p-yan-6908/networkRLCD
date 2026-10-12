@@ -51,6 +51,18 @@ eight resealed-forgery checks pass. The actual normalized rates average 0.580,
 0.721 and 0.881 at requested ratios 0.65, 0.85 and 1.05; these pooled descriptive
 means do not qualify a state-conditioned effect or model.
 
+A [post-capture proximal action diagnostic](NATIVE_TURN_ACTION_DIAGNOSTIC_V1.md)
+now recomputes the actual randomized-hold effects from the unchanged capture.
+Its peer/epoch-adjusted, peer-clustered 1.05-minus-0.65 contrast raises actual
+encoded payload by 0.279 normalized units [0.187, 0.372] (Holm p=0.000063 over
+six endpoint/contrast tests). The corresponding 150 ms on-time proxy changes by
+only +7.2 percentage points [-11.2, +25.5] (adjusted p=0.833); all three delivery
+intervals include zero. This is exploratory actuator evidence, not a delivered
+QoE gain, policy comparison, safety result or state-conditioned action value.
+The diagnostic verified all 82 files in the selected raw capture against the
+matching entries of the retained inventory and reproduced all 16 session
+summaries. It did not modify or archive raw evidence.
+
 The stronger FIFO audit finds a preserved V1 bookkeeping defect: closing-ledger
 metadata precedes 10–36 empty timer ticks per peer. Every raw event is checked,
 using exact ledger-prefix replay and explicit zero-service suffix verification.
@@ -77,6 +89,10 @@ Those are hypotheses to distinguish, not identified causes of the observed loss.
    for action-value qualification or generalization. Freeze a prospective V2
    study before collecting a broader panel, vary previously unseen network
    mechanisms/content, and match requested **and actual encoded-rate** trajectories.
+   The V1 action diagnostic narrows the immediate question: the assigned cap moves
+   payload, but delivery response remains unresolved. Any next local panel must
+   remain factual and development-only on its single-host TURN/TCP path; new
+   capacity traces do not establish unseen physical-network generalization.
    In parallel, the targeted pinned restore below remains the route to original
    UDP/licensed-video history; do not equate TURN dynamics with that transport.
 2. Diagnose the memory rule using a separate, prospectively specified native
@@ -96,9 +112,19 @@ Those are hypotheses to distinguish, not identified causes of the observed loss.
 The fresh native-capture access blocker is removed without modifying the browser's
 managed policies. Native factual telemetry and the synthetic study continue
 locally. Original licensed video working copies and old native raw captures are
-still absent: no original UDP trajectory has been reconstructed. The managed
-environment has no private archive credential, the old desktop session ended,
-and its HTTP policy omits Hugging Face archive hosts. A concrete targeted input plan is
+still absent: no original UDP trajectory has been reconstructed.
+
+The receipt-pinned archive restore was attempted in the current managed runtime.
+The huggingface_hub 2.2.0 SDK and its hf CLI were installed and verified through
+uv, but the SDK found no usable token. A current environment-status read lists no
+secret, runtime-variable or outbound-identity bindings, and its enforced policy
+excludes Hugging Face hosts. Listing the private dataset at the range receipt's
+pinned revision and downloading only its SHA256SUMS both failed with ProxyError;
+zero archive bytes were downloaded. Thus the user's stated HF_TOKEN is not
+visible to this task runtime, and the policy blocks the exact restore route. No
+token was inspected, placed in the repository or sent to chat.
+
+A concrete targeted input plan is
 `reports/bwe-dynamics-diagnostic-v1/next-input.json`: the lexically first used
 range-pilot source, its twenty sessions covering all schedules and levels, selected
 from identities alone. It pins the verified private archive revision

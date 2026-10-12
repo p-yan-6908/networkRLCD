@@ -344,6 +344,17 @@ The updated draft is **`paper/build/main.pdf`**, source `paper/main.tex`. Separa
 
 `evaluate` also supports `--split validation` and `--model-map FILE` for explicit per-method checkpoint references (relative paths resolve against the map file). Evaluated runs retain copied references and a portable model map. `improve`, `tune-threshold`, the v4 policy-randomization and v5 safety-shield campaigns hash inputs, lock validation selection before opening test traces, and refuse to reuse partial stages or changed code/settings. The v4/v5/v6 protocols are frozen in [`docs/POLICY_RANDOMIZATION_V4.md`](docs/POLICY_RANDOMIZATION_V4.md), [`docs/SAFETY_SHIELD_V5.md`](docs/SAFETY_SHIELD_V5.md), and [`docs/ACTION_CALIBRATION_V6.md`](docs/ACTION_CALIBRATION_V6.md); all results remain synthetic.
 
+**A post-capture native randomized-hold diagnostic separates actuation from delivery.**
+Replaying all 16 unchanged TURN/TCP peers, the assigned 1.05 versus 0.65 ratio
+raises actual encoded payload by +0.279 normalized units [0.187, 0.372] after
+peer/epoch adjustment and six-test Holm correction. Its one-step on-time estimate
+is +7.2 percentage points with a wide [-11.2, +25.5] interval and adjusted
+p=0.833. This is exploratory proximal actuator evidence on four procedural
+scenes, not a QoE improvement, learned action value, safety result or real-network
+validation. The protocol, full summary replay, code and provenance are in
+[the action diagnostic](docs/NATIVE_TURN_ACTION_DIAGNOSTIC_V1.md) and
+reports/native-turn-action-diagnostic-v1/.
+
 ## Interpretation boundaries
 
 A probability of 0.9 means an **estimated next-step constraint-satisfaction probability**, not 90% confidence in optimality or a guarantee of long-horizon safety. Calibration on ID data need not transfer to OOD conditions or the gate-induced state distribution. A conservative fallback cannot repair an outage or create bandwidth. Report all baselines and negative findings; do not assume calibrated RL beats GCC-like control. Synthetic QoE is not MOS/VMAF, latency is a fluid virtual-delay proxy, and FEC is not a codec implementation. Real WebRTC, packet-level emulation, real traces, multi-flow fairness and human perceptual validation are future work.

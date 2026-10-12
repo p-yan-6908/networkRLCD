@@ -1,0 +1,20 @@
+{
+  "abi": "native_turn_action_diagnostic_v1_provenance",
+  "analysis_code_sha256": "643018c68e27b3f44260d4503d8c2ffa3c72bfd7f730ad644139196e5fc19a28",
+  "config_sha256": "e9c043786243cafdf5d84a87d2bdabed74bf409b1baebe4c41ce63c4e30076bc",
+  "project_root": "/workspace/networkRLCD",
+  "raw_evidence_provenance": {
+    "capture_bytes_unmodified": true,
+    "capture_file_count": 82,
+    "inventory_files_verified": 82,
+    "inventory_sha256": "611ffe6c889e06193998c0c0f1f312585e5495e9bfb8acaea02cadef19c4e1f8",
+    "probe_report_sha256": "7605b43f9f4297095348a6692892eb81b6db7f9caa8ebd451b8740670ef58918",
+    "probe_spec_sha256": "090b6db748385eb9a0a069055342c1a3abeeb14ae691fadf4fc761242d32b217",
+    "reference_sessions_sha256": "bdfc45594bb70055d4c41f48024f6d008ea23699f8480b26d82b8f0b1dd7523b",
+    "sessions_replayed": 16,
+    "summaries_match_pinned_report": true,
+    "wire_audit_sha256": "bee75198989b8ed29607907cc068e78bc22614073ccbd9b43984255d954706f4"
+  },
+  "report_sha256": "feace65708edffd734b99fae7fa5884ac9ec356d660166d5e9bdafac5a6e5222",
+  "table_sha256": "e320e42ec59a12f99a520e82a9c0622d862ecea05af514ee14f55fc8c1281dc1"
+}

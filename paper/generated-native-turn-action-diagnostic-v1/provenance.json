@@ -1,0 +1,16 @@
+{
+  "abi": "native_turn_action_paper_export_v1",
+  "exporter_sha256": "b1d85ae854b7deaf7991a189ee7b4465dce4ea197289f0cf643f243d76b7e56f",
+  "input_sha256": {
+    "configs/native_turn_action_diagnostic_v1.json": "e9c043786243cafdf5d84a87d2bdabed74bf409b1baebe4c41ce63c4e30076bc",
+    "reports/native-turn-action-diagnostic-v1/provenance.json": "e59f59e0c50fb43b66e7c263d2fd2ae954525e5388c16e70da7495c512ab8ccf",
+    "reports/native-turn-action-diagnostic-v1/report.json": "feace65708edffd734b99fae7fa5884ac9ec356d660166d5e9bdafac5a6e5222",
+    "src/media_rl/native_turn_action_diagnostic.py": "643018c68e27b3f44260d4503d8c2ffa3c72bfd7f730ad644139196e5fc19a28"
+  },
+  "no_capture_or_training_launched": true,
+  "output_sha256": {
+    "evidence.tex": "3d11e89193da0f5f89583b571af0b184ba7d26284c860b382a7cb453356adba8",
+    "table_arm_means.tex": "5b6626c67bd10498e4564f1ae2578a6f326079ae54b33d4186c2756b43fba067",
+    "table_contrasts.tex": "46bcbec63ebf9d43a9c7fd9174579879395fa11182d137da2acab3288d93b95f"
+  }
+}

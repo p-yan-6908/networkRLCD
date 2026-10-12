@@ -222,6 +222,14 @@ descriptive table is `paper/generated-native-turn-probe/table.tex`, and the firs
 registered peer provides an illustrative trajectory figure. Neither section
 changes frozen native experiments or makes a learned gain/real-network claim.
 
+The new post-capture action diagnostic is a secondary exploratory analysis of the
+same native holds, not new validation: the 1.05 versus 0.65 assigned ratio moves
+actual payload by +0.279 [0.187, 0.372], while the on-time contrast remains
+unresolved at +7.2 pp [-11.2, +25.5]. The manuscript's arm/contrast tables and
+their input hashes are under
+paper/generated-native-turn-action-diagnostic-v1/. They do not qualify action value,
+safety or controller promotion.
+
 `tools/export_development_updates.py` binds tables to the compact reports and
 independent verification receipts; exports require fresh directories and launch
 no fitting/capture. Protocols, commands, complete negative results and storage
