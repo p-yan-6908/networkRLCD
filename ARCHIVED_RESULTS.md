@@ -18,10 +18,13 @@ device space. The separately verified N1 cleanup removed 1,440 raw trace files
 [docs/storage-receipts/n1-stage-one-pruning-2026-10-11.json](docs/storage-receipts/n1-stage-one-pruning-2026-10-11.json).
 Device free space rose from roughly 14 GiB to 21 GiB before new upload staging.
 
-Range and ladder snapshots are being uploaded/verified before any pruning. The
-margin snapshot is queued only after its collector exits and final reports exist.
-These new backups are **not yet claimed complete**; their verified pinned receipts
-will appear under `docs/storage-receipts/`. Live handoff details are in
+Range is now verified and pruned: **720 matching raw files, 3,972,108,501 logical
+bytes**, at private HF revision `36b82e4045dc8f982930839c8528719ed30447ba`.
+See [the range receipt](docs/storage-receipts/native-range-pilot-v1-20261011-233324.json).
+Ladder archival is resumed after an interrupted partial upload; its originals
+remain. Margin is queued only after its collector exits and matched final reports
+exist. **Ladder and margin backups are not yet claimed complete**; their pinned
+verified receipts will appear under `docs/storage-receipts/`. Live handoff details are in
 [docs/STORAGE_OPERATIONS_2026-10-11.md](docs/STORAGE_OPERATIONS_2026-10-11.md).
 
 Large active/required working data may live in `~/.cache/networkrlcd/working/` through

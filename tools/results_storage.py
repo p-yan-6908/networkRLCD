@@ -198,6 +198,17 @@ def archive_paths(project, cache, names):
                 todo.extend(p.iterdir())
             elif p.is_file():
                 files[str(p.relative_to(project))] = {"sha256": digest(p), "size": p.stat().st_size}
+    for name in files:
+        if PurePosixPath(name).name != "manifest.json":
+            continue
+        manifest = json.loads((project / name).read_text())
+        for artifact, sha in manifest.get("artifacts_sha256", {}).items():
+            rel = PurePosixPath(artifact)
+            if rel.is_absolute() or ".." in rel.parts:
+                raise ValueError("Unsafe artifact path in snapshot manifest")
+            member = str(PurePosixPath(name).parent / rel)
+            if member not in files or files[member]["sha256"] != sha:
+                raise ValueError("Partial or changed sealed evidence; restore before archiving: " + member)
     return files
 
 
@@ -387,6 +398,8 @@ def archive(project, cache, names, prefix, apply=False):
         raise ValueError("Archive prefix must be a fresh simple folder name")
     cache.mkdir(parents=True, exist_ok=True)
     assert_inactive(project, names)
+    if any((project / relative_name(n) / "ARCHIVED_RAW.json").exists() for n in names):
+        raise ValueError("Already-pruned evidence must not be re-archived as a complete capture")
     api = private_api()
     existing = list(api.list_repo_tree(REPO, repo_type="dataset", recursive=False))
     if any(e.path == prefix for e in existing):
@@ -434,6 +447,23 @@ def archive(project, cache, names, prefix, apply=False):
     write_json(project / "docs" / "storage-receipts" / (prefix + ".json"), receipt)
     emit("ARCHIVE_complete", **receipt)
     return receipt
+
+
+def completed_archive(project, name):
+    name = relative_name(name)
+    marker_path = project / name / "ARCHIVED_RAW.json"
+    if not marker_path.is_file():
+        return False
+    marker = json.loads(marker_path.read_text())
+    prefix = marker.get("prefix", "")
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,100}", prefix):
+        raise ValueError("Invalid archive marker prefix")
+    receipt = json.loads((project / "docs/storage-receipts" / (prefix + ".json")).read_text())
+    if (receipt.get("verification") != "passed" or receipt.get("private") is not True
+            or receipt.get("applied") is not True or receipt.get("repo") != REPO
+            or receipt.get("revision") != marker.get("revision") or name not in receipt.get("scopes", [])):
+        raise ValueError("Archive marker and completed receipt disagree; stop and review")
+    return True
 
 
 def mark_partial(project, names, receipt):
@@ -506,6 +536,8 @@ def main():
     pack.add_argument("--prune", action="store_true")
     pack.add_argument("--wait-for-pid", type=int)
     pack.add_argument("--wait-seconds", type=int, default=7200)
+    done = sub.add_parser("completed")
+    done.add_argument("path")
     prune_cmd = sub.add_parser("prune-existing-n1")
     prune_cmd.add_argument("--apply", action="store_true")
     args = p.parse_args()
@@ -535,6 +567,11 @@ def main():
             if time.monotonic() >= deadline:
                 raise TimeoutError("Storage watcher deadline reached; raw files retained")
             time.sleep(30)
+    elif args.command == "completed":
+        complete = completed_archive(root, args.path)
+        emit("ARCHIVE_catalog_status", path=args.path, complete=complete)
+        if not complete:
+            raise SystemExit(3)
     elif args.command == "prune-existing-n1":
         cache.mkdir(parents=True, exist_ok=True)
         existing_n1(root, cache, args.apply)

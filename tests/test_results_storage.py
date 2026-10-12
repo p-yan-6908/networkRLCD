@@ -258,6 +258,31 @@ def test_partial_marker_does_not_rewrite_seal(layout):
     assert json.loads((folder / "ARCHIVED_RAW.json").read_text())["partial_evidence"]
 
 
+def test_completed_snapshot_skip_requires_matching_pinned_receipt(layout):
+    root, _, folder, *_ = layout
+    assert not storage.completed_archive(root, "results/pilot")
+    marker = {"prefix": "fixture", "revision": "pinned"}
+    (folder / "ARCHIVED_RAW.json").write_text(json.dumps(marker))
+    receipt = {"verification": "passed", "private": True, "applied": True,
+               "repo": storage.REPO, "revision": "pinned", "scopes": ["results/pilot"]}
+    path = root / "docs/storage-receipts/fixture.json"
+    storage.write_json(path, receipt)
+    assert storage.completed_archive(root, "results/pilot")
+    receipt["revision"] = "different"
+    storage.write_json(path, receipt)
+    with pytest.raises(ValueError, match="disagree"):
+        storage.completed_archive(root, "results/pilot")
+
+
+def test_archive_rejects_missing_or_changed_sealed_bytes(layout):
+    root, cache, folder, raw, _ = layout
+    (folder / "manifest.json").write_text(json.dumps(
+        {"artifacts_sha256": {"frames.bin": storage.digest(raw)}}))
+    raw.unlink()
+    with pytest.raises(ValueError, match="Partial or changed"):
+        storage.archive_paths(root, cache, ["results/pilot"])
+
+
 def test_invalid_archive_prefix_is_rejected_before_network(layout):
     root, cache, *_ = layout
     with pytest.raises(ValueError, match="prefix"):

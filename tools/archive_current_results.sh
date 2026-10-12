@@ -10,11 +10,23 @@ export HF_XET_SHARD_CACHE_SIZE_LIMIT=134217728
 cd "$ROOT"
 [ -x "$HF_PYTHON" ] || { echo 'Set HF_PYTHON to a Python with huggingface_hub installed.' >&2; exit 2; }
 for run in native-range-pilot-v1 native-ladder-pilot-v1; do
+  if "$HF_PYTHON" tools/results_storage.py completed "results/$run"; then
+    continue
+  else
+    code=$?
+    [ "$code" -eq 3 ] || exit "$code"
+  fi
   prefix="${run}-$(date -u +%Y%m%d-%H%M%S)"
   "$HF_PYTHON" tools/results_storage.py archive "results/$run" --prefix "$prefix" --prune
 done
-prefix="native-margin-pilot-v1-$(date -u +%Y%m%d-%H%M%S)"
-"$HF_PYTHON" tools/results_storage.py archive results/native-margin-pilot-v1 \
-  --prefix "$prefix" --prune --wait-for-pid "$CAPTURE_PID" --wait-seconds 7200
+if "$HF_PYTHON" tools/results_storage.py completed results/native-margin-pilot-v1; then
+  :
+else
+  code=$?
+  [ "$code" -eq 3 ] || exit "$code"
+  prefix="native-margin-pilot-v1-$(date -u +%Y%m%d-%H%M%S)"
+  "$HF_PYTHON" tools/results_storage.py archive results/native-margin-pilot-v1 \
+    --prefix "$prefix" --prune --wait-for-pid "$CAPTURE_PID" --wait-seconds 7200
+fi
 "$HF_PYTHON" tools/results_storage.py status --check
 printf 'ARCHIVE_consolidation_finished\n'

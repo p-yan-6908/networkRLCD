@@ -80,7 +80,11 @@ python tools/results_storage.py archive results/COMPLETED_RUN \
   It archives range and ladder captures first, then waits (at most two hours) for
   the margin collector to exit and its final reports to exist. It never reruns
   a capture or computes interim outcomes. Failed verification stops the worker
-  without deleting that snapshot's originals. Check its log and receipts.
+  without deleting that snapshot's originals. Check its log and receipts. Restarting
+  skips already-pruned runs only when their marker matches a verified pinned
+  receipt; missing/changed sealed bytes are rejected rather than silently backed
+  up as a complete capture. Interrupted uploads use a NEW snapshot prefix.
+  Use durable task execution without a short UI-monitor deadline.
 - Successfully pruned run roots get `ARCHIVED_RAW.json` identifying their pinned
   remote copy and removed-file count; this does not replace or rewrite a seal.
 - Pruned historical folders are partial evidence even when manifest.json remains.

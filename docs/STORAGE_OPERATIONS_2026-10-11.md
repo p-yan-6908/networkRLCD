@@ -20,13 +20,24 @@ Read AGENTS.md and STORAGE_POLICY.md before acting on these paths.
 
 ## In flight — inspect, do not duplicate
 
-- Durable archive task: `6d40edf4-bbd9-4aba-855b-9767561416f4`.
+- Current durable archive task: `3c5f53f3-6232-4a4a-a682-9a7faed2a8d1` (no short UI monitor).
   Worker: `bash tools/archive_current_results.sh 18770`.
-  Log: `~/.cache/networkrlcd/logs/consolidation-2026-10-11.log`.
+  Log: `~/.cache/networkrlcd/logs/consolidation-resume-2026-10-11.log`.
+  The previous task `6d40edf4-bbd9-4aba-855b-9767561416f4` hit its 30-minute
+  observation boundary and was confirmed stopped (no duplicate process).
+  Its earlier log is `~/.cache/networkrlcd/logs/consolidation-2026-10-11.log`.
+  Range completed: revision `36b82e4045dc8f982930839c8528719ed30447ba`, 720
+  checksum-matched raw files removed (3,972,108,501 logical bytes).
+  Ladder prefix `native-ladder-pilot-v1-20261011-235801` is an INTERRUPTED PARTIAL
+  upload, not a complete backup. Its originals are intact; the resumed queue uses
+  a fresh prefix. Do not delete the source based on that partial prefix.
   Order: native-range-pilot-v1, native-ladder-pilot-v1, then native-margin-pilot-v1.
   Initial range prefix: `native-range-pilot-v1-20261011-233324`.
   Each snapshot receives its own pinned verified receipt before original pruning.
-  A failure stops the queue safely; do not rerun against an existing prefix.
+  A failure stops the queue safely. The queue now validates the local marker and
+  pinned completed receipt to SKIP finished scopes; do not re-archive pruned
+  partial folders. Interrupted uploads need a NEW prefix, and sealed raw bytes
+  must still pass their original manifests before packaging.
 - Durable sealed-peer watcher task: `99be6646-44aa-4c26-9ac4-d17479525651`.
   Log: `~/.cache/networkrlcd/logs/sealed-peer-watch-2026-10-11.log`.
   Collector PID: `18770`; PID is a point-in-time identifier, not permanent.
