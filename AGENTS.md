@@ -29,8 +29,10 @@ The physical `/Users/pyan/networkRLCD` project tree must remain below **10 GB
   before seal verification or raw replay; never rewrite a seal to conceal pruning.
 - Do not download all archives automatically in Codex Cloud. Use committed
   summaries by default and restore only the pinned data needed for a task.
-- Do not stop or rerun the currently running margin capture, change its frozen
-  recipes, or prune its raw evidence before its final report has been generated.
+- Do not stop active captures, rerun the completed margin capture, or change its
+  frozen recipes. Margin finished 192/192 sealed sessions; its final reports are
+  under `results/native-margin-pilot-v1-report/`. Its raw archive is still pending:
+  only the verified archive worker may prune matching raw evidence.
 
 ## Verification
 

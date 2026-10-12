@@ -1,0 +1,54 @@
+{
+  "applied": true,
+  "archive_bytes": 8652922880,
+  "download_probe": "results.tar.part-0008",
+  "files": 1443,
+  "logical_bytes": 7916412388,
+  "parts": {
+    "results.tar.part-0000": {
+      "sha256": "043a11d9f32c153657639380f8f5e8462df6a50c68cb82f7c0afd36d1fdd2386",
+      "size": 1073741824
+    },
+    "results.tar.part-0001": {
+      "sha256": "460384768c04d0a3dafb0653ef096bdfbf28e3b3af738d4583bc15ad09beb0e9",
+      "size": 1073741824
+    },
+    "results.tar.part-0002": {
+      "sha256": "743df993de264023beb603f21631b1ce61e4dabc993edfc8e0a2844688cb1cf4",
+      "size": 1073741824
+    },
+    "results.tar.part-0003": {
+      "sha256": "50092cd27d3385d93fb3de07849445faaa57fa10634494b6826b216c848cc4d3",
+      "size": 1073741824
+    },
+    "results.tar.part-0004": {
+      "sha256": "a862667760ccec406dfd7b87ddc67c8c0e8c693ec955e4bd8a5a66b4e3dc5e9b",
+      "size": 1073741824
+    },
+    "results.tar.part-0005": {
+      "sha256": "a7f616f4a05d48656c97d9b084063e728ad7b750990935807fc88864d1208941",
+      "size": 1073741824
+    },
+    "results.tar.part-0006": {
+      "sha256": "195882520e804fc7c319e2bf48018f911bda885ba698f815b5d95ae8ca751f8a",
+      "size": 1073741824
+    },
+    "results.tar.part-0007": {
+      "sha256": "a114699b5744a8b14ab59320b7c2f8acdee55aab13b635f4c9d805bd288e0281",
+      "size": 1073741824
+    },
+    "results.tar.part-0008": {
+      "sha256": "bf4e08ef573ec784430041c7f6d52d3c59fe6545baf13bd823b1e48df728fb91",
+      "size": 62988288
+    }
+  },
+  "prefix": "native-ladder-pilot-v1-20261012-001122",
+  "private": true,
+  "repo": "p-yan/networkrlcd-results-archive",
+  "retained_or_drifted": 19768,
+  "revision": "f85fc5d2e7e37dd711cc9e95579540bcd4786604",
+  "scopes": [
+    "results/native-ladder-pilot-v1"
+  ],
+  "verification": "passed"
+}

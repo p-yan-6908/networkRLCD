@@ -26,6 +26,10 @@ Read AGENTS.md and STORAGE_POLICY.md before acting on these paths.
   The previous task `6d40edf4-bbd9-4aba-855b-9767561416f4` hit its 30-minute
   observation boundary and was confirmed stopped (no duplicate process).
   Its earlier log is `~/.cache/networkrlcd/logs/consolidation-2026-10-11.log`.
+  Ladder is now COMPLETE and verified at private revision
+  `f85fc5d2e7e37dd711cc9e95579540bcd4786604`: 1,443 matching raw files removed
+  (7,916,412,388 logical bytes). The compact pinned receipt is in
+  docs/storage-receipts/native-ladder-pilot-v1-20261012-001122.json.
   Range completed: revision `36b82e4045dc8f982930839c8528719ed30447ba`, 720
   checksum-matched raw files removed (3,972,108,501 logical bytes).
   Ladder prefix `native-ladder-pilot-v1-20261011-235801` is an INTERRUPTED PARTIAL
@@ -41,8 +45,13 @@ Read AGENTS.md and STORAGE_POLICY.md before acting on these paths.
 - Completed durable sealed-peer watcher: `99be6646-44aa-4c26-9ac4-d17479525651` (exit 0).
   After its exit, the native status command verified **192/192 sealed sessions**,
   **no failed attempts**, and all 192 relocated aliases intact. The collector has
-  exited. Both final outcome files are still pending, so margin raw pruning is
-  NOT yet eligible. Ladder archival is still running.
+  exited. The fixed final reports have now been generated in
+  `results/native-margin-pilot-v1-report/` and validated against the original plan:
+  ABI `native_margin_pilot_v1_report`, 192 planned/listed/reported sessions,
+  plan SHA-256 `74c04c483ed88e19ffc31d6494afb63c004b12ea668def36ca6df1df13d0f0ae`,
+  and zero models fitted. No recipes or seals were changed. The archive queue can
+  proceed, but margin raw deletion still requires FULL private archive verification.
+  Report log: `~/.cache/networkrlcd/logs/margin-final-report-2026-10-12.log`.
   Log: `~/.cache/networkrlcd/logs/sealed-peer-watch-2026-10-11.log`.
   Collector PID: `18770`; PID is a point-in-time identifier, not permanent.
   The prior ordinary watcher `ae19ca4a-5b7d-4375-8d24-4d8968ed1513` timed out;

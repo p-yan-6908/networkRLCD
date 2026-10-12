@@ -21,10 +21,14 @@ Device free space rose from roughly 14 GiB to 21 GiB before new upload staging.
 Range is now verified and pruned: **720 matching raw files, 3,972,108,501 logical
 bytes**, at private HF revision `36b82e4045dc8f982930839c8528719ed30447ba`.
 See [the range receipt](docs/storage-receipts/native-range-pilot-v1-20261011-233324.json).
-Ladder archival is resumed after an interrupted partial upload; its originals
-remain. Margin is queued only after its collector exits and matched final reports
-exist. **Ladder and margin backups are not yet claimed complete**; their pinned
-verified receipts will appear under `docs/storage-receipts/`. Live handoff details are in
+Ladder is now verified and pruned: **1,443 matching raw files, 7,916,412,388
+logical bytes**, at private HF revision `f85fc5d2e7e37dd711cc9e95579540bcd4786604`.
+See [the ladder receipt](docs/storage-receipts/native-ladder-pilot-v1-20261012-001122.json).
+Margin finished **192/192 sealed sessions**, with no failed attempts. Its fixed
+final reports are generated and validated against the frozen original plan;
+no models were fitted. **Margin's raw backup is not yet claimed complete**:
+the worker is proceeding only after this report gate, and its pinned verified
+receipt must exist before local raw pruning. Live handoff details are in
 [docs/STORAGE_OPERATIONS_2026-10-11.md](docs/STORAGE_OPERATIONS_2026-10-11.md).
 
 Large active/required working data may live in `~/.cache/networkrlcd/working/` through
