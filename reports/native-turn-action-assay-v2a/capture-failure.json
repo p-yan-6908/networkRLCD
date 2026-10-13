@@ -1,0 +1,23 @@
+{
+  "abi": "native_turn_probe_v2a_capture_failure",
+  "archive_verified": false,
+  "capture_runner_sha256": "f53d916e5531fcc469d39ef48c6c9324ab2cc397743773c77282f78b2a371f59",
+  "capture_status": "unqualified_raw_inventory_symlink_and_socket_gate_failed",
+  "controller_promoted": false,
+  "evidence_exclusion_reason": "The committed capture inventory gate rejects symlinks/special files; this failed run is preserved and excluded rather than weakening that frozen gate.",
+  "failed_inventory_sha256": "3ac5ebcd5e515dd852c3b8935e0c6cf27de54177e19114d9f02316caf059778a",
+  "failure": "The frozen final inventory routine rejected Chromium SingletonCookie symlinks and SingletonSocket Unix sockets in the raw-root TMPDIR after all peers had sealed.",
+  "independent_wire_audit_run": false,
+  "native_outcome_analysis_run": false,
+  "outcome_values_opened": false,
+  "peer_sessions_sealed_by_capture_runner": 64,
+  "raw_bytes_pruned": false,
+  "raw_capture": "/home/agent/.cache/networkrlcd/working/v2a",
+  "raw_capture_modified": false,
+  "real_network_validation": false,
+  "regular_file_count": 323,
+  "regular_file_total_bytes": 668346026,
+  "spec_sha256": "98ce0fed0f04926cdea2530d02d0aba6fb7c8309a1cf4616dfdc7ce0dc90e6dc",
+  "symlink_count": 64,
+  "unix_socket_count": 64
+}

@@ -14,6 +14,7 @@ import random
 import shutil
 import signal
 import subprocess
+import tempfile
 import time
 from pathlib import Path
 
@@ -278,6 +279,14 @@ def _run_collector(command: list[str], log, env: dict[str, str], timeout_s: int 
         raise subprocess.CalledProcessError(returncode, command)
 
 
+def _runtime_tempdir() -> tempfile.TemporaryDirectory:
+    directory = tempfile.TemporaryDirectory(prefix="n2", dir="/tmp")
+    if len(directory.name) > 20:
+        directory.cleanup()
+        raise ValueError("the Chromium runtime temporary path exceeds its socket-safe bound")
+    return directory
+
+
 def capture(spec_path: Path, raw_out: Path, report_out: Path) -> dict:
     project = Path(__file__).resolve().parents[2]
     spec_path, raw_out, report_out = Path(spec_path), Path(raw_out), Path(report_out)
@@ -306,8 +315,7 @@ def capture(spec_path: Path, raw_out: Path, report_out: Path) -> dict:
     raw = Path(runtime_provenance["raw_capture"])
     raw.mkdir(parents=True, exist_ok=False)
     (raw / "spec.json").write_bytes(spec_path.read_bytes())
-    peer_tmp = raw / "peer-tmp"
-    peer_tmp.mkdir(mode=0o700)
+    runtime_tmp = _runtime_tempdir()
 
     child_env = os.environ.copy()
     child_env["RLCD_TURN_BINARY"] = runtime["turn_binary"]["path"]
@@ -315,7 +323,7 @@ def capture(spec_path: Path, raw_out: Path, report_out: Path) -> dict:
     child_env["LD_LIBRARY_PATH"] = runtime["turn_library_dir"] + (
         os.pathsep + inherited_libs if inherited_libs else ""
     )
-    child_env["TMPDIR"] = str(peer_tmp)
+    child_env["TMPDIR"] = runtime_tmp.name
     sessions = []
     collector = project / "benchmarks/native_rtc/turn_probe_v2.mjs"
     try:
@@ -376,6 +384,8 @@ def capture(spec_path: Path, raw_out: Path, report_out: Path) -> dict:
             + "\n"
         )
         raise
+    finally:
+        runtime_tmp.cleanup()
 
     spec_hash = sha(raw / "spec.json")
     holds = [cohort for session in sessions for cohort in session["cohorts"]]

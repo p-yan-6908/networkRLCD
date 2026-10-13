@@ -1,10 +1,16 @@
 import copy
 import random
+from pathlib import Path
 
 import pytest
 
 from media_rl.native_turn_action_panel_v2 import _outcomes
-from media_rl.native_turn_probe_v2 import TRACE_PATTERNS, verify_analysis_spec, verify_trials
+from media_rl.native_turn_probe_v2 import (
+    TRACE_PATTERNS,
+    _runtime_tempdir,
+    verify_analysis_spec,
+    verify_trials,
+)
 
 
 def registered_spec():
@@ -107,3 +113,12 @@ def test_v2_frozen_contrast_model_recovers_constant_proximal_effects():
     assert [row["estimate"] for row in delivery] == pytest.approx([-0.02, 0.04, 0.06])
     assert all(row["degrees_of_freedom"] == 63 for group in results for row in group["contrasts"])
     assert all("p_value_holm_all_six" in row for group in results for row in group["contrasts"])
+
+
+def test_chromium_ephemeral_files_use_a_short_external_runtime_directory():
+    with _runtime_tempdir() as runtime_tmp:
+        path = Path(runtime_tmp)
+        assert path.parent == Path("/tmp")
+        assert path.name.startswith("n2")
+        assert len(str(path)) <= 20
+        assert not path.resolve().is_relative_to(Path.home() / ".cache" / "networkrlcd" / "working")
