@@ -1,0 +1,18 @@
+{
+  "abi": "native_clock_action_v11d_analysis_attempt_failure_v1",
+  "protocol_sha256": "db3d5c8bd440b04c4e28c2d6c196ce946b87dd3ba9d060ef0a9a07bf46db1e50",
+  "capture_index_sha256": "00b17973205196231bdeaf19fdd2e43519112d7f08cbf0c4779e5c797fdac1b5",
+  "clock_transport_gate_sha256": "b85af79677da69d874e22d47faef92a9be35a3136a82468eb039c84754134381",
+  "frozen_analysis_tool": "tools/native_turn_clock_action_probe_v11d.py",
+  "frozen_analysis_tool_sha256": "aa1bdcdff953d2fad3ee4f45d3ffed960333fd0f7d72190d177d4f9831f2e129",
+  "command": "python tools/native_turn_clock_action_probe_v11d.py analyze --root /home/agent/.cache/networkrlcd/native-clock-action-turntcp-v11d --out reports/native-clock-action-turntcp-v11d-analysis.json",
+  "exit_code": 1,
+  "exception": "TypeError",
+  "exact_error": "can't convert type 'NoneType' to numerator/denominator",
+  "failure_location": "statistics.mean(values[cell_id] for cell_id in complete_cells), in aggregation of action interactions",
+  "outcome_data_read": true,
+  "partial_analysis_report_written": false,
+  "capture_gate_passed": true,
+  "response": "Preserve the attempt. Use a separately versioned recovery analyzer that retains all original endpoints and thresholds, excludes unestimable metric cells without imputation, and requires at least 13 estimable primary cells before the directional replication rule can pass.",
+  "controller_fitted_or_promoted": false
+}
