@@ -33,7 +33,9 @@ node_send_ms <= alpha * browser_receive_ms + beta
 
 The feasible set is the full polygon under `0.98 <= alpha <= 1.02`; it is not
 reduced to a fitted point. Fit exchanges with even indices and validate the odd
-indices without adding them to the fit. Calibration passes only if all 60
+indices without adding them to the fit. Allow 0.1 ms for browser timestamp
+quantization and floating-point calculation; this is below the clock resolution
+of the recorder. Calibration passes only if all 60
 held-out exchanges are causally covered by every feasible mapping, the feasible
 set is nonempty, and the maximum held-out mapped-time interval is at most
 50 ms. Failure ends the action study before any outcome capture.

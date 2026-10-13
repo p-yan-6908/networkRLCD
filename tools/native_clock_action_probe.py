@@ -31,6 +31,7 @@ SCHEDULE = [[1.2, "high", 6000], [0.35, "collapse", 6000], [1.2, "recovery", 660
 LEVELS = {"level065": (1, 0.65), "level105": (3, 1.05)}
 ALPHA_BOUNDS = (0.98, 1.02)
 MAX_CLOCK_WIDTH_MS = 50.0
+CLOCK_NUMERIC_TOLERANCE_MS = 0.1
 DEADLINE_MS = 150.0
 HOLD_WINDOW_MS = (1800.0, 2600.0)
 T_CRITICAL = {2: 12.706, 3: 4.303, 4: 3.182, 5: 2.776, 6: 2.571, 7: 2.365}
@@ -119,6 +120,7 @@ def prepare(root: Path) -> dict:
             "marker_count": 120, "interval_ms": 500, "train_indices": "even",
             "held_out_indices": "odd", "alpha_bounds": list(ALPHA_BOUNDS),
             "max_held_out_width_ms": MAX_CLOCK_WIDTH_MS,
+            "timestamp_tolerance_ms": CLOCK_NUMERIC_TOLERANCE_MS,
             "required_held_out_coverage": 1.0,
         },
         "source_hashes": source_inventory(), "schedule": SCHEDULE,
@@ -199,7 +201,8 @@ def feasible_polygon(markers: list[dict]) -> tuple[float, list[tuple[float, floa
                 continue
             alpha = (c1 * b2 - c2 * b1) / det
             beta0 = (a1 * c2 - a2 * c1) / det
-            if all(a * alpha + b * beta0 <= c + 1e-7 for a, b, c in constraints):
+            if all(a * alpha + b * beta0 <= c + CLOCK_NUMERIC_TOLERANCE_MS
+                   for a, b, c in constraints):
                 if not any(abs(alpha - x) < 1e-8 and abs(beta0 - y) < 1e-5 for x, y in vertices):
                     vertices.append((alpha, beta0))
     if len(vertices) >= 3:
@@ -233,8 +236,9 @@ def validate_markers(markers: list[dict], train_indices: list[int], holdout_indi
              origin + (m["node_send_ms"] - beta0) / alpha)
             for alpha, beta0 in vertices
         ]
-        ok = all(m["browser_send_ms"] - 1e-5 <= receive <= send <=
-                 m["browser_receive_ms"] + 1e-5 for receive, send in pointwise)
+        tolerance = CLOCK_NUMERIC_TOLERANCE_MS
+        ok = all(m["browser_send_ms"] - tolerance <= receive <= send <=
+                 m["browser_receive_ms"] + tolerance for receive, send in pointwise)
         covered += int(ok)
         checks.append({"marker_id": m["marker_id"], "covered": ok,
                        "mapped_receive_ms": [rlo, rhi], "mapped_send_ms": [slo, shi],
@@ -304,6 +308,7 @@ def analyze_clock(root: Path) -> dict:
     validation = validate_markers(markers, list(range(0, 120, 2)), list(range(1, 120, 2)))
     validation.update({"abi": "native_clock_marker_calibration_report_v1",
                        "marker_count": len(markers), "alpha_bounds": list(ALPHA_BOUNDS),
+                       "timestamp_tolerance_ms": CLOCK_NUMERIC_TOLERANCE_MS,
                        "max_width_threshold_ms": MAX_CLOCK_WIDTH_MS,
                        "protocol_sha256": sha(root / "protocol.json"),
                        "integrity_manifest_sha256": sha(directory / "integrity.json")})
