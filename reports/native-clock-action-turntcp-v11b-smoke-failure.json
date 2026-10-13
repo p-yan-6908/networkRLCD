@@ -1,0 +1,20 @@
+{
+  "abi": "native_turn_clock_action_v11b_smoke_gate_failure_v1",
+  "action_seed": 20261046,
+  "all_session_file_checksums_verified": true,
+  "capture_process_completed": true,
+  "gate_failure": "NameError: name 'math' is not defined in the sender-only action-assignment verifier.",
+  "main_protocol_sha256": "ffd983a310a1399762226570279d81a8bd525b99160f5437e46060309fc0c0ac",
+  "network_profile_id": "ucc_5g_operator_B-02",
+  "note": "The recorder returned and the session was integrity sealed. The smoke is not qualified because the pre-outcome assignment gate crashed before writing a gate record. No frame quality, per-hold relay cost, or treatment effect was examined.",
+  "outcome_telemetry_opened": false,
+  "pooled_with_V3_V10_V11_V11A_or_V11B_panel": false,
+  "registration_sha256": "19d478d69499c53bf62a2e07e14d86d31d13eee0e33cc0bd59afa47342f87787",
+  "session_file_count": 41,
+  "session_integrity_manifest_sha256": "12a0882d637d5f5f0beb92e7a80a731ab6885b9e6d739eaf521e2760758be377",
+  "session_stage": "native_action_session",
+  "smoke_trial_id": "turntcp11b-smoke-ucc_5g_operator_B",
+  "status": "excluded_commissioning_smoke",
+  "technical_gate_completed": false,
+  "treatment_effects_estimated": false
+}
