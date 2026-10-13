@@ -86,15 +86,14 @@ Those are hypotheses to distinguish, not identified causes of the observed loss.
    Preserve missing counters, distinguish encoder target, actual pre-RTP bytes,
    RTP/header/retransmission bytes and cap readback, and compare causal history
    with matched history-plus-action inputs. Four procedural settings are too few
-   for action-value qualification or generalization. Freeze a prospective V2
-   study before collecting a broader panel, vary previously unseen network
-   mechanisms/content, and match requested **and actual encoded-rate** trajectories.
-   The V1 action diagnostic narrows the immediate question: the assigned cap moves
-   payload, but delivery response remains unresolved. Any next local panel must
-   remain factual and development-only on its single-host TURN/TCP path; new
-   capacity traces do not establish unseen physical-network generalization.
-   In parallel, the targeted pinned restore below remains the route to original
-   UDP/licensed-video history; do not equate TURN dynamics with that transport.
+   for action-value qualification or generalization. The registered
+   [V2 action assay](NATIVE_TURN_ACTION_ASSAY_V2.md) now prospectively crosses
+   eight new scene seeds with four capacity-trace shapes to repeat the factual
+   proximal action test; it does not vary the physical network mechanism. Its
+   outcome remains to be collected and replayed. New capacity traces on the same
+   host do not establish unseen-network-family generalization. The targeted
+   pinned restore below remains the route to the archived UDP/licensed-video
+   history; do not equate TURN dynamics with that transport.
 2. Diagnose the memory rule using a separate, prospectively specified native
    factorial comparison with matched startup, memory enabled/disabled, and repeated
    identical-policy peers. Randomise whole sessions: short crossover blocks have

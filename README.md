@@ -355,6 +355,13 @@ validation. The protocol, full summary replay, code and provenance are in
 [the action diagnostic](docs/NATIVE_TURN_ACTION_DIAGNOSTIC_V1.md) and
 reports/native-turn-action-diagnostic-v1/.
 
+The next native action assay is prospectively registered across 64 peers, eight
+new procedural scenes and four capacity-trace shapes. It repeats the factual
+proximal question with raw inventory and complete wire replay gates; these trace
+settings still use one local TURN/TCP network path and cannot qualify a controller
+or establish unseen-family generalization. See
+[the V2 assay protocol](docs/NATIVE_TURN_ACTION_ASSAY_V2.md).
+
 ## Interpretation boundaries
 
 A probability of 0.9 means an **estimated next-step constraint-satisfaction probability**, not 90% confidence in optimality or a guarantee of long-horizon safety. Calibration on ID data need not transfer to OOD conditions or the gate-induced state distribution. A conservative fallback cannot repair an outage or create bandwidth. Report all baselines and negative findings; do not assume calibrated RL beats GCC-like control. Synthetic QoE is not MOS/VMAF, latency is a fluid virtual-delay proxy, and FEC is not a codec implementation. Real WebRTC, packet-level emulation, real traces, multi-flow fairness and human perceptual validation are future work.
