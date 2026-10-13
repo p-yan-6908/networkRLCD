@@ -325,3 +325,21 @@ requested cap against native readback, and retain the actual-run clock and
 queue gates. V7's scripted phase names cannot be used as controller inputs.
 No controller should be fitted or promoted unless independent factual evidence
 establishes conditional value over that strong baseline.
+
+The V8 follow-up completed that direct policy check on twelve fresh seeds.
+All 48 sessions passed integrity, queue replay, TURN/TCP transport, and actual
+sender/relay clock checks; every BWE selector decision replayed from its saved
+sender input and matched native readback. The existing 0.85-BWE headroom policy
+used fewer relay bytes than fixed 0.65, but its overall on-time contrast was
+−0.30 pp [−10.25, +9.66] and its sampled PSNR contrast was −0.687 dB
+[−1.465, +0.090]. The collapse-minus-high on-time interaction remained
+positive at +34.8 pp [+18.3, +51.4], while queue drops were zero. This does not
+establish aggregate policy gain or justify fitting/promoting a controller.
+See the [V8 result note](NATIVE_CLOCK_ACTION_TURN_TCP_V8_RESULTS.md); V3–V7
+and the prior evidence remain unchanged and unpooled.
+
+The next informative native experiment is a fresh micro-randomized 0.65/1.05
+comparison within a preregistered pre-action sender-BWE split at 500 kbps.
+That estimates action-by-observed-state effects directly; it is a causal
+measurement, not a fitted policy. A separate whole-session comparison against
+fixed 0.65 remains necessary for any policy-gain claim.
