@@ -1,0 +1,898 @@
+{
+  "abi": "native_clock_action_probe_v8_turn_tcp_protocol",
+  "analysis": {
+    "action_validation": "replay every BWE assignment from its saved pre-action sender observation; every requested cap must match the proposal and native readback",
+    "clock_assignment": "only estimate relay joins when all feasible affine maps cover every held-out marker",
+    "confidence": 0.95,
+    "degrees_of_freedom": 11,
+    "do_not_pool": [
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "archived native sessions",
+      "recorded-video captures",
+      "simulator/synthetic-controller evidence"
+    ],
+    "fit_or_promote_controller": false,
+    "primary_contrast": "native BWE headroom 0.85 minus fixed BWE ratio 0.65",
+    "primary_endpoint": "six-window on-time receiver-frame fraction",
+    "secondary_endpoints": [
+      "per-state on-time fraction",
+      "sampled RGB PSNR on on-time frames",
+      "guaranteed/possible relay offered wire bytes",
+      "queue drops"
+    ],
+    "unit": "generated-scene seed cluster"
+  },
+  "balanced_within_block_order": true,
+  "calibration": {
+    "alpha_bounds": [
+      0.98,
+      1.02
+    ],
+    "held_out_indices": [
+      2,
+      5,
+      8,
+      10
+    ],
+    "held_out_timestamp_tolerance_ms": 1.0,
+    "max_held_out_width_ms": 50.0,
+    "required_held_out_coverage": 1.0,
+    "session_marker_count": 12,
+    "solver_tolerance_ms": 1e-07,
+    "train_indices": [
+      0,
+      1,
+      3,
+      4,
+      6,
+      7,
+      9,
+      11
+    ]
+  },
+  "clock_calibration_reference": {
+    "alpha_feasible": [
+      0.9999546003609853,
+      1.0000401842261328
+    ],
+    "coverage": 1.0,
+    "held_out_covered": 60,
+    "integrity_manifest_sha256": "e103234d399a6d1b85d461ec8b908ef8bdec141204a76949fc276a057a6bb7ab",
+    "marker_count": 120,
+    "max_held_out_width_ms": 2.642349057176034,
+    "protocol_sha256": "9c09468dda2d6126dcb551fe14762c7d64de722c2b03d04430e657ad8b0a3f1f",
+    "qualified": true,
+    "report_sha256": "27946a8b2a312ab30ddbf6dbfefadc419f1e010cd32fe66f7f491fec09711dbf",
+    "root": "/home/agent/.cache/networkrlcd/native-clock-action-probe-v1-final3"
+  },
+  "conditions": {
+    "bwe085": {
+      "behavior": "headroom85",
+      "controller": "bwe",
+      "level": null,
+      "policy": "native-bwe-headroom-0.85"
+    },
+    "fixed065": {
+      "behavior": "level",
+      "controller": "explore",
+      "level": 1,
+      "policy": "fixed-bwe-ratio-0.65"
+    }
+  },
+  "confirmatory": false,
+  "preflight_reference": {
+    "bidirectional_video_frames": [
+      39,
+      40
+    ],
+    "passed": true,
+    "path": "/home/agent/.cache/networkrlcd/native-turn-tcp-queue-preflight-v2.json",
+    "policy_sha256": "10ee54ed22fc23337096004f8248d6ea977f059149386e0f9e70c4b77d9db6b5",
+    "queue_forwarded_packets": [
+      113,
+      114
+    ],
+    "sha256": "a45a8e2a9fec3303a8c09afb8d44896b8b642692fbc43a37d9917e768c345061",
+    "source_sha256": "74306c30a373430acaa9a37b9486fe83632624454df002c3661513cf67b34874",
+    "turn_candidates": [
+      1,
+      1
+    ]
+  },
+  "prior_frozen_studies": {
+    "turn_v2": {
+      "attempted_sessions": 32,
+      "capture_index_sha256": "f54a6cd6a5d042bbeb14eb7b3e6e51c6f84fdeaa65e6d912be18e68aee830414",
+      "failure_class": "selected local peer-reflexive classification rejected after TURN-backed ICE connection",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "31b220e8904be3e900ebe6c21a5a0f4550e56db927fe223fee95a3a041f10beb"
+    },
+    "turn_v3": {
+      "attempted_sessions": 32,
+      "capture_index_sha256": "2fac8af41adcc378b63951f3e84b30919462abda5a28c779aa6ca120d96257d8",
+      "clock_failed_trials": [
+        "turntcp3-scene01-rep1-r065",
+        "turntcp3-scene00-rep1-r065",
+        "turntcp3-scene01-rep0-r065"
+      ],
+      "clock_valid_sessions": 29,
+      "diagnostic_sha256": "bce4517a5e6003516b01168eeb15c486e934acdd867185c2dcc26001e4b477e4",
+      "failed_sessions": 32,
+      "failure_class": "phase-snapshot guard read an unrecorded remote_candidate_type field after the registered session schedule",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "a599601b5182ca4e3de24ec3a93cd422f0afba11c7de613d7196433f2affd4d6"
+    },
+    "turn_v4": {
+      "capture_index_sha256": "78221a758a856f05de66a49cd07bad9d38f9a5e35ae33f6f54fb29c513f0798a",
+      "clock_qualified_sessions": 29,
+      "diagnostic_sha256": "390bfb7fc961e7df30708e2a3b8cac123a71ad5067c815935f3895b820cf8ad5",
+      "failure_class": "three sessions missed held-out clock coverage; eight sessions violated V4's registered zero-overflow queue rule",
+      "gate_sha256": "059933b7f0c1b37121b77adb2cf9358548c0cead861c569107a63a17e6e0abb0",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "1937b2a88ca08f1a7d25382a09aacab36c80c28bcac79404add1f5346b739a2c",
+      "sealed_sessions": 32,
+      "transport_qualified_sessions": 24
+    },
+    "turn_v5": {
+      "capture_index_sha256": "1b2f6c59d369131ef9625c5be6c5546370bdfc274d2f3d326f4e175591223143",
+      "clock_qualified_sessions": 30,
+      "diagnostic_sha256": "05eae9136a0b19617847c030289eaa156639d04d35088c73f88c48949842ade0",
+      "failed_trials": [
+        "turntcp5-scene00-rep0-r065",
+        "turntcp5-scene04-rep0-r105"
+      ],
+      "failure_class": "two sessions missed held-out coverage at the initial high-phase marker m0002",
+      "gate_sha256": "632494e98c4c2906e61ec36b0a09f64ba363e3d85381490f4160033bec21e6b8",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "394ae78949257e5ffb6f38a0802970c201e8b869bbb5a854dd505ea5bde9f7cb",
+      "sealed_sessions": 32,
+      "transport_qualified_sessions": 32
+    },
+    "turn_v6": {
+      "capture_index_sha256": "acafe0778cd9c0d67e1c7efa42c26036a6476ae60121d880105093230dbc46bb",
+      "clock_qualified_sessions": 11,
+      "diagnostic_sha256": "eb9917acc4d83c892789cdd17fcbb02e2947583f97f4798d404ce52d8f361269",
+      "failed_marker_counts": {
+        "m0003": 2,
+        "m0011": 21
+      },
+      "failure_class": "21 sessions missed final held-out marker m0011 and two also missed m0003",
+      "gate_sha256": "09ed6e6dd17b0aec769f358e791cb341d7e976d447d8d43b08acc609720715f9",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "d1edb0aca40e9e54ed2f5371671f950d6644df954151ca7e6ed71da79ef99648",
+      "sealed_sessions": 32,
+      "transport_qualified_sessions": 32
+    },
+    "turn_v7": {
+      "analysis_sha256": "3e78b850e351f8f34fea6afb244376931e4cffd7c50bdf9c8ec8b3743e5c725c",
+      "capture_index_sha256": "8bbcc5de8b6d7e2f79dffb2abb07d85418a54dc8867deb2e865658cc9683f037",
+      "clock_and_transport_passed": true,
+      "clock_transport_gate_sha256": "48af59918b64103ec050f9ada709b94f8f813ca671d617ea64dbfa856e38aa9b",
+      "pooled": false,
+      "protocol_sha256": "2eeaf29d04fdfdd63de57132bbec8308957a330180f3f9beeb6b123a1e75b85e",
+      "sessions": 32
+    }
+  },
+  "prior_no_candidate_action_capture_reference": {
+    "attempted_sessions": 32,
+    "capture_index_sha256": "f844c2500df1de885466fcef8bef69c300ce99ef9b36b7eac09cf6c397778f1b",
+    "failed_sessions": 32,
+    "failure_class": "managed WebRtcIPHandling disabled non-proxied UDP; no ICE candidates; no treatment outcomes",
+    "outcomes_read": false,
+    "pooled": false,
+    "protocol_sha256": "9c09468dda2d6126dcb551fe14762c7d64de722c2b03d04430e657ad8b0a3f1f",
+    "root": "/home/agent/.cache/networkrlcd/native-clock-action-probe-v1-final3"
+  },
+  "question": "Does the existing sender-only 0.85-BWE headroom rule improve delivery or relay cost over fixed 0.65 on fresh generated-scene seeds?",
+  "randomization_seed": 20261019,
+  "randomized_order": [
+    "turntcp8-scene7010-rep1-fixed065",
+    "turntcp8-scene7010-rep1-bwe085",
+    "turntcp8-scene7007-rep0-fixed065",
+    "turntcp8-scene7007-rep0-bwe085",
+    "turntcp8-scene7000-rep1-fixed065",
+    "turntcp8-scene7000-rep1-bwe085",
+    "turntcp8-scene7010-rep0-fixed065",
+    "turntcp8-scene7010-rep0-bwe085",
+    "turntcp8-scene7006-rep0-fixed065",
+    "turntcp8-scene7006-rep0-bwe085",
+    "turntcp8-scene7006-rep1-bwe085",
+    "turntcp8-scene7006-rep1-fixed065",
+    "turntcp8-scene7011-rep0-bwe085",
+    "turntcp8-scene7011-rep0-fixed065",
+    "turntcp8-scene7011-rep1-fixed065",
+    "turntcp8-scene7011-rep1-bwe085",
+    "turntcp8-scene7003-rep1-fixed065",
+    "turntcp8-scene7003-rep1-bwe085",
+    "turntcp8-scene7002-rep0-bwe085",
+    "turntcp8-scene7002-rep0-fixed065",
+    "turntcp8-scene7008-rep0-bwe085",
+    "turntcp8-scene7008-rep0-fixed065",
+    "turntcp8-scene7005-rep1-bwe085",
+    "turntcp8-scene7005-rep1-fixed065",
+    "turntcp8-scene7009-rep1-bwe085",
+    "turntcp8-scene7009-rep1-fixed065",
+    "turntcp8-scene7001-rep0-bwe085",
+    "turntcp8-scene7001-rep0-fixed065",
+    "turntcp8-scene7002-rep1-fixed065",
+    "turntcp8-scene7002-rep1-bwe085",
+    "turntcp8-scene7000-rep0-fixed065",
+    "turntcp8-scene7000-rep0-bwe085",
+    "turntcp8-scene7004-rep0-bwe085",
+    "turntcp8-scene7004-rep0-fixed065",
+    "turntcp8-scene7004-rep1-fixed065",
+    "turntcp8-scene7004-rep1-bwe085",
+    "turntcp8-scene7008-rep1-bwe085",
+    "turntcp8-scene7008-rep1-fixed065",
+    "turntcp8-scene7007-rep1-fixed065",
+    "turntcp8-scene7007-rep1-bwe085",
+    "turntcp8-scene7003-rep0-bwe085",
+    "turntcp8-scene7003-rep0-fixed065",
+    "turntcp8-scene7001-rep1-bwe085",
+    "turntcp8-scene7001-rep1-fixed065",
+    "turntcp8-scene7005-rep0-fixed065",
+    "turntcp8-scene7005-rep0-bwe085",
+    "turntcp8-scene7009-rep0-bwe085",
+    "turntcp8-scene7009-rep0-fixed065"
+  ],
+  "repetitions_per_policy_per_seed": 2,
+  "runtime": {
+    "chromium_binary_path": "/usr/bin/chromium",
+    "chromium_sha256": "2c8d32d29dc6781c35ae196ea83299d507ac88fc339301abe74672feda299779",
+    "chromium_version": "Chrome/154.0.8037.57",
+    "coturn_binary_path": "/home/agent/.cache/networkrlcd/turn-runtime/extracted/usr/bin/turnserver",
+    "coturn_binary_sha256": "6de6c80134271abd2c51cbadac1e2bb973ac89b5491b0a2ae480148d66a37162",
+    "coturn_library_dir": "/home/agent/.cache/networkrlcd/turn-runtime/extracted/usr/lib/x86_64-linux-gnu",
+    "coturn_library_sha256": {
+      "libevent_extra-2.1.so.7": "0da7f591283f063939323d9dc3370dc9e53559c6b2c43c28c18159bb8f656daf",
+      "libevent_openssl-2.1.so.7": "2ec9f0a63b5af4df80b7155611794246ebe9932ded259bbba873bfc9da98d5f9",
+      "libhiredis.so.1.1.0": "adfb8e6f9d2d430d5d577f85626490769fb69ef41a6967fba611b5a16b09ab15"
+    },
+    "coturn_package_path": "/home/agent/.cache/networkrlcd/turn-runtime/coturn_4.6.1-2_amd64.deb",
+    "coturn_package_sha256": "cb55194d0118d26035aa39aa7306fd810a47069643266724357e8da2a22612e0",
+    "coturn_version": "4.6.1",
+    "managed_policy_path": "/etc/chromium/policies/managed/misc.json",
+    "managed_policy_sha256": "10ee54ed22fc23337096004f8248d6ea977f059149386e0f9e70c4b77d9db6b5",
+    "managed_policy_value": "disable_non_proxied_udp",
+    "network_policy": "TURN control TCP and relay/queue UDP are loopback-only"
+  },
+  "scene_seeds": [
+    7000,
+    7001,
+    7002,
+    7003,
+    7004,
+    7005,
+    7006,
+    7007,
+    7008,
+    7009,
+    7010,
+    7011
+  ],
+  "schedule": [
+    [
+      1.2,
+      "high",
+      6000
+    ],
+    [
+      0.35,
+      "collapse",
+      6000
+    ],
+    [
+      1.2,
+      "recovery",
+      6600
+    ]
+  ],
+  "seed_clusters": {
+    "count": 12,
+    "ids": [
+      7000,
+      7001,
+      7002,
+      7003,
+      7004,
+      7005,
+      7006,
+      7007,
+      7008,
+      7009,
+      7010,
+      7011
+    ]
+  },
+  "source_hashes": {
+    "actuator_control.mjs": "5c36a21ef103f897c78fa28a9d97f663d83475117e3bdacfb78e5ec5b2f32f30",
+    "actuator_meter.mjs": "bf11d22cf17297fc33e63c6e2c99b6e8b7af1946b5541a73a63197aac996c533",
+    "analysis_tool": "2a4de4c6ab057a6c04d1f98988cc1b03dac786aa1b6e56c7f7daa1f65696de28",
+    "bwe_cap_controller.mjs": "a61fe6971afface7ae176ad770ff90378d30282bd893a27ac34752f5d10055b6",
+    "clock_action_turn_tcp_episode_v8.mjs": "87bd86b80d93a9a036063c7d5a98dfd4fc211e8bdd700733f557c22a02b57738",
+    "clock_marker_calibrate_v1.mjs": "0669750d5dffb34f096b2f3cb62f848c649edab8a0dfbcd082abb8b608bc468a",
+    "dense_actuation.mjs": "b06b419dd7cd896b21f191ba6cd2f6258e0d1a8a04d053ade1107b357a276a67",
+    "dense_control.mjs": "80d595d986e3c6c7df482b3e5df8cd18920cf5679b9b5644656aee3d647a7ef0",
+    "encoder_response.mjs": "3dc0a73ecca6fd992d6b46964620b7f6026ed040fee96074ddda0721e074a9a9",
+    "excitation_control.mjs": "66d705194e85ea264af9128f32834cfd42c48863e4a7595ce8f94565f7aea246",
+    "fixed_encoder5.mjs": "ce7c02e615ebbe21af9ab66c6ad8fd69af87ca50db4ac8b312fde7f71467dd2c",
+    "frame_marker.mjs": "4aeee008fc9f8dd9e9cc14feaaf54ae82ef3a5fd8cf04eedd086114caf8ec144",
+    "frozen_range_episode_parent": "23b1f9c395adc9662b895ccba12cda1a78600fdd1adddf456dc72c953a29d75e",
+    "native_actuation.mjs": "5369c8ae4e9e9a8b3c6ce293429ad18db2bfd4e1f56037032cc1c7178fd4ad0e",
+    "native_bwe_hold_control.mjs": "c555b667354eebb0260fd85829025e5f850706fab63acf179753707089e9a246",
+    "native_policy.mjs": "9f91b8afef2f6bff88254937c337628fcea90c175017be1722200b6ff062ec02",
+    "plan_document": "96c421eb429e6ea7d88d9b63bc8e9f0c469b387356d4c83e032a65abc4168e9a",
+    "range_control.mjs": "8e32843054b96827fc5504a1331e479fce76755d48c140d3eee438bd1d34f265",
+    "recorded_video.mjs": "3b7046877d0a4e3c29f19bd9aa67204965b35632c39f9fd63c8bea7003aa9e37",
+    "repair3_policy.mjs": "11695528b8d46169b80242d73d888870dc150101305873f6f6a6c794368ff6ea",
+    "repair5_policy.mjs": "555aa1120f742b45b34e50cdb2448fec929d433304ef09f002c5e03c3a09dc60",
+    "sender_observation.mjs": "2ffacd833560a900b9a2d6332813d522587c2db166434741ac2571486171e850",
+    "source_quality.mjs": "64bd696fb75e4a5b6d0412f3c9d5f1fb383f88b586db3b7d04eaa3ada7520b66",
+    "streamed_actuator_video.mjs": "9e82905b7bd16f9cf7896e90cb6c05f124cd52753525af209875e674f70308d7",
+    "streamed_video.mjs": "721d507eb48028ad345fed7e9276c7d8f5141189658588bb5d8569375ede4543",
+    "streamed_video5.mjs": "87ea4f463b07cb6281191ab29a2a161d4a981a6ba9ae60c8de4fbf02f13fdb8f",
+    "turntcp_v7_registered_protocol": "2eeaf29d04fdfdd63de57132bbec8308957a330180f3f9beeb6b123a1e75b85e",
+    "turntcp_v7_result_report": "3e78b850e351f8f34fea6afb244376931e4cffd7c50bdf9c8ec8b3743e5c725c",
+    "turntcp_v8_bwe_hold_module": "c555b667354eebb0260fd85829025e5f850706fab63acf179753707089e9a246",
+    "turntcp_v8_plan_document": "61e34da71c02d954319cb987480d3f1895c13d484109e86558b1e5877cb035e8",
+    "turntcp_v8_wrapper": "a1dba5611523ac0f9890850b8498f78adbf458520ad820ed4614387a4dfc929c"
+  },
+  "storage": {
+    "analysis_output": "reports/native-clock-action-turntcp-v8-analysis.json",
+    "raw_capture_root": "/home/agent/.cache/networkrlcd/native-clock-action-turntcp-v8",
+    "raw_data_outside_git": true,
+    "registered_protocol": "configs/native_clock_action_probe_turn_tcp_v8.json"
+  },
+  "transport": {
+    "browser_ice_transport_policy": "relay",
+    "browser_to_turn_transport": "TCP",
+    "candidate_gathering_acceptance": "Both peers complete gathering with only loopback relay candidates using relayProtocol=tcp and zero candidate errors.",
+    "managed_WebRtcIPHandling": "disable_non_proxied_udp",
+    "managed_policy_change": false,
+    "media_acceptance": "Each scheduled phase has more than ten encoded and decoded frames and finite mean encode time.",
+    "queue_acceptance": "Both directions forward at least 100 packets from matching TURN allocation ports, no unexpected sources or send errors; packet and byte replay exactly matches offer/drop/service/forward ledgers; capacity and conservation checks pass.",
+    "queue_and_propagation_mechanism_unchanged": true,
+    "selected_pair_acceptance": "Both pairs are nominated/succeeded and use TURN relay candidates over loopback with relayProtocol=tcp.",
+    "turn_relay_transport": "UDP",
+    "turn_uri_scheme": "turn:"
+  },
+  "trials": [
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7010-rep1-fixed065",
+      "order_position": 0,
+      "panel": "panels/turntcp8-scene7010-rep1-fixed065.json",
+      "panel_sha256": "5c9c9fb598970eed1239fbb5299f478f5ce60ebb5217cb4ca50711508a154cc6",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 1,
+      "scene_seed": 7010,
+      "seed_cluster": 7010
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7010-rep1-bwe085",
+      "order_position": 1,
+      "panel": "panels/turntcp8-scene7010-rep1-bwe085.json",
+      "panel_sha256": "cd524e895d2b70a24b6ec5435410107e5c00fc3dca5b300a8d46232d367facec",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 1,
+      "scene_seed": 7010,
+      "seed_cluster": 7010
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7007-rep0-fixed065",
+      "order_position": 2,
+      "panel": "panels/turntcp8-scene7007-rep0-fixed065.json",
+      "panel_sha256": "d97f1fb5d7e2b2c06ac155b8515a735f5c7bae9207a5cdc00048fa14678d62ea",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 0,
+      "scene_seed": 7007,
+      "seed_cluster": 7007
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7007-rep0-bwe085",
+      "order_position": 3,
+      "panel": "panels/turntcp8-scene7007-rep0-bwe085.json",
+      "panel_sha256": "cf3b7a1e8a48fa7ab3db57f83ad8af004cd1dfa417503a9c8ad146aac2c000fc",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 0,
+      "scene_seed": 7007,
+      "seed_cluster": 7007
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7000-rep1-fixed065",
+      "order_position": 4,
+      "panel": "panels/turntcp8-scene7000-rep1-fixed065.json",
+      "panel_sha256": "7e736df2d069418e007f266fa7dd4a3f4742e03db9188a013873cb5367619554",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 1,
+      "scene_seed": 7000,
+      "seed_cluster": 7000
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7000-rep1-bwe085",
+      "order_position": 5,
+      "panel": "panels/turntcp8-scene7000-rep1-bwe085.json",
+      "panel_sha256": "1de18922ae9dd3333c64da42ec81b31f729e0f0098c140dd69cba5bd1ae7df70",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 1,
+      "scene_seed": 7000,
+      "seed_cluster": 7000
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7010-rep0-fixed065",
+      "order_position": 6,
+      "panel": "panels/turntcp8-scene7010-rep0-fixed065.json",
+      "panel_sha256": "f523268db22dbda3fb2a7e5fcadf45d216863776c0765a527748363def31e431",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 0,
+      "scene_seed": 7010,
+      "seed_cluster": 7010
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7010-rep0-bwe085",
+      "order_position": 7,
+      "panel": "panels/turntcp8-scene7010-rep0-bwe085.json",
+      "panel_sha256": "bc4be91141e1686329cc2a10efba9f45f40456bb5d84e4c86aabbcb54f95db6e",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 0,
+      "scene_seed": 7010,
+      "seed_cluster": 7010
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7006-rep0-fixed065",
+      "order_position": 8,
+      "panel": "panels/turntcp8-scene7006-rep0-fixed065.json",
+      "panel_sha256": "63bc4ed8256aea110c7ce53ff0ae3ed28bc4a478f8ebc12dc9e4ce87229a1d46",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 0,
+      "scene_seed": 7006,
+      "seed_cluster": 7006
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7006-rep0-bwe085",
+      "order_position": 9,
+      "panel": "panels/turntcp8-scene7006-rep0-bwe085.json",
+      "panel_sha256": "b91cdaea515a76cb7166daf16449649c603219d1fc04895a68d1a492e513af91",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 0,
+      "scene_seed": 7006,
+      "seed_cluster": 7006
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7006-rep1-bwe085",
+      "order_position": 10,
+      "panel": "panels/turntcp8-scene7006-rep1-bwe085.json",
+      "panel_sha256": "cc84488fff7f9a1bc68a04cd14efa6ca830396327a16834c4ead1e338d7ccd4f",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 1,
+      "scene_seed": 7006,
+      "seed_cluster": 7006
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7006-rep1-fixed065",
+      "order_position": 11,
+      "panel": "panels/turntcp8-scene7006-rep1-fixed065.json",
+      "panel_sha256": "d40e4dbe7e760d9288370cc9e251136d4e112e4ebc715f69b4f6505536a7fb5e",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 1,
+      "scene_seed": 7006,
+      "seed_cluster": 7006
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7011-rep0-bwe085",
+      "order_position": 12,
+      "panel": "panels/turntcp8-scene7011-rep0-bwe085.json",
+      "panel_sha256": "138a249d15686acffdeec18bbfff161723ea8536eaaf52f9f0351e5c596cc354",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 0,
+      "scene_seed": 7011,
+      "seed_cluster": 7011
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7011-rep0-fixed065",
+      "order_position": 13,
+      "panel": "panels/turntcp8-scene7011-rep0-fixed065.json",
+      "panel_sha256": "786786b8cd49ff48479c7cc824af0f31cbbb866091d9c229a223ea25d435f27b",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 0,
+      "scene_seed": 7011,
+      "seed_cluster": 7011
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7011-rep1-fixed065",
+      "order_position": 14,
+      "panel": "panels/turntcp8-scene7011-rep1-fixed065.json",
+      "panel_sha256": "c34293f00fef46441a07eb0d3f86e726ad0489744b21d752fb8be5b63a766a29",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 1,
+      "scene_seed": 7011,
+      "seed_cluster": 7011
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7011-rep1-bwe085",
+      "order_position": 15,
+      "panel": "panels/turntcp8-scene7011-rep1-bwe085.json",
+      "panel_sha256": "d6a642f2a81c53e32cd5e52715d132f329f5452dbfe936c0d4c82ff46d08f434",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 1,
+      "scene_seed": 7011,
+      "seed_cluster": 7011
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7003-rep1-fixed065",
+      "order_position": 16,
+      "panel": "panels/turntcp8-scene7003-rep1-fixed065.json",
+      "panel_sha256": "05f827cf826d0dca759e7aed454f3410a37be4896840bf6d8b1ee87e7b159f37",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 1,
+      "scene_seed": 7003,
+      "seed_cluster": 7003
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7003-rep1-bwe085",
+      "order_position": 17,
+      "panel": "panels/turntcp8-scene7003-rep1-bwe085.json",
+      "panel_sha256": "111fdd50ba9d4602b2080ff68404b1b8ef500b787b769a694caa1ab0ee0678e2",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 1,
+      "scene_seed": 7003,
+      "seed_cluster": 7003
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7002-rep0-bwe085",
+      "order_position": 18,
+      "panel": "panels/turntcp8-scene7002-rep0-bwe085.json",
+      "panel_sha256": "35d95f57a9ace12cebf1e6c4777aadb70f433fbc27f887b3023d89fe9c98627c",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 0,
+      "scene_seed": 7002,
+      "seed_cluster": 7002
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7002-rep0-fixed065",
+      "order_position": 19,
+      "panel": "panels/turntcp8-scene7002-rep0-fixed065.json",
+      "panel_sha256": "ab24bcd90e7ecf2af90109049deada4c505275a56894fa66349e55fa73616400",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 0,
+      "scene_seed": 7002,
+      "seed_cluster": 7002
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7008-rep0-bwe085",
+      "order_position": 20,
+      "panel": "panels/turntcp8-scene7008-rep0-bwe085.json",
+      "panel_sha256": "de5837a6b416fcc5d2b2faa7dd80f70e9264a8c912c6716b686736b32c3af112",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 0,
+      "scene_seed": 7008,
+      "seed_cluster": 7008
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7008-rep0-fixed065",
+      "order_position": 21,
+      "panel": "panels/turntcp8-scene7008-rep0-fixed065.json",
+      "panel_sha256": "cb811e947ad0ebba20c6604bea46d16db2eadc86777bc488a7987bf922b813a7",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 0,
+      "scene_seed": 7008,
+      "seed_cluster": 7008
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7005-rep1-bwe085",
+      "order_position": 22,
+      "panel": "panels/turntcp8-scene7005-rep1-bwe085.json",
+      "panel_sha256": "9c16cac503b31f438905d31f7587accc8e692299e60d3c1904ae54c6f5355f86",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 1,
+      "scene_seed": 7005,
+      "seed_cluster": 7005
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7005-rep1-fixed065",
+      "order_position": 23,
+      "panel": "panels/turntcp8-scene7005-rep1-fixed065.json",
+      "panel_sha256": "01b977440f1398b710f58d91d303594723359e73b843495bb4c835397ace21ca",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 1,
+      "scene_seed": 7005,
+      "seed_cluster": 7005
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7009-rep1-bwe085",
+      "order_position": 24,
+      "panel": "panels/turntcp8-scene7009-rep1-bwe085.json",
+      "panel_sha256": "ecf7f798a7bd076a775a968489983392fecf2b1d65e103f8f6862432e3e6122c",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 1,
+      "scene_seed": 7009,
+      "seed_cluster": 7009
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7009-rep1-fixed065",
+      "order_position": 25,
+      "panel": "panels/turntcp8-scene7009-rep1-fixed065.json",
+      "panel_sha256": "c693c4674619f383584a8c4f2bd0229a688861ba046ffe7096bf5045a7723210",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 1,
+      "scene_seed": 7009,
+      "seed_cluster": 7009
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7001-rep0-bwe085",
+      "order_position": 26,
+      "panel": "panels/turntcp8-scene7001-rep0-bwe085.json",
+      "panel_sha256": "12f69c6671ac0188a2d9e961f545e60402c7c37a1354486bbda375128ce57645",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 0,
+      "scene_seed": 7001,
+      "seed_cluster": 7001
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7001-rep0-fixed065",
+      "order_position": 27,
+      "panel": "panels/turntcp8-scene7001-rep0-fixed065.json",
+      "panel_sha256": "12852e59644d24445efd7761b025775518a705ec1065ea8c15a4392330b76925",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 0,
+      "scene_seed": 7001,
+      "seed_cluster": 7001
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7002-rep1-fixed065",
+      "order_position": 28,
+      "panel": "panels/turntcp8-scene7002-rep1-fixed065.json",
+      "panel_sha256": "b0e87318209127c2fee465d4dbff913765b4038cd5fbfd76ed1fc019a3c02e60",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 1,
+      "scene_seed": 7002,
+      "seed_cluster": 7002
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7002-rep1-bwe085",
+      "order_position": 29,
+      "panel": "panels/turntcp8-scene7002-rep1-bwe085.json",
+      "panel_sha256": "52a878d833bfbc6ee6085127d466e1e8d9ae4b158853d928fd44bd00df05e33e",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 1,
+      "scene_seed": 7002,
+      "seed_cluster": 7002
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7000-rep0-fixed065",
+      "order_position": 30,
+      "panel": "panels/turntcp8-scene7000-rep0-fixed065.json",
+      "panel_sha256": "ccd988f617a84a5506c0adff297fc21230ea8b453290c3a261ce6fab4bd735cb",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 0,
+      "scene_seed": 7000,
+      "seed_cluster": 7000
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7000-rep0-bwe085",
+      "order_position": 31,
+      "panel": "panels/turntcp8-scene7000-rep0-bwe085.json",
+      "panel_sha256": "2efb7ed3c33af352e3b95e72c022b3014be96e8f45304f73269f376ece2ec4ea",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 0,
+      "scene_seed": 7000,
+      "seed_cluster": 7000
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7004-rep0-bwe085",
+      "order_position": 32,
+      "panel": "panels/turntcp8-scene7004-rep0-bwe085.json",
+      "panel_sha256": "e6b722711b30b0ffe8157291e71343470d506bd9c358ebc471d30feb3e4aeb20",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 0,
+      "scene_seed": 7004,
+      "seed_cluster": 7004
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7004-rep0-fixed065",
+      "order_position": 33,
+      "panel": "panels/turntcp8-scene7004-rep0-fixed065.json",
+      "panel_sha256": "735112ea3d30f68ccaa7eec2096361703030be545e78392c4e7c356353e99dac",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 0,
+      "scene_seed": 7004,
+      "seed_cluster": 7004
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7004-rep1-fixed065",
+      "order_position": 34,
+      "panel": "panels/turntcp8-scene7004-rep1-fixed065.json",
+      "panel_sha256": "311f5503da4855020df9650e21adaefdb935544949bb7a40540d10b6b2b7f40b",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 1,
+      "scene_seed": 7004,
+      "seed_cluster": 7004
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7004-rep1-bwe085",
+      "order_position": 35,
+      "panel": "panels/turntcp8-scene7004-rep1-bwe085.json",
+      "panel_sha256": "9f3b8f931927db6751d0d8a3a15422e9f9fc36fdfa8a1b9515e016071b408233",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 1,
+      "scene_seed": 7004,
+      "seed_cluster": 7004
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7008-rep1-bwe085",
+      "order_position": 36,
+      "panel": "panels/turntcp8-scene7008-rep1-bwe085.json",
+      "panel_sha256": "2aa00fcc582fc0e2e8061496c56d9ed5c0b6bed5c8d2804647ce508f4959cc0a",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 1,
+      "scene_seed": 7008,
+      "seed_cluster": 7008
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7008-rep1-fixed065",
+      "order_position": 37,
+      "panel": "panels/turntcp8-scene7008-rep1-fixed065.json",
+      "panel_sha256": "f65251dea48d99234e17098d078c454025311683f151545c3f284f9ad9b32c22",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 1,
+      "scene_seed": 7008,
+      "seed_cluster": 7008
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7007-rep1-fixed065",
+      "order_position": 38,
+      "panel": "panels/turntcp8-scene7007-rep1-fixed065.json",
+      "panel_sha256": "33c3db4a382e57e020986e8d1e96b18075532febd124ff10bbe98917ef4d3189",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 1,
+      "scene_seed": 7007,
+      "seed_cluster": 7007
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7007-rep1-bwe085",
+      "order_position": 39,
+      "panel": "panels/turntcp8-scene7007-rep1-bwe085.json",
+      "panel_sha256": "f8559078d4715906655812613e2c2ba9474e9b544257676069966c18a185c058",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 1,
+      "scene_seed": 7007,
+      "seed_cluster": 7007
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7003-rep0-bwe085",
+      "order_position": 40,
+      "panel": "panels/turntcp8-scene7003-rep0-bwe085.json",
+      "panel_sha256": "05520218154edee199bcf2bddd7b6a6298b8f6ff6a342a8281ff63ee4b40c4c6",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 0,
+      "scene_seed": 7003,
+      "seed_cluster": 7003
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7003-rep0-fixed065",
+      "order_position": 41,
+      "panel": "panels/turntcp8-scene7003-rep0-fixed065.json",
+      "panel_sha256": "e5c7a4877a217019b261def925df4cf971e3e5f6a37042019e97b63e12ce0abf",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 0,
+      "scene_seed": 7003,
+      "seed_cluster": 7003
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7001-rep1-bwe085",
+      "order_position": 42,
+      "panel": "panels/turntcp8-scene7001-rep1-bwe085.json",
+      "panel_sha256": "865be85a41fc30400bd57f8679593a7f469baadf7f08a77149c0d211f5de725c",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 1,
+      "scene_seed": 7001,
+      "seed_cluster": 7001
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7001-rep1-fixed065",
+      "order_position": 43,
+      "panel": "panels/turntcp8-scene7001-rep1-fixed065.json",
+      "panel_sha256": "596dc274f412d4e7df51f982f185dca0a465039ec979354f4d422c05305eaae6",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 1,
+      "scene_seed": 7001,
+      "seed_cluster": 7001
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7005-rep0-fixed065",
+      "order_position": 44,
+      "panel": "panels/turntcp8-scene7005-rep0-fixed065.json",
+      "panel_sha256": "e0a2abc3a39a968b57884d4975ebb96040f68716448a4a8279f21be5940b965a",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 0,
+      "scene_seed": 7005,
+      "seed_cluster": 7005
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7005-rep0-bwe085",
+      "order_position": 45,
+      "panel": "panels/turntcp8-scene7005-rep0-bwe085.json",
+      "panel_sha256": "0851918156cb0c8e3177487fa1f6d5e062343ae2137b4d1243f3744ed1a86f3b",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 0,
+      "scene_seed": 7005,
+      "seed_cluster": 7005
+    },
+    {
+      "condition": "bwe085",
+      "id": "turntcp8-scene7009-rep0-bwe085",
+      "order_position": 46,
+      "panel": "panels/turntcp8-scene7009-rep0-bwe085.json",
+      "panel_sha256": "ea91c324b4ddf71e64f971f741771afa5b18387fdbdaf95b215312696d5b4a8b",
+      "policy": "native-bwe-headroom-0.85",
+      "repetition": 0,
+      "scene_seed": 7009,
+      "seed_cluster": 7009
+    },
+    {
+      "condition": "fixed065",
+      "id": "turntcp8-scene7009-rep0-fixed065",
+      "order_position": 47,
+      "panel": "panels/turntcp8-scene7009-rep0-fixed065.json",
+      "panel_sha256": "6f36f076a3b1192045cf05253aeb8d93603363cf908d1d0ececb348a9e4bcf16",
+      "policy": "fixed-bwe-ratio-0.65",
+      "repetition": 0,
+      "scene_seed": 7009,
+      "seed_cluster": 7009
+    }
+  ]
+}
