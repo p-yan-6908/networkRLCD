@@ -343,3 +343,30 @@ comparison within a preregistered pre-action sender-BWE split at 500 kbps.
 That estimates action-by-observed-state effects directly; it is a causal
 measurement, not a fitted policy. A separate whole-session comparison against
 fixed 0.65 remains necessary for any policy-gain claim.
+
+## 2026-10-13 V9 micro-randomized action result
+
+V9 completed 48/48 TURN/TCP sessions with all checksums, queue replay, and
+actual-run sender/relay clock gates passing. The widest held-out mapped-time
+interval was 3.633 ms. All 288 action starts replayed and matched native cap
+readback. Eleven of twelve independent scene-seed clusters met the registered
+four-cell coverage threshold; the remaining seed is preserved and excluded
+from the paired state/action estimate.
+
+The primary high-versus-low BWE interaction for on-time delivery was
+−1.8 percentage points [−29.4, +25.8], so the preregistered primary is
+inconclusive. A secondary interaction in sampled RGB PSNR was +0.508 dB
+[+0.077, +0.938]; the relay-byte interaction was +11.45 kB
+[−1.93, +24.83]. Within both BWE strata, the 1.05 action increased PSNR and
+relay bytes. This mixed proximal evidence does not establish a winning policy
+or support fitting/promoting a controller. See the [V9 result](NATIVE_CLOCK_ACTION_TURN_TCP_V9_RESULTS.md).
+
+The next validation is preregistered as a fresh whole-session randomized
+comparison of a fixed sender-only rule (`1.05 × pre-action BWE` at or above
+500 kbps, otherwise `0.65 × pre-action BWE`) against fixed `0.65 × BWE`.
+It directly tests whether the limited V9 conditional signal yields delivery or
+quality value against the strong baseline. It will use new scene seeds and the
+same media, TURN/queue, and actual-run clock acceptance gates. A null or
+negative result closes this local policy candidate; it will not trigger a
+post-hoc threshold or action search. V9 and every earlier frozen study remain
+unpooled.
