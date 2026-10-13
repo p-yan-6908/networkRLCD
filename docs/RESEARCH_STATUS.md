@@ -205,3 +205,27 @@ The twenty-session restore step is complete. The next useful measurement is the
 separately registered [clock-marker probe plan](NATIVE_RANGE_CLOCK_MARKER_PROBE_V1_PLAN.md)
 with paired browser/Node request and response markers. It must preserve this
 capture, existing freezes, and every prior negative result.
+
+## 2026-10-13 clock-alignment and native action follow-up
+
+The versioned [clock/action probe plan](NATIVE_CLOCK_ACTION_PROBE_V1_PLAN.md)
+was frozen and committed before capture. Its marker-only calibration passed:
+60/60 held-out exchanges were covered, the feasible sender-to-Node slope was
+0.9999546004–1.0000401842, and the widest held-out mapped-time interval was
+2.6424 ms. The full feasible affine region was retained.
+
+The following 32-session comparison of native cap ratios 0.65 and 1.05 did not
+reach media capture. Chromium's managed
+`/etc/chromium/policies/managed/misc.json` sets
+`WebRtcIPHandling=disable_non_proxied_udp`; both peers completed ICE gathering
+with no candidates. All attempts and file inventories are preserved and hash
+verified. No treatment outcomes, relay costs, or QoE values were produced.
+The policy was not changed and no unconfigured TURN path was invented. The
+[probe report](NATIVE_CLOCK_ACTION_PROBE_V1_REPORT.md) records the exact limit.
+
+The clock uncertainty is resolved for the current browser/Node runtime. The
+historical range archive still has no paired markers, so its old relay events
+remain unjoined to per-hold actions. The native action-value question remains
+open pending a policy-approved WebRTC path. V3 and all earlier native and
+synthetic evidence remain frozen and separate; no new controller was fit or
+promoted.
