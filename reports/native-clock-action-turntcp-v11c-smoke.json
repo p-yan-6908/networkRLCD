@@ -1,0 +1,32 @@
+{
+  "abi": "native_turn_clock_action_v11c_smoke_qualification_v1",
+  "action_randomization_seed": 20261049,
+  "main_protocol_sha256": "25a5bc102cb38cd50bb467dc547b901bde287fc703790fc44ee725cfc62665b3",
+  "network_profile_id": "ucc_5g_operator_B-02",
+  "outcome_telemetry_read": false,
+  "passed": true,
+  "pooled_with_main_panel_or_prior_evidence": false,
+  "preregistration_commit": "19f528a",
+  "session_file_count": 41,
+  "session_integrity_manifest_sha256": "eae61bd16485489aab5032f11ed57818929df549ca3f967244345a4eaa04b55c",
+  "smoke_gate_sha256": "3e85ec0ae82b29c06ef7ecffa3bd8b028ae12b4751d7f9b34ab783d65338d6f6",
+  "smoke_registration_sha256": "d73970c5930ce384571e2f7f7e3089e43b72a449684acaa865efb82799f255f2",
+  "smoke_trial_id": "turntcp11c-smoke-ucc_5g_operator_B",
+  "source_trial_id": "turntcp11c-c01-ucc_5g_operator_B-r01-micro",
+  "status": "sealed",
+  "technical_gates": {
+    "action_assignment_passed": true,
+    "clock_passed": true,
+    "residual_queue_exercised": true,
+    "terminal_cleanup_passed": true,
+    "trace_schedule_passed": true,
+    "transport_passed": true
+  },
+  "terminal_cleanup_post_queue_wire_bytes": 0,
+  "terminal_cleanup_pre_queue_wire_bytes": 22066.617838500006,
+  "terminal_rates_mbps": [
+    0.0,
+    0.0,
+    0.0
+  ]
+}
