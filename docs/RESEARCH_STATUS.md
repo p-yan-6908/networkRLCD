@@ -273,3 +273,15 @@ and gate remain frozen; see
 [the V4 gate result](NATIVE_CLOCK_ACTION_TURN_TCP_V4_RESULTS.md). A fresh
 registration is needed to treat accounted queue drops as a delivery-cost
 outcome and to add markers close to phase boundaries.
+
+V5 then completed a fresh 32-session TURN/TCP panel. Checksum integrity passed,
+all 32 sessions passed the transport and replayed-queue gate, but only 30/32
+passed actual-run clock coverage. Both failures missed held-out marker m0002,
+the initial high-phase request; width limits passed. No sender, frame, QoE,
+per-hold relay, or action telemetry was opened and no action effect was
+estimated. The V5 panel and gate remain frozen and unpooled; see
+[the V5 gate result](NATIVE_CLOCK_ACTION_TURN_TCP_V5_RESULTS.md) and its
+[diagnostic-only report](../reports/native-clock-action-turntcp-v5-gate-diagnostic-only.json).
+A new independent registration is needed with clock exchanges immediately
+before the initial high and recovery requests, retaining all existing
+acceptance thresholds.

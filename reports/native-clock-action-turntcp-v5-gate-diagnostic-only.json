@@ -1,0 +1,65 @@
+{
+  "abi": "native_turntcp_v5_gate_diagnostic_only_v1",
+  "capture_index_sha256": "1b2f6c59d369131ef9625c5be6c5546370bdfc274d2f3d326f4e175591223143",
+  "clock_transport_gate_sha256": "632494e98c4c2906e61ec36b0a09f64ba363e3d85381490f4160033bec21e6b8",
+  "controller_fitted_or_promoted": false,
+  "failed_capture_sessions": 0,
+  "failed_clock_trials": [
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0002"
+      ],
+      "max_held_out_width_ms": 2.9000638144279947,
+      "trial": "turntcp5-scene00-rep0-r065"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0002"
+      ],
+      "max_held_out_width_ms": 2.6201334942361427,
+      "trial": "turntcp5-scene04-rep0-r105"
+    }
+  ],
+  "failed_sessions_retained": true,
+  "gate_passed": false,
+  "interpretation": "V5 remains unqualified because two sessions failed the pre-registered 100% held-out clock coverage rule. No sender, frame, QoE, per-hold relay, or action telemetry was read.",
+  "managed_policy_unchanged_sessions": 32,
+  "outcome_telemetry_read": false,
+  "per_hold_cost_qoe_estimated": false,
+  "planned_sessions": 32,
+  "pooling": "none",
+  "protocol_sha256": "394ae78949257e5ffb6f38a0802970c201e8b869bbb5a854dd505ea5bde9f7cb",
+  "qualified_clock_sessions": 30,
+  "qualified_transport_sessions": 32,
+  "queue_aggregate": {
+    "a_to_b": {
+      "capacity_integral_valid_all_sessions": true,
+      "max_abs_conservation_error_bytes": 4.889443516731262e-09,
+      "max_queue_wire_bytes": 29990.00786875006,
+      "sessions_with_overflow": 12,
+      "total_dropped_wire_bytes": 103460,
+      "total_forwarded_packets": 31206,
+      "total_forwarded_wire_bytes": 24358045,
+      "total_offered_wire_bytes": 24461505,
+      "total_overflow_packets": 97,
+      "total_send_errors": 0,
+      "total_served_wire_bytes": 24358044.999999978
+    },
+    "b_to_a": {
+      "capacity_integral_valid_all_sessions": true,
+      "max_abs_conservation_error_bytes": 5.820766091346741e-11,
+      "max_queue_wire_bytes": 1586.476874999959,
+      "sessions_with_overflow": 0,
+      "total_dropped_wire_bytes": 0,
+      "total_forwarded_packets": 15270,
+      "total_forwarded_wire_bytes": 1370250,
+      "total_offered_wire_bytes": 1370250,
+      "total_overflow_packets": 0,
+      "total_send_errors": 0,
+      "total_served_wire_bytes": 1370249.9999999995
+    }
+  },
+  "sealed_sessions": 32
+}
