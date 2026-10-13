@@ -166,3 +166,42 @@ including the preserved native TURN captures; none are archive-verified or
 pruned. These working copies are not backups. The project tree is 370,044,928
 bytes, within the 10 GB limit. Original controller freezes and all negative
 results are retained.
+
+## 2026-10-13 receipt-pinned range-pilot follow-up
+
+This addendum updates the earlier runtime-access and “Next informative work”
+notes above. Those Hugging Face failures describe the previous runtime. In this
+runtime `HF_TOKEN` was present without exposing its value, HTTPS to
+`huggingface.co` passed certificate verification, and an authenticated request
+for the private archive returned HTTP 200. The receipt-pinned tree and all five
+archive parts were retrieved successfully.
+
+The earlier 2,003,824,259-byte external-cache figure also describes the previous
+runtime. This runtime's `~/.cache/networkrlcd/` contains 362,420,889 bytes:
+359,847,384 bytes of selected sessions and 2,573,505 bytes of restore metadata.
+The 4,332,759,040 bytes of temporary archive shards were removed after the
+checksummed replay; no full archive extraction remains in the cache.
+
+The exact twenty-session selection from
+`reports/bwe-dynamics-diagnostic-v1/next-input.json` was restored at revision
+`36b82e4045dc8f982930839c8528719ed30447ba` into
+`~/.cache/networkrlcd/restored/native-range-pilot-v1-20-20261013/`. The archive
+parts, all 882 selected file hashes, and all twenty original session seals
+passed verification before telemetry was read. The targeted replay is recorded
+in [the native range-pilot telemetry report](NATIVE_RANGE_PILOT_TARGETED_TELEMETRY_V1.md)
+with its executable and machine-readable outputs.
+
+The sender and pre-RTP encoded-payload histories replayed for all 120
+post-acknowledgment windows. The single unreceived feedback send is retained.
+Relay offers reconcile, including 404 selected-direction offers before the
+registered phase schedule and 61 after it. Browser sender events and Node relay
+events use different monotonic clock origins, and the archived phase requests
+do not contain paired timestamps. No per-hold relay join is claimed. No
+frame/quality outcomes were read, no model or controller was fitted or
+promoted, and synthetic results were untouched. V2b/V3 outcomes remain
+separate; the V3 delivery interval remains unresolved.
+
+The twenty-session restore step is complete. The next useful measurement is the
+separately registered [clock-marker probe plan](NATIVE_RANGE_CLOCK_MARKER_PROBE_V1_PLAN.md)
+with paired browser/Node request and response markers. It must preserve this
+capture, existing freezes, and every prior negative result.
