@@ -1,0 +1,1066 @@
+{
+  "abi": "native_independent_v11d_measured_rate_profiles_v1",
+  "source_files": {
+    "nordic": {
+      "path": "nordicdat.csv",
+      "record_url": "https://zenodo.org/records/10964584",
+      "doi": "10.5281/zenodo.10964584",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "md5": "3681daeaccfa78654858922c0df4a863",
+      "sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "campaign_title": "NordicDat cross-border LTE and 5G-NSA drive-test campaign",
+      "attribution": "Topi Miekkala, Pasi Pyykonen, and Georgios Drainakis, “NordicDat: A Cross-Border Predictive QoS Dataset,” Zenodo, 2024, CC BY 4.0.",
+      "file": "nordicdat.csv",
+      "bytes": 14294619
+    },
+    "rome": {
+      "path": "rome-throughput-tests-speedtest-active.csv",
+      "record_url": "https://zenodo.org/records/8224890",
+      "doi": "10.5281/zenodo.8224890",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "md5": "4c6d46d645df9fbd7b050e4464040b5f",
+      "sha256": "97de559315f6ec872ef87f4165587251f30e42bd5c7a3d67df1042919d6dbd3f",
+      "campaign_id": "rome_active_speedtest_measurement",
+      "campaign_title": "Rome active speedtest campaign across two anonymized operators",
+      "attribution": "Konstantinos Kousias et al., “A Large-Scale Dataset of 4G, NB-IoT, and 5G Non-Standalone Network Measurements,” Zenodo, 2023, CC BY 4.0.",
+      "file": "rome-throughput-tests-speedtest-active.csv",
+      "bytes": 94963907
+    }
+  },
+  "families": {
+    "nordic_op1_5g_nsa_b20": {
+      "label": "NordicDat anonymized operator 1, measured 5G-NSA, LTE_B20",
+      "operator_anonymized": "1",
+      "ran": "5G-NSA",
+      "band": "LTE_B20",
+      "ue_mode": null,
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "campaign_title": "NordicDat cross-border LTE and 5G-NSA drive-test campaign",
+      "dataset_url": "https://zenodo.org/records/10964584",
+      "doi": "10.5281/zenodo.10964584",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "nordicdat.csv",
+      "file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "measurement": "application-level measured downlink throughput replayed as local service rate",
+      "resampling": "median measured throughput within each Unix-second bin; KB/s × 0.008 to Mbit/s",
+      "eligible_source_screen": {
+        "eligible_source_rows": 43003,
+        "continuous_runs": 382,
+        "eligible_runs": 7,
+        "eligible_windows": 221
+      },
+      "selected_profile_ids": [
+        "nordic_op1_5g_nsa_b20-01",
+        "nordic_op1_5g_nsa_b20-02",
+        "nordic_op1_5g_nsa_b20-03",
+        "nordic_op1_5g_nsa_b20-04"
+      ]
+    },
+    "nordic_op1_lte_b20": {
+      "label": "NordicDat anonymized operator 1, measured LTE, LTE_B20",
+      "operator_anonymized": "1",
+      "ran": "LTE",
+      "band": "LTE_B20",
+      "ue_mode": null,
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "campaign_title": "NordicDat cross-border LTE and 5G-NSA drive-test campaign",
+      "dataset_url": "https://zenodo.org/records/10964584",
+      "doi": "10.5281/zenodo.10964584",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "nordicdat.csv",
+      "file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "measurement": "application-level measured downlink throughput replayed as local service rate",
+      "resampling": "median measured throughput within each Unix-second bin; KB/s × 0.008 to Mbit/s",
+      "eligible_source_screen": {
+        "eligible_source_rows": 25623,
+        "continuous_runs": 357,
+        "eligible_runs": 6,
+        "eligible_windows": 76
+      },
+      "selected_profile_ids": [
+        "nordic_op1_lte_b20-01",
+        "nordic_op1_lte_b20-02",
+        "nordic_op1_lte_b20-03",
+        "nordic_op1_lte_b20-04"
+      ]
+    },
+    "nordic_op3_lte_b3": {
+      "label": "NordicDat anonymized operator 3, measured LTE, LTE_B3",
+      "operator_anonymized": "3",
+      "ran": "LTE",
+      "band": "LTE_B3",
+      "ue_mode": null,
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "campaign_title": "NordicDat cross-border LTE and 5G-NSA drive-test campaign",
+      "dataset_url": "https://zenodo.org/records/10964584",
+      "doi": "10.5281/zenodo.10964584",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "nordicdat.csv",
+      "file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "measurement": "application-level measured downlink throughput replayed as local service rate",
+      "resampling": "median measured throughput within each Unix-second bin; KB/s × 0.008 to Mbit/s",
+      "eligible_source_screen": {
+        "eligible_source_rows": 10300,
+        "continuous_runs": 79,
+        "eligible_runs": 2,
+        "eligible_windows": 48
+      },
+      "selected_profile_ids": [
+        "nordic_op3_lte_b3-01",
+        "nordic_op3_lte_b3-02",
+        "nordic_op3_lte_b3-03",
+        "nordic_op3_lte_b3-04"
+      ]
+    },
+    "rome_op2_lte": {
+      "label": "Rome anonymized operator 2, observed LTE with 5G-enabled UE mode",
+      "operator_anonymized": "Op2",
+      "ran": "LTE",
+      "band": null,
+      "ue_mode": "5G-enabled",
+      "campaign_id": "rome_active_speedtest_measurement",
+      "campaign_title": "Rome active speedtest campaign across two anonymized operators",
+      "dataset_url": "https://zenodo.org/records/8224890",
+      "doi": "10.5281/zenodo.8224890",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "file": "rome-throughput-tests-speedtest-active.csv",
+      "file_sha256": "97de559315f6ec872ef87f4165587251f30e42bd5c7a3d67df1042919d6dbd3f",
+      "measurement": "application-level measured downlink throughput replayed as local service rate",
+      "resampling": "median Current Netw. DL in each UTC-second bin; kb/s ÷ 1000 to Mbit/s; each rate row must align to LTE RAT Info within 1.5 s",
+      "eligible_source_screen": {
+        "matched_radio_rows": 34907,
+        "LTE_aligned_speedtest_rows": 21440,
+        "eligible_subcampaigns": 10,
+        "eligible_windows": 174,
+        "selected_subcampaigns": [
+          "Speedtest_Campaign_10",
+          "Speedtest_Campaign_21",
+          "Speedtest_Campaign_28",
+          "Speedtest_Campaign_39"
+        ]
+      },
+      "selected_profile_ids": [
+        "rome_op2_lte-01",
+        "rome_op2_lte-02",
+        "rome_op2_lte-03",
+        "rome_op2_lte-04"
+      ]
+    }
+  },
+  "profiles": [
+    {
+      "profile_id": "nordic_op1_5g_nsa_b20-01",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "source_file": "nordicdat.csv",
+      "source_file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "source_trace_id": "nordic_op1_5g_nsa_b20",
+      "source_subcampaign_id": null,
+      "source_run_index": 213,
+      "source_record_range": [
+        47546,
+        47563
+      ],
+      "max_radio_context_offset_s": null,
+      "profile_sha256": "76e890f85eb7146369ab7c0f7b31bd7d62436762046534105f7228290f78d171",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.3128,
+        "maximum": 3.87416,
+        "mean": 0.851049,
+        "seconds_at_or_below_500kbps": 10,
+        "seconds_above_500kbps": 8,
+        "block_means_mbps": [
+          0.54544,
+          1.333373,
+          0.674333
+        ],
+        "block_terminal_rates_mbps": [
+          0.8212,
+          0.3128,
+          0.4168
+        ]
+      },
+      "rates_mbps": [
+        0.43296,
+        0.45608,
+        0.43976,
+        0.33312,
+        0.78952,
+        0.8212,
+        0.47752,
+        2.11776,
+        3.87416,
+        0.85952,
+        0.35848,
+        0.3128,
+        0.37856,
+        1.02056,
+        1.2924,
+        0.5044,
+        0.43328,
+        0.4168
+      ]
+    },
+    {
+      "profile_id": "nordic_op1_5g_nsa_b20-02",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "source_file": "nordicdat.csv",
+      "source_file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "source_trace_id": "nordic_op1_5g_nsa_b20",
+      "source_subcampaign_id": null,
+      "source_run_index": 282,
+      "source_record_range": [
+        68166,
+        68183
+      ],
+      "max_radio_context_offset_s": null,
+      "profile_sha256": "e07a3998f2b01b605dc52b2a153e65a6dbcd8f72b7ce7471f643ad6576718d42",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.41248,
+        "maximum": 0.62312,
+        "mean": 0.537209,
+        "seconds_at_or_below_500kbps": 6,
+        "seconds_above_500kbps": 12,
+        "block_means_mbps": [
+          0.531867,
+          0.522267,
+          0.557493
+        ],
+        "block_terminal_rates_mbps": [
+          0.4828,
+          0.5436,
+          0.62312
+        ]
+      },
+      "rates_mbps": [
+        0.57144,
+        0.56192,
+        0.44232,
+        0.60584,
+        0.52688,
+        0.4828,
+        0.46968,
+        0.5964,
+        0.41248,
+        0.59528,
+        0.51616,
+        0.5436,
+        0.59696,
+        0.62184,
+        0.47616,
+        0.53128,
+        0.4956,
+        0.62312
+      ]
+    },
+    {
+      "profile_id": "nordic_op1_5g_nsa_b20-03",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "source_file": "nordicdat.csv",
+      "source_file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "source_trace_id": "nordic_op1_5g_nsa_b20",
+      "source_subcampaign_id": null,
+      "source_run_index": 282,
+      "source_record_range": [
+        68258,
+        68275
+      ],
+      "max_radio_context_offset_s": null,
+      "profile_sha256": "6e4027dfad4175a023d8f352ba08947bfe8ad1a72ecdcb83442d50379cdb02a1",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.41976,
+        "maximum": 0.69816,
+        "mean": 0.545031,
+        "seconds_at_or_below_500kbps": 3,
+        "seconds_above_500kbps": 15,
+        "block_means_mbps": [
+          0.533467,
+          0.542613,
+          0.559013
+        ],
+        "block_terminal_rates_mbps": [
+          0.54048,
+          0.44264,
+          0.69816
+        ]
+      },
+      "rates_mbps": [
+        0.51608,
+        0.49336,
+        0.55448,
+        0.56032,
+        0.53608,
+        0.54048,
+        0.53848,
+        0.68352,
+        0.50008,
+        0.53816,
+        0.5528,
+        0.44264,
+        0.50584,
+        0.66792,
+        0.41976,
+        0.54904,
+        0.51336,
+        0.69816
+      ]
+    },
+    {
+      "profile_id": "nordic_op1_5g_nsa_b20-04",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "source_file": "nordicdat.csv",
+      "source_file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "source_trace_id": "nordic_op1_5g_nsa_b20",
+      "source_subcampaign_id": null,
+      "source_run_index": 307,
+      "source_record_range": [
+        74350,
+        74367
+      ],
+      "max_radio_context_offset_s": null,
+      "profile_sha256": "0d8b240dbae1006997a8b2bb7b5d321f150d2220f4abf7f1d7089e2f8f42dbac",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.22848,
+        "maximum": 6.62136,
+        "mean": 1.805213,
+        "seconds_at_or_below_500kbps": 10,
+        "seconds_above_500kbps": 8,
+        "block_means_mbps": [
+          2.402,
+          1.215187,
+          1.798453
+        ],
+        "block_terminal_rates_mbps": [
+          0.31424,
+          0.33936,
+          0.34968
+        ]
+      },
+      "rates_mbps": [
+        4.00296,
+        4.3928,
+        0.33144,
+        4.56608,
+        0.80448,
+        0.31424,
+        0.24568,
+        0.34968,
+        5.79648,
+        0.22848,
+        0.33144,
+        0.33936,
+        6.62136,
+        1.46824,
+        0.3364,
+        1.7008,
+        0.31424,
+        0.34968
+      ]
+    },
+    {
+      "profile_id": "nordic_op1_lte_b20-01",
+      "network_family": "nordic_op1_lte_b20",
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "source_file": "nordicdat.csv",
+      "source_file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "source_trace_id": "nordic_op1_lte_b20",
+      "source_subcampaign_id": null,
+      "source_run_index": 7,
+      "source_record_range": [
+        8645,
+        8662
+      ],
+      "max_radio_context_offset_s": null,
+      "profile_sha256": "5cf36d3c6737114750e7ad40a43b8e9902af1fd28eefe1f4757a4ce1496e37c2",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.24952,
+        "maximum": 3.34704,
+        "mean": 0.628791,
+        "seconds_at_or_below_500kbps": 15,
+        "seconds_above_500kbps": 3,
+        "block_means_mbps": [
+          0.86588,
+          0.619067,
+          0.401427
+        ],
+        "block_terminal_rates_mbps": [
+          0.46288,
+          0.37624,
+          0.36464
+        ]
+      },
+      "rates_mbps": [
+        0.34632,
+        0.34632,
+        0.3464,
+        0.34632,
+        3.34704,
+        0.46288,
+        0.38632,
+        0.34632,
+        0.26056,
+        0.3464,
+        1.99856,
+        0.37624,
+        0.72456,
+        0.3464,
+        0.24952,
+        0.3768,
+        0.34664,
+        0.36464
+      ]
+    },
+    {
+      "profile_id": "nordic_op1_lte_b20-02",
+      "network_family": "nordic_op1_lte_b20",
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "source_file": "nordicdat.csv",
+      "source_file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "source_trace_id": "nordic_op1_lte_b20",
+      "source_subcampaign_id": null,
+      "source_run_index": 9,
+      "source_record_range": [
+        9694,
+        9711
+      ],
+      "max_radio_context_offset_s": null,
+      "profile_sha256": "0f95d43b9052885275a7c6aca7c251d94ac08ca4311ae5381e221e5d5cb02976",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.26168,
+        "maximum": 2.96928,
+        "mean": 1.247569,
+        "seconds_at_or_below_500kbps": 5,
+        "seconds_above_500kbps": 13,
+        "block_means_mbps": [
+          1.38704,
+          1.046173,
+          1.309493
+        ],
+        "block_terminal_rates_mbps": [
+          0.46008,
+          0.46008,
+          2.03464
+        ]
+      },
+      "rates_mbps": [
+        1.96432,
+        0.89768,
+        2.96928,
+        1.48344,
+        0.54744,
+        0.46008,
+        0.468,
+        1.35248,
+        1.38792,
+        1.59712,
+        1.01144,
+        0.46008,
+        0.46008,
+        0.26168,
+        2.03704,
+        1.82448,
+        1.23904,
+        2.03464
+      ]
+    },
+    {
+      "profile_id": "nordic_op1_lte_b20-03",
+      "network_family": "nordic_op1_lte_b20",
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "source_file": "nordicdat.csv",
+      "source_file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "source_trace_id": "nordic_op1_lte_b20",
+      "source_subcampaign_id": null,
+      "source_run_index": 237,
+      "source_record_range": [
+        58471,
+        58488
+      ],
+      "max_radio_context_offset_s": null,
+      "profile_sha256": "b50a3b00afc3d05e04888bbc2b50591ea000893326bd97c9e2af926572c45f4b",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.14272,
+        "maximum": 1.3556,
+        "mean": 0.601551,
+        "seconds_at_or_below_500kbps": 9,
+        "seconds_above_500kbps": 9,
+        "block_means_mbps": [
+          0.652853,
+          0.43676,
+          0.71504
+        ],
+        "block_terminal_rates_mbps": [
+          0.15816,
+          0.48368,
+          0.82984
+        ]
+      },
+      "rates_mbps": [
+        0.93856,
+        1.3556,
+        1.17392,
+        0.14816,
+        0.14272,
+        0.15816,
+        0.77024,
+        0.48376,
+        0.48376,
+        0.2564,
+        0.14272,
+        0.48368,
+        0.59752,
+        0.48376,
+        0.59744,
+        0.9568,
+        0.82488,
+        0.82984
+      ]
+    },
+    {
+      "profile_id": "nordic_op1_lte_b20-04",
+      "network_family": "nordic_op1_lte_b20",
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "source_file": "nordicdat.csv",
+      "source_file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "source_trace_id": "nordic_op1_lte_b20",
+      "source_subcampaign_id": null,
+      "source_run_index": 237,
+      "source_record_range": [
+        58494,
+        58511
+      ],
+      "max_radio_context_offset_s": null,
+      "profile_sha256": "fc40dbf5161ef3be5036445a8833504ca9aa268cc399e04de031d3a713ba2c27",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.14272,
+        "maximum": 1.34032,
+        "mean": 0.512111,
+        "seconds_at_or_below_500kbps": 11,
+        "seconds_above_500kbps": 7,
+        "block_means_mbps": [
+          0.435333,
+          0.32056,
+          0.78044
+        ],
+        "block_terminal_rates_mbps": [
+          0.21968,
+          0.19624,
+          1.06016
+        ]
+      },
+      "rates_mbps": [
+        0.37008,
+        0.2564,
+        1.34032,
+        0.14272,
+        0.2828,
+        0.21968,
+        0.14272,
+        0.47408,
+        0.14272,
+        0.82488,
+        0.14272,
+        0.19624,
+        0.14816,
+        1.17384,
+        0.87816,
+        0.59744,
+        0.82488,
+        1.06016
+      ]
+    },
+    {
+      "profile_id": "nordic_op3_lte_b3-01",
+      "network_family": "nordic_op3_lte_b3",
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "source_file": "nordicdat.csv",
+      "source_file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "source_trace_id": "nordic_op3_lte_b3",
+      "source_subcampaign_id": null,
+      "source_run_index": 77,
+      "source_record_range": [
+        91024,
+        91041
+      ],
+      "max_radio_context_offset_s": null,
+      "profile_sha256": "2190aa913da5efce54ba0f5cf19f54d37a12cefe9752d929b9851c2a6045e3f8",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.42056,
+        "maximum": 0.51176,
+        "mean": 0.46856,
+        "seconds_at_or_below_500kbps": 15,
+        "seconds_above_500kbps": 3,
+        "block_means_mbps": [
+          0.461653,
+          0.47488,
+          0.469147
+        ],
+        "block_terminal_rates_mbps": [
+          0.46656,
+          0.4552,
+          0.47776
+        ]
+      },
+      "rates_mbps": [
+        0.44936,
+        0.50024,
+        0.43224,
+        0.46656,
+        0.45496,
+        0.46656,
+        0.45496,
+        0.46608,
+        0.472,
+        0.51176,
+        0.48928,
+        0.4552,
+        0.42056,
+        0.44936,
+        0.506,
+        0.4892,
+        0.472,
+        0.47776
+      ]
+    },
+    {
+      "profile_id": "nordic_op3_lte_b3-02",
+      "network_family": "nordic_op3_lte_b3",
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "source_file": "nordicdat.csv",
+      "source_file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "source_trace_id": "nordic_op3_lte_b3",
+      "source_subcampaign_id": null,
+      "source_run_index": 78,
+      "source_record_range": [
+        91315,
+        91332
+      ],
+      "max_radio_context_offset_s": null,
+      "profile_sha256": "7e4d15eb11afd1d4e249664e4e287a8ee8f6f784ce1c215f4108ebf3a14213a6",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.42048,
+        "maximum": 0.9092,
+        "mean": 0.50364,
+        "seconds_at_or_below_500kbps": 13,
+        "seconds_above_500kbps": 5,
+        "block_means_mbps": [
+          0.535667,
+          0.487787,
+          0.487467
+        ],
+        "block_terminal_rates_mbps": [
+          0.9092,
+          0.54216,
+          0.4548
+        ]
+      },
+      "rates_mbps": [
+        0.4376,
+        0.4376,
+        0.47208,
+        0.53704,
+        0.42048,
+        0.9092,
+        0.4892,
+        0.48928,
+        0.49624,
+        0.43776,
+        0.47208,
+        0.54216,
+        0.44944,
+        0.45456,
+        0.51216,
+        0.43224,
+        0.6216,
+        0.4548
+      ]
+    },
+    {
+      "profile_id": "nordic_op3_lte_b3-03",
+      "network_family": "nordic_op3_lte_b3",
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "source_file": "nordicdat.csv",
+      "source_file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "source_trace_id": "nordic_op3_lte_b3",
+      "source_subcampaign_id": null,
+      "source_run_index": 78,
+      "source_record_range": [
+        91356,
+        91373
+      ],
+      "max_radio_context_offset_s": null,
+      "profile_sha256": "74a3f1ae9d5a310572db557fcf823278cf4fef57f8e9b8448be046bf62fa1cc0",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.42048,
+        "maximum": 1.02872,
+        "mean": 0.508791,
+        "seconds_at_or_below_500kbps": 15,
+        "seconds_above_500kbps": 3,
+        "block_means_mbps": [
+          0.498,
+          0.474667,
+          0.553707
+        ],
+        "block_terminal_rates_mbps": [
+          0.61072,
+          0.47192,
+          0.47208
+        ]
+      },
+      "rates_mbps": [
+        0.46664,
+        0.48896,
+        0.48368,
+        0.4548,
+        0.4832,
+        0.61072,
+        0.4548,
+        0.42048,
+        0.58032,
+        0.46568,
+        0.4548,
+        0.47192,
+        0.4548,
+        0.42272,
+        1.02872,
+        0.472,
+        0.47192,
+        0.47208
+      ]
+    },
+    {
+      "profile_id": "nordic_op3_lte_b3-04",
+      "network_family": "nordic_op3_lte_b3",
+      "campaign_id": "nordicdat_cross_border_measurement",
+      "source_file": "nordicdat.csv",
+      "source_file_sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "source_trace_id": "nordic_op3_lte_b3",
+      "source_subcampaign_id": null,
+      "source_run_index": 78,
+      "source_record_range": [
+        91386,
+        91403
+      ],
+      "max_radio_context_offset_s": null,
+      "profile_sha256": "402e30c4782b6698f9608a9787ea463432a29d5aa55387dd728796bde98acf5c",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.43768,
+        "maximum": 1.01184,
+        "mean": 0.537893,
+        "seconds_at_or_below_500kbps": 13,
+        "seconds_above_500kbps": 5,
+        "block_means_mbps": [
+          0.580547,
+          0.481627,
+          0.551507
+        ],
+        "block_terminal_rates_mbps": [
+          0.58896,
+          0.46648,
+          0.472
+        ]
+      },
+      "rates_mbps": [
+        0.472,
+        0.4548,
+        1.01184,
+        0.48368,
+        0.472,
+        0.58896,
+        0.4548,
+        0.51768,
+        0.52432,
+        0.43768,
+        0.4888,
+        0.46648,
+        0.98712,
+        0.47944,
+        0.46648,
+        0.46632,
+        0.43768,
+        0.472
+      ]
+    },
+    {
+      "profile_id": "rome_op2_lte-01",
+      "network_family": "rome_op2_lte",
+      "campaign_id": "rome_active_speedtest_measurement",
+      "source_file": "rome-throughput-tests-speedtest-active.csv",
+      "source_file_sha256": "97de559315f6ec872ef87f4165587251f30e42bd5c7a3d67df1042919d6dbd3f",
+      "source_trace_id": "Speedtest_Campaign_10",
+      "source_subcampaign_id": "Speedtest_Campaign_10",
+      "source_run_index": 4,
+      "source_record_range": [
+        60283,
+        60518
+      ],
+      "max_radio_context_offset_s": 0.513,
+      "profile_sha256": "a75fd5c78be81a2c0529c5305f70e4d5c982ffc94bcf069305a7a11e615721ff",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.1078,
+        "maximum": 7.58825,
+        "mean": 1.921636,
+        "seconds_at_or_below_500kbps": 4,
+        "seconds_above_500kbps": 14,
+        "block_means_mbps": [
+          2.804142,
+          2.191542,
+          0.769225
+        ],
+        "block_terminal_rates_mbps": [
+          7.58825,
+          0.3075,
+          0.48775
+        ]
+      },
+      "rates_mbps": [
+        1.1672,
+        1.2095,
+        0.36535,
+        1.844,
+        4.65055,
+        7.58825,
+        7.0264,
+        1.22255,
+        2.13755,
+        1.844,
+        0.61125,
+        0.3075,
+        0.7082,
+        1.18745,
+        1.07985,
+        1.0443,
+        0.1078,
+        0.48775
+      ]
+    },
+    {
+      "profile_id": "rome_op2_lte-02",
+      "network_family": "rome_op2_lte",
+      "campaign_id": "rome_active_speedtest_measurement",
+      "source_file": "rome-throughput-tests-speedtest-active.csv",
+      "source_file_sha256": "97de559315f6ec872ef87f4165587251f30e42bd5c7a3d67df1042919d6dbd3f",
+      "source_trace_id": "Speedtest_Campaign_21",
+      "source_subcampaign_id": "Speedtest_Campaign_21",
+      "source_run_index": 16,
+      "source_record_range": [
+        155090,
+        155300
+      ],
+      "max_radio_context_offset_s": 0.506,
+      "profile_sha256": "d34050a083444fec4f0377ab06a61dbb54d59c3c24598a27251d5d52b68a2e9c",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.02365,
+        "maximum": 2.2197,
+        "mean": 0.821019,
+        "seconds_at_or_below_500kbps": 5,
+        "seconds_above_500kbps": 13,
+        "block_means_mbps": [
+          1.094767,
+          0.952242,
+          0.41605
+        ],
+        "block_terminal_rates_mbps": [
+          1.231,
+          0.933,
+          0.19595
+        ]
+      },
+      "rates_mbps": [
+        2.2197,
+        1.9379,
+        0.64775,
+        0.02365,
+        0.5086,
+        1.231,
+        0.91525,
+        0.4614,
+        1.0619,
+        1.2849,
+        1.057,
+        0.933,
+        0.7215,
+        0.6297,
+        0.5158,
+        0.22495,
+        0.2084,
+        0.19595
+      ]
+    },
+    {
+      "profile_id": "rome_op2_lte-03",
+      "network_family": "rome_op2_lte",
+      "campaign_id": "rome_active_speedtest_measurement",
+      "source_file": "rome-throughput-tests-speedtest-active.csv",
+      "source_file_sha256": "97de559315f6ec872ef87f4165587251f30e42bd5c7a3d67df1042919d6dbd3f",
+      "source_trace_id": "Speedtest_Campaign_28",
+      "source_subcampaign_id": "Speedtest_Campaign_28",
+      "source_run_index": 24,
+      "source_record_range": [
+        222026,
+        222257
+      ],
+      "max_radio_context_offset_s": 0.524,
+      "profile_sha256": "283cc7b87c5724cc2f8bc4ec7def7d4856a385683c13218e0894b6f45e255e49",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.2476,
+        "maximum": 0.60405,
+        "mean": 0.492061,
+        "seconds_at_or_below_500kbps": 8,
+        "seconds_above_500kbps": 10,
+        "block_means_mbps": [
+          0.427858,
+          0.528458,
+          0.519867
+        ],
+        "block_terminal_rates_mbps": [
+          0.4749,
+          0.5153,
+          0.48655
+        ]
+      },
+      "rates_mbps": [
+        0.54045,
+        0.2476,
+        0.45985,
+        0.41905,
+        0.4253,
+        0.4749,
+        0.60405,
+        0.59385,
+        0.47345,
+        0.46295,
+        0.52115,
+        0.5153,
+        0.52385,
+        0.5344,
+        0.53095,
+        0.52425,
+        0.5192,
+        0.48655
+      ]
+    },
+    {
+      "profile_id": "rome_op2_lte-04",
+      "network_family": "rome_op2_lte",
+      "campaign_id": "rome_active_speedtest_measurement",
+      "source_file": "rome-throughput-tests-speedtest-active.csv",
+      "source_file_sha256": "97de559315f6ec872ef87f4165587251f30e42bd5c7a3d67df1042919d6dbd3f",
+      "source_trace_id": "Speedtest_Campaign_39",
+      "source_subcampaign_id": "Speedtest_Campaign_39",
+      "source_run_index": 27,
+      "source_record_range": [
+        306042,
+        306268
+      ],
+      "max_radio_context_offset_s": 0.495,
+      "profile_sha256": "6d38ad3833e9660b04f04e53d0307062620ac421dbd3320f1047dff84864def3",
+      "sampling_seconds": 18,
+      "rate_summary_mbps": {
+        "minimum": 0.0056,
+        "maximum": 0.8727,
+        "mean": 0.492303,
+        "seconds_at_or_below_500kbps": 7,
+        "seconds_above_500kbps": 11,
+        "block_means_mbps": [
+          0.65095,
+          0.574958,
+          0.251
+        ],
+        "block_terminal_rates_mbps": [
+          0.4547,
+          0.662,
+          0.0056
+        ]
+      },
+      "rates_mbps": [
+        0.6275,
+        0.6407,
+        0.8727,
+        0.8042,
+        0.5059,
+        0.4547,
+        0.44215,
+        0.4864,
+        0.5657,
+        0.635,
+        0.6585,
+        0.662,
+        0.6199,
+        0.51325,
+        0.2623,
+        0.06625,
+        0.0387,
+        0.0056
+      ]
+    }
+  ],
+  "technical_smoke_profile_id": "nordic_op1_5g_nsa_b20-04",
+  "selection_protocol": {
+    "window_seconds": 18,
+    "samples_per_second": 1,
+    "profile_count_per_family": 4,
+    "max_rate_mbps": 10.0,
+    "state_split_mbps": 0.5,
+    "min_mean_each_six_second_block_mbps": 0.25,
+    "each_six_second_block_has_both_rate_states": true,
+    "consecutive_zero_sample_limit": 1,
+    "max_source_gap_seconds": 1.5,
+    "source_sample_step_seconds": [
+      0.75,
+      1.25
+    ],
+    "network_source_family_order": [
+      "nordic_op1_5g_nsa_b20",
+      "nordic_op1_lte_b20",
+      "nordic_op3_lte_b3",
+      "rome_op2_lte"
+    ],
+    "nordic_profile_rule": "median measured throughput within each Unix-second bin; split at >1.5-second gaps; select four temporally stratified, nonoverlapping eligible windows per operator/RAN/band family; windows remain nested under the same campaign",
+    "rome_profile_rule": "use only Op2, 5G-enabled UE mode; align each speedtest throughput row to the nearest actual LTE RAT Info observation within 1.5 seconds in the same date and Speedtest_Campaign; median same-second rates; select four temporally stratified eligible windows from four distinct Speedtest_Campaign IDs",
+    "technical_smoke_profile_rule": "among the 16 registered main-panel profiles, select the profile with the lowest sum of the three six-second terminal rates; require residual pre-cleanup queue and empty post-cleanup queue in the technical smoke",
+    "no_outcomes_used": true,
+    "excluded_source_fields": [
+      "latitude",
+      "longitude",
+      "elevation",
+      "serving_cell_id",
+      "GNSS mode",
+      "heading",
+      "velocity",
+      "acceleration",
+      "PCI",
+      "radio identifiers"
+    ]
+  },
+  "network_campaigns": [
+    "nordicdat_cross_border_measurement",
+    "rome_active_speedtest_measurement"
+  ],
+  "independence_note": "The four network families are nested in two independently collected datasets/campaigns. NordicDat contributes three anonymized operator/RAN/band strata; Rome contributes a separate anonymized operator LTE stratum. Repeated 18-second windows and Rome Speedtest_Campaign IDs are nested source segments, not independent network campaigns."
+}

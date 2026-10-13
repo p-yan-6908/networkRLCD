@@ -1,0 +1,239 @@
+{
+  "abi": "networkrlcd_independent_v11d_source_screening_v1",
+  "screened_at_utc": "2026-10-13T21:53:04+00:00",
+  "goal_anchor_commit": "231ee6c",
+  "repository_start_commit": "4cb62a2",
+  "private_archive": {
+    "repo_id": "p-yan/networkrlcd-results-archive",
+    "credential_check": {
+      "HF_TOKEN_available": true,
+      "value_logged": false
+    },
+    "authenticated_dataset_api_status": 200,
+    "private": true,
+    "inspected_revision": "b1497fa425f59c3b796d9ce5354ee58a0afe9667",
+    "listed_file_count": 80,
+    "listed_archive_sets": [
+      "n1-stage-one-2026-10-10",
+      "native-clock-action-turntcp-v11c-20261013-01",
+      "native-ladder-pilot-v1-20261011-235801",
+      "native-ladder-pilot-v1-20261012-001122",
+      "native-margin-pilot-v1-20261012-005424",
+      "native-range-pilot-v1-20261011-233324",
+      "root results.tar.part-* shards"
+    ],
+    "inspection_scope": "Authenticated file-tree metadata only; prior archives were not restored, extracted, or opened for outcomes.",
+    "finding": "The private tree contains prior experiment archives, manifests/receipts, and result shards. It exposes no unused independently sourced video assets or measured mobile-network input datasets."
+  },
+  "selected_content": {
+    "manifest": "data/native-v11d/content_sources.json",
+    "manifest_sha256": "4cc4c9bb5f97ab4fe999c9db2262b16ab15efed30447104fa37870f7212fe2de",
+    "rights_review_manifest": "acquisition/native-n1/rights-review/rights-review-manifest-final.csv",
+    "rights_review_manifest_sha256": "2097ce5840a0feeddf3567b4668a8df58c363f564673b2f65427fb7255925527",
+    "contact_review": "acquisition/native-n1/rights-review/contact-sheet-review-final.json",
+    "sources": [
+      {
+        "candidate_id": "commons-106384795",
+        "content_id": "content_cicada_emergence_01",
+        "title": "Periodical Cicada emerging from underground 2021-05-15 233901977",
+        "creator": "G. Edward Johnson",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_revision_url": "https://commons.wikimedia.org/w/index.php?title=File%3APeriodical_Cicada_emerging_from_underground_2021-05-15_233901977.webm&oldid=1141998343",
+        "capture_group": "g-edward-johnson-brood-x-2021-05-15",
+        "n1_pool_status": "reserve_not_stage_one_capture",
+        "original_bytes": 1047940318,
+        "original_sha1": "a02ce67f3da6d9a2395fefc1d4450aa5811efe69",
+        "original_sha256": "48925ace4182982e09ce9808ed0e38e96c9f105611e6ac677d4a908d23f446bc",
+        "clip_bytes": 4745840,
+        "clip_sha256": "3c5e439495cc57d4e4b73405f785bd52176bea1fd22157edf0a47cb06752081b",
+        "segment_start_s": 60,
+        "segment_duration_s": 30
+      },
+      {
+        "candidate_id": "commons-29267197",
+        "content_id": "content_vizanice_outdoor_01",
+        "title": "Na sjeveru Vižanice 20131027 103431",
+        "creator": "Quahadi Añtó 08:25, 29 October 2013 (UTC)",
+        "license": "CC-BY-3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "source_revision_url": "https://commons.wikimedia.org/w/index.php?title=File%3ANa_sjeveru_Vi%C5%BEanice_20131027_103431.ogv&oldid=1248195981",
+        "capture_group": "quahadi-orebic-2013-series",
+        "n1_pool_status": "reserve_not_stage_one_capture",
+        "original_bytes": 46287557,
+        "original_sha1": "1f94c9df81387abb60a98606a11b28d57ef8fce9",
+        "original_sha256": "de5437e21b50ac2dc0e73becb13cd31ebce0aa8e6e1c93bf187adacd299a620b",
+        "clip_bytes": 10118769,
+        "clip_sha256": "e0a3c07156a34570cbef21ad601d911f2450ab6993d327ca362e85c40ecd7500",
+        "segment_start_s": 30,
+        "segment_duration_s": 30
+      },
+      {
+        "candidate_id": "commons-121308342",
+        "content_id": "content_schmilka_firefighting_01",
+        "title": "Heli Schmilka Fire Fighting Elbe 30 7 2022",
+        "creator": "Own work",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_revision_url": "https://commons.wikimedia.org/w/index.php?title=File%3AHeli_Schmilka_Fire_Fighting_Elbe_30_7_2022.webm&oldid=781941526",
+        "capture_group": "schmilka-firefighting-2022-07-30",
+        "n1_pool_status": "reserve_not_stage_one_capture",
+        "original_bytes": 84795949,
+        "original_sha1": "5258716e8f2a907bb17fda8ad987cc41498b4ebb",
+        "original_sha256": "f79d58f19159dacdee7f09b27a025dfbe74bbfa34785d1ac913c75a51a8069a9",
+        "clip_bytes": 3426089,
+        "clip_sha256": "99a6d0a1aa739374d5a000cd9c74a77923df2d9749f34cab47756b844b16d68c",
+        "segment_start_s": 60,
+        "segment_duration_s": 30
+      },
+      {
+        "candidate_id": "commons-32353576",
+        "content_id": "content_d3_tree_layout_tutorial_01",
+        "title": "D3.js-tutorial-14-The-Tree-Layout-(1-of-2)",
+        "creator": "https://www.youtube.com/user/d3Vienno",
+        "license": "CC-BY-3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "source_revision_url": "https://commons.wikimedia.org/w/index.php?title=File%3AD3.js-tutorial-14-The-Tree-Layout-%281-of-2%29.webm&oldid=1033839196",
+        "capture_group": "d3vienno-d3js-tutorial-series",
+        "n1_pool_status": "reserve_not_stage_one_capture",
+        "original_bytes": 11076565,
+        "original_sha1": "ef5f4238dbf2fb01070c4e5064d2103b260fc6e7",
+        "original_sha256": "9ba772f26cb49d4905c81b7329a7ee1a713ebeb4e5a7d1f10ed6a4f6e5b601b3",
+        "clip_bytes": 98812,
+        "clip_sha256": "2b001d97e37e9e5222c4fc4ebb9e176aaaa1cd22977854fe1e6f14eb7284ce28",
+        "segment_start_s": 60,
+        "segment_duration_s": 30
+      }
+    ],
+    "independence": "All four selected sources are distinct capture groups marked reserve, not stage-one captures in the N1 pool; none overlaps the V11C content source IDs or V3–V10 generated scenes.",
+    "visual_review": "Selected segments reviewed: cicada emergence, Vižanice outdoor scene, helicopter firefighting scene, and D3 tree-layout tutorial. No identifiable person is retained in the selected clips. The unselected GNU/Linux screen recording visibly includes a desktop filename; the unselected IBAI clip includes an identifiable speaker. Neither is registered or captured.",
+    "derivatives": "Only 30-second no-audio H.264 Main 640x360/30 fps derivatives are served; originals and derivative clips remain in external cache, outside Git. Browser reference pixels are transient; capture evidence stores scalar quality and source IDs only."
+  },
+  "selected_network_sources": {
+    "profile_document": "data/native-v11d/network_profiles.json",
+    "profile_document_sha256": "d71a95515b99c4c438a85ee93bbd022fa9363970d1498a6e0e2e9e48a5c2fc27",
+    "dataset_count": 2,
+    "independent_acquisition_campaign_count": 2,
+    "family_count": 4,
+    "profiles_per_family": 4,
+    "families": [
+      "nordic_op1_5g_nsa_b20",
+      "nordic_op1_lte_b20",
+      "nordic_op3_lte_b3",
+      "rome_op2_lte"
+    ],
+    "sources": [
+      {
+        "record_url": "https://zenodo.org/records/10964584",
+        "doi": "10.5281/zenodo.10964584",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "campaign_id": "nordicdat_cross_border_measurement",
+        "campaign_title": "NordicDat cross-border LTE and 5G-NSA drive-test campaign",
+        "file": "nordicdat.csv",
+        "bytes": 14294619,
+        "md5": "3681daeaccfa78654858922c0df4a863",
+        "sha256": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+        "attribution": "Topi Miekkala, Pasi Pyykonen, and Georgios Drainakis, “NordicDat: A Cross-Border Predictive QoS Dataset,” Zenodo, 2024, CC BY 4.0."
+      },
+      {
+        "record_url": "https://zenodo.org/records/8224890",
+        "doi": "10.5281/zenodo.8224890",
+        "license": "CC-BY-4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "campaign_id": "rome_active_speedtest_measurement",
+        "campaign_title": "Rome active speedtest campaign across two anonymized operators",
+        "file": "rome-throughput-tests-speedtest-active.csv",
+        "bytes": 94963907,
+        "md5": "4c6d46d645df9fbd7b050e4464040b5f",
+        "sha256": "97de559315f6ec872ef87f4165587251f30e42bd5c7a3d67df1042919d6dbd3f",
+        "attribution": "Konstantinos Kousias et al., “A Large-Scale Dataset of 4G, NB-IoT, and 5G Non-Standalone Network Measurements,” Zenodo, 2023, CC BY 4.0."
+      }
+    ],
+    "actual_source_sha256_verified": {
+      "nordic": "d1637c587ac01ce41ee24115eaa07758006bd513cf806a5daec31caf075c0249",
+      "rome": "97de559315f6ec872ef87f4165587251f30e42bd5c7a3d67df1042919d6dbd3f"
+    },
+    "selection_summaries": {
+      "nordic_op1_5g_nsa_b20": {
+        "eligible_source_rows": 43003,
+        "continuous_runs": 382,
+        "eligible_runs": 7,
+        "eligible_windows": 221
+      },
+      "nordic_op1_lte_b20": {
+        "eligible_source_rows": 25623,
+        "continuous_runs": 357,
+        "eligible_runs": 6,
+        "eligible_windows": 76
+      },
+      "nordic_op3_lte_b3": {
+        "eligible_source_rows": 10300,
+        "continuous_runs": 79,
+        "eligible_runs": 2,
+        "eligible_windows": 48
+      },
+      "rome_op2_lte": {
+        "matched_radio_rows": 34907,
+        "LTE_aligned_speedtest_rows": 21440,
+        "eligible_subcampaigns": 10,
+        "eligible_windows": 174,
+        "selected_subcampaigns": [
+          "Speedtest_Campaign_10",
+          "Speedtest_Campaign_21",
+          "Speedtest_Campaign_28",
+          "Speedtest_Campaign_39"
+        ]
+      }
+    },
+    "source_independence_note": "The four network families are nested in two independently collected datasets/campaigns. NordicDat contributes three anonymized operator/RAN/band strata; Rome contributes a separate anonymized operator LTE stratum. Repeated 18-second windows and Rome Speedtest_Campaign IDs are nested source segments, not independent network campaigns.",
+    "privacy_minimization": "The derivation reads only time, downlink throughput, service status, anonymized operator, radio technology/band, UE mode and campaign. Location, cell, mobility and other identifiers are not retained or emitted.",
+    "interpretation_limit": "These are actual field-measured throughput histories replayed as local queue service rates; they are not live mobile transport, packet traces, or an estimate of Internet-path effects."
+  },
+  "alternatives_and_exclusions": [
+    {
+      "source": "UCC and Vienna source files used by V11C",
+      "decision": "excluded as evidence inputs",
+      "reason": "They are reused V11C network inputs and therefore do not supply new independent network families."
+    },
+    {
+      "source": "https://github.com/confiwent/Real-world-bandwidth-traces",
+      "decision": "excluded",
+      "reason": "The repository bundles FCC, 3G/HSDPA, Oboe and Puffer traces with separate upstream provenance; the repository-level MIT license does not establish rights for each included dataset."
+    },
+    {
+      "source": "N1 stage-one content IDs commons-78181584, commons-115782037, commons-194480872",
+      "decision": "excluded before V11D registration or capture",
+      "reason": "These were already assigned to N1 stage one and cannot count as new content groups. No V11D session used them."
+    },
+    {
+      "source": "commons-144186427 GNU/Linux tutorial",
+      "decision": "excluded before V11D registration or capture",
+      "reason": "Visual inspection found a readable desktop filename in the selected segment."
+    },
+    {
+      "source": "commons-169274056 IBAI lecture launch",
+      "decision": "excluded before V11D registration or capture",
+      "reason": "Visual inspection found an identifiable speaker in the selected segment."
+    },
+    {
+      "source": "commons-106384795 cicada emergence",
+      "decision": "selected",
+      "reason": "Unused N1 reserve group, CC BY 4.0, 1,047,940,318-byte original downloaded and hash-verified within available storage; selected segment contains wildlife and no person."
+    }
+  ],
+  "workspace_and_environment": {
+    "external_cache": "/home/agent/.cache/networkrlcd/",
+    "free_bytes_at_screen": 28243234816,
+    "repository_tracked_and_untracked_source_bytes_at_screen": 371397021,
+    "managed_browser_policy": "WebRtcIPHandling=disable_non_proxied_udp; unchanged",
+    "effective_capabilities": {
+      "CapEff": "0000000000000000",
+      "CapBnd": "000001ffffffffff"
+    },
+    "network_impairment": "CAP_NET_ADMIN is not available to this process; use the already qualified TURN/TCP userspace relay with measured-rate replay, not live OS network shaping.",
+    "capture_raw_data_outside_git": true,
+    "cache_capacity_sufficient_for_sources_and_registered_capture": true
+  },
+  "non_pooling": "V3–V10 are frozen and not modified or pooled. V11C failed its all-session gate with outcome telemetry unopened; its content/network sources and outcomes are not pooled. NordicDat strata, repeated trace windows, and Rome Speedtest subcampaigns are nested; only two dataset campaigns are counted."
+}
