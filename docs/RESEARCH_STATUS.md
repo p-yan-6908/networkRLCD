@@ -299,3 +299,7 @@ V6 remains frozen and unpooled; see the
 [diagnostic-only report](../reports/native-clock-action-turntcp-v6-gate-diagnostic-only.json).
 A new design should train on the end marker and hold out an intermediate
 recovery marker, retaining the existing thresholds.
+
+That V7 design is now registered in
+[the V7 plan](NATIVE_CLOCK_ACTION_TURN_TCP_V7_PLAN.md) with four held-out
+exchanges, the final exchange in training, and no acceptance-threshold changes.
