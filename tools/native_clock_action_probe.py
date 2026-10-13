@@ -228,9 +228,13 @@ def validate_markers(markers: list[dict], train_indices: list[int], holdout_indi
         slo, shi = mapped_browser_range(m["node_send_ms"], origin, vertices)
         width = max(rhi - rlo, shi - slo)
         widths.append(width)
-        ok = (rlo >= m["browser_send_ms"] - 1e-5 and rhi <= m["browser_receive_ms"] + 1e-5
-              and slo >= m["browser_send_ms"] - 1e-5 and shi <= m["browser_receive_ms"] + 1e-5
-              and rhi <= slo + 1e-5)
+        pointwise = [
+            (origin + (m["node_receive_ms"] - beta0) / alpha,
+             origin + (m["node_send_ms"] - beta0) / alpha)
+            for alpha, beta0 in vertices
+        ]
+        ok = all(m["browser_send_ms"] - 1e-5 <= receive <= send <=
+                 m["browser_receive_ms"] + 1e-5 for receive, send in pointwise)
         covered += int(ok)
         checks.append({"marker_id": m["marker_id"], "covered": ok,
                        "mapped_receive_ms": [rlo, rhi], "mapped_send_ms": [slo, shi],
