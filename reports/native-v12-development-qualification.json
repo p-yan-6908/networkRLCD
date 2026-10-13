@@ -1,0 +1,459 @@
+{
+  "abi": "native_v12_support_clock_transport_gate_v1",
+  "capture_index_sha256": "47e8997ccc6990dc6a3716d7e7a3288c938764d9e54c9cfca30d4d64d4bdc2f7",
+  "complete_cells": [],
+  "hold_counts": [
+    {
+      "cell": "content_cicada_emergence_01__development_constant_service",
+      "holds": 1,
+      "ratio": 0.65,
+      "state": "bwe_ge_500k"
+    },
+    {
+      "cell": "content_cicada_emergence_01__development_constant_service",
+      "holds": 1,
+      "ratio": 1.05,
+      "state": "bwe_ge_500k"
+    },
+    {
+      "cell": "content_cicada_emergence_01__development_constant_service",
+      "holds": 1,
+      "ratio": 0.65,
+      "state": "bwe_lt_500k"
+    },
+    {
+      "cell": "content_cicada_emergence_01__development_constant_service",
+      "holds": 1,
+      "ratio": 1.05,
+      "state": "bwe_lt_500k"
+    }
+  ],
+  "outcome_telemetry_read": false,
+  "passed": true,
+  "planned_sessions": 6,
+  "protocol_sha256": "a8219b31a897727e673f3fe9624dfaa2914ebf3f0404cee9af0c78e4889bf792",
+  "qualified_sessions": 6,
+  "scope": "Technical support and liveness only; no frame quality, on-time delivery or per-hold relay outcomes read.",
+  "sessions": [
+    {
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998874905688356,
+          1.000126887980346
+        ],
+        "beta_at_origin_feasible_ms": [
+          10670.943640408374,
+          10672.18220657036
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.0818220069486415,
+        "origin_browser_ms": 10271.300000000745,
+        "p95_held_out_width_ms": 2.0818220069486415,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "media_passed": true,
+      "passed": true,
+      "status": "sealed",
+      "support": {
+        "ack_ms": null,
+        "assigned_holds": 0,
+        "cap_bps": null,
+        "outcome_data_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            270955,
+            274288,
+            275978,
+            275978,
+            275978,
+            275978,
+            279048,
+            282162,
+            283666,
+            286806,
+            288442
+          ],
+          "elapsed_ms": 9069.39999999851,
+          "history_samples": 11,
+          "max_gap_ms": 114.70000000298023,
+          "passed": true,
+          "sample_history_ms": [
+            8943.79999999702,
+            9044.70000000298,
+            9145.60000000149,
+            9246.5,
+            9347.5,
+            9462.20000000298,
+            9563,
+            9664.60000000149,
+            9765.39999999851,
+            9866.89999999851,
+            9967.89999999851
+          ],
+          "span_ms": 1024.1000000014901,
+          "target_state": "bwe_lt_500k"
+        },
+        "ratio": null
+      },
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-development-bwe_lt_500k-census-s0-support"
+    },
+    {
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998369361101831,
+          1.0001002297594168
+        ],
+        "beta_at_origin_feasible_ms": [
+          10554.685803381622,
+          10556.216946789165
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.1997014372318517,
+        "origin_browser_ms": 10194.30000000447,
+        "p95_held_out_width_ms": 2.1997014372318517,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "media_passed": true,
+      "passed": true,
+      "status": "sealed",
+      "support": {
+        "ack_ms": 9924.20000000298,
+        "assigned_holds": 1,
+        "cap_bps": 218962,
+        "outcome_data_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            321739,
+            321739,
+            321739,
+            327129,
+            327129,
+            327129,
+            331459,
+            331459,
+            331459,
+            336865,
+            336865
+          ],
+          "elapsed_ms": 9068.29999999702,
+          "history_samples": 11,
+          "max_gap_ms": 109.80000000447035,
+          "passed": true,
+          "sample_history_ms": [
+            8903.89999999851,
+            9004.70000000298,
+            9106.70000000298,
+            9207.60000000149,
+            9308.39999999851,
+            9418.20000000298,
+            9519.10000000149,
+            9620,
+            9721.10000000149,
+            9822,
+            9922.89999999851
+          ],
+          "span_ms": 1019,
+          "target_state": "bwe_lt_500k"
+        },
+        "ratio": 0.65
+      },
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-development-bwe_lt_500k-s0"
+    },
+    {
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998768698595492,
+          1.000123718070089
+        ],
+        "beta_at_origin_feasible_ms": [
+          10707.0695476182,
+          10708.874064696673
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.445945374613075,
+        "origin_browser_ms": 10303.10000000149,
+        "p95_held_out_width_ms": 2.445945374613075,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "media_passed": true,
+      "passed": true,
+      "status": "sealed",
+      "support": {
+        "ack_ms": 10048.10000000149,
+        "assigned_holds": 1,
+        "cap_bps": 372321,
+        "outcome_data_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            335864,
+            335864,
+            340262,
+            340262,
+            340262,
+            345709,
+            345709,
+            350115,
+            350115,
+            350115,
+            354591
+          ],
+          "elapsed_ms": 9099.20000000298,
+          "history_samples": 11,
+          "max_gap_ms": 109.70000000298023,
+          "passed": true,
+          "sample_history_ms": [
+            9026.60000000149,
+            9127.60000000149,
+            9228.60000000149,
+            9329.60000000149,
+            9439.30000000447,
+            9540.60000000149,
+            9641.70000000298,
+            9742.60000000149,
+            9843.39999999851,
+            9944.5,
+            10045.30000000447
+          ],
+          "span_ms": 1018.7000000029802,
+          "target_state": "bwe_lt_500k"
+        },
+        "ratio": 1.05
+      },
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-development-bwe_lt_500k-s1"
+    },
+    {
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998935436535521,
+          1.0000850805748376
+        ],
+        "beta_at_origin_feasible_ms": [
+          10602.311649145524,
+          10603.534523625614
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 1.5810531163479027,
+        "origin_browser_ms": 10201.249999996275,
+        "p95_held_out_width_ms": 1.5810531163479027,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "media_passed": true,
+      "passed": true,
+      "status": "sealed",
+      "support": {
+        "ack_ms": null,
+        "assigned_holds": 0,
+        "cap_bps": null,
+        "outcome_data_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1020054,
+            1028658,
+            1028658,
+            1035703,
+            1035703,
+            1035703,
+            1044346,
+            1044346,
+            1044346,
+            1051193,
+            1051193
+          ],
+          "elapsed_ms": 9060.70000000298,
+          "history_samples": 11,
+          "max_gap_ms": 101.90000000596046,
+          "passed": true,
+          "sample_history_ms": [
+            8881.5,
+            8982.19999999553,
+            9083.09999999404,
+            9184,
+            9285,
+            9385.79999999702,
+            9486.89999999851,
+            9588,
+            9689.09999999404,
+            9790.09999999404,
+            9892
+          ],
+          "span_ms": 1010.5,
+          "target_state": "bwe_ge_500k"
+        },
+        "ratio": null
+      },
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-development-bwe_ge_500k-census-s0-support"
+    },
+    {
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998753408566546,
+          1.000134547645115
+        ],
+        "beta_at_origin_feasible_ms": [
+          10616.19560006496,
+          10617.788604772824
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.480365051414992,
+        "origin_browser_ms": 10225.70000000298,
+        "p95_held_out_width_ms": 2.480365051414992,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 4
+      },
+      "media_passed": true,
+      "passed": true,
+      "status": "sealed",
+      "support": {
+        "ack_ms": 9941.20000000298,
+        "assigned_holds": 1,
+        "cap_bps": 1154346,
+        "outcome_data_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1076444,
+            1076444,
+            1083481,
+            1083481,
+            1083481,
+            1090597,
+            1090597,
+            1090597,
+            1090597,
+            1099377,
+            1099377
+          ],
+          "elapsed_ms": 9089.30000000447,
+          "history_samples": 11,
+          "max_gap_ms": 112.5,
+          "passed": true,
+          "sample_history_ms": [
+            8915.5,
+            9016.60000000149,
+            9129.10000000149,
+            9230.89999999851,
+            9334.20000000298,
+            9435.10000000149,
+            9536.10000000149,
+            9637,
+            9737.89999999851,
+            9838.70000000298,
+            9939.70000000298
+          ],
+          "span_ms": 1024.2000000029802,
+          "target_state": "bwe_ge_500k"
+        },
+        "ratio": 1.05
+      },
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-development-bwe_ge_500k-s0"
+    },
+    {
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999057478649176,
+          1.0001081770194449
+        ],
+        "beta_at_origin_feasible_ms": [
+          11826.867659309788,
+          11828.327788182873
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 1.9552501828111417,
+        "origin_browser_ms": 10620.79999999702,
+        "p95_held_out_width_ms": 1.9552501828111417,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "media_passed": true,
+      "passed": true,
+      "status": "sealed",
+      "support": {
+        "ack_ms": 10364.89999999851,
+        "assigned_holds": 1,
+        "cap_bps": 676442,
+        "outcome_data_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1020203,
+            1020203,
+            1025261,
+            1025261,
+            1025261,
+            1033767,
+            1033767,
+            1033767,
+            1040680,
+            1040680,
+            1040680
+          ],
+          "elapsed_ms": 9088.5,
+          "history_samples": 11,
+          "max_gap_ms": 111.90000000596046,
+          "passed": true,
+          "sample_history_ms": [
+            9337.79999999702,
+            9438.59999999404,
+            9550.5,
+            9651.59999999404,
+            9752.39999999851,
+            9856.89999999851,
+            9959.19999999553,
+            10060.09999999404,
+            10161,
+            10262.09999999404,
+            10363.5
+          ],
+          "span_ms": 1025.7000000029802,
+          "target_state": "bwe_ge_500k"
+        },
+        "ratio": 0.65
+      },
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-development-bwe_ge_500k-s1"
+    }
+  ]
+}
