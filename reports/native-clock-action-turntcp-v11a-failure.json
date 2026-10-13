@@ -1,0 +1,78 @@
+{
+  "abi": "native_turn_clock_action_v11a_capture_failure_v1",
+  "all_session_integrity_manifests_verified": true,
+  "attempted_sessions": 7,
+  "capture_index_sha256": "549dc7469743c493dafda85a3392678ac6e3aba864584df6becca0ca51b3c90b",
+  "operator_interrupted_sessions": 1,
+  "outcome_telemetry_opened": false,
+  "pooled_with_V3_V10_V11_or_future_panel": false,
+  "process_complete_sessions": 4,
+  "protocol_sha256": "2e13155b35c575a9e70908c1b5624eed311aae050cff413382d71b6dd140b1f4",
+  "protocol_sidecar_matches": true,
+  "queue_drain_failures": 2,
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-clock-action-turntcp-v11a",
+  "reason": "The two recorder failures were both at the already-registered exact TURN queue drain check. Their frozen rate traces reach 0 Mbps, so residual bottleneck bytes cannot be served at the measured capacity after the 18.6-second measurement tail. The capture was stopped and all seven attempts are excluded because the full 64-session integrity, transport, clock, and trace gates did not pass.",
+  "sessions": [
+    {
+      "capture_status": "sealed",
+      "error": null,
+      "file_count": 40,
+      "integrity_manifest_sha256": "3bfa3e1623bc2693ceba445218ce8ed53c4685229ba639c2a3c736527b91b6ac",
+      "trial": "turntcp11a-c01-vienna_lte_operator_C-r00-micro"
+    },
+    {
+      "capture_status": "failed",
+      "error": "exit code 1",
+      "file_count": 37,
+      "integrity_manifest_sha256": "149c7583881aecac9130bb8a299d2194796cb107c6d8035985945a24afda853d",
+      "pre_registered_final_rate_mbps_by_block": [
+        1.35,
+        0.0,
+        0.0
+      ],
+      "trial": "turntcp11a-c04-vienna_5g_operator_A-r01-micro"
+    },
+    {
+      "capture_status": "failed",
+      "error": "exit code 1",
+      "file_count": 37,
+      "integrity_manifest_sha256": "fe7e3b379730061bb8b6d47c961eb7a989e0c8ea330b49485570f6ed12e8a7cd",
+      "pre_registered_final_rate_mbps_by_block": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trial": "turntcp11a-c03-ucc_5g_operator_B-r01-micro"
+    },
+    {
+      "capture_status": "sealed",
+      "error": null,
+      "file_count": 40,
+      "integrity_manifest_sha256": "29f4bffc06a4e748bcb5a53bd5356dfd1099be967fb6e26ea5153e56b040a97a",
+      "trial": "turntcp11a-c02-ucc_lte_operator_A-r00-micro"
+    },
+    {
+      "capture_status": "sealed",
+      "error": null,
+      "file_count": 40,
+      "integrity_manifest_sha256": "76f82cf348632bf6801ab90ba18ecbfb5d6da7ac5a79a14a97d0b21970f81d00",
+      "trial": "turntcp11a-c01-ucc_lte_operator_A-r02-micro"
+    },
+    {
+      "capture_status": "sealed",
+      "error": null,
+      "file_count": 40,
+      "integrity_manifest_sha256": "c93f8607adf44cde0cf07af6a69413ef87752b93c84a39034c8f5d1fc05a9491",
+      "trial": "turntcp11a-c03-ucc_lte_operator_A-r02-micro"
+    },
+    {
+      "capture_status": "failed",
+      "error": "operator interruption after repeated queue-drain failure; subprocess stderr unavailable",
+      "file_count": 28,
+      "integrity_manifest_sha256": "70b30511140912387a35bdd6e19636ec34619192f8ae2aecd309950d0c822ede",
+      "trial": "turntcp11a-c01-vienna_5g_operator_A-r00-micro"
+    }
+  ],
+  "status": "excluded_capture_attempt",
+  "treatment_effects_estimated": false
+}
