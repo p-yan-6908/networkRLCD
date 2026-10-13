@@ -260,3 +260,16 @@ Its protocol SHA256 is
 V4 will not produce per-hold estimates unless every session passes checksum,
 transport, media, policy, and actual-run clock gates. Prior native, archived,
 and synthetic evidence remains frozen and unpooled.
+
+The V4 32-session panel completed and passed checksum integrity, but its
+outcome-blind gate did not qualify the study: 29/32 actual-session clock maps
+passed held-out coverage, and 24/32 sessions passed the registered transport
+rule. Three clock failures missed coverage at two high-phase markers and one
+collapse-phase marker. Eight sessions had correctly accounted A-to-B queue
+overflow (82 packets / 89,360 wire bytes); V4's plan had required zero overflow.
+All sessions retained sealed status, but no sender, frame-quality, or per-hold
+relay outcomes were opened and no action effect was estimated. The V4 capture
+and gate remain frozen; see
+[the V4 gate result](NATIVE_CLOCK_ACTION_TURN_TCP_V4_RESULTS.md). A fresh
+registration is needed to treat accounted queue drops as a delivery-cost
+outcome and to add markers close to phase boundaries.

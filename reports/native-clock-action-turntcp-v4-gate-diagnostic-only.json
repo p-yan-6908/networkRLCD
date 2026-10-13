@@ -1,0 +1,1623 @@
+{
+  "abi": "native_turntcp_v4_gate_diagnostic_only_v1",
+  "capture_index_sha256": "78221a758a856f05de66a49cd07bad9d38f9a5e35ae33f6f54fb29c513f0798a",
+  "clock_failure_marker_counts": {
+    "m0002": 2,
+    "m0004": 1
+  },
+  "clock_failure_markers": {
+    "m0004": 1
+  },
+  "clock_transport_gate_sha256": "059933b7f0c1b37121b77adb2cf9358548c0cead861c569107a63a17e6e0abb0",
+  "controller_fitted_or_promoted": false,
+  "failed_capture_sessions": 0,
+  "failed_clock_trials": [
+    "turntcp4-scene02-rep1-r065",
+    "turntcp4-scene05-rep0-r105",
+    "turntcp4-scene05-rep1-r105"
+  ],
+  "failed_transport_trials": [
+    "turntcp4-scene01-rep0-r105",
+    "turntcp4-scene02-rep0-r105",
+    "turntcp4-scene02-rep0-r065",
+    "turntcp4-scene07-rep1-r065",
+    "turntcp4-scene07-rep1-r105",
+    "turntcp4-scene05-rep0-r065",
+    "turntcp4-scene05-rep0-r105",
+    "turntcp4-scene06-rep1-r105"
+  ],
+  "outcome_telemetry_read": false,
+  "per_hold_cost_qoe_estimated": false,
+  "per_session": [
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2308724.6801250023,
+          "conservation_error_bytes": 5.820766091346741e-09,
+          "dropped_wire_bytes": 3338,
+          "forwarded_packets": 1103,
+          "forwarded_wire_bytes": 832405,
+          "max_queue_wire_bytes": 29651.0733687501,
+          "offered_wire_bytes": 835743,
+          "overflow_packets": 3,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 832404.9999999942
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2308716.361375008,
+          "conservation_error_bytes": 0,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 493,
+          "forwarded_wire_bytes": 43962,
+          "max_queue_wire_bytes": 1487.4587500000532,
+          "offered_wire_bytes": 43962,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43962
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": false,
+      "trial": "turntcp4-scene01-rep0-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2312953.3867375026,
+          "conservation_error_bytes": 1.1641532182693481e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 781,
+          "forwarded_wire_bytes": 621857,
+          "max_queue_wire_bytes": 5626.860849999974,
+          "offered_wire_bytes": 621857,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 621856.9999999988
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2312903.899862503,
+          "conservation_error_bytes": 1.4551915228366852e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 469,
+          "forwarded_wire_bytes": 42165,
+          "max_queue_wire_bytes": 1502.1812499999728,
+          "offered_wire_bytes": 42165,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 42164.999999999985
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene01-rep0-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2325011.361256236,
+          "conservation_error_bytes": -2.3283064365386963e-10,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 811,
+          "forwarded_wire_bytes": 630885,
+          "max_queue_wire_bytes": 4160.199800000013,
+          "offered_wire_bytes": 630885,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 630885.0000000002
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2325003.4556312403,
+          "conservation_error_bytes": 4.3655745685100555e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 486,
+          "forwarded_wire_bytes": 43775,
+          "max_queue_wire_bytes": 1489.9437499999608,
+          "offered_wire_bytes": 43775,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43774.999999999956
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene04-rep1-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2321073.8878125004,
+          "conservation_error_bytes": 1.6298145055770874e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 1209,
+          "forwarded_wire_bytes": 976191,
+          "max_queue_wire_bytes": 25987.37470000005,
+          "offered_wire_bytes": 976191,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 976190.9999999984
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2321065.3184374995,
+          "conservation_error_bytes": 2.9103830456733704e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 487,
+          "forwarded_wire_bytes": 44009,
+          "max_queue_wire_bytes": 1481.6243750000044,
+          "offered_wire_bytes": 44009,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 44008.99999999997
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene04-rep1-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2312708.538724995,
+          "conservation_error_bytes": 2.2118911147117615e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 1193,
+          "forwarded_wire_bytes": 959317,
+          "max_queue_wire_bytes": 26808.98529999997,
+          "offered_wire_bytes": 959317,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 959316.9999999978
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2312698.705599998,
+          "conservation_error_bytes": 2.9103830456733704e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 493,
+          "forwarded_wire_bytes": 44389,
+          "max_queue_wire_bytes": 1494.1874999999757,
+          "offered_wire_bytes": 44389,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 44388.99999999997
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene02-rep1-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": false,
+      "failed_held_out_markers": [
+        {
+          "mapped_width_ms": 3.2028210711951033,
+          "marker_id": "m0004",
+          "round_trip_ms": 2.199999999254942
+        }
+      ],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2316575.19558124,
+          "conservation_error_bytes": 2.7939677238464355e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 776,
+          "forwarded_wire_bytes": 573954,
+          "max_queue_wire_bytes": 5394.620749999995,
+          "offered_wire_bytes": 573954,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 573953.9999999972
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2316566.732456243,
+          "conservation_error_bytes": 0,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 477,
+          "forwarded_wire_bytes": 43002,
+          "max_queue_wire_bytes": 1496.0087499999959,
+          "offered_wire_bytes": 43002,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43002
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene02-rep1-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2314216.722881252,
+          "conservation_error_bytes": 0,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 1173,
+          "forwarded_wire_bytes": 964775,
+          "max_queue_wire_bytes": 29442.73937500002,
+          "offered_wire_bytes": 964775,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 964775
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2314208.3791312454,
+          "conservation_error_bytes": 1.4551915228366852e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 489,
+          "forwarded_wire_bytes": 43937,
+          "max_queue_wire_bytes": 1497.2043749999616,
+          "offered_wire_bytes": 43937,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43936.999999999985
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene00-rep1-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2311714.6069437447,
+          "conservation_error_bytes": 3.6088749766349792e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 798,
+          "forwarded_wire_bytes": 622487,
+          "max_queue_wire_bytes": 6809.081649999987,
+          "offered_wire_bytes": 622487,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 622486.9999999964
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2311703.3650687453,
+          "conservation_error_bytes": 1.4551915228366852e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 478,
+          "forwarded_wire_bytes": 43099,
+          "max_queue_wire_bytes": 1493.380000000025,
+          "offered_wire_bytes": 43099,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43098.999999999985
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene00-rep1-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2321199.5970687363,
+          "conservation_error_bytes": 5.820766091346741e-10,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 1211,
+          "forwarded_wire_bytes": 960066,
+          "max_queue_wire_bytes": 26579.4079375,
+          "offered_wire_bytes": 960066,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 960065.9999999994
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2321130.423943739,
+          "conservation_error_bytes": 2.9103830456733704e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 496,
+          "forwarded_wire_bytes": 44710,
+          "max_queue_wire_bytes": 1417.0531250000327,
+          "offered_wire_bytes": 44710,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 44709.99999999997
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene06-rep0-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2311359.175212484,
+          "conservation_error_bytes": -1.1641532182693481e-10,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 772,
+          "forwarded_wire_bytes": 573524,
+          "max_queue_wire_bytes": 5121.389949999993,
+          "offered_wire_bytes": 573524,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 573524.0000000001
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2311351.2189624812,
+          "conservation_error_bytes": 0,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 477,
+          "forwarded_wire_bytes": 42765,
+          "max_queue_wire_bytes": 1436.5756249999836,
+          "offered_wire_bytes": 42765,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 42765
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene06-rep0-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2308067.2563125,
+          "conservation_error_bytes": -1.7462298274040222e-09,
+          "dropped_wire_bytes": 1071,
+          "forwarded_packets": 1149,
+          "forwarded_wire_bytes": 922936,
+          "max_queue_wire_bytes": 29883.506043750032,
+          "offered_wire_bytes": 924007,
+          "overflow_packets": 1,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 922936.0000000017
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2308058.981312496,
+          "conservation_error_bytes": 5.820766091346741e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 491,
+          "forwarded_wire_bytes": 43979,
+          "max_queue_wire_bytes": 1491.2768750000057,
+          "offered_wire_bytes": 43979,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43978.99999999994
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": false,
+      "trial": "turntcp4-scene02-rep0-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2313807.034049992,
+          "conservation_error_bytes": -4.773028194904327e-09,
+          "dropped_wire_bytes": 11021,
+          "forwarded_packets": 977,
+          "forwarded_wire_bytes": 809416,
+          "max_queue_wire_bytes": 29888.763731250034,
+          "offered_wire_bytes": 820437,
+          "overflow_packets": 11,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 809416.0000000048
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2313799.1659249957,
+          "conservation_error_bytes": 0,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 461,
+          "forwarded_wire_bytes": 40370,
+          "max_queue_wire_bytes": 1491.0581249999896,
+          "offered_wire_bytes": 40370,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 40370
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": false,
+      "trial": "turntcp4-scene02-rep0-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2306184.3666312457,
+          "conservation_error_bytes": 8.847564458847046e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 1175,
+          "forwarded_wire_bytes": 944018,
+          "max_queue_wire_bytes": 28158.51086875002,
+          "offered_wire_bytes": 944018,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 944017.9999999912
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2306176.298506245,
+          "conservation_error_bytes": 1.4551915228366852e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 481,
+          "forwarded_wire_bytes": 43530,
+          "max_queue_wire_bytes": 1412.458124999981,
+          "offered_wire_bytes": 43530,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43529.999999999985
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene04-rep0-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2325326.450081247,
+          "conservation_error_bytes": 1.5133991837501526e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 807,
+          "forwarded_wire_bytes": 621710,
+          "max_queue_wire_bytes": 5691.182118750034,
+          "offered_wire_bytes": 621710,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 621709.9999999985
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2325309.5432062456,
+          "conservation_error_bytes": 0,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 475,
+          "forwarded_wire_bytes": 42827,
+          "max_queue_wire_bytes": 1481.2868750000039,
+          "offered_wire_bytes": 42827,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 42827
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene04-rep0-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2385973.995499997,
+          "conservation_error_bytes": 3.841705620288849e-09,
+          "dropped_wire_bytes": 3238,
+          "forwarded_packets": 890,
+          "forwarded_wire_bytes": 686217,
+          "max_queue_wire_bytes": 29997.671212500078,
+          "offered_wire_bytes": 689455,
+          "overflow_packets": 3,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 686216.9999999962
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2385966.114874991,
+          "conservation_error_bytes": -2.9103830456733704e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 455,
+          "forwarded_wire_bytes": 41803,
+          "max_queue_wire_bytes": 1492.991874999939,
+          "offered_wire_bytes": 41803,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 41803.00000000003
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": false,
+      "trial": "turntcp4-scene07-rep1-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2314055.602993738,
+          "conservation_error_bytes": -2.2118911147117615e-09,
+          "dropped_wire_bytes": 1202,
+          "forwarded_packets": 1198,
+          "forwarded_wire_bytes": 957056,
+          "max_queue_wire_bytes": 29823.641700000044,
+          "offered_wire_bytes": 958258,
+          "overflow_packets": 1,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 957056.0000000022
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2314047.134243737,
+          "conservation_error_bytes": 2.9103830456733704e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 481,
+          "forwarded_wire_bytes": 43229,
+          "max_queue_wire_bytes": 1489.1112500000022,
+          "offered_wire_bytes": 43229,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43228.99999999997
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": false,
+      "trial": "turntcp4-scene07-rep1-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2328146.6384187597,
+          "conservation_error_bytes": 2.0954757928848267e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 814,
+          "forwarded_wire_bytes": 633380,
+          "max_queue_wire_bytes": 5233.272899999982,
+          "offered_wire_bytes": 633380,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 633379.9999999979
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2328138.4321687636,
+          "conservation_error_bytes": 1.4551915228366852e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 480,
+          "forwarded_wire_bytes": 43320,
+          "max_queue_wire_bytes": 1498.9381249999897,
+          "offered_wire_bytes": 43320,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43319.999999999985
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene07-rep0-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2320091.614643747,
+          "conservation_error_bytes": 5.820766091346741e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 1207,
+          "forwarded_wire_bytes": 942034,
+          "max_queue_wire_bytes": 28448.608268750097,
+          "offered_wire_bytes": 942034,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 942033.9999999942
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2320077.442768744,
+          "conservation_error_bytes": 0,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 500,
+          "forwarded_wire_bytes": 44904,
+          "max_queue_wire_bytes": 1488.6349999999256,
+          "offered_wire_bytes": 44904,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 44904
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene07-rep0-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2312094.7117687464,
+          "conservation_error_bytes": 2.3283064365386963e-10,
+          "dropped_wire_bytes": 41353,
+          "forwarded_packets": 984,
+          "forwarded_wire_bytes": 804124,
+          "max_queue_wire_bytes": 29862.900100000155,
+          "offered_wire_bytes": 845477,
+          "overflow_packets": 37,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 804123.9999999998
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2312086.3367687427,
+          "conservation_error_bytes": 0,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 485,
+          "forwarded_wire_bytes": 42581,
+          "max_queue_wire_bytes": 1488.7981250000112,
+          "offered_wire_bytes": 42581,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 42581
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": false,
+      "trial": "turntcp4-scene05-rep0-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": false,
+      "failed_held_out_markers": [
+        {
+          "mapped_width_ms": 4.094630472445715,
+          "marker_id": "m0002",
+          "round_trip_ms": 7.199999999254942
+        }
+      ],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2325490.033406245,
+          "conservation_error_bytes": -3.725290298461914e-09,
+          "dropped_wire_bytes": 23090,
+          "forwarded_packets": 1170,
+          "forwarded_wire_bytes": 947419,
+          "max_queue_wire_bytes": 29960.735425000083,
+          "offered_wire_bytes": 970509,
+          "overflow_packets": 21,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 947419.0000000037
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2325469.659031246,
+          "conservation_error_bytes": 2.9103830456733704e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 497,
+          "forwarded_wire_bytes": 43988,
+          "max_queue_wire_bytes": 1487.2962500000372,
+          "offered_wire_bytes": 43988,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43987.99999999997
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": false,
+      "trial": "turntcp4-scene05-rep0-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2325873.261118752,
+          "conservation_error_bytes": 3.14321368932724e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 806,
+          "forwarded_wire_bytes": 627748,
+          "max_queue_wire_bytes": 5158.104699999987,
+          "offered_wire_bytes": 627748,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 627747.9999999969
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2325864.961118755,
+          "conservation_error_bytes": 0,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 474,
+          "forwarded_wire_bytes": 42817,
+          "max_queue_wire_bytes": 1494.3499999999917,
+          "offered_wire_bytes": 42817,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 42817
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene05-rep1-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": false,
+      "failed_held_out_markers": [
+        {
+          "mapped_width_ms": 4.190968838682238,
+          "marker_id": "m0002",
+          "round_trip_ms": 3.699999999254942
+        }
+      ],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2320428.708143734,
+          "conservation_error_bytes": 2.561137080192566e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 1201,
+          "forwarded_wire_bytes": 947701,
+          "max_queue_wire_bytes": 28981.32639374998,
+          "offered_wire_bytes": 947701,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 947700.9999999974
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2320418.3737687324,
+          "conservation_error_bytes": 2.9103830456733704e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 492,
+          "forwarded_wire_bytes": 44411,
+          "max_queue_wire_bytes": 1598.6206249999946,
+          "offered_wire_bytes": 44411,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 44410.99999999997
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene05-rep1-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2318391.9071312486,
+          "conservation_error_bytes": 1.6298145055770874e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 1203,
+          "forwarded_wire_bytes": 965620,
+          "max_queue_wire_bytes": 27939.379843749997,
+          "offered_wire_bytes": 965620,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 965619.9999999984
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2318383.6008812473,
+          "conservation_error_bytes": 1.4551915228366852e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 481,
+          "forwarded_wire_bytes": 43561,
+          "max_queue_wire_bytes": 1493.611875000079,
+          "offered_wire_bytes": 43561,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43560.999999999985
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene00-rep0-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2312633.492362493,
+          "conservation_error_bytes": -1.862645149230957e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 807,
+          "forwarded_wire_bytes": 636522,
+          "max_queue_wire_bytes": 4245.482099999982,
+          "offered_wire_bytes": 636522,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 636522.0000000019
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2312625.3679874977,
+          "conservation_error_bytes": 0,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 480,
+          "forwarded_wire_bytes": 43301,
+          "max_queue_wire_bytes": 1482.8206250000394,
+          "offered_wire_bytes": 43301,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43301
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene00-rep0-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2323349.4534812486,
+          "conservation_error_bytes": 2.3283064365386963e-10,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 808,
+          "forwarded_wire_bytes": 622900,
+          "max_queue_wire_bytes": 3898.0162000000205,
+          "offered_wire_bytes": 622900,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 622899.9999999998
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2323341.303481262,
+          "conservation_error_bytes": 2.9103830456733704e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 481,
+          "forwarded_wire_bytes": 43373,
+          "max_queue_wire_bytes": 1471.7662499999537,
+          "offered_wire_bytes": 43373,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43372.99999999997
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene06-rep1-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2317957.202806256,
+          "conservation_error_bytes": 1.3969838619232178e-09,
+          "dropped_wire_bytes": 5047,
+          "forwarded_packets": 1114,
+          "forwarded_wire_bytes": 849844,
+          "max_queue_wire_bytes": 29953.03733124995,
+          "offered_wire_bytes": 854891,
+          "overflow_packets": 5,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 849843.9999999986
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2317948.5334312567,
+          "conservation_error_bytes": -1.4551915228366852e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 485,
+          "forwarded_wire_bytes": 43392,
+          "max_queue_wire_bytes": 1589.0368750000328,
+          "offered_wire_bytes": 43392,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43392.000000000015
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": false,
+      "trial": "turntcp4-scene06-rep1-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2336974.8436062546,
+          "conservation_error_bytes": -2.3283064365386963e-10,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 803,
+          "forwarded_wire_bytes": 622638,
+          "max_queue_wire_bytes": 6433.935849999982,
+          "offered_wire_bytes": 622638,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 622638.0000000002
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2336966.6254812567,
+          "conservation_error_bytes": 4.3655745685100555e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 484,
+          "forwarded_wire_bytes": 43562,
+          "max_queue_wire_bytes": 1499.1637499999174,
+          "offered_wire_bytes": 43562,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43561.999999999956
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene03-rep1-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2321470.8005812294,
+          "conservation_error_bytes": 2.561137080192566e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 1214,
+          "forwarded_wire_bytes": 959199,
+          "max_queue_wire_bytes": 24041.77846875001,
+          "offered_wire_bytes": 959199,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 959198.9999999974
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2321462.788706239,
+          "conservation_error_bytes": 1.4551915228366852e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 495,
+          "forwarded_wire_bytes": 44610,
+          "max_queue_wire_bytes": 1487.9718750001077,
+          "offered_wire_bytes": 44610,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 44609.999999999985
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene03-rep1-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2311915.0073562562,
+          "conservation_error_bytes": 3.725290298461914e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 1213,
+          "forwarded_wire_bytes": 985395,
+          "max_queue_wire_bytes": 27389.715306250087,
+          "offered_wire_bytes": 985395,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 985394.9999999963
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2311906.3323562546,
+          "conservation_error_bytes": 2.9103830456733704e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 488,
+          "forwarded_wire_bytes": 44122,
+          "max_queue_wire_bytes": 1492.0468750000512,
+          "offered_wire_bytes": 44122,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 44121.99999999997
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene01-rep1-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2322238.45133749,
+          "conservation_error_bytes": 3.841705620288849e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 801,
+          "forwarded_wire_bytes": 617472,
+          "max_queue_wire_bytes": 5040.499950000023,
+          "offered_wire_bytes": 617472,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 617471.9999999962
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2322229.3250874933,
+          "conservation_error_bytes": 2.9103830456733704e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 479,
+          "forwarded_wire_bytes": 43134,
+          "max_queue_wire_bytes": 1490.9262499999672,
+          "offered_wire_bytes": 43134,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 43133.99999999997
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene01-rep1-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2325514.743250001,
+          "conservation_error_bytes": 1.3969838619232178e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 823,
+          "forwarded_wire_bytes": 647497,
+          "max_queue_wire_bytes": 6143.020349999975,
+          "offered_wire_bytes": 647497,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 647496.9999999986
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2325506.8813749966,
+          "conservation_error_bytes": 2.9103830456733704e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 476,
+          "forwarded_wire_bytes": 42968,
+          "max_queue_wire_bytes": 1491.6337500000284,
+          "offered_wire_bytes": 42968,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 42967.99999999997
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene03-rep0-r065",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    },
+    {
+      "capture_status": "sealed",
+      "clock_passed": true,
+      "failed_held_out_markers": [],
+      "marker_count": 7,
+      "policy_unchanged": true,
+      "queue": {
+        "a_to_b": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2315251.475874982,
+          "conservation_error_bytes": -1.1641532182693481e-09,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 1209,
+          "forwarded_wire_bytes": 960782,
+          "max_queue_wire_bytes": 28597.06936250007,
+          "offered_wire_bytes": 960782,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 960782.0000000012
+        },
+        "b_to_a": {
+          "capacity_integral_upper_bound_ok": true,
+          "capacity_integral_wire_bytes": 2315243.2883749856,
+          "conservation_error_bytes": 1.4551915228366852e-11,
+          "dropped_wire_bytes": 0,
+          "forwarded_packets": 497,
+          "forwarded_wire_bytes": 44847,
+          "max_queue_wire_bytes": 1488.672499999973,
+          "offered_wire_bytes": 44847,
+          "overflow_packets": 0,
+          "queue_limit_wire_bytes": 30000,
+          "queued_wire_bytes": 0,
+          "send_errors": 0,
+          "served_wire_bytes": 44846.999999999985
+        },
+        "capacity_mbps": 1.2,
+        "ipv4_udp_header_bytes": 28,
+        "one_way_propagation_ms": 25
+      },
+      "transport_passed": true,
+      "trial": "turntcp4-scene03-rep0-r105",
+      "turn_candidates": [
+        1,
+        1
+      ]
+    }
+  ],
+  "planned_sessions": 32,
+  "policy_unchanged_sessions": 32,
+  "pooling": "none",
+  "protocol_sha256": "1937b2a88ca08f1a7d25382a09aacab36c80c28bcac79404add1f5346b739a2c",
+  "qualified_clock_sessions": 29,
+  "qualified_transport_sessions": 24,
+  "queue_aggregate": {
+    "a_to_b": {
+      "byte_conservation_error_max_abs": 8.847564458847046e-09,
+      "capacity_integral_valid_all_sessions": true,
+      "forwarded_packets_max": 1214,
+      "forwarded_packets_min": 772,
+      "max_queue_high_water_wire_bytes": 29997.671212500078,
+      "sessions_with_overflow": 8,
+      "total_dropped_wire_bytes": 89360,
+      "total_forwarded_packets": 32200,
+      "total_offered_wire_bytes": 25516449,
+      "total_overflow_packets": 82,
+      "total_send_errors": 0
+    },
+    "b_to_a": {
+      "byte_conservation_error_max_abs": 5.820766091346741e-11,
+      "capacity_integral_valid_all_sessions": true,
+      "forwarded_packets_max": 500,
+      "forwarded_packets_min": 455,
+      "max_queue_high_water_wire_bytes": 1598.6206249999946,
+      "sessions_with_overflow": 0,
+      "total_dropped_wire_bytes": 0,
+      "total_forwarded_packets": 15463,
+      "total_offered_wire_bytes": 1390442,
+      "total_overflow_packets": 0,
+      "total_send_errors": 0
+    }
+  },
+  "sealed_sessions": 32,
+  "transport_failure_rule": "The V4 protocol required zero queue overflow drops; eight sessions had accounted A-to-B queue drops, so the pre-registered transport gate failed. Drops are preserved as queue outcomes and were not reclassified."
+}
