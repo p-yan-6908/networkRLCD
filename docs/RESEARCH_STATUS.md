@@ -303,3 +303,25 @@ recovery marker, retaining the existing thresholds.
 That V7 design is now registered in
 [the V7 plan](NATIVE_CLOCK_ACTION_TURN_TCP_V7_PLAN.md) with four held-out
 exchanges, the final exchange in training, and no acceptance-threshold changes.
+
+The fresh V7 panel passed its outcome-blind gates: all 32 sessions passed
+checksum/integrity, relay-only TURN/TCP transport, exact queue replay, and
+actual-run sender/relay clock validation. The held-out 120-marker calibration
+also remained qualified. With action readbacks and complete hold coverage
+verified, V7's paired eight-seed analysis found a state interaction for
+on-time delivery (collapse minus high: +25.8 percentage points, 95% CI
+[+12.2, +39.3]) and offered relay bytes (+15.7 kB, 95% CI [+4.8, +26.6]).
+Queue drops were zero. These are unadjusted development intervals from one
+generated scene family and one local capacity schedule. V7 does not establish
+a sender-observable policy or full-session gain and did not fit or promote a
+controller. Its complete result and hashes are recorded in the
+[V7 result note](NATIVE_CLOCK_ACTION_TURN_TCP_V7_RESULTS.md); the raw sessions,
+V3 result, and prior frozen evidence remain unchanged and unpooled.
+
+The next native validation is a fresh randomized comparison of a fixed,
+sender-observable pre-action rule against fixed 0.65. It must use new scene
+seeds, whole-session delivery/quality and relay-cost outcomes, verify every
+requested cap against native readback, and retain the actual-run clock and
+queue gates. V7's scripted phase names cannot be used as controller inputs.
+No controller should be fitted or promoted unless independent factual evidence
+establishes conditional value over that strong baseline.
