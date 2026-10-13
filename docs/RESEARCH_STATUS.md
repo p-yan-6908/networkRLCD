@@ -370,3 +370,29 @@ same media, TURN/queue, and actual-run clock acceptance gates. A null or
 negative result closes this local policy candidate; it will not trigger a
 post-hoc threshold or action search. V9 and every earlier frozen study remain
 unpooled.
+
+## 2026-10-13 V10 whole-session policy validation
+
+V10 completed all 48 registered sessions on new generated-scene seeds. No
+capture failed. Checksum, transport/media, exact queue replay, immutable-policy,
+and actual-run clock gates passed 48/48; the widest held-out clock interval
+was 3.212 ms. All 288 action-boundary assignments and native cap readbacks
+replayed. The first post-gate analyzer stopped because it compared in-hold
+sender BWE samples with the earlier action-boundary BWE. The separate corrected
+replay checks BWE only at the six assignment starts while verifying every
+decision's policy ratio, proposal, and native readback; no capture or acceptance
+criteria changed.
+
+The fixed BWE-threshold rule lost 14.1 percentage points of whole-session
+on-time delivery to fixed 0.65 (95% CI [−22.6, −5.5]). Its overall PSNR effect
+was +0.257 dB [−0.132, +0.646], and its guaranteed relay-byte difference was
+−2,438 [−12,120, +7,244]. The per-phase differences show that the high-phase
+PSNR increase did not compensate for delivery and PSNR losses in collapse and
+recovery. The rule does not establish conditional policy value over the strong
+baseline. No controller was fit or promoted, and no further threshold search
+is warranted on this scene/queue family. See the [V10 result](NATIVE_CLOCK_ACTION_TURN_TCP_V10_RESULTS.md).
+
+The next useful evidence requires an independently sourced content family and
+a measured network family. V10 is still local loopback TURN/queue native-stack
+evidence; it does not supply either missing family. V3–V9, archived telemetry,
+recorded-video results, and synthetic studies remain unchanged and unpooled.

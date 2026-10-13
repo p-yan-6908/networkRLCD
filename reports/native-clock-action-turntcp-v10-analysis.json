@@ -1,0 +1,1295 @@
+{
+  "abi": "native_turn_clock_action_probe_v10_turn_tcp_report",
+  "action_validation": {
+    "all_policy_ratios_and_cap_readbacks_match": true,
+    "epoch_starts": 288,
+    "mismatches": 0
+  },
+  "actual_run_clock_transport_gate_sha256": "448fb02eb49250ae1d99341d77e4625324693fc43ff83570db2f93f0d5244024",
+  "analysis_code_correction": {
+    "acceptance_criteria_changed": false,
+    "all_48_sessions_rechecked_after_gate": true,
+    "caps_still_replayed_for_every_decision": true,
+    "correction": "compare the saved pre-action BWE observation with the action assignment only at that epoch start; subsequent sender BWE samples may change during the three-second hold",
+    "kind": "post-capture validator correction; capture and registered protocol unchanged",
+    "original_loader_source_sha256": "6559f8f9005f6d576f76bf07bd99f78b4e3c609eef338a104c8fceff9ae8e6fa",
+    "reanalysis_tool_sha256": "130a50b579508fb60717dbbb0dd0817dbd1f02c0ed167074d16954c5866e049b",
+    "registered_core_sha256": "6559f8f9005f6d576f76bf07bd99f78b4e3c609eef338a104c8fceff9ae8e6fa"
+  },
+  "analysis_unit": "generated-scene seed cluster after averaging two randomized whole-session repetitions per policy",
+  "capture_index_sha256": "ed73cb4c8792ec3e4f58cbbae781a3ef5819683357a35adbc154bc9854b61762",
+  "clock_calibration_reference": {
+    "alpha_feasible": [
+      0.9999546003609853,
+      1.0000401842261328
+    ],
+    "coverage": 1.0,
+    "held_out_covered": 60,
+    "integrity_manifest_sha256": "e103234d399a6d1b85d461ec8b908ef8bdec141204a76949fc276a057a6bb7ab",
+    "marker_count": 120,
+    "max_held_out_width_ms": 2.642349057176034,
+    "protocol_sha256": "9c09468dda2d6126dcb551fe14762c7d64de722c2b03d04430e657ad8b0a3f1f",
+    "qualified": true,
+    "report_sha256": "27946a8b2a312ab30ddbf6dbfefadc419f1e010cd32fe66f7f491fec09711dbf",
+    "root": "/home/agent/.cache/networkrlcd/native-clock-action-probe-v1-final3"
+  },
+  "clock_report_sha256": "27946a8b2a312ab30ddbf6dbfefadc419f1e010cd32fe66f7f491fec09711dbf",
+  "clock_validation_failures": [],
+  "confidence": 0.95,
+  "controller_fitted_or_promoted": false,
+  "degrees_of_freedom": 11,
+  "limits": [
+    "This is a single fixed threshold rule validation and is not a fitted controller.",
+    "The scene algorithm, local TURN relay, and capacity schedule remain one source family.",
+    "The 150 ms pixel-readback and sampled RGB PSNR are delivery/QoE proxies, not human QoE.",
+    "Relay bytes are local transport-volume measures, not measured-Internet cost.",
+    "No pooling with V3-V9, archived native sessions, recorded-video results, or simulator/synthetic-controller evidence."
+  ],
+  "maximum_actual_run_held_out_clock_width_ms": 3.211257010765621,
+  "outcome_data_read_after_gate": true,
+  "policy_effects_bwe_threshold_minus_fixed065": {
+    "all": {
+      "guaranteed_dropped_wire_bytes": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0,
+        "n": 12,
+        "sd": 0.0
+      },
+      "guaranteed_wire_bytes": {
+        "ci95": [
+          -12119.796811099886,
+          7244.463477766554
+        ],
+        "mean": -2437.6666666666665,
+        "n": 12,
+        "sd": 15238.474634850094
+      },
+      "mean_ontime_psnr_db": {
+        "ci95": [
+          -0.13216012596091986,
+          0.6463467322984712
+        ],
+        "mean": 0.25709330316877566,
+        "n": 12,
+        "sd": 0.6126367253730521
+      },
+      "on_time_fraction": {
+        "ci95": [
+          -0.22594642716689273,
+          -0.055408066630453126
+        ],
+        "mean": -0.14067724689867292,
+        "n": 12,
+        "sd": 0.13420313725061905
+      },
+      "possible_dropped_wire_bytes": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0,
+        "n": 12,
+        "sd": 0.0
+      },
+      "possible_wire_bytes": {
+        "ci95": [
+          -12401.574045321617,
+          7107.490711988285
+        ],
+        "mean": -2647.0416666666665,
+        "n": 12,
+        "sd": 15352.426791373073
+      }
+    },
+    "collapse": {
+      "guaranteed_dropped_wire_bytes": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0,
+        "n": 12,
+        "sd": 0.0
+      },
+      "guaranteed_wire_bytes": {
+        "ci95": [
+          -17496.217234712734,
+          -6303.116098620598
+        ],
+        "mean": -11899.666666666666,
+        "n": 12,
+        "sd": 8808.277992716266
+      },
+      "mean_ontime_psnr_db": {
+        "ci95": [
+          -0.6836412392627088,
+          -0.5818825112085159
+        ],
+        "mean": -0.6327618752356123,
+        "n": 2,
+        "sd": 0.03671137074083549
+      },
+      "on_time_fraction": {
+        "ci95": [
+          -0.4700586677454708,
+          -0.15560318032709153
+        ],
+        "mean": -0.31283092403628115,
+        "n": 12,
+        "sd": 0.24745701087118066
+      },
+      "possible_dropped_wire_bytes": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0,
+        "n": 12,
+        "sd": 0.0
+      },
+      "possible_wire_bytes": {
+        "ci95": [
+          -17962.087287607763,
+          -6318.912712392238
+        ],
+        "mean": -12140.5,
+        "n": 12,
+        "sd": 9162.457939876178
+      }
+    },
+    "high": {
+      "guaranteed_dropped_wire_bytes": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0,
+        "n": 12,
+        "sd": 0.0
+      },
+      "guaranteed_wire_bytes": {
+        "ci95": [
+          4333.704369928673,
+          26926.712296737995
+        ],
+        "mean": 15630.208333333334,
+        "n": 12,
+        "sd": 17779.299239000513
+      },
+      "mean_ontime_psnr_db": {
+        "ci95": [
+          0.7356994874467259,
+          1.75459406796787
+        ],
+        "mean": 1.245146777707298,
+        "n": 12,
+        "sd": 0.8018069881959111
+      },
+      "on_time_fraction": {
+        "ci95": [
+          -0.033325105944518395,
+          0.028319437010278097
+        ],
+        "mean": -0.0025028344671201483,
+        "n": 12,
+        "sd": 0.04851044089371631
+      },
+      "possible_dropped_wire_bytes": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0,
+        "n": 12,
+        "sd": 0.0
+      },
+      "possible_wire_bytes": {
+        "ci95": [
+          4227.210181867664,
+          26981.289818132336
+        ],
+        "mean": 15604.25,
+        "n": 12,
+        "sd": 17906.052707623247
+      }
+    },
+    "recovery": {
+      "guaranteed_dropped_wire_bytes": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0,
+        "n": 12,
+        "sd": 0.0
+      },
+      "guaranteed_wire_bytes": {
+        "ci95": [
+          -8284.318461081986,
+          -4052.0982055846803
+        ],
+        "mean": -6168.208333333333,
+        "n": 12,
+        "sd": 3330.4954617644103
+      },
+      "mean_ontime_psnr_db": {
+        "ci95": [
+          -0.7768053623751647,
+          -0.38823997668335447
+        ],
+        "mean": -0.5825226695292596,
+        "n": 12,
+        "sd": 0.3057769150753349
+      },
+      "on_time_fraction": {
+        "ci95": [
+          -0.2585757924370839,
+          0.05020986273186856
+        ],
+        "mean": -0.10418296485260767,
+        "n": 12,
+        "sd": 0.24299520372606492
+      },
+      "possible_dropped_wire_bytes": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0,
+        "n": 12,
+        "sd": 0.0
+      },
+      "possible_wire_bytes": {
+        "ci95": [
+          -8231.57733618861,
+          -3990.005997144725
+        ],
+        "mean": -6110.791666666667,
+        "n": 12,
+        "sd": 3337.854185893668
+      }
+    }
+  },
+  "policy_rule": {
+    "abi": "native_bwe_threshold_policy_v1",
+    "baseline_rule": "at each three-second boundary, use ratio 0.65",
+    "cap_formula": "round(ratio * pre-action BWE), clipped to 150000\u20134000000 bps",
+    "excluded_inputs": [
+      "scheduled phase",
+      "queue capacity",
+      "relay events",
+      "receiver pixels",
+      "future labels"
+    ],
+    "hold_ms": 3000,
+    "inputs": "only the current pre-action sender BWE estimate",
+    "state_threshold_bps": 500000,
+    "threshold_rule": "at each three-second boundary, observe the current sender BWE; use ratio 1.05 at or above 500000 bps, otherwise ratio 0.65"
+  },
+  "preflight_reference": {
+    "bidirectional_video_frames": [
+      39,
+      40
+    ],
+    "passed": true,
+    "path": "/home/agent/.cache/networkrlcd/native-turn-tcp-queue-preflight-v2.json",
+    "policy_sha256": "10ee54ed22fc23337096004f8248d6ea977f059149386e0f9e70c4b77d9db6b5",
+    "queue_forwarded_packets": [
+      113,
+      114
+    ],
+    "sha256": "a45a8e2a9fec3303a8c09afb8d44896b8b642692fbc43a37d9917e768c345061",
+    "source_sha256": "74306c30a373430acaa9a37b9486fe83632624454df002c3661513cf67b34874",
+    "turn_candidates": [
+      1,
+      1
+    ]
+  },
+  "primary_effect": {
+    "ci95": [
+      -0.22594642716689273,
+      -0.055408066630453126
+    ],
+    "mean": -0.14067724689867292,
+    "n": 12,
+    "sd": 0.13420313725061905
+  },
+  "primary_endpoint": "whole-session 150 ms receiver on-time frame fraction across six registered 800 ms post-ack windows; threshold-rule minus fixed-0.65 difference paired by seed after averaging two repetitions per policy",
+  "prior_frozen_studies": {
+    "turn_v2": {
+      "attempted_sessions": 32,
+      "capture_index_sha256": "f54a6cd6a5d042bbeb14eb7b3e6e51c6f84fdeaa65e6d912be18e68aee830414",
+      "failure_class": "selected local peer-reflexive classification rejected after TURN-backed ICE connection",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "31b220e8904be3e900ebe6c21a5a0f4550e56db927fe223fee95a3a041f10beb"
+    },
+    "turn_v3": {
+      "attempted_sessions": 32,
+      "capture_index_sha256": "2fac8af41adcc378b63951f3e84b30919462abda5a28c779aa6ca120d96257d8",
+      "clock_failed_trials": [
+        "turntcp3-scene01-rep1-r065",
+        "turntcp3-scene00-rep1-r065",
+        "turntcp3-scene01-rep0-r065"
+      ],
+      "clock_valid_sessions": 29,
+      "diagnostic_sha256": "bce4517a5e6003516b01168eeb15c486e934acdd867185c2dcc26001e4b477e4",
+      "failed_sessions": 32,
+      "failure_class": "phase-snapshot guard read an unrecorded remote_candidate_type field after the registered session schedule",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "a599601b5182ca4e3de24ec3a93cd422f0afba11c7de613d7196433f2affd4d6"
+    },
+    "turn_v4": {
+      "capture_index_sha256": "78221a758a856f05de66a49cd07bad9d38f9a5e35ae33f6f54fb29c513f0798a",
+      "clock_qualified_sessions": 29,
+      "diagnostic_sha256": "390bfb7fc961e7df30708e2a3b8cac123a71ad5067c815935f3895b820cf8ad5",
+      "failure_class": "three sessions missed held-out clock coverage; eight sessions violated V4's registered zero-overflow queue rule",
+      "gate_sha256": "059933b7f0c1b37121b77adb2cf9358548c0cead861c569107a63a17e6e0abb0",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "1937b2a88ca08f1a7d25382a09aacab36c80c28bcac79404add1f5346b739a2c",
+      "sealed_sessions": 32,
+      "transport_qualified_sessions": 24
+    },
+    "turn_v5": {
+      "capture_index_sha256": "1b2f6c59d369131ef9625c5be6c5546370bdfc274d2f3d326f4e175591223143",
+      "clock_qualified_sessions": 30,
+      "diagnostic_sha256": "05eae9136a0b19617847c030289eaa156639d04d35088c73f88c48949842ade0",
+      "failed_trials": [
+        "turntcp5-scene00-rep0-r065",
+        "turntcp5-scene04-rep0-r105"
+      ],
+      "failure_class": "two sessions missed held-out coverage at the initial high-phase marker m0002",
+      "gate_sha256": "632494e98c4c2906e61ec36b0a09f64ba363e3d85381490f4160033bec21e6b8",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "394ae78949257e5ffb6f38a0802970c201e8b869bbb5a854dd505ea5bde9f7cb",
+      "sealed_sessions": 32,
+      "transport_qualified_sessions": 32
+    },
+    "turn_v6": {
+      "capture_index_sha256": "acafe0778cd9c0d67e1c7efa42c26036a6476ae60121d880105093230dbc46bb",
+      "clock_qualified_sessions": 11,
+      "diagnostic_sha256": "eb9917acc4d83c892789cdd17fcbb02e2947583f97f4798d404ce52d8f361269",
+      "failed_marker_counts": {
+        "m0003": 2,
+        "m0011": 21
+      },
+      "failure_class": "21 sessions missed final held-out marker m0011 and two also missed m0003",
+      "gate_sha256": "09ed6e6dd17b0aec769f358e791cb341d7e976d447d8d43b08acc609720715f9",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "d1edb0aca40e9e54ed2f5371671f950d6644df954151ca7e6ed71da79ef99648",
+      "sealed_sessions": 32,
+      "transport_qualified_sessions": 32
+    },
+    "turn_v7": {
+      "analysis_sha256": "3e78b850e351f8f34fea6afb244376931e4cffd7c50bdf9c8ec8b3743e5c725c",
+      "capture_index_sha256": "8bbcc5de8b6d7e2f79dffb2abb07d85418a54dc8867deb2e865658cc9683f037",
+      "clock_and_transport_passed": true,
+      "clock_transport_gate_sha256": "48af59918b64103ec050f9ada709b94f8f813ca671d617ea64dbfa856e38aa9b",
+      "pooled": false,
+      "protocol_sha256": "2eeaf29d04fdfdd63de57132bbec8308957a330180f3f9beeb6b123a1e75b85e",
+      "sessions": 32
+    },
+    "turn_v8": {
+      "analysis_sha256": "d324e806c5ebd38ce6497994e73710c3c0cfab3d0ea86e0de16bf1a728b8afd4",
+      "capture_index_sha256": "21419782f45dc9c8ac096071ad299b86b04cd8f063199acbea6deee3503afc4c",
+      "clock_transport_gate_sha256": "98c47e187b485a0b65c3a3ad6c05ab10e6bf4f37adfc5ecad7b9e83aa30ea9c5",
+      "pooled": false,
+      "protocol_sha256": "102aba4d5d22a3ef3b33d17216ee8fe89b8a5addf2d96f2fcb35c5dedd5139c0",
+      "sessions": 48
+    },
+    "turn_v9": {
+      "analysis_sha256": "a20a40e4417cbd2992af71b695d0972b601dc6178394e7dbe41d544c67a12617",
+      "capture_index_sha256": "6e794eb49b55cbc2b927330eb581c54f4be5f08500242d31e878906b171abe6f",
+      "clock_transport_gate_sha256": "8246730530a9667892b1a22319893e9c06aaf6b54d35d39379bdb3e158b0c5a3",
+      "pooled": false,
+      "protocol_sha256": "fff551a003c703e1dc38886e9f70a7df700c9d0904a2efc88ac7062492c93484",
+      "sessions": 48
+    }
+  },
+  "protocol_sha256": "30f51e5240cd142533bc198c5b7e50d584327e022300d00ce7f06ef850b178fd",
+  "runtime": {
+    "chromium_binary_path": "/usr/bin/chromium",
+    "chromium_sha256": "2c8d32d29dc6781c35ae196ea83299d507ac88fc339301abe74672feda299779",
+    "chromium_version": "Chrome/154.0.8037.57",
+    "coturn_binary_path": "/home/agent/.cache/networkrlcd/turn-runtime/extracted/usr/bin/turnserver",
+    "coturn_binary_sha256": "6de6c80134271abd2c51cbadac1e2bb973ac89b5491b0a2ae480148d66a37162",
+    "coturn_library_dir": "/home/agent/.cache/networkrlcd/turn-runtime/extracted/usr/lib/x86_64-linux-gnu",
+    "coturn_library_sha256": {
+      "libevent_extra-2.1.so.7": "0da7f591283f063939323d9dc3370dc9e53559c6b2c43c28c18159bb8f656daf",
+      "libevent_openssl-2.1.so.7": "2ec9f0a63b5af4df80b7155611794246ebe9932ded259bbba873bfc9da98d5f9",
+      "libhiredis.so.1.1.0": "adfb8e6f9d2d430d5d577f85626490769fb69ef41a6967fba611b5a16b09ab15"
+    },
+    "coturn_package_path": "/home/agent/.cache/networkrlcd/turn-runtime/coturn_4.6.1-2_amd64.deb",
+    "coturn_package_sha256": "cb55194d0118d26035aa39aa7306fd810a47069643266724357e8da2a22612e0",
+    "coturn_version": "4.6.1",
+    "managed_policy_path": "/etc/chromium/policies/managed/misc.json",
+    "managed_policy_sha256": "10ee54ed22fc23337096004f8248d6ea977f059149386e0f9e70c4b77d9db6b5",
+    "managed_policy_value": "disable_non_proxied_udp",
+    "network_policy": "TURN control TCP and relay/queue UDP are loopback-only"
+  },
+  "sealed_sessions": 48,
+  "seed_cluster_policy_outcomes": {
+    "8100": {
+      "bwe_threshold": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 150655.5,
+          "mean_ontime_psnr_db": 27.354619286233167,
+          "on_time_fraction": 0.48275862068965514,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 152229.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 33727.5,
+          "mean_ontime_psnr_db": null,
+          "on_time_fraction": 0.0,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 33727.5
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 77019,
+          "mean_ontime_psnr_db": 29.097846174327696,
+          "on_time_fraction": 0.5729166666666667,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 78593
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 39909,
+          "mean_ontime_psnr_db": 26.227844235944428,
+          "on_time_fraction": 0.8854166666666667,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 39909
+        }
+      },
+      "fixed065": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 153089.5,
+          "mean_ontime_psnr_db": 27.03463846761327,
+          "on_time_fraction": 0.6156462585034014,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 156234.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 52017.5,
+          "mean_ontime_psnr_db": 26.730330646491165,
+          "on_time_fraction": 0.30718537414965985,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 53766
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 56663.5,
+          "mean_ontime_psnr_db": 27.51440195839203,
+          "on_time_fraction": 0.5965306122448979,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 56702.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 44408.5,
+          "mean_ontime_psnr_db": 26.787901831575475,
+          "on_time_fraction": 0.9387755102040816,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 45766
+        }
+      }
+    },
+    "8101": {
+      "bwe_threshold": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 146511,
+          "mean_ontime_psnr_db": 27.331216297752754,
+          "on_time_fraction": 0.6283664150591743,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 148378.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 40304,
+          "mean_ontime_psnr_db": 26.525493750870737,
+          "on_time_fraction": 0.35714285714285715,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 40671
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 63740,
+          "mean_ontime_psnr_db": 28.44233706233202,
+          "on_time_fraction": 0.5816326530612245,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 65201.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 42467,
+          "mean_ontime_psnr_db": 26.756282438792958,
+          "on_time_fraction": 0.9489795918367347,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 42506
+        }
+      },
+      "fixed065": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 156292.5,
+          "mean_ontime_psnr_db": 27.182519713098348,
+          "on_time_fraction": 0.5878365611714691,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 157468
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 50596,
+          "mean_ontime_psnr_db": 27.13229676690885,
+          "on_time_fraction": 0.21428571428571427,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 50966
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 55914.5,
+          "mean_ontime_psnr_db": 27.37607608407725,
+          "on_time_fraction": 0.5977891156462585,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 56720
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 49782,
+          "mean_ontime_psnr_db": 27.06883371097142,
+          "on_time_fraction": 0.9583333333333333,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 49782
+        }
+      }
+    },
+    "8102": {
+      "bwe_threshold": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 154134,
+          "mean_ontime_psnr_db": 27.433034590490564,
+          "on_time_fraction": 0.5326169107227209,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 155331.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 38164.5,
+          "mean_ontime_psnr_db": null,
+          "on_time_fraction": 0.0,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 38164.5
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 77407.5,
+          "mean_ontime_psnr_db": 29.2015806179298,
+          "on_time_fraction": 0.6354166666666667,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 78605
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 38562,
+          "mean_ontime_psnr_db": 26.276760249282724,
+          "on_time_fraction": 0.96875,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 38562
+        }
+      },
+      "fixed065": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 168434.5,
+          "mean_ontime_psnr_db": 27.480103054917365,
+          "on_time_fraction": 0.4873963283943714,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 170243
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 35571.5,
+          "mean_ontime_psnr_db": 26.466828945292416,
+          "on_time_fraction": 0.23469387755102042,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 35571.5
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 91748.5,
+          "mean_ontime_psnr_db": 28.862138899032857,
+          "on_time_fraction": 0.5204081632653061,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 93557
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 41114.5,
+          "mean_ontime_psnr_db": 26.436522539066367,
+          "on_time_fraction": 0.7040816326530612,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 41114.5
+        }
+      }
+    },
+    "8103": {
+      "bwe_threshold": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 157542,
+          "mean_ontime_psnr_db": 27.5092374457987,
+          "on_time_fraction": 0.4708321684838319,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 158926
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 35160.5,
+          "mean_ontime_psnr_db": null,
+          "on_time_fraction": 0.0,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 35160.5
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 82031.5,
+          "mean_ontime_psnr_db": 29.37559387736724,
+          "on_time_fraction": 0.59375,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 82031.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 40350,
+          "mean_ontime_psnr_db": 26.18653950724738,
+          "on_time_fraction": 0.8171428571428572,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 41734
+        }
+      },
+      "fixed065": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 146872,
+          "mean_ontime_psnr_db": 27.102640283895063,
+          "on_time_fraction": 0.6815068493150684,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 147874.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 47372,
+          "mean_ontime_psnr_db": 26.87759221616094,
+          "on_time_fraction": 0.5208333333333333,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 47890.5
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 56216.5,
+          "mean_ontime_psnr_db": 27.58560538058131,
+          "on_time_fraction": 0.6326530612244898,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 56216.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 43283.5,
+          "mean_ontime_psnr_db": 26.801949631411848,
+          "on_time_fraction": 0.8877551020408163,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 43767.5
+        }
+      }
+    },
+    "8104": {
+      "bwe_threshold": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 151581,
+          "mean_ontime_psnr_db": 27.369979075368335,
+          "on_time_fraction": 0.5051724137931035,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 152463.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 33890,
+          "mean_ontime_psnr_db": null,
+          "on_time_fraction": 0.0,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 33890
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 78209.5,
+          "mean_ontime_psnr_db": 29.25304275311741,
+          "on_time_fraction": 0.5875850340136055,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 78209.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 39481.5,
+          "mean_ontime_psnr_db": 26.17819295748623,
+          "on_time_fraction": 0.9279336734693877,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 40364
+        }
+      },
+      "fixed065": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 157274.5,
+          "mean_ontime_psnr_db": 27.175973619728286,
+          "on_time_fraction": 0.7360309641097817,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 157274.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 51304.5,
+          "mean_ontime_psnr_db": 27.191914655855925,
+          "on_time_fraction": 0.6405187074829932,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 51304.5
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 56069.5,
+          "mean_ontime_psnr_db": 27.320012488775713,
+          "on_time_fraction": 0.5916666666666667,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 56069.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 49900.5,
+          "mean_ontime_psnr_db": 27.07013823862392,
+          "on_time_fraction": 0.9795918367346939,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 49900.5
+        }
+      }
+    },
+    "8105": {
+      "bwe_threshold": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 145595,
+          "mean_ontime_psnr_db": 27.005763910118127,
+          "on_time_fraction": 0.6214705060106234,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 145982
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 41554,
+          "mean_ontime_psnr_db": 26.749754510722887,
+          "on_time_fraction": 0.35714285714285715,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 41554
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 64428,
+          "mean_ontime_psnr_db": 28.19585932576865,
+          "on_time_fraction": 0.5246598639455783,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 64428
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 39613,
+          "mean_ontime_psnr_db": 26.28501036572972,
+          "on_time_fraction": 0.9795918367346939,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 40000
+        }
+      },
+      "fixed065": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 152174.5,
+          "mean_ontime_psnr_db": 27.22083917088142,
+          "on_time_fraction": 0.7755102040816326,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 154134.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 51806,
+          "mean_ontime_psnr_db": 27.408475245155998,
+          "on_time_fraction": 0.7873469387755102,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 51806
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 53454,
+          "mean_ontime_psnr_db": 27.438685902076518,
+          "on_time_fraction": 0.5671768707482994,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 55414
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 46914.5,
+          "mean_ontime_psnr_db": 26.932700423764114,
+          "on_time_fraction": 0.9693877551020408,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 46914.5
+        }
+      }
+    },
+    "8106": {
+      "bwe_threshold": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 183121.5,
+          "mean_ontime_psnr_db": 29.006216095170064,
+          "on_time_fraction": 0.3,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 184210
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 43626.5,
+          "mean_ontime_psnr_db": null,
+          "on_time_fraction": 0.0,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 44676
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 100564.5,
+          "mean_ontime_psnr_db": 29.769429493463413,
+          "on_time_fraction": 0.5877976190476191,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 100564.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 38930.5,
+          "mean_ontime_psnr_db": 26.14084885704045,
+          "on_time_fraction": 0.30612244897959184,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 38969.5
+        }
+      },
+      "fixed065": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 154043,
+          "mean_ontime_psnr_db": 27.102474420829562,
+          "on_time_fraction": 0.7347741577193632,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 155025
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 48364,
+          "mean_ontime_psnr_db": 26.944082409146375,
+          "on_time_fraction": 0.5714285714285714,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 48364
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 56292.5,
+          "mean_ontime_psnr_db": 27.243571872119794,
+          "on_time_fraction": 0.6284013605442177,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 56292.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 49386.5,
+          "mean_ontime_psnr_db": 27.09070206451706,
+          "on_time_fraction": 1.0,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 50368.5
+        }
+      }
+    },
+    "8107": {
+      "bwe_threshold": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 158529.5,
+          "mean_ontime_psnr_db": 27.219703486930232,
+          "on_time_fraction": 0.523972602739726,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 158568.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 41400,
+          "mean_ontime_psnr_db": null,
+          "on_time_fraction": 0.0,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 41400
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 75836.5,
+          "mean_ontime_psnr_db": 28.879855386450338,
+          "on_time_fraction": 0.6288265306122449,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 75836.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 41293,
+          "mean_ontime_psnr_db": 26.117058941300527,
+          "on_time_fraction": 0.929795918367347,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 41332
+        }
+      },
+      "fixed065": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 145422.5,
+          "mean_ontime_psnr_db": 26.984541361821663,
+          "on_time_fraction": 0.6885296934865901,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 145422.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 44046.5,
+          "mean_ontime_psnr_db": 26.800950132868827,
+          "on_time_fraction": 0.47916666666666663,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 44046.5
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 55825,
+          "mean_ontime_psnr_db": 27.320949807089132,
+          "on_time_fraction": 0.6145833333333333,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 55825
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 45551,
+          "mean_ontime_psnr_db": 26.864063506547623,
+          "on_time_fraction": 0.9689625850340136,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 45551
+        }
+      }
+    },
+    "8108": {
+      "bwe_threshold": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 155495.5,
+          "mean_ontime_psnr_db": 27.2853872959289,
+          "on_time_fraction": 0.48944405348346237,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 155495.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 36972.5,
+          "mean_ontime_psnr_db": null,
+          "on_time_fraction": 0.0,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 36972.5
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 79000.5,
+          "mean_ontime_psnr_db": 28.904670675152353,
+          "on_time_fraction": 0.6284013605442177,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 79000.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 39522.5,
+          "mean_ontime_psnr_db": 26.07917250824945,
+          "on_time_fraction": 0.8446003401360545,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 39522.5
+        }
+      },
+      "fixed065": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 148980,
+          "mean_ontime_psnr_db": 27.01351940333631,
+          "on_time_fraction": 0.6182805857345299,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 149427.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 48780.5,
+          "mean_ontime_psnr_db": 26.935441942225395,
+          "on_time_fraction": 0.2857142857142857,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 49228
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 56464,
+          "mean_ontime_psnr_db": 27.51324358846275,
+          "on_time_fraction": 0.6122448979591837,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 56464
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 43735.5,
+          "mean_ontime_psnr_db": 26.722858424741723,
+          "on_time_fraction": 0.9583333333333333,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 43735.5
+        }
+      }
+    },
+    "8109": {
+      "bwe_threshold": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 145673,
+          "mean_ontime_psnr_db": 27.53956096253407,
+          "on_time_fraction": 0.452054794520548,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 146197
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 26661.5,
+          "mean_ontime_psnr_db": null,
+          "on_time_fraction": 0.0,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 26661.5
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 80878.5,
+          "mean_ontime_psnr_db": 29.062691195113324,
+          "on_time_fraction": 0.6184098639455782,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 80917.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 38133,
+          "mean_ontime_psnr_db": 26.270350639519954,
+          "on_time_fraction": 0.735,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 38618
+        }
+      },
+      "fixed065": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 158100,
+          "mean_ontime_psnr_db": 27.499190981352942,
+          "on_time_fraction": 0.6618109312690594,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 159249.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 55185.5,
+          "mean_ontime_psnr_db": 28.007598748197648,
+          "on_time_fraction": 0.4166666666666667,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 55185.5
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 52534,
+          "mean_ontime_psnr_db": 27.83803770898884,
+          "on_time_fraction": 0.5665391156462585,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 53683.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 50380.5,
+          "mean_ontime_psnr_db": 27.132878033310405,
+          "on_time_fraction": 0.99,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 50380.5
+        }
+      }
+    },
+    "8110": {
+      "bwe_threshold": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 141842,
+          "mean_ontime_psnr_db": 27.702048008296998,
+          "on_time_fraction": 0.3758561643835616,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 141881
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 22891.5,
+          "mean_ontime_psnr_db": null,
+          "on_time_fraction": 0.0,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 22930.5
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 82232,
+          "mean_ontime_psnr_db": 29.14001812269205,
+          "on_time_fraction": 0.5984268707482994,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 82232
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 36718.5,
+          "mean_ontime_psnr_db": 26.071317473689668,
+          "on_time_fraction": 0.5252976190476191,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 36718.5
+        }
+      },
+      "fixed065": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 170940,
+          "mean_ontime_psnr_db": 28.411414045349318,
+          "on_time_fraction": 0.35762871988663203,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 170979
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 29167,
+          "mean_ontime_psnr_db": null,
+          "on_time_fraction": 0.0,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 29206
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 102149,
+          "mean_ontime_psnr_db": 29.718455069867133,
+          "on_time_fraction": 0.6598639455782312,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 102149
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 39624,
+          "mean_ontime_psnr_db": 26.002822050972256,
+          "on_time_fraction": 0.41028911564625853,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 39624
+        }
+      }
+    },
+    "8111": {
+      "bwe_threshold": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 149430.5,
+          "mean_ontime_psnr_db": 27.695029435277775,
+          "on_time_fraction": 0.38117619272555503,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 151272.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 32515.5,
+          "mean_ontime_psnr_db": null,
+          "on_time_fraction": 0.0,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 32515.5
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 76885.5,
+          "mean_ontime_psnr_db": 28.914286233104587,
+          "on_time_fraction": 0.59375,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 78064.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 40029.5,
+          "mean_ontime_psnr_db": 26.23891270370146,
+          "on_time_fraction": 0.5548469387755102,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 40692.5
+        }
+      },
+      "fixed065": {
+        "all": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 157739.5,
+          "mean_ontime_psnr_db": 27.15882172905083,
+          "on_time_fraction": 0.506896551724138,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 159367.5
+        },
+        "collapse": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 55453,
+          "mean_ontime_psnr_db": 25.40992066178284,
+          "on_time_fraction": 0.010416666666666666,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 56675
+        },
+        "high": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 57339.5,
+          "mean_ontime_psnr_db": 27.56427082486798,
+          "on_time_fraction": 0.59375,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 57339.5
+        },
+        "recovery": {
+          "guaranteed_dropped_wire_bytes": 0,
+          "guaranteed_wire_bytes": 44947,
+          "mean_ontime_psnr_db": 26.907192456833855,
+          "on_time_fraction": 0.9081632653061225,
+          "possible_dropped_wire_bytes": 0,
+          "possible_wire_bytes": 45353
+        }
+      }
+    }
+  },
+  "seed_clusters": 12,
+  "session_clock_validations_all_pass": true,
+  "transport": {
+    "browser_ice_transport_policy": "relay",
+    "browser_to_turn_transport": "TCP",
+    "candidate_gathering_acceptance": "Both peers complete gathering with only loopback relay candidates using relayProtocol=tcp and zero candidate errors.",
+    "managed_WebRtcIPHandling": "disable_non_proxied_udp",
+    "managed_policy_change": false,
+    "media_acceptance": "Each scheduled phase has more than ten encoded and decoded frames and finite mean encode time.",
+    "queue_acceptance": "Both directions forward at least 100 packets from matching TURN allocation ports, no unexpected sources or send errors; packet and byte replay exactly matches offer/drop/service/forward ledgers; capacity and conservation checks pass.",
+    "queue_and_propagation_mechanism_unchanged": true,
+    "selected_pair_acceptance": "Both pairs are nominated/succeeded and use TURN relay candidates over loopback with relayProtocol=tcp.",
+    "turn_relay_transport": "UDP",
+    "turn_uri_scheme": "turn:"
+  }
+}
