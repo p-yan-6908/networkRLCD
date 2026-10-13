@@ -289,3 +289,13 @@ acceptance thresholds.
 The proposed V6 marker design is preregistered at
 [the V6 plan](NATIVE_CLOCK_ACTION_TURN_TCP_V6_PLAN.md); its pre-phase brackets
 do not change the held-out coverage, width, or timestamp-order thresholds.
+
+V6 completed all 32 sessions; integrity passed, and all 32 passed TURN/queue
+transport plus exact packet/byte ledger replay. Only 11/32 passed actual-run
+clock coverage: 21 missed the final held-out marker m0011, and two also missed
+m0003. No sender, frame, QoE, per-hold relay, or action telemetry was opened.
+V6 remains frozen and unpooled; see the
+[V6 gate result](NATIVE_CLOCK_ACTION_TURN_TCP_V6_RESULTS.md) and
+[diagnostic-only report](../reports/native-clock-action-turntcp-v6-gate-diagnostic-only.json).
+A new design should train on the end marker and hold out an intermediate
+recovery marker, retaining the existing thresholds.

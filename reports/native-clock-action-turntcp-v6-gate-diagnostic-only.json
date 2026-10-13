@@ -1,0 +1,228 @@
+{
+  "abi": "native_turntcp_v6_gate_diagnostic_only_v1",
+  "capture_index_sha256": "acafe0778cd9c0d67e1c7efa42c26036a6476ae60121d880105093230dbc46bb",
+  "clock_transport_gate_sha256": "09ed6e6dd17b0aec769f358e791cb341d7e976d447d8d43b08acc609720715f9",
+  "controller_fitted_or_promoted": false,
+  "event_replay_pass_sessions": 32,
+  "failed_capture_sessions": 0,
+  "failed_clock_trials": [
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 4.8119006080014515,
+      "trial": "turntcp6-scene04-rep1-r105"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 3.0965182513245963,
+      "trial": "turntcp6-scene06-rep0-r065"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 3.8369379269570345,
+      "trial": "turntcp6-scene03-rep0-r105"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 3.9838638242144953,
+      "trial": "turntcp6-scene01-rep1-r105"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 3.946852523356938,
+      "trial": "turntcp6-scene05-rep1-r065"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 3.774601060329587,
+      "trial": "turntcp6-scene05-rep1-r105"
+    },
+    {
+      "coverage": 0.5,
+      "failed_markers": [
+        "m0003",
+        "m0011"
+      ],
+      "max_held_out_width_ms": 4.174969975865679,
+      "trial": "turntcp6-scene02-rep0-r105"
+    },
+    {
+      "coverage": 0.5,
+      "failed_markers": [
+        "m0003",
+        "m0011"
+      ],
+      "max_held_out_width_ms": 4.0721483022061875,
+      "trial": "turntcp6-scene02-rep0-r065"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 4.029392189309874,
+      "trial": "turntcp6-scene02-rep1-r105"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 4.430625955847063,
+      "trial": "turntcp6-scene07-rep1-r065"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 3.214903921856603,
+      "trial": "turntcp6-scene06-rep1-r065"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 4.931366591627011,
+      "trial": "turntcp6-scene06-rep1-r105"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 4.1964920076898125,
+      "trial": "turntcp6-scene05-rep0-r065"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 3.763861647610611,
+      "trial": "turntcp6-scene05-rep0-r105"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 3.8939011675356596,
+      "trial": "turntcp6-scene01-rep0-r105"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 3.5344941386938444,
+      "trial": "turntcp6-scene01-rep0-r065"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 3.685746911629394,
+      "trial": "turntcp6-scene03-rep1-r065"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 4.328367373276706,
+      "trial": "turntcp6-scene03-rep1-r105"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 5.046986744826427,
+      "trial": "turntcp6-scene00-rep0-r065"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 4.226728000241565,
+      "trial": "turntcp6-scene04-rep0-r065"
+    },
+    {
+      "coverage": 0.75,
+      "failed_markers": [
+        "m0011"
+      ],
+      "max_held_out_width_ms": 3.6629001317414804,
+      "trial": "turntcp6-scene04-rep0-r105"
+    }
+  ],
+  "failed_marker_counts": {
+    "m0003": 2,
+    "m0011": 21
+  },
+  "failed_sessions_retained": true,
+  "gate_passed": false,
+  "interpretation": "V6 remains unqualified: 21 sessions failed held-out marker m0011 at the final exchange, and two also failed m0003. No sender, frame, QoE, per-hold relay, or action telemetry was read.",
+  "managed_policy_unchanged_sessions": 32,
+  "outcome_telemetry_read": false,
+  "per_hold_cost_qoe_estimated": false,
+  "planned_sessions": 32,
+  "pooling": "none",
+  "protocol_sha256": "d1edb0aca40e9e54ed2f5371671f950d6644df954151ca7e6ed71da79ef99648",
+  "qualified_clock_sessions": 11,
+  "qualified_transport_sessions": 32,
+  "queue_aggregate": {
+    "a_to_b": {
+      "capacity_integral_valid_all_sessions": true,
+      "max_abs_conservation_error_bytes": 5.820766091346741e-09,
+      "max_queue_wire_bytes": 29987.842568750053,
+      "sessions_with_overflow": 15,
+      "total_dropped_wire_bytes": 136140,
+      "total_forwarded_packets": 32286,
+      "total_forwarded_wire_bytes": 25609314,
+      "total_offered_packets": 32414,
+      "total_offered_wire_bytes": 25745454,
+      "total_overflow_packets": 128,
+      "total_send_errors": 0,
+      "total_served_packets": 32286,
+      "total_served_wire_bytes": 25609313.99999996
+    },
+    "b_to_a": {
+      "capacity_integral_valid_all_sessions": true,
+      "max_abs_conservation_error_bytes": 5.093170329928398e-11,
+      "max_queue_wire_bytes": 1504.5156249999766,
+      "sessions_with_overflow": 0,
+      "total_dropped_wire_bytes": 0,
+      "total_forwarded_packets": 15353,
+      "total_forwarded_wire_bytes": 1381068,
+      "total_offered_packets": 15353,
+      "total_offered_wire_bytes": 1381068,
+      "total_overflow_packets": 0,
+      "total_send_errors": 0,
+      "total_served_packets": 15353,
+      "total_served_wire_bytes": 1381067.9999999998
+    }
+  },
+  "sealed_sessions": 32
+}
