@@ -1186,6 +1186,46 @@ real-network validation. No controller is promoted.
 \label{tab:native-turn-action-v2b-contrasts}
 \end{table}
 
+\section{Blind native action-assay V3 replication}
+\label{app:native-turn-action-v3}
+\input{generated-native-turn-action-assay-v3/evidence.tex}
+V3 independently repeats the entire six-contrast panel using 64 peers and 384
+holds on new procedural scene seeds, with fresh action and trial-order seeds.
+The capture summary remained unopened until the complete file inventory was
+rehashed and independent sender/wire replay passed for all peers. All 384
+payload windows and delivery denominators are complete, with no aliased
+assignment. The registered peer/phase estimator, $t_{63}$ intervals and Holm
+family are unchanged.
+
+The actuator response reproduces: the 1.05 versus 0.65 payload difference is
+\NativeActionVThreePayloadContrast{} [\NativeActionVThreePayloadLowCI{},
+\NativeActionVThreePayloadHighCI{}] (Holm $p=\NativeActionVThreePayloadHolm{}$).
+V2b's 1.05-versus-0.85 on-time estimate was -3.785 pp [-6.711, -0.858]
+(Holm $p=0.0483$). The V3 estimate is
+\NativeActionVThreeDeliveryContrast{} pp
+[\NativeActionVThreeDeliveryLowCI{}, \NativeActionVThreeDeliveryHighCI{}]
+(Holm $p=\NativeActionVThreeDeliveryHolm{}$), so the registered V2b delivery
+contrast does not replicate. The V3 interval still admits nearly six percentage
+points of harm; this result does not establish safety.
+
+V2b and V3 are reported separately and are not pooled. Both remain proximal
+randomized-hold studies on one cloud machine, Chromium build, localhost
+TURN/TCP path, userspace queue, fixed 25 ms propagation and procedural media.
+The 150 ms readback share is not human QoE, and neither panel estimates
+state-conditional action value, a learned-policy effect, whole-session safety,
+or advantage over a tuned controller. This independent replication does not
+validate physical network families or real-network conditions.
+\begin{table}[ht]
+\centering\resizebox{\linewidth}{!}{\input{generated-native-turn-action-assay-v3/table_arm_means.tex}}
+\caption{V3 factual arm means from the independently seeded replication. The capture's summaries were not opened until its full inventory and independent audit passed.}
+\label{tab:native-turn-action-v3-arms}
+\end{table}
+\begin{table}[ht]
+\centering\resizebox{\linewidth}{!}{\input{generated-native-turn-action-assay-v3/table_contrasts.tex}}
+\caption{All six registered V3 proximal contrasts. Intervals use 64 peer clusters; one Holm correction covers both outcomes and all three pairwise action comparisons.}
+\label{tab:native-turn-action-v3-contrasts}
+\end{table}
+
 \clearpage
 \bibliographystyle{plain}
 \bibliography{../research/references}

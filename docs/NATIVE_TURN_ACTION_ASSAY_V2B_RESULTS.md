@@ -65,3 +65,4 @@ The V2 capture output-path and inventory failures remain preserved in
 [`NATIVE_TURN_ACTION_ASSAY_V2A_FAILURE_AND_V2B.md`](NATIVE_TURN_ACTION_ASSAY_V2A_FAILURE_AND_V2B.md).
 The blind independent replication is registered in
 [`NATIVE_TURN_ACTION_ASSAY_V3_REGISTRATION.md`](NATIVE_TURN_ACTION_ASSAY_V3_REGISTRATION.md).
+The V3 capture, full inventory and independent replay passed. Its delivery-proxy contrast did not reproduce the V2b estimate; see the complete [V3 result record](NATIVE_TURN_ACTION_ASSAY_V3_RESULTS.md).

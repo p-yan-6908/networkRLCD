@@ -72,42 +72,45 @@ development track, not a replication of the UDP pilots or real-network evidence.
 
 The scratch-isolated V2b action assay completed 64 peers and all 384 assigned
 holds, with no aliased assignments and complete payload/readback endpoints.
-Independent sender and FIFO replay passed across all peers, and the exact
-323-file / 669,573,522-byte raw inventory remains unmodified. The registered
-1.05-versus-0.85 contrast lowers the 150 ms on-time proxy by 3.785 pp
-[-6.711, -0.858], Holm p=0.0483; all six registered comparisons are retained.
-The capture command exposed its unadjusted arm summaries before the audit, so
-V2b is exploratory despite the pre-capture estimator/contrast freeze. It
-indicates an action-to-payload response and a delivery-risk hypothesis, not a
-QoE benefit or policy effect. The independent V3 replication is registered
-with new scene, treatment-assignment and trial-order seeds and keeps the full
-six-test family; its outcome summaries remain unopened until its inventory and
-audit pass. See the [V2b results](NATIVE_TURN_ACTION_ASSAY_V2B_RESULTS.md)
-and [V3 registration](NATIVE_TURN_ACTION_ASSAY_V3_REGISTRATION.md).
+Independent sender and FIFO replay passed; its 323-file / 669,573,522-byte raw
+inventory remains unmodified. Its 1.05-versus-0.85 contrast lowers the 150 ms
+readback proxy by 3.785 pp [-6.711, -0.858], Holm p=0.0483. The capture command
+exposed unadjusted arm means before audit, so V2b remains exploratory despite
+its pre-capture estimator and contrast freeze.
 
+The independently registered V3 replication completed 64 new peers / 384
+holds. Its blind capture sequence passed the inventory rehash and full sender/
+wire audit for all peers. Actual payload still rises with requested BWE ratio;
+1.05 versus 0.65 is +0.258 normalized payload [0.218, 0.298], Holm
+p=1.15e-18. The V2b delivery contrast did not replicate: V3 estimates -1.407 pp
+[-5.917, +3.104] for 1.05 versus 0.85, Holm p=1.0. This unresolved interval
+still allows meaningful delivery harm. V2b and V3 remain separate and are not
+pooled. Neither estimates conditional action value or policy performance. See the
+[V2b result record](NATIVE_TURN_ACTION_ASSAY_V2B_RESULTS.md) and
+[V3 result record](NATIVE_TURN_ACTION_ASSAY_V3_RESULTS.md) for complete outcomes.
 
 ## Largest current uncertainty
 
-Can sender-observable history identify a useful and realizable cap change that
-improves delivered quality over a strong controller without trading away safety?
-V2b verifies only that randomized caps move actual payload, while its exploratory
-readback estimate raises a replication question. Native cap requests, encoded
-payload, BWE and receiver timing have different dynamics. The simulator's floor
-after a drop and native recovery diverge; the rule also starts at 1.05 while the
-stronger fixed comparator starts at 0.65. These are hypotheses to distinguish,
-not identified causes of the observed loss.
+Does any current or past sender-observable network/encoder state identify a
+safe bitrate action with reproducible delivered-quality value? The action
+assays show a repeated cap-to-payload response, while short-horizon readback
+changes vary across independent local panels. Their marginal contrasts do not
+identify history-conditional value, full-session QoE, or transfer across
+physical network families. The simulator's forecast and the earlier margin rule
+also failed native comparisons, so increasing model complexity is not the next
+step.
 
 ## Next informative work
 
-1. Complete the new V3 blinded replication of the exploratory V2b proxy effect
-   with the frozen full contrast family and audit-before-analysis order. Keep
-   V1, V2a and V2b raw evidence and negative findings intact. Regardless of
-   replication outcome, these local capacity schedules do not establish unseen
-   physical network families, policy value or whole-session QoE. Restore only
-   the pinned range-pilot records in reports/bwe-dynamics-diagnostic-v1/next-input.json
-   after archive access is actually ready; use them to reconstruct original
-   UDP/encoder history, not to tune against held-out data. Do not equate TURN
-   dynamics with the archived UDP/licensed-video transport.
+1. Restore only the registered twenty range-pilot sessions and their interpretation
+   metadata from the exact pinned archive revision, then replay timestamped sender,
+   encoder, cap-readback and RTP histories. This can test whether the original
+   factual UDP records resolve a transport-specific measurement question; it must
+   not be used to tune on held-out data. The current task runtime still lacks a
+   visible Hugging Face token binding and enforced Hugging Face egress, despite
+   SDK/CLI and pinned-manifest restore attempts. No archive bytes were received.
+   After recovery, a distinct measured-network-family panel is still required for
+   external validation; TURN/TCP results cannot stand in for it.
 2. Diagnose the memory rule using a separate, prospectively specified native
    factorial comparison with matched startup, memory enabled/disabled, and repeated
    identical-policy peers. Randomise whole sessions: short crossover blocks have
@@ -137,6 +140,13 @@ zero archive bytes were downloaded. Thus the user's stated HF_TOKEN is not
 visible to this task runtime, and the policy blocks the exact restore route. No
 token was inspected, placed in the repository or sent to chat.
 
+After the user's latest environment update, the same check was repeated on
+2026-10-13: the shell has no HF_TOKEN binding, `huggingface_hub.get_token()` is
+false, and the pinned `dataset_info` request fails with ProxyError before the
+snapshot inventory or any file can be downloaded. The single required snapshot
+and its selected twenty-session plan remain unchanged; no raw evidence was
+restored or read.
+
 A concrete targeted input plan is
 `reports/bwe-dynamics-diagnostic-v1/next-input.json`: the lexically first used
 range-pilot source, its twenty sessions covering all schedules and levels, selected
@@ -151,7 +161,8 @@ emulated relay on one machine are native-stack evidence, not validation on real
 network conditions. Development p-values and simulation utility cannot justify
 promotion, a safety guarantee, or an RLCD-specific benefit.
 
-New native TURN raw captures and their inventories remain outside the repository;
-the raw bytes are unarchived and no unarchived evidence is pruned. These working
-copies are not verified backups. The project remains far below its 10 GB limit.
-Original controller freezes and all negative results are retained.
+The external networkrlcd working cache currently contains 2,003,824,259 bytes,
+including the preserved native TURN captures; none are archive-verified or
+pruned. These working copies are not backups. The project tree is 370,044,928
+bytes, within the 10 GB limit. Original controller freezes and all negative
+results are retained.

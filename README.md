@@ -357,16 +357,16 @@ reports/native-turn-action-diagnostic-v1/.
 
 The [V2b action assay](docs/NATIVE_TURN_ACTION_ASSAY_V2B_RESULTS.md) completed
 64 peers / 384 holds and passed the full raw inventory and independent audit.
-Assigned BWE ratios moved actual payload, while 1.05 versus 0.85 reduced the
-150 ms readback share by 3.785 pp (95% conditional interval [-6.711, -0.858],
-Holm p=0.0483). The capture command exposed unadjusted arm means before the
-independent audit, so this remains exploratory. A fresh 64-peer replication
-with new scene, assignment and trial-order seeds is registered in
-[V3](docs/NATIVE_TURN_ACTION_ASSAY_V3_REGISTRATION.md); it keeps the full six
-contrast family and requires audit-before-analysis. Neither panel validates
-physical network-family transfer, a learned policy or real-network performance.
-The earlier V2 acquisition and inventory failures remain preserved in the
-[failure record](docs/NATIVE_TURN_ACTION_ASSAY_V2A_FAILURE_AND_V2B.md).
+The 1.05 versus 0.85 assigned ratio reduced the 150 ms readback share by 3.785
+pp [-6.711, -0.858], Holm p=0.0483, but the capture command exposed arm means
+before audit, so V2b remains exploratory. A separately registered, blinded V3
+replication with fresh scene and assignment seeds reproduced the payload
+response (+0.258 [0.218, 0.298] for 1.05 versus 0.65) but did not reproduce the
+V2b delivery contrast (-1.407 pp [-5.917, +3.104], Holm p=1.0). The interval
+still allows meaningful delivery harm. The panels remain separate and do not
+establish state-conditioned action value, policy gain, unseen physical network
+generalization, or real-network performance. See the [V3 registration](docs/NATIVE_TURN_ACTION_ASSAY_V3_REGISTRATION.md),
+[V3 result](docs/NATIVE_TURN_ACTION_ASSAY_V3_RESULTS.md), and [preserved V2 failures](docs/NATIVE_TURN_ACTION_ASSAY_V2A_FAILURE_AND_V2B.md).
 
 ## Interpretation boundaries
 

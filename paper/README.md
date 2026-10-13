@@ -256,3 +256,22 @@ paper/build/main.pdf. The direct XeLaTeX build reads the existing generated
 evidence and does not re-export the nine archived synthetic studies. It
 completed without undefined references, box warnings or missing characters;
 this is a build check, not an all-page visual review.
+
+### Blind native action-assay V3 replication
+
+The independent V3 replication completes 64 peers / 384 holds with fresh scene,
+assignment and trial-order seeds. Its inventory and independent wire audit pass
+for every peer. It repeats the payload effect (+0.258 normalized units for 1.05
+versus 0.65) but does not reproduce the exploratory V2b delivery contrast:
+−1.407 pp [−5.917, +3.104], Holm p=1.0. The interval still permits material
+harm, and V2b/V3 are not pooled. The full contrast and audit limits are in
+docs/NATIVE_TURN_ACTION_ASSAY_V3_RESULTS.md. Generated tables and provenance
+are in paper/generated-native-turn-action-assay-v3/. Reproduce the verified
+export with:
+
+    uv run --frozen python tools/export_development_updates.py --action-v3-only
+
+The updated 82-page paper/build/main.pdf compiles without undefined references,
+box warnings or missing characters. The direct XeLaTeX build reads the
+committed generated evidence; it does not re-export the nine archived synthetic
+studies.

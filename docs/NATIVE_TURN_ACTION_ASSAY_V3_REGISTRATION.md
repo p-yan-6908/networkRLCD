@@ -66,3 +66,4 @@ transfer or real-network validation. No simulator counterfactuals or controller
 promotion are involved. Raw evidence stays external and unarchived until a
 receipt-pinned archive restore verifies its full inventory; no existing capture
 is overwritten or pruned.
+The completed independent analysis is documented in the [V3 results](NATIVE_TURN_ACTION_ASSAY_V3_RESULTS.md). It confirms the cap-to-payload response but does not reproduce the V2b on-time contrast.

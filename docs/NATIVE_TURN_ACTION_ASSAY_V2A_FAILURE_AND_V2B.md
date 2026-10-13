@@ -53,3 +53,4 @@ qualification are in
 V3 replication changes the source and assignment seeds while retaining the full
 endpoint and contrast family; its blind reading order is registered in
 [the V3 protocol](NATIVE_TURN_ACTION_ASSAY_V3_REGISTRATION.md).
+The independent [V3 result](NATIVE_TURN_ACTION_ASSAY_V3_RESULTS.md) records that the adjusted V2b delivery estimate was not reproduced.

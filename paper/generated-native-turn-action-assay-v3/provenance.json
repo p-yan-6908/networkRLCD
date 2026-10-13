@@ -1,0 +1,35 @@
+{
+  "abi": "native_turn_action_assay_v3_paper_export_v1",
+  "analysis_status": "prospective_independent_native_development_replication",
+  "capture_stdout_stderr_suppressed": true,
+  "capture_summary_not_viewed_before_independent_audit": true,
+  "exporter_sha256": "61ff96b9143bcb8659c02e6319c0cc9e1d848defa3992e10d6591923d21c044d",
+  "input_sha256": {
+    "configs/native_turn_probe_v3_action_replication.json": "22621b3140b5c3b3535346bd7a075dfe9b94a65e610759d08d71bc20b4ae2363",
+    "reports/native-turn-action-assay-v3-analysis/provenance.json": "7884d95b96123dbb99e2657a2dbdab58f0109ad1fd660e313c41b6584a537298",
+    "reports/native-turn-action-assay-v3-analysis/report.json": "1b1c55ea9addea802e25757cab97258b5443d313c242a7457e7696a0be07921d",
+    "reports/native-turn-action-assay-v3/independent-audit.json": "fa4e5d0f6b9fe96263c8171dac74de14da883126a311d96aa60add2e7afe887c",
+    "reports/native-turn-action-assay-v3/local-evidence-inventory.json": "0990a57d8d74067d9ba560b44ce1e438502a57d976aa8cdcbb56cd993482dda9",
+    "reports/native-turn-action-assay-v3/report.json": "66656188f3761138c132c141f7d4546350e84febcc7ea4fa1e6927db6b76099a",
+    "reports/native-turn-action-assay-v3/sessions.json": "9553bdf4dfb1bb569987fa7cf7b55387b1fb8f10dacf2c0fdbb9325a14f7664a",
+    "src/media_rl/native_turn_action_panel_v2.py": "eccfbb9b2452ab5d557d506d5b555e3fe3df3b33b84df2a6ddf6893608b11c93",
+    "src/media_rl/native_turn_audit.py": "850fa0ae7b5a9acfcf4defab099a782c040b200428fe96bde11d5a9a62b6f9bf",
+    "src/media_rl/native_turn_probe_v2.py": "3dd7fe77c5b6da7b9cd3ddbee5291319950d1ace33ce37c25feb034f55138b64",
+    "tools/export_development_updates.py": "61ff96b9143bcb8659c02e6319c0cc9e1d848defa3992e10d6591923d21c044d",
+    "tools/native_turn_action_assay_v3.py": "a5a3cfb92014f1e6809ad0f932194fc69bd8958561010408df474421b05dbcf8"
+  },
+  "no_capture_training_or_counterfactual_launched": true,
+  "output_sha256": {
+    "evidence.tex": "be235ab886d49a5b931bde64bb30e497fd8a51a0268c57dedd4e9250fe7b02d8",
+    "table_arm_means.tex": "d30c3a2ca7bf2371740de32d0515b0b0e9907f19d01c471447fb22e20d814a79",
+    "table_contrasts.tex": "06191696afc443850b1f2853030a230b2e6a9390593fea52fec4ca8447d45b52"
+  },
+  "raw_capture_inventory_verified": {
+    "archive_verified": false,
+    "capture_bytes_unmodified": true,
+    "capture_file_count": 323,
+    "capture_total_bytes": 665844656,
+    "inventory_sha256": "0990a57d8d74067d9ba560b44ce1e438502a57d976aa8cdcbb56cd993482dda9",
+    "raw_bytes_pruned": false
+  }
+}
