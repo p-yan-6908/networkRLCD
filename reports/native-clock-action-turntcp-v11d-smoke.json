@@ -1,0 +1,20 @@
+{
+  "abi": "native_clock_action_v11d_smoke_evidence_v1",
+  "protocol_sha256": "db3d5c8bd440b04c4e28c2d6c196ce946b87dd3ba9d060ef0a9a07bf46db1e50",
+  "smoke_root": "/home/agent/.cache/networkrlcd/native-clock-action-turntcp-v11d-smoke",
+  "registration_sha256": "c317af79ec64a5f893d365be80c3a1a087638c74bcbfe1f53a851ce166106a92",
+  "gate_sha256": "90fd5d68c02e87d211d8e2044dc5e110acfe12410fa2384562b9166bf3428d69",
+  "session_integrity_manifest_sha256": "dcf3bb6738be2d64870be0a9f9033f0e5b054cd852a42a0b00fe95235618e96d",
+  "status": "sealed",
+  "passed": true,
+  "transport_passed": true,
+  "clock_passed": true,
+  "clock_max_held_out_width_ms": 1.6082730588768754,
+  "trace_schedule_passed": true,
+  "action_assignment_passed": true,
+  "terminal_cleanup_passed": true,
+  "pre_cleanup_queued_wire_bytes": 54.99487435996324,
+  "post_cleanup_queued_wire_bytes": 0,
+  "outcome_telemetry_read": false,
+  "pooled_with_main_panel": false
+}
