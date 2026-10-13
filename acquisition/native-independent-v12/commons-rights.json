@@ -1,0 +1,67 @@
+{
+  "abi": "native_v12_commons_rights_review_v1",
+  "sources": [
+    {
+      "candidate_id": "commons-29898805",
+      "content_id": "content_king_penguins_2013_01",
+      "title": "File:King Penguins (Aptenodytes patagonicus).webm",
+      "creator": "The Nature Box",
+      "capture_group": "nature-box-kamogawa-penguins-2013-11-28",
+      "source_url": "https://commons.wikimedia.org/wiki/File:King_Penguins_(Aptenodytes_patagonicus).webm",
+      "source_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1250255821",
+      "revision_id": 1250255821,
+      "media_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/King_Penguins_%28Aptenodytes_patagonicus%29.webm",
+      "license": "CC-BY-SA-3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source_claim": "Own work",
+      "rights_review_decision": "pass",
+      "rights_basis": "Pinned Commons own-work and self-licensing declaration, confirmed selected-segment visual review; only video retained, no audio; attribution and same-license derivative notice retained.",
+      "original_bytes": 33736640,
+      "original_sha1": "21072504981674b013836f9f9d234c361d2b3443",
+      "original_sha256": "3878748cfad94c7216d6c79be0105bb6064aed19fd181e830148ae8821cd3fa8",
+      "revision_wikitext_sha256": "b545902d7633ce27c2a2249e6fd36f704231802deeed02f079d1f82247806b86",
+      "attribution": "The Nature Box — File:King Penguins (Aptenodytes patagonicus).webm, CC BY-SA 3.0; Wikimedia Commons. Changes: 30s excerpt, silent, scaled/padded and transcoded.",
+      "selected_segment_visual_review": {
+        "frames_reviewed": 6,
+        "segment_seconds": [
+          0,
+          30
+        ],
+        "decision": "pass",
+        "basis": "Animal/habitat scenery only; no close personal details or visible unlicensed foreground presentation; audio excluded.",
+        "contact_sheet_sha256": "65675f7de24da60498b8db61afe3f5d9b71f234f325c292b1ccf269bdc900652"
+      }
+    },
+    {
+      "candidate_id": "commons-25620128",
+      "content_id": "content_shirlan_waterfall_2012_01",
+      "title": "File:Shirlan Waterfall.webm",
+      "creator": "Jacopo188",
+      "capture_group": "jacopo188-shirlan-waterfall-2012",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Shirlan_Waterfall.webm",
+      "source_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=918277772",
+      "revision_id": 918277772,
+      "media_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Shirlan_Waterfall.webm",
+      "license": "CC-BY-SA-3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source_claim": "Own work",
+      "rights_review_decision": "pass",
+      "rights_basis": "Pinned Commons own-work and self-licensing declaration, confirmed selected-segment visual review; only video retained, no audio; attribution and same-license derivative notice retained.",
+      "original_bytes": 46328356,
+      "original_sha1": "e933ad3c1a0cc105651f08cf74a04e50536a58b0",
+      "original_sha256": "8cc22fd0c9b474aee66618c6282acb6477da907ee69f0f0b41c278b1bd77bdef",
+      "revision_wikitext_sha256": "1d92ec830c55cc877161a7bc61c1e8ffc75713a50ac88c72c2c61f20d8d5ccaf",
+      "attribution": "Jacopo188 — File:Shirlan Waterfall.webm, CC BY-SA 3.0; Wikimedia Commons. Changes: 30s excerpt, silent, scaled/padded and transcoded.",
+      "selected_segment_visual_review": {
+        "frames_reviewed": 6,
+        "segment_seconds": [
+          0,
+          30
+        ],
+        "decision": "pass",
+        "basis": "Animal/habitat scenery only; no close personal details or visible unlicensed foreground presentation; audio excluded.",
+        "contact_sheet_sha256": "8f94e02c8d75746bce0cd4121ec26a22e17e390bdc4a54bf99eca9dba7206eca"
+      }
+    }
+  ]
+}

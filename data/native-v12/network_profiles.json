@@ -1,0 +1,584 @@
+{
+  "abi": "native_v12_measured_network_profiles_v1",
+  "families": {
+    "irish_lte": {
+      "campaign_id": "ucc_irish_lte_2017_2018",
+      "license": "CC-BY-4.0",
+      "record_url": "https://zenodo.org/records/1219679",
+      "doi": "10.5281/zenodo.1219679",
+      "attribution": "Darijo Raca, Jason Quinlan, Ahmed Zahran, Cormac Sreenan; Beyond Throughput: a 4G LTE Dataset with Channel and Context Metrics (2018).",
+      "direction": "downlink",
+      "archive_cache_path": "v12-source-screen/1219679-LTE_Dataset.zip",
+      "archive_sha256": "45e95f8a6934da230067803983b45b20e5dfb0179431d43902c8193db770e6bd",
+      "archive_bytes": 2252245,
+      "selected_profile_ids": [
+        "irish_lte-low-01",
+        "irish_lte-low-02",
+        "irish_lte-high-01",
+        "irish_lte-high-02"
+      ],
+      "published_md5": "27da16b90a94ded3511bad9682f2e166"
+    },
+    "nyu_lte": {
+      "campaign_id": "nyu_mets_lte",
+      "license": "ODbL-1.0 (database); DbCL-1.0 (contents)",
+      "record_url": "https://github.com/NYU-METS/Main/tree/886c73b1398457ba5f87faefe7a9ea3755e713f7",
+      "git_revision": "886c73b1398457ba5f87faefe7a9ea3755e713f7",
+      "attribution": "Lifan Mei et al.; NYU Metropolitan Mobile Bandwidth Trace; Realtime Mobile Bandwidth Prediction using LSTM Neural Networks (2019) / Bayesian fusion (2020).",
+      "direction": "server-side LTE TCP receive; selected Dataset_1 only",
+      "readme_sha256": "ed7f9ec26972d30835d4627b871e0da5dab0ac6fb02b40a5ec5277798b77252b",
+      "archive_cache_path": "v12-source-screen/nyu-Dataset_1.rar",
+      "archive_sha256": "30c5e6b7f2e8897dc959bf16443feee1152356ada6ec5f8cb28b5e8fb68e44da",
+      "archive_bytes": 105446,
+      "selected_profile_ids": [
+        "nyu_lte-low-01",
+        "nyu_lte-low-02",
+        "nyu_lte-high-01",
+        "nyu_lte-high-02"
+      ],
+      "git_blob_sha1": "d19fe6071ccbe7add9eec2ce67638b6baa7d449a"
+    },
+    "umu_campus_tcp_upload": {
+      "campaign_id": "umu_private_campus_2024_2025",
+      "license": "CC-BY-4.0",
+      "record_url": "https://zenodo.org/records/15516876",
+      "doi": "10.5281/zenodo.15516876",
+      "attribution": "Rodrigo Asensio-Garriga et al.; University of Murcia 5G Dataset 1 (2025).",
+      "direction": "upload",
+      "archive_cache_path": "v12-source-screen/15516876-UMU 5G Dataset 1.zip",
+      "archive_sha256": "add4518d318d8684da7eeb56cbdd15c5e58800143ebdc0cdbbf785ecf2cd5d8d",
+      "archive_bytes": 4125768,
+      "selected_profile_ids": [
+        "umu_campus_tcp_upload-low-01",
+        "umu_campus_tcp_upload-low-02",
+        "umu_campus_tcp_upload-high-01",
+        "umu_campus_tcp_upload-high-02"
+      ],
+      "published_md5": "f98d7f5d3a8b0d3992fc87bc6d3c5a7d"
+    }
+  },
+  "profiles": [
+    {
+      "member": "Dataset/bus/A_2017.11.30_16.48.26.csv",
+      "source_record_range": [
+        35,
+        52
+      ],
+      "rates_mbps": [
+        0.134,
+        0.57,
+        0.413,
+        0.626,
+        0.693,
+        0.436,
+        0.659,
+        0.436,
+        0.436,
+        0.123,
+        0.469,
+        0.156,
+        0.078,
+        0.246,
+        0.123,
+        0.592,
+        0.212,
+        0.335
+      ],
+      "state_hint": "low",
+      "held_missing_second_indices": [
+        8
+      ],
+      "source_radio_filter": "anonymized operator A and observed LTE in every measured bin",
+      "resampling": "median of duplicate Unix-second samples; at most two isolated missing seconds hold the preceding measured value; kbps / 1000",
+      "profile_id": "irish_lte-low-01",
+      "family_id": "irish_lte",
+      "target_state": "bwe_lt_500k",
+      "conditioning_mean_mbps": 0.4112,
+      "campaign_id": "ucc_irish_lte_2017_2018",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "member": "Dataset/bus/A_2018.01.25_17.27.30.csv",
+      "source_record_range": [
+        336,
+        352
+      ],
+      "rates_mbps": [
+        0.301,
+        1.107,
+        1.33,
+        1.028,
+        0.301,
+        0.827,
+        0.022,
+        0.615,
+        0.022,
+        0.201,
+        0.078,
+        0.313,
+        0.548,
+        0.548,
+        0.536,
+        1.062,
+        1.632,
+        3.522
+      ],
+      "state_hint": "low",
+      "held_missing_second_indices": [
+        13
+      ],
+      "source_radio_filter": "anonymized operator A and observed LTE in every measured bin",
+      "resampling": "median of duplicate Unix-second samples; at most two isolated missing seconds hold the preceding measured value; kbps / 1000",
+      "profile_id": "irish_lte-low-02",
+      "family_id": "irish_lte",
+      "target_state": "bwe_lt_500k",
+      "conditioning_mean_mbps": 0.3955,
+      "campaign_id": "ucc_irish_lte_2017_2018",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "member": "Dataset/bus/A_2017.11.30_16.48.26.csv",
+      "source_record_range": [
+        6,
+        21
+      ],
+      "rates_mbps": [
+        0.0,
+        1.757,
+        4.216,
+        2.874,
+        2.516,
+        1.386,
+        1.386,
+        2.382,
+        2.807,
+        1.666,
+        1.107,
+        3.824,
+        2.169,
+        2.874,
+        2.337,
+        2.337,
+        1.543,
+        2.169
+      ],
+      "state_hint": "high",
+      "held_missing_second_indices": [
+        6,
+        15
+      ],
+      "source_radio_filter": "anonymized operator A and observed LTE in every measured bin",
+      "resampling": "median of duplicate Unix-second samples; at most two isolated missing seconds hold the preceding measured value; kbps / 1000",
+      "profile_id": "irish_lte-high-01",
+      "family_id": "irish_lte",
+      "target_state": "bwe_ge_500k",
+      "conditioning_mean_mbps": 2.2117,
+      "campaign_id": "ucc_irish_lte_2017_2018",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "member": "Dataset/bus/A_2018.01.25_16.33.53.csv",
+      "source_record_range": [
+        0,
+        17
+      ],
+      "rates_mbps": [
+        1.476,
+        1.543,
+        2.102,
+        1.554,
+        4.853,
+        2.65,
+        2.65,
+        0.48,
+        0.592,
+        2.003,
+        0.928,
+        0.469,
+        0.883,
+        0.044,
+        1.107,
+        0.458,
+        3.31,
+        5.167
+      ],
+      "state_hint": "high",
+      "held_missing_second_indices": [
+        6
+      ],
+      "source_radio_filter": "anonymized operator A and observed LTE in every measured bin",
+      "resampling": "median of duplicate Unix-second samples; at most two isolated missing seconds hold the preceding measured value; kbps / 1000",
+      "profile_id": "irish_lte-high-02",
+      "family_id": "irish_lte",
+      "target_state": "bwe_ge_500k",
+      "conditioning_mean_mbps": 1.7062,
+      "campaign_id": "ucc_irish_lte_2017_2018",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "member": "Dataset_1/Dataset/Bus_B57/bus57_1.csv",
+      "member_sha256": "9f2b6b06214888b5ab5e038332315eb3847b479d84eefa8cf96604d89f799aea",
+      "source_record_range": [
+        583,
+        600
+      ],
+      "rates_mbps": [
+        1.08,
+        1.14,
+        1.34,
+        0.899,
+        0.0433,
+        0.726,
+        0.0758,
+        0.694,
+        0.13,
+        0.162,
+        0.0325,
+        0.173,
+        0.141,
+        0.173,
+        0.0975,
+        0.336,
+        0.563,
+        1.3
+      ],
+      "state_hint": "low",
+      "held_missing_second_indices": [],
+      "resampling": "18 contiguous native 1Hz server-side iPerf samples; units explicitly converted to Mbit/s",
+      "source_radio_filter": "measured LTE campaign per pinned source README",
+      "measured_direction": "server receive",
+      "profile_id": "nyu_lte-low-01",
+      "family_id": "nyu_lte",
+      "target_state": "bwe_lt_500k",
+      "conditioning_mean_mbps": 0.30766,
+      "campaign_id": "nyu_mets_lte",
+      "license": "ODbL-1.0 (database); DbCL-1.0 (contents)"
+    },
+    {
+      "member": "Dataset_1/Dataset/Bus_B62/bus62.csv",
+      "member_sha256": "6decb11afcde38cacabafe72c1ddf9371cabcbdcb53dc79c521afe4dff25d1ee",
+      "source_record_range": [
+        1199,
+        1216
+      ],
+      "rates_mbps": [
+        1.03,
+        0.65,
+        0.975,
+        0.986,
+        0.282,
+        0.195,
+        1.22,
+        0.206,
+        0.0,
+        0.401,
+        0.162,
+        0.0,
+        0.596,
+        1.23,
+        1.16,
+        1.06,
+        1.29,
+        1.43
+      ],
+      "state_hint": "low",
+      "held_missing_second_indices": [],
+      "resampling": "18 contiguous native 1Hz server-side iPerf samples; units explicitly converted to Mbit/s",
+      "source_radio_filter": "measured LTE campaign per pinned source README",
+      "measured_direction": "server receive",
+      "profile_id": "nyu_lte-low-02",
+      "family_id": "nyu_lte",
+      "target_state": "bwe_lt_500k",
+      "conditioning_mean_mbps": 0.4048,
+      "campaign_id": "nyu_mets_lte",
+      "license": "ODbL-1.0 (database); DbCL-1.0 (contents)"
+    },
+    {
+      "member": "Dataset_1/Dataset/Bus_B57/bus57_1.csv",
+      "member_sha256": "9f2b6b06214888b5ab5e038332315eb3847b479d84eefa8cf96604d89f799aea",
+      "source_record_range": [
+        25,
+        42
+      ],
+      "rates_mbps": [
+        5.89,
+        3.96,
+        2.13,
+        2.53,
+        2.74,
+        2.68,
+        3.0,
+        3.29,
+        3.76,
+        3.74,
+        3.85,
+        3.69,
+        4.77,
+        2.75,
+        8.07,
+        5.5,
+        5.04,
+        4.62
+      ],
+      "state_hint": "high",
+      "held_missing_second_indices": [],
+      "resampling": "18 contiguous native 1Hz server-side iPerf samples; units explicitly converted to Mbit/s",
+      "source_radio_filter": "measured LTE campaign per pinned source README",
+      "measured_direction": "server receive",
+      "profile_id": "nyu_lte-high-01",
+      "family_id": "nyu_lte",
+      "target_state": "bwe_ge_500k",
+      "conditioning_mean_mbps": 3.405,
+      "campaign_id": "nyu_mets_lte",
+      "license": "ODbL-1.0 (database); DbCL-1.0 (contents)"
+    },
+    {
+      "member": "Dataset_1/Dataset/Bus_B57/bus57_2.csv",
+      "member_sha256": "c38d33cd77e52cdaeebf0332949b53b4a8528f16c1f90777d16e230ed8c7eff4",
+      "source_record_range": [
+        114,
+        131
+      ],
+      "rates_mbps": [
+        6.2,
+        5.24,
+        3.09,
+        5.92,
+        7.04,
+        5.09,
+        3.26,
+        3.01,
+        3.4,
+        2.68,
+        3.69,
+        2.9,
+        3.0,
+        4.56,
+        3.72,
+        3.37,
+        4.15,
+        4.03
+      ],
+      "state_hint": "high",
+      "held_missing_second_indices": [],
+      "resampling": "18 contiguous native 1Hz server-side iPerf samples; units explicitly converted to Mbit/s",
+      "source_radio_filter": "measured LTE campaign per pinned source README",
+      "measured_direction": "server receive",
+      "profile_id": "nyu_lte-high-02",
+      "family_id": "nyu_lte",
+      "target_state": "bwe_ge_500k",
+      "conditioning_mean_mbps": 3.999,
+      "campaign_id": "nyu_mets_lte",
+      "license": "ODbL-1.0 (database); DbCL-1.0 (contents)"
+    },
+    {
+      "member": "UMU 5G Dataset 1/Day 1/tcp_aw2s_20240325.xlsx",
+      "source_record_range": [
+        1300,
+        1317
+      ],
+      "rates_mbps": [
+        5.73695,
+        4.91666,
+        1.49469,
+        1.51828,
+        0.29948,
+        0.27608,
+        0.27605,
+        0.13536,
+        0.25258,
+        0.20572,
+        0.20572,
+        0.20572,
+        0.1823,
+        0.20573,
+        0.13544,
+        0.41664,
+        0.15891,
+        0.36983
+      ],
+      "state_hint": "low",
+      "held_missing_second_indices": [],
+      "resampling": "contiguous spreadsheet rows at the source's documented nominal 1Hz polling cadence; measured throughput_upload_speed_kbps / 1000; no GPS clock used",
+      "source_radio_filter": "private 5G campus deployment described by the source; no per-row RAT/SA claim",
+      "measured_direction": "upload",
+      "profile_id": "umu_campus_tcp_upload-low-01",
+      "family_id": "umu_campus_tcp_upload",
+      "target_state": "bwe_lt_500k",
+      "conditioning_mean_mbps": 0.355729,
+      "campaign_id": "umu_private_campus_2024_2025",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "member": "UMU 5G Dataset 1/Day 1/tcp_nokia_20240325.xlsx",
+      "source_record_range": [
+        1046,
+        1063
+      ],
+      "rates_mbps": [
+        0.20475,
+        0.11375,
+        0.4095,
+        0.091,
+        0.11375,
+        0.5005,
+        0.091,
+        0.1365,
+        0.11375,
+        0.091,
+        0.06825,
+        0.29575,
+        1.66075,
+        0.88725,
+        1.02375,
+        1.8655,
+        2.5935,
+        2.821
+      ],
+      "state_hint": "low",
+      "held_missing_second_indices": [],
+      "resampling": "contiguous spreadsheet rows at the source's documented nominal 1Hz polling cadence; measured throughput_upload_speed_kbps / 1000; no GPS clock used",
+      "source_radio_filter": "private 5G campus deployment described by the source; no per-row RAT/SA claim",
+      "measured_direction": "upload",
+      "profile_id": "umu_campus_tcp_upload-low-02",
+      "family_id": "umu_campus_tcp_upload",
+      "target_state": "bwe_lt_500k",
+      "conditioning_mean_mbps": 0.316225,
+      "campaign_id": "umu_private_campus_2024_2025",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "member": "UMU 5G Dataset 1/Day 1/tcp_aw2s_20240325.xlsx",
+      "source_record_range": [
+        835,
+        852
+      ],
+      "rates_mbps": [
+        0.06459,
+        0.06447,
+        0.06458,
+        0.06453,
+        0.06452,
+        0.06448,
+        0.06458,
+        0.06453,
+        0.06456,
+        0.06458,
+        0.06445,
+        6.18172,
+        6.58011,
+        6.65045,
+        6.04114,
+        5.92389,
+        6.15831,
+        6.2052
+      ],
+      "state_hint": "high",
+      "held_missing_second_indices": [],
+      "resampling": "contiguous spreadsheet rows at the source's documented nominal 1Hz polling cadence; measured throughput_upload_speed_kbps / 1000; no GPS clock used",
+      "source_radio_filter": "private 5G campus deployment described by the source; no per-row RAT/SA claim",
+      "measured_direction": "upload",
+      "profile_id": "umu_campus_tcp_upload-high-01",
+      "family_id": "umu_campus_tcp_upload",
+      "target_state": "bwe_ge_500k",
+      "conditioning_mean_mbps": 1.327806,
+      "campaign_id": "umu_private_campus_2024_2025",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "member": "UMU 5G Dataset 1/Day 1/tcp_nokia_20240325.xlsx",
+      "source_record_range": [
+        931,
+        948
+      ],
+      "rates_mbps": [
+        4.732,
+        6.80225,
+        5.39175,
+        5.1415,
+        4.98225,
+        5.61925,
+        6.34725,
+        3.549,
+        2.457,
+        2.5025,
+        1.93375,
+        3.5035,
+        3.4125,
+        3.93575,
+        3.731,
+        3.25325,
+        2.34325,
+        1.97925
+      ],
+      "state_hint": "high",
+      "held_missing_second_indices": [],
+      "resampling": "contiguous spreadsheet rows at the source's documented nominal 1Hz polling cadence; measured throughput_upload_speed_kbps / 1000; no GPS clock used",
+      "source_radio_filter": "private 5G campus deployment described by the source; no per-row RAT/SA claim",
+      "measured_direction": "upload",
+      "profile_id": "umu_campus_tcp_upload-high-02",
+      "family_id": "umu_campus_tcp_upload",
+      "target_state": "bwe_ge_500k",
+      "conditioning_mean_mbps": 3.9448499999999997,
+      "campaign_id": "umu_private_campus_2024_2025",
+      "license": "CC-BY-4.0"
+    }
+  ],
+  "selection": {
+    "source_values_only": true,
+    "native_outcomes_read": false,
+    "window_seconds": 18,
+    "conditioning_hint_mean_indices": [
+      3,
+      13
+    ],
+    "conditioning_hint_mean_ranges_mbps": {
+      "low": [
+        0.28,
+        0.42
+      ],
+      "high": [
+        0.8,
+        4
+      ]
+    },
+    "rule": "canonical family/member/offset order; earliest eligible window in two distinct source files per state",
+    "maximum_rate_mbps": 10,
+    "consecutive_zero_samples_allowed": false,
+    "capacity_scaling_or_clamping": false,
+    "profiles_per_family_state": 2
+  },
+  "source_screen": {
+    "irish_lte": {
+      "low": {
+        "eligible_windows": 614,
+        "source_runs": 27
+      },
+      "high": {
+        "eligible_windows": 19943,
+        "source_runs": 82
+      }
+    },
+    "nyu_lte": {
+      "low": {
+        "eligible_windows": 107,
+        "source_runs": 13
+      },
+      "high": {
+        "eligible_windows": 12101,
+        "source_runs": 21
+      }
+    },
+    "umu_campus_tcp_upload": {
+      "low": {
+        "eligible_windows": 35,
+        "source_runs": 2
+      },
+      "high": {
+        "eligible_windows": 826,
+        "source_runs": 3
+      }
+    }
+  },
+  "scope": "Three distinct acquisition campaigns; source files/windows and crossed contents are nested. Measured application throughput is replayed symmetrically as local queue service, not live radio paths. Irish isolated-gap holds and Murcia nominal row cadence are representation assumptions. Source hints never substitute for browser BWE qualification."
+}

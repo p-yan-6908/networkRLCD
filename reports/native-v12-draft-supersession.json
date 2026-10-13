@@ -1,0 +1,13 @@
+{
+  "abi": "native_v12_preregistration_draft_supersession_v1",
+  "superseded_protocol_sha256": "8f76acaaeb0125e0c11adaaa6f48207c956dcfa0474db7131f282f6e0034a6a3",
+  "reason": "Pre-commit metadata correction: recorder limitation text now describes both upload and downlink rate provenance. The native sampler and all operational recorder statements are unchanged. No support-census or confirmatory sessions existed. All thresholds, actions, seeds, sources, outcomes and sample counts are unchanged.",
+  "outcome_data_observed": false,
+  "draft_root": "/home/agent/.cache/networkrlcd/v12-registration-draft-8f76acaa",
+  "native_development_commit": "f83ad5c",
+  "additional_precommit_draft": {
+    "protocol_sha256": "3f2be683f3fab47ed442b4422fe11f7c91d4a6cf749f4b0c892593d683dd312d",
+    "reason": "Recorder source/limitation notices corrected to refer to the pinned content license, including CC BY-SA 3.0. No operational code, scientific criteria, source selection, randomization or outcomes changed. No census/actions existed.",
+    "draft_root": "/home/agent/.cache/networkrlcd/v12-registration-draft-3f2be683"
+  }
+}

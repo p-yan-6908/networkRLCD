@@ -62,6 +62,14 @@ def inventory() -> dict:
     for path in (REPO / "tools").glob("native_*clock*probe*.py"):
         paths[path.relative_to(REPO).as_posix()] = path
     paths["tools/native_support_validation_v12.py"] = Path(__file__).resolve()
+    for name in ("tools/prepare_native_v12_sources.py", "tools/analyze_native_v12.py",
+                 "docs/NATIVE_SUPPORT_VALIDATION_V12_PLAN.md", "data/native-v12/README.md",
+                 "data/native-v12/content_sources.json", "data/native-v12/network_profiles.json",
+                 "acquisition/native-independent-v12/commons-rights.json",
+                 "acquisition/native-independent-v12/source_screening.json"):
+        path = REPO / name
+        if path.exists():
+            paths[name] = path
     return {name: sha(path) for name, path in sorted(paths.items())}
 
 
@@ -206,6 +214,7 @@ def sender_gate(directory: Path, trial: dict, protocol: dict):
             ack = boundary["ack_ms"]
             passed &= (a["abi"] == "native_support_qualified_ratio_v12" and a["epoch"] == 0
                 and a["draw_uint32"] == draw and a["ratio"] == ratio and a["state_bin"] == trial["target_state"]
+                and a["arm"] == ((draw & 1) ^ trial["pair_slot"]) and a["propensity"] == .5
                 and a["base_bwe_bps"] == bwes[-1] and a["randomization_seed"] == seed
                 and a["trial_id"] == trial["id"] and a["pair_id"] == trial["pair_id"] and a["pair_slot"] == trial["pair_slot"]
                 and a["requested_bps"] == cap and a["assignment_ms"] == times[-1]
@@ -240,7 +249,10 @@ def gate(root):
         if item["status"] == "sealed":
             directory = root / "sessions" / trial["id"]
             markers = core.load_marker_pair(directory / "clock_markers_browser.json", directory / "clock_markers_node.json")
-            order = [row["marker_id"] for row in markers] == [f"m{i:04}" for i in range(1, 13)]
+            order = ([row["marker_id"] for row in markers] == [f"m{i:04}" for i in range(1, 13)]
+                and [row.get("endpoint") for row in markers] == ["/clock-marker", "/clock-marker", "/phase", "/clock-marker",
+                    "/clock-marker", "/phase", "/clock-marker", "/clock-marker", "/phase", "/clock-marker", "/clock-marker", "/clock-marker"]
+                and [row.get("phase") for row in markers] == [None, None, "block_0", None, None, "block_1", None, None, "block_2", None, None, None])
             clock = core.validate_markers(markers, protocol["calibration"]["train_indices"], protocol["calibration"]["held_out_indices"]) if order else {"passed": False}
             ice = read(directory / "ice_evidence.json")
             urls = {c.get("url") for peer in ("a", "b") for c in ice.get("candidates", {}).get(peer, [])}
@@ -253,6 +265,10 @@ def gate(root):
                 and len(summary.get("snapshots", [])) == 3 and all(s.get("frames_encoded", 0) > 10
                     and s.get("frames_decoded", 0) > 10 and isinstance(s.get("mean_encode_s"), (float, int))
                     and math.isfinite(s["mean_encode_s"]) for s in summary["snapshots"]))
+            if media:
+                snapshots = summary["snapshots"]
+                media &= all(snapshots[i][field] - snapshots[i - 1][field] > 10
+                             for i in (1, 2) for field in ("frames_encoded", "frames_decoded"))
             result.update({"clock": {k: v for k, v in clock.items() if k != "checks"},
                 "transport_passed": transport["passed"], "trace_passed": trace["passed"],
                 "cleanup_passed": cleanup["passed"], "media_passed": bool(media), "support": support})
@@ -301,6 +317,8 @@ def prepare():
         "independent_network_campaigns": sorted({f["campaign_id"] for f in network["families"].values()}),
         "support_census_root": str(support_root),
         "development_report_sha256": sha(REPO / "reports/native-v12-development-qualification.json"),
+        "development_instrumentation_commit": "f83ad5c",
+        "development_protocol_sha256": development_report["protocol_sha256"],
         "preregistration_files": {p.relative_to(REPO).as_posix(): sha(p) for p in (
             PLAN, REPO / "data/native-v12/content_sources.json", REPO / "data/native-v12/network_profiles.json",
             REPO / "acquisition/native-independent-v12/source_screening.json")},
@@ -346,6 +364,25 @@ def verify_registration():
         rows = [t for t in protocol["trials"] if t["pair_id"] == pair]
         if len(rows) != 2 or sorted(t["pair_slot"] for t in rows) != [0, 1]:
             raise ValueError("balanced pair inventory drift")
+    support_root = Path(protocol["support_census_root"])
+    support = read(support_root / "protocol.json")
+    if support["confirmatory_protocol_sha256"] != sha(CONFIG) or len(support["trials"]) != 24:
+        raise ValueError("support census registration drift")
+    for key in ("source_hashes", "calibration", "runtime", "clock_calibration_reference", "trace_replay", "transport"):
+        if support[key] != protocol[key]:
+            raise ValueError("support census uses different frozen instrumentation")
+    if {t["pair_id"] for t in support["trials"]} != {t["pair_id"] for t in protocol["trials"]}:
+        raise ValueError("support census pair inventory drift")
+    for trial in support["trials"]:
+        main = next(t for t in protocol["trials"] if t["pair_id"] == trial["pair_id"] and t["pair_slot"] == 0)
+        for key in ("content_id", "network_family", "network_campaign_id", "network_profile_id", "target_state", "cell_cluster"):
+            if trial[key] != main[key]:
+                raise ValueError("support census omits a registered content/network/state block")
+        if not trial["support_only"] or trial["pair_slot"] != 0 or sha(support_root / trial["panel"]) != trial["panel_sha256"]:
+            raise ValueError("support census panel checksum/conditioning drift")
+        support_panel, main_panel = read(support_root / trial["panel"]), read(ROOT / main["panel"])
+        if support_panel["video_source"] != main_panel["video_source"] or support_panel["episodes"][0]["schedule"] != main_panel["episodes"][0]["schedule"]:
+            raise ValueError("support census differs from confirmatory source/trace")
     return {"verified": True, "protocol_sha256": sha(CONFIG), "planned_sessions": 48,
             "confirmatory_capture_started": (ROOT / "sessions").exists(),
             "support_census_started": (Path(protocol["support_census_root"]) / "sessions").exists()}

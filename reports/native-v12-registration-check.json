@@ -1,0 +1,22 @@
+{
+  "abi": "native_v12_registration_check_v1",
+  "protocol_sha256": "b96f1aed7d0001dcb6f28faf7d41af4dd0f936534d1b80114189199db9d35929",
+  "prior_anchor_files_verified_unchanged": 1196,
+  "planned_sessions": 48,
+  "matched_pairs": 24,
+  "content_network_cells": 6,
+  "planned_state_action_groups": 24,
+  "planned_holds_each_state_action_group": 2,
+  "all_cell_counts_met_by_registered_paired_allocation": true,
+  "support_census_started": false,
+  "confirmatory_capture_started": false,
+  "new_outcomes_observed": false,
+  "tests": {
+    "native_sampler_node_tests": 4,
+    "python_boundary_blinding_and_native_readback_tests": 5,
+    "all_passed": true
+  },
+  "development_clock_maximum_held_out_width_ms": 2.480365051414992,
+  "notes": "Planned counts are guaranteed by paired allocation conditional on every session prospectively qualifying. New content \u00d7 measured-network BWE feasibility has not yet been observed. Census and confirmatory captures remain pristine.",
+  "precommit_metadata_drafts_preserved": true
+}

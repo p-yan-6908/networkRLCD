@@ -1,0 +1,134 @@
+{
+  "abi": "native_v12_independent_source_screen_v1",
+  "acquisition_responses": [
+    {
+      "hostname": "upload.wikimedia.org",
+      "request": "initial Commons original URLs with catalogue tracking query",
+      "status": 403
+    },
+    {
+      "checksums_verified": true,
+      "hostname": "upload.wikimedia.org",
+      "request": "canonical original URLs without tracking query, through configured HTTPS proxy",
+      "status": 200
+    },
+    {
+      "hostname": "zenodo.org",
+      "published_md5_and_local_sha256_verified": true,
+      "request": "immutable source metadata and selected original archive files",
+      "status": 200
+    },
+    {
+      "git_blob_sha1_and_local_sha256_verified": true,
+      "hostname": "raw.githubusercontent.com",
+      "request": "NYU-METS revision-pinned Dataset_1.rar and README",
+      "status": 200
+    }
+  ],
+  "alternatives": [
+    {
+      "archive_verified": true,
+      "reason_not_selected": "Sparse minute-separated throughput tests; no native 18-second 1Hz low/high support histories. Throughput entries are numerically all above 10; no rate clamping/scaling attempted.",
+      "rights": "CC-BY-4.0",
+      "source": "DEDICAT6G CGB, Zenodo 10829862"
+    },
+    {
+      "archive_verified": true,
+      "reason_not_selected": "Shares the UCC collection program with the selected Irish LTE campaign; three campaigns from distinct collection institutions are already available.",
+      "rights": "GPL-3.0 in archive; Zenodo license field absent",
+      "source": "UCC 5G, Zenodo 3751194"
+    },
+    {
+      "metadata_status": 200,
+      "reason_not_selected": "Large router/radio dataset; three smaller explicitly licensed throughput campaigns acquired, avoiding unnecessary multi-GB acquisition.",
+      "rights": "CC-BY-4.0",
+      "source": "Fjord5G, Zenodo 14627352"
+    },
+    {
+      "metadata_status": 200,
+      "reason_not_selected": "Radio/latency/flight fields do not establish a measured application-throughput service history suitable for the unchanged replay protocol.",
+      "rights": "CC-BY-4.0",
+      "source": "RuralDrone5G, Zenodo 16673883"
+    },
+    {
+      "primary_page_status": 200,
+      "reason_not_selected": "Primary page provides research-use/citation invitation but no explicit standardized data license; sufficient explicitly licensed alternatives acquired.",
+      "source": "Norway HSDPA primary dataset"
+    }
+  ],
+  "anchor_commit": "92a6ae3",
+  "environment": {
+    "HF_TOKEN_available": true,
+    "HF_TOKEN_value_logged": false,
+    "authenticated_hf_dataset_status": 200,
+    "hf_revision": "b1497fa425f59c3b796d9ce5354ee58a0afe9667",
+    "http_policy": "unrestricted/enforced",
+    "managed_WebRtcIPHandling": "disable_non_proxied_udp",
+    "managed_policy_changed": false,
+    "planned_external_capture_budget_bytes": 500000000,
+    "repository_budget_bytes": 10000000000,
+    "storage_free_bytes_at_screen": 27725131776
+  },
+  "external_dependency_blocked": false,
+  "independence_scope": "Three new campaigns and two new content productions; files/windows/days and crossed cells are nested, not independently pooled source replicates.",
+  "instrument_development_commit": "f83ad5c",
+  "native_support_status": "Unobserved on new sources; all 24 prospectively registered source/content/state census sessions must qualify before treatment starts. Rate hints are never substituted for browser BWE.",
+  "new_native_action_or_outcome_data_observed": false,
+  "rejected_initial_content": [
+    {
+      "candidate_id": "commons-64302110",
+      "reason": "V11C capture group overlap detected before registration/native capture; downloaded originals and draft clips retained outside the repository; not eligible as new evidence"
+    },
+    {
+      "candidate_id": "commons-44346310",
+      "reason": "V11C capture group overlap detected before registration/native capture; downloaded originals and draft clips retained outside the repository; not eligible as new evidence"
+    }
+  ],
+  "screened_at_utc": "2026-10-13T23:37:35.957281+00:00",
+  "selected_content_capture_groups": [
+    "nature-box-kamogawa-penguins-2013-11-28",
+    "jacopo188-shirlan-waterfall-2012"
+  ],
+  "selected_content_ids": [
+    "content_king_penguins_2013_01",
+    "content_shirlan_waterfall_2012_01"
+  ],
+  "selected_network_campaigns": [
+    "ucc_irish_lte_2017_2018",
+    "nyu_mets_lte",
+    "umu_private_campus_2024_2025"
+  ],
+  "source_screen": {
+    "irish_lte": {
+      "high": {
+        "eligible_windows": 19943,
+        "source_runs": 82
+      },
+      "low": {
+        "eligible_windows": 614,
+        "source_runs": 27
+      }
+    },
+    "nyu_lte": {
+      "high": {
+        "eligible_windows": 12101,
+        "source_runs": 21
+      },
+      "low": {
+        "eligible_windows": 107,
+        "source_runs": 13
+      }
+    },
+    "umu_campus_tcp_upload": {
+      "high": {
+        "eligible_windows": 826,
+        "source_runs": 3
+      },
+      "low": {
+        "eligible_windows": 35,
+        "source_runs": 2
+      }
+    }
+  },
+  "support_diagnosis_commit": "5451328"
+}

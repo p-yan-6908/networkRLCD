@@ -1,0 +1,12 @@
+{
+  "abi": "native_v12_development_archive_upload_failure_v1",
+  "exception": "FileNotFoundError",
+  "hostname": null,
+  "status": null,
+  "raw_local_evidence_retained": true,
+  "staging": "/home/agent/.cache/networkrlcd/v12-development-archive-staging",
+  "files_deleted": 0,
+  "failure_stage": "local tar open after successful upload and per-object fresh-download hashes",
+  "remote_upload_succeeded": true,
+  "resolved_by_receipt": "docs/storage-receipts/native-support-validation-v12-development-20261013-01.json"
+}
