@@ -1,0 +1,4791 @@
+{
+  "abi": "native_v11d_design_support_diagnosis_v1",
+  "anchor_commit": "92a6ae3",
+  "by_content": {
+    "content_cicada_emergence_01": {
+      "cells": 4,
+      "complete_cells": 3,
+      "failure_classes": {
+        "random_arm_imbalance": 1
+      },
+      "high_holds": 29,
+      "low_holds": 67
+    },
+    "content_d3_tree_layout_tutorial_01": {
+      "cells": 4,
+      "complete_cells": 1,
+      "failure_classes": {
+        "insufficient_state_visits": 3
+      },
+      "high_holds": 8,
+      "low_holds": 88
+    },
+    "content_schmilka_firefighting_01": {
+      "cells": 4,
+      "complete_cells": 3,
+      "failure_classes": {
+        "insufficient_state_visits": 1
+      },
+      "high_holds": 18,
+      "low_holds": 78
+    },
+    "content_vizanice_outdoor_01": {
+      "cells": 4,
+      "complete_cells": 2,
+      "failure_classes": {
+        "random_arm_imbalance": 2
+      },
+      "high_holds": 25,
+      "low_holds": 71
+    }
+  },
+  "by_epoch": {
+    "0": {
+      "assignment_offset_min_max_ms": [
+        2.899999998509884,
+        11.800000004470348
+      ],
+      "bwe_min_median_max_bps": [
+        300000,
+        300000.0,
+        300000
+      ],
+      "high_state": 0,
+      "low_state": 64
+    },
+    "1": {
+      "assignment_offset_min_max_ms": [
+        3005.7999999970198,
+        3080.6999999955297
+      ],
+      "bwe_min_median_max_bps": [
+        159247,
+        612787.5,
+        1247540
+      ],
+      "high_state": 36,
+      "low_state": 28
+    },
+    "2": {
+      "assignment_offset_min_max_ms": [
+        6065.79999999702,
+        6153.5
+      ],
+      "bwe_min_median_max_bps": [
+        67633,
+        382863.5,
+        2048000
+      ],
+      "high_state": 9,
+      "low_state": 55
+    },
+    "3": {
+      "assignment_offset_min_max_ms": [
+        9114.39999999851,
+        9221.5
+      ],
+      "bwe_min_median_max_bps": [
+        70710,
+        400967.0,
+        2192000
+      ],
+      "high_state": 15,
+      "low_state": 49
+    },
+    "4": {
+      "assignment_offset_min_max_ms": [
+        12173.39999999851,
+        12285.19999999553
+      ],
+      "bwe_min_median_max_bps": [
+        90823,
+        387681.0,
+        2192000
+      ],
+      "high_state": 12,
+      "low_state": 52
+    },
+    "5": {
+      "assignment_offset_min_max_ms": [
+        15223.0,
+        15343.10000000149
+      ],
+      "bwe_min_median_max_bps": [
+        114967,
+        319487.5,
+        774933
+      ],
+      "high_state": 8,
+      "low_state": 56
+    }
+  },
+  "by_family": {
+    "nordic_op1_5g_nsa_b20": {
+      "cells": 4,
+      "complete_cells": 3,
+      "failure_classes": {
+        "insufficient_state_visits": 1
+      },
+      "high_holds": 23,
+      "low_holds": 73
+    },
+    "nordic_op1_lte_b20": {
+      "cells": 4,
+      "complete_cells": 0,
+      "failure_classes": {
+        "insufficient_state_visits": 2,
+        "random_arm_imbalance": 2
+      },
+      "high_holds": 12,
+      "low_holds": 84
+    },
+    "nordic_op3_lte_b3": {
+      "cells": 4,
+      "complete_cells": 2,
+      "failure_classes": {
+        "insufficient_state_visits": 1,
+        "random_arm_imbalance": 1
+      },
+      "high_holds": 17,
+      "low_holds": 79
+    },
+    "rome_op2_lte": {
+      "cells": 4,
+      "complete_cells": 4,
+      "failure_classes": {},
+      "high_holds": 28,
+      "low_holds": 68
+    }
+  },
+  "capture_index_sha256": "00b17973205196231bdeaf19fdd2e43519112d7f08cbf0c4779e5c797fdac1b5",
+  "cells": {
+    "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": {
+      "complete": true,
+      "content_id": "content_cicada_emergence_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 4,
+          "1.05": 4
+        },
+        "bwe_lt_500k": {
+          "0.65": 8,
+          "1.05": 8
+        }
+      },
+      "failure_class": null,
+      "missing_groups": [],
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "state_totals": {
+        "bwe_ge_500k": 8,
+        "bwe_lt_500k": 16
+      }
+    },
+    "content_cicada_emergence_01__nordic_op1_lte_b20": {
+      "complete": false,
+      "content_id": "content_cicada_emergence_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 1,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 12,
+          "1.05": 8
+        }
+      },
+      "failure_class": "random_arm_imbalance",
+      "missing_groups": [
+        {
+          "count": 1,
+          "ratio": 0.65,
+          "shortfall": 1,
+          "state": "bwe_ge_500k"
+        }
+      ],
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "state_totals": {
+        "bwe_ge_500k": 4,
+        "bwe_lt_500k": 20
+      }
+    },
+    "content_cicada_emergence_01__nordic_op3_lte_b3": {
+      "complete": true,
+      "content_id": "content_cicada_emergence_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 5,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 6,
+          "1.05": 10
+        }
+      },
+      "failure_class": null,
+      "missing_groups": [],
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "state_totals": {
+        "bwe_ge_500k": 8,
+        "bwe_lt_500k": 16
+      }
+    },
+    "content_cicada_emergence_01__rome_op2_lte": {
+      "complete": true,
+      "content_id": "content_cicada_emergence_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 6,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 7,
+          "1.05": 8
+        }
+      },
+      "failure_class": null,
+      "missing_groups": [],
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "state_totals": {
+        "bwe_ge_500k": 9,
+        "bwe_lt_500k": 15
+      }
+    },
+    "content_d3_tree_layout_tutorial_01__nordic_op1_5g_nsa_b20": {
+      "complete": false,
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 0,
+          "1.05": 1
+        },
+        "bwe_lt_500k": {
+          "0.65": 9,
+          "1.05": 14
+        }
+      },
+      "failure_class": "insufficient_state_visits",
+      "missing_groups": [
+        {
+          "count": 0,
+          "ratio": 0.65,
+          "shortfall": 2,
+          "state": "bwe_ge_500k"
+        },
+        {
+          "count": 1,
+          "ratio": 1.05,
+          "shortfall": 1,
+          "state": "bwe_ge_500k"
+        }
+      ],
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "state_totals": {
+        "bwe_ge_500k": 1,
+        "bwe_lt_500k": 23
+      }
+    },
+    "content_d3_tree_layout_tutorial_01__nordic_op1_lte_b20": {
+      "complete": false,
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 1,
+          "1.05": 0
+        },
+        "bwe_lt_500k": {
+          "0.65": 11,
+          "1.05": 12
+        }
+      },
+      "failure_class": "insufficient_state_visits",
+      "missing_groups": [
+        {
+          "count": 1,
+          "ratio": 0.65,
+          "shortfall": 1,
+          "state": "bwe_ge_500k"
+        },
+        {
+          "count": 0,
+          "ratio": 1.05,
+          "shortfall": 2,
+          "state": "bwe_ge_500k"
+        }
+      ],
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "state_totals": {
+        "bwe_ge_500k": 1,
+        "bwe_lt_500k": 23
+      }
+    },
+    "content_d3_tree_layout_tutorial_01__nordic_op3_lte_b3": {
+      "complete": false,
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 0,
+          "1.05": 0
+        },
+        "bwe_lt_500k": {
+          "0.65": 9,
+          "1.05": 15
+        }
+      },
+      "failure_class": "insufficient_state_visits",
+      "missing_groups": [
+        {
+          "count": 0,
+          "ratio": 0.65,
+          "shortfall": 2,
+          "state": "bwe_ge_500k"
+        },
+        {
+          "count": 0,
+          "ratio": 1.05,
+          "shortfall": 2,
+          "state": "bwe_ge_500k"
+        }
+      ],
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "state_totals": {
+        "bwe_ge_500k": 0,
+        "bwe_lt_500k": 24
+      }
+    },
+    "content_d3_tree_layout_tutorial_01__rome_op2_lte": {
+      "complete": true,
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 3,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 7,
+          "1.05": 11
+        }
+      },
+      "failure_class": null,
+      "missing_groups": [],
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "state_totals": {
+        "bwe_ge_500k": 6,
+        "bwe_lt_500k": 18
+      }
+    },
+    "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": {
+      "complete": true,
+      "content_id": "content_schmilka_firefighting_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 3,
+          "1.05": 2
+        },
+        "bwe_lt_500k": {
+          "0.65": 9,
+          "1.05": 10
+        }
+      },
+      "failure_class": null,
+      "missing_groups": [],
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "state_totals": {
+        "bwe_ge_500k": 5,
+        "bwe_lt_500k": 19
+      }
+    },
+    "content_schmilka_firefighting_01__nordic_op1_lte_b20": {
+      "complete": false,
+      "content_id": "content_schmilka_firefighting_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 1,
+          "1.05": 1
+        },
+        "bwe_lt_500k": {
+          "0.65": 12,
+          "1.05": 10
+        }
+      },
+      "failure_class": "insufficient_state_visits",
+      "missing_groups": [
+        {
+          "count": 1,
+          "ratio": 0.65,
+          "shortfall": 1,
+          "state": "bwe_ge_500k"
+        },
+        {
+          "count": 1,
+          "ratio": 1.05,
+          "shortfall": 1,
+          "state": "bwe_ge_500k"
+        }
+      ],
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "state_totals": {
+        "bwe_ge_500k": 2,
+        "bwe_lt_500k": 22
+      }
+    },
+    "content_schmilka_firefighting_01__nordic_op3_lte_b3": {
+      "complete": true,
+      "content_id": "content_schmilka_firefighting_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 2,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 10,
+          "1.05": 9
+        }
+      },
+      "failure_class": null,
+      "missing_groups": [],
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "state_totals": {
+        "bwe_ge_500k": 5,
+        "bwe_lt_500k": 19
+      }
+    },
+    "content_schmilka_firefighting_01__rome_op2_lte": {
+      "complete": true,
+      "content_id": "content_schmilka_firefighting_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 3,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 12,
+          "1.05": 6
+        }
+      },
+      "failure_class": null,
+      "missing_groups": [],
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "state_totals": {
+        "bwe_ge_500k": 6,
+        "bwe_lt_500k": 18
+      }
+    },
+    "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20": {
+      "complete": true,
+      "content_id": "content_vizanice_outdoor_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 6,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 6,
+          "1.05": 9
+        }
+      },
+      "failure_class": null,
+      "missing_groups": [],
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "state_totals": {
+        "bwe_ge_500k": 9,
+        "bwe_lt_500k": 15
+      }
+    },
+    "content_vizanice_outdoor_01__nordic_op1_lte_b20": {
+      "complete": false,
+      "content_id": "content_vizanice_outdoor_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 1,
+          "1.05": 4
+        },
+        "bwe_lt_500k": {
+          "0.65": 10,
+          "1.05": 9
+        }
+      },
+      "failure_class": "random_arm_imbalance",
+      "missing_groups": [
+        {
+          "count": 1,
+          "ratio": 0.65,
+          "shortfall": 1,
+          "state": "bwe_ge_500k"
+        }
+      ],
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "state_totals": {
+        "bwe_ge_500k": 5,
+        "bwe_lt_500k": 19
+      }
+    },
+    "content_vizanice_outdoor_01__nordic_op3_lte_b3": {
+      "complete": false,
+      "content_id": "content_vizanice_outdoor_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 3,
+          "1.05": 1
+        },
+        "bwe_lt_500k": {
+          "0.65": 8,
+          "1.05": 12
+        }
+      },
+      "failure_class": "random_arm_imbalance",
+      "missing_groups": [
+        {
+          "count": 1,
+          "ratio": 1.05,
+          "shortfall": 1,
+          "state": "bwe_ge_500k"
+        }
+      ],
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "state_totals": {
+        "bwe_ge_500k": 4,
+        "bwe_lt_500k": 20
+      }
+    },
+    "content_vizanice_outdoor_01__rome_op2_lte": {
+      "complete": true,
+      "content_id": "content_vizanice_outdoor_01",
+      "counts": {
+        "bwe_ge_500k": {
+          "0.65": 3,
+          "1.05": 4
+        },
+        "bwe_lt_500k": {
+          "0.65": 9,
+          "1.05": 8
+        }
+      },
+      "failure_class": null,
+      "missing_groups": [],
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "state_totals": {
+        "bwe_ge_500k": 7,
+        "bwe_lt_500k": 17
+      }
+    }
+  },
+  "complete_cells": 9,
+  "failed_cells": 7,
+  "failure_classes": {
+    "insufficient_state_visits": 4,
+    "random_arm_imbalance": 3
+  },
+  "hold_count": 384,
+  "input_projection": {
+    "decoded": [
+      "protocol.json",
+      "capture_index.json",
+      "integrity.json",
+      "sender_observations.json assignments, BWE feature zero, action readback, timing",
+      "registered network_profiles.json and panel source schedules"
+    ],
+    "frozen_hold_count_minimum": 2,
+    "frozen_required_complete_cells": 13,
+    "outcome_analysis_loaders_imported": false,
+    "outcome_files_decoded": []
+  },
+  "interpretation_limits": [
+    "Replay-rate threshold crossings are not browser BWE state visits.",
+    "Later pre-action BWE reflects content, transport adaptation and prior randomized actions; associations are development diagnostics, not causal effects.",
+    "The initial 300kbps BWE is startup initialization rather than proof of steady low-network support.",
+    "No PSNR, frame delivery, relay delivery/drop cost or treatment effect was examined by this diagnosis.",
+    "Coverage thresholds are unchanged; no missing holds or outcomes are imputed."
+  ],
+  "protocol_sha256": "db3d5c8bd440b04c4e28c2d6c196ce946b87dd3ba9d060ef0a9a07bf46db1e50",
+  "registered_trace_document_keys": [
+    "abi",
+    "source_files",
+    "families",
+    "profiles",
+    "technical_smoke_profile_id",
+    "selection_protocol",
+    "network_campaigns",
+    "independence_note"
+  ],
+  "registered_trace_source_checksum": "d71a95515b99c4c438a85ee93bbd022fa9363970d1498a6e0e2e9e48a5c2fc27",
+  "sessions": [
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__rome_op2_lte",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 8.0,
+          "assignment_offset_ms": 4.799999997019768,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3072.7000000029802,
+          "assignment_offset_ms": 3071.39999999851,
+          "epoch": 1,
+          "pre_action_bwe_bps": 446960,
+          "ratio": 1.05,
+          "requested_cap_bps": 469308,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6120.60000000149,
+          "assignment_offset_ms": 6119.70000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 989333,
+          "ratio": 1.05,
+          "requested_cap_bps": 1038800,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 9183.79999999702,
+          "assignment_offset_ms": 9183.10000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 2192000,
+          "ratio": 0.65,
+          "requested_cap_bps": 1424800,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12244.60000000149,
+          "assignment_offset_ms": 12243.10000000149,
+          "epoch": 4,
+          "pre_action_bwe_bps": 2192000,
+          "ratio": 1.05,
+          "requested_cap_bps": 2301600,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 15304.89999999851,
+          "assignment_offset_ms": 15304.20000000298,
+          "epoch": 5,
+          "pre_action_bwe_bps": 309428,
+          "ratio": 1.05,
+          "requested_cap_bps": 324899,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-rome_op2_lte-r00-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__rome_op2_lte",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 9.0,
+          "assignment_offset_ms": 5.399999998509884,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3063.2000000029802,
+          "assignment_offset_ms": 3062.39999999851,
+          "epoch": 1,
+          "pre_action_bwe_bps": 909917,
+          "ratio": 1.05,
+          "requested_cap_bps": 955413,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6124.20000000298,
+          "assignment_offset_ms": 6120.79999999702,
+          "epoch": 2,
+          "pre_action_bwe_bps": 384792,
+          "ratio": 1.05,
+          "requested_cap_bps": 404032,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9193.39999999851,
+          "assignment_offset_ms": 9192.60000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 432651,
+          "ratio": 1.05,
+          "requested_cap_bps": 454284,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12246.20000000298,
+          "assignment_offset_ms": 12245.20000000298,
+          "epoch": 4,
+          "pre_action_bwe_bps": 644093,
+          "ratio": 0.65,
+          "requested_cap_bps": 418660,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 15301.89999999851,
+          "assignment_offset_ms": 15301.10000000149,
+          "epoch": 5,
+          "pre_action_bwe_bps": 214235,
+          "ratio": 1.05,
+          "requested_cap_bps": 224947,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-rome_op2_lte-r03-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__nordic_op3_lte_b3",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 8.199999995529652,
+          "assignment_offset_ms": 5.199999995529652,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3063.6999999955297,
+          "assignment_offset_ms": 3062.6999999955297,
+          "epoch": 1,
+          "pre_action_bwe_bps": 787152,
+          "ratio": 0.65,
+          "requested_cap_bps": 511649,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6132.89999999851,
+          "assignment_offset_ms": 6132.29999999702,
+          "epoch": 2,
+          "pre_action_bwe_bps": 330146,
+          "ratio": 1.05,
+          "requested_cap_bps": 346653,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9200.29999999702,
+          "assignment_offset_ms": 9199.19999999553,
+          "epoch": 3,
+          "pre_action_bwe_bps": 390254,
+          "ratio": 0.65,
+          "requested_cap_bps": 253665,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12265.10000000149,
+          "assignment_offset_ms": 12263.5,
+          "epoch": 4,
+          "pre_action_bwe_bps": 418324,
+          "ratio": 0.65,
+          "requested_cap_bps": 271911,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15313.69999999553,
+          "assignment_offset_ms": 15312.79999999702,
+          "epoch": 5,
+          "pre_action_bwe_bps": 429437,
+          "ratio": 1.05,
+          "requested_cap_bps": 450909,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-nordic_op3_lte_b3-r00-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__rome_op2_lte",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.399999998509884,
+          "assignment_offset_ms": 4.600000001490116,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3066.5,
+          "assignment_offset_ms": 3063.39999999851,
+          "epoch": 1,
+          "pre_action_bwe_bps": 1026450,
+          "ratio": 1.05,
+          "requested_cap_bps": 1077773,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6085.10000000149,
+          "assignment_offset_ms": 6084.29999999702,
+          "epoch": 2,
+          "pre_action_bwe_bps": 2048000,
+          "ratio": 1.05,
+          "requested_cap_bps": 2150400,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 9154.89999999851,
+          "assignment_offset_ms": 9150.60000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 1030938,
+          "ratio": 0.65,
+          "requested_cap_bps": 670110,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12210.89999999851,
+          "assignment_offset_ms": 12209.70000000298,
+          "epoch": 4,
+          "pre_action_bwe_bps": 257494,
+          "ratio": 0.65,
+          "requested_cap_bps": 167371,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15274.0,
+          "assignment_offset_ms": 15273.20000000298,
+          "epoch": 5,
+          "pre_action_bwe_bps": 335232,
+          "ratio": 0.65,
+          "requested_cap_bps": 217901,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-rome_op2_lte-r00-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 6.199999995529652,
+          "assignment_offset_ms": 4.0,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3074.0999999940395,
+          "assignment_offset_ms": 3072.5999999940395,
+          "epoch": 1,
+          "pre_action_bwe_bps": 459385,
+          "ratio": 1.05,
+          "requested_cap_bps": 482354,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6135.5999999940395,
+          "assignment_offset_ms": 6134.5,
+          "epoch": 2,
+          "pre_action_bwe_bps": 776800,
+          "ratio": 1.05,
+          "requested_cap_bps": 815640,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 9179.79999999702,
+          "assignment_offset_ms": 9178.69999999553,
+          "epoch": 3,
+          "pre_action_bwe_bps": 413410,
+          "ratio": 0.65,
+          "requested_cap_bps": 268717,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12242.89999999851,
+          "assignment_offset_ms": 12241.19999999553,
+          "epoch": 4,
+          "pre_action_bwe_bps": 442294,
+          "ratio": 0.65,
+          "requested_cap_bps": 287491,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15305.0,
+          "assignment_offset_ms": 15304.19999999553,
+          "epoch": 5,
+          "pre_action_bwe_bps": 448067,
+          "ratio": 1.05,
+          "requested_cap_bps": 470470,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-nordic_op1_5g_nsa_b20-r00-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 9.299999997019768,
+          "assignment_offset_ms": 5.899999998509884,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3062.5999999940395,
+          "assignment_offset_ms": 3061.2999999970198,
+          "epoch": 1,
+          "pre_action_bwe_bps": 785405,
+          "ratio": 1.05,
+          "requested_cap_bps": 824675,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6153.5,
+          "assignment_offset_ms": 6152.69999999553,
+          "epoch": 2,
+          "pre_action_bwe_bps": 657500,
+          "ratio": 0.65,
+          "requested_cap_bps": 427375,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 9216.39999999851,
+          "assignment_offset_ms": 9215.19999999553,
+          "epoch": 3,
+          "pre_action_bwe_bps": 343361,
+          "ratio": 1.05,
+          "requested_cap_bps": 360529,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12288.39999999851,
+          "assignment_offset_ms": 12285.19999999553,
+          "epoch": 4,
+          "pre_action_bwe_bps": 267297,
+          "ratio": 1.05,
+          "requested_cap_bps": 280662,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15335.5,
+          "assignment_offset_ms": 15334.39999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 326148,
+          "ratio": 1.05,
+          "requested_cap_bps": 342455,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-nordic_op1_5g_nsa_b20-r00-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__rome_op2_lte",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.199999995529652,
+          "assignment_offset_ms": 3.100000001490116,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3062.7999999970198,
+          "assignment_offset_ms": 3062.10000000149,
+          "epoch": 1,
+          "pre_action_bwe_bps": 193301,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6112.60000000149,
+          "assignment_offset_ms": 6111.5,
+          "epoch": 2,
+          "pre_action_bwe_bps": 248763,
+          "ratio": 1.05,
+          "requested_cap_bps": 261201,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9166.19999999553,
+          "assignment_offset_ms": 9165.39999999851,
+          "epoch": 3,
+          "pre_action_bwe_bps": 538666,
+          "ratio": 1.05,
+          "requested_cap_bps": 565599,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12230.0,
+          "assignment_offset_ms": 12229.0,
+          "epoch": 4,
+          "pre_action_bwe_bps": 437475,
+          "ratio": 0.65,
+          "requested_cap_bps": 284359,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15285.10000000149,
+          "assignment_offset_ms": 15284.39999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 292215,
+          "ratio": 0.65,
+          "requested_cap_bps": 189940,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-rome_op2_lte-r02-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__nordic_op3_lte_b3",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.399999998509884,
+          "assignment_offset_ms": 5.100000001490116,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3065.7999999970198,
+          "assignment_offset_ms": 3064.7999999970198,
+          "epoch": 1,
+          "pre_action_bwe_bps": 795469,
+          "ratio": 0.65,
+          "requested_cap_bps": 517055,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6122.20000000298,
+          "assignment_offset_ms": 6121.20000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 330018,
+          "ratio": 1.05,
+          "requested_cap_bps": 346519,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9183.29999999702,
+          "assignment_offset_ms": 9182.5,
+          "epoch": 3,
+          "pre_action_bwe_bps": 387025,
+          "ratio": 1.05,
+          "requested_cap_bps": 406376,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12243.29999999702,
+          "assignment_offset_ms": 12241.10000000149,
+          "epoch": 4,
+          "pre_action_bwe_bps": 466985,
+          "ratio": 0.65,
+          "requested_cap_bps": 303540,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15295.79999999702,
+          "assignment_offset_ms": 15294.89999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 504859,
+          "ratio": 0.65,
+          "requested_cap_bps": 328158,
+          "state_bin": "bwe_ge_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-nordic_op3_lte_b3-r03-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 6.199999995529652,
+          "assignment_offset_ms": 3.6999999955296516,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3067.0999999940395,
+          "assignment_offset_ms": 3066.1999999955297,
+          "epoch": 1,
+          "pre_action_bwe_bps": 470881,
+          "ratio": 1.05,
+          "requested_cap_bps": 494425,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6117.5,
+          "assignment_offset_ms": 6116.5999999940395,
+          "epoch": 2,
+          "pre_action_bwe_bps": 454598,
+          "ratio": 0.65,
+          "requested_cap_bps": 295489,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9170.69999999553,
+          "assignment_offset_ms": 9169.89999999851,
+          "epoch": 3,
+          "pre_action_bwe_bps": 495232,
+          "ratio": 1.05,
+          "requested_cap_bps": 519994,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12238.29999999702,
+          "assignment_offset_ms": 12237.39999999851,
+          "epoch": 4,
+          "pre_action_bwe_bps": 471145,
+          "ratio": 1.05,
+          "requested_cap_bps": 494702,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15306.19999999553,
+          "assignment_offset_ms": 15305.29999999702,
+          "epoch": 5,
+          "pre_action_bwe_bps": 370200,
+          "ratio": 0.65,
+          "requested_cap_bps": 240630,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-nordic_op3_lte_b3-r01-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__nordic_op1_lte_b20",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 10.0,
+          "assignment_offset_ms": 3.399999998509884,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3082.2999999970198,
+          "assignment_offset_ms": 3080.60000000149,
+          "epoch": 1,
+          "pre_action_bwe_bps": 425501,
+          "ratio": 1.05,
+          "requested_cap_bps": 446776,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6152.10000000149,
+          "assignment_offset_ms": 6149.39999999851,
+          "epoch": 2,
+          "pre_action_bwe_bps": 119562,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9220.29999999702,
+          "assignment_offset_ms": 9220.10000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 94589,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12284.19999999553,
+          "assignment_offset_ms": 12283.79999999702,
+          "epoch": 4,
+          "pre_action_bwe_bps": 125535,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15343.39999999851,
+          "assignment_offset_ms": 15343.10000000149,
+          "epoch": 5,
+          "pre_action_bwe_bps": 166554,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-nordic_op1_lte_b20-r03-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 5.799999997019768,
+          "assignment_offset_ms": 3.899999998509884,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3072.5999999940395,
+          "assignment_offset_ms": 3071.6999999955297,
+          "epoch": 1,
+          "pre_action_bwe_bps": 457580,
+          "ratio": 0.65,
+          "requested_cap_bps": 297427,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6154.19999999553,
+          "assignment_offset_ms": 6153.5,
+          "epoch": 2,
+          "pre_action_bwe_bps": 484788,
+          "ratio": 0.65,
+          "requested_cap_bps": 315112,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9202.5,
+          "assignment_offset_ms": 9201.59999999404,
+          "epoch": 3,
+          "pre_action_bwe_bps": 501533,
+          "ratio": 1.05,
+          "requested_cap_bps": 526610,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12266.89999999851,
+          "assignment_offset_ms": 12263.59999999404,
+          "epoch": 4,
+          "pre_action_bwe_bps": 524687,
+          "ratio": 0.65,
+          "requested_cap_bps": 341047,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 15339.79999999702,
+          "assignment_offset_ms": 15338.69999999553,
+          "epoch": 5,
+          "pre_action_bwe_bps": 573210,
+          "ratio": 1.05,
+          "requested_cap_bps": 601871,
+          "state_bin": "bwe_ge_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-nordic_op3_lte_b3-r02-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 6.0,
+          "assignment_offset_ms": 3.8000000044703484,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3071.10000000149,
+          "assignment_offset_ms": 3069.89999999851,
+          "epoch": 1,
+          "pre_action_bwe_bps": 710718,
+          "ratio": 1.05,
+          "requested_cap_bps": 746254,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6132.39999999851,
+          "assignment_offset_ms": 6131.39999999851,
+          "epoch": 2,
+          "pre_action_bwe_bps": 597454,
+          "ratio": 0.65,
+          "requested_cap_bps": 388345,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 9194.30000000447,
+          "assignment_offset_ms": 9193.10000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 619581,
+          "ratio": 1.05,
+          "requested_cap_bps": 650560,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12263.60000000149,
+          "assignment_offset_ms": 12262.80000000447,
+          "epoch": 4,
+          "pre_action_bwe_bps": 299617,
+          "ratio": 0.65,
+          "requested_cap_bps": 194751,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15314.10000000149,
+          "assignment_offset_ms": 15313.30000000447,
+          "epoch": 5,
+          "pre_action_bwe_bps": 303381,
+          "ratio": 1.05,
+          "requested_cap_bps": 318550,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-nordic_op1_5g_nsa_b20-r00-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__rome_op2_lte",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.199999995529652,
+          "assignment_offset_ms": 5,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3068.7999999970198,
+          "assignment_offset_ms": 3067.5999999940395,
+          "epoch": 1,
+          "pre_action_bwe_bps": 755243,
+          "ratio": 0.65,
+          "requested_cap_bps": 490908,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6117.5,
+          "assignment_offset_ms": 6116.5999999940395,
+          "epoch": 2,
+          "pre_action_bwe_bps": 78036,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9180.59999999404,
+          "assignment_offset_ms": 9180.39999999851,
+          "epoch": 3,
+          "pre_action_bwe_bps": 80138,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12240.5,
+          "assignment_offset_ms": 12240.19999999553,
+          "epoch": 4,
+          "pre_action_bwe_bps": 112272,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15307.29999999702,
+          "assignment_offset_ms": 15306.19999999553,
+          "epoch": 5,
+          "pre_action_bwe_bps": 150503,
+          "ratio": 1.05,
+          "requested_cap_bps": 158028,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-rome_op2_lte-r01-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__rome_op2_lte",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 12.799999997019768,
+          "assignment_offset_ms": 3.7999999970197678,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3065.2999999970198,
+          "assignment_offset_ms": 3064.39999999851,
+          "epoch": 1,
+          "pre_action_bwe_bps": 467066,
+          "ratio": 1.05,
+          "requested_cap_bps": 490419,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6126.5,
+          "assignment_offset_ms": 6125.39999999851,
+          "epoch": 2,
+          "pre_action_bwe_bps": 67925,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9179.60000000149,
+          "assignment_offset_ms": 9179.39999999851,
+          "epoch": 3,
+          "pre_action_bwe_bps": 82775,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12226.20000000298,
+          "assignment_offset_ms": 12226.0,
+          "epoch": 4,
+          "pre_action_bwe_bps": 121971,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15275.20000000298,
+          "assignment_offset_ms": 15274.10000000149,
+          "epoch": 5,
+          "pre_action_bwe_bps": 166202,
+          "ratio": 1.05,
+          "requested_cap_bps": 174512,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-rome_op2_lte-r01-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 11.300000004470348,
+          "assignment_offset_ms": 6.700000002980232,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3070.5,
+          "assignment_offset_ms": 3069.7000000029802,
+          "epoch": 1,
+          "pre_action_bwe_bps": 410292,
+          "ratio": 1.05,
+          "requested_cap_bps": 430807,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6134.70000000298,
+          "assignment_offset_ms": 6133.89999999851,
+          "epoch": 2,
+          "pre_action_bwe_bps": 498801,
+          "ratio": 1.05,
+          "requested_cap_bps": 523741,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9201.5,
+          "assignment_offset_ms": 9199.70000000298,
+          "epoch": 3,
+          "pre_action_bwe_bps": 400926,
+          "ratio": 0.65,
+          "requested_cap_bps": 260602,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12251.80000000447,
+          "assignment_offset_ms": 12251.0,
+          "epoch": 4,
+          "pre_action_bwe_bps": 427792,
+          "ratio": 0.65,
+          "requested_cap_bps": 278065,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15323.39999999851,
+          "assignment_offset_ms": 15322.39999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 441197,
+          "ratio": 0.65,
+          "requested_cap_bps": 286778,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-nordic_op3_lte_b3-r00-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__rome_op2_lte",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.199999995529652,
+          "assignment_offset_ms": 4.5,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3077.1999999955297,
+          "assignment_offset_ms": 3075.2999999970198,
+          "epoch": 1,
+          "pre_action_bwe_bps": 399199,
+          "ratio": 0.65,
+          "requested_cap_bps": 259479,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6140.39999999851,
+          "assignment_offset_ms": 6139.29999999702,
+          "epoch": 2,
+          "pre_action_bwe_bps": 418445,
+          "ratio": 1.05,
+          "requested_cap_bps": 439367,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9199.19999999553,
+          "assignment_offset_ms": 9198.0,
+          "epoch": 3,
+          "pre_action_bwe_bps": 506180,
+          "ratio": 0.65,
+          "requested_cap_bps": 329017,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12254.19999999553,
+          "assignment_offset_ms": 12253.39999999851,
+          "epoch": 4,
+          "pre_action_bwe_bps": 570277,
+          "ratio": 1.05,
+          "requested_cap_bps": 598791,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 15308.10000000149,
+          "assignment_offset_ms": 15306.69999999553,
+          "epoch": 5,
+          "pre_action_bwe_bps": 213838,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-rome_op2_lte-r03-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__nordic_op1_lte_b20",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.899999998509884,
+          "assignment_offset_ms": 4.100000001490116,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3064.7999999970198,
+          "assignment_offset_ms": 3064.10000000149,
+          "epoch": 1,
+          "pre_action_bwe_bps": 723677,
+          "ratio": 1.05,
+          "requested_cap_bps": 759861,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6137.10000000149,
+          "assignment_offset_ms": 6136.29999999702,
+          "epoch": 2,
+          "pre_action_bwe_bps": 67633,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9221.70000000298,
+          "assignment_offset_ms": 9221.5,
+          "epoch": 3,
+          "pre_action_bwe_bps": 70710,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12266.60000000149,
+          "assignment_offset_ms": 12266.39999999851,
+          "epoch": 4,
+          "pre_action_bwe_bps": 90823,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15314.10000000149,
+          "assignment_offset_ms": 15313.89999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 114967,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-nordic_op1_lte_b20-r03-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__nordic_op1_lte_b20",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 5.299999997019768,
+          "assignment_offset_ms": 3.2999999970197678,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3007.10000000149,
+          "assignment_offset_ms": 3005.7999999970198,
+          "epoch": 1,
+          "pre_action_bwe_bps": 575284,
+          "ratio": 1.05,
+          "requested_cap_bps": 604048,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6066.69999999553,
+          "assignment_offset_ms": 6065.79999999702,
+          "epoch": 2,
+          "pre_action_bwe_bps": 125995,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9115.0,
+          "assignment_offset_ms": 9114.39999999851,
+          "epoch": 3,
+          "pre_action_bwe_bps": 99557,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12173.79999999702,
+          "assignment_offset_ms": 12173.39999999851,
+          "epoch": 4,
+          "pre_action_bwe_bps": 119768,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15223.29999999702,
+          "assignment_offset_ms": 15223.0,
+          "epoch": 5,
+          "pre_action_bwe_bps": 151550,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-nordic_op1_lte_b20-r03-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 8.800000004470348,
+          "assignment_offset_ms": 4.700000002980232,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3076.3000000044703,
+          "assignment_offset_ms": 3075.3000000044703,
+          "epoch": 1,
+          "pre_action_bwe_bps": 835762,
+          "ratio": 1.05,
+          "requested_cap_bps": 877550,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6141.20000000298,
+          "assignment_offset_ms": 6140.20000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 502133,
+          "ratio": 0.65,
+          "requested_cap_bps": 326386,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 9213.20000000298,
+          "assignment_offset_ms": 9211.5,
+          "epoch": 3,
+          "pre_action_bwe_bps": 533184,
+          "ratio": 1.05,
+          "requested_cap_bps": 559843,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12276.70000000298,
+          "assignment_offset_ms": 12276.0,
+          "epoch": 4,
+          "pre_action_bwe_bps": 443457,
+          "ratio": 1.05,
+          "requested_cap_bps": 465630,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15327.30000000447,
+          "assignment_offset_ms": 15326.40000000596,
+          "epoch": 5,
+          "pre_action_bwe_bps": 348709,
+          "ratio": 1.05,
+          "requested_cap_bps": 366144,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-nordic_op1_5g_nsa_b20-r01-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 8.5,
+          "assignment_offset_ms": 3.600000001490116,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3067.2000000029802,
+          "assignment_offset_ms": 3065.89999999851,
+          "epoch": 1,
+          "pre_action_bwe_bps": 415661,
+          "ratio": 0.65,
+          "requested_cap_bps": 270180,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6131.39999999851,
+          "assignment_offset_ms": 6130.5,
+          "epoch": 2,
+          "pre_action_bwe_bps": 427830,
+          "ratio": 1.05,
+          "requested_cap_bps": 449222,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9202.20000000298,
+          "assignment_offset_ms": 9201.5,
+          "epoch": 3,
+          "pre_action_bwe_bps": 505129,
+          "ratio": 0.65,
+          "requested_cap_bps": 328334,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12269.5,
+          "assignment_offset_ms": 12268.60000000149,
+          "epoch": 4,
+          "pre_action_bwe_bps": 381410,
+          "ratio": 1.05,
+          "requested_cap_bps": 400481,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15327.5,
+          "assignment_offset_ms": 15326.70000000298,
+          "epoch": 5,
+          "pre_action_bwe_bps": 774933,
+          "ratio": 1.05,
+          "requested_cap_bps": 813680,
+          "state_bin": "bwe_ge_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-nordic_op3_lte_b3-r03-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__nordic_op1_lte_b20",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.5,
+          "assignment_offset_ms": 4.5999999940395355,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3061.5,
+          "assignment_offset_ms": 3060.5999999940395,
+          "epoch": 1,
+          "pre_action_bwe_bps": 452671,
+          "ratio": 1.05,
+          "requested_cap_bps": 475305,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6109.39999999851,
+          "assignment_offset_ms": 6108.5,
+          "epoch": 2,
+          "pre_action_bwe_bps": 118074,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9174.89999999851,
+          "assignment_offset_ms": 9174.0,
+          "epoch": 3,
+          "pre_action_bwe_bps": 156264,
+          "ratio": 1.05,
+          "requested_cap_bps": 164077,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12237.89999999851,
+          "assignment_offset_ms": 12237.09999999404,
+          "epoch": 4,
+          "pre_action_bwe_bps": 215875,
+          "ratio": 1.05,
+          "requested_cap_bps": 226669,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15302.39999999851,
+          "assignment_offset_ms": 15301.19999999553,
+          "epoch": 5,
+          "pre_action_bwe_bps": 449280,
+          "ratio": 1.05,
+          "requested_cap_bps": 471744,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-nordic_op1_lte_b20-r02-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 5.5999999940395355,
+          "assignment_offset_ms": 3.1999999955296516,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3064.6999999955297,
+          "assignment_offset_ms": 3063.39999999851,
+          "epoch": 1,
+          "pre_action_bwe_bps": 701052,
+          "ratio": 0.65,
+          "requested_cap_bps": 455684,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6126,
+          "assignment_offset_ms": 6124.89999999851,
+          "epoch": 2,
+          "pre_action_bwe_bps": 255329,
+          "ratio": 0.65,
+          "requested_cap_bps": 165964,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9178.5,
+          "assignment_offset_ms": 9176.29999999702,
+          "epoch": 3,
+          "pre_action_bwe_bps": 198250,
+          "ratio": 1.05,
+          "requested_cap_bps": 208163,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12239.29999999702,
+          "assignment_offset_ms": 12238.19999999553,
+          "epoch": 4,
+          "pre_action_bwe_bps": 210415,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15298.39999999851,
+          "assignment_offset_ms": 15297.69999999553,
+          "epoch": 5,
+          "pre_action_bwe_bps": 260877,
+          "ratio": 0.65,
+          "requested_cap_bps": 169570,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-nordic_op1_5g_nsa_b20-r03-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__rome_op2_lte",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 8.700000002980232,
+          "assignment_offset_ms": 4.899999998509884,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3059.7000000029802,
+          "assignment_offset_ms": 3058.7000000029802,
+          "epoch": 1,
+          "pre_action_bwe_bps": 933047,
+          "ratio": 1.05,
+          "requested_cap_bps": 979699,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6130.89999999851,
+          "assignment_offset_ms": 6129.70000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 329963,
+          "ratio": 0.65,
+          "requested_cap_bps": 214476,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9199.10000000149,
+          "assignment_offset_ms": 9197.80000000447,
+          "epoch": 3,
+          "pre_action_bwe_bps": 335574,
+          "ratio": 0.65,
+          "requested_cap_bps": 218123,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12257.89999999851,
+          "assignment_offset_ms": 12257.30000000447,
+          "epoch": 4,
+          "pre_action_bwe_bps": 347273,
+          "ratio": 1.05,
+          "requested_cap_bps": 364637,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15310.20000000298,
+          "assignment_offset_ms": 15309.0,
+          "epoch": 5,
+          "pre_action_bwe_bps": 499902,
+          "ratio": 0.65,
+          "requested_cap_bps": 324936,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-rome_op2_lte-r02-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__nordic_op3_lte_b3",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 8.800000004470348,
+          "assignment_offset_ms": 4.300000004470348,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3070.10000000149,
+          "assignment_offset_ms": 3069.3000000044703,
+          "epoch": 1,
+          "pre_action_bwe_bps": 778980,
+          "ratio": 1.05,
+          "requested_cap_bps": 817929,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6122.30000000447,
+          "assignment_offset_ms": 6121.20000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 342416,
+          "ratio": 1.05,
+          "requested_cap_bps": 359537,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9170.60000000149,
+          "assignment_offset_ms": 9169.70000000298,
+          "epoch": 3,
+          "pre_action_bwe_bps": 398211,
+          "ratio": 1.05,
+          "requested_cap_bps": 418122,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12220.5,
+          "assignment_offset_ms": 12219.39999999851,
+          "epoch": 4,
+          "pre_action_bwe_bps": 513400,
+          "ratio": 0.65,
+          "requested_cap_bps": 333710,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 15278.60000000149,
+          "assignment_offset_ms": 15276.80000000447,
+          "epoch": 5,
+          "pre_action_bwe_bps": 557171,
+          "ratio": 1.05,
+          "requested_cap_bps": 585030,
+          "state_bin": "bwe_ge_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-nordic_op3_lte_b3-r02-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__nordic_op3_lte_b3",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 9.100000001490116,
+          "assignment_offset_ms": 6.0,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3054.5,
+          "assignment_offset_ms": 3053.10000000149,
+          "epoch": 1,
+          "pre_action_bwe_bps": 396398,
+          "ratio": 0.65,
+          "requested_cap_bps": 257659,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6112.10000000149,
+          "assignment_offset_ms": 6111.10000000149,
+          "epoch": 2,
+          "pre_action_bwe_bps": 409984,
+          "ratio": 1.05,
+          "requested_cap_bps": 430483,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9174.89999999851,
+          "assignment_offset_ms": 9174.0,
+          "epoch": 3,
+          "pre_action_bwe_bps": 432518,
+          "ratio": 0.65,
+          "requested_cap_bps": 281137,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12222.79999999702,
+          "assignment_offset_ms": 12221.5,
+          "epoch": 4,
+          "pre_action_bwe_bps": 445210,
+          "ratio": 0.65,
+          "requested_cap_bps": 289387,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15289.10000000149,
+          "assignment_offset_ms": 15287.79999999702,
+          "epoch": 5,
+          "pre_action_bwe_bps": 456129,
+          "ratio": 1.05,
+          "requested_cap_bps": 478935,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-nordic_op3_lte_b3-r02-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 10.299999997019768,
+          "assignment_offset_ms": 7.600000001490116,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3072.7999999970198,
+          "assignment_offset_ms": 3068.1999999955297,
+          "epoch": 1,
+          "pre_action_bwe_bps": 450784,
+          "ratio": 0.65,
+          "requested_cap_bps": 293010,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6116.19999999553,
+          "assignment_offset_ms": 6115.19999999553,
+          "epoch": 2,
+          "pre_action_bwe_bps": 479296,
+          "ratio": 1.05,
+          "requested_cap_bps": 503261,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9178.10000000149,
+          "assignment_offset_ms": 9177.10000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 467788,
+          "ratio": 0.65,
+          "requested_cap_bps": 304062,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12238.29999999702,
+          "assignment_offset_ms": 12237.39999999851,
+          "epoch": 4,
+          "pre_action_bwe_bps": 475820,
+          "ratio": 1.05,
+          "requested_cap_bps": 499611,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15294.69999999553,
+          "assignment_offset_ms": 15292.39999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 398935,
+          "ratio": 1.05,
+          "requested_cap_bps": 418882,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-nordic_op1_5g_nsa_b20-r00-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 10.300000004470348,
+          "assignment_offset_ms": 6.800000004470348,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3062.2000000029802,
+          "assignment_offset_ms": 3061.2000000029802,
+          "epoch": 1,
+          "pre_action_bwe_bps": 606909,
+          "ratio": 1.05,
+          "requested_cap_bps": 637254,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6113.0,
+          "assignment_offset_ms": 6111.80000000447,
+          "epoch": 2,
+          "pre_action_bwe_bps": 283475,
+          "ratio": 0.65,
+          "requested_cap_bps": 184259,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9171.60000000149,
+          "assignment_offset_ms": 9170.39999999851,
+          "epoch": 3,
+          "pre_action_bwe_bps": 302749,
+          "ratio": 0.65,
+          "requested_cap_bps": 196787,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12227.5,
+          "assignment_offset_ms": 12226.30000000447,
+          "epoch": 4,
+          "pre_action_bwe_bps": 308817,
+          "ratio": 1.05,
+          "requested_cap_bps": 324258,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15281.89999999851,
+          "assignment_offset_ms": 15279.30000000447,
+          "epoch": 5,
+          "pre_action_bwe_bps": 263353,
+          "ratio": 1.05,
+          "requested_cap_bps": 276521,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-nordic_op1_5g_nsa_b20-r01-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__nordic_op1_lte_b20",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 8.0,
+          "assignment_offset_ms": 5.0,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3070.1999999955297,
+          "assignment_offset_ms": 3069.39999999851,
+          "epoch": 1,
+          "pre_action_bwe_bps": 345766,
+          "ratio": 0.65,
+          "requested_cap_bps": 224748,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6134.0,
+          "assignment_offset_ms": 6132.19999999553,
+          "epoch": 2,
+          "pre_action_bwe_bps": 373593,
+          "ratio": 1.05,
+          "requested_cap_bps": 392273,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9207.09999999404,
+          "assignment_offset_ms": 9206.19999999553,
+          "epoch": 3,
+          "pre_action_bwe_bps": 212971,
+          "ratio": 1.05,
+          "requested_cap_bps": 223620,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12278.5,
+          "assignment_offset_ms": 12277.69999999553,
+          "epoch": 4,
+          "pre_action_bwe_bps": 326924,
+          "ratio": 0.65,
+          "requested_cap_bps": 212501,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15342.5,
+          "assignment_offset_ms": 15341.69999999553,
+          "epoch": 5,
+          "pre_action_bwe_bps": 340413,
+          "ratio": 0.65,
+          "requested_cap_bps": 221268,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-nordic_op1_lte_b20-r00-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 9.699999995529652,
+          "assignment_offset_ms": 6.199999995529652,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3077,
+          "assignment_offset_ms": 3076.1999999955297,
+          "epoch": 1,
+          "pre_action_bwe_bps": 583360,
+          "ratio": 0.65,
+          "requested_cap_bps": 379184,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6131,
+          "assignment_offset_ms": 6130.19999999553,
+          "epoch": 2,
+          "pre_action_bwe_bps": 583360,
+          "ratio": 0.65,
+          "requested_cap_bps": 379184,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 9189.60000000149,
+          "assignment_offset_ms": 9188.79999999702,
+          "epoch": 3,
+          "pre_action_bwe_bps": 342775,
+          "ratio": 0.65,
+          "requested_cap_bps": 222804,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12253.19999999553,
+          "assignment_offset_ms": 12252.29999999702,
+          "epoch": 4,
+          "pre_action_bwe_bps": 430666,
+          "ratio": 0.65,
+          "requested_cap_bps": 279933,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15317.5,
+          "assignment_offset_ms": 15316.19999999553,
+          "epoch": 5,
+          "pre_action_bwe_bps": 437914,
+          "ratio": 1.05,
+          "requested_cap_bps": 459810,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-nordic_op1_5g_nsa_b20-r01-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 6.9000000059604645,
+          "assignment_offset_ms": 4.300000004470348,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3069.10000000149,
+          "assignment_offset_ms": 3068.2000000029802,
+          "epoch": 1,
+          "pre_action_bwe_bps": 171163,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6120.70000000298,
+          "assignment_offset_ms": 6119.70000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 233291,
+          "ratio": 1.05,
+          "requested_cap_bps": 244956,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9178.80000000447,
+          "assignment_offset_ms": 9178.10000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 294507,
+          "ratio": 1.05,
+          "requested_cap_bps": 309232,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12229.70000000298,
+          "assignment_offset_ms": 12228.60000000149,
+          "epoch": 4,
+          "pre_action_bwe_bps": 207997,
+          "ratio": 1.05,
+          "requested_cap_bps": 218397,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15288.90000000596,
+          "assignment_offset_ms": 15288.20000000298,
+          "epoch": 5,
+          "pre_action_bwe_bps": 184013,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-nordic_op1_5g_nsa_b20-r03-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 5.299999997019768,
+          "assignment_offset_ms": 3.399999998509884,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3051.6999999955297,
+          "assignment_offset_ms": 3050.89999999851,
+          "epoch": 1,
+          "pre_action_bwe_bps": 848157,
+          "ratio": 0.65,
+          "requested_cap_bps": 551302,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6113.89999999851,
+          "assignment_offset_ms": 6112.5999999940395,
+          "epoch": 2,
+          "pre_action_bwe_bps": 468627,
+          "ratio": 0.65,
+          "requested_cap_bps": 304608,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9173.59999999404,
+          "assignment_offset_ms": 9172.39999999851,
+          "epoch": 3,
+          "pre_action_bwe_bps": 517158,
+          "ratio": 0.65,
+          "requested_cap_bps": 336153,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12225.09999999404,
+          "assignment_offset_ms": 12224.09999999404,
+          "epoch": 4,
+          "pre_action_bwe_bps": 525852,
+          "ratio": 0.65,
+          "requested_cap_bps": 341804,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 15290.59999999404,
+          "assignment_offset_ms": 15289.59999999404,
+          "epoch": 5,
+          "pre_action_bwe_bps": 539325,
+          "ratio": 1.05,
+          "requested_cap_bps": 566291,
+          "state_bin": "bwe_ge_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-nordic_op1_5g_nsa_b20-r02-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__nordic_op3_lte_b3",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.399999998509884,
+          "assignment_offset_ms": 3.899999998509884,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3060.89999999851,
+          "assignment_offset_ms": 3056.60000000149,
+          "epoch": 1,
+          "pre_action_bwe_bps": 401675,
+          "ratio": 0.65,
+          "requested_cap_bps": 261089,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6107.10000000149,
+          "assignment_offset_ms": 6105.89999999851,
+          "epoch": 2,
+          "pre_action_bwe_bps": 411538,
+          "ratio": 1.05,
+          "requested_cap_bps": 432115,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9164.10000000149,
+          "assignment_offset_ms": 9163.10000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 424473,
+          "ratio": 1.05,
+          "requested_cap_bps": 445697,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12211.80000000447,
+          "assignment_offset_ms": 12211.10000000149,
+          "epoch": 4,
+          "pre_action_bwe_bps": 456000,
+          "ratio": 1.05,
+          "requested_cap_bps": 478800,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15271.70000000298,
+          "assignment_offset_ms": 15270.89999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 412620,
+          "ratio": 1.05,
+          "requested_cap_bps": 433251,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-nordic_op3_lte_b3-r00-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 8.399999998509884,
+          "assignment_offset_ms": 5.200000002980232,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3064.89999999851,
+          "assignment_offset_ms": 3064.0,
+          "epoch": 1,
+          "pre_action_bwe_bps": 819968,
+          "ratio": 0.65,
+          "requested_cap_bps": 532979,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6131.5,
+          "assignment_offset_ms": 6130.5,
+          "epoch": 2,
+          "pre_action_bwe_bps": 289539,
+          "ratio": 0.65,
+          "requested_cap_bps": 188200,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9179.5,
+          "assignment_offset_ms": 9178.60000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 229317,
+          "ratio": 1.05,
+          "requested_cap_bps": 240783,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12245.80000000447,
+          "assignment_offset_ms": 12244.89999999851,
+          "epoch": 4,
+          "pre_action_bwe_bps": 281636,
+          "ratio": 0.65,
+          "requested_cap_bps": 183063,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15306.20000000298,
+          "assignment_offset_ms": 15304.89999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 312827,
+          "ratio": 0.65,
+          "requested_cap_bps": 203338,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-nordic_op1_5g_nsa_b20-r03-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__nordic_op1_lte_b20",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 9.0,
+          "assignment_offset_ms": 3.600000001490116,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3067.10000000149,
+          "assignment_offset_ms": 3066.10000000149,
+          "epoch": 1,
+          "pre_action_bwe_bps": 380965,
+          "ratio": 0.65,
+          "requested_cap_bps": 247627,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6134.70000000298,
+          "assignment_offset_ms": 6131.39999999851,
+          "epoch": 2,
+          "pre_action_bwe_bps": 112771,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9197.5,
+          "assignment_offset_ms": 9197.30000000447,
+          "epoch": 3,
+          "pre_action_bwe_bps": 99927,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12246.0,
+          "assignment_offset_ms": 12245.70000000298,
+          "epoch": 4,
+          "pre_action_bwe_bps": 93924,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15300.20000000298,
+          "assignment_offset_ms": 15300.0,
+          "epoch": 5,
+          "pre_action_bwe_bps": 124715,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-nordic_op1_lte_b20-r03-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__rome_op2_lte",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.700000002980232,
+          "assignment_offset_ms": 4.600000001490116,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3063.89999999851,
+          "assignment_offset_ms": 3063,
+          "epoch": 1,
+          "pre_action_bwe_bps": 618666,
+          "ratio": 0.65,
+          "requested_cap_bps": 402133,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6131.39999999851,
+          "assignment_offset_ms": 6130.60000000149,
+          "epoch": 2,
+          "pre_action_bwe_bps": 347430,
+          "ratio": 1.05,
+          "requested_cap_bps": 364802,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9186.20000000298,
+          "assignment_offset_ms": 9185.39999999851,
+          "epoch": 3,
+          "pre_action_bwe_bps": 401008,
+          "ratio": 1.05,
+          "requested_cap_bps": 421058,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12236.89999999851,
+          "assignment_offset_ms": 12235.89999999851,
+          "epoch": 4,
+          "pre_action_bwe_bps": 590461,
+          "ratio": 0.65,
+          "requested_cap_bps": 383800,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 15304.30000000447,
+          "assignment_offset_ms": 15303,
+          "epoch": 5,
+          "pre_action_bwe_bps": 208287,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-rome_op2_lte-r03-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__nordic_op1_lte_b20",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 8.700000002980232,
+          "assignment_offset_ms": 4.800000004470348,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3066.7000000029802,
+          "assignment_offset_ms": 3065.5,
+          "epoch": 1,
+          "pre_action_bwe_bps": 569962,
+          "ratio": 1.05,
+          "requested_cap_bps": 598460,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6127.39999999851,
+          "assignment_offset_ms": 6124.70000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 380935,
+          "ratio": 1.05,
+          "requested_cap_bps": 399982,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9193.80000000447,
+          "assignment_offset_ms": 9191.20000000298,
+          "epoch": 3,
+          "pre_action_bwe_bps": 506250,
+          "ratio": 1.05,
+          "requested_cap_bps": 531563,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12242.89999999851,
+          "assignment_offset_ms": 12241.89999999851,
+          "epoch": 4,
+          "pre_action_bwe_bps": 393952,
+          "ratio": 0.65,
+          "requested_cap_bps": 256069,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15319.30000000447,
+          "assignment_offset_ms": 15313.39999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 428150,
+          "ratio": 0.65,
+          "requested_cap_bps": 278298,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-nordic_op1_lte_b20-r01-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__nordic_op1_lte_b20",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 10.799999997019768,
+          "assignment_offset_ms": 6.700000002980232,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3072.7000000029802,
+          "assignment_offset_ms": 3072.0,
+          "epoch": 1,
+          "pre_action_bwe_bps": 771325,
+          "ratio": 1.05,
+          "requested_cap_bps": 809891,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6120.89999999851,
+          "assignment_offset_ms": 6120.10000000149,
+          "epoch": 2,
+          "pre_action_bwe_bps": 397527,
+          "ratio": 1.05,
+          "requested_cap_bps": 417403,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9181.70000000298,
+          "assignment_offset_ms": 9175.29999999702,
+          "epoch": 3,
+          "pre_action_bwe_bps": 442431,
+          "ratio": 0.65,
+          "requested_cap_bps": 287580,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12225.10000000149,
+          "assignment_offset_ms": 12224.39999999851,
+          "epoch": 4,
+          "pre_action_bwe_bps": 501208,
+          "ratio": 1.05,
+          "requested_cap_bps": 526268,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 15280.29999999702,
+          "assignment_offset_ms": 15279.39999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 226915,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-nordic_op1_lte_b20-r01-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__nordic_op1_lte_b20",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 8.900000005960464,
+          "assignment_offset_ms": 4.300000004470348,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3068.8000000044703,
+          "assignment_offset_ms": 3064.4000000059605,
+          "epoch": 1,
+          "pre_action_bwe_bps": 813363,
+          "ratio": 0.65,
+          "requested_cap_bps": 528686,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6127.9000000059605,
+          "assignment_offset_ms": 6127.20000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 113475,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9180.10000000149,
+          "assignment_offset_ms": 9179.70000000298,
+          "epoch": 3,
+          "pre_action_bwe_bps": 114225,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12242.5,
+          "assignment_offset_ms": 12242.20000000298,
+          "epoch": 4,
+          "pre_action_bwe_bps": 137794,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15317.80000000447,
+          "assignment_offset_ms": 15317.5,
+          "epoch": 5,
+          "pre_action_bwe_bps": 182373,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-nordic_op1_lte_b20-r02-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__rome_op2_lte",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 14.5,
+          "assignment_offset_ms": 9.799999997019768,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3066.60000000149,
+          "assignment_offset_ms": 3065.7999999970198,
+          "epoch": 1,
+          "pre_action_bwe_bps": 403330,
+          "ratio": 1.05,
+          "requested_cap_bps": 423497,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6126.10000000149,
+          "assignment_offset_ms": 6125,
+          "epoch": 2,
+          "pre_action_bwe_bps": 70219,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9186.69999999553,
+          "assignment_offset_ms": 9186.39999999851,
+          "epoch": 3,
+          "pre_action_bwe_bps": 79106,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12239.10000000149,
+          "assignment_offset_ms": 12238.79999999702,
+          "epoch": 4,
+          "pre_action_bwe_bps": 101269,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15307.60000000149,
+          "assignment_offset_ms": 15307.29999999702,
+          "epoch": 5,
+          "pre_action_bwe_bps": 142113,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-rome_op2_lte-r01-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__rome_op2_lte",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.399999998509884,
+          "assignment_offset_ms": 4.5,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3066.39999999851,
+          "assignment_offset_ms": 3065.2999999970198,
+          "epoch": 1,
+          "pre_action_bwe_bps": 1201942,
+          "ratio": 1.05,
+          "requested_cap_bps": 1262039,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6128.5,
+          "assignment_offset_ms": 6127.39999999851,
+          "epoch": 2,
+          "pre_action_bwe_bps": 1586388,
+          "ratio": 0.65,
+          "requested_cap_bps": 1031152,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 9206.89999999851,
+          "assignment_offset_ms": 9205.89999999851,
+          "epoch": 3,
+          "pre_action_bwe_bps": 1067652,
+          "ratio": 0.65,
+          "requested_cap_bps": 693974,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12269.0,
+          "assignment_offset_ms": 12268.20000000298,
+          "epoch": 4,
+          "pre_action_bwe_bps": 252468,
+          "ratio": 0.65,
+          "requested_cap_bps": 164104,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15325.79999999702,
+          "assignment_offset_ms": 15325.0,
+          "epoch": 5,
+          "pre_action_bwe_bps": 261718,
+          "ratio": 1.05,
+          "requested_cap_bps": 274804,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-rome_op2_lte-r00-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 14.299999997019768,
+          "assignment_offset_ms": 8.799999997019768,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3081.7999999970198,
+          "assignment_offset_ms": 3080.6999999955297,
+          "epoch": 1,
+          "pre_action_bwe_bps": 159247,
+          "ratio": 1.05,
+          "requested_cap_bps": 167209,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6140.5,
+          "assignment_offset_ms": 6139.5,
+          "epoch": 2,
+          "pre_action_bwe_bps": 209875,
+          "ratio": 1.05,
+          "requested_cap_bps": 220369,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9206.79999999702,
+          "assignment_offset_ms": 9206.0,
+          "epoch": 3,
+          "pre_action_bwe_bps": 248163,
+          "ratio": 0.65,
+          "requested_cap_bps": 161306,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12261.0,
+          "assignment_offset_ms": 12260.0,
+          "epoch": 4,
+          "pre_action_bwe_bps": 176067,
+          "ratio": 1.05,
+          "requested_cap_bps": 184870,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15318.79999999702,
+          "assignment_offset_ms": 15317.89999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 287519,
+          "ratio": 1.05,
+          "requested_cap_bps": 301895,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-nordic_op1_5g_nsa_b20-r03-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__nordic_op1_lte_b20",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 10.200000002980232,
+          "assignment_offset_ms": 6.100000001490116,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3060.60000000149,
+          "assignment_offset_ms": 3059.60000000149,
+          "epoch": 1,
+          "pre_action_bwe_bps": 1247540,
+          "ratio": 1.05,
+          "requested_cap_bps": 1309917,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6121.5,
+          "assignment_offset_ms": 6120.70000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 452966,
+          "ratio": 1.05,
+          "requested_cap_bps": 475614,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9192.10000000149,
+          "assignment_offset_ms": 9191.10000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 486090,
+          "ratio": 0.65,
+          "requested_cap_bps": 315959,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12274.39999999851,
+          "assignment_offset_ms": 12273.5,
+          "epoch": 4,
+          "pre_action_bwe_bps": 523106,
+          "ratio": 0.65,
+          "requested_cap_bps": 340019,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 15339.0,
+          "assignment_offset_ms": 15337.89999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 397250,
+          "ratio": 0.65,
+          "requested_cap_bps": 258213,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-nordic_op1_lte_b20-r01-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 6.300000004470348,
+          "assignment_offset_ms": 3.9000000059604645,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3072.4000000059605,
+          "assignment_offset_ms": 3071.4000000059605,
+          "epoch": 1,
+          "pre_action_bwe_bps": 859407,
+          "ratio": 0.65,
+          "requested_cap_bps": 558615,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6140.60000000149,
+          "assignment_offset_ms": 6139.70000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 490929,
+          "ratio": 0.65,
+          "requested_cap_bps": 319104,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9204.5,
+          "assignment_offset_ms": 9202.70000000298,
+          "epoch": 3,
+          "pre_action_bwe_bps": 289646,
+          "ratio": 1.05,
+          "requested_cap_bps": 304128,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12258.90000000596,
+          "assignment_offset_ms": 12257.90000000596,
+          "epoch": 4,
+          "pre_action_bwe_bps": 322426,
+          "ratio": 1.05,
+          "requested_cap_bps": 338547,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15306.90000000596,
+          "assignment_offset_ms": 15306.10000000149,
+          "epoch": 5,
+          "pre_action_bwe_bps": 564088,
+          "ratio": 1.05,
+          "requested_cap_bps": 592292,
+          "state_bin": "bwe_ge_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-nordic_op1_5g_nsa_b20-r01-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 14.399999998509884,
+          "assignment_offset_ms": 11.800000004470348,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3066.89999999851,
+          "assignment_offset_ms": 3066.10000000149,
+          "epoch": 1,
+          "pre_action_bwe_bps": 402638,
+          "ratio": 0.65,
+          "requested_cap_bps": 261715,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6125.30000000447,
+          "assignment_offset_ms": 6124.39999999851,
+          "epoch": 2,
+          "pre_action_bwe_bps": 404556,
+          "ratio": 0.65,
+          "requested_cap_bps": 262961,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9172.10000000149,
+          "assignment_offset_ms": 9171.10000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 410164,
+          "ratio": 1.05,
+          "requested_cap_bps": 430672,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12238.89999999851,
+          "assignment_offset_ms": 12237.70000000298,
+          "epoch": 4,
+          "pre_action_bwe_bps": 486083,
+          "ratio": 1.05,
+          "requested_cap_bps": 510387,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15299.70000000298,
+          "assignment_offset_ms": 15298.39999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 285689,
+          "ratio": 1.05,
+          "requested_cap_bps": 299973,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-nordic_op1_5g_nsa_b20-r02-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__nordic_op1_lte_b20",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.0,
+          "assignment_offset_ms": 4.5,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3061.0999999940395,
+          "assignment_offset_ms": 3059.5999999940395,
+          "epoch": 1,
+          "pre_action_bwe_bps": 981909,
+          "ratio": 0.65,
+          "requested_cap_bps": 638241,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6121.0999999940395,
+          "assignment_offset_ms": 6120.0999999940395,
+          "epoch": 2,
+          "pre_action_bwe_bps": 116581,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9193.79999999702,
+          "assignment_offset_ms": 9193.59999999404,
+          "epoch": 3,
+          "pre_action_bwe_bps": 95284,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12255.59999999404,
+          "assignment_offset_ms": 12255.39999999851,
+          "epoch": 4,
+          "pre_action_bwe_bps": 131606,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15317.39999999851,
+          "assignment_offset_ms": 15317.09999999404,
+          "epoch": 5,
+          "pre_action_bwe_bps": 177906,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-nordic_op1_lte_b20-r02-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__rome_op2_lte",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 14.0,
+          "assignment_offset_ms": 5.199999995529652,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3067.89999999851,
+          "assignment_offset_ms": 3067.1999999955297,
+          "epoch": 1,
+          "pre_action_bwe_bps": 471704,
+          "ratio": 0.65,
+          "requested_cap_bps": 306608,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6127.0,
+          "assignment_offset_ms": 6125.19999999553,
+          "epoch": 2,
+          "pre_action_bwe_bps": 471704,
+          "ratio": 1.05,
+          "requested_cap_bps": 495289,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9187.69999999553,
+          "assignment_offset_ms": 9184.5,
+          "epoch": 3,
+          "pre_action_bwe_bps": 553803,
+          "ratio": 1.05,
+          "requested_cap_bps": 581493,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12236.60000000149,
+          "assignment_offset_ms": 12235.5,
+          "epoch": 4,
+          "pre_action_bwe_bps": 253023,
+          "ratio": 0.65,
+          "requested_cap_bps": 164465,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15302.89999999851,
+          "assignment_offset_ms": 15302.0,
+          "epoch": 5,
+          "pre_action_bwe_bps": 266375,
+          "ratio": 0.65,
+          "requested_cap_bps": 173144,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-rome_op2_lte-r00-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__rome_op2_lte",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7,
+          "assignment_offset_ms": 5,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3057.3000000044703,
+          "assignment_offset_ms": 3056.5,
+          "epoch": 1,
+          "pre_action_bwe_bps": 809510,
+          "ratio": 0.65,
+          "requested_cap_bps": 526182,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6115.20000000298,
+          "assignment_offset_ms": 6114.5,
+          "epoch": 2,
+          "pre_action_bwe_bps": 315524,
+          "ratio": 1.05,
+          "requested_cap_bps": 331300,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9163.89999999851,
+          "assignment_offset_ms": 9163.20000000298,
+          "epoch": 3,
+          "pre_action_bwe_bps": 368350,
+          "ratio": 0.65,
+          "requested_cap_bps": 239428,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12223.89999999851,
+          "assignment_offset_ms": 12223.10000000149,
+          "epoch": 4,
+          "pre_action_bwe_bps": 397087,
+          "ratio": 1.05,
+          "requested_cap_bps": 416941,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15271.20000000298,
+          "assignment_offset_ms": 15270.39999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 515711,
+          "ratio": 0.65,
+          "requested_cap_bps": 335212,
+          "state_bin": "bwe_ge_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-rome_op2_lte-r02-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__nordic_op3_lte_b3",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 6.899999998509884,
+          "assignment_offset_ms": 4.699999995529652,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3069.0999999940395,
+          "assignment_offset_ms": 3067.5999999940395,
+          "epoch": 1,
+          "pre_action_bwe_bps": 629457,
+          "ratio": 0.65,
+          "requested_cap_bps": 409147,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6128.0999999940395,
+          "assignment_offset_ms": 6127.29999999702,
+          "epoch": 2,
+          "pre_action_bwe_bps": 370525,
+          "ratio": 1.05,
+          "requested_cap_bps": 389051,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9196.19999999553,
+          "assignment_offset_ms": 9195.19999999553,
+          "epoch": 3,
+          "pre_action_bwe_bps": 430849,
+          "ratio": 1.05,
+          "requested_cap_bps": 452391,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12245,
+          "assignment_offset_ms": 12244.19999999553,
+          "epoch": 4,
+          "pre_action_bwe_bps": 500238,
+          "ratio": 1.05,
+          "requested_cap_bps": 525250,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 15299.29999999702,
+          "assignment_offset_ms": 15298.5,
+          "epoch": 5,
+          "pre_action_bwe_bps": 399908,
+          "ratio": 0.65,
+          "requested_cap_bps": 259940,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-nordic_op3_lte_b3-r01-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__nordic_op1_lte_b20",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 5.300000004470348,
+          "assignment_offset_ms": 3.100000001490116,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3060.60000000149,
+          "assignment_offset_ms": 3059.5,
+          "epoch": 1,
+          "pre_action_bwe_bps": 632000,
+          "ratio": 0.65,
+          "requested_cap_bps": 410800,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6106.0,
+          "assignment_offset_ms": 6105.20000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 146248,
+          "ratio": 1.05,
+          "requested_cap_bps": 153560,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9161.60000000149,
+          "assignment_offset_ms": 9160.80000000447,
+          "epoch": 3,
+          "pre_action_bwe_bps": 187304,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12207.90000000596,
+          "assignment_offset_ms": 12207.70000000298,
+          "epoch": 4,
+          "pre_action_bwe_bps": 112045,
+          "ratio": 1.05,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15273.30000000447,
+          "assignment_offset_ms": 15272.40000000596,
+          "epoch": 5,
+          "pre_action_bwe_bps": 154263,
+          "ratio": 1.05,
+          "requested_cap_bps": 161976,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-nordic_op1_lte_b20-r02-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__nordic_op3_lte_b3",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.399999998509884,
+          "assignment_offset_ms": 5.399999998509884,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3074.5,
+          "assignment_offset_ms": 3073.5,
+          "epoch": 1,
+          "pre_action_bwe_bps": 767781,
+          "ratio": 0.65,
+          "requested_cap_bps": 499058,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6134.89999999851,
+          "assignment_offset_ms": 6134.0,
+          "epoch": 2,
+          "pre_action_bwe_bps": 350926,
+          "ratio": 1.05,
+          "requested_cap_bps": 368472,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9185.39999999851,
+          "assignment_offset_ms": 9184.70000000298,
+          "epoch": 3,
+          "pre_action_bwe_bps": 405626,
+          "ratio": 0.65,
+          "requested_cap_bps": 263657,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12244.5,
+          "assignment_offset_ms": 12242.5,
+          "epoch": 4,
+          "pre_action_bwe_bps": 438502,
+          "ratio": 0.65,
+          "requested_cap_bps": 285026,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15317.39999999851,
+          "assignment_offset_ms": 15316.29999999702,
+          "epoch": 5,
+          "pre_action_bwe_bps": 452784,
+          "ratio": 1.05,
+          "requested_cap_bps": 475423,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-nordic_op3_lte_b3-r00-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__nordic_op1_lte_b20",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.600000001490116,
+          "assignment_offset_ms": 4.5,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3055.89999999851,
+          "assignment_offset_ms": 3055.10000000149,
+          "epoch": 1,
+          "pre_action_bwe_bps": 249398,
+          "ratio": 1.05,
+          "requested_cap_bps": 261868,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6114.60000000149,
+          "assignment_offset_ms": 6113.89999999851,
+          "epoch": 2,
+          "pre_action_bwe_bps": 355648,
+          "ratio": 0.65,
+          "requested_cap_bps": 231171,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9176.60000000149,
+          "assignment_offset_ms": 9175.79999999702,
+          "epoch": 3,
+          "pre_action_bwe_bps": 172896,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12219.70000000298,
+          "assignment_offset_ms": 12218.79999999702,
+          "epoch": 4,
+          "pre_action_bwe_bps": 308000,
+          "ratio": 1.05,
+          "requested_cap_bps": 323400,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15285.5,
+          "assignment_offset_ms": 15284.39999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 176948,
+          "ratio": 1.05,
+          "requested_cap_bps": 185795,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-nordic_op1_lte_b20-r00-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__nordic_op3_lte_b3",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 11.800000004470348,
+          "assignment_offset_ms": 6.800000004470348,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3064.3000000044703,
+          "assignment_offset_ms": 3063.2000000029802,
+          "epoch": 1,
+          "pre_action_bwe_bps": 395927,
+          "ratio": 1.05,
+          "requested_cap_bps": 415723,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6120.0,
+          "assignment_offset_ms": 6119.20000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 263181,
+          "ratio": 1.05,
+          "requested_cap_bps": 276340,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9173.40000000596,
+          "assignment_offset_ms": 9171.0,
+          "epoch": 3,
+          "pre_action_bwe_bps": 314138,
+          "ratio": 0.65,
+          "requested_cap_bps": 204190,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12230.5,
+          "assignment_offset_ms": 12229.70000000298,
+          "epoch": 4,
+          "pre_action_bwe_bps": 322396,
+          "ratio": 1.05,
+          "requested_cap_bps": 338516,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15277.0,
+          "assignment_offset_ms": 15276.0,
+          "epoch": 5,
+          "pre_action_bwe_bps": 254832,
+          "ratio": 1.05,
+          "requested_cap_bps": 267574,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-nordic_op3_lte_b3-r03-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__nordic_op3_lte_b3",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.0,
+          "assignment_offset_ms": 4.199999995529652,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3052.5999999940395,
+          "assignment_offset_ms": 3051.5999999940395,
+          "epoch": 1,
+          "pre_action_bwe_bps": 1016258,
+          "ratio": 1.05,
+          "requested_cap_bps": 1067071,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6111.5999999940395,
+          "assignment_offset_ms": 6110.79999999702,
+          "epoch": 2,
+          "pre_action_bwe_bps": 399532,
+          "ratio": 1.05,
+          "requested_cap_bps": 419509,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9182.59999999404,
+          "assignment_offset_ms": 9180.79999999702,
+          "epoch": 3,
+          "pre_action_bwe_bps": 463158,
+          "ratio": 1.05,
+          "requested_cap_bps": 486316,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12241.5,
+          "assignment_offset_ms": 12240.29999999702,
+          "epoch": 4,
+          "pre_action_bwe_bps": 366551,
+          "ratio": 1.05,
+          "requested_cap_bps": 384879,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15287.79999999702,
+          "assignment_offset_ms": 15287.09999999404,
+          "epoch": 5,
+          "pre_action_bwe_bps": 419049,
+          "ratio": 1.05,
+          "requested_cap_bps": 440001,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-nordic_op3_lte_b3-r02-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__nordic_op3_lte_b3",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 6.5999999940395355,
+          "assignment_offset_ms": 4.0,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3063.7999999970198,
+          "assignment_offset_ms": 3061.39999999851,
+          "epoch": 1,
+          "pre_action_bwe_bps": 445485,
+          "ratio": 1.05,
+          "requested_cap_bps": 467759,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6120.5,
+          "assignment_offset_ms": 6119.5,
+          "epoch": 2,
+          "pre_action_bwe_bps": 430628,
+          "ratio": 1.05,
+          "requested_cap_bps": 452159,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9171.09999999404,
+          "assignment_offset_ms": 9170.19999999553,
+          "epoch": 3,
+          "pre_action_bwe_bps": 432037,
+          "ratio": 1.05,
+          "requested_cap_bps": 453639,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12233.39999999851,
+          "assignment_offset_ms": 12232.29999999702,
+          "epoch": 4,
+          "pre_action_bwe_bps": 395783,
+          "ratio": 1.05,
+          "requested_cap_bps": 415572,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15301.19999999553,
+          "assignment_offset_ms": 15300.59999999404,
+          "epoch": 5,
+          "pre_action_bwe_bps": 396975,
+          "ratio": 0.65,
+          "requested_cap_bps": 258034,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-nordic_op3_lte_b3-r01-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 5.9000000059604645,
+          "assignment_offset_ms": 3.3000000044703484,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3074.2000000029802,
+          "assignment_offset_ms": 3073.2000000029802,
+          "epoch": 1,
+          "pre_action_bwe_bps": 670089,
+          "ratio": 0.65,
+          "requested_cap_bps": 435558,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6132.20000000298,
+          "assignment_offset_ms": 6131.20000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 337042,
+          "ratio": 1.05,
+          "requested_cap_bps": 353894,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9180.30000000447,
+          "assignment_offset_ms": 9179.40000000596,
+          "epoch": 3,
+          "pre_action_bwe_bps": 396010,
+          "ratio": 0.65,
+          "requested_cap_bps": 257407,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12237.70000000298,
+          "assignment_offset_ms": 12236.70000000298,
+          "epoch": 4,
+          "pre_action_bwe_bps": 423547,
+          "ratio": 1.05,
+          "requested_cap_bps": 444724,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15285.60000000149,
+          "assignment_offset_ms": 15283.30000000447,
+          "epoch": 5,
+          "pre_action_bwe_bps": 291298,
+          "ratio": 0.65,
+          "requested_cap_bps": 189344,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-nordic_op1_5g_nsa_b20-r02-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 8.5,
+          "assignment_offset_ms": 5.0,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3059.60000000149,
+          "assignment_offset_ms": 3058.6999999955297,
+          "epoch": 1,
+          "pre_action_bwe_bps": 499419,
+          "ratio": 0.65,
+          "requested_cap_bps": 324622,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6121.39999999851,
+          "assignment_offset_ms": 6120.39999999851,
+          "epoch": 2,
+          "pre_action_bwe_bps": 514152,
+          "ratio": 0.65,
+          "requested_cap_bps": 334199,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 9187.69999999553,
+          "assignment_offset_ms": 9186.69999999553,
+          "epoch": 3,
+          "pre_action_bwe_bps": 516483,
+          "ratio": 1.05,
+          "requested_cap_bps": 542307,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12250.0,
+          "assignment_offset_ms": 12249.0,
+          "epoch": 4,
+          "pre_action_bwe_bps": 369557,
+          "ratio": 1.05,
+          "requested_cap_bps": 388035,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15297.0,
+          "assignment_offset_ms": 15296.19999999553,
+          "epoch": 5,
+          "pre_action_bwe_bps": 303697,
+          "ratio": 0.65,
+          "requested_cap_bps": 197403,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-nordic_op1_5g_nsa_b20-r02-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "network_profile_id": "nordic_op1_5g_nsa_b20-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__rome_op2_lte",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 6.0,
+          "assignment_offset_ms": 4.300000004470348,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3062.10000000149,
+          "assignment_offset_ms": 3060.89999999851,
+          "epoch": 1,
+          "pre_action_bwe_bps": 434370,
+          "ratio": 0.65,
+          "requested_cap_bps": 282341,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6124.80000000447,
+          "assignment_offset_ms": 6123.80000000447,
+          "epoch": 2,
+          "pre_action_bwe_bps": 453713,
+          "ratio": 1.05,
+          "requested_cap_bps": 476399,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9175.0,
+          "assignment_offset_ms": 9174.0,
+          "epoch": 3,
+          "pre_action_bwe_bps": 601829,
+          "ratio": 0.65,
+          "requested_cap_bps": 391189,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12235.60000000149,
+          "assignment_offset_ms": 12234.70000000298,
+          "epoch": 4,
+          "pre_action_bwe_bps": 528573,
+          "ratio": 0.65,
+          "requested_cap_bps": 343572,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 15300.60000000149,
+          "assignment_offset_ms": 15299.89999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 568152,
+          "ratio": 1.05,
+          "requested_cap_bps": 596560,
+          "state_bin": "bwe_ge_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-rome_op2_lte-r02-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-03",
+      "repetition": 2
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__nordic_op3_lte_b3",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.5,
+          "assignment_offset_ms": 5.299999997019768,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3067.0,
+          "assignment_offset_ms": 3066.0,
+          "epoch": 1,
+          "pre_action_bwe_bps": 787943,
+          "ratio": 0.65,
+          "requested_cap_bps": 512163,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6134.29999999702,
+          "assignment_offset_ms": 6133.29999999702,
+          "epoch": 2,
+          "pre_action_bwe_bps": 394775,
+          "ratio": 1.05,
+          "requested_cap_bps": 414514,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9186.5,
+          "assignment_offset_ms": 9185.5,
+          "epoch": 3,
+          "pre_action_bwe_bps": 459689,
+          "ratio": 1.05,
+          "requested_cap_bps": 482673,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12248.19999999553,
+          "assignment_offset_ms": 12245.29999999702,
+          "epoch": 4,
+          "pre_action_bwe_bps": 466014,
+          "ratio": 0.65,
+          "requested_cap_bps": 302909,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15306.79999999702,
+          "assignment_offset_ms": 15304.89999999851,
+          "epoch": 5,
+          "pre_action_bwe_bps": 496317,
+          "ratio": 1.05,
+          "requested_cap_bps": 521133,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-nordic_op3_lte_b3-r03-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__nordic_op3_lte_b3",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 8.300000004470348,
+          "assignment_offset_ms": 4.9000000059604645,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3075.7000000029802,
+          "assignment_offset_ms": 3074.9000000059605,
+          "epoch": 1,
+          "pre_action_bwe_bps": 936559,
+          "ratio": 0.65,
+          "requested_cap_bps": 608763,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6130.9000000059605,
+          "assignment_offset_ms": 6130.10000000149,
+          "epoch": 2,
+          "pre_action_bwe_bps": 385580,
+          "ratio": 0.65,
+          "requested_cap_bps": 250627,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9181.5,
+          "assignment_offset_ms": 9180.40000000596,
+          "epoch": 3,
+          "pre_action_bwe_bps": 398826,
+          "ratio": 0.65,
+          "requested_cap_bps": 259237,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12243.80000000447,
+          "assignment_offset_ms": 12242.80000000447,
+          "epoch": 4,
+          "pre_action_bwe_bps": 408971,
+          "ratio": 0.65,
+          "requested_cap_bps": 265831,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15293.40000000596,
+          "assignment_offset_ms": 15292.40000000596,
+          "epoch": 5,
+          "pre_action_bwe_bps": 428057,
+          "ratio": 1.05,
+          "requested_cap_bps": 449460,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-nordic_op3_lte_b3-r01-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op3_lte_b3",
+      "network_profile_id": "nordic_op3_lte_b3-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__rome_op2_lte",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.600000001490116,
+          "assignment_offset_ms": 4.100000001490116,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3071.10000000149,
+          "assignment_offset_ms": 3070.39999999851,
+          "epoch": 1,
+          "pre_action_bwe_bps": 710875,
+          "ratio": 0.65,
+          "requested_cap_bps": 462069,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6138.10000000149,
+          "assignment_offset_ms": 6137.20000000298,
+          "epoch": 2,
+          "pre_action_bwe_bps": 91070,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9199.20000000298,
+          "assignment_offset_ms": 9199.10000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 99281,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12244.89999999851,
+          "assignment_offset_ms": 12243.89999999851,
+          "epoch": 4,
+          "pre_action_bwe_bps": 145438,
+          "ratio": 1.05,
+          "requested_cap_bps": 152710,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15302.79999999702,
+          "assignment_offset_ms": 15301.70000000298,
+          "epoch": 5,
+          "pre_action_bwe_bps": 304800,
+          "ratio": 0.65,
+          "requested_cap_bps": 198120,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-rome_op2_lte-r01-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_d3_tree_layout_tutorial_01__nordic_op1_lte_b20",
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "holds": [
+        {
+          "ack_offset_ms": 5.5,
+          "assignment_offset_ms": 3.1999999955296516,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3067.89999999851,
+          "assignment_offset_ms": 3066.0,
+          "epoch": 1,
+          "pre_action_bwe_bps": 447356,
+          "ratio": 0.65,
+          "requested_cap_bps": 290781,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6135.5999999940395,
+          "assignment_offset_ms": 6135.5,
+          "epoch": 2,
+          "pre_action_bwe_bps": 447356,
+          "ratio": 0.65,
+          "requested_cap_bps": 290781,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9197.29999999702,
+          "assignment_offset_ms": 9196.5,
+          "epoch": 3,
+          "pre_action_bwe_bps": 478402,
+          "ratio": 0.65,
+          "requested_cap_bps": 310961,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12248.59999999404,
+          "assignment_offset_ms": 12247.69999999553,
+          "epoch": 4,
+          "pre_action_bwe_bps": 478402,
+          "ratio": 1.05,
+          "requested_cap_bps": 502322,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15313.0,
+          "assignment_offset_ms": 15312.0,
+          "epoch": 5,
+          "pre_action_bwe_bps": 376410,
+          "ratio": 0.65,
+          "requested_cap_bps": 244667,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c04-nordic_op1_lte_b20-r01-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-02",
+      "repetition": 1
+    },
+    {
+      "cell_cluster": "content_schmilka_firefighting_01__nordic_op1_lte_b20",
+      "content_id": "content_schmilka_firefighting_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.200000002980232,
+          "assignment_offset_ms": 5.0,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3075.0,
+          "assignment_offset_ms": 3073.89999999851,
+          "epoch": 1,
+          "pre_action_bwe_bps": 394631,
+          "ratio": 1.05,
+          "requested_cap_bps": 414363,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 6140.70000000298,
+          "assignment_offset_ms": 6139.79999999702,
+          "epoch": 2,
+          "pre_action_bwe_bps": 249118,
+          "ratio": 1.05,
+          "requested_cap_bps": 261574,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9202.89999999851,
+          "assignment_offset_ms": 9202.10000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 312496,
+          "ratio": 0.65,
+          "requested_cap_bps": 203122,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12254.79999999702,
+          "assignment_offset_ms": 12253.0,
+          "epoch": 4,
+          "pre_action_bwe_bps": 337759,
+          "ratio": 0.65,
+          "requested_cap_bps": 219543,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15318.70000000298,
+          "assignment_offset_ms": 15318.0,
+          "epoch": 5,
+          "pre_action_bwe_bps": 347390,
+          "ratio": 0.65,
+          "requested_cap_bps": 225804,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c03-nordic_op1_lte_b20-r00-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-01",
+      "repetition": 0
+    },
+    {
+      "cell_cluster": "content_cicada_emergence_01__rome_op2_lte",
+      "content_id": "content_cicada_emergence_01",
+      "holds": [
+        {
+          "ack_offset_ms": 4.899999998509884,
+          "assignment_offset_ms": 2.899999998509884,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 1.05,
+          "requested_cap_bps": 315000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3070.0,
+          "assignment_offset_ms": 3069.1999999955297,
+          "epoch": 1,
+          "pre_action_bwe_bps": 739495,
+          "ratio": 1.05,
+          "requested_cap_bps": 776470,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6134.69999999553,
+          "assignment_offset_ms": 6133.89999999851,
+          "epoch": 2,
+          "pre_action_bwe_bps": 468452,
+          "ratio": 1.05,
+          "requested_cap_bps": 491875,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9196.69999999553,
+          "assignment_offset_ms": 9195.79999999702,
+          "epoch": 3,
+          "pre_action_bwe_bps": 545159,
+          "ratio": 1.05,
+          "requested_cap_bps": 572417,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 12252.5,
+          "assignment_offset_ms": 12251.10000000149,
+          "epoch": 4,
+          "pre_action_bwe_bps": 598808,
+          "ratio": 0.65,
+          "requested_cap_bps": 389225,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 15315.5,
+          "assignment_offset_ms": 15314.69999999553,
+          "epoch": 5,
+          "pre_action_bwe_bps": 202726,
+          "ratio": 0.65,
+          "requested_cap_bps": 150000,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c01-rome_op2_lte-r03-micro",
+      "network_campaign_id": "rome_active_speedtest_measurement",
+      "network_family": "rome_op2_lte",
+      "network_profile_id": "rome_op2_lte-04",
+      "repetition": 3
+    },
+    {
+      "cell_cluster": "content_vizanice_outdoor_01__nordic_op1_lte_b20",
+      "content_id": "content_vizanice_outdoor_01",
+      "holds": [
+        {
+          "ack_offset_ms": 7.899999998509884,
+          "assignment_offset_ms": 5.399999998509884,
+          "epoch": 0,
+          "pre_action_bwe_bps": 300000,
+          "ratio": 0.65,
+          "requested_cap_bps": 195000,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 3069.1999999955297,
+          "assignment_offset_ms": 3068.1999999955297,
+          "epoch": 1,
+          "pre_action_bwe_bps": 684259,
+          "ratio": 1.05,
+          "requested_cap_bps": 718472,
+          "state_bin": "bwe_ge_500k"
+        },
+        {
+          "ack_offset_ms": 6134.10000000149,
+          "assignment_offset_ms": 6132.89999999851,
+          "epoch": 2,
+          "pre_action_bwe_bps": 431890,
+          "ratio": 0.65,
+          "requested_cap_bps": 280729,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 9188,
+          "assignment_offset_ms": 9187.10000000149,
+          "epoch": 3,
+          "pre_action_bwe_bps": 431890,
+          "ratio": 1.05,
+          "requested_cap_bps": 453485,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 12249.39999999851,
+          "assignment_offset_ms": 12248.39999999851,
+          "epoch": 4,
+          "pre_action_bwe_bps": 251329,
+          "ratio": 1.05,
+          "requested_cap_bps": 263895,
+          "state_bin": "bwe_lt_500k"
+        },
+        {
+          "ack_offset_ms": 15312.69999999553,
+          "assignment_offset_ms": 15311.60000000149,
+          "epoch": 5,
+          "pre_action_bwe_bps": 235943,
+          "ratio": 1.05,
+          "requested_cap_bps": 247740,
+          "state_bin": "bwe_lt_500k"
+        }
+      ],
+      "id": "turntcp11d-c02-nordic_op1_lte_b20-r00-micro",
+      "network_campaign_id": "nordicdat_cross_border_measurement",
+      "network_family": "nordic_op1_lte_b20",
+      "network_profile_id": "nordic_op1_lte_b20-01",
+      "repetition": 0
+    }
+  ],
+  "tool_sha256": "cb2e6ca01dcfe9f9458892c08c4fba81edb8dd5fef67fa62f647b01eb3164bbc",
+  "verified_session_files": 2624
+}
