@@ -90,8 +90,12 @@ Those are hypotheses to distinguish, not identified causes of the observed loss.
    [V2 action assay](NATIVE_TURN_ACTION_ASSAY_V2.md) now prospectively crosses
    eight new scene seeds with four capacity-trace shapes to repeat the factual
    proximal action test; it does not vary the physical network mechanism. Its
-   outcome remains to be collected and replayed. New capacity traces on the same
-   host do not establish unseen-network-family generalization. The targeted
+   first acquisition attempt stopped before a peer was created because Chromium
+   rejected an overlong temporary socket path. The zero-peer failure and
+   verified partial inventory are retained; an output-path-only continuation
+   is registered in [the V2 continuation record](NATIVE_TURN_ACTION_ASSAY_V2_CONTINUATION.md).
+   No outcome data were produced or reused. New capacity traces on the same host
+   do not establish unseen-network-family generalization. The targeted
    pinned restore below remains the route to the archived UDP/licensed-video
    history; do not equate TURN dynamics with that transport.
 2. Diagnose the memory rule using a separate, prospectively specified native

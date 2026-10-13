@@ -356,11 +356,14 @@ validation. The protocol, full summary replay, code and provenance are in
 reports/native-turn-action-diagnostic-v1/.
 
 The next native action assay is prospectively registered across 64 peers, eight
-new procedural scenes and four capacity-trace shapes. It repeats the factual
-proximal question with raw inventory and complete wire replay gates; these trace
-settings still use one local TURN/TCP network path and cannot qualify a controller
-or establish unseen-family generalization. See
-[the V2 assay protocol](docs/NATIVE_TURN_ACTION_ASSAY_V2.md).
+new procedural scenes and four capacity-trace shapes. Its first acquisition
+stopped before a peer started because Chromium rejected an overlong temporary
+socket path; the zero-peer failure and partial inventory are preserved. A
+separate output-path-only continuation is registered, with the same actions,
+seeds, outcomes and analysis. These trace settings still use one local TURN/TCP
+path and cannot qualify a controller or establish unseen-family generalization.
+See the [V2 assay protocol](docs/NATIVE_TURN_ACTION_ASSAY_V2.md) and
+[technical continuation](docs/NATIVE_TURN_ACTION_ASSAY_V2_CONTINUATION.md).
 
 ## Interpretation boundaries
 

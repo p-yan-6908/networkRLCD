@@ -1,0 +1,11 @@
+{
+  "abi": "native_turn_probe_v2_action_assay_v1_capture_failure",
+  "completed_sessions": [],
+  "controller_promoted": false,
+  "exception_type": "CalledProcessError",
+  "message": "Command '['node', '/workspace/networkRLCD/benchmarks/native_rtc/turn_probe_v2.mjs', '/home/agent/.cache/networkrlcd/working/native-turn-action-assay-v2/turn-v2-repeated_dip-s204-r1', '/home/agent/.cache/networkrlcd/working/native-turn-action-assay-v2/turn-v2-repeated_dip-s204-r1.json']' returned non-zero exit status 1.",
+  "partial_evidence_preserved": true,
+  "raw_capture": "/home/agent/.cache/networkrlcd/working/native-turn-action-assay-v2",
+  "real_network_validation": false,
+  "spec_sha256": "9f34ccc6d6f96116f0a06d4ac22010093132851da8b9a1164393b051b7da5eac"
+}

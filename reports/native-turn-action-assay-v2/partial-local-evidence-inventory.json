@@ -1,0 +1,26 @@
+{
+  "abi": "native_turn_probe_v2_action_assay_v1_local_evidence_inventory",
+  "archive_verified": false,
+  "files": [
+    {
+      "bytes": 57596,
+      "path": "spec.json",
+      "sha256": "9f34ccc6d6f96116f0a06d4ac22010093132851da8b9a1164393b051b7da5eac"
+    },
+    {
+      "bytes": 355,
+      "path": "turn-v2-repeated_dip-s204-r1.json",
+      "sha256": "525127641a8e29c3027c569d529e82c568af277e60c8612a5e4b35f9d94c52c1"
+    },
+    {
+      "bytes": 862,
+      "path": "turn-v2-repeated_dip-s204-r1.log",
+      "sha256": "0c1ddd37e0ee5c04dfd3636af582a9e4e20993084d376ad8143efbd901080346"
+    }
+  ],
+  "local_cache_is_not_backup": true,
+  "raw_bytes_pruned": false,
+  "raw_capture": "/home/agent/.cache/networkrlcd/working/native-turn-action-assay-v2",
+  "scope": "all V2 action-assay capture files",
+  "total_bytes": 58813
+}
