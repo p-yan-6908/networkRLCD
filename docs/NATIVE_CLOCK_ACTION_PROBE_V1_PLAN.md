@@ -33,9 +33,11 @@ node_send_ms <= alpha * browser_receive_ms + beta
 
 The feasible set is the full polygon under `0.98 <= alpha <= 1.02`; it is not
 reduced to a fitted point. Fit exchanges with even indices and validate the odd
-indices without adding them to the fit. Allow 1 ms for timestamp quantization,
-request scheduling, and short-run affine approximation. This tolerance is
-separately reported and remains far below the 50 ms mapping-width limit.
+indices without adding them to the fit. The feasible polygon uses the recorded
+causal bounds, allowing only 0.0000001 ms for solver arithmetic. Validate held-out
+exchanges with a separately reported 1 ms tolerance for timestamp quantization,
+request scheduling, and short-run affine approximation; this remains far below
+the 50 ms mapping-width limit.
 Calibration passes only if all 60
 held-out exchanges are causally covered by every feasible mapping, the feasible
 set is nonempty, and the maximum held-out mapped-time interval is at most
