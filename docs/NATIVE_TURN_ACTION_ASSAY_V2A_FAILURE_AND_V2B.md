@@ -41,3 +41,15 @@ Reproduce only from that specification:
 After capture, require the original full inventory gate, independent wire
 replay, and registered contrast analysis. Preserve both prior failures and all
 unarchived raw bytes.
+
+V2b completed the 64-peer capture with all 323 inventory entries sealed and
+passed independent sender/wire replay. The registered analysis found a
+−3.785 pp 1.05-versus-0.85 on-time contrast [−6.711, −0.858], Holm $p=0.0483$,
+alongside the expected action-to-payload response. However, the capture command
+printed the unadjusted arm summaries before audit, so the estimate is classified
+as exploratory. The result, all six registered contrasts and the exact
+qualification are in
+[the V2b result record](NATIVE_TURN_ACTION_ASSAY_V2B_RESULTS.md). The independent
+V3 replication changes the source and assignment seeds while retaining the full
+endpoint and contrast family; its blind reading order is registered in
+[the V3 protocol](NATIVE_TURN_ACTION_ASSAY_V3_REGISTRATION.md).

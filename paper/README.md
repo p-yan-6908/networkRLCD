@@ -230,6 +230,18 @@ their input hashes are under
 paper/generated-native-turn-action-diagnostic-v1/. They do not qualify action value,
 safety or controller promotion.
 
+The larger V2b factual panel completes 64 peers / 384 holds. Its randomized cap
+ratios move actual encoded payload; the 1.05-versus-0.85 on-time contrast is
+-3.785 pp [-6.711, -0.858], Holm $p=0.0483$. Because the capture command exposed
+arm means before independent audit, these estimates remain exploratory. The
+tables and input/inventory provenance are in
+`paper/generated-native-turn-action-assay-v2b/`; reproduce the checked export
+with `uv run --frozen python tools/export_development_updates.py
+--action-v2-only`. The independent V3 replication is registered in
+`docs/NATIVE_TURN_ACTION_ASSAY_V3_REGISTRATION.md`; its outcomes must stay
+unopened until inventory and factual wire replay pass. Neither action panel is
+real-network or learned-policy validation.
+
 `tools/export_development_updates.py` binds tables to the compact reports and
 independent verification receipts; exports require fresh directories and launch
 no fitting/capture. Protocols, commands, complete negative results and storage
@@ -237,3 +249,10 @@ status: [acceptance](../docs/TYPED_FACTUAL_ACCEPTANCE_V1.md),
 [native probe](../docs/NATIVE_TURN_PROBE_V1.md),
 [active status](../docs/RESEARCH_STATUS.md). The new build receipt is
 `reports/native-turn-probe-v1/verification.json`; older PDF hashes remain historical.
+
+
+As of 2026-10-13, the V2b appendix is compiled into the current 81-page
+paper/build/main.pdf. The direct XeLaTeX build reads the existing generated
+evidence and does not re-export the nine archived synthetic studies. It
+completed without undefined references, box warnings or missing characters;
+this is a build check, not an all-page visual review.

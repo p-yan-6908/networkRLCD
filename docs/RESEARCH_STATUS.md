@@ -1,4 +1,4 @@
-# Active scientific status (2026-10-12 UTC)
+# Active scientific status (2026-10-13 UTC)
 
 The goal is a Jev/RLCD-inspired bitrate controller whose causal network and encoder
 history supports safe BWE-relative actions and reproducible delivered-quality gains
@@ -70,37 +70,44 @@ A separate prospective collector V2 and excluded technical peer remove that
 defect without rewriting the original captures. This is a new transport/content
 development track, not a replication of the UDP pilots or real-network evidence.
 
+The scratch-isolated V2b action assay completed 64 peers and all 384 assigned
+holds, with no aliased assignments and complete payload/readback endpoints.
+Independent sender and FIFO replay passed across all peers, and the exact
+323-file / 669,573,522-byte raw inventory remains unmodified. The registered
+1.05-versus-0.85 contrast lowers the 150 ms on-time proxy by 3.785 pp
+[-6.711, -0.858], Holm p=0.0483; all six registered comparisons are retained.
+The capture command exposed its unadjusted arm summaries before the audit, so
+V2b is exploratory despite the pre-capture estimator/contrast freeze. It
+indicates an action-to-payload response and a delivery-risk hypothesis, not a
+QoE benefit or policy effect. The independent V3 replication is registered
+with new scene, treatment-assignment and trial-order seeds and keeps the full
+six-test family; its outcome summaries remain unopened until its inventory and
+audit pass. See the [V2b results](NATIVE_TURN_ACTION_ASSAY_V2B_RESULTS.md)
+and [V3 registration](NATIVE_TURN_ACTION_ASSAY_V3_REGISTRATION.md).
+
+
 ## Largest current uncertainty
 
-Can sender-observable history identify a *useful and realizable* cap change beyond
-what the native estimator already does, rather than merely predict a simulator's
-action value? Native cap requests, encoded payload, BWE and receiver timing have
-different dynamics. The simulator's floor after a drop and native recovery diverge;
-the rule also starts at 1.05 while the stronger fixed comparator starts at 0.65.
-Those are hypotheses to distinguish, not identified causes of the observed loss.
+Can sender-observable history identify a useful and realizable cap change that
+improves delivered quality over a strong controller without trading away safety?
+V2b verifies only that randomized caps move actual payload, while its exploratory
+readback estimate raises a replication question. Native cap requests, encoded
+payload, BWE and receiver timing have different dynamics. The simulator's floor
+after a drop and native recovery diverge; the rule also starts at 1.05 while the
+stronger fixed comparator starts at 0.65. These are hypotheses to distinguish,
+not identified causes of the observed loss.
 
 ## Next informative work
 
-1. Use the new factual TURN histories for explicitly developmental measurement and
-   simple estimator/encoder diagnostics, without altering the failed simulator.
-   Preserve missing counters, distinguish encoder target, actual pre-RTP bytes,
-   RTP/header/retransmission bytes and cap readback, and compare causal history
-   with matched history-plus-action inputs. Four procedural settings are too few
-   for action-value qualification or generalization. The registered
-   [V2 action assay](NATIVE_TURN_ACTION_ASSAY_V2.md) now prospectively crosses
-   eight new scene seeds with four capacity-trace shapes to repeat the factual
-   proximal action test; it does not vary the physical network mechanism. Its
-   initial acquisition stopped before a peer because Chromium rejected an
-   overlong temporary socket path. Its output-path continuation sealed 64 peers,
-   but the frozen inventory gate rejected 64 Chromium symlinks and 64 sockets
-   under raw `TMPDIR`; its 323 regular files and filesystem metadata are retained
-   and reverified. No endpoint values were opened, and that capture remains
-   unqualified. A new scratch-isolation continuation is registered in
-   [the V2 failure record](NATIVE_TURN_ACTION_ASSAY_V2A_FAILURE_AND_V2B.md),
-   with unchanged treatment and analysis. New capacity traces on the same host
-   do not establish unseen-network-family generalization. The targeted
-   pinned restore below remains the route to the archived UDP/licensed-video
-   history; do not equate TURN dynamics with that transport.
+1. Complete the new V3 blinded replication of the exploratory V2b proxy effect
+   with the frozen full contrast family and audit-before-analysis order. Keep
+   V1, V2a and V2b raw evidence and negative findings intact. Regardless of
+   replication outcome, these local capacity schedules do not establish unseen
+   physical network families, policy value or whole-session QoE. Restore only
+   the pinned range-pilot records in reports/bwe-dynamics-diagnostic-v1/next-input.json
+   after archive access is actually ready; use them to reconstruct original
+   UDP/encoder history, not to tune against held-out data. Do not equate TURN
+   dynamics with the archived UDP/licensed-video transport.
 2. Diagnose the memory rule using a separate, prospectively specified native
    factorial comparison with matched startup, memory enabled/disabled, and repeated
    identical-policy peers. Randomise whole sessions: short crossover blocks have
@@ -144,7 +151,7 @@ emulated relay on one machine are native-stack evidence, not validation on real
 network conditions. Development p-values and simulation utility cannot justify
 promotion, a safety guarantee, or an RLCD-specific benefit.
 
-Approximately 230 MB of new raw evidence is retained outside the repository, with
-compact sealed inventories in Git. It is not a verified backup; private archival
-is pending and no unarchived raw bytes are pruned. The project remains far below
-its 10 GB limit. Original controller freezes and all negative results are retained.
+New native TURN raw captures and their inventories remain outside the repository;
+the raw bytes are unarchived and no unarchived evidence is pruned. These working
+copies are not verified backups. The project remains far below its 10 GB limit.
+Original controller freezes and all negative results are retained.

@@ -355,18 +355,18 @@ validation. The protocol, full summary replay, code and provenance are in
 [the action diagnostic](docs/NATIVE_TURN_ACTION_DIAGNOSTIC_V1.md) and
 reports/native-turn-action-diagnostic-v1/.
 
-The next native action assay is prospectively registered across 64 peers, eight
-new procedural scenes and four capacity-trace shapes. The initial acquisition
-stopped before a peer started because Chromium rejected an overlong socket path.
-Its output-path continuation sealed 64 peers, but the frozen inventory gate
-rejected Chromium symlinks and sockets in the raw tree. That complete but
-unqualified capture is preserved and its outcomes have not been opened. A
-scratch-isolation continuation keeps the same actions, seeds, endpoints and
-analysis. These trace settings still use one local TURN/TCP path and cannot
-qualify a controller or unseen-family generalization. See the
-[V2 assay protocol](docs/NATIVE_TURN_ACTION_ASSAY_V2.md),
-[first continuation](docs/NATIVE_TURN_ACTION_ASSAY_V2_CONTINUATION.md), and
-[inventory-failure record](docs/NATIVE_TURN_ACTION_ASSAY_V2A_FAILURE_AND_V2B.md).
+The [V2b action assay](docs/NATIVE_TURN_ACTION_ASSAY_V2B_RESULTS.md) completed
+64 peers / 384 holds and passed the full raw inventory and independent audit.
+Assigned BWE ratios moved actual payload, while 1.05 versus 0.85 reduced the
+150 ms readback share by 3.785 pp (95% conditional interval [-6.711, -0.858],
+Holm p=0.0483). The capture command exposed unadjusted arm means before the
+independent audit, so this remains exploratory. A fresh 64-peer replication
+with new scene, assignment and trial-order seeds is registered in
+[V3](docs/NATIVE_TURN_ACTION_ASSAY_V3_REGISTRATION.md); it keeps the full six
+contrast family and requires audit-before-analysis. Neither panel validates
+physical network-family transfer, a learned policy or real-network performance.
+The earlier V2 acquisition and inventory failures remain preserved in the
+[failure record](docs/NATIVE_TURN_ACTION_ASSAY_V2A_FAILURE_AND_V2B.md).
 
 ## Interpretation boundaries
 

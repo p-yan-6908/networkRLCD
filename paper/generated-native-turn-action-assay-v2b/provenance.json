@@ -1,0 +1,32 @@
+{
+  "abi": "native_turn_action_assay_v2b_paper_export_v1",
+  "exporter_sha256": "9b33b284cb55ebdbe08d71c40125238e8077d361f48f6bcd814fac5ca6e63d05",
+  "input_sha256": {
+    "configs/native_turn_probe_v2_action_assay_inventory_continuation.json": "5859b4511a4cac9947a66e0faaf05c2ef2aac07a915f4c948e3a08991cc546af",
+    "reports/native-turn-action-assay-v2b-analysis/provenance.json": "b65d6a02629a9df33a99f598fa65a312d34b7b2c63324011fc10bae8906f27cf",
+    "reports/native-turn-action-assay-v2b-analysis/report.json": "314b0df0d3732f511fe1f7e5153c73ea7562d39a4d8c91e2da382d4fdc69fcc8",
+    "reports/native-turn-action-assay-v2b/independent-audit.json": "cfae4f229d9bb19a9f668f8640cdfd814836b90acb1046708b26fd82236d02be",
+    "reports/native-turn-action-assay-v2b/local-evidence-inventory.json": "e5ebab2725a8643246e2b9804a8498ec1ae99bec6bcaec63dffcb17e5e50ea2b",
+    "reports/native-turn-action-assay-v2b/report.json": "3e30da4edd15f7f0919c844c0d66560449cee1dc18f7168c29e4d34cdf9c1ad9",
+    "reports/native-turn-action-assay-v2b/sessions.json": "35563f5fb31a761d5e156f4bbf7177bb65ce43e360d8523c823aa1c9c0f31ca7",
+    "src/media_rl/native_turn_action_panel_v2.py": "eccfbb9b2452ab5d557d506d5b555e3fe3df3b33b84df2a6ddf6893608b11c93",
+    "src/media_rl/native_turn_probe_v2.py": "3dd7fe77c5b6da7b9cd3ddbee5291319950d1ace33ce37c25feb034f55138b64",
+    "tools/export_development_updates.py": "9b33b284cb55ebdbe08d71c40125238e8077d361f48f6bcd814fac5ca6e63d05"
+  },
+  "no_capture_training_or_counterfactual_launched": true,
+  "output_sha256": {
+    "evidence.tex": "6ac676cf50764dba40cf09b9b47615dcd0c90d70009f656a9d15f9dd150e968c",
+    "table_arm_means.tex": "91a656f9c982fc5480beefdfbb3e266eb488240654ba084c95c95e1b2fb9382f",
+    "table_contrasts.tex": "92c56c7319c33a29adbbd3081d2e942fec00105df88699839b3995ac5dd93be3"
+  },
+  "raw_capture_inventory_verified": {
+    "archive_verified": false,
+    "capture_bytes_unmodified": true,
+    "capture_file_count": 323,
+    "capture_total_bytes": 669573522,
+    "inventory_sha256": "e5ebab2725a8643246e2b9804a8498ec1ae99bec6bcaec63dffcb17e5e50ea2b",
+    "raw_bytes_pruned": false
+  },
+  "v2b_claim_status": "exploratory_development_only",
+  "v2b_outcome_summary_exposed_before_independent_audit": true
+}
