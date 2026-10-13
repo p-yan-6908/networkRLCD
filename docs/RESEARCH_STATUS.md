@@ -285,3 +285,7 @@ estimated. The V5 panel and gate remain frozen and unpooled; see
 A new independent registration is needed with clock exchanges immediately
 before the initial high and recovery requests, retaining all existing
 acceptance thresholds.
+
+The proposed V6 marker design is preregistered at
+[the V6 plan](NATIVE_CLOCK_ACTION_TURN_TCP_V6_PLAN.md); its pre-phase brackets
+do not change the held-out coverage, width, or timestamp-order thresholds.
