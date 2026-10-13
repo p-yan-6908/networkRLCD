@@ -1,0 +1,100 @@
+{
+  "abi": "native_turn_clock_action_v11_commissioning_failure_v1",
+  "all_session_integrity_manifests_verified": true,
+  "attempted_sessions": 10,
+  "capture_index_sha256": "f4914053113241ec353947a1deb798d7c7743da2af8b1d1f4eb936cb20054765",
+  "failed_or_interrupted_sessions": 7,
+  "operator_interrupted_sessions": 1,
+  "original_protocol_sha256": "c3fc39e9d7a643e73d6bf14ab95cb66e35e84e351ed91fc93e04e8a544416e31",
+  "original_protocol_sidecar_matches": true,
+  "outcome_telemetry_opened": false,
+  "pooled_with_V3_V10_or_V11A": false,
+  "process_complete_sessions": 3,
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-clock-action-turntcp-v11",
+  "reason": "The original V11 recorder called an undefined wait(ms) in the post-run TURN queue drain. Six sessions exited with ReferenceError; capture was stopped after the repeated defect and the active session was sealed as an operator-interrupted failure. The three process-complete sessions are excluded because the full 64-session pre-outcome gates were not met.",
+  "recorder_reference_errors": 6,
+  "sessions": [
+    {
+      "capture_status": "failed",
+      "error": "exit code 1",
+      "file_count": 37,
+      "integrity_manifest_sha256": "0b68d191ab18f58d9682c5b6bb999b7b16f58e8a91a99e4d22dca1233ba7ca12",
+      "stage": "native_action_session_failed",
+      "trial": "turntcp11-c03-ucc_5g_operator_B-r03-micro"
+    },
+    {
+      "capture_status": "failed",
+      "error": "exit code 1",
+      "file_count": 37,
+      "integrity_manifest_sha256": "214fa2fb9a20d070233ba8123454bca53b5fedb8b843b8cd899ff75511a2bc31",
+      "stage": "native_action_session_failed",
+      "trial": "turntcp11-c04-ucc_5g_operator_B-r01-micro"
+    },
+    {
+      "capture_status": "failed",
+      "error": "exit code 1",
+      "file_count": 37,
+      "integrity_manifest_sha256": "507d9ab3d02e4304d2bde0b0f27a1c030e2bfe9d5df2190a51e25ee14b75dc0e",
+      "stage": "native_action_session_failed",
+      "trial": "turntcp11-c02-vienna_5g_operator_A-r03-micro"
+    },
+    {
+      "capture_status": "sealed",
+      "error": null,
+      "file_count": 40,
+      "integrity_manifest_sha256": "00a20f0fbe40a5f06990d508a5b83fd5dca25631ef7e4473274bb0ce9ab13b83",
+      "stage": "native_action_session",
+      "trial": "turntcp11-c01-ucc_lte_operator_A-r01-micro"
+    },
+    {
+      "capture_status": "sealed",
+      "error": null,
+      "file_count": 40,
+      "integrity_manifest_sha256": "117450a9ec2da2c0cbb55d7e47ff7773c0ca35726556d71a9ca7aa5835cc502b",
+      "stage": "native_action_session",
+      "trial": "turntcp11-c04-vienna_lte_operator_C-r01-micro"
+    },
+    {
+      "capture_status": "failed",
+      "error": "exit code 1",
+      "file_count": 37,
+      "integrity_manifest_sha256": "d1116656146cdd027a44df3309dfaead23a7d26c97aa515878b10bc0eba12f1c",
+      "stage": "native_action_session_failed",
+      "trial": "turntcp11-c02-vienna_5g_operator_A-r00-micro"
+    },
+    {
+      "capture_status": "sealed",
+      "error": null,
+      "file_count": 40,
+      "integrity_manifest_sha256": "118ac85092fff9f4ec65fa264297870b414c798342f23656f23dd356a9305a30",
+      "stage": "native_action_session",
+      "trial": "turntcp11-c01-ucc_lte_operator_A-r02-micro"
+    },
+    {
+      "capture_status": "failed",
+      "error": "exit code 1",
+      "file_count": 37,
+      "integrity_manifest_sha256": "b40b50b9bbd09929aae3fc70bab8eb4d2b83cb4fb06b58e080db6f2acf6bff28",
+      "stage": "native_action_session_failed",
+      "trial": "turntcp11-c04-vienna_lte_operator_C-r02-micro"
+    },
+    {
+      "capture_status": "failed",
+      "error": "exit code 1",
+      "file_count": 37,
+      "integrity_manifest_sha256": "31487a02607ce58d8356716557c0ee752406dfe5c705733ec86d186a36cb369a",
+      "stage": "native_action_session_failed",
+      "trial": "turntcp11-c01-vienna_5g_operator_A-r00-micro"
+    },
+    {
+      "capture_status": "failed",
+      "error": "operator interruption after recorder defect; subprocess stderr unavailable",
+      "file_count": 28,
+      "integrity_manifest_sha256": "5ab49bc53be53cb1b0f59e1e6ecdf8a91a3bfc586f3a115e9d26b19cc80ff2f7",
+      "stage": "native_action_session_failed",
+      "trial": "turntcp11-c04-ucc_lte_operator_A-r02-micro"
+    }
+  ],
+  "status": "excluded_capture_attempt",
+  "treatment_effects_estimated": false
+}
