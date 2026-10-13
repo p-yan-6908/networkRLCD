@@ -1,0 +1,35 @@
+{
+  "abi": "native_clock_action_v11d_clock_transport_gate_summary_v1",
+  "protocol_sha256": "db3d5c8bd440b04c4e28c2d6c196ce946b87dd3ba9d060ef0a9a07bf46db1e50",
+  "capture_index_sha256": "00b17973205196231bdeaf19fdd2e43519112d7f08cbf0c4779e5c797fdac1b5",
+  "gate_sha256": "b85af79677da69d874e22d47faef92a9be35a3136a82468eb039c84754134381",
+  "passed": true,
+  "planned_sessions": 64,
+  "qualified_clock_sessions": 64,
+  "qualified_transport_sessions": 64,
+  "qualified_trace_schedule_sessions": 64,
+  "qualified_action_assignment_sessions": 64,
+  "qualified_terminal_cleanup_sessions": 64,
+  "failed_capture_sessions": 0,
+  "held_out_marker_coverage": {
+    "minimum": 1.0,
+    "all_covered": true,
+    "held_out_markers_per_session": 4
+  },
+  "held_out_interval_width_ms": {
+    "maximum": 3.4736605607558886,
+    "p95": 3.1554311662416694,
+    "registered_maximum": 50.0
+  },
+  "affine_slope_feasible_bounds": {
+    "minimum": 0.9997959640045913,
+    "maximum": 1.0002491548036834,
+    "registered_bounds": [
+      0.98,
+      1.02
+    ]
+  },
+  "per_hold_relay_joins_enabled_after_gate": true,
+  "outcome_analysis_performed": false,
+  "failed_sessions_are_not_treatment_outcomes": true
+}
