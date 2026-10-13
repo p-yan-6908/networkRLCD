@@ -1,0 +1,54 @@
+{
+  "abi": "networkrlcd_independent_v11_source_screening_v1",
+  "review_date": "2026-10-13",
+  "private_archive": {
+    "dataset": "p-yan/networkrlcd-results-archive",
+    "access": "authenticated Hugging Face API and private tree access succeeded",
+    "inspected_revision": "3d58f49b890478c06ae48b571287f0e35c987a9c",
+    "revision_date": "2026-10-12",
+    "finding": "The available private tree contained prior experiment archives, receipts, and shards, but no unused independently sourced video content or measured LTE/5G source traces for this panel.",
+    "prior_v3_v10_evidence_restored_or_reused_as_v11_sources": false
+  },
+  "workspace_and_environment": {
+    "repository_base": "231ee6cbb9c6257bc3ad1b309aa367946a975172",
+    "project_storage_preflight": {
+      "project_bytes": 291315727,
+      "planned_capture_bytes": 1000000000,
+      "project_limit_bytes": 10000000000,
+      "within_budget": true
+    },
+    "external_source_and_raw_capture_cache": "/home/agent/.cache/networkrlcd/",
+    "managed_browser_policy": "WebRtcIPHandling=disable_non_proxied_udp; unchanged",
+    "network_capability": "CAP_NET_ADMIN unavailable; use the already qualified TURN/TCP userspace relay and deterministic trace-derived service-rate replay, not live network shaping"
+  },
+  "selected_sources": {
+    "content_manifest": "data/native-v11/content_sources.json",
+    "content_families": 4,
+    "content_licenses": ["CC-BY-3.0", "CC-BY-4.0"],
+    "network_profile_document": "data/native-v11/network_profiles.json",
+    "network_families": 4,
+    "independent_network_acquisition_campaigns": 2,
+    "trace_licenses": ["CC-BY-4.0", "GPL-3.0"],
+    "all_originals_and_downloaded_measurement_files_sha256_checked": true,
+    "rights_cleared_content_sha1_and_byte_counts_match_catalogue": true,
+    "recorded_pixel_arrays_retained_in_capture_evidence": false
+  },
+  "alternatives_and_exclusions": [
+    {
+      "source": "https://github.com/confiwent/Real-world-bandwidth-traces",
+      "decision": "excluded",
+      "reason": "The repository contains bundled FCC, 3G/HSDPA, Oboe, and Puffer sources with separate upstream provenance; the repository-level MIT licence did not establish rights for each included trace set."
+    },
+    {
+      "source": "https://zenodo.org/records/18322066",
+      "decision": "used only for exact pinned phone data files",
+      "reason": "The full 787 MB archive was not needed after the independently pinned LTE/5G phone CSV files were obtained and checksum-verified. The abandoned 64 MiB partial is retained outside the repository at `~/.cache/networkrlcd/independent-v11-sources/network/vienna-4g-5g-dataset-v1.zip.partial` (SHA-256 `d6a60d23a1397767154d27b3243a1f0697e096f1b9176f7c976dd4f1edd61e2a`)."
+    },
+    {
+      "source": "N1 rights-reviewed Wikimedia Commons queue",
+      "decision": "selected four previously unused and distinct capture groups",
+      "reason": "The exact Commons source revisions had recorded CC BY pass decisions, and downloaded original SHA-1 values and byte counts matched the rights-review catalogue."
+    }
+  ],
+  "non_pooling": "V3–V10 source identifiers and existing study results were not reused as new evidence. UCC LTE/5G families share one acquisition campaign; Vienna LTE/5G families share one campaign. The study records four family strata but only two independent measurement campaigns."
+}
