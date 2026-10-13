@@ -229,3 +229,34 @@ remain unjoined to per-hold actions. The native action-value question remains
 open pending a policy-approved WebRTC path. V3 and all earlier native and
 synthetic evidence remain frozen and separate; no new controller was fit or
 promoted.
+
+## 2026-10-13 TURN/TCP native action continuation
+
+The managed Chromium policy remains unchanged. A policy-compatible Coturn path
+uses TURN/TCP control to local relay-only allocations and the owned UDP queue.
+The direct TURN/TCP media preflight passed, and a separate queue-backed
+preflight passed relay-only gathering, nominated pairs, bidirectional decoded
+media, 113/114 forwarded packets, queue accounting, and the unchanged policy.
+The short first queue preflight remains preserved as a failed technical
+attempt.
+
+The independent V3 action panel is preserved as 32 failed captures. Its
+collector checked a phase-snapshot candidate-type field that was not included
+in the snapshot. Hash-verified diagnostics show TURN connections and queue
+forwarding in both directions, but V3 is not reclassified and provides no
+per-hold cost/QoE estimate. Its five-marker clock check passed in 29/32
+sessions; three missed held-out coverage. The diagnostic-only report and exact
+failure record are in
+[the V3 TURN/TCP result note](NATIVE_CLOCK_ACTION_TURN_TCP_V3_RESULTS.md).
+No sender observations or frame-quality outcomes were examined and no
+controller was fitted or promoted.
+
+A fresh [V4 protocol](../configs/native_clock_action_probe_turn_tcp_v4.json)
+is registered with a new 32-session panel, new scene/order seeds, the
+queue-backed preflight hash, a recorded phase candidate type, bidirectional
+queue acceptance, and seven actual-run markers (four fit, three held out).
+Its protocol SHA256 is
+1937b2a88ca08f1a7d25382a09aacab36c80c28bcac79404add1f5346b739a2c.
+V4 will not produce per-hold estimates unless every session passes checksum,
+transport, media, policy, and actual-run clock gates. Prior native, archived,
+and synthetic evidence remains frozen and unpooled.
