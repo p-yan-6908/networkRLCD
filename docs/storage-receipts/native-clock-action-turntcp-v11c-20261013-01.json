@@ -1,0 +1,22 @@
+{
+  "applied": false,
+  "archive_bytes": 90142720,
+  "download_probe": "results.tar.part-0000",
+  "files": 0,
+  "logical_bytes": 0,
+  "parts": {
+    "results.tar.part-0000": {
+      "sha256": "dc819b83ed26b488ca7d91ab161725f6131918891ccfca25ad20097864e53cd3",
+      "size": 90142720
+    }
+  },
+  "prefix": "native-clock-action-turntcp-v11c-20261013-01",
+  "private": true,
+  "repo": "p-yan/networkrlcd-results-archive",
+  "retained_or_drifted": 2727,
+  "revision": "b1497fa425f59c3b796d9ce5354ee58a0afe9667",
+  "scopes": [
+    "results/native-clock-action-turntcp-v11c-capture"
+  ],
+  "verification": "passed"
+}

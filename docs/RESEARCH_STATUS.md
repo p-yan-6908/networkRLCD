@@ -396,3 +396,31 @@ The next useful evidence requires an independently sourced content family and
 a measured network family. V10 is still local loopback TURN/queue native-stack
 evidence; it does not supply either missing family. V3–V9, archived telemetry,
 recorded-video results, and synthetic studies remain unchanged and unpooled.
+
+## 2026-10-13 V11C independent-content capture and gate
+
+The preregistered V11C panel crossed four independently licensed video sources
+with four measured LTE/5G operator families nested in two acquisition campaigns.
+Its zero-terminal-rate smoke passed all technical gates without reading
+outcomes. The full 64-session capture then recorded 42 sealed sessions and 22
+failed sessions. All 64 session files passed checksum verification; all 42
+sealed sessions passed TURN transport, actual-run clock, trace replay, action
+assignment/readback, and terminal-cleanup gates. The all-session acceptance
+failed, so the V11C analyzer was not run and no action, PSNR, delivery, QoE, or
+per-hold relay outcome was opened.
+
+The failures were 20 native-media-validity errors, one browser runtime
+exception, and one session interrupted by an environment replacement. The
+interrupted attempt was sealed as failed and never replayed. Failures were
+concentrated in the Vienna measured-rate families; selected Vienna 5G source
+windows include 7–12 zero-service seconds per 18-second profile. This motivates
+an outcome-blind source-window and technical-feasibility screen, not an outcome
+interpretation or a relaxed gate. See the [V11C failure report](../reports/native-clock-action-turntcp-v11c-capture-failure.json)
+and [result note](NATIVE_CLOCK_ACTION_TURN_TCP_V11C_RESULTS.md).
+
+The complete raw capture was archived privately at immutable revision
+`b1497fa425f59c3b796d9ce5354ee58a0afe9667`; the [receipt](storage-receipts/native-clock-action-turntcp-v11c-20261013-01.json)
+records verified shard checksums and a successful fresh-download probe. No
+local capture files were pruned. V11C and V11/V11A/V11B remain excluded from
+V3–V10 and from one another. V10 stays closed, and no controller was fitted or
+promoted.
