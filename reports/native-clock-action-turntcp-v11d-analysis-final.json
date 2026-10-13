@@ -1,0 +1,2311 @@
+{
+  "abi": "native_independent_content_trace_action_probe_v11d_report",
+  "action_effects_by_state": {
+    "definition": "within each metric-estimable content-by-family cell, mean at ratio 1.05 minus mean at ratio 0.65; cells equally weighted; campaign, content, and family strata remain dependent",
+    "estimates": {
+      "mean_guaranteed_dropped_wire_bytes_per_window": {
+        "bwe_ge_500k": {
+          "by_acquisition_campaign": {
+            "nordicdat_cross_border_measurement": {
+              "estimable_crossed_cells": 5,
+              "mean_action_effect": 0.0,
+              "network_families": [
+                "nordic_op1_5g_nsa_b20",
+                "nordic_op1_lte_b20",
+                "nordic_op3_lte_b3"
+              ]
+            },
+            "rome_active_speedtest_measurement": {
+              "estimable_crossed_cells": 4,
+              "mean_action_effect": 93.33333333333333,
+              "network_families": [
+                "rome_op2_lte"
+              ]
+            }
+          },
+          "by_content_source": {
+            "content_cicada_emergence_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 0.0
+            },
+            "content_d3_tree_layout_tutorial_01": {
+              "estimable_network_families": 1,
+              "mean_action_effect": 0.0
+            },
+            "content_schmilka_firefighting_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 124.44444444444444
+            },
+            "content_vizanice_outdoor_01": {
+              "estimable_network_families": 2,
+              "mean_action_effect": 0.0
+            }
+          },
+          "by_network_family": {
+            "nordic_op1_5g_nsa_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 3,
+              "mean_action_effect": 0.0
+            },
+            "nordic_op1_lte_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 0,
+              "mean_action_effect": null
+            },
+            "nordic_op3_lte_b3": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 2,
+              "mean_action_effect": 0.0
+            },
+            "rome_op2_lte": {
+              "acquisition_campaign": "rome_active_speedtest_measurement",
+              "estimable_content_sources": 4,
+              "mean_action_effect": 93.33333333333333
+            }
+          },
+          "cell_action_effect_1.05_minus_0.65": {
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": 0.0,
+            "content_cicada_emergence_01__nordic_op3_lte_b3": 0.0,
+            "content_cicada_emergence_01__rome_op2_lte": 0.0,
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte": 0.0,
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": 0.0,
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3": 0.0,
+            "content_schmilka_firefighting_01__rome_op2_lte": 373.3333333333333,
+            "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20": 0.0,
+            "content_vizanice_outdoor_01__rome_op2_lte": 0.0
+          },
+          "equal_weight_mean_action_effect": 41.48148148148148,
+          "estimable_cell_count": 9,
+          "estimable_cells": [
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+            "content_cicada_emergence_01__nordic_op3_lte_b3",
+            "content_cicada_emergence_01__rome_op2_lte",
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte",
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+            "content_schmilka_firefighting_01__rome_op2_lte",
+            "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20",
+            "content_vizanice_outdoor_01__rome_op2_lte"
+          ]
+        },
+        "bwe_lt_500k": {
+          "by_acquisition_campaign": {
+            "nordicdat_cross_border_measurement": {
+              "estimable_crossed_cells": 5,
+              "mean_action_effect": 0.0,
+              "network_families": [
+                "nordic_op1_5g_nsa_b20",
+                "nordic_op1_lte_b20",
+                "nordic_op3_lte_b3"
+              ]
+            },
+            "rome_active_speedtest_measurement": {
+              "estimable_crossed_cells": 4,
+              "mean_action_effect": 12.645833333333332,
+              "network_families": [
+                "rome_op2_lte"
+              ]
+            }
+          },
+          "by_content_source": {
+            "content_cicada_emergence_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 0.0
+            },
+            "content_d3_tree_layout_tutorial_01": {
+              "estimable_network_families": 1,
+              "mean_action_effect": 0.0
+            },
+            "content_schmilka_firefighting_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": -30.555555555555557
+            },
+            "content_vizanice_outdoor_01": {
+              "estimable_network_families": 2,
+              "mean_action_effect": 71.125
+            }
+          },
+          "by_network_family": {
+            "nordic_op1_5g_nsa_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 3,
+              "mean_action_effect": 0.0
+            },
+            "nordic_op1_lte_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 0,
+              "mean_action_effect": null
+            },
+            "nordic_op3_lte_b3": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 2,
+              "mean_action_effect": 0.0
+            },
+            "rome_op2_lte": {
+              "acquisition_campaign": "rome_active_speedtest_measurement",
+              "estimable_content_sources": 4,
+              "mean_action_effect": 12.645833333333332
+            }
+          },
+          "cell_action_effect_1.05_minus_0.65": {
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": 0.0,
+            "content_cicada_emergence_01__nordic_op3_lte_b3": 0.0,
+            "content_cicada_emergence_01__rome_op2_lte": 0.0,
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte": 0.0,
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": 0.0,
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3": 0.0,
+            "content_schmilka_firefighting_01__rome_op2_lte": -91.66666666666667,
+            "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20": 0.0,
+            "content_vizanice_outdoor_01__rome_op2_lte": 142.25
+          },
+          "equal_weight_mean_action_effect": 5.62037037037037,
+          "estimable_cell_count": 9,
+          "estimable_cells": [
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+            "content_cicada_emergence_01__nordic_op3_lte_b3",
+            "content_cicada_emergence_01__rome_op2_lte",
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte",
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+            "content_schmilka_firefighting_01__rome_op2_lte",
+            "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20",
+            "content_vizanice_outdoor_01__rome_op2_lte"
+          ]
+        }
+      },
+      "mean_guaranteed_wire_bytes_per_window": {
+        "bwe_ge_500k": {
+          "by_acquisition_campaign": {
+            "nordicdat_cross_border_measurement": {
+              "estimable_crossed_cells": 5,
+              "mean_action_effect": 975.5666666666679,
+              "network_families": [
+                "nordic_op1_5g_nsa_b20",
+                "nordic_op1_lte_b20",
+                "nordic_op3_lte_b3"
+              ]
+            },
+            "rome_active_speedtest_measurement": {
+              "estimable_crossed_cells": 4,
+              "mean_action_effect": 19621.854166666668,
+              "network_families": [
+                "rome_op2_lte"
+              ]
+            }
+          },
+          "by_content_source": {
+            "content_cicada_emergence_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 7456.055555555558
+            },
+            "content_d3_tree_layout_tutorial_01": {
+              "estimable_network_families": 1,
+              "mean_action_effect": 1347.6666666666679
+            },
+            "content_schmilka_firefighting_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 5834.611111111112
+            },
+            "content_vizanice_outdoor_01": {
+              "estimable_network_families": 2,
+              "mean_action_effect": 21072.791666666668
+            }
+          },
+          "by_network_family": {
+            "nordic_op1_5g_nsa_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 3,
+              "mean_action_effect": -745.4444444444429
+            },
+            "nordic_op1_lte_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 0,
+              "mean_action_effect": null
+            },
+            "nordic_op3_lte_b3": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 2,
+              "mean_action_effect": 3557.083333333334
+            },
+            "rome_op2_lte": {
+              "acquisition_campaign": "rome_active_speedtest_measurement",
+              "estimable_content_sources": 4,
+              "mean_action_effect": 19621.854166666668
+            }
+          },
+          "cell_action_effect_1.05_minus_0.65": {
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": -4765.5,
+            "content_cicada_emergence_01__nordic_op3_lte_b3": 690.6666666666679,
+            "content_cicada_emergence_01__rome_op2_lte": 26443.000000000007,
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte": 1347.6666666666679,
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": 4154.333333333336,
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3": 6423.5,
+            "content_schmilka_firefighting_01__rome_op2_lte": 6926.0,
+            "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20": -1625.1666666666642,
+            "content_vizanice_outdoor_01__rome_op2_lte": 43770.75
+          },
+          "equal_weight_mean_action_effect": 9262.805555555557,
+          "estimable_cell_count": 9,
+          "estimable_cells": [
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+            "content_cicada_emergence_01__nordic_op3_lte_b3",
+            "content_cicada_emergence_01__rome_op2_lte",
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte",
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+            "content_schmilka_firefighting_01__rome_op2_lte",
+            "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20",
+            "content_vizanice_outdoor_01__rome_op2_lte"
+          ]
+        },
+        "bwe_lt_500k": {
+          "by_acquisition_campaign": {
+            "nordicdat_cross_border_measurement": {
+              "estimable_crossed_cells": 5,
+              "mean_action_effect": 9683.696666666667,
+              "network_families": [
+                "nordic_op1_5g_nsa_b20",
+                "nordic_op1_lte_b20",
+                "nordic_op3_lte_b3"
+              ]
+            },
+            "rome_active_speedtest_measurement": {
+              "estimable_crossed_cells": 4,
+              "mean_action_effect": 9446.888437950938,
+              "network_families": [
+                "rome_op2_lte"
+              ]
+            }
+          },
+          "by_content_source": {
+            "content_cicada_emergence_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 15094.064285714287
+            },
+            "content_d3_tree_layout_tutorial_01": {
+              "estimable_network_families": 1,
+              "mean_action_effect": 3416.8831168831166
+            },
+            "content_schmilka_firefighting_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 8630.95925925926
+            },
+            "content_vizanice_outdoor_01": {
+              "estimable_network_families": 2,
+              "mean_action_effect": 5807.041666666666
+            }
+          },
+          "by_network_family": {
+            "nordic_op1_5g_nsa_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 3,
+              "mean_action_effect": 8616.220370370373
+            },
+            "nordic_op1_lte_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 0,
+              "mean_action_effect": null
+            },
+            "nordic_op3_lte_b3": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 2,
+              "mean_action_effect": 11284.91111111111
+            },
+            "rome_op2_lte": {
+              "acquisition_campaign": "rome_active_speedtest_measurement",
+              "estimable_content_sources": 4,
+              "mean_action_effect": 9446.888437950938
+            }
+          },
+          "cell_action_effect_1.05_minus_0.65": {
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": 14642.25,
+            "content_cicada_emergence_01__nordic_op3_lte_b3": 14545.800000000003,
+            "content_cicada_emergence_01__rome_op2_lte": 16094.142857142857,
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte": 3416.8831168831166,
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": 8286.688888888893,
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3": 8024.022222222218,
+            "content_schmilka_firefighting_01__rome_op2_lte": 9582.166666666668,
+            "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20": 2919.7222222222226,
+            "content_vizanice_outdoor_01__rome_op2_lte": 8694.36111111111
+          },
+          "equal_weight_mean_action_effect": 9578.448565015233,
+          "estimable_cell_count": 9,
+          "estimable_cells": [
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+            "content_cicada_emergence_01__nordic_op3_lte_b3",
+            "content_cicada_emergence_01__rome_op2_lte",
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte",
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+            "content_schmilka_firefighting_01__rome_op2_lte",
+            "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20",
+            "content_vizanice_outdoor_01__rome_op2_lte"
+          ]
+        }
+      },
+      "mean_ontime_psnr_db": {
+        "bwe_ge_500k": {
+          "by_acquisition_campaign": {
+            "nordicdat_cross_border_measurement": {
+              "estimable_crossed_cells": 4,
+              "mean_action_effect": 0.3395607643099101,
+              "network_families": [
+                "nordic_op1_5g_nsa_b20",
+                "nordic_op1_lte_b20",
+                "nordic_op3_lte_b3"
+              ]
+            },
+            "rome_active_speedtest_measurement": {
+              "estimable_crossed_cells": 3,
+              "mean_action_effect": -0.09829687356892573,
+              "network_families": [
+                "rome_op2_lte"
+              ]
+            }
+          },
+          "by_content_source": {
+            "content_cicada_emergence_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 0.2777987679326171
+            },
+            "content_d3_tree_layout_tutorial_01": {
+              "estimable_network_families": 1,
+              "mean_action_effect": -0.7640964904435634
+            },
+            "content_schmilka_firefighting_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 0.33135087439285843
+            },
+            "content_vizanice_outdoor_01": {
+              "estimable_network_families": 0,
+              "mean_action_effect": null
+            }
+          },
+          "by_network_family": {
+            "nordic_op1_5g_nsa_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 2,
+              "mean_action_effect": 0.26742900059030816
+            },
+            "nordic_op1_lte_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 0,
+              "mean_action_effect": null
+            },
+            "nordic_op3_lte_b3": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 2,
+              "mean_action_effect": 0.41169252802951206
+            },
+            "rome_op2_lte": {
+              "acquisition_campaign": "rome_active_speedtest_measurement",
+              "estimable_content_sources": 3,
+              "mean_action_effect": -0.09829687356892573
+            }
+          },
+          "cell_action_effect_1.05_minus_0.65": {
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": 0.39105011795878397,
+            "content_cicada_emergence_01__nordic_op3_lte_b3": 0.28703968418271586,
+            "content_cicada_emergence_01__rome_op2_lte": 0.15530650165635151,
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte": -0.7640964904435634,
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": 0.14380788322183236,
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3": 0.5363453718763083,
+            "content_schmilka_firefighting_01__rome_op2_lte": 0.3138993680804347
+          },
+          "equal_weight_mean_action_effect": 0.1519074909332662,
+          "estimable_cell_count": 7,
+          "estimable_cells": [
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+            "content_cicada_emergence_01__nordic_op3_lte_b3",
+            "content_cicada_emergence_01__rome_op2_lte",
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte",
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+            "content_schmilka_firefighting_01__rome_op2_lte"
+          ]
+        },
+        "bwe_lt_500k": {
+          "by_acquisition_campaign": {
+            "nordicdat_cross_border_measurement": {
+              "estimable_crossed_cells": 4,
+              "mean_action_effect": 0.758164945779499,
+              "network_families": [
+                "nordic_op1_5g_nsa_b20",
+                "nordic_op1_lte_b20",
+                "nordic_op3_lte_b3"
+              ]
+            },
+            "rome_active_speedtest_measurement": {
+              "estimable_crossed_cells": 3,
+              "mean_action_effect": 0.7641880817606376,
+              "network_families": [
+                "rome_op2_lte"
+              ]
+            }
+          },
+          "by_content_source": {
+            "content_cicada_emergence_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 0.9296898975894123
+            },
+            "content_d3_tree_layout_tutorial_01": {
+              "estimable_network_families": 1,
+              "mean_action_effect": 0.6924175712648335
+            },
+            "content_schmilka_firefighting_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 0.6145789214556127
+            },
+            "content_vizanice_outdoor_01": {
+              "estimable_network_families": 0,
+              "mean_action_effect": null
+            }
+          },
+          "by_network_family": {
+            "nordic_op1_5g_nsa_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 2,
+              "mean_action_effect": 1.1061857529539232
+            },
+            "nordic_op1_lte_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 0,
+              "mean_action_effect": null
+            },
+            "nordic_op3_lte_b3": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 2,
+              "mean_action_effect": 0.4101441386050748
+            },
+            "rome_op2_lte": {
+              "acquisition_campaign": "rome_active_speedtest_measurement",
+              "estimable_content_sources": 3,
+              "mean_action_effect": 0.7641880817606376
+            }
+          },
+          "cell_action_effect_1.05_minus_0.65": {
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": 1.6404191438562847,
+            "content_cicada_emergence_01__nordic_op3_lte_b3": 0.1255234741173048,
+            "content_cicada_emergence_01__rome_op2_lte": 1.0231270747946475,
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte": 0.6924175712648335,
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": 0.5719523620515616,
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3": 0.6947648030928448,
+            "content_schmilka_firefighting_01__rome_op2_lte": 0.5770195992224316
+          },
+          "equal_weight_mean_action_effect": 0.7607462897714156,
+          "estimable_cell_count": 7,
+          "estimable_cells": [
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+            "content_cicada_emergence_01__nordic_op3_lte_b3",
+            "content_cicada_emergence_01__rome_op2_lte",
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte",
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+            "content_schmilka_firefighting_01__rome_op2_lte"
+          ]
+        }
+      },
+      "on_time_fraction": {
+        "bwe_ge_500k": {
+          "by_acquisition_campaign": {
+            "nordicdat_cross_border_measurement": {
+              "estimable_crossed_cells": 5,
+              "mean_action_effect": -0.16500735533166386,
+              "network_families": [
+                "nordic_op1_5g_nsa_b20",
+                "nordic_op1_lte_b20",
+                "nordic_op3_lte_b3"
+              ]
+            },
+            "rome_active_speedtest_measurement": {
+              "estimable_crossed_cells": 4,
+              "mean_action_effect": 0.05004197461124452,
+              "network_families": [
+                "rome_op2_lte"
+              ]
+            }
+          },
+          "by_content_source": {
+            "content_cicada_emergence_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 0.1996391048063532
+            },
+            "content_d3_tree_layout_tutorial_01": {
+              "estimable_network_families": 1,
+              "mean_action_effect": 0.0007610350076103778
+            },
+            "content_schmilka_firefighting_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": -0.4244230531901765
+            },
+            "content_vizanice_outdoor_01": {
+              "estimable_network_families": 2,
+              "mean_action_effect": 0.02436096596525915
+            }
+          },
+          "by_network_family": {
+            "nordic_op1_5g_nsa_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 3,
+              "mean_action_effect": -0.1941016907837575
+            },
+            "nordic_op1_lte_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 0,
+              "mean_action_effect": null
+            },
+            "nordic_op3_lte_b3": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 2,
+              "mean_action_effect": -0.12136585215352341
+            },
+            "rome_op2_lte": {
+              "acquisition_campaign": "rome_active_speedtest_measurement",
+              "estimable_content_sources": 4,
+              "mean_action_effect": 0.05004197461124452
+            }
+          },
+          "cell_action_effect_1.05_minus_0.65": {
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": -0.3317904481380181,
+            "content_cicada_emergence_01__nordic_op3_lte_b3": 0.1361872146118721,
+            "content_cicada_emergence_01__rome_op2_lte": 0.7945205479452055,
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte": 0.0007610350076103778,
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": -0.07243243243243247,
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3": -0.37891891891891893,
+            "content_schmilka_firefighting_01__rome_op2_lte": -0.821917808219178,
+            "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20": -0.1780821917808219,
+            "content_vizanice_outdoor_01__rome_op2_lte": 0.2268041237113402
+          },
+          "equal_weight_mean_action_effect": -0.06942987535703792,
+          "estimable_cell_count": 9,
+          "estimable_cells": [
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+            "content_cicada_emergence_01__nordic_op3_lte_b3",
+            "content_cicada_emergence_01__rome_op2_lte",
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte",
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+            "content_schmilka_firefighting_01__rome_op2_lte",
+            "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20",
+            "content_vizanice_outdoor_01__rome_op2_lte"
+          ]
+        },
+        "bwe_lt_500k": {
+          "by_acquisition_campaign": {
+            "nordicdat_cross_border_measurement": {
+              "estimable_crossed_cells": 5,
+              "mean_action_effect": 0.0192103012198985,
+              "network_families": [
+                "nordic_op1_5g_nsa_b20",
+                "nordic_op1_lte_b20",
+                "nordic_op3_lte_b3"
+              ]
+            },
+            "rome_active_speedtest_measurement": {
+              "estimable_crossed_cells": 4,
+              "mean_action_effect": 0.1389625770968872,
+              "network_families": [
+                "rome_op2_lte"
+              ]
+            }
+          },
+          "by_content_source": {
+            "content_cicada_emergence_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 0.19461317914308224
+            },
+            "content_d3_tree_layout_tutorial_01": {
+              "estimable_network_families": 1,
+              "mean_action_effect": -0.0413527208636264
+            },
+            "content_schmilka_firefighting_01": {
+              "estimable_network_families": 3,
+              "mean_action_effect": 0.0556471033056997
+            },
+            "content_vizanice_outdoor_01": {
+              "estimable_network_families": 2,
+              "mean_action_effect": -0.028763155997839088
+            }
+          },
+          "by_network_family": {
+            "nordic_op1_5g_nsa_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 3,
+              "mean_action_effect": -0.03404001810792894
+            },
+            "nordic_op1_lte_b20": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 0,
+              "mean_action_effect": null
+            },
+            "nordic_op3_lte_b3": {
+              "acquisition_campaign": "nordicdat_cross_border_measurement",
+              "estimable_content_sources": 2,
+              "mean_action_effect": 0.09908578021163966
+            },
+            "rome_op2_lte": {
+              "acquisition_campaign": "rome_active_speedtest_measurement",
+              "estimable_content_sources": 4,
+              "mean_action_effect": 0.1389625770968872
+            }
+          },
+          "cell_action_effect_1.05_minus_0.65": {
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": 0.06296590007930214,
+            "content_cicada_emergence_01__nordic_op3_lte_b3": 0.189970202957216,
+            "content_cicada_emergence_01__rome_op2_lte": 0.33090343439272857,
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte": -0.0413527208636264,
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": -0.10495867768595046,
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3": 0.00820135746606332,
+            "content_schmilka_firefighting_01__rome_op2_lte": 0.26369863013698625,
+            "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20": -0.060127276717138495,
+            "content_vizanice_outdoor_01__rome_op2_lte": 0.0026009647214603193
+          },
+          "equal_weight_mean_action_effect": 0.07243353494300458,
+          "estimable_cell_count": 9,
+          "estimable_cells": [
+            "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+            "content_cicada_emergence_01__nordic_op3_lte_b3",
+            "content_cicada_emergence_01__rome_op2_lte",
+            "content_d3_tree_layout_tutorial_01__rome_op2_lte",
+            "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+            "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+            "content_schmilka_firefighting_01__rome_op2_lte",
+            "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20",
+            "content_vizanice_outdoor_01__rome_op2_lte"
+          ]
+        }
+      }
+    }
+  },
+  "action_interactions": {
+    "mean_guaranteed_dropped_wire_bytes_per_window": {
+      "cell_interaction_high_bwe_minus_low_bwe": {
+        "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": 0.0,
+        "content_cicada_emergence_01__nordic_op1_lte_b20": null,
+        "content_cicada_emergence_01__nordic_op3_lte_b3": 0.0,
+        "content_cicada_emergence_01__rome_op2_lte": 0.0,
+        "content_d3_tree_layout_tutorial_01__nordic_op1_5g_nsa_b20": null,
+        "content_d3_tree_layout_tutorial_01__nordic_op1_lte_b20": null,
+        "content_d3_tree_layout_tutorial_01__nordic_op3_lte_b3": null,
+        "content_d3_tree_layout_tutorial_01__rome_op2_lte": 0.0,
+        "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": 0.0,
+        "content_schmilka_firefighting_01__nordic_op1_lte_b20": null,
+        "content_schmilka_firefighting_01__nordic_op3_lte_b3": 0.0,
+        "content_schmilka_firefighting_01__rome_op2_lte": 465.0,
+        "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20": 0.0,
+        "content_vizanice_outdoor_01__nordic_op1_lte_b20": null,
+        "content_vizanice_outdoor_01__nordic_op3_lte_b3": null,
+        "content_vizanice_outdoor_01__rome_op2_lte": -142.25
+      },
+      "complete_cell_count": 9,
+      "crossed_mean_over_estimable_complete_cells": 35.861111111111114,
+      "estimable_complete_cell_count": 9,
+      "unestimable_complete_cells": []
+    },
+    "mean_guaranteed_wire_bytes_per_window": {
+      "cell_interaction_high_bwe_minus_low_bwe": {
+        "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": -19407.75,
+        "content_cicada_emergence_01__nordic_op1_lte_b20": null,
+        "content_cicada_emergence_01__nordic_op3_lte_b3": -13855.133333333335,
+        "content_cicada_emergence_01__rome_op2_lte": 10348.85714285715,
+        "content_d3_tree_layout_tutorial_01__nordic_op1_5g_nsa_b20": null,
+        "content_d3_tree_layout_tutorial_01__nordic_op1_lte_b20": null,
+        "content_d3_tree_layout_tutorial_01__nordic_op3_lte_b3": null,
+        "content_d3_tree_layout_tutorial_01__rome_op2_lte": -2069.2164502164487,
+        "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": -4132.355555555558,
+        "content_schmilka_firefighting_01__nordic_op1_lte_b20": null,
+        "content_schmilka_firefighting_01__nordic_op3_lte_b3": -1600.5222222222183,
+        "content_schmilka_firefighting_01__rome_op2_lte": -2656.166666666668,
+        "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20": -4544.888888888887,
+        "content_vizanice_outdoor_01__nordic_op1_lte_b20": null,
+        "content_vizanice_outdoor_01__nordic_op3_lte_b3": null,
+        "content_vizanice_outdoor_01__rome_op2_lte": 35076.38888888889
+      },
+      "complete_cell_count": 9,
+      "crossed_mean_over_estimable_complete_cells": -315.64300945967483,
+      "estimable_complete_cell_count": 9,
+      "unestimable_complete_cells": []
+    },
+    "mean_ontime_psnr_db": {
+      "cell_interaction_high_bwe_minus_low_bwe": {
+        "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": -1.2493690258975008,
+        "content_cicada_emergence_01__nordic_op1_lte_b20": null,
+        "content_cicada_emergence_01__nordic_op3_lte_b3": 0.16151621006541106,
+        "content_cicada_emergence_01__rome_op2_lte": -0.867820573138296,
+        "content_d3_tree_layout_tutorial_01__nordic_op1_5g_nsa_b20": null,
+        "content_d3_tree_layout_tutorial_01__nordic_op1_lte_b20": null,
+        "content_d3_tree_layout_tutorial_01__nordic_op3_lte_b3": null,
+        "content_d3_tree_layout_tutorial_01__rome_op2_lte": -1.456514061708397,
+        "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": -0.4281444788297293,
+        "content_schmilka_firefighting_01__nordic_op1_lte_b20": null,
+        "content_schmilka_firefighting_01__nordic_op3_lte_b3": -0.15841943121653657,
+        "content_schmilka_firefighting_01__rome_op2_lte": -0.2631202311419969,
+        "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20": null,
+        "content_vizanice_outdoor_01__nordic_op1_lte_b20": null,
+        "content_vizanice_outdoor_01__nordic_op3_lte_b3": null,
+        "content_vizanice_outdoor_01__rome_op2_lte": null
+      },
+      "complete_cell_count": 9,
+      "crossed_mean_over_estimable_complete_cells": -0.6088387988381493,
+      "estimable_complete_cell_count": 7,
+      "unestimable_complete_cells": [
+        "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20",
+        "content_vizanice_outdoor_01__rome_op2_lte"
+      ]
+    },
+    "on_time_fraction": {
+      "cell_interaction_high_bwe_minus_low_bwe": {
+        "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": -0.39475634821732025,
+        "content_cicada_emergence_01__nordic_op1_lte_b20": null,
+        "content_cicada_emergence_01__nordic_op3_lte_b3": -0.053782988345343896,
+        "content_cicada_emergence_01__rome_op2_lte": 0.463617113552477,
+        "content_d3_tree_layout_tutorial_01__nordic_op1_5g_nsa_b20": null,
+        "content_d3_tree_layout_tutorial_01__nordic_op1_lte_b20": null,
+        "content_d3_tree_layout_tutorial_01__nordic_op3_lte_b3": null,
+        "content_d3_tree_layout_tutorial_01__rome_op2_lte": 0.04211375587123678,
+        "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": 0.032526245253517994,
+        "content_schmilka_firefighting_01__nordic_op1_lte_b20": null,
+        "content_schmilka_firefighting_01__nordic_op3_lte_b3": -0.38712027638498225,
+        "content_schmilka_firefighting_01__rome_op2_lte": -1.0856164383561642,
+        "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20": -0.11795491506368341,
+        "content_vizanice_outdoor_01__nordic_op1_lte_b20": null,
+        "content_vizanice_outdoor_01__nordic_op3_lte_b3": null,
+        "content_vizanice_outdoor_01__rome_op2_lte": 0.22420315898987989
+      },
+      "complete_cell_count": 9,
+      "crossed_mean_over_estimable_complete_cells": -0.1418634103000425,
+      "estimable_complete_cell_count": 9,
+      "unestimable_complete_cells": []
+    }
+  },
+  "actual_run_clock_transport_gate_sha256": "b85af79677da69d874e22d47faef92a9be35a3136a82468eb039c84754134381",
+  "analysis_recovery_note": "The frozen V11D summarizer failed on an undefined metric while averaging complete-by-hold-count cells. This report preserves the frozen endpoints and thresholds, reports unestimable metric cells explicitly, and applies the 13-cell minimum to estimable primary PSNR interactions. No values are imputed.",
+  "analysis_recovery_tool": "tools/analyze_native_clock_action_v11d.py",
+  "analysis_recovery_tool_sha256": "7e70c5d88971415ef30c67cf17a1732cfe1c528e304f478b2cc5f1650400ebc3",
+  "analysis_unit": "crossed content capture group by measured network family; repetitions and trace windows remain nested",
+  "capture_index_sha256": "00b17973205196231bdeaf19fdd2e43519112d7f08cbf0c4779e5c797fdac1b5",
+  "clock_calibration_reference": {
+    "alpha_feasible": [
+      0.9999546003609853,
+      1.0000401842261328
+    ],
+    "coverage": 1.0,
+    "held_out_covered": 60,
+    "integrity_manifest_sha256": "e103234d399a6d1b85d461ec8b908ef8bdec141204a76949fc276a057a6bb7ab",
+    "marker_count": 120,
+    "max_held_out_width_ms": 2.642349057176034,
+    "protocol_sha256": "9c09468dda2d6126dcb551fe14762c7d64de722c2b03d04430e657ad8b0a3f1f",
+    "qualified": true,
+    "report_sha256": "27946a8b2a312ab30ddbf6dbfefadc419f1e010cd32fe66f7f491fec09711dbf",
+    "root": "/home/agent/.cache/networkrlcd/native-clock-action-probe-v1-final3"
+  },
+  "clock_transport_gate_sha256": "b85af79677da69d874e22d47faef92a9be35a3136a82468eb039c84754134381",
+  "clock_validation": {
+    "all_sessions_passed": true,
+    "maximum_held_out_width_ms": 3.4736605607558886,
+    "per_hold_relay_joins_enabled_only_after_clock_gate": true
+  },
+  "content_capture_groups": [
+    "content_cicada_emergence_01",
+    "content_vizanice_outdoor_01",
+    "content_schmilka_firefighting_01",
+    "content_d3_tree_layout_tutorial_01"
+  ],
+  "controller_fitted_or_promoted": false,
+  "coverage": {
+    "complete_cell_count": 9,
+    "complete_content_network_cells": [
+      "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+      "content_cicada_emergence_01__nordic_op3_lte_b3",
+      "content_cicada_emergence_01__rome_op2_lte",
+      "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20",
+      "content_vizanice_outdoor_01__rome_op2_lte",
+      "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+      "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+      "content_schmilka_firefighting_01__rome_op2_lte",
+      "content_d3_tree_layout_tutorial_01__rome_op2_lte"
+    ],
+    "minimum_complete_cell_count": 13,
+    "minimum_hold_windows_per_state_action_cell": 2,
+    "per_cell_hold_counts": {
+      "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": {
+        "bwe_ge_500k": {
+          "0.65": 4,
+          "1.05": 4
+        },
+        "bwe_lt_500k": {
+          "0.65": 8,
+          "1.05": 8
+        }
+      },
+      "content_cicada_emergence_01__nordic_op1_lte_b20": {
+        "bwe_ge_500k": {
+          "0.65": 1,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 12,
+          "1.05": 8
+        }
+      },
+      "content_cicada_emergence_01__nordic_op3_lte_b3": {
+        "bwe_ge_500k": {
+          "0.65": 5,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 6,
+          "1.05": 10
+        }
+      },
+      "content_cicada_emergence_01__rome_op2_lte": {
+        "bwe_ge_500k": {
+          "0.65": 6,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 7,
+          "1.05": 8
+        }
+      },
+      "content_d3_tree_layout_tutorial_01__nordic_op1_5g_nsa_b20": {
+        "bwe_ge_500k": {
+          "0.65": 0,
+          "1.05": 1
+        },
+        "bwe_lt_500k": {
+          "0.65": 9,
+          "1.05": 14
+        }
+      },
+      "content_d3_tree_layout_tutorial_01__nordic_op1_lte_b20": {
+        "bwe_ge_500k": {
+          "0.65": 1,
+          "1.05": 0
+        },
+        "bwe_lt_500k": {
+          "0.65": 11,
+          "1.05": 12
+        }
+      },
+      "content_d3_tree_layout_tutorial_01__nordic_op3_lte_b3": {
+        "bwe_ge_500k": {
+          "0.65": 0,
+          "1.05": 0
+        },
+        "bwe_lt_500k": {
+          "0.65": 9,
+          "1.05": 15
+        }
+      },
+      "content_d3_tree_layout_tutorial_01__rome_op2_lte": {
+        "bwe_ge_500k": {
+          "0.65": 3,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 7,
+          "1.05": 11
+        }
+      },
+      "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": {
+        "bwe_ge_500k": {
+          "0.65": 3,
+          "1.05": 2
+        },
+        "bwe_lt_500k": {
+          "0.65": 9,
+          "1.05": 10
+        }
+      },
+      "content_schmilka_firefighting_01__nordic_op1_lte_b20": {
+        "bwe_ge_500k": {
+          "0.65": 1,
+          "1.05": 1
+        },
+        "bwe_lt_500k": {
+          "0.65": 12,
+          "1.05": 10
+        }
+      },
+      "content_schmilka_firefighting_01__nordic_op3_lte_b3": {
+        "bwe_ge_500k": {
+          "0.65": 2,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 10,
+          "1.05": 9
+        }
+      },
+      "content_schmilka_firefighting_01__rome_op2_lte": {
+        "bwe_ge_500k": {
+          "0.65": 3,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 12,
+          "1.05": 6
+        }
+      },
+      "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20": {
+        "bwe_ge_500k": {
+          "0.65": 6,
+          "1.05": 3
+        },
+        "bwe_lt_500k": {
+          "0.65": 6,
+          "1.05": 9
+        }
+      },
+      "content_vizanice_outdoor_01__nordic_op1_lte_b20": {
+        "bwe_ge_500k": {
+          "0.65": 1,
+          "1.05": 4
+        },
+        "bwe_lt_500k": {
+          "0.65": 10,
+          "1.05": 9
+        }
+      },
+      "content_vizanice_outdoor_01__nordic_op3_lte_b3": {
+        "bwe_ge_500k": {
+          "0.65": 3,
+          "1.05": 1
+        },
+        "bwe_lt_500k": {
+          "0.65": 8,
+          "1.05": 12
+        }
+      },
+      "content_vizanice_outdoor_01__rome_op2_lte": {
+        "bwe_ge_500k": {
+          "0.65": 3,
+          "1.05": 4
+        },
+        "bwe_lt_500k": {
+          "0.65": 9,
+          "1.05": 8
+        }
+      }
+    },
+    "primary_estimable": false,
+    "primary_estimable_cell_count": 7,
+    "primary_estimable_content_network_cells": [
+      "content_cicada_emergence_01__nordic_op1_5g_nsa_b20",
+      "content_cicada_emergence_01__nordic_op3_lte_b3",
+      "content_cicada_emergence_01__rome_op2_lte",
+      "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20",
+      "content_schmilka_firefighting_01__nordic_op3_lte_b3",
+      "content_schmilka_firefighting_01__rome_op2_lte",
+      "content_d3_tree_layout_tutorial_01__rome_op2_lte"
+    ],
+    "primary_unestimable_complete_cells": [
+      "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20",
+      "content_vizanice_outdoor_01__rome_op2_lte"
+    ]
+  },
+  "frozen_v9_v10_unchanged_and_not_pooled": true,
+  "independent_network_campaign_count": 2,
+  "independent_network_campaigns": [
+    "nordicdat_cross_border_measurement",
+    "rome_active_speedtest_measurement"
+  ],
+  "limits": [
+    "Two independently acquired network campaigns are represented; their four radio/operator families are nested and not four independent campaigns.",
+    "Trace throughput is replayed as symmetric local queue service rates, not as live public-network transport or packet replay.",
+    "Action contrasts are short-term proximal effects conditional on pre-action sender BWE, not closed-loop policy value.",
+    "Sampled RGB PSNR and a 150 ms pixel-readback deadline are proxies, not human QoE.",
+    "No outcome is pooled with V3-V10, prior archive runs, or synthetic-controller evidence."
+  ],
+  "network_families": [
+    "nordic_op1_5g_nsa_b20",
+    "nordic_op1_lte_b20",
+    "nordic_op3_lte_b3",
+    "rome_op2_lte"
+  ],
+  "outcome_data_read_after_all_64_gates": true,
+  "planned_sessions": 64,
+  "preflight_reference": {
+    "bidirectional_video_frames": [
+      39,
+      40
+    ],
+    "passed": true,
+    "path": "/home/agent/.cache/networkrlcd/native-turn-tcp-queue-preflight-v2.json",
+    "policy_sha256": "10ee54ed22fc23337096004f8248d6ea977f059149386e0f9e70c4b77d9db6b5",
+    "queue_forwarded_packets": [
+      113,
+      114
+    ],
+    "sha256": "a45a8e2a9fec3303a8c09afb8d44896b8b642692fbc43a37d9917e768c345061",
+    "source_sha256": "74306c30a373430acaa9a37b9486fe83632624454df002c3661513cf67b34874",
+    "turn_candidates": [
+      1,
+      1
+    ]
+  },
+  "primary_endpoint": "on-time PSNR 1.05-minus-0.65 action effect at BWE >=500kbps minus the same action effect at BWE <500kbps",
+  "primary_replication": {
+    "crossed_mean_interaction_db": -0.6088387988381493,
+    "direction_replicated_by_registered_rule": false,
+    "estimable_primary_cell_count": 7,
+    "inferential_claim": false,
+    "positive_acquisition_campaigns": 0,
+    "positive_content_sources": 0,
+    "positive_network_families": 1,
+    "reason": "four content capture groups and two measurement campaigns support source-stratified directional replication checks, not a population-level confidence claim",
+    "rule": "positive equal-weight crossed mean; positive means in both acquisition campaigns; positive interactions for at least three of four content capture groups and at least three of four measured network families. Report each source stratum; do not use the 16 crossed cells, repeated profiles, or four nested families as independent replicates."
+  },
+  "prior_frozen_studies": {
+    "turn_v10": {
+      "analysis_sha256": "9ca5df3fc70cb8f81ac5dd94b4e4057d78e91976b41bcb21ae73bbce19c1d162",
+      "capture_index_sha256": "ed73cb4c8792ec3e4f58cbbae781a3ef5819683357a35adbc154bc9854b61762",
+      "clock_transport_gate_sha256": "448fb02eb49250ae1d99341d77e4625324693fc43ff83570db2f93f0d5244024",
+      "pooled": false,
+      "protocol_sha256": "30f51e5240cd142533bc198c5b7e50d584327e022300d00ce7f06ef850b178fd",
+      "sessions": 48
+    },
+    "turn_v2": {
+      "attempted_sessions": 32,
+      "capture_index_sha256": "f54a6cd6a5d042bbeb14eb7b3e6e51c6f84fdeaa65e6d912be18e68aee830414",
+      "failure_class": "selected local peer-reflexive classification rejected after TURN-backed ICE connection",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "31b220e8904be3e900ebe6c21a5a0f4550e56db927fe223fee95a3a041f10beb"
+    },
+    "turn_v3": {
+      "attempted_sessions": 32,
+      "capture_index_sha256": "2fac8af41adcc378b63951f3e84b30919462abda5a28c779aa6ca120d96257d8",
+      "clock_failed_trials": [
+        "turntcp3-scene01-rep1-r065",
+        "turntcp3-scene00-rep1-r065",
+        "turntcp3-scene01-rep0-r065"
+      ],
+      "clock_valid_sessions": 29,
+      "diagnostic_sha256": "bce4517a5e6003516b01168eeb15c486e934acdd867185c2dcc26001e4b477e4",
+      "failed_sessions": 32,
+      "failure_class": "phase-snapshot guard read an unrecorded remote_candidate_type field after the registered session schedule",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "a599601b5182ca4e3de24ec3a93cd422f0afba11c7de613d7196433f2affd4d6"
+    },
+    "turn_v4": {
+      "capture_index_sha256": "78221a758a856f05de66a49cd07bad9d38f9a5e35ae33f6f54fb29c513f0798a",
+      "clock_qualified_sessions": 29,
+      "diagnostic_sha256": "390bfb7fc961e7df30708e2a3b8cac123a71ad5067c815935f3895b820cf8ad5",
+      "failure_class": "three sessions missed held-out clock coverage; eight sessions violated V4's registered zero-overflow queue rule",
+      "gate_sha256": "059933b7f0c1b37121b77adb2cf9358548c0cead861c569107a63a17e6e0abb0",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "1937b2a88ca08f1a7d25382a09aacab36c80c28bcac79404add1f5346b739a2c",
+      "sealed_sessions": 32,
+      "transport_qualified_sessions": 24
+    },
+    "turn_v5": {
+      "capture_index_sha256": "1b2f6c59d369131ef9625c5be6c5546370bdfc274d2f3d326f4e175591223143",
+      "clock_qualified_sessions": 30,
+      "diagnostic_sha256": "05eae9136a0b19617847c030289eaa156639d04d35088c73f88c48949842ade0",
+      "failed_trials": [
+        "turntcp5-scene00-rep0-r065",
+        "turntcp5-scene04-rep0-r105"
+      ],
+      "failure_class": "two sessions missed held-out coverage at the initial high-phase marker m0002",
+      "gate_sha256": "632494e98c4c2906e61ec36b0a09f64ba363e3d85381490f4160033bec21e6b8",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "394ae78949257e5ffb6f38a0802970c201e8b869bbb5a854dd505ea5bde9f7cb",
+      "sealed_sessions": 32,
+      "transport_qualified_sessions": 32
+    },
+    "turn_v6": {
+      "capture_index_sha256": "acafe0778cd9c0d67e1c7efa42c26036a6476ae60121d880105093230dbc46bb",
+      "clock_qualified_sessions": 11,
+      "diagnostic_sha256": "eb9917acc4d83c892789cdd17fcbb02e2947583f97f4798d404ce52d8f361269",
+      "failed_marker_counts": {
+        "m0003": 2,
+        "m0011": 21
+      },
+      "failure_class": "21 sessions missed final held-out marker m0011 and two also missed m0003",
+      "gate_sha256": "09ed6e6dd17b0aec769f358e791cb341d7e976d447d8d43b08acc609720715f9",
+      "outcome_telemetry_read": false,
+      "pooled": false,
+      "protocol_sha256": "d1edb0aca40e9e54ed2f5371671f950d6644df954151ca7e6ed71da79ef99648",
+      "sealed_sessions": 32,
+      "transport_qualified_sessions": 32
+    },
+    "turn_v7": {
+      "analysis_sha256": "3e78b850e351f8f34fea6afb244376931e4cffd7c50bdf9c8ec8b3743e5c725c",
+      "capture_index_sha256": "8bbcc5de8b6d7e2f79dffb2abb07d85418a54dc8867deb2e865658cc9683f037",
+      "clock_and_transport_passed": true,
+      "clock_transport_gate_sha256": "48af59918b64103ec050f9ada709b94f8f813ca671d617ea64dbfa856e38aa9b",
+      "pooled": false,
+      "protocol_sha256": "2eeaf29d04fdfdd63de57132bbec8308957a330180f3f9beeb6b123a1e75b85e",
+      "sessions": 32
+    },
+    "turn_v8": {
+      "analysis_sha256": "d324e806c5ebd38ce6497994e73710c3c0cfab3d0ea86e0de16bf1a728b8afd4",
+      "capture_index_sha256": "21419782f45dc9c8ac096071ad299b86b04cd8f063199acbea6deee3503afc4c",
+      "clock_transport_gate_sha256": "98c47e187b485a0b65c3a3ad6c05ab10e6bf4f37adfc5ecad7b9e83aa30ea9c5",
+      "pooled": false,
+      "protocol_sha256": "102aba4d5d22a3ef3b33d17216ee8fe89b8a5addf2d96f2fcb35c5dedd5139c0",
+      "sessions": 48
+    },
+    "turn_v9": {
+      "analysis_sha256": "a20a40e4417cbd2992af71b695d0972b601dc6178394e7dbe41d544c67a12617",
+      "capture_index_sha256": "6e794eb49b55cbc2b927330eb581c54f4be5f08500242d31e878906b171abe6f",
+      "clock_transport_gate_sha256": "8246730530a9667892b1a22319893e9c06aaf6b54d35d39379bdb3e158b0c5a3",
+      "pooled": false,
+      "protocol_sha256": "fff551a003c703e1dc38886e9f70a7df700c9d0904a2efc88ac7062492c93484",
+      "sessions": 48
+    }
+  },
+  "protocol_sha256": "db3d5c8bd440b04c4e28c2d6c196ce946b87dd3ba9d060ef0a9a07bf46db1e50",
+  "randomization_replay": {
+    "all_draws_and_cap_readbacks_match": true,
+    "epoch_starts_replayed": 384,
+    "mismatches": 0
+  },
+  "runtime": {
+    "chromium_binary_path": "/usr/bin/chromium",
+    "chromium_sha256": "2c8d32d29dc6781c35ae196ea83299d507ac88fc339301abe74672feda299779",
+    "chromium_version": "Chrome/154.0.8037.57",
+    "coturn_binary_path": "/home/agent/.cache/networkrlcd/turn-runtime/extracted/usr/bin/turnserver",
+    "coturn_binary_sha256": "6de6c80134271abd2c51cbadac1e2bb973ac89b5491b0a2ae480148d66a37162",
+    "coturn_library_dir": "/home/agent/.cache/networkrlcd/turn-runtime/extracted/usr/lib/x86_64-linux-gnu",
+    "coturn_library_sha256": {
+      "libevent_extra-2.1.so.7": "0da7f591283f063939323d9dc3370dc9e53559c6b2c43c28c18159bb8f656daf",
+      "libevent_openssl-2.1.so.7": "2ec9f0a63b5af4df80b7155611794246ebe9932ded259bbba873bfc9da98d5f9",
+      "libhiredis.so.1.1.0": "adfb8e6f9d2d430d5d577f85626490769fb69ef41a6967fba611b5a16b09ab15"
+    },
+    "coturn_package_path": "/home/agent/.cache/networkrlcd/turn-runtime/coturn_4.6.1-2_amd64.deb",
+    "coturn_package_sha256": "cb55194d0118d26035aa39aa7306fd810a47069643266724357e8da2a22612e0",
+    "coturn_version": "4.6.1",
+    "managed_policy_path": "/etc/chromium/policies/managed/misc.json",
+    "managed_policy_sha256": "10ee54ed22fc23337096004f8248d6ea977f059149386e0f9e70c4b77d9db6b5",
+    "managed_policy_value": "disable_non_proxied_udp",
+    "network_policy": "TURN control TCP and relay/queue UDP are loopback-only"
+  },
+  "sealed_sessions": 64,
+  "source_dependence": "Three NordicDat operator/RAN/band strata share the NordicDat drive-test campaign; the Rome LTE family comes from a separate active Speedtest campaign. The four family strata count as only two independent measurement campaigns. Windows and Rome subcampaigns remain nested.",
+  "source_stratified_interactions": {
+    "mean_guaranteed_dropped_wire_bytes_per_window": {
+      "by_acquisition_campaign": {
+        "nordicdat_cross_border_measurement": {
+          "estimable_crossed_cells": 5,
+          "mean_interaction": 0.0,
+          "network_families": [
+            "nordic_op1_5g_nsa_b20",
+            "nordic_op1_lte_b20",
+            "nordic_op3_lte_b3"
+          ]
+        },
+        "rome_active_speedtest_measurement": {
+          "estimable_crossed_cells": 4,
+          "mean_interaction": 80.6875,
+          "network_families": [
+            "rome_op2_lte"
+          ]
+        }
+      },
+      "by_content_source": {
+        "content_cicada_emergence_01": {
+          "estimable_network_families": 3,
+          "mean_interaction": 0.0
+        },
+        "content_d3_tree_layout_tutorial_01": {
+          "estimable_network_families": 1,
+          "mean_interaction": 0.0
+        },
+        "content_schmilka_firefighting_01": {
+          "estimable_network_families": 3,
+          "mean_interaction": 155.0
+        },
+        "content_vizanice_outdoor_01": {
+          "estimable_network_families": 2,
+          "mean_interaction": -71.125
+        }
+      },
+      "by_network_family": {
+        "nordic_op1_5g_nsa_b20": {
+          "acquisition_campaign": "nordicdat_cross_border_measurement",
+          "estimable_content_sources": 3,
+          "mean_interaction": 0.0
+        },
+        "nordic_op1_lte_b20": {
+          "acquisition_campaign": "nordicdat_cross_border_measurement",
+          "estimable_content_sources": 0,
+          "mean_interaction": null
+        },
+        "nordic_op3_lte_b3": {
+          "acquisition_campaign": "nordicdat_cross_border_measurement",
+          "estimable_content_sources": 2,
+          "mean_interaction": 0.0
+        },
+        "rome_op2_lte": {
+          "acquisition_campaign": "rome_active_speedtest_measurement",
+          "estimable_content_sources": 4,
+          "mean_interaction": 80.6875
+        }
+      }
+    },
+    "mean_guaranteed_wire_bytes_per_window": {
+      "by_acquisition_campaign": {
+        "nordicdat_cross_border_measurement": {
+          "estimable_crossed_cells": 5,
+          "mean_interaction": -8708.13,
+          "network_families": [
+            "nordic_op1_5g_nsa_b20",
+            "nordic_op1_lte_b20",
+            "nordic_op3_lte_b3"
+          ]
+        },
+        "rome_active_speedtest_measurement": {
+          "estimable_crossed_cells": 4,
+          "mean_interaction": 10174.965728715732,
+          "network_families": [
+            "rome_op2_lte"
+          ]
+        }
+      },
+      "by_content_source": {
+        "content_cicada_emergence_01": {
+          "estimable_network_families": 3,
+          "mean_interaction": -7638.008730158728
+        },
+        "content_d3_tree_layout_tutorial_01": {
+          "estimable_network_families": 1,
+          "mean_interaction": -2069.2164502164487
+        },
+        "content_schmilka_firefighting_01": {
+          "estimable_network_families": 3,
+          "mean_interaction": -2796.348148148148
+        },
+        "content_vizanice_outdoor_01": {
+          "estimable_network_families": 2,
+          "mean_interaction": 15265.750000000002
+        }
+      },
+      "by_network_family": {
+        "nordic_op1_5g_nsa_b20": {
+          "acquisition_campaign": "nordicdat_cross_border_measurement",
+          "estimable_content_sources": 3,
+          "mean_interaction": -9361.664814814814
+        },
+        "nordic_op1_lte_b20": {
+          "acquisition_campaign": "nordicdat_cross_border_measurement",
+          "estimable_content_sources": 0,
+          "mean_interaction": null
+        },
+        "nordic_op3_lte_b3": {
+          "acquisition_campaign": "nordicdat_cross_border_measurement",
+          "estimable_content_sources": 2,
+          "mean_interaction": -7727.827777777777
+        },
+        "rome_op2_lte": {
+          "acquisition_campaign": "rome_active_speedtest_measurement",
+          "estimable_content_sources": 4,
+          "mean_interaction": 10174.965728715732
+        }
+      }
+    },
+    "mean_ontime_psnr_db": {
+      "by_acquisition_campaign": {
+        "nordicdat_cross_border_measurement": {
+          "estimable_crossed_cells": 4,
+          "mean_interaction": -0.4186041814695889,
+          "network_families": [
+            "nordic_op1_5g_nsa_b20",
+            "nordic_op1_lte_b20",
+            "nordic_op3_lte_b3"
+          ]
+        },
+        "rome_active_speedtest_measurement": {
+          "estimable_crossed_cells": 3,
+          "mean_interaction": -0.8624849553295633,
+          "network_families": [
+            "rome_op2_lte"
+          ]
+        }
+      },
+      "by_content_source": {
+        "content_cicada_emergence_01": {
+          "estimable_network_families": 3,
+          "mean_interaction": -0.6518911296567952
+        },
+        "content_d3_tree_layout_tutorial_01": {
+          "estimable_network_families": 1,
+          "mean_interaction": -1.456514061708397
+        },
+        "content_schmilka_firefighting_01": {
+          "estimable_network_families": 3,
+          "mean_interaction": -0.28322804706275423
+        },
+        "content_vizanice_outdoor_01": {
+          "estimable_network_families": 0,
+          "mean_interaction": null
+        }
+      },
+      "by_network_family": {
+        "nordic_op1_5g_nsa_b20": {
+          "acquisition_campaign": "nordicdat_cross_border_measurement",
+          "estimable_content_sources": 2,
+          "mean_interaction": -0.838756752363615
+        },
+        "nordic_op1_lte_b20": {
+          "acquisition_campaign": "nordicdat_cross_border_measurement",
+          "estimable_content_sources": 0,
+          "mean_interaction": null
+        },
+        "nordic_op3_lte_b3": {
+          "acquisition_campaign": "nordicdat_cross_border_measurement",
+          "estimable_content_sources": 2,
+          "mean_interaction": 0.0015483894244372465
+        },
+        "rome_op2_lte": {
+          "acquisition_campaign": "rome_active_speedtest_measurement",
+          "estimable_content_sources": 3,
+          "mean_interaction": -0.8624849553295633
+        }
+      }
+    },
+    "on_time_fraction": {
+      "by_acquisition_campaign": {
+        "nordicdat_cross_border_measurement": {
+          "estimable_crossed_cells": 5,
+          "mean_interaction": -0.18421765655156236,
+          "network_families": [
+            "nordic_op1_5g_nsa_b20",
+            "nordic_op1_lte_b20",
+            "nordic_op3_lte_b3"
+          ]
+        },
+        "rome_active_speedtest_measurement": {
+          "estimable_crossed_cells": 4,
+          "mean_interaction": -0.08892060248564262,
+          "network_families": [
+            "rome_op2_lte"
+          ]
+        }
+      },
+      "by_content_source": {
+        "content_cicada_emergence_01": {
+          "estimable_network_families": 3,
+          "mean_interaction": 0.005025925663270943
+        },
+        "content_d3_tree_layout_tutorial_01": {
+          "estimable_network_families": 1,
+          "mean_interaction": 0.04211375587123678
+        },
+        "content_schmilka_firefighting_01": {
+          "estimable_network_families": 3,
+          "mean_interaction": -0.48007015649587614
+        },
+        "content_vizanice_outdoor_01": {
+          "estimable_network_families": 2,
+          "mean_interaction": 0.053124121963098236
+        }
+      },
+      "by_network_family": {
+        "nordic_op1_5g_nsa_b20": {
+          "acquisition_campaign": "nordicdat_cross_border_measurement",
+          "estimable_content_sources": 3,
+          "mean_interaction": -0.16006167267582855
+        },
+        "nordic_op1_lte_b20": {
+          "acquisition_campaign": "nordicdat_cross_border_measurement",
+          "estimable_content_sources": 0,
+          "mean_interaction": null
+        },
+        "nordic_op3_lte_b3": {
+          "acquisition_campaign": "nordicdat_cross_border_measurement",
+          "estimable_content_sources": 2,
+          "mean_interaction": -0.22045163236516307
+        },
+        "rome_op2_lte": {
+          "acquisition_campaign": "rome_active_speedtest_measurement",
+          "estimable_content_sources": 4,
+          "mean_interaction": -0.08892060248564262
+        }
+      }
+    }
+  },
+  "state_action_cell_outcomes": {
+    "content_cicada_emergence_01__nordic_op1_5g_nsa_b20": {
+      "complete": true,
+      "content_id": "content_cicada_emergence_01",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 4,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 37866.75,
+            "mean_ontime_psnr_db": 26.86260822480468,
+            "on_time_fraction": 0.8163265306122449,
+            "on_time_frames": 80,
+            "psnr_frame_count": 80,
+            "source_frames": 98
+          },
+          "1.05": {
+            "hold_windows": 4,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 33101.25,
+            "mean_ontime_psnr_db": 27.253658342763465,
+            "on_time_fraction": 0.4845360824742268,
+            "on_time_frames": 47,
+            "psnr_frame_count": 47,
+            "source_frames": 97
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 8,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 18575.625,
+            "mean_ontime_psnr_db": 26.03455207877141,
+            "on_time_fraction": 0.7216494845360825,
+            "on_time_frames": 140,
+            "psnr_frame_count": 140,
+            "source_frames": 194
+          },
+          "1.05": {
+            "hold_windows": 8,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 33217.875,
+            "mean_ontime_psnr_db": 27.674971222627693,
+            "on_time_fraction": 0.7846153846153846,
+            "on_time_frames": 153,
+            "psnr_frame_count": 153,
+            "source_frames": 195
+          }
+        }
+      }
+    },
+    "content_cicada_emergence_01__nordic_op1_lte_b20": {
+      "complete": false,
+      "content_id": "content_cicada_emergence_01",
+      "network_family": "nordic_op1_lte_b20",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 1,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 10857.0,
+            "mean_ontime_psnr_db": null,
+            "on_time_fraction": 0.0,
+            "on_time_frames": 0,
+            "psnr_frame_count": 0,
+            "source_frames": 24
+          },
+          "1.05": {
+            "hold_windows": 3,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 33571.666666666664,
+            "mean_ontime_psnr_db": 27.964330983663285,
+            "on_time_fraction": 0.6486486486486487,
+            "on_time_frames": 48,
+            "psnr_frame_count": 48,
+            "source_frames": 74
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 12,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 18801.25,
+            "mean_ontime_psnr_db": 26.271314790617247,
+            "on_time_fraction": 0.6404109589041096,
+            "on_time_frames": 187,
+            "psnr_frame_count": 187,
+            "source_frames": 292
+          },
+          "1.05": {
+            "hold_windows": 8,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 20625.375,
+            "mean_ontime_psnr_db": 27.29398428550381,
+            "on_time_fraction": 0.28350515463917525,
+            "on_time_frames": 55,
+            "psnr_frame_count": 55,
+            "source_frames": 194
+          }
+        }
+      }
+    },
+    "content_cicada_emergence_01__nordic_op3_lte_b3": {
+      "complete": true,
+      "content_id": "content_cicada_emergence_01",
+      "network_family": "nordic_op3_lte_b3",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 5,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 29494.0,
+            "mean_ontime_psnr_db": 27.026575143797047,
+            "on_time_fraction": 0.6583333333333333,
+            "on_time_frames": 79,
+            "psnr_frame_count": 79,
+            "source_frames": 120
+          },
+          "1.05": {
+            "hold_windows": 3,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 30184.666666666668,
+            "mean_ontime_psnr_db": 27.313614827979762,
+            "on_time_fraction": 0.7945205479452054,
+            "on_time_frames": 58,
+            "psnr_frame_count": 58,
+            "source_frames": 73
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 6,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 24346.0,
+            "mean_ontime_psnr_db": 27.4882821076739,
+            "on_time_fraction": 0.7687074829931972,
+            "on_time_frames": 113,
+            "psnr_frame_count": 113,
+            "source_frames": 147
+          },
+          "1.05": {
+            "hold_windows": 10,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 38891.8,
+            "mean_ontime_psnr_db": 27.613805581791205,
+            "on_time_fraction": 0.9586776859504132,
+            "on_time_frames": 232,
+            "psnr_frame_count": 232,
+            "source_frames": 242
+          }
+        }
+      }
+    },
+    "content_cicada_emergence_01__rome_op2_lte": {
+      "complete": true,
+      "content_id": "content_cicada_emergence_01",
+      "network_family": "rome_op2_lte",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 6,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 40805.666666666664,
+            "mean_ontime_psnr_db": 28.1147051278608,
+            "on_time_fraction": 0.2054794520547945,
+            "on_time_frames": 30,
+            "psnr_frame_count": 30,
+            "source_frames": 146
+          },
+          "1.05": {
+            "hold_windows": 3,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 67248.66666666667,
+            "mean_ontime_psnr_db": 28.27001162951715,
+            "on_time_fraction": 1.0,
+            "on_time_frames": 72,
+            "psnr_frame_count": 72,
+            "source_frames": 72
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 7,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 12388.857142857143,
+            "mean_ontime_psnr_db": 26.74659208371555,
+            "on_time_fraction": 0.27218934911242604,
+            "on_time_frames": 46,
+            "psnr_frame_count": 46,
+            "source_frames": 169
+          },
+          "1.05": {
+            "hold_windows": 8,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 28483.0,
+            "mean_ontime_psnr_db": 27.7697191585102,
+            "on_time_fraction": 0.6030927835051546,
+            "on_time_frames": 117,
+            "psnr_frame_count": 117,
+            "source_frames": 194
+          }
+        }
+      }
+    },
+    "content_d3_tree_layout_tutorial_01__nordic_op1_5g_nsa_b20": {
+      "complete": false,
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 0,
+            "mean_guaranteed_dropped_wire_bytes_per_window": null,
+            "mean_guaranteed_wire_bytes_per_window": null,
+            "mean_ontime_psnr_db": null,
+            "on_time_fraction": null,
+            "on_time_frames": 0,
+            "psnr_frame_count": 0,
+            "source_frames": 0
+          },
+          "1.05": {
+            "hold_windows": 1,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 23756.0,
+            "mean_ontime_psnr_db": 50.04697028782862,
+            "on_time_fraction": 0.96,
+            "on_time_frames": 24,
+            "psnr_frame_count": 24,
+            "source_frames": 25
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 9,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 21111.88888888889,
+            "mean_ontime_psnr_db": 46.70435064163015,
+            "on_time_fraction": 0.8538812785388128,
+            "on_time_frames": 187,
+            "psnr_frame_count": 187,
+            "source_frames": 219
+          },
+          "1.05": {
+            "hold_windows": 14,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 26573.285714285714,
+            "mean_ontime_psnr_db": 47.263696315210545,
+            "on_time_fraction": 0.8377581120943953,
+            "on_time_frames": 284,
+            "psnr_frame_count": 284,
+            "source_frames": 339
+          }
+        }
+      }
+    },
+    "content_d3_tree_layout_tutorial_01__nordic_op1_lte_b20": {
+      "complete": false,
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "network_family": "nordic_op1_lte_b20",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 1,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 13314.0,
+            "mean_ontime_psnr_db": null,
+            "on_time_fraction": 0.0,
+            "on_time_frames": 0,
+            "psnr_frame_count": 0,
+            "source_frames": 25
+          },
+          "1.05": {
+            "hold_windows": 0,
+            "mean_guaranteed_dropped_wire_bytes_per_window": null,
+            "mean_guaranteed_wire_bytes_per_window": null,
+            "mean_ontime_psnr_db": null,
+            "on_time_fraction": null,
+            "on_time_frames": 0,
+            "psnr_frame_count": 0,
+            "source_frames": 0
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 11,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 19381.0,
+            "mean_ontime_psnr_db": 46.285064731074684,
+            "on_time_fraction": 0.8413284132841329,
+            "on_time_frames": 228,
+            "psnr_frame_count": 228,
+            "source_frames": 271
+          },
+          "1.05": {
+            "hold_windows": 12,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 19433.583333333332,
+            "mean_ontime_psnr_db": 46.85548613028473,
+            "on_time_fraction": 0.8591065292096219,
+            "on_time_frames": 250,
+            "psnr_frame_count": 250,
+            "source_frames": 291
+          }
+        }
+      }
+    },
+    "content_d3_tree_layout_tutorial_01__nordic_op3_lte_b3": {
+      "complete": false,
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "network_family": "nordic_op3_lte_b3",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 0,
+            "mean_guaranteed_dropped_wire_bytes_per_window": null,
+            "mean_guaranteed_wire_bytes_per_window": null,
+            "mean_ontime_psnr_db": null,
+            "on_time_fraction": null,
+            "on_time_frames": 0,
+            "psnr_frame_count": 0,
+            "source_frames": 0
+          },
+          "1.05": {
+            "hold_windows": 0,
+            "mean_guaranteed_dropped_wire_bytes_per_window": null,
+            "mean_guaranteed_wire_bytes_per_window": null,
+            "mean_ontime_psnr_db": null,
+            "on_time_fraction": null,
+            "on_time_frames": 0,
+            "psnr_frame_count": 0,
+            "source_frames": 0
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 9,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 21659.222222222223,
+            "mean_ontime_psnr_db": 46.40780069975622,
+            "on_time_fraction": 0.9495412844036697,
+            "on_time_frames": 207,
+            "psnr_frame_count": 207,
+            "source_frames": 218
+          },
+          "1.05": {
+            "hold_windows": 15,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 26584.6,
+            "mean_ontime_psnr_db": 47.99150216869883,
+            "on_time_fraction": 0.9344262295081968,
+            "on_time_frames": 342,
+            "psnr_frame_count": 342,
+            "source_frames": 366
+          }
+        }
+      }
+    },
+    "content_d3_tree_layout_tutorial_01__rome_op2_lte": {
+      "complete": true,
+      "content_id": "content_d3_tree_layout_tutorial_01",
+      "network_family": "rome_op2_lte",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 3,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 24961.333333333332,
+            "mean_ontime_psnr_db": 47.292213867882566,
+            "on_time_fraction": 0.9444444444444444,
+            "on_time_frames": 68,
+            "psnr_frame_count": 68,
+            "source_frames": 72
+          },
+          "1.05": {
+            "hold_windows": 3,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 26309.0,
+            "mean_ontime_psnr_db": 46.528117377439,
+            "on_time_fraction": 0.9452054794520548,
+            "on_time_frames": 69,
+            "psnr_frame_count": 69,
+            "source_frames": 73
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 7,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 16417.571428571428,
+            "mean_ontime_psnr_db": 46.34306800445203,
+            "on_time_fraction": 0.711764705882353,
+            "on_time_frames": 121,
+            "psnr_frame_count": 121,
+            "source_frames": 170
+          },
+          "1.05": {
+            "hold_windows": 11,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 19834.454545454544,
+            "mean_ontime_psnr_db": 47.03548557571686,
+            "on_time_fraction": 0.6704119850187266,
+            "on_time_frames": 179,
+            "psnr_frame_count": 179,
+            "source_frames": 267
+          }
+        }
+      }
+    },
+    "content_schmilka_firefighting_01__nordic_op1_5g_nsa_b20": {
+      "complete": true,
+      "content_id": "content_schmilka_firefighting_01",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 3,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 36191.666666666664,
+            "mean_ontime_psnr_db": 36.23307249614742,
+            "on_time_fraction": 0.9324324324324325,
+            "on_time_frames": 69,
+            "psnr_frame_count": 69,
+            "source_frames": 74
+          },
+          "1.05": {
+            "hold_windows": 2,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 40346.0,
+            "mean_ontime_psnr_db": 36.376880379369254,
+            "on_time_fraction": 0.86,
+            "on_time_frames": 43,
+            "psnr_frame_count": 43,
+            "source_frames": 50
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 9,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 24494.11111111111,
+            "mean_ontime_psnr_db": 35.07213827349593,
+            "on_time_fraction": 0.9727272727272728,
+            "on_time_frames": 214,
+            "psnr_frame_count": 214,
+            "source_frames": 220
+          },
+          "1.05": {
+            "hold_windows": 10,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 32780.8,
+            "mean_ontime_psnr_db": 35.64409063554749,
+            "on_time_fraction": 0.8677685950413223,
+            "on_time_frames": 210,
+            "psnr_frame_count": 210,
+            "source_frames": 242
+          }
+        }
+      }
+    },
+    "content_schmilka_firefighting_01__nordic_op1_lte_b20": {
+      "complete": false,
+      "content_id": "content_schmilka_firefighting_01",
+      "network_family": "nordic_op1_lte_b20",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 1,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 23165.0,
+            "mean_ontime_psnr_db": null,
+            "on_time_fraction": 0.0,
+            "on_time_frames": 0,
+            "psnr_frame_count": 0,
+            "source_frames": 24
+          },
+          "1.05": {
+            "hold_windows": 1,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 48124.0,
+            "mean_ontime_psnr_db": null,
+            "on_time_fraction": 0.0,
+            "on_time_frames": 0,
+            "psnr_frame_count": 0,
+            "source_frames": 24
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 12,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 21331.083333333332,
+            "mean_ontime_psnr_db": 34.145143275087804,
+            "on_time_fraction": 0.889273356401384,
+            "on_time_frames": 257,
+            "psnr_frame_count": 257,
+            "source_frames": 289
+          },
+          "1.05": {
+            "hold_windows": 10,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 22847.7,
+            "mean_ontime_psnr_db": 34.026358222709376,
+            "on_time_fraction": 0.689795918367347,
+            "on_time_frames": 169,
+            "psnr_frame_count": 169,
+            "source_frames": 245
+          }
+        }
+      }
+    },
+    "content_schmilka_firefighting_01__nordic_op3_lte_b3": {
+      "complete": true,
+      "content_id": "content_schmilka_firefighting_01",
+      "network_family": "nordic_op3_lte_b3",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 2,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 35628.5,
+            "mean_ontime_psnr_db": 36.053914282622486,
+            "on_time_fraction": 0.96,
+            "on_time_frames": 48,
+            "psnr_frame_count": 48,
+            "source_frames": 50
+          },
+          "1.05": {
+            "hold_windows": 3,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 42052.0,
+            "mean_ontime_psnr_db": 36.590259654498794,
+            "on_time_fraction": 0.581081081081081,
+            "on_time_frames": 43,
+            "psnr_frame_count": 43,
+            "source_frames": 74
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 10,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 27831.2,
+            "mean_ontime_psnr_db": 35.35022073182005,
+            "on_time_fraction": 0.9375,
+            "on_time_frames": 225,
+            "psnr_frame_count": 225,
+            "source_frames": 240
+          },
+          "1.05": {
+            "hold_windows": 9,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 35855.22222222222,
+            "mean_ontime_psnr_db": 36.0449855349129,
+            "on_time_fraction": 0.9457013574660633,
+            "on_time_frames": 209,
+            "psnr_frame_count": 209,
+            "source_frames": 221
+          }
+        }
+      }
+    },
+    "content_schmilka_firefighting_01__rome_op2_lte": {
+      "complete": true,
+      "content_id": "content_schmilka_firefighting_01",
+      "network_family": "rome_op2_lte",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 3,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 39865.0,
+            "mean_ontime_psnr_db": 36.416316904543784,
+            "on_time_fraction": 0.9178082191780822,
+            "on_time_frames": 67,
+            "psnr_frame_count": 67,
+            "source_frames": 73
+          },
+          "1.05": {
+            "hold_windows": 3,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 373.3333333333333,
+            "mean_guaranteed_wire_bytes_per_window": 46791.0,
+            "mean_ontime_psnr_db": 36.73021627262422,
+            "on_time_fraction": 0.0958904109589041,
+            "on_time_frames": 7,
+            "psnr_frame_count": 7,
+            "source_frames": 73
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 12,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 91.66666666666667,
+            "mean_guaranteed_wire_bytes_per_window": 18027.333333333332,
+            "mean_ontime_psnr_db": 34.65817647388338,
+            "on_time_fraction": 0.5582191780821918,
+            "on_time_frames": 163,
+            "psnr_frame_count": 163,
+            "source_frames": 292
+          },
+          "1.05": {
+            "hold_windows": 6,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 27609.5,
+            "mean_ontime_psnr_db": 35.23519607310581,
+            "on_time_fraction": 0.821917808219178,
+            "on_time_frames": 120,
+            "psnr_frame_count": 120,
+            "source_frames": 146
+          }
+        }
+      }
+    },
+    "content_vizanice_outdoor_01__nordic_op1_5g_nsa_b20": {
+      "complete": true,
+      "content_id": "content_vizanice_outdoor_01",
+      "network_family": "nordic_op1_5g_nsa_b20",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 6,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 38008.166666666664,
+            "mean_ontime_psnr_db": 26.080146764705713,
+            "on_time_fraction": 0.1780821917808219,
+            "on_time_frames": 26,
+            "psnr_frame_count": 26,
+            "source_frames": 146
+          },
+          "1.05": {
+            "hold_windows": 3,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 36383.0,
+            "mean_ontime_psnr_db": null,
+            "on_time_fraction": 0.0,
+            "on_time_frames": 0,
+            "psnr_frame_count": 0,
+            "source_frames": 73
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 6,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 23738.5,
+            "mean_ontime_psnr_db": 25.816773060945195,
+            "on_time_fraction": 0.272108843537415,
+            "on_time_frames": 40,
+            "psnr_frame_count": 40,
+            "source_frames": 147
+          },
+          "1.05": {
+            "hold_windows": 9,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 26658.222222222223,
+            "mean_ontime_psnr_db": 25.37423240281311,
+            "on_time_fraction": 0.2119815668202765,
+            "on_time_frames": 46,
+            "psnr_frame_count": 46,
+            "source_frames": 217
+          }
+        }
+      }
+    },
+    "content_vizanice_outdoor_01__nordic_op1_lte_b20": {
+      "complete": false,
+      "content_id": "content_vizanice_outdoor_01",
+      "network_family": "nordic_op1_lte_b20",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 1,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 13301.0,
+            "mean_ontime_psnr_db": null,
+            "on_time_fraction": 0.0,
+            "on_time_frames": 0,
+            "psnr_frame_count": 0,
+            "source_frames": 24
+          },
+          "1.05": {
+            "hold_windows": 4,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 25237.25,
+            "mean_ontime_psnr_db": null,
+            "on_time_fraction": 0.0,
+            "on_time_frames": 0,
+            "psnr_frame_count": 0,
+            "source_frames": 98
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 10,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 15515.5,
+            "mean_ontime_psnr_db": 24.787350255297298,
+            "on_time_fraction": 0.21721311475409835,
+            "on_time_frames": 53,
+            "psnr_frame_count": 53,
+            "source_frames": 244
+          },
+          "1.05": {
+            "hold_windows": 9,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 20333.666666666668,
+            "mean_ontime_psnr_db": 24.547310115260654,
+            "on_time_fraction": 0.20454545454545456,
+            "on_time_frames": 45,
+            "psnr_frame_count": 45,
+            "source_frames": 220
+          }
+        }
+      }
+    },
+    "content_vizanice_outdoor_01__nordic_op3_lte_b3": {
+      "complete": false,
+      "content_id": "content_vizanice_outdoor_01",
+      "network_family": "nordic_op3_lte_b3",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 3,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 34196.333333333336,
+            "mean_ontime_psnr_db": null,
+            "on_time_fraction": 0.0,
+            "on_time_frames": 0,
+            "psnr_frame_count": 0,
+            "source_frames": 73
+          },
+          "1.05": {
+            "hold_windows": 1,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 32479.0,
+            "mean_ontime_psnr_db": 25.682404687254625,
+            "on_time_fraction": 0.08333333333333333,
+            "on_time_frames": 2,
+            "psnr_frame_count": 2,
+            "source_frames": 24
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 8,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 24758.75,
+            "mean_ontime_psnr_db": 25.484264518212843,
+            "on_time_fraction": 0.36923076923076925,
+            "on_time_frames": 72,
+            "psnr_frame_count": 72,
+            "source_frames": 195
+          },
+          "1.05": {
+            "hold_windows": 12,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 32177.25,
+            "mean_ontime_psnr_db": 26.01706785971674,
+            "on_time_fraction": 0.23448275862068965,
+            "on_time_frames": 68,
+            "psnr_frame_count": 68,
+            "source_frames": 290
+          }
+        }
+      }
+    },
+    "content_vizanice_outdoor_01__rome_op2_lte": {
+      "complete": true,
+      "content_id": "content_vizanice_outdoor_01",
+      "network_family": "rome_op2_lte",
+      "state_action": {
+        "bwe_ge_500k": {
+          "0.65": {
+            "hold_windows": 3,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 29426.0,
+            "mean_ontime_psnr_db": null,
+            "on_time_fraction": 0.0,
+            "on_time_frames": 0,
+            "psnr_frame_count": 0,
+            "source_frames": 72
+          },
+          "1.05": {
+            "hold_windows": 4,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 73196.75,
+            "mean_ontime_psnr_db": 28.76901802065064,
+            "on_time_fraction": 0.2268041237113402,
+            "on_time_frames": 22,
+            "psnr_frame_count": 22,
+            "source_frames": 97
+          }
+        },
+        "bwe_lt_500k": {
+          "0.65": {
+            "hold_windows": 9,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 0.0,
+            "mean_guaranteed_wire_bytes_per_window": 16472.88888888889,
+            "mean_ontime_psnr_db": 25.391161319888944,
+            "on_time_fraction": 0.22935779816513763,
+            "on_time_frames": 50,
+            "psnr_frame_count": 50,
+            "source_frames": 218
+          },
+          "1.05": {
+            "hold_windows": 8,
+            "mean_guaranteed_dropped_wire_bytes_per_window": 142.25,
+            "mean_guaranteed_wire_bytes_per_window": 25167.25,
+            "mean_ontime_psnr_db": 25.117725138764953,
+            "on_time_fraction": 0.23195876288659795,
+            "on_time_frames": 45,
+            "psnr_frame_count": 45,
+            "source_frames": 194
+          }
+        }
+      }
+    }
+  },
+  "trace_schedule": {
+    "all_sessions_passed": true,
+    "schedule_definition": {
+      "excluded_source_fields": [
+        "latitude",
+        "longitude",
+        "cell_id",
+        "measurement_id",
+        "radio identifiers"
+      ],
+      "final_sample_tail_ms": 600,
+      "measurement_seconds": 18,
+      "not_a_live_path_or_packet_trace": true,
+      "phase_labels": [
+        "block_0",
+        "block_1",
+        "block_2"
+      ],
+      "rate_limits_mbps": [
+        0,
+        10
+      ],
+      "rate_tick_tolerance_ms": 150,
+      "rates_mbps": "selected measured downlink throughput resampled to 1 Hz and replayed as local bottleneck service rates",
+      "schedule_durations_ms": [
+        6000,
+        6000,
+        6600
+      ],
+      "seconds_per_block": 6,
+      "symmetric_directions": true,
+      "terminal_queue_cleanup": {
+        "abi": "native_action_terminal_queue_drain_v1",
+        "all_served_packets_must_be_forwarded": true,
+        "byte_conservation_tolerance_bytes": 1e-06,
+        "cleanup_service_excluded_from_measured_trace_and_action_windows": true,
+        "cleanup_service_rate_mbps": 10.0,
+        "final_queue_must_be_empty": true,
+        "initiator": "final m0012 clock-marker request after frame/action observation cutoff",
+        "max_duration_ms": 2000,
+        "record_pre_and_post_ledgers": true,
+        "starts_after_browser_measurement_cutoff": true,
+        "treatment_outcomes_read_during_cleanup": false
+      }
+    }
+  },
+  "transport": {
+    "browser_ice_transport_policy": "relay",
+    "browser_to_turn_transport": "TCP",
+    "candidate_gathering_acceptance": "Both peers complete gathering with only loopback relay candidates using relayProtocol=tcp and zero candidate errors.",
+    "managed_WebRtcIPHandling": "disable_non_proxied_udp",
+    "managed_policy_change": false,
+    "media_acceptance": "Each scheduled block has more than ten encoded and decoded frames and finite mean encode time; each clip's SHA-256 is verified before serving.",
+    "queue_acceptance": "Both directions forward at least 100 packets from matching TURN allocation ports, no unexpected sources or send errors; packet and byte replay exactly matches offer/drop/service/forward ledgers; capacity and conservation checks pass.",
+    "queue_and_propagation_mechanism_unchanged": true,
+    "selected_pair_acceptance": "Both pairs are nominated/succeeded and use TURN relay candidates over loopback with relayProtocol=tcp.",
+    "trace_scheduler_acceptance": "All 18 scheduled measured-rate ticks appear in order in relay events, match the frozen rates exactly, and fall within 150 ms of their registered one-second offsets.",
+    "turn_relay_transport": "UDP",
+    "turn_uri_scheme": "turn:"
+  }
+}
