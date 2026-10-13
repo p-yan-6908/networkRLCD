@@ -1,0 +1,122 @@
+{
+  "abi": "native_independent_content_trace_action_probe_v11c_capture_failure_v1",
+  "action_outcomes_qoe_and_per_hold_relay_costs_read": false,
+  "actual_run_gate_passed": false,
+  "actual_run_gate_sha256": "28ba075e3bae97462f76c72df569df0dad08d7de445281123250ecc65aaa6043",
+  "capture_index_sha256": "a87e6d916db6ddddbfeb1cd27482a8aa2ee468aa35995e04003b5e48c9323dda",
+  "controller_fitted_or_promoted": false,
+  "failed_session_inventory": [
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c03-vienna_5g_operator_A-r03-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c03-vienna_5g_operator_A-r02-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c01-vienna_5g_operator_A-r02-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c04-vienna_5g_operator_A-r02-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c02-vienna_lte_operator_C-r03-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c03-vienna_5g_operator_A-r01-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c04-vienna_5g_operator_A-r00-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c02-vienna_5g_operator_A-r03-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c02-vienna_5g_operator_A-r02-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c01-vienna_5g_operator_A-r01-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c03-vienna_5g_operator_A-r00-micro"
+    },
+    {
+      "cause": "execution environment interrupted in-progress session",
+      "trial_id": "turntcp11c-c02-vienna_lte_operator_C-r00-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c01-vienna_lte_operator_C-r03-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c01-vienna_5g_operator_A-r00-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c02-vienna_5g_operator_A-r01-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c04-vienna_5g_operator_A-r01-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c04-vienna_lte_operator_C-r03-micro"
+    },
+    {
+      "cause": "browser runtime exception",
+      "trial_id": "turntcp11c-c04-ucc_5g_operator_B-r00-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c03-vienna_lte_operator_C-r03-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c04-vienna_5g_operator_A-r03-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c01-vienna_5g_operator_A-r03-micro"
+    },
+    {
+      "cause": "native media stats invalid",
+      "trial_id": "turntcp11c-c02-vienna_5g_operator_A-r00-micro"
+    }
+  ],
+  "failed_sessions": 22,
+  "failure_cause_counts": {
+    "browser runtime exception": 1,
+    "execution environment interrupted in-progress session": 1,
+    "native media stats invalid": 20
+  },
+  "integrity_passed_before_gate": true,
+  "interrupted_session_id": "turntcp11c-c02-vienna_lte_operator_C-r00-micro",
+  "note": "The 64-session capture inventory is complete and file checksums pass. Twenty sessions failed the recorder native-media validity check, one session was interrupted by environment replacement and preserved as failed, and one had a browser runtime exception. The unchanged all-session gate therefore failed. No treatment outcome telemetry was opened.",
+  "outcome_analysis_performed": false,
+  "planned_sessions": 64,
+  "pooled_with_V3_V10_or_other_V11_attempts": false,
+  "preregistration_commit": "19f528a",
+  "protocol_sha256": "25a5bc102cb38cd50bb467dc547b901bde287fc703790fc44ee725cfc62665b3",
+  "qualified_technical_gates_among_sealed": {
+    "action_assignment_passed": 42,
+    "clock_passed": 42,
+    "terminal_cleanup_passed": 42,
+    "trace_schedule_passed": 42,
+    "transport_passed": 42
+  },
+  "resume_helper_commit": "2ad9470",
+  "resume_helper_sha256": "bfaac3e26739ff1b73e4b974915bf46ae8a599358b6f82ccde4db7a344bb2a4a",
+  "sealed_sessions": 42
+}
