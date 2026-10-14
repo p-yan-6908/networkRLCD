@@ -1,0 +1,8 @@
+{
+  "abi": "history_state_m6_m5_input_verification_v1",
+  "all_files_verified_before_support_telemetry": true,
+  "local_root_matches_pinned_archive_files": 4428,
+  "m5_raw_mutated": false,
+  "pinned_revision": "0f4da165bcd87ace87616d564cfe949eaff95d47",
+  "remote_inventory_freshly_downloaded_and_verified": true
+}

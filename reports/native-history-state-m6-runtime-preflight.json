@@ -1,0 +1,28 @@
+{
+  "abi": "native_history_state_m6_runtime_preflight_v1",
+  "delivery_qoe_action_outcomes_read": false,
+  "m5_registration_verified": true,
+  "managed_policy_changed": false,
+  "matches_qualified_m5_runtime": true,
+  "new_native_session_started": false,
+  "runtime": {
+    "chromium_binary_path": "/usr/bin/chromium",
+    "chromium_sha256": "2c8d32d29dc6781c35ae196ea83299d507ac88fc339301abe74672feda299779",
+    "chromium_version": "Chrome/154.0.8037.57",
+    "coturn_binary_path": "/home/agent/.cache/networkrlcd/turn-runtime/extracted/usr/bin/turnserver",
+    "coturn_binary_sha256": "6de6c80134271abd2c51cbadac1e2bb973ac89b5491b0a2ae480148d66a37162",
+    "coturn_library_dir": "/home/agent/.cache/networkrlcd/turn-runtime/extracted/usr/lib/x86_64-linux-gnu",
+    "coturn_library_sha256": {
+      "libevent_extra-2.1.so.7": "0da7f591283f063939323d9dc3370dc9e53559c6b2c43c28c18159bb8f656daf",
+      "libevent_openssl-2.1.so.7": "2ec9f0a63b5af4df80b7155611794246ebe9932ded259bbba873bfc9da98d5f9",
+      "libhiredis.so.1.1.0": "adfb8e6f9d2d430d5d577f85626490769fb69ef41a6967fba611b5a16b09ab15"
+    },
+    "coturn_package_path": "/home/agent/.cache/networkrlcd/turn-runtime/coturn_4.6.1-2_amd64.deb",
+    "coturn_package_sha256": "cb55194d0118d26035aa39aa7306fd810a47069643266724357e8da2a22612e0",
+    "coturn_version": "4.6.1",
+    "managed_policy_path": "/etc/chromium/policies/managed/misc.json",
+    "managed_policy_sha256": "10ee54ed22fc23337096004f8248d6ea977f059149386e0f9e70c4b77d9db6b5",
+    "managed_policy_value": "disable_non_proxied_udp",
+    "network_policy": "TURN control TCP and relay/queue UDP are loopback-only"
+  }
+}
