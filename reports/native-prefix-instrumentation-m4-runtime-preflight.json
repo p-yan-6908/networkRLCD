@@ -1,0 +1,31 @@
+{
+  "HF_TOKEN_available": true,
+  "HF_TOKEN_value_logged": false,
+  "abi": "native_prefix_instrumentation_m4_runtime_preflight_v1",
+  "anchor_commit": "3e05f88",
+  "archive_revision_before_capture": "ecdf7f14bfaef244c8572b49f1ee1641da52531e",
+  "authenticated_private_dataset_status": 200,
+  "cloud_spec_revision": "137",
+  "https_hostname": "huggingface.co",
+  "https_status": 200,
+  "m3_original_protocol_verified": true,
+  "native_runtime_matches_frozen": true,
+  "network_policy": {
+    "http_network_policy": {
+      "type": "unrestricted"
+    },
+    "http_proxy": "http://proxy:8080",
+    "tcp_connect_proxy": "http://proxy:8088",
+    "tcp_network_access": {
+      "domains": [],
+      "ip_ranges": []
+    },
+    "version": 1,
+    "vpn_configured": false
+  },
+  "network_policy_state": "enforced",
+  "observations_current": true,
+  "observed_at_utc": "2026-10-14T21:16:27.888738+00:00",
+  "planned_new_external_bytes": 2000000000,
+  "source_assets_verified": true
+}
