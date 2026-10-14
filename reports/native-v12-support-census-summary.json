@@ -1,0 +1,3687 @@
+{
+  "abi": "native_v12_support_census_summary_v1",
+  "by_campaign": {
+    "nyu_mets_lte": {
+      "all_registered_gates_qualified": 4,
+      "by_target_state": {
+        "bwe_ge_500k": {
+          "all_gates_qualified": 4,
+          "planned_checks": 4,
+          "support_qualified": 4
+        },
+        "bwe_lt_500k": {
+          "all_gates_qualified": 0,
+          "planned_checks": 4,
+          "support_qualified": 0
+        }
+      },
+      "capture_failures": 0,
+      "native_bwe_support_qualified": 4,
+      "planned_checks": 8,
+      "sealed_captures": 8
+    },
+    "ucc_irish_lte_2017_2018": {
+      "all_registered_gates_qualified": 4,
+      "by_target_state": {
+        "bwe_ge_500k": {
+          "all_gates_qualified": 2,
+          "planned_checks": 4,
+          "support_qualified": 2
+        },
+        "bwe_lt_500k": {
+          "all_gates_qualified": 2,
+          "planned_checks": 4,
+          "support_qualified": 2
+        }
+      },
+      "capture_failures": 0,
+      "native_bwe_support_qualified": 4,
+      "planned_checks": 8,
+      "sealed_captures": 8
+    },
+    "umu_private_campus_2024_2025": {
+      "all_registered_gates_qualified": 2,
+      "by_target_state": {
+        "bwe_ge_500k": {
+          "all_gates_qualified": 2,
+          "planned_checks": 4,
+          "support_qualified": 2
+        },
+        "bwe_lt_500k": {
+          "all_gates_qualified": 0,
+          "planned_checks": 4,
+          "support_qualified": 0
+        }
+      },
+      "capture_failures": 1,
+      "native_bwe_support_qualified": 2,
+      "planned_checks": 8,
+      "sealed_captures": 7
+    }
+  },
+  "by_content": {
+    "content_king_penguins_2013_01": {
+      "all_registered_gates_qualified": 5,
+      "by_target_state": {
+        "bwe_ge_500k": {
+          "all_gates_qualified": 4,
+          "planned_checks": 6,
+          "support_qualified": 4
+        },
+        "bwe_lt_500k": {
+          "all_gates_qualified": 1,
+          "planned_checks": 6,
+          "support_qualified": 1
+        }
+      },
+      "capture_failures": 0,
+      "native_bwe_support_qualified": 5,
+      "planned_checks": 12,
+      "sealed_captures": 12
+    },
+    "content_shirlan_waterfall_2012_01": {
+      "all_registered_gates_qualified": 5,
+      "by_target_state": {
+        "bwe_ge_500k": {
+          "all_gates_qualified": 4,
+          "planned_checks": 6,
+          "support_qualified": 4
+        },
+        "bwe_lt_500k": {
+          "all_gates_qualified": 1,
+          "planned_checks": 6,
+          "support_qualified": 1
+        }
+      },
+      "capture_failures": 1,
+      "native_bwe_support_qualified": 5,
+      "planned_checks": 12,
+      "sealed_captures": 11
+    }
+  },
+  "capture_index_sha256": "e51b50caf1bc6aeef793badc0fbc7f6f942bd3af23f13e4083913bed91976fbf",
+  "cells": {
+    "content_king_penguins_2013_01__irish_lte": {
+      "all_registered_gates_qualified": 2,
+      "by_target_state": {
+        "bwe_ge_500k": {
+          "all_gates_qualified": 1,
+          "planned_checks": 2,
+          "support_qualified": 1
+        },
+        "bwe_lt_500k": {
+          "all_gates_qualified": 1,
+          "planned_checks": 2,
+          "support_qualified": 1
+        }
+      },
+      "capture_failures": 0,
+      "native_bwe_support_qualified": 2,
+      "planned_checks": 4,
+      "sealed_captures": 4
+    },
+    "content_king_penguins_2013_01__nyu_lte": {
+      "all_registered_gates_qualified": 2,
+      "by_target_state": {
+        "bwe_ge_500k": {
+          "all_gates_qualified": 2,
+          "planned_checks": 2,
+          "support_qualified": 2
+        },
+        "bwe_lt_500k": {
+          "all_gates_qualified": 0,
+          "planned_checks": 2,
+          "support_qualified": 0
+        }
+      },
+      "capture_failures": 0,
+      "native_bwe_support_qualified": 2,
+      "planned_checks": 4,
+      "sealed_captures": 4
+    },
+    "content_king_penguins_2013_01__umu_campus_tcp_upload": {
+      "all_registered_gates_qualified": 1,
+      "by_target_state": {
+        "bwe_ge_500k": {
+          "all_gates_qualified": 1,
+          "planned_checks": 2,
+          "support_qualified": 1
+        },
+        "bwe_lt_500k": {
+          "all_gates_qualified": 0,
+          "planned_checks": 2,
+          "support_qualified": 0
+        }
+      },
+      "capture_failures": 0,
+      "native_bwe_support_qualified": 1,
+      "planned_checks": 4,
+      "sealed_captures": 4
+    },
+    "content_shirlan_waterfall_2012_01__irish_lte": {
+      "all_registered_gates_qualified": 2,
+      "by_target_state": {
+        "bwe_ge_500k": {
+          "all_gates_qualified": 1,
+          "planned_checks": 2,
+          "support_qualified": 1
+        },
+        "bwe_lt_500k": {
+          "all_gates_qualified": 1,
+          "planned_checks": 2,
+          "support_qualified": 1
+        }
+      },
+      "capture_failures": 0,
+      "native_bwe_support_qualified": 2,
+      "planned_checks": 4,
+      "sealed_captures": 4
+    },
+    "content_shirlan_waterfall_2012_01__nyu_lte": {
+      "all_registered_gates_qualified": 2,
+      "by_target_state": {
+        "bwe_ge_500k": {
+          "all_gates_qualified": 2,
+          "planned_checks": 2,
+          "support_qualified": 2
+        },
+        "bwe_lt_500k": {
+          "all_gates_qualified": 0,
+          "planned_checks": 2,
+          "support_qualified": 0
+        }
+      },
+      "capture_failures": 0,
+      "native_bwe_support_qualified": 2,
+      "planned_checks": 4,
+      "sealed_captures": 4
+    },
+    "content_shirlan_waterfall_2012_01__umu_campus_tcp_upload": {
+      "all_registered_gates_qualified": 1,
+      "by_target_state": {
+        "bwe_ge_500k": {
+          "all_gates_qualified": 1,
+          "planned_checks": 2,
+          "support_qualified": 1
+        },
+        "bwe_lt_500k": {
+          "all_gates_qualified": 0,
+          "planned_checks": 2,
+          "support_qualified": 0
+        }
+      },
+      "capture_failures": 1,
+      "native_bwe_support_qualified": 1,
+      "planned_checks": 4,
+      "sealed_captures": 3
+    }
+  },
+  "confirmatory_protocol_sha256": "b96f1aed7d0001dcb6f28faf7d41af4dd0f936534d1b80114189199db9d35929",
+  "controller_fit_or_promoted": false,
+  "decoded_inputs": [
+    "frozen protocols",
+    "capture index and SHA-256 seals",
+    "registered technical gate",
+    "sender timing/BWE feature zero, support qualification, cap assignment/readback",
+    "capture failure log"
+  ],
+  "failures": {
+    "capture_failed": 1,
+    "native_bwe_support_unavailable": 13
+  },
+  "fully_supported_cell_count": 0,
+  "fully_supported_cells": [],
+  "interpretation": "Support/liveness qualification only. Failures are not bitrate treatment outcomes. No PSNR, on-time delivery fraction, or per-hold relay cost is examined; no trace/state/action/cell gate is changed.",
+  "maximum_qualified_clock_width_ms": 3.7461583345175313,
+  "outcome_files_opened": false,
+  "planned_checks": 24,
+  "primary_conditional_action_effect_estimated": false,
+  "qualified_registered_checks": 10,
+  "randomized_actions_assigned_in_census": 0,
+  "registered_gate_sha256": "0f8aa75807507d93f3054a0bdeeda71534a5b23d4465b8a3fa4828d7ce2ef6a2",
+  "registration_commit": "aed3afa",
+  "sealed_captures": 23,
+  "sessions": [
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "umu_private_campus_2024_2025",
+      "capture_status": "sealed",
+      "cell": "content_shirlan_waterfall_2012_01__umu_campus_tcp_upload",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998484201517094,
+          1.0001466454939225
+        ],
+        "beta_at_origin_feasible_ms": [
+          11108.560951585621,
+          11110.34264518752
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.6911563454159477,
+        "origin_browser_ms": 10418.35000000149,
+        "p95_held_out_width_ms": 2.6911563454159477,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_shirlan_waterfall_2012_01",
+      "family": "umu_campus_tcp_upload",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9053.69999999553,
+          "history_bwe_bps": [
+            2972327.0,
+            2975807.0,
+            2978988.0,
+            2980457.0,
+            2775622.0,
+            2775622.0,
+            2775622.0,
+            2555678.0,
+            2555678.0,
+            2371567.0,
+            2371567.0
+          ],
+          "history_min_max_bwe_bps": [
+            2371567.0,
+            2980457.0
+          ],
+          "maximum_sample_gap_ms": 114.29999999701977,
+          "sample_count": 11,
+          "span_ms": 1025.5
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9154.5,
+          "history_bwe_bps": [
+            2975807.0,
+            2978988.0,
+            2980457.0,
+            2775622.0,
+            2775622.0,
+            2775622.0,
+            2555678.0,
+            2555678.0,
+            2371567.0,
+            2371567.0,
+            2371567.0
+          ],
+          "history_min_max_bwe_bps": [
+            2371567.0,
+            2980457.0
+          ],
+          "maximum_sample_gap_ms": 114.29999999701977,
+          "sample_count": 11,
+          "span_ms": 1025.3999999985099
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9255.29999999702,
+          "history_bwe_bps": [
+            2978988.0,
+            2980457.0,
+            2775622.0,
+            2775622.0,
+            2775622.0,
+            2555678.0,
+            2555678.0,
+            2371567.0,
+            2371567.0,
+            2371567.0,
+            2227100.0
+          ],
+          "history_min_max_bwe_bps": [
+            2227100.0,
+            2980457.0
+          ],
+          "maximum_sample_gap_ms": 114.29999999701977,
+          "sample_count": 11,
+          "span_ms": 1023.6000000014901
+        }
+      ],
+      "media_passed": true,
+      "profile": "umu_campus_tcp_upload-high-02",
+      "qualification": {
+        "bwe_history_bps": [
+          2972327,
+          2975807,
+          2978988,
+          2980457,
+          2775622,
+          2775622,
+          2775622,
+          2555678,
+          2555678,
+          2371567,
+          2371567
+        ],
+        "elapsed_ms": 9053.69999999553,
+        "history_samples": 11,
+        "max_gap_ms": 114.29999999701977,
+        "passed": true,
+        "sample_history_ms": [
+          9073.39999999851,
+          9174.30000000447,
+          9276.89999999851,
+          9378.39999999851,
+          9479.60000000149,
+          9580.39999999851,
+          9681.39999999851,
+          9782.30000000447,
+          9883.60000000149,
+          9997.89999999851,
+          10098.89999999851
+        ],
+        "span_ms": 1025.5,
+        "target_state": "bwe_ge_500k"
+      },
+      "registered_check_passed": true,
+      "support_qualified": true,
+      "target_state": "bwe_ge_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p00-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "ucc_irish_lte_2017_2018",
+      "capture_status": "sealed",
+      "cell": "content_shirlan_waterfall_2012_01__irish_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998948457267923,
+          1.0001369459268246
+        ],
+        "beta_at_origin_feasible_ms": [
+          10686.330943340263,
+          10688.16225483757
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.5544316139767034,
+        "origin_browser_ms": 10275.550000000745,
+        "p95_held_out_width_ms": 2.5544316139767034,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "content_id": "content_shirlan_waterfall_2012_01",
+      "family": "irish_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9057.79999999702,
+          "history_bwe_bps": [
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0
+          ],
+          "history_min_max_bwe_bps": [
+            1158287.0,
+            1158287.0
+          ],
+          "maximum_sample_gap_ms": 102.5,
+          "sample_count": 11,
+          "span_ms": 1010.1999999955297
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9158.79999999702,
+          "history_bwe_bps": [
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0
+          ],
+          "history_min_max_bwe_bps": [
+            1158287.0,
+            1158287.0
+          ],
+          "maximum_sample_gap_ms": 102.5,
+          "sample_count": 11,
+          "span_ms": 1010.5
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9268.10000000149,
+          "history_bwe_bps": [
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0,
+            1158287.0
+          ],
+          "history_min_max_bwe_bps": [
+            1158287.0,
+            1158287.0
+          ],
+          "maximum_sample_gap_ms": 109.30000000447035,
+          "sample_count": 11,
+          "span_ms": 1018.9000000059605
+        }
+      ],
+      "media_passed": true,
+      "profile": "irish_lte-high-01",
+      "qualification": {
+        "bwe_history_bps": [
+          1158287,
+          1158287,
+          1158287,
+          1158287,
+          1158287,
+          1158287,
+          1158287,
+          1158287,
+          1158287,
+          1158287,
+          1158287
+        ],
+        "elapsed_ms": 9057.79999999702,
+        "history_samples": 11,
+        "max_gap_ms": 102.5,
+        "passed": true,
+        "sample_history_ms": [
+          8954.70000000298,
+          9055.39999999851,
+          9156.29999999702,
+          9257.10000000149,
+          9359.60000000149,
+          9460.20000000298,
+          9561.10000000149,
+          9661.89999999851,
+          9762.60000000149,
+          9864,
+          9964.89999999851
+        ],
+        "span_ms": 1010.1999999955297,
+        "target_state": "bwe_ge_500k"
+      },
+      "registered_check_passed": true,
+      "support_qualified": true,
+      "target_state": "bwe_ge_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p01-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "ucc_irish_lte_2017_2018",
+      "capture_status": "sealed",
+      "cell": "content_shirlan_waterfall_2012_01__irish_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998737775861914,
+          1.0001118865249863
+        ],
+        "beta_at_origin_feasible_ms": [
+          10579.425280038235,
+          10580.820638491976
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.0859475942670542,
+        "origin_browser_ms": 10217.699999999255,
+        "p95_held_out_width_ms": 2.0859475942670542,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_shirlan_waterfall_2012_01",
+      "family": "irish_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9007.10000000149,
+          "history_bwe_bps": [
+            77653.0,
+            77653.0,
+            77653.0,
+            77653.0,
+            77653.0,
+            77653.0,
+            77653.0,
+            60260.0,
+            60260.0,
+            60260.0,
+            59332.0
+          ],
+          "history_min_max_bwe_bps": [
+            59332.0,
+            77653.0
+          ],
+          "maximum_sample_gap_ms": 113.60000000149012,
+          "sample_count": 11,
+          "span_ms": 1027.1000000014901
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9108.20000000298,
+          "history_bwe_bps": [
+            77653.0,
+            77653.0,
+            77653.0,
+            77653.0,
+            77653.0,
+            77653.0,
+            60260.0,
+            60260.0,
+            60260.0,
+            59332.0,
+            59332.0
+          ],
+          "history_min_max_bwe_bps": [
+            59332.0,
+            77653.0
+          ],
+          "maximum_sample_gap_ms": 113.60000000149012,
+          "sample_count": 11,
+          "span_ms": 1026.7999999970198
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9209.10000000149,
+          "history_bwe_bps": [
+            77653.0,
+            77653.0,
+            77653.0,
+            77653.0,
+            77653.0,
+            60260.0,
+            60260.0,
+            60260.0,
+            59332.0,
+            59332.0,
+            59332.0
+          ],
+          "history_min_max_bwe_bps": [
+            59332.0,
+            77653.0
+          ],
+          "maximum_sample_gap_ms": 113.60000000149012,
+          "sample_count": 11,
+          "span_ms": 1026.2999999970198
+        }
+      ],
+      "media_passed": true,
+      "profile": "irish_lte-low-02",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_lt_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p02-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "nyu_mets_lte",
+      "capture_status": "sealed",
+      "cell": "content_king_penguins_2013_01__nyu_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998624010291312,
+          1.000149778565527
+        ],
+        "beta_at_origin_feasible_ms": [
+          10543.073525827333,
+          10544.62636484069
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.3344462251716322,
+        "origin_browser_ms": 10182.150000002235,
+        "p95_held_out_width_ms": 2.3344462251716322,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_king_penguins_2013_01",
+      "family": "nyu_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9072.5,
+          "history_bwe_bps": [
+            2607771.0,
+            2607771.0,
+            2607771.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0
+          ],
+          "history_min_max_bwe_bps": [
+            2607771.0,
+            2616201.0
+          ],
+          "maximum_sample_gap_ms": 110.29999999701977,
+          "sample_count": 11,
+          "span_ms": 1021
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9173.30000000447,
+          "history_bwe_bps": [
+            2607771.0,
+            2607771.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2638236.0
+          ],
+          "history_min_max_bwe_bps": [
+            2607771.0,
+            2638236.0
+          ],
+          "maximum_sample_gap_ms": 110.29999999701977,
+          "sample_count": 11,
+          "span_ms": 1020.8000000044703
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9274.30000000447,
+          "history_bwe_bps": [
+            2607771.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2616201.0,
+            2638236.0,
+            2638236.0
+          ],
+          "history_min_max_bwe_bps": [
+            2607771.0,
+            2638236.0
+          ],
+          "maximum_sample_gap_ms": 110.29999999701977,
+          "sample_count": 11,
+          "span_ms": 1019.8000000044703
+        }
+      ],
+      "media_passed": true,
+      "profile": "nyu_lte-high-02",
+      "qualification": {
+        "bwe_history_bps": [
+          2607771,
+          2607771,
+          2607771,
+          2616201,
+          2616201,
+          2616201,
+          2616201,
+          2616201,
+          2616201,
+          2616201,
+          2616201
+        ],
+        "elapsed_ms": 9072.5,
+        "history_samples": 11,
+        "max_gap_ms": 110.29999999701977,
+        "passed": true,
+        "sample_history_ms": [
+          8851,
+          8952,
+          9054,
+          9156.5,
+          9257.40000000596,
+          9358.40000000596,
+          9459.40000000596,
+          9569.70000000298,
+          9670.40000000596,
+          9771.20000000298,
+          9872
+        ],
+        "span_ms": 1021,
+        "target_state": "bwe_ge_500k"
+      },
+      "registered_check_passed": true,
+      "support_qualified": true,
+      "target_state": "bwe_ge_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p03-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "nyu_mets_lte",
+      "capture_status": "sealed",
+      "cell": "content_shirlan_waterfall_2012_01__nyu_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.999868264468854,
+          1.0001303172559342
+        ],
+        "beta_at_origin_feasible_ms": [
+          10601.053006411656,
+          10602.566844469045
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.147516092589285,
+        "origin_browser_ms": 10216.400000002235,
+        "p95_held_out_width_ms": 2.147516092589285,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "content_id": "content_shirlan_waterfall_2012_01",
+      "family": "nyu_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9081.79999999702,
+          "history_bwe_bps": [
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0
+          ],
+          "history_min_max_bwe_bps": [
+            93006.0,
+            93006.0
+          ],
+          "maximum_sample_gap_ms": 109.0,
+          "sample_count": 11,
+          "span_ms": 1015.8999999985099
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9182.60000000149,
+          "history_bwe_bps": [
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0
+          ],
+          "history_min_max_bwe_bps": [
+            93006.0,
+            93006.0
+          ],
+          "maximum_sample_gap_ms": 109.0,
+          "sample_count": 11,
+          "span_ms": 1015.8000000044703
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9283.29999999702,
+          "history_bwe_bps": [
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0,
+            93006.0
+          ],
+          "history_min_max_bwe_bps": [
+            93006.0,
+            93006.0
+          ],
+          "maximum_sample_gap_ms": 101.0,
+          "sample_count": 11,
+          "span_ms": 1007.5
+        }
+      ],
+      "media_passed": true,
+      "profile": "nyu_lte-low-01",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_lt_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p04-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "umu_private_campus_2024_2025",
+      "capture_error": "file:///workspace/networkRLCD-a135/benchmarks/native_rtc/clock_action_turn_tcp_episode_v12.mjs:301\n if(!result.native_rtc||result.connection!=='connected'||!result.snapshots.every(s=>s.frames_decoded>10&&s.frames_encoded>10&&Number.isFinite(s.mean_encode_s)))throw Error('native media stats not valid');\n                                                                                                                                                                      ^\n\nError: native media stats not valid\n    at file:///workspace/networkRLCD-a135/benchmarks/native_rtc/clock_action_turn_tcp_episode_v12.mjs:301:167\n\nNode.js v24.19.0\n",
+      "capture_status": "failed",
+      "cell": "content_shirlan_waterfall_2012_01__umu_campus_tcp_upload",
+      "content_id": "content_shirlan_waterfall_2012_01",
+      "family": "umu_campus_tcp_upload",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": false,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9071.10000000149,
+          "history_bwe_bps": [
+            32097.0,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996
+          ],
+          "history_min_max_bwe_bps": [
+            32097.0,
+            32593.999999999996
+          ],
+          "maximum_sample_gap_ms": 112.39999999850988,
+          "sample_count": 11,
+          "span_ms": 1021.5
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": false,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9172.20000000298,
+          "history_bwe_bps": [
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996
+          ],
+          "history_min_max_bwe_bps": [
+            32593.999999999996,
+            32593.999999999996
+          ],
+          "maximum_sample_gap_ms": 112.39999999850988,
+          "sample_count": 11,
+          "span_ms": 1021.7000000029802
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": false,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9273.10000000149,
+          "history_bwe_bps": [
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996,
+            32593.999999999996
+          ],
+          "history_min_max_bwe_bps": [
+            32593.999999999996,
+            32593.999999999996
+          ],
+          "maximum_sample_gap_ms": 112.39999999850988,
+          "sample_count": 11,
+          "span_ms": 1021.6999999955297
+        }
+      ],
+      "profile": "umu_campus_tcp_upload-high-01",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_ge_500k",
+      "trial": "v12-p05-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "nyu_mets_lte",
+      "capture_status": "sealed",
+      "cell": "content_shirlan_waterfall_2012_01__nyu_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999085959847904,
+          1.0001495288744056
+        ],
+        "beta_at_origin_feasible_ms": [
+          10613.365335009168,
+          10614.900960627008
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.1437950635718153,
+        "origin_browser_ms": 10224.249999996275,
+        "p95_held_out_width_ms": 2.1437950635718153,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "content_id": "content_shirlan_waterfall_2012_01",
+      "family": "nyu_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9062.69999999553,
+          "history_bwe_bps": [
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0
+          ],
+          "history_min_max_bwe_bps": [
+            164120.0,
+            164120.0
+          ],
+          "maximum_sample_gap_ms": 109.20000000298023,
+          "sample_count": 11,
+          "span_ms": 1018.5
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9163.79999999702,
+          "history_bwe_bps": [
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0
+          ],
+          "history_min_max_bwe_bps": [
+            164120.0,
+            164120.0
+          ],
+          "maximum_sample_gap_ms": 101.39999999850988,
+          "sample_count": 11,
+          "span_ms": 1010.3999999985099
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9264.79999999702,
+          "history_bwe_bps": [
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0,
+            164120.0
+          ],
+          "history_min_max_bwe_bps": [
+            164120.0,
+            164120.0
+          ],
+          "maximum_sample_gap_ms": 101.39999999850988,
+          "sample_count": 11,
+          "span_ms": 1010.5
+        }
+      ],
+      "media_passed": true,
+      "profile": "nyu_lte-low-02",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_lt_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p06-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "umu_private_campus_2024_2025",
+      "capture_status": "sealed",
+      "cell": "content_king_penguins_2013_01__umu_campus_tcp_upload",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998759736317291,
+          1.0002252883729899
+        ],
+        "beta_at_origin_feasible_ms": [
+          10486.116860604248,
+          10487.990172426471
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 3.160421984617642,
+        "origin_browser_ms": 10120.95000000298,
+        "p95_held_out_width_ms": 3.160421984617642,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_king_penguins_2013_01",
+      "family": "umu_campus_tcp_upload",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9090.29999999702,
+          "history_bwe_bps": [
+            2785323.0,
+            2631034.0,
+            2475759.0,
+            2475759.0,
+            2477507.0,
+            2480833.0,
+            2484243.0,
+            2470504.0,
+            2470504.0,
+            2401231.0,
+            2401231.0
+          ],
+          "history_min_max_bwe_bps": [
+            2401231.0,
+            2785323.0
+          ],
+          "maximum_sample_gap_ms": 108.20000000298023,
+          "sample_count": 11,
+          "span_ms": 1016.8999999985099
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9191.29999999702,
+          "history_bwe_bps": [
+            2631034.0,
+            2475759.0,
+            2475759.0,
+            2477507.0,
+            2480833.0,
+            2484243.0,
+            2470504.0,
+            2470504.0,
+            2401231.0,
+            2401231.0,
+            2401231.0
+          ],
+          "history_min_max_bwe_bps": [
+            2401231.0,
+            2631034.0
+          ],
+          "maximum_sample_gap_ms": 108.20000000298023,
+          "sample_count": 11,
+          "span_ms": 1017.0
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9292.09999999404,
+          "history_bwe_bps": [
+            2475759.0,
+            2475759.0,
+            2477507.0,
+            2480833.0,
+            2484243.0,
+            2470504.0,
+            2470504.0,
+            2401231.0,
+            2401231.0,
+            2401231.0,
+            2276581.0
+          ],
+          "history_min_max_bwe_bps": [
+            2276581.0,
+            2484243.0
+          ],
+          "maximum_sample_gap_ms": 108.20000000298023,
+          "sample_count": 11,
+          "span_ms": 1017
+        }
+      ],
+      "media_passed": true,
+      "profile": "umu_campus_tcp_upload-high-02",
+      "qualification": {
+        "bwe_history_bps": [
+          2785323,
+          2631034,
+          2475759,
+          2475759,
+          2477507,
+          2480833,
+          2484243,
+          2470504,
+          2470504,
+          2401231,
+          2401231
+        ],
+        "elapsed_ms": 9090.29999999702,
+        "history_samples": 11,
+        "max_gap_ms": 108.20000000298023,
+        "passed": true,
+        "sample_history_ms": [
+          8849.30000000447,
+          8950.20000000298,
+          9051,
+          9151.90000000596,
+          9252.90000000596,
+          9353.80000000447,
+          9454.70000000298,
+          9555.90000000596,
+          9656.70000000298,
+          9764.90000000596,
+          9866.20000000298
+        ],
+        "span_ms": 1016.8999999985099,
+        "target_state": "bwe_ge_500k"
+      },
+      "registered_check_passed": true,
+      "support_qualified": true,
+      "target_state": "bwe_ge_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p07-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "ucc_irish_lte_2017_2018",
+      "capture_status": "sealed",
+      "cell": "content_king_penguins_2013_01__irish_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998752444339866,
+          1.0000866300885776
+        ],
+        "beta_at_origin_feasible_ms": [
+          10566.111654546674,
+          10567.287744574201
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 1.7990871054134914,
+        "origin_browser_ms": 10198.800000000745,
+        "p95_held_out_width_ms": 1.7990871054134914,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 4
+      },
+      "content_id": "content_king_penguins_2013_01",
+      "family": "irish_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9063.20000000298,
+          "history_bwe_bps": [
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0
+          ],
+          "history_min_max_bwe_bps": [
+            1225579.0,
+            1225579.0
+          ],
+          "maximum_sample_gap_ms": 109.0,
+          "sample_count": 11,
+          "span_ms": 1016.3000000044703
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9164.70000000298,
+          "history_bwe_bps": [
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0
+          ],
+          "history_min_max_bwe_bps": [
+            1225579.0,
+            1225579.0
+          ],
+          "maximum_sample_gap_ms": 109.0,
+          "sample_count": 11,
+          "span_ms": 1017.1000000014901
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9266.60000000149,
+          "history_bwe_bps": [
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0,
+            1225579.0
+          ],
+          "history_min_max_bwe_bps": [
+            1225579.0,
+            1225579.0
+          ],
+          "maximum_sample_gap_ms": 109.0,
+          "sample_count": 11,
+          "span_ms": 1018.1000000014901
+        }
+      ],
+      "media_passed": true,
+      "profile": "irish_lte-high-01",
+      "qualification": {
+        "bwe_history_bps": [
+          1225579,
+          1225579,
+          1225579,
+          1225579,
+          1225579,
+          1225579,
+          1225579,
+          1225579,
+          1225579,
+          1225579,
+          1225579
+        ],
+        "elapsed_ms": 9063.20000000298,
+        "history_samples": 11,
+        "max_gap_ms": 109,
+        "passed": true,
+        "sample_history_ms": [
+          8875.29999999702,
+          8976,
+          9076.89999999851,
+          9185.89999999851,
+          9286.79999999702,
+          9387.69999999553,
+          9488.5,
+          9589.39999999851,
+          9690.19999999553,
+          9790.89999999851,
+          9891.60000000149
+        ],
+        "span_ms": 1016.3000000044703,
+        "target_state": "bwe_ge_500k"
+      },
+      "registered_check_passed": true,
+      "support_qualified": true,
+      "target_state": "bwe_ge_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p08-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "nyu_mets_lte",
+      "capture_status": "sealed",
+      "cell": "content_king_penguins_2013_01__nyu_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998710937673395,
+          1.00012910329729
+        ],
+        "beta_at_origin_feasible_ms": [
+          10594.012524999282,
+          10595.329273988124
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.223418144694733,
+        "origin_browser_ms": 10203.94999999553,
+        "p95_held_out_width_ms": 2.223418144694733,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 8
+      },
+      "content_id": "content_king_penguins_2013_01",
+      "family": "nyu_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9060.89999999851,
+          "history_bwe_bps": [
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0
+          ],
+          "history_min_max_bwe_bps": [
+            90699.0,
+            90699.0
+          ],
+          "maximum_sample_gap_ms": 108.60000000149012,
+          "sample_count": 11,
+          "span_ms": 1017.2000000029802
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9161.79999999702,
+          "history_bwe_bps": [
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0
+          ],
+          "history_min_max_bwe_bps": [
+            90699.0,
+            90699.0
+          ],
+          "maximum_sample_gap_ms": 108.60000000149012,
+          "sample_count": 11,
+          "span_ms": 1017.2000000029802
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9263.09999999404,
+          "history_bwe_bps": [
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0,
+            90699.0
+          ],
+          "history_min_max_bwe_bps": [
+            90699.0,
+            90699.0
+          ],
+          "maximum_sample_gap_ms": 108.60000000149012,
+          "sample_count": 11,
+          "span_ms": 1017.5
+        }
+      ],
+      "media_passed": true,
+      "profile": "nyu_lte-low-01",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_lt_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p09-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "ucc_irish_lte_2017_2018",
+      "capture_status": "sealed",
+      "cell": "content_king_penguins_2013_01__irish_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998584676781384,
+          1.0001187855745775
+        ],
+        "beta_at_origin_feasible_ms": [
+          10665.055935902621,
+          10666.62608332679
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.2330417848625075,
+        "origin_browser_ms": 10298.550000000745,
+        "p95_held_out_width_ms": 2.2330417848625075,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "content_id": "content_king_penguins_2013_01",
+      "family": "irish_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": false,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9065.79999999702,
+          "history_bwe_bps": [
+            459777.0,
+            459777.0,
+            459777.0,
+            410366.0,
+            410366.0,
+            410366.0,
+            410366.0,
+            411145.0,
+            411535.0,
+            412319.0,
+            412319.0
+          ],
+          "history_min_max_bwe_bps": [
+            410366.0,
+            459777.0
+          ],
+          "maximum_sample_gap_ms": 110.0,
+          "sample_count": 11,
+          "span_ms": 1018.8999999985099
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": false,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9166.89999999851,
+          "history_bwe_bps": [
+            459777.0,
+            459777.0,
+            410366.0,
+            410366.0,
+            410366.0,
+            410366.0,
+            411145.0,
+            411535.0,
+            412319.0,
+            412319.0,
+            412319.0
+          ],
+          "history_min_max_bwe_bps": [
+            410366.0,
+            459777.0
+          ],
+          "maximum_sample_gap_ms": 110.0,
+          "sample_count": 11,
+          "span_ms": 1019.2000000029802
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": false,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9268.19999999553,
+          "history_bwe_bps": [
+            459777.0,
+            410366.0,
+            410366.0,
+            410366.0,
+            410366.0,
+            411145.0,
+            411535.0,
+            412319.0,
+            412319.0,
+            412319.0,
+            412319.0
+          ],
+          "history_min_max_bwe_bps": [
+            410366.0,
+            459777.0
+          ],
+          "maximum_sample_gap_ms": 110.0,
+          "sample_count": 11,
+          "span_ms": 1019.6999999955297
+        }
+      ],
+      "media_passed": true,
+      "profile": "irish_lte-high-02",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_ge_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p10-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "umu_private_campus_2024_2025",
+      "capture_status": "sealed",
+      "cell": "content_king_penguins_2013_01__umu_campus_tcp_upload",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998454037654295,
+          1.0001255888176166
+        ],
+        "beta_at_origin_feasible_ms": [
+          10604.653103596114,
+          10606.115982016514
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.3399706280379178,
+        "origin_browser_ms": 10200.39999999851,
+        "p95_held_out_width_ms": 2.3399706280379178,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "content_id": "content_king_penguins_2013_01",
+      "family": "umu_campus_tcp_upload",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9077.60000000149,
+          "history_bwe_bps": [
+            86828.0,
+            86828.0,
+            86828.0,
+            87872.0,
+            87872.0,
+            87872.0,
+            88908.0,
+            88908.0,
+            88908.0,
+            90581.0,
+            90581.0
+          ],
+          "history_min_max_bwe_bps": [
+            86828.0,
+            90581.0
+          ],
+          "maximum_sample_gap_ms": 110.10000000149012,
+          "sample_count": 11,
+          "span_ms": 1019.2999999970198
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9178.80000000447,
+          "history_bwe_bps": [
+            86828.0,
+            86828.0,
+            87872.0,
+            87872.0,
+            87872.0,
+            88908.0,
+            88908.0,
+            88908.0,
+            90581.0,
+            90581.0,
+            90581.0
+          ],
+          "history_min_max_bwe_bps": [
+            86828.0,
+            90581.0
+          ],
+          "maximum_sample_gap_ms": 110.10000000149012,
+          "sample_count": 11,
+          "span_ms": 1019.3999999985099
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9279.80000000447,
+          "history_bwe_bps": [
+            86828.0,
+            87872.0,
+            87872.0,
+            87872.0,
+            88908.0,
+            88908.0,
+            88908.0,
+            90581.0,
+            90581.0,
+            90581.0,
+            90581.0
+          ],
+          "history_min_max_bwe_bps": [
+            86828.0,
+            90581.0
+          ],
+          "maximum_sample_gap_ms": 110.10000000149012,
+          "sample_count": 11,
+          "span_ms": 1019.5
+        }
+      ],
+      "media_passed": true,
+      "profile": "umu_campus_tcp_upload-low-02",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_lt_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p11-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "umu_private_campus_2024_2025",
+      "capture_status": "sealed",
+      "cell": "content_king_penguins_2013_01__umu_campus_tcp_upload",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998391887102331,
+          1.0001519353387154
+        ],
+        "beta_at_origin_feasible_ms": [
+          10628.782120411915,
+          10630.443418087098
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 3.7461583345175313,
+        "origin_browser_ms": 10200.89999999851,
+        "p95_held_out_width_ms": 3.7461583345175313,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_king_penguins_2013_01",
+      "family": "umu_campus_tcp_upload",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": false,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9008.60000000149,
+          "history_bwe_bps": [
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0
+          ],
+          "history_min_max_bwe_bps": [
+            30000.0,
+            30000.0
+          ],
+          "maximum_sample_gap_ms": 111.10000000149012,
+          "sample_count": 11,
+          "span_ms": 1023.2000000029802
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": false,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9109.69999999553,
+          "history_bwe_bps": [
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0
+          ],
+          "history_min_max_bwe_bps": [
+            30000.0,
+            30000.0
+          ],
+          "maximum_sample_gap_ms": 111.10000000149012,
+          "sample_count": 11,
+          "span_ms": 1021.0999999940395
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": false,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9211.69999999553,
+          "history_bwe_bps": [
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0,
+            30000.0
+          ],
+          "history_min_max_bwe_bps": [
+            30000.0,
+            30000.0
+          ],
+          "maximum_sample_gap_ms": 111.10000000149012,
+          "sample_count": 11,
+          "span_ms": 1021.5
+        }
+      ],
+      "media_passed": true,
+      "profile": "umu_campus_tcp_upload-high-01",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_ge_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p12-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "ucc_irish_lte_2017_2018",
+      "capture_status": "sealed",
+      "cell": "content_shirlan_waterfall_2012_01__irish_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998824974571754,
+          1.000101707662828
+        ],
+        "beta_at_origin_feasible_ms": [
+          10713.106265316343,
+          10714.403189836681
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 1.9938053423866222,
+        "origin_browser_ms": 10306.999999996275,
+        "p95_held_out_width_ms": 1.9938053423866222,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_shirlan_waterfall_2012_01",
+      "family": "irish_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9077.89999999851,
+          "history_bwe_bps": [
+            291771.0,
+            296451.0,
+            296451.0,
+            300276.0,
+            300276.0,
+            300276.0,
+            305291.0,
+            305291.0,
+            305291.0,
+            309367.0,
+            309367.0
+          ],
+          "history_min_max_bwe_bps": [
+            291771.0,
+            309367.0
+          ],
+          "maximum_sample_gap_ms": 107.39999999850988,
+          "sample_count": 11,
+          "span_ms": 1019.3999999985099
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9178.69999999553,
+          "history_bwe_bps": [
+            296451.0,
+            296451.0,
+            300276.0,
+            300276.0,
+            300276.0,
+            305291.0,
+            305291.0,
+            305291.0,
+            309367.0,
+            309367.0,
+            309367.0
+          ],
+          "history_min_max_bwe_bps": [
+            296451.0,
+            309367.0
+          ],
+          "maximum_sample_gap_ms": 107.39999999850988,
+          "sample_count": 11,
+          "span_ms": 1019.2999999970198
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9279.69999999553,
+          "history_bwe_bps": [
+            296451.0,
+            300276.0,
+            300276.0,
+            300276.0,
+            305291.0,
+            305291.0,
+            305291.0,
+            309367.0,
+            309367.0,
+            309367.0,
+            315644.0
+          ],
+          "history_min_max_bwe_bps": [
+            296451.0,
+            315644.0
+          ],
+          "maximum_sample_gap_ms": 107.39999999850988,
+          "sample_count": 11,
+          "span_ms": 1019.2999999970198
+        }
+      ],
+      "media_passed": true,
+      "profile": "irish_lte-low-01",
+      "qualification": {
+        "bwe_history_bps": [
+          291771,
+          296451,
+          296451,
+          300276,
+          300276,
+          300276,
+          305291,
+          305291,
+          305291,
+          309367,
+          309367
+        ],
+        "elapsed_ms": 9077.89999999851,
+        "history_samples": 11,
+        "max_gap_ms": 107.39999999850988,
+        "passed": true,
+        "sample_history_ms": [
+          9025.10000000149,
+          9126,
+          9227,
+          9328.60000000149,
+          9429.60000000149,
+          9531.60000000149,
+          9639,
+          9741.10000000149,
+          9842.89999999851,
+          9943.5,
+          10044.5
+        ],
+        "span_ms": 1019.3999999985099,
+        "target_state": "bwe_lt_500k"
+      },
+      "registered_check_passed": true,
+      "support_qualified": true,
+      "target_state": "bwe_lt_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p13-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "umu_private_campus_2024_2025",
+      "capture_status": "sealed",
+      "cell": "content_king_penguins_2013_01__umu_campus_tcp_upload",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998901479487384,
+          1.00010554897352
+        ],
+        "beta_at_origin_feasible_ms": [
+          10565.36978791876,
+          10566.814646638752
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.001330553295702,
+        "origin_browser_ms": 10154.499999996275,
+        "p95_held_out_width_ms": 2.001330553295702,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_king_penguins_2013_01",
+      "family": "umu_campus_tcp_upload",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9089.39999999851,
+          "history_bwe_bps": [
+            166556.0,
+            166556.0,
+            134760.0,
+            134760.0,
+            130261.99999999999,
+            130261.99999999999,
+            130261.99999999999,
+            114938.0,
+            114938.0,
+            114938.0,
+            115190.0
+          ],
+          "history_min_max_bwe_bps": [
+            114938.0,
+            166556.0
+          ],
+          "maximum_sample_gap_ms": 103.29999999701977,
+          "sample_count": 11,
+          "span_ms": 1012.0
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9200.20000000298,
+          "history_bwe_bps": [
+            166556.0,
+            134760.0,
+            134760.0,
+            130261.99999999999,
+            130261.99999999999,
+            130261.99999999999,
+            114938.0,
+            114938.0,
+            114938.0,
+            115190.0,
+            115441.0
+          ],
+          "history_min_max_bwe_bps": [
+            114938.0,
+            166556.0
+          ],
+          "maximum_sample_gap_ms": 110.80000000447035,
+          "sample_count": 11,
+          "span_ms": 1021.8000000044703
+        }
+      ],
+      "media_passed": true,
+      "profile": "umu_campus_tcp_upload-low-01",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_lt_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p14-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "nyu_mets_lte",
+      "capture_status": "sealed",
+      "cell": "content_shirlan_waterfall_2012_01__nyu_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.999912468982125,
+          1.0001544732666576
+        ],
+        "beta_at_origin_feasible_ms": [
+          10637.430111813115,
+          10639.256361834689
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.495431365969125,
+        "origin_browser_ms": 10249.500000003725,
+        "p95_held_out_width_ms": 2.495431365969125,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_shirlan_waterfall_2012_01",
+      "family": "nyu_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9075.60000000149,
+          "history_bwe_bps": [
+            1671910.0,
+            1671910.0,
+            1671910.0,
+            1864494.0,
+            1864494.0,
+            1864494.0,
+            2038654.0000000002,
+            2038654.0000000002,
+            2038654.0000000002,
+            2047069.0,
+            2047069.0
+          ],
+          "history_min_max_bwe_bps": [
+            1671910.0,
+            2047069.0
+          ],
+          "maximum_sample_gap_ms": 109.10000000149012,
+          "sample_count": 11,
+          "span_ms": 1018.7000000029802
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9176.70000000298,
+          "history_bwe_bps": [
+            1671910.0,
+            1671910.0,
+            1864494.0,
+            1864494.0,
+            1864494.0,
+            2038654.0000000002,
+            2038654.0000000002,
+            2038654.0000000002,
+            2047069.0,
+            2047069.0,
+            2053821.0000000002
+          ],
+          "history_min_max_bwe_bps": [
+            1671910.0,
+            2053821.0000000002
+          ],
+          "maximum_sample_gap_ms": 109.10000000149012,
+          "sample_count": 11,
+          "span_ms": 1019.0
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9277.70000000298,
+          "history_bwe_bps": [
+            1671910.0,
+            1864494.0,
+            1864494.0,
+            1864494.0,
+            2038654.0000000002,
+            2038654.0000000002,
+            2038654.0000000002,
+            2047069.0,
+            2047069.0,
+            2053821.0000000002,
+            2053821.0000000002
+          ],
+          "history_min_max_bwe_bps": [
+            1671910.0,
+            2053821.0000000002
+          ],
+          "maximum_sample_gap_ms": 109.10000000149012,
+          "sample_count": 11,
+          "span_ms": 1019.2000000029802
+        }
+      ],
+      "media_passed": true,
+      "profile": "nyu_lte-high-01",
+      "qualification": {
+        "bwe_history_bps": [
+          1671910,
+          1671910,
+          1671910,
+          1864494,
+          1864494,
+          1864494,
+          2038654,
+          2038654,
+          2038654,
+          2047069,
+          2047069
+        ],
+        "elapsed_ms": 9075.60000000149,
+        "history_samples": 11,
+        "max_gap_ms": 109.10000000149012,
+        "passed": true,
+        "sample_history_ms": [
+          8968.5,
+          9069.30000000447,
+          9170.10000000149,
+          9271,
+          9372.20000000298,
+          9473.80000000447,
+          9575.20000000298,
+          9684.30000000447,
+          9785.30000000447,
+          9886.30000000447,
+          9987.20000000298
+        ],
+        "span_ms": 1018.7000000029802,
+        "target_state": "bwe_ge_500k"
+      },
+      "registered_check_passed": true,
+      "support_qualified": true,
+      "target_state": "bwe_ge_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p15-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "ucc_irish_lte_2017_2018",
+      "capture_status": "sealed",
+      "cell": "content_king_penguins_2013_01__irish_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998898199178536,
+          1.000102810770694
+        ],
+        "beta_at_origin_feasible_ms": [
+          10618.53598781846,
+          10619.97659585214
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.0104847477505245,
+        "origin_browser_ms": 10230.90000000596,
+        "p95_held_out_width_ms": 2.0104847477505245,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 8
+      },
+      "content_id": "content_king_penguins_2013_01",
+      "family": "irish_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9069.89999999851,
+          "history_bwe_bps": [
+            247483.0,
+            247483.0,
+            252290.0,
+            252290.0,
+            257184.00000000003,
+            257184.00000000003,
+            257184.00000000003,
+            263450.0,
+            263450.0,
+            263450.0,
+            268626.0
+          ],
+          "history_min_max_bwe_bps": [
+            247483.0,
+            268626.0
+          ],
+          "maximum_sample_gap_ms": 109.89999999850988,
+          "sample_count": 11,
+          "span_ms": 1021.5
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9172.5,
+          "history_bwe_bps": [
+            247483.0,
+            252290.0,
+            252290.0,
+            257184.00000000003,
+            257184.00000000003,
+            257184.00000000003,
+            263450.0,
+            263450.0,
+            263450.0,
+            268626.0,
+            268626.0
+          ],
+          "history_min_max_bwe_bps": [
+            247483.0,
+            268626.0
+          ],
+          "maximum_sample_gap_ms": 109.89999999850988,
+          "sample_count": 11,
+          "span_ms": 1022.8999999985099
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9273.89999999851,
+          "history_bwe_bps": [
+            252290.0,
+            252290.0,
+            257184.00000000003,
+            257184.00000000003,
+            257184.00000000003,
+            263450.0,
+            263450.0,
+            263450.0,
+            268626.0,
+            268626.0,
+            268626.0
+          ],
+          "history_min_max_bwe_bps": [
+            252290.0,
+            268626.0
+          ],
+          "maximum_sample_gap_ms": 109.89999999850988,
+          "sample_count": 11,
+          "span_ms": 1023.5
+        }
+      ],
+      "media_passed": true,
+      "profile": "irish_lte-low-01",
+      "qualification": {
+        "bwe_history_bps": [
+          247483,
+          247483,
+          252290,
+          252290,
+          257184,
+          257184,
+          257184,
+          263450,
+          263450,
+          263450,
+          268626
+        ],
+        "elapsed_ms": 9069.89999999851,
+        "history_samples": 11,
+        "max_gap_ms": 109.89999999850988,
+        "passed": true,
+        "sample_history_ms": [
+          8905.70000000298,
+          9006.90000000596,
+          9107.70000000298,
+          9208.5,
+          9309.40000000596,
+          9419.30000000447,
+          9520.5,
+          9621.40000000596,
+          9722.20000000298,
+          9826.10000000149,
+          9927.20000000298
+        ],
+        "span_ms": 1021.5,
+        "target_state": "bwe_lt_500k"
+      },
+      "registered_check_passed": true,
+      "support_qualified": true,
+      "target_state": "bwe_lt_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p16-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "umu_private_campus_2024_2025",
+      "capture_status": "sealed",
+      "cell": "content_shirlan_waterfall_2012_01__umu_campus_tcp_upload",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.999869582318647,
+          1.0001091731420337
+        ],
+        "beta_at_origin_feasible_ms": [
+          10684.81802860098,
+          10686.597815322797
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.6187087728303595,
+        "origin_browser_ms": 10306.199999999255,
+        "p95_held_out_width_ms": 2.6187087728303595,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_shirlan_waterfall_2012_01",
+      "family": "umu_campus_tcp_upload",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9099.0,
+          "history_bwe_bps": [
+            140091.0,
+            128681.99999999999,
+            128681.99999999999,
+            128681.99999999999,
+            128681.99999999999,
+            128681.99999999999,
+            128681.99999999999,
+            128681.99999999999,
+            117301.0,
+            117301.0,
+            117301.0
+          ],
+          "history_min_max_bwe_bps": [
+            117301.0,
+            140091.0
+          ],
+          "maximum_sample_gap_ms": 111.29999999701977,
+          "sample_count": 11,
+          "span_ms": 1020.2000000029802
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9199.69999999553,
+          "history_bwe_bps": [
+            128681.99999999999,
+            128681.99999999999,
+            128681.99999999999,
+            128681.99999999999,
+            128681.99999999999,
+            128681.99999999999,
+            128681.99999999999,
+            117301.0,
+            117301.0,
+            117301.0,
+            117301.0
+          ],
+          "history_min_max_bwe_bps": [
+            117301.0,
+            128681.99999999999
+          ],
+          "maximum_sample_gap_ms": 111.29999999701977,
+          "sample_count": 11,
+          "span_ms": 1019.8999999985099
+        }
+      ],
+      "media_passed": true,
+      "profile": "umu_campus_tcp_upload-low-01",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_lt_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p17-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "ucc_irish_lte_2017_2018",
+      "capture_status": "sealed",
+      "cell": "content_king_penguins_2013_01__irish_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999190942896947,
+          1.0001092906301048
+        ],
+        "beta_at_origin_feasible_ms": [
+          10659.871354501312,
+          10661.10622880524
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 1.7659726319416222,
+        "origin_browser_ms": 10248.29999999702,
+        "p95_held_out_width_ms": 1.7659726319416222,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_king_penguins_2013_01",
+      "family": "irish_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9091.0,
+          "history_bwe_bps": [
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0
+          ],
+          "history_min_max_bwe_bps": [
+            59683.0,
+            59683.0
+          ],
+          "maximum_sample_gap_ms": 109.90000000596046,
+          "sample_count": 11,
+          "span_ms": 1019.8999999985099
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9191.89999999851,
+          "history_bwe_bps": [
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0
+          ],
+          "history_min_max_bwe_bps": [
+            59683.0,
+            59683.0
+          ],
+          "maximum_sample_gap_ms": 109.90000000596046,
+          "sample_count": 11,
+          "span_ms": 1019.7999999970198
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9292.79999999702,
+          "history_bwe_bps": [
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0,
+            59683.0
+          ],
+          "history_min_max_bwe_bps": [
+            59683.0,
+            59683.0
+          ],
+          "maximum_sample_gap_ms": 109.90000000596046,
+          "sample_count": 11,
+          "span_ms": 1019.5
+        }
+      ],
+      "media_passed": true,
+      "profile": "irish_lte-low-02",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_lt_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p18-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "nyu_mets_lte",
+      "capture_status": "sealed",
+      "cell": "content_shirlan_waterfall_2012_01__nyu_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998874093277275,
+          1.0001467398471215
+        ],
+        "beta_at_origin_feasible_ms": [
+          10697.22366285297,
+          10698.968422369444
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.3005968221496005,
+        "origin_browser_ms": 10256.04999999702,
+        "p95_held_out_width_ms": 2.3005968221496005,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "content_id": "content_shirlan_waterfall_2012_01",
+      "family": "nyu_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9088.89999999851,
+          "history_bwe_bps": [
+            2605181.0,
+            2605181.0,
+            2605181.0,
+            2605181.0,
+            2605181.0,
+            2605181.0,
+            2629373.0,
+            2629373.0,
+            2629373.0,
+            2629373.0,
+            2629373.0
+          ],
+          "history_min_max_bwe_bps": [
+            2605181.0,
+            2629373.0
+          ],
+          "maximum_sample_gap_ms": 111.79999999701977,
+          "sample_count": 11,
+          "span_ms": 1025.7999999970198
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9190.39999999851,
+          "history_bwe_bps": [
+            2605181.0,
+            2605181.0,
+            2605181.0,
+            2605181.0,
+            2605181.0,
+            2629373.0,
+            2629373.0,
+            2629373.0,
+            2629373.0,
+            2629373.0,
+            2629373.0
+          ],
+          "history_min_max_bwe_bps": [
+            2605181.0,
+            2629373.0
+          ],
+          "maximum_sample_gap_ms": 111.79999999701977,
+          "sample_count": 11,
+          "span_ms": 1021.1999999955297
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9291.30000000447,
+          "history_bwe_bps": [
+            2605181.0,
+            2605181.0,
+            2605181.0,
+            2605181.0,
+            2629373.0,
+            2629373.0,
+            2629373.0,
+            2629373.0,
+            2629373.0,
+            2629373.0,
+            2645629.0
+          ],
+          "history_min_max_bwe_bps": [
+            2605181.0,
+            2645629.0
+          ],
+          "maximum_sample_gap_ms": 111.79999999701977,
+          "sample_count": 11,
+          "span_ms": 1021.0
+        }
+      ],
+      "media_passed": true,
+      "profile": "nyu_lte-high-02",
+      "qualification": {
+        "bwe_history_bps": [
+          2605181,
+          2605181,
+          2605181,
+          2605181,
+          2605181,
+          2605181,
+          2629373,
+          2629373,
+          2629373,
+          2629373,
+          2629373
+        ],
+        "elapsed_ms": 9088.89999999851,
+        "history_samples": 11,
+        "max_gap_ms": 111.79999999701977,
+        "passed": true,
+        "sample_history_ms": [
+          8944.29999999702,
+          9050.39999999851,
+          9151.5,
+          9252.29999999702,
+          9353.89999999851,
+          9454.79999999702,
+          9555.59999999404,
+          9656.5,
+          9757.39999999851,
+          9858.29999999702,
+          9970.09999999404
+        ],
+        "span_ms": 1025.7999999970198,
+        "target_state": "bwe_ge_500k"
+      },
+      "registered_check_passed": true,
+      "support_qualified": true,
+      "target_state": "bwe_ge_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p19-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "nyu_mets_lte",
+      "capture_status": "sealed",
+      "cell": "content_king_penguins_2013_01__nyu_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9997843649197815,
+          1.0001667186709418
+        ],
+        "beta_at_origin_feasible_ms": [
+          10624.777361940842,
+          10626.30799737231
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 3.2011757109721657,
+        "origin_browser_ms": 10232.04999999702,
+        "p95_held_out_width_ms": 3.2011757109721657,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_king_penguins_2013_01",
+      "family": "nyu_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9001.0,
+          "history_bwe_bps": [
+            1935650.0,
+            1935650.0,
+            1999905.0,
+            1999905.0,
+            1999905.0,
+            2009488.0000000002,
+            2009488.0000000002,
+            2017226.0,
+            2017226.0,
+            2017226.0,
+            2024007.0
+          ],
+          "history_min_max_bwe_bps": [
+            1935650.0,
+            2024007.0
+          ],
+          "maximum_sample_gap_ms": 110.19999999552965,
+          "sample_count": 11,
+          "span_ms": 1020.2999999970198
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9102.0,
+          "history_bwe_bps": [
+            1935650.0,
+            1999905.0,
+            1999905.0,
+            1999905.0,
+            2009488.0000000002,
+            2009488.0000000002,
+            2017226.0,
+            2017226.0,
+            2017226.0,
+            2024007.0,
+            2024007.0
+          ],
+          "history_min_max_bwe_bps": [
+            1935650.0,
+            2024007.0
+          ],
+          "maximum_sample_gap_ms": 110.19999999552965,
+          "sample_count": 11,
+          "span_ms": 1020.5
+        },
+        {
+          "all_criteria_met": true,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9202.80000000447,
+          "history_bwe_bps": [
+            1999905.0,
+            1999905.0,
+            1999905.0,
+            2009488.0000000002,
+            2009488.0000000002,
+            2017226.0,
+            2017226.0,
+            2017226.0,
+            2024007.0,
+            2024007.0,
+            2024007.0
+          ],
+          "history_min_max_bwe_bps": [
+            1999905.0,
+            2024007.0
+          ],
+          "maximum_sample_gap_ms": 110.19999999552965,
+          "sample_count": 11,
+          "span_ms": 1020.4000000059605
+        }
+      ],
+      "media_passed": true,
+      "profile": "nyu_lte-high-01",
+      "qualification": {
+        "bwe_history_bps": [
+          1935650,
+          1935650,
+          1999905,
+          1999905,
+          1999905,
+          2009488,
+          2009488,
+          2017226,
+          2017226,
+          2017226,
+          2024007
+        ],
+        "elapsed_ms": 9001,
+        "history_samples": 11,
+        "max_gap_ms": 110.19999999552965,
+        "passed": true,
+        "sample_history_ms": [
+          8864,
+          8964.79999999702,
+          9065.69999999553,
+          9166.5,
+          9267.69999999553,
+          9368.69999999553,
+          9470.10000000149,
+          9580.29999999702,
+          9682.60000000149,
+          9783.39999999851,
+          9884.29999999702
+        ],
+        "span_ms": 1020.2999999970198,
+        "target_state": "bwe_ge_500k"
+      },
+      "registered_check_passed": true,
+      "support_qualified": true,
+      "target_state": "bwe_ge_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p20-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "umu_private_campus_2024_2025",
+      "capture_status": "sealed",
+      "cell": "content_shirlan_waterfall_2012_01__umu_campus_tcp_upload",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998859457949846,
+          1.0001295186157388
+        ],
+        "beta_at_origin_feasible_ms": [
+          10918.50277017042,
+          10919.879309118367
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.2411795702428208,
+        "origin_browser_ms": 10383.14999999851,
+        "p95_held_out_width_ms": 2.2411795702428208,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 8
+      },
+      "content_id": "content_shirlan_waterfall_2012_01",
+      "family": "umu_campus_tcp_upload",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9084.10000000149,
+          "history_bwe_bps": [
+            74018.0,
+            74951.0,
+            75897.0,
+            76371.0,
+            77210.0,
+            77210.0,
+            77210.0,
+            79326.0,
+            79326.0,
+            79326.0,
+            81084.0
+          ],
+          "history_min_max_bwe_bps": [
+            74018.0,
+            81084.0
+          ],
+          "maximum_sample_gap_ms": 109.80000000447035,
+          "sample_count": 11,
+          "span_ms": 1017.7000000029802
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9184.79999999702,
+          "history_bwe_bps": [
+            74951.0,
+            75897.0,
+            76371.0,
+            77210.0,
+            77210.0,
+            77210.0,
+            79326.0,
+            79326.0,
+            79326.0,
+            81084.0,
+            81084.0
+          ],
+          "history_min_max_bwe_bps": [
+            74951.0,
+            81084.0
+          ],
+          "maximum_sample_gap_ms": 109.80000000447035,
+          "sample_count": 11,
+          "span_ms": 1017.6000000014901
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9294.79999999702,
+          "history_bwe_bps": [
+            75897.0,
+            76371.0,
+            77210.0,
+            77210.0,
+            77210.0,
+            79326.0,
+            79326.0,
+            79326.0,
+            81084.0,
+            81084.0,
+            81084.0
+          ],
+          "history_min_max_bwe_bps": [
+            75897.0,
+            81084.0
+          ],
+          "maximum_sample_gap_ms": 110.0,
+          "sample_count": 11,
+          "span_ms": 1026.6999999955297
+        }
+      ],
+      "media_passed": true,
+      "profile": "umu_campus_tcp_upload-low-02",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_lt_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p21-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "nyu_mets_lte",
+      "capture_status": "sealed",
+      "cell": "content_king_penguins_2013_01__nyu_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998521332890422,
+          1.000122175988372
+        ],
+        "beta_at_origin_feasible_ms": [
+          10619.539251508291,
+          10620.777552144209
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.2939695010300056,
+        "origin_browser_ms": 10245.400000002235,
+        "p95_held_out_width_ms": 2.2939695010300056,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_king_penguins_2013_01",
+      "family": "nyu_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9008.20000000298,
+          "history_bwe_bps": [
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0
+          ],
+          "history_min_max_bwe_bps": [
+            160432.0,
+            160432.0
+          ],
+          "maximum_sample_gap_ms": 112.29999999701977,
+          "sample_count": 11,
+          "span_ms": 1022.7000000029802
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9109.10000000149,
+          "history_bwe_bps": [
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0
+          ],
+          "history_min_max_bwe_bps": [
+            160432.0,
+            160432.0
+          ],
+          "maximum_sample_gap_ms": 112.29999999701977,
+          "sample_count": 11,
+          "span_ms": 1022.6000000014901
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": true,
+            "bwe_within_unclipped_action_bounds": false,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9210.0,
+          "history_bwe_bps": [
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0,
+            160432.0
+          ],
+          "history_min_max_bwe_bps": [
+            160432.0,
+            160432.0
+          ],
+          "maximum_sample_gap_ms": 112.29999999701977,
+          "sample_count": 11,
+          "span_ms": 1022.5
+        }
+      ],
+      "media_passed": true,
+      "profile": "nyu_lte-low-02",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_lt_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p22-s0-support"
+    },
+    {
+      "assigned_actions": 0,
+      "baseline_readback_matched_every_decision": true,
+      "campaign": "ucc_irish_lte_2017_2018",
+      "capture_status": "sealed",
+      "cell": "content_shirlan_waterfall_2012_01__irish_lte",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9998838657404043,
+          1.0001525252919905
+        ],
+        "beta_at_origin_feasible_ms": [
+          10657.36334765358,
+          10659.104306815736
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.7354597886551346,
+        "origin_browser_ms": 10249.45000000298,
+        "p95_held_out_width_ms": 2.7354597886551346,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_shirlan_waterfall_2012_01",
+      "family": "irish_lte",
+      "fixed_window_support_candidates": [
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": false,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9084.0,
+          "history_bwe_bps": [
+            611242.0,
+            401172.0,
+            401172.0,
+            401172.0,
+            401172.0,
+            401172.0,
+            401172.0,
+            401843.0,
+            402191.0,
+            402191.0,
+            402191.0
+          ],
+          "history_min_max_bwe_bps": [
+            401172.0,
+            611242.0
+          ],
+          "maximum_sample_gap_ms": 110.70000000298023,
+          "sample_count": 11,
+          "span_ms": 1022.5
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": false,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9185.20000000298,
+          "history_bwe_bps": [
+            401172.0,
+            401172.0,
+            401172.0,
+            401172.0,
+            401172.0,
+            401172.0,
+            401843.0,
+            402191.0,
+            402191.0,
+            402191.0,
+            402191.0
+          ],
+          "history_min_max_bwe_bps": [
+            401172.0,
+            402191.0
+          ],
+          "maximum_sample_gap_ms": 110.70000000298023,
+          "sample_count": 11,
+          "span_ms": 1023.1000000014901
+        },
+        {
+          "all_criteria_met": false,
+          "criteria": {
+            "all_samples_in_target_state": false,
+            "bwe_within_unclipped_action_bounds": true,
+            "eleven_samples": true,
+            "maximum_gap_at_most_250ms": true,
+            "span_at_least_900ms": true
+          },
+          "elapsed_ms": 9286.39999999851,
+          "history_bwe_bps": [
+            401172.0,
+            401172.0,
+            401172.0,
+            401172.0,
+            401172.0,
+            401843.0,
+            402191.0,
+            402191.0,
+            402191.0,
+            402191.0,
+            402191.0
+          ],
+          "history_min_max_bwe_bps": [
+            401172.0,
+            402191.0
+          ],
+          "maximum_sample_gap_ms": 110.70000000298023,
+          "sample_count": 11,
+          "span_ms": 1023.2999999970198
+        }
+      ],
+      "media_passed": true,
+      "profile": "irish_lte-high-02",
+      "qualification": null,
+      "registered_check_passed": false,
+      "support_qualified": false,
+      "target_state": "bwe_ge_500k",
+      "trace_passed": true,
+      "transport_passed": true,
+      "trial": "v12-p23-s0-support"
+    }
+  ],
+  "support_gate_passed": false,
+  "support_protocol_sha256": "218466c70538e9c7daf2595e858ca7004283ddcaac136efa4d133fb8603290c2",
+  "treatment_capture_started": false
+}
