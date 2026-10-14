@@ -1,0 +1,245 @@
+{
+  "abi": "native_bwe_mechanisms_m2_qualification_v1",
+  "base_gate_sha256": "6e05ad103882e142a69a24560e36360e7748ad9be4ab9f1c946835a966e7fe90",
+  "capture_index_sha256": "3eb47feed360657dc48eed7f0a35b7316534d1243cd7632d5516eb3a6bbde99f",
+  "cells": {},
+  "census_states": {},
+  "common_support_at_least_half_octave": false,
+  "common_support_log2_interval": null,
+  "controller_fitted": false,
+  "outcomes_read": false,
+  "passed": true,
+  "planned_sessions": 2,
+  "protocol_sha256": "ac9c426245b7be76696dcdf0d2611d83dfb6db6eefd945e6ce77c0d7a06400e6",
+  "qualified_sessions": 2,
+  "sessions": [
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__synthetic_instrument_check",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999266791553133,
+          1.0000773250805346
+        ],
+        "beta_at_origin_feasible_ms": [
+          19999.756814605356,
+          20001.21710212416
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.521079895483126,
+        "origin_browser_ms": 19493.64999999851,
+        "p95_held_out_width_ms": 2.521079895483126,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 8
+      },
+      "content_id": "content_kampar_boating_01",
+      "history_kind": "synthetic_constant",
+      "initial_bwe_kbps": 300,
+      "mechanism_context": "content_kampar_boating_01::synthetic_constant::initial300",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_instrument_check",
+      "network_profile_id": "synthetic_m1_constant",
+      "passed": true,
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "abi": "native_bwe_mechanisms_m2_startup_v1",
+        "connection_qualified_ms": 1136.4000000059605,
+        "first_measured_bwe_bps": 300000,
+        "ice_gathering_complete_ms": 922.9000000059605,
+        "initial_native_sample_ms": 1136.4000000059605,
+        "initial_native_source": {
+          "bwe_bps": 300000,
+          "bytes_sent": 5348,
+          "encoder_cap_bps": 4000000,
+          "frames_encoded": 3,
+          "packets_sent": 5,
+          "receiver_target_ms": null,
+          "rtcp_rtt_measurements": null,
+          "rtcp_rtt_s": null,
+          "stream_key": "OT01V3451998298:3451998298",
+          "total_encode_s": 0.019,
+          "total_packet_send_delay_s": 0.070419
+        },
+        "local_start_parameter": 300,
+        "measurement_start_ms": 1141.0999999940395,
+        "negotiation_start_ms": 683.7999999970198,
+        "preconnection_cap_readback_bps": 4000000,
+        "preconnection_encoder_cap_bps": 4000000,
+        "relay_created_ms": 926.9000000059605,
+        "remote_start_parameter": 300,
+        "requested_initial_bwe_bps": 300000
+      },
+      "startup_passed": true,
+      "support": {
+        "continuous_log2_bwe": 1.5759883879430538,
+        "geometric_mean_bwe_bps": 1490698.3883212467,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1477496,
+            1483521,
+            1483521,
+            1483521,
+            1491108,
+            1491108,
+            1491108,
+            1497205,
+            1497205,
+            1497205,
+            1504905
+          ],
+          "continuous_log2_bwe": 1.5759883879430538,
+          "elapsed_ms": 18041.30000001192,
+          "geometric_mean_bwe_bps": 1490698.3883212467,
+          "history_samples": 11,
+          "max_gap_ms": 112.09999999403954,
+          "passed": true,
+          "sample_history_ms": [
+            18150.40000000596,
+            18255.59999999404,
+            18360.20000000298,
+            18461.20000000298,
+            18573.29999999702,
+            18675.09999999404,
+            18776.29999999702,
+            18877.29999999702,
+            18978.70000000298,
+            19080.09999999404,
+            19182.40000000596
+          ],
+          "span_ms": 1032
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "m2-instrument-i300-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__synthetic_instrument_check",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999375293775724,
+          1.0000692396773256
+        ],
+        "beta_at_origin_feasible_ms": [
+          19871.186698400503,
+          19873.03019610816
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.4147568290245545,
+        "origin_browser_ms": 19430.25000000745,
+        "p95_held_out_width_ms": 2.4147568290245545,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_kampar_boating_01",
+      "history_kind": "synthetic_constant",
+      "initial_bwe_kbps": 1200,
+      "mechanism_context": "content_kampar_boating_01::synthetic_constant::initial1200",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_instrument_check",
+      "network_profile_id": "synthetic_m1_constant",
+      "passed": true,
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "abi": "native_bwe_mechanisms_m2_startup_v1",
+        "connection_qualified_ms": 1053.800000011921,
+        "first_measured_bwe_bps": 1200000,
+        "ice_gathering_complete_ms": 844.9000000059605,
+        "initial_native_sample_ms": 1053.800000011921,
+        "initial_native_source": {
+          "bwe_bps": 1200000,
+          "bytes_sent": 15207,
+          "encoder_cap_bps": 4000000,
+          "frames_encoded": 3,
+          "packets_sent": 35,
+          "receiver_target_ms": null,
+          "rtcp_rtt_measurements": null,
+          "rtcp_rtt_s": null,
+          "stream_key": "OT01V700048605:700048605",
+          "total_encode_s": 0.009,
+          "total_packet_send_delay_s": 0.167062
+        },
+        "local_start_parameter": 1200,
+        "measurement_start_ms": 1056.9000000059605,
+        "negotiation_start_ms": 606.5,
+        "preconnection_cap_readback_bps": 4000000,
+        "preconnection_encoder_cap_bps": 4000000,
+        "relay_created_ms": 849,
+        "remote_start_parameter": 1200,
+        "requested_initial_bwe_bps": 1200000
+      },
+      "startup_passed": true,
+      "support": {
+        "continuous_log2_bwe": 1.6099518855979411,
+        "geometric_mean_bwe_bps": 1526208.308512013,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1510800,
+            1518276,
+            1518276,
+            1518276,
+            1525820,
+            1525820,
+            1531822,
+            1531822,
+            1531822,
+            1537909,
+            1537909
+          ],
+          "continuous_log2_bwe": 1.6099518855979413,
+          "elapsed_ms": 18078.59999999404,
+          "geometric_mean_bwe_bps": 1526208.3085120132,
+          "history_samples": 11,
+          "max_gap_ms": 114.80000001192093,
+          "passed": true,
+          "sample_history_ms": [
+            18082.90000000596,
+            18184.40000000596,
+            18287,
+            18396.5,
+            18511.30000001192,
+            18615.5,
+            18728,
+            18831.40000000596,
+            18933.5,
+            19034.70000000298,
+            19135.5
+          ],
+          "span_ms": 1052.5999999940395
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "m2-instrument-i1200-s0-support"
+    }
+  ],
+  "stage": "instrument_check",
+  "v13_reopened": false
+}

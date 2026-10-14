@@ -1,0 +1,317 @@
+{
+  "abi": "native_bwe_mechanisms_m2_summary_v1",
+  "bitrate_actions_assigned": 0,
+  "capture_index_sha256": "4ebc1a4b6b2b3a74eb3c836d7aac54c1197da9a5bdad3a67b5556ab8ce146d7d",
+  "common_measured_support_established": false,
+  "content_factorial_comparisons": {
+    "content_kampar_boating_01": {
+      "estimable": true,
+      "history": {
+        "block_contrasts_octaves": [
+          0.0316670011546194,
+          2.7093757125895568e-05,
+          -0.14866829637675527,
+          0.12583223238123353
+        ],
+        "equal_block_mean_octaves": 0.0022145077290558896,
+        "equally_weighted_reference_allocations": 256,
+        "exact_two_sided_sharp_null_p": 0.9140625,
+        "limits": "Finite randomized development support-state contrast; assumes no session carryover. No population interval or action effect.",
+        "sharp_null": "No effect of this factor conditional on other-factor labels",
+        "sharp_null_reference_95pct": [
+          -0.08227559899064685,
+          0.08227559899064685
+        ],
+        "sharp_null_reference_sd_octaves": 0.048763233788354204
+      },
+      "initial": {
+        "block_contrasts_octaves": [
+          0.036747274002558505,
+          0.04340669747602993,
+          -0.16219240028127568,
+          0.31232493372433745
+        ],
+        "equal_block_mean_octaves": 0.05757162623041255,
+        "equally_weighted_reference_allocations": 256,
+        "exact_two_sided_sharp_null_p": 0.4765625,
+        "limits": "Finite randomized development support-state contrast; assumes no session carryover. No population interval or action effect.",
+        "sharp_null": "No effect of this factor conditional on other-factor labels",
+        "sharp_null_reference_95pct": [
+          -0.12815389803671812,
+          0.12815389803671812
+        ],
+        "sharp_null_reference_sd_octaves": 0.07164151745440285
+      },
+      "interaction": {
+        "block_contrasts_octaves": [
+          0.0337262482727696,
+          -0.10159587833548855,
+          0.2702553219686916,
+          0.2532050704996798
+        ],
+        "equal_block_mean_octaves": 0.11389769060141311,
+        "equally_weighted_reference_allocations": 1296,
+        "exact_two_sided_sharp_null_p": 0.45987654320987653,
+        "limits": "Finite randomized development support-state contrast; assumes no session carryover. No population interval or action effect.",
+        "sharp_null": "No recipe effect at all; not an isolated interaction-null test",
+        "sharp_null_reference_95pct": [
+          -0.24409065038601302,
+          0.24409065038601302
+        ],
+        "sharp_null_reference_sd_octaves": 0.13012142966322973
+      },
+      "within_context_variances": {
+        "hybrid_flat_prefix::1200": 0.04316014702212468,
+        "hybrid_flat_prefix::300": 0.00041188462034706923,
+        "measured_original::1200": 0.006317054988648172,
+        "measured_original::300": 0.030116482828352206
+      }
+    },
+    "content_volga_lock_01": {
+      "estimable": false,
+      "reason": "an original session failed technical/native qualification"
+    }
+  },
+  "contexts": {
+    "content_kampar_boating_01::hybrid_flat_prefix::initial1200": {
+      "content": "content_kampar_boating_01",
+      "full_spread_octaves": 0.43672756528957013,
+      "history": "hybrid_flat_prefix",
+      "initial_bwe_kbps": 1200,
+      "qualified_sessions": 4,
+      "repeatability_passed": false,
+      "replicate_bwe_geo_bps": [
+        1040948.928656361,
+        1000995.9548128439,
+        1011768.552008059,
+        1354878.7131462558
+      ],
+      "replicate_x": [
+        1.0578992884436371,
+        1.001436144020818,
+        1.016879302819682,
+        1.438163709310388
+      ],
+      "sample_sd_octaves": 0.20775020342258316,
+      "six_pairwise_differences": [
+        0.05646314442281919,
+        0.041019985623955035,
+        0.38026442086675094,
+        0.015443158798864154,
+        0.43672756528957013,
+        0.421284406490706
+      ]
+    },
+    "content_kampar_boating_01::hybrid_flat_prefix::initial300": {
+      "content": "content_kampar_boating_01",
+      "full_spread_octaves": 0.044707801780401235,
+      "history": "hybrid_flat_prefix",
+      "initial_bwe_kbps": 300,
+      "qualified_sessions": 4,
+      "repeatability_passed": true,
+      "replicate_bwe_geo_bps": [
+        1002977.2554702458,
+        1006137.4348628431,
+        1030928.331351489,
+        999470.7422487398
+      ],
+      "replicate_x": [
+        1.0042888903046938,
+        1.0088273857125323,
+        1.043944042116612,
+        0.9992362403362107
+      ],
+      "sample_sd_octaves": 0.020294940757417085,
+      "six_pairwise_differences": [
+        0.004538495407838461,
+        0.03965515181191814,
+        0.005052649968483092,
+        0.03511665640407968,
+        0.009591145376321553,
+        0.044707801780401235
+      ]
+    },
+    "content_kampar_boating_01::measured_original::initial1200": {
+      "content": "content_kampar_boating_01",
+      "full_spread_octaves": 0.17635977852668172,
+      "history": "measured_original",
+      "initial_bwe_kbps": 1200,
+      "qualified_sessions": 4,
+      "repeatability_passed": true,
+      "replicate_bwe_geo_bps": [
+        1006515.342121691,
+        1036849.8514901298,
+        1021309.3641410271,
+        1137391.5109135187
+      ],
+      "replicate_x": [
+        1.009369163152633,
+        1.0522069894314363,
+        1.0304199382120915,
+        1.1857289416793146
+      ],
+      "sample_sd_octaves": 0.07947990304880959,
+      "six_pairwise_differences": [
+        0.04283782627880339,
+        0.021050775059458626,
+        0.17635977852668172,
+        0.021787051219344766,
+        0.13352195224787833,
+        0.1553090034672231
+      ]
+    },
+    "content_kampar_boating_01::measured_original::initial300": {
+      "content": "content_kampar_boating_01",
+      "full_spread_octaves": 0.36973764669005094,
+      "history": "measured_original",
+      "initial_bwe_kbps": 300,
+      "qualified_sessions": 4,
+      "repeatability_passed": false,
+      "replicate_bwe_geo_bps": [
+        992738.0628254983,
+        971309.0795785158,
+        1255045.788269004,
+        1000004.5354142557
+      ],
+      "replicate_x": [
+        0.9894850132864592,
+        0.9580023527876621,
+        1.327739999477713,
+        1.000006543204817
+      ],
+      "sample_sd_octaves": 0.17354101194919952,
+      "six_pairwise_differences": [
+        0.03148266049879711,
+        0.3382549861912538,
+        0.010521529918357864,
+        0.36973764669005094,
+        0.042004190417154974,
+        0.32773345627289596
+      ]
+    },
+    "content_volga_lock_01::hybrid_flat_prefix::initial1200": {
+      "content": "content_volga_lock_01",
+      "full_spread_octaves": 0.039485192376519596,
+      "history": "hybrid_flat_prefix",
+      "initial_bwe_kbps": 1200,
+      "qualified_sessions": 4,
+      "repeatability_passed": true,
+      "replicate_bwe_geo_bps": [
+        1059395.5868713318,
+        1088790.6601473745,
+        1073212.2651136012,
+        1067648.1074525896
+      ],
+      "replicate_x": [
+        1.083241403919632,
+        1.1227265962961517,
+        1.1019354475208518,
+        1.0944362188536652
+      ],
+      "sample_sd_octaves": 0.016640130504346196,
+      "six_pairwise_differences": [
+        0.039485192376519596,
+        0.018694043601219734,
+        0.01119481493403307,
+        0.02079114877529986,
+        0.028290377442486525,
+        0.007499228667186664
+      ]
+    },
+    "content_volga_lock_01::hybrid_flat_prefix::initial300": {
+      "content": "content_volga_lock_01",
+      "full_spread_octaves": 0.02100848240199471,
+      "history": "hybrid_flat_prefix",
+      "initial_bwe_kbps": 300,
+      "qualified_sessions": 4,
+      "repeatability_passed": true,
+      "replicate_bwe_geo_bps": [
+        1050595.6495925458,
+        1057638.391596801,
+        1066006.3248646555,
+        1061798.829704228
+      ],
+      "replicate_x": [
+        1.0712075155673293,
+        1.0808464518155054,
+        1.092215997969324,
+        1.0865104564623613
+      ],
+      "sample_sd_octaves": 0.008955194754718529,
+      "six_pairwise_differences": [
+        0.009638936248176133,
+        0.02100848240199471,
+        0.015302940895032036,
+        0.011369546153818577,
+        0.0056640046468559024,
+        0.005705541506962675
+      ]
+    },
+    "content_volga_lock_01::measured_original::initial1200": {
+      "content": "content_volga_lock_01",
+      "full_spread_octaves": 0.561189350763591,
+      "history": "measured_original",
+      "initial_bwe_kbps": 1200,
+      "qualified_sessions": 4,
+      "repeatability_passed": false,
+      "replicate_bwe_geo_bps": [
+        1553350.4669307608,
+        1072321.8097849346,
+        1243083.9284023899,
+        1052772.7241904614
+      ],
+      "replicate_x": [
+        1.6353833673041396,
+        1.1007379316430201,
+        1.3139237050808932,
+        1.0741940165405486
+      ],
+      "sample_sd_octaves": 0.25944469878205495,
+      "six_pairwise_differences": [
+        0.5346454356611194,
+        0.3214596622232464,
+        0.561189350763591,
+        0.21318577343787304,
+        0.02654391510247156,
+        0.2397296885403446
+      ]
+    },
+    "content_volga_lock_01::measured_original::initial300": {
+      "content": "content_volga_lock_01",
+      "full_spread_octaves": null,
+      "history": "measured_original",
+      "initial_bwe_kbps": 300,
+      "qualified_sessions": 3,
+      "repeatability_passed": false,
+      "replicate_bwe_geo_bps": [
+        996362.7766642572,
+        1023192.7499541047,
+        1051873.5619945019,
+        1021638.1809311919
+      ],
+      "replicate_x": [
+        0.9947430297373527,
+        1.0330779468514253,
+        1.0729612992630613,
+        1.030884347939862
+      ],
+      "sample_sd_octaves": null,
+      "six_pairwise_differences": null
+    }
+  },
+  "controller_fitted": false,
+  "gate_sha256": "d1a085ca33ee2e9c0ca121deb1fbd6770f6db9f66b8e69a25cd9e830dc363a01",
+  "independent_sources_pooled": false,
+  "outcomes_read": false,
+  "planned_sessions": 32,
+  "prospective_replication_candidate_initial_kbps": null,
+  "protocol_sha256": "b2f3babb2f91818544072d821d2103bf23ec68b5ed0e0564f524c09b208bb83b",
+  "qualified_sessions": 31,
+  "registration_commit": "b704c5a0efb4fee3695e833e7a6b855ae4057207",
+  "scope": "Randomized support-state mechanism development on one reused measured profile and two reused clips. Hybrid prefix is synthetic development. Full prospective measured support must still qualify before claiming reproducibility.",
+  "sealed_sessions": 32,
+  "source_separation": "Reused V13 content/traces, separate support-only development; hybrid prefixes and synthetic instrument checks never count as measured confirmation.",
+  "technical_gate_passed": false,
+  "v13_reopened": false,
+  "verified_session_files": 1344
+}

@@ -1,0 +1,39 @@
+{
+  "abi": "native_bwe_support_mechanism_archive_receipt_v1",
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_helper_sha256": "a6e2a7f9206df0badc31730c2264970d29ac60e840882557210d8ea1776a2913",
+  "base_gate_sha256": "5fd81d791ebc9d00147f595d53eb2d3e0b553d915360177636c27811a4dcdab8",
+  "capture_index_sha256": "4ebc1a4b6b2b3a74eb3c836d7aac54c1197da9a5bdad3a67b5556ab8ce146d7d",
+  "files_deleted": 0,
+  "files_verified": 1416,
+  "gate_sha256": "d1a085ca33ee2e9c0ca121deb1fbd6770f6db9f66b8e69a25cd9e830dc363a01",
+  "local_raw_evidence_retained": true,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "17345ff2162d936c1293f18c2c0a0decbce623ba84285be1519fca98ab7cfda7",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "37b2cc18684f89b8af7fe94a917f091cd38d7d4370d29d40098f1137995e292a",
+      "size": 250851
+    },
+    "results.tar.part-000": {
+      "sha256": "cc00c7a9c1fe98f7558388a44dd2c2866a503949c3f163097a2c4610ddb44664",
+      "size": 115568640
+    }
+  },
+  "prefix": "native-bwe-mechanisms-m2-20261014-01",
+  "private": true,
+  "protocol_sha256": "b2f3babb2f91818544072d821d2103bf23ec68b5ed0e0564f524c09b208bb83b",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-bwe-mechanisms-m2",
+  "registered_gate_passed": false,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "revision": "272aecdf4403e2ba173fd05b493b865c40de794f",
+  "scientific_registration_commit": "b704c5a0efb4fee3695e833e7a6b855ae4057207",
+  "stage": "mechanism"
+}
