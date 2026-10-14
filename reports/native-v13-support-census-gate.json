@@ -1,0 +1,2746 @@
+{
+  "abi": "native_v13_support_clock_transport_gate_v1",
+  "capture_index_sha256": "0d9e3801f4c6cd4f560b878daee0e3317934eaa1886b590988fc4838c5c58d73",
+  "cells": {
+    "content_kampar_boating_01__att_lte_driving_2016": {
+      "passed": true,
+      "profile_count": 4,
+      "x_min_max": [
+        1.1340342217069888,
+        2.314417316606792
+      ],
+      "x_sample_sd": 0.5316536634001119
+    },
+    "content_kampar_boating_01__sprout_verizon_evdo": {
+      "passed": true,
+      "profile_count": 4,
+      "x_min_max": [
+        -0.6364178229218116,
+        1.1490790684942112
+      ],
+      "x_sample_sd": 0.8277818736257554
+    },
+    "content_volga_lock_01__att_lte_driving_2016": {
+      "passed": true,
+      "profile_count": 4,
+      "x_min_max": [
+        1.2269990335801433,
+        2.3719325353746217
+      ],
+      "x_sample_sd": 0.5017713314610793
+    },
+    "content_volga_lock_01__sprout_verizon_evdo": {
+      "passed": true,
+      "profile_count": 4,
+      "x_min_max": [
+        -0.6238069328643303,
+        0.9977036572334304
+      ],
+      "x_sample_sd": 0.7081262843858315
+    }
+  },
+  "census_states": {
+    "content_kampar_boating_01__att_lte_driving_2016::att_lte_driving_2016-downlink-lower": {
+      "passed": true,
+      "replicate_x": [
+        2.2405800591223812,
+        2.388254574091203
+      ],
+      "x": 2.314417316606792
+    },
+    "content_kampar_boating_01__att_lte_driving_2016::att_lte_driving_2016-downlink-upper": {
+      "passed": false,
+      "replicate_x": [
+        2.324006820265899,
+        1.927256096245107
+      ],
+      "x": 2.125631458255503
+    },
+    "content_kampar_boating_01__att_lte_driving_2016::att_lte_driving_2016-uplink-lower": {
+      "passed": false,
+      "replicate_x": [
+        1.2913581296702332,
+        0.9767103137437444
+      ],
+      "x": 1.1340342217069888
+    },
+    "content_kampar_boating_01__att_lte_driving_2016::att_lte_driving_2016-uplink-upper": {
+      "passed": true,
+      "replicate_x": [
+        1.5998184727142983,
+        1.632379891970937
+      ],
+      "x": 1.6160991823426176
+    },
+    "content_kampar_boating_01__sprout_verizon_evdo::sprout_verizon_evdo-downlink-lower": {
+      "passed": true,
+      "replicate_x": [
+        -0.46574164746568614,
+        -0.5276730959719155
+      ],
+      "x": -0.4967073717188008
+    },
+    "content_kampar_boating_01__sprout_verizon_evdo::sprout_verizon_evdo-downlink-upper": {
+      "passed": true,
+      "replicate_x": [
+        0.3679879398677362,
+        0.31047936727669123
+      ],
+      "x": 0.3392336535722137
+    },
+    "content_kampar_boating_01__sprout_verizon_evdo::sprout_verizon_evdo-uplink-lower": {
+      "passed": true,
+      "replicate_x": [
+        -0.6967092829842869,
+        -0.5761263628593364
+      ],
+      "x": -0.6364178229218116
+    },
+    "content_kampar_boating_01__sprout_verizon_evdo::sprout_verizon_evdo-uplink-upper": {
+      "passed": true,
+      "replicate_x": [
+        1.1567552059989974,
+        1.141402930989425
+      ],
+      "x": 1.1490790684942112
+    },
+    "content_volga_lock_01__att_lte_driving_2016::att_lte_driving_2016-downlink-lower": {
+      "passed": false,
+      "replicate_x": [
+        2.2088716966282265,
+        2.534993374121017
+      ],
+      "x": 2.3719325353746217
+    },
+    "content_volga_lock_01__att_lte_driving_2016::att_lte_driving_2016-downlink-upper": {
+      "passed": true,
+      "replicate_x": [
+        2.095305618103066,
+        2.052049234276702
+      ],
+      "x": 2.073677426189884
+    },
+    "content_volga_lock_01__att_lte_driving_2016::att_lte_driving_2016-uplink-lower": {
+      "passed": false,
+      "replicate_x": [
+        1.0035484928162564,
+        1.4504495743440302
+      ],
+      "x": 1.2269990335801433
+    },
+    "content_volga_lock_01__att_lte_driving_2016::att_lte_driving_2016-uplink-upper": {
+      "passed": false,
+      "replicate_x": [
+        1.4976194914066476,
+        1.768967930155115
+      ],
+      "x": 1.6332937107808814
+    },
+    "content_volga_lock_01__sprout_verizon_evdo::sprout_verizon_evdo-downlink-lower": {
+      "passed": true,
+      "replicate_x": [
+        -0.28822778172497554,
+        -0.2486798740959964
+      ],
+      "x": -0.268453827910486
+    },
+    "content_volga_lock_01__sprout_verizon_evdo::sprout_verizon_evdo-downlink-upper": {
+      "passed": true,
+      "replicate_x": [
+        0.2699295170422009,
+        0.3240421724766843
+      ],
+      "x": 0.2969858447594426
+    },
+    "content_volga_lock_01__sprout_verizon_evdo::sprout_verizon_evdo-uplink-lower": {
+      "passed": true,
+      "replicate_x": [
+        -0.5845016203772702,
+        -0.6631122453513904
+      ],
+      "x": -0.6238069328643303
+    },
+    "content_volga_lock_01__sprout_verizon_evdo::sprout_verizon_evdo-uplink-upper": {
+      "passed": false,
+      "replicate_x": [
+        0.8588113911551488,
+        1.136595923311712
+      ],
+      "x": 0.9977036572334304
+    }
+  },
+  "common_support_at_least_half_octave": false,
+  "common_support_log2_interval": [
+    1.2269990335801433,
+    0.9977036572334304
+  ],
+  "controller_fitted": false,
+  "kind": "support_census",
+  "outcomes_read": false,
+  "passed": false,
+  "planned_sessions": 32,
+  "protocol_sha256": "e8483ae1a80600cbbbc2d584a96b596e3dd9672dcab44fd062fe98d028843dfa",
+  "qualified_sessions": 32,
+  "sessions": [
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999466134637283,
+          1.0000647582530717
+        ],
+        "beta_at_origin_feasible_ms": [
+          20063.329858919904,
+          20064.59277502417
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.164979833050893,
+        "origin_browser_ms": 19514.00000000745,
+        "p95_held_out_width_ms": 2.164979833050893,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-downlink-lower",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": -0.46574164746568614,
+        "geometric_mean_bwe_bps": 362049.37176312227,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            395115,
+            395115,
+            395115,
+            404769,
+            404769,
+            404769,
+            414599,
+            307979,
+            297740,
+            299679,
+            300615
+          ],
+          "continuous_log2_bwe": -0.46574164746568614,
+          "elapsed_ms": 18001.79999999702,
+          "geometric_mean_bwe_bps": 362049.37176312227,
+          "history_samples": 11,
+          "max_gap_ms": 108.8999999910593,
+          "passed": true,
+          "sample_history_ms": [
+            18117.60000000894,
+            18218.40000000596,
+            18319.30000001192,
+            18420.10000000894,
+            18521.40000000596,
+            18622.80000001192,
+            18725.80000001192,
+            18834.70000000298,
+            18935.70000000298,
+            19036.90000000596,
+            19137.90000000596
+          ],
+          "span_ms": 1020.2999999970198
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p00-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.999953743020339,
+          1.0000782390448262
+        ],
+        "beta_at_origin_feasible_ms": [
+          19720.48606391486,
+          19722.350492762325
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.457693592135911,
+        "origin_browser_ms": 19334.84999999404,
+        "p95_held_out_width_ms": 2.457693592135911,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 4
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-downlink-lower",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": -0.5276730959719155,
+        "geometric_mean_bwe_bps": 346836.3239257794,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            395172,
+            395172,
+            404730,
+            404730,
+            404730,
+            414555,
+            294844,
+            284567,
+            287988,
+            289500,
+            291018
+          ],
+          "continuous_log2_bwe": -0.5276730959719154,
+          "elapsed_ms": 18075.40000000596,
+          "geometric_mean_bwe_bps": 346836.3239257794,
+          "history_samples": 11,
+          "max_gap_ms": 111.20000000298023,
+          "passed": true,
+          "sample_history_ms": [
+            18018.5,
+            18119.29999999702,
+            18220.09999999404,
+            18321.09999999404,
+            18422.29999999702,
+            18533.5,
+            18634.29999999702,
+            18735.09999999404,
+            18836,
+            18936.89999999106,
+            19037.5
+          ],
+          "span_ms": 1019
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p00-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999421798151472,
+          1.0000831127673742
+        ],
+        "beta_at_origin_feasible_ms": [
+          19769.535456909212,
+          19771.569486500124
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 3.0309027998191596,
+        "origin_browser_ms": 19312.64999999851,
+        "p95_held_out_width_ms": 3.0309027998191596,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-downlink-upper",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 0.3679879398677362,
+        "geometric_mean_bwe_bps": 645275.8510542752,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            632687,
+            638363,
+            638363,
+            644116,
+            644116,
+            644116,
+            644116,
+            651322,
+            651322,
+            651322,
+            658615
+          ],
+          "continuous_log2_bwe": 0.3679879398677361,
+          "elapsed_ms": 18044.70000000298,
+          "geometric_mean_bwe_bps": 645275.8510542752,
+          "history_samples": 11,
+          "max_gap_ms": 111.09999999403954,
+          "passed": true,
+          "sample_history_ms": [
+            17984.29999999702,
+            18085.20000000298,
+            18186.09999999404,
+            18286.70000000298,
+            18387.79999999702,
+            18488.89999999106,
+            18589.70000000298,
+            18690.70000000298,
+            18792.09999999404,
+            18893.20000000298,
+            19004.29999999702
+          ],
+          "span_ms": 1020
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p01-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.999931864107808,
+          1.0000618359029414
+        ],
+        "beta_at_origin_feasible_ms": [
+          19638.53036923204,
+          19639.88801816191
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.1942762113649223,
+        "origin_browser_ms": 19257.95000000298,
+        "p95_held_out_width_ms": 2.1942762113649223,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-downlink-upper",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 0.31047936727669123,
+        "geometric_mean_bwe_bps": 620059.8443164092,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            608213,
+            608213,
+            615019,
+            615019,
+            615019,
+            621944,
+            621944,
+            627555,
+            627555,
+            627555,
+            633191
+          ],
+          "continuous_log2_bwe": 0.3104793672766912,
+          "elapsed_ms": 18003.19999998808,
+          "geometric_mean_bwe_bps": 620059.8443164092,
+          "history_samples": 11,
+          "max_gap_ms": 116.3999999910593,
+          "passed": true,
+          "sample_history_ms": [
+            17842.10000000894,
+            17943.10000000894,
+            18059.5,
+            18160.60000000894,
+            18261.90000000596,
+            18363.5,
+            18464.40000000596,
+            18565.70000000298,
+            18666.60000000894,
+            18767.29999999702,
+            18877.79999999702
+          ],
+          "span_ms": 1035.699999988079
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p01-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999457072491709,
+          1.0000676886061561
+        ],
+        "beta_at_origin_feasible_ms": [
+          19638.73067610114,
+          19640.21369223588
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.268045523633191,
+        "origin_browser_ms": 19239.40000000596,
+        "p95_held_out_width_ms": 2.268045523633191,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 4
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-uplink-lower",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": -0.6967092829842869,
+        "geometric_mean_bwe_bps": 308488.9496989906,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            297761,
+            297761,
+            303529,
+            303529,
+            303529,
+            310927,
+            310927,
+            310927,
+            318499,
+            318499,
+            318499
+          ],
+          "continuous_log2_bwe": -0.6967092829842869,
+          "elapsed_ms": 18100.70000000298,
+          "geometric_mean_bwe_bps": 308488.9496989906,
+          "history_samples": 11,
+          "max_gap_ms": 110.70000000298023,
+          "passed": true,
+          "sample_history_ms": [
+            17964,
+            18065,
+            18166,
+            18267.20000000298,
+            18377.90000000596,
+            18483.5,
+            18585.20000000298,
+            18686.30000001192,
+            18791.40000000596,
+            18892.80000001192,
+            18993.70000000298
+          ],
+          "span_ms": 1029.7000000029802
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p02-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999465709330142,
+          1.0000800701399772
+        ],
+        "beta_at_origin_feasible_ms": [
+          19667.911430446933,
+          19669.285402499623
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.7939353614347056,
+        "origin_browser_ms": 19280.04999998957,
+        "p95_held_out_width_ms": 2.7939353614347056,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 8
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-uplink-lower",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": -0.5761263628593364,
+        "geometric_mean_bwe_bps": 335381.17954729265,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            323574,
+            329122,
+            329122,
+            333546,
+            333546,
+            333546,
+            339190,
+            339190,
+            339190,
+            344922,
+            344922
+          ],
+          "continuous_log2_bwe": -0.5761263628593363,
+          "elapsed_ms": 18092.29999999702,
+          "geometric_mean_bwe_bps": 335381.1795472927,
+          "history_samples": 11,
+          "max_gap_ms": 109.8999999910593,
+          "passed": true,
+          "sample_history_ms": [
+            18017,
+            18126.89999999106,
+            18227.89999999106,
+            18328.69999998808,
+            18429.5,
+            18530.29999999702,
+            18631.19999998808,
+            18732,
+            18833,
+            18933.89999999106,
+            19034.89999999106
+          ],
+          "span_ms": 1017.8999999910593
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p02-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999378469371719,
+          1.0000751268690262
+        ],
+        "beta_at_origin_feasible_ms": [
+          19705.088407642426,
+          19706.595536208086
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.2652676160723786,
+        "origin_browser_ms": 19295.75000000745,
+        "p95_held_out_width_ms": 2.2652676160723786,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-uplink-upper",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 1.1567552059989974,
+        "geometric_mean_bwe_bps": 1114777.049236227,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1098388,
+            1098388,
+            1107654,
+            1107654,
+            1115112,
+            1115112,
+            1115112,
+            1124530,
+            1124530,
+            1124530,
+            1132087
+          ],
+          "continuous_log2_bwe": 1.1567552059989974,
+          "elapsed_ms": 18073.20000000298,
+          "geometric_mean_bwe_bps": 1114777.049236227,
+          "history_samples": 11,
+          "max_gap_ms": 112,
+          "passed": true,
+          "sample_history_ms": [
+            17978.40000000596,
+            18079.30000001192,
+            18180.30000001192,
+            18281.30000001192,
+            18393.30000001192,
+            18494.30000001192,
+            18595.5,
+            18696.5,
+            18797.60000000894,
+            18901.10000000894,
+            19003.70000000298
+          ],
+          "span_ms": 1025.2999999970198
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p03-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999114011269775,
+          1.0000752192131024
+        ],
+        "beta_at_origin_feasible_ms": [
+          19652.371559745974,
+          19654.36737837274
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 3.0084226901235525,
+        "origin_browser_ms": 19254.14999999106,
+        "p95_held_out_width_ms": 3.0084226901235525,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-uplink-upper",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 1.141402930989425,
+        "geometric_mean_bwe_bps": 1102977.171077804,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1092528,
+            1092528,
+            1092528,
+            1099185,
+            1099185,
+            1099185,
+            1107525,
+            1107525,
+            1114307,
+            1114307,
+            1114307
+          ],
+          "continuous_log2_bwe": 1.1414029309894251,
+          "elapsed_ms": 18076.20000000298,
+          "geometric_mean_bwe_bps": 1102977.1710778042,
+          "history_samples": 11,
+          "max_gap_ms": 110.40000000596046,
+          "passed": true,
+          "sample_history_ms": [
+            17973.09999999404,
+            18074.09999999404,
+            18174.69999998808,
+            18275.5,
+            18377.19999998808,
+            18477.89999999106,
+            18578.69999998808,
+            18689.09999999404,
+            18790.09999999404,
+            18890.89999999106,
+            18991.79999999702
+          ],
+          "span_ms": 1018.7000000029802
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p03-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999368191737347,
+          1.0000718391530101
+        ],
+        "beta_at_origin_feasible_ms": [
+          19749.968383565567,
+          19751.481014779285
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.2649768105329713,
+        "origin_browser_ms": 19344.14999999106,
+        "p95_held_out_width_ms": 2.2649768105329713,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 4
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-downlink-lower",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 2.2405800591223812,
+        "geometric_mean_bwe_bps": 2362935.1886070543,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            2350381,
+            2350381,
+            2350381,
+            2359071,
+            2359071,
+            2366080,
+            2366080,
+            2366080,
+            2374989,
+            2374989,
+            2374989
+          ],
+          "continuous_log2_bwe": 2.2405800591223812,
+          "elapsed_ms": 18015.09999999404,
+          "geometric_mean_bwe_bps": 2362935.1886070543,
+          "history_samples": 11,
+          "max_gap_ms": 110.69999998807907,
+          "passed": true,
+          "sample_history_ms": [
+            17970.29999999702,
+            18071.09999999404,
+            18171.89999999106,
+            18272.69999998808,
+            18373.79999999702,
+            18474.69999998808,
+            18575.5,
+            18686.19999998808,
+            18787.69999998808,
+            18888.39999999106,
+            18989.19999998808
+          ],
+          "span_ms": 1018.8999999910593
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p04-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999338935245132,
+          1.0000530341784413
+        ],
+        "beta_at_origin_feasible_ms": [
+          19681.847884331677,
+          19683.07650833788
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 1.8994258616185107,
+        "origin_browser_ms": 19278.34999999404,
+        "p95_held_out_width_ms": 1.8994258616185107,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-downlink-lower",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 2.388254574091203,
+        "geometric_mean_bwe_bps": 2617618.0,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            2617618,
+            2617618,
+            2617618,
+            2617618,
+            2617618,
+            2617618,
+            2617618,
+            2617618,
+            2617618,
+            2617618,
+            2617618
+          ],
+          "continuous_log2_bwe": 2.388254574091203,
+          "elapsed_ms": 18010.90000000596,
+          "geometric_mean_bwe_bps": 2617618,
+          "history_samples": 11,
+          "max_gap_ms": 108.6000000089407,
+          "passed": true,
+          "sample_history_ms": [
+            17917,
+            18019.59999999404,
+            18120.5,
+            18221.59999999404,
+            18322.39999999106,
+            18423.59999999404,
+            18524.59999999404,
+            18626.79999999702,
+            18727.70000000298,
+            18829.89999999106,
+            18938.5
+          ],
+          "span_ms": 1021.5
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p04-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999363334287077,
+          1.0000774043175165
+        ],
+        "beta_at_origin_feasible_ms": [
+          19678.261037112163,
+          19680.118357083917
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.5100439571906463,
+        "origin_browser_ms": 19296.35000000149,
+        "p95_held_out_width_ms": 2.5100439571906463,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-downlink-upper",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 2.324006820265899,
+        "geometric_mean_bwe_bps": 2503604.7529414915,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            2680725,
+            2680725,
+            2465862,
+            2465862,
+            2465862,
+            2465862,
+            2465862,
+            2465862,
+            2465862,
+            2465862,
+            2465862
+          ],
+          "continuous_log2_bwe": 2.3240068202658986,
+          "elapsed_ms": 18003.5,
+          "geometric_mean_bwe_bps": 2503604.7529414906,
+          "history_samples": 11,
+          "max_gap_ms": 110.09999999403954,
+          "passed": true,
+          "sample_history_ms": [
+            17922.59999999404,
+            18023.59999999404,
+            18124.79999999702,
+            18227.29999999702,
+            18328.20000000298,
+            18430.29999999702,
+            18531,
+            18632.20000000298,
+            18733.70000000298,
+            18834.70000000298,
+            18944.79999999702
+          ],
+          "span_ms": 1022.2000000029802
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p05-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999101458267636,
+          1.0000761630893586
+        ],
+        "beta_at_origin_feasible_ms": [
+          19815.31224227048,
+          19816.883804287354
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.6932031878095586,
+        "origin_browser_ms": 19394.44999999553,
+        "p95_held_out_width_ms": 2.6932031878095586,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-downlink-upper",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 1.927256096245107,
+        "geometric_mean_bwe_bps": 1901655.7399560346,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1885001,
+            1885001,
+            1893961,
+            1893961,
+            1901288,
+            1901288,
+            1901288,
+            1910502,
+            1910502,
+            1917889,
+            1917889
+          ],
+          "continuous_log2_bwe": 1.9272560962451069,
+          "elapsed_ms": 18016.20000000298,
+          "geometric_mean_bwe_bps": 1901655.7399560343,
+          "history_samples": 11,
+          "max_gap_ms": 112.79999999701977,
+          "passed": true,
+          "sample_history_ms": [
+            18030.89999999106,
+            18132.89999999106,
+            18245.69999998808,
+            18346.5,
+            18447.39999999106,
+            18550.19999998808,
+            18652.19999998808,
+            18753.19999998808,
+            18854,
+            18954.79999999702,
+            19055.79999999702
+          ],
+          "span_ms": 1024.9000000059605
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p05-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999274215277195,
+          1.0000701098313953
+        ],
+        "beta_at_origin_feasible_ms": [
+          19638.615874750463,
+          19640.377037195256
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.8006212945474545,
+        "origin_browser_ms": 19239.60000000149,
+        "p95_held_out_width_ms": 2.8006212945474545,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 8
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-uplink-lower",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 1.2913581296702332,
+        "geometric_mean_bwe_bps": 1223791.793307737,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1212752,
+            1217131,
+            1217131,
+            1217131,
+            1223094,
+            1223094,
+            1223094,
+            1230371,
+            1230371,
+            1230371,
+            1237403
+          ],
+          "continuous_log2_bwe": 1.291358129670233,
+          "elapsed_ms": 18080.5,
+          "geometric_mean_bwe_bps": 1223791.7933077367,
+          "history_samples": 11,
+          "max_gap_ms": 111.69999998807907,
+          "passed": true,
+          "sample_history_ms": [
+            17946.5,
+            18047.59999999404,
+            18148.70000000298,
+            18249.90000000596,
+            18361.59999999404,
+            18462.90000000596,
+            18563.79999999702,
+            18664.90000000596,
+            18765.90000000596,
+            18867.20000000298,
+            18968.40000000596
+          ],
+          "span_ms": 1021.9000000059605
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p06-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999339684733517,
+          1.0000878468213388
+        ],
+        "beta_at_origin_feasible_ms": [
+          19691.74046833455,
+          19693.470337029656
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.6402362345834263,
+        "origin_browser_ms": 19308.95000000298,
+        "p95_held_out_width_ms": 2.6402362345834263,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-uplink-lower",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 0.9767103137437444,
+        "geometric_mean_bwe_bps": 983986.4224338654,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            974461,
+            977284,
+            978708,
+            978708,
+            978708,
+            985804,
+            985804,
+            985804,
+            992936,
+            992936,
+            992936
+          ],
+          "continuous_log2_bwe": 0.9767103137437444,
+          "elapsed_ms": 18016.09999999404,
+          "geometric_mean_bwe_bps": 983986.4224338654,
+          "history_samples": 11,
+          "max_gap_ms": 111.90000000596046,
+          "passed": true,
+          "sample_history_ms": [
+            17916.40000000596,
+            18018.79999999702,
+            18119.5,
+            18220.5,
+            18321.40000000596,
+            18422.40000000596,
+            18523.5,
+            18635.40000000596,
+            18737.40000000596,
+            18838.20000000298,
+            18939
+          ],
+          "span_ms": 1022.5999999940395
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p06-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999312684782932,
+          1.000069506000291
+        ],
+        "beta_at_origin_feasible_ms": [
+          19748.95202111216,
+          19750.580911271918
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.4718484546137915,
+        "origin_browser_ms": 19315.75,
+        "p95_held_out_width_ms": 2.4718484546137915,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 4
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-uplink-upper",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 1.5998184727142983,
+        "geometric_mean_bwe_bps": 1515525.8632798947,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1504155,
+            1504155,
+            1504155,
+            1512288,
+            1512288,
+            1512288,
+            1520213,
+            1520213,
+            1527105,
+            1527105,
+            1527105
+          ],
+          "continuous_log2_bwe": 1.5998184727142983,
+          "elapsed_ms": 18021.09999999404,
+          "geometric_mean_bwe_bps": 1515525.8632798947,
+          "history_samples": 11,
+          "max_gap_ms": 110.30000001192093,
+          "passed": true,
+          "sample_history_ms": [
+            17961.70000000298,
+            18062.70000000298,
+            18163.5,
+            18264.5,
+            18366.30000001192,
+            18467.5,
+            18577.80000001192,
+            18679.10000000894,
+            18780.10000000894,
+            18881.70000000298,
+            18983
+          ],
+          "span_ms": 1021.2999999970198
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p07-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999552710954038,
+          1.000072620407336
+        ],
+        "beta_at_origin_feasible_ms": [
+          19672.8638058045,
+          19674.420354505906
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.3254519531401456,
+        "origin_browser_ms": 19264.04999999702,
+        "p95_held_out_width_ms": 2.3254519531401456,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-uplink-upper",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 1.632379891970937,
+        "geometric_mean_bwe_bps": 1550119.9874024652,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1535555,
+            1535555,
+            1544103,
+            1544103,
+            1544103,
+            1552457,
+            1552457,
+            1558820,
+            1558820,
+            1558820,
+            1566866
+          ],
+          "continuous_log2_bwe": 1.632379891970937,
+          "elapsed_ms": 18088.60000000894,
+          "geometric_mean_bwe_bps": 1550119.9874024652,
+          "history_samples": 11,
+          "max_gap_ms": 102.90000000596046,
+          "passed": true,
+          "sample_history_ms": [
+            17960.79999999702,
+            18061.5,
+            18162.39999999106,
+            18263.29999999702,
+            18364.29999999702,
+            18465,
+            18565.89999999106,
+            18666.69999998808,
+            18767.59999999404,
+            18870.5,
+            18971.5
+          ],
+          "span_ms": 1010.7000000029802
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c00-p07-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999249283589837,
+          1.0000850075292578
+        ],
+        "beta_at_origin_feasible_ms": [
+          19776.8174983865,
+          19778.369182253336
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.7542747643274197,
+        "origin_browser_ms": 19368.75,
+        "p95_held_out_width_ms": 2.7542747643274197,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-downlink-lower",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": -0.28822778172497554,
+        "geometric_mean_bwe_bps": 409453.6967131984,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            411133,
+            411133,
+            416245,
+            416245,
+            416245,
+            422700,
+            422700,
+            422700,
+            429248,
+            429248,
+            319689
+          ],
+          "continuous_log2_bwe": -0.2882277817249755,
+          "elapsed_ms": 18056.29999999702,
+          "geometric_mean_bwe_bps": 409453.6967131984,
+          "history_samples": 11,
+          "max_gap_ms": 109.3999999910593,
+          "passed": true,
+          "sample_history_ms": [
+            18068.40000000596,
+            18177.79999999702,
+            18278.60000000894,
+            18379.70000000298,
+            18480.90000000596,
+            18581.79999999702,
+            18682.70000000298,
+            18783.70000000298,
+            18884.90000000596,
+            18985.70000000298,
+            19086.79999999702
+          ],
+          "span_ms": 1018.3999999910593
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p00-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999477410398389,
+          1.0000562596176221
+        ],
+        "beta_at_origin_feasible_ms": [
+          19664.26355910335,
+          19665.97555279606
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.072910743940156,
+        "origin_browser_ms": 19278.10000000149,
+        "p95_held_out_width_ms": 2.072910743940156,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-downlink-lower",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": -0.2486798740959964,
+        "geometric_mean_bwe_bps": 420833.11128032353,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            406814,
+            413591,
+            413591,
+            413591,
+            420512,
+            420512,
+            420512,
+            420512,
+            430722,
+            430722,
+            439129
+          ],
+          "continuous_log2_bwe": -0.24867987409599646,
+          "elapsed_ms": 18051.20000000298,
+          "geometric_mean_bwe_bps": 420833.11128032353,
+          "history_samples": 11,
+          "max_gap_ms": 102.1000000089407,
+          "passed": true,
+          "sample_history_ms": [
+            17982.70000000298,
+            18083.60000000894,
+            18184.5,
+            18285.5,
+            18386.5,
+            18488.5,
+            18590.60000000894,
+            18691.5,
+            18792.40000000596,
+            18893.60000000894,
+            18995.10000000894
+          ],
+          "span_ms": 1012.4000000059605
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p00-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999458614148521,
+          1.0000539755821276
+        ],
+        "beta_at_origin_feasible_ms": [
+          19684.013079756103,
+          19685.3122257144
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 1.980627129876666,
+        "origin_browser_ms": 19305.04999999702,
+        "p95_held_out_width_ms": 1.980627129876666,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 4
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-downlink-upper",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 0.2699295170422009,
+        "geometric_mean_bwe_bps": 602874.4596558984,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            591993,
+            596762,
+            596762,
+            596762,
+            602759,
+            602759,
+            602759,
+            607801,
+            607801,
+            612930,
+            612930
+          ],
+          "continuous_log2_bwe": 0.2699295170422009,
+          "elapsed_ms": 18066.90000000596,
+          "geometric_mean_bwe_bps": 602874.4596558984,
+          "history_samples": 11,
+          "max_gap_ms": 108.8999999910593,
+          "passed": true,
+          "sample_history_ms": [
+            17972.20000000298,
+            18073.40000000596,
+            18174.20000000298,
+            18275.09999999404,
+            18376,
+            18477.09999999404,
+            18578.90000000596,
+            18687.79999999702,
+            18789.79999999702,
+            18890.90000000596,
+            18991.90000000596
+          ],
+          "span_ms": 1019.7000000029802
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p01-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999310622955484,
+          1.0000579312583222
+        ],
+        "beta_at_origin_feasible_ms": [
+          19770.159717084738,
+          19771.542772196666
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.0566756537227775,
+        "origin_browser_ms": 19374.99999999255,
+        "p95_held_out_width_ms": 2.0566756537227775,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 4
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-downlink-upper",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 0.3240421724766843,
+        "geometric_mean_bwe_bps": 625916.5256845325,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            612762,
+            618227,
+            618227,
+            618227,
+            625185,
+            625185,
+            630716,
+            630716,
+            630716,
+            637842,
+            637842
+          ],
+          "continuous_log2_bwe": 0.3240421724766844,
+          "elapsed_ms": 18059.79999999702,
+          "geometric_mean_bwe_bps": 625916.5256845325,
+          "history_samples": 11,
+          "max_gap_ms": 110.69999998807907,
+          "passed": true,
+          "sample_history_ms": [
+            18050.89999999106,
+            18152,
+            18253.39999999106,
+            18354.5,
+            18465.19999998808,
+            18566.39999999106,
+            18667.5,
+            18768.89999999106,
+            18870.19999998808,
+            18972.19999998808,
+            19073.19999998808
+          ],
+          "span_ms": 1022.2999999970198
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p01-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.999914071267813,
+          1.0000638660958048
+        ],
+        "beta_at_origin_feasible_ms": [
+          19777.616158694975,
+          19779.06483753703
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.3436633319870452,
+        "origin_browser_ms": 19391.14999999851,
+        "p95_held_out_width_ms": 2.3436633319870452,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-uplink-lower",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": -0.5845016203772702,
+        "geometric_mean_bwe_bps": 333439.8363143509,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            322726,
+            327085,
+            327085,
+            331527,
+            331527,
+            331527,
+            337114,
+            337114,
+            337114,
+            342827,
+            342827
+          ],
+          "continuous_log2_bwe": -0.5845016203772702,
+          "elapsed_ms": 18060.5,
+          "geometric_mean_bwe_bps": 333439.8363143509,
+          "history_samples": 11,
+          "max_gap_ms": 101.20000000298023,
+          "passed": true,
+          "sample_history_ms": [
+            18073.79999999702,
+            18174.5,
+            18275.29999999702,
+            18376.10000000894,
+            18477,
+            18577.79999999702,
+            18679,
+            18780,
+            18881.10000000894,
+            18982.20000000298,
+            19083.20000000298
+          ],
+          "span_ms": 1009.4000000059605
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p02-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.999931523522904,
+          1.0000769921204025
+        ],
+        "beta_at_origin_feasible_ms": [
+          19685.867164010404,
+          19687.385630212124
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.562596394891443,
+        "origin_browser_ms": 19294.29999998957,
+        "p95_held_out_width_ms": 2.562596394891443,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-uplink-lower",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": -0.6631122453513904,
+        "geometric_mean_bwe_bps": 315757.2477870535,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            306691,
+            310822,
+            310822,
+            310822,
+            316078,
+            316078,
+            316078,
+            320265,
+            320265,
+            320265,
+            325641
+          ],
+          "continuous_log2_bwe": -0.6631122453513904,
+          "elapsed_ms": 18028.70000000298,
+          "geometric_mean_bwe_bps": 315757.2477870535,
+          "history_samples": 11,
+          "max_gap_ms": 111.29999999701977,
+          "passed": true,
+          "sample_history_ms": [
+            17956.29999999702,
+            18057.29999999702,
+            18158.5,
+            18259.29999999702,
+            18361.59999999404,
+            18472.89999999106,
+            18574,
+            18675.19999998808,
+            18777.09999999404,
+            18878.29999999702,
+            18979.5
+          ],
+          "span_ms": 1023.2000000029802
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p02-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999287094369792,
+          1.0000632411720416
+        ],
+        "beta_at_origin_feasible_ms": [
+          19725.058156673767,
+          19726.45058082413
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.1522365112468833,
+        "origin_browser_ms": 19319.25,
+        "p95_held_out_width_ms": 2.1522365112468833,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-uplink-upper",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 0.8588113911551488,
+        "geometric_mean_bwe_bps": 906771.7755645178,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            896795,
+            896795,
+            896795,
+            903997,
+            903997,
+            903997,
+            911434,
+            911434,
+            911434,
+            919096,
+            919096
+          ],
+          "continuous_log2_bwe": 0.8588113911551489,
+          "elapsed_ms": 18082.20000000298,
+          "geometric_mean_bwe_bps": 906771.7755645178,
+          "history_samples": 11,
+          "max_gap_ms": 108.6000000089407,
+          "passed": true,
+          "sample_history_ms": [
+            18053,
+            18153.90000000596,
+            18255.29999999702,
+            18356.60000000894,
+            18459.29999999702,
+            18560.5,
+            18661.40000000596,
+            18762.29999999702,
+            18870.90000000596,
+            18972.5,
+            19073.90000000596
+          ],
+          "span_ms": 1020.9000000059605
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p03-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__sprout_verizon_evdo",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999420355887817,
+          1.0000566718467108
+        ],
+        "beta_at_origin_feasible_ms": [
+          19670.21762604034,
+          19671.69753609992
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 1.9843425387625757,
+        "origin_browser_ms": 19290.0,
+        "p95_held_out_width_ms": 1.9843425387625757,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "sprout_evaluation_bundle",
+      "network_family": "sprout_verizon_evdo",
+      "network_profile_id": "sprout_verizon_evdo-uplink-upper",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 1.136595923311712,
+        "geometric_mean_bwe_bps": 1099308.2068732684,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1083272,
+            1091807,
+            1091807,
+            1091807,
+            1098670,
+            1098670,
+            1098670,
+            1107310,
+            1107310,
+            1107310,
+            1116168
+          ],
+          "continuous_log2_bwe": 1.1365959233117122,
+          "elapsed_ms": 18081.70000000298,
+          "geometric_mean_bwe_bps": 1099308.2068732686,
+          "history_samples": 11,
+          "max_gap_ms": 112.1000000089407,
+          "passed": true,
+          "sample_history_ms": [
+            18008.90000000596,
+            18109.60000000894,
+            18210.60000000894,
+            18311.40000000596,
+            18412.30000001192,
+            18513.20000000298,
+            18625.30000001192,
+            18726,
+            18826.70000000298,
+            18927.70000000298,
+            19028.60000000894
+          ],
+          "span_ms": 1019.7000000029802
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p03-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999391094233413,
+          1.0000686045409182
+        ],
+        "beta_at_origin_feasible_ms": [
+          19719.735120708858,
+          19721.02874517153
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.2438024000730366,
+        "origin_browser_ms": 19302.00000000745,
+        "p95_held_out_width_ms": 2.2438024000730366,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-downlink-lower",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 2.2088716966282265,
+        "geometric_mean_bwe_bps": 2311567.8290280616,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            2299729,
+            2299729,
+            2299729,
+            2308994,
+            2308994,
+            2308994,
+            2317530,
+            2317530,
+            2317530,
+            2324338,
+            2324338
+          ],
+          "continuous_log2_bwe": 2.208871696628226,
+          "elapsed_ms": 18084.89999999106,
+          "geometric_mean_bwe_bps": 2311567.829028061,
+          "history_samples": 11,
+          "max_gap_ms": 113.29999999701977,
+          "passed": true,
+          "sample_history_ms": [
+            18026.70000000298,
+            18127.60000000894,
+            18240.90000000596,
+            18341.60000000894,
+            18442.5,
+            18543.5,
+            18644.90000000596,
+            18746.10000000894,
+            18847.29999999702,
+            18948.20000000298,
+            19049.29999999702
+          ],
+          "span_ms": 1022.5999999940395
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p04-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.999904859896583,
+          1.0000570266629882
+        ],
+        "beta_at_origin_feasible_ms": [
+          19774.17059740446,
+          19775.91014073856
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.716939777441439,
+        "origin_browser_ms": 19377.10000000149,
+        "p95_held_out_width_ms": 2.716939777441439,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-downlink-lower",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 2.534993374121017,
+        "geometric_mean_bwe_bps": 2897870.9999999995,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            2897871,
+            2897871,
+            2897871,
+            2897871,
+            2897871,
+            2897871,
+            2897871,
+            2897871,
+            2897871,
+            2897871,
+            2897871
+          ],
+          "continuous_log2_bwe": 2.5349933741210164,
+          "elapsed_ms": 18077.40000000596,
+          "geometric_mean_bwe_bps": 2897870.9999999986,
+          "history_samples": 11,
+          "max_gap_ms": 101.90000000596046,
+          "passed": true,
+          "sample_history_ms": [
+            18107.70000000298,
+            18208.5,
+            18310,
+            18410.79999999702,
+            18511.79999999702,
+            18612.79999999702,
+            18714,
+            18815.90000000596,
+            18916.70000000298,
+            19017.70000000298,
+            19118.40000000596
+          ],
+          "span_ms": 1010.7000000029802
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p04-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999514302564257,
+          1.0000702257467187
+        ],
+        "beta_at_origin_feasible_ms": [
+          19804.699487365066,
+          19806.114892966652
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.0416118739412923,
+        "origin_browser_ms": 19393.60000000149,
+        "p95_held_out_width_ms": 2.0416118739412923,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-downlink-upper",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 2.095305618103066,
+        "geometric_mean_bwe_bps": 2136583.378406231,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            2125179,
+            2125179,
+            2125179,
+            2132265,
+            2132265,
+            2139495,
+            2139495,
+            2139495,
+            2148021,
+            2148021,
+            2148021
+          ],
+          "continuous_log2_bwe": 2.0953056181030663,
+          "elapsed_ms": 18087.79999999702,
+          "geometric_mean_bwe_bps": 2136583.3784062313,
+          "history_samples": 11,
+          "max_gap_ms": 109.19999998807907,
+          "passed": true,
+          "sample_history_ms": [
+            18104.60000000894,
+            18205.5,
+            18307.5,
+            18408.60000000894,
+            18509.30000001192,
+            18618.5,
+            18719.10000000894,
+            18820,
+            18921,
+            19021.80000001192,
+            19123.70000000298
+          ],
+          "span_ms": 1019.0999999940395
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p05-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999371418701449,
+          1.0000664952886293
+        ],
+        "beta_at_origin_feasible_ms": [
+          19756.36794374276,
+          19757.782226717485
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.373198914290697,
+        "origin_browser_ms": 19336.99999999255,
+        "p95_held_out_width_ms": 2.373198914290697,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-downlink-upper",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 2.052049234276702,
+        "geometric_mean_bwe_bps": 2073472.9614145828,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            2056576,
+            2065151,
+            2065151,
+            2065151,
+            2072051,
+            2072051,
+            2078971,
+            2078971,
+            2078971,
+            2087699,
+            2087699
+          ],
+          "continuous_log2_bwe": 2.0520492342767014,
+          "elapsed_ms": 18043.40000000596,
+          "geometric_mean_bwe_bps": 2073472.9614145823,
+          "history_samples": 11,
+          "max_gap_ms": 109.1000000089407,
+          "passed": true,
+          "sample_history_ms": [
+            17997.09999999404,
+            18097.89999999106,
+            18198.39999999106,
+            18299.09999999404,
+            18399.89999999106,
+            18509,
+            18609.79999999702,
+            18710.59999999404,
+            18812.09999999404,
+            18913,
+            19014
+          ],
+          "span_ms": 1016.9000000059605
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p05-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999464903910456,
+          1.0000898084756362
+        ],
+        "beta_at_origin_feasible_ms": [
+          19687.004318929878,
+          19688.554953899176
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.347607988631353,
+        "origin_browser_ms": 19308.34999999404,
+        "p95_held_out_width_ms": 2.347607988631353,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-uplink-lower",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 1.0035484928162564,
+        "geometric_mean_bwe_bps": 1002462.6551568157,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            990943,
+            994018,
+            995548,
+            998603,
+            1001822,
+            1003537,
+            1005194,
+            1005194,
+            1005194,
+            1013653,
+            1013653
+          ],
+          "continuous_log2_bwe": 1.0035484928162561,
+          "elapsed_ms": 18063.79999999702,
+          "geometric_mean_bwe_bps": 1002462.6551568154,
+          "history_samples": 11,
+          "max_gap_ms": 112.79999999701977,
+          "passed": true,
+          "sample_history_ms": [
+            18020.39999999106,
+            18121.39999999106,
+            18222.20000000298,
+            18323,
+            18424,
+            18525.20000000298,
+            18627.70000000298,
+            18740.5,
+            18841.29999999702,
+            18942,
+            19042.89999999106
+          ],
+          "span_ms": 1022.5
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p06-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999341485877535,
+          1.0000774775896077
+        ],
+        "beta_at_origin_feasible_ms": [
+          19634.568884370514,
+          19636.06536042146
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.3993809369821975,
+        "origin_browser_ms": 19260.70000000298,
+        "p95_held_out_width_ms": 2.3993809369821975,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 8
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-uplink-lower",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 1.4504495743440302,
+        "geometric_mean_bwe_bps": 1366466.0101768984,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1353823,
+            1353823,
+            1353823,
+            1362857,
+            1362857,
+            1362857,
+            1371914,
+            1371914,
+            1379216,
+            1379216,
+            1379216
+          ],
+          "continuous_log2_bwe": 1.45044957434403,
+          "elapsed_ms": 18041,
+          "geometric_mean_bwe_bps": 1366466.0101768982,
+          "history_samples": 11,
+          "max_gap_ms": 110.1000000089407,
+          "passed": true,
+          "sample_history_ms": [
+            17928.90000000596,
+            18029.79999999702,
+            18130.79999999702,
+            18231.59999999404,
+            18332.5,
+            18433.5,
+            18534.29999999702,
+            18644.40000000596,
+            18745.29999999702,
+            18846.09999999404,
+            18947.09999999404
+          ],
+          "span_ms": 1018.1999999880791
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p06-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999475281407103,
+          1.0000597758360792
+        ],
+        "beta_at_origin_feasible_ms": [
+          19653.50925748323,
+          19655.12090235476
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.0002015194186242,
+        "origin_browser_ms": 19259.85000000149,
+        "p95_held_out_width_ms": 2.0002015194186242,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 4
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-uplink-upper",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 1.4976194914066476,
+        "geometric_mean_bwe_bps": 1411881.9735785457,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1395964,
+            1395964,
+            1405162,
+            1405162,
+            1412691,
+            1412691,
+            1412691,
+            1420302,
+            1420302,
+            1420302,
+            1429873
+          ],
+          "continuous_log2_bwe": 1.4976194914066474,
+          "elapsed_ms": 18056.60000000894,
+          "geometric_mean_bwe_bps": 1411881.9735785455,
+          "history_samples": 11,
+          "max_gap_ms": 114.29999999701977,
+          "passed": true,
+          "sample_history_ms": [
+            17939.20000000298,
+            18040.10000000894,
+            18141.10000000894,
+            18241.90000000596,
+            18342.70000000298,
+            18457,
+            18557.90000000596,
+            18658.80000001192,
+            18759.70000000298,
+            18860.70000000298,
+            18961.60000000894
+          ],
+          "span_ms": 1022.4000000059605
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p07-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__att_lte_driving_2016",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999372110757412,
+          1.00007653516677
+        ],
+        "beta_at_origin_feasible_ms": [
+          19651.43087585057,
+          19652.986229149457
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.304748448448663,
+        "origin_browser_ms": 19267.69999999553,
+        "p95_held_out_width_ms": 2.304748448448663,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 8
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "att_driving_2016_bundle",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-uplink-upper",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 1.768967930155115,
+        "geometric_mean_bwe_bps": 1704050.3101855158,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1627700,
+            1659119,
+            1659119,
+            1659119,
+            1699642,
+            1699642,
+            1732679,
+            1732679,
+            1732679,
+            1774660,
+            1774660
+          ],
+          "continuous_log2_bwe": 1.7689679301551147,
+          "elapsed_ms": 18006.29999999702,
+          "geometric_mean_bwe_bps": 1704050.310185515,
+          "history_samples": 11,
+          "max_gap_ms": 110.3999999910593,
+          "passed": true,
+          "sample_history_ms": [
+            17880,
+            17980.70000000298,
+            18083,
+            18183.79999999702,
+            18284.89999999106,
+            18386.09999999404,
+            18487.09999999404,
+            18587.79999999702,
+            18688.70000000298,
+            18799.09999999404,
+            18902.09999999404
+          ],
+          "span_ms": 1022.0999999940395
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-c01-p07-r1-s0-support"
+    }
+  ]
+}

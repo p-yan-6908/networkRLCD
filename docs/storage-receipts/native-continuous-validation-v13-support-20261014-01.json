@@ -1,0 +1,37 @@
+{
+  "abi": "native_v13_execution_archive_receipt_v1",
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_helper_sha256": "00c7067bf50ca1d01c8fe45dd0418a04b65dfc96a65e2bd6ba5b1e32331e75f0",
+  "capture_index_sha256": "0d9e3801f4c6cd4f560b878daee0e3317934eaa1886b590988fc4838c5c58d73",
+  "files_deleted": 0,
+  "files_verified": 1381,
+  "gate_sha256": "d760e812c861b874aeb252eb06f3af2eeedcf734a687d6efb770ab069d21ed3f",
+  "local_raw_evidence_retained": true,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "bf6c10c3e2a36c5a1a93efeda02ccb42355f201a039c0ff20ae8cf6a92e39346",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "ce29c95fb4792c4c9e013adfee670d8f3af3b2baaa0a52b7e6227e6c12b37f0b",
+      "size": 239898
+    },
+    "results.tar.part-000": {
+      "sha256": "ec08a66f637de7b78b396dbf791d2ad723b4420d875ea27f37530a0f51db95c5",
+      "size": 111933440
+    }
+  },
+  "prefix": "native-continuous-validation-v13-support-20261014-01",
+  "private": true,
+  "protocol_sha256": "e8483ae1a80600cbbbc2d584a96b596e3dd9672dcab44fd062fe98d028843dfa",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-continuous-validation-v13-support",
+  "registered_gate_passed": false,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "revision": "a1747a078970311eadff407059187db0aad1fa55",
+  "scientific_registration_commit": "6b8471a"
+}
