@@ -1,0 +1,67 @@
+{
+  "abi": "native_history_state_m6r_selected_membership_audit_v1",
+  "baseline_counts": {
+    "content_kampar_boating_01__18000": {
+      "ascending_prefix": 14,
+      "descending_prefix": 14
+    },
+    "content_kampar_boating_01__24000": {
+      "ascending_prefix": 21,
+      "descending_prefix": 6
+    },
+    "content_kampar_boating_01__30000": {
+      "ascending_prefix": 19,
+      "descending_prefix": 12
+    },
+    "content_volga_lock_01__18000": {
+      "ascending_prefix": 17,
+      "descending_prefix": 14
+    },
+    "content_volga_lock_01__24000": {
+      "ascending_prefix": 14,
+      "descending_prefix": 13
+    },
+    "content_volga_lock_01__30000": {
+      "ascending_prefix": 21,
+      "descending_prefix": 7
+    }
+  },
+  "candidate_immutably_selected_before_validation": true,
+  "chosen_centers": {
+    "content_kampar_boating_01__18000": {
+      "encode": 3.033333333333335,
+      "x": 1.0853879425281334
+    },
+    "content_kampar_boating_01__24000": {
+      "encode": 3.7166666666666717,
+      "x": 1.2751691925411135
+    },
+    "content_kampar_boating_01__30000": {
+      "encode": 3.558333333333336,
+      "x": 1.3470102007609874
+    },
+    "content_volga_lock_01__18000": {
+      "encode": 2.545833333333335,
+      "x": 1.1454413881519732
+    },
+    "content_volga_lock_01__24000": {
+      "encode": 2.541666666666667,
+      "x": 1.3318668443147184
+    },
+    "content_volga_lock_01__30000": {
+      "encode": 2.6249999999999942,
+      "x": 1.4170709868538047
+    }
+  },
+  "development_membership_identical_to_baseline_by_stratum": {
+    "content_kampar_boating_01__18000": true,
+    "content_kampar_boating_01__24000": true,
+    "content_kampar_boating_01__30000": true,
+    "content_volga_lock_01__18000": true,
+    "content_volga_lock_01__24000": true,
+    "content_volga_lock_01__30000": true
+  },
+  "fresh_panel_used_for_selection": false,
+  "selected": "h05_encode_history",
+  "selected_is_qualified": false
+}
