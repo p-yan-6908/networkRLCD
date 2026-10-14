@@ -1,0 +1,79 @@
+{
+  "anchor_commit": "a7ea1b0",
+  "capacity_hints_do_not_guarantee_observed_bwe": true,
+  "independence": "All raw productions/traces are new to prior native panels. Two distinct trace-import bundles and two radio families share one measurement program; directions, offsets, overlapping windows and repetitions remain nested. Neither four profiles nor crossed cells are independent campaign replicates. No multi-program population claim is permitted.",
+  "network_source_screen": {
+    "traces/ATT-LTE-driving-2016.down": {
+      "candidate_windows": 10,
+      "native_telemetry_observed": false,
+      "same_file_window_overlap_seconds": 27,
+      "selected_offsets_s": [
+        27,
+        36
+      ],
+      "selection": "minimum and maximum conditioning-only geometric mean, then source offset"
+    },
+    "traces/ATT-LTE-driving-2016.up": {
+      "candidate_windows": 24,
+      "native_telemetry_observed": false,
+      "same_file_window_overlap_seconds": 14,
+      "selected_offsets_s": [
+        25,
+        47
+      ],
+      "selection": "minimum and maximum conditioning-only geometric mean, then source offset"
+    },
+    "traces/Verizon-EVDO-driving.down": {
+      "candidate_windows": 45,
+      "native_telemetry_observed": false,
+      "same_file_window_overlap_seconds": 0,
+      "selected_offsets_s": [
+        204,
+        91
+      ],
+      "selection": "minimum and maximum conditioning-only geometric mean, then source offset"
+    },
+    "traces/Verizon-EVDO-driving.up": {
+      "candidate_windows": 352,
+      "native_telemetry_observed": false,
+      "same_file_window_overlap_seconds": 0,
+      "selected_offsets_s": [
+        876,
+        289
+      ],
+      "selection": "minimum and maximum conditioning-only geometric mean, then source offset"
+    }
+  },
+  "new_native_telemetry_observed": false,
+  "sources_excluded": [
+    {
+      "reason": "Already included in V11; also no uninterrupted 36-second .35-3.2Mbps file-download window. Not a new source.",
+      "source": "UCC 5G 3751194"
+    },
+    {
+      "reason": "Verified 229878301-byte CC-BY-4.0 source. Router traffic counters do not document saturation or packet-service opportunities; traffic volume cannot be assumed to be path capacity.",
+      "sha256": "5115bd6840f0358759e70cda8b1b2137c5e52b3a941ecf6baf9b5fb161e41565",
+      "source": "Fjord5G CAU-8395, 14627352"
+    },
+    {
+      "reason": "Verified explicitly licensed iperf samples; all complete buffer-tuning and standalone cases are substantially above the conservative state-support service range. No rate scaling or clamping.",
+      "source": "6GSMART-EZ 17737767"
+    },
+    {
+      "reason": "Verified CC-BY-4.0 source; sparse, roughly 10-second tests near hundreds of Mbps, not a contiguous 1Hz service-opportunity history.",
+      "source": "EdgeInfrastructure 7311294"
+    },
+    {
+      "reason": "Sparse minute-separated throughput tests, no continuous support histories; reused source screen only.",
+      "source": "DEDICAT6G 10829862"
+    },
+    {
+      "reason": "Separate upstream data rights are not established by mirror code licenses; not selected.",
+      "source": "Pensieve cooked/FCC/Norway mirrors"
+    },
+    {
+      "reason": "Under 36.6 seconds or insufficient original spatial resolution for the unchanged 640x360 sampled-quality recipe; not captured natively.",
+      "source": "Airport/Pothole/Traffic/Oshodi Commons candidates"
+    }
+  ]
+}

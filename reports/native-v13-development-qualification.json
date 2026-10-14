@@ -1,0 +1,513 @@
+{
+  "abi": "native_v13_support_clock_transport_gate_v1",
+  "capture_index_sha256": "7678dc72803abb02baf733d02469170fb5a86699d42e4cdbc533afe5ed935aea",
+  "cells": {},
+  "census_states": {},
+  "common_support_at_least_half_octave": false,
+  "common_support_log2_interval": null,
+  "controller_fitted": false,
+  "kind": "development",
+  "outcomes_read": false,
+  "passed": true,
+  "planned_sessions": 6,
+  "protocol_sha256": "911173f8a1247f4bd856ea49ceb8264b0ee8c8f6d19203b93d9731683dd53bbf",
+  "qualified_sessions": 6,
+  "sessions": [
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "development_reused_v11d_cicada__synthetic_development_only",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999277203265868,
+          1.0000573902874985
+        ],
+        "beta_at_origin_feasible_ms": [
+          19606.736068959788,
+          19608.526281859908
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.6828224174641946,
+        "origin_browser_ms": 19212.900000002235,
+        "p95_held_out_width_ms": 2.6828224174641946,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "development_reused_v11d_cicada",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_development_only",
+      "network_profile_id": "synthetic_constant_0.35",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": -0.7676827244137673,
+        "geometric_mean_bwe_bps": 293680.07143521134,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            284479,
+            287785,
+            290395,
+            292214,
+            293161,
+            295072,
+            296019,
+            297930,
+            297930,
+            297930,
+            297930
+          ],
+          "continuous_log2_bwe": -0.7676827244137673,
+          "elapsed_ms": 18012.89999999851,
+          "geometric_mean_bwe_bps": 293680.07143521134,
+          "history_samples": 11,
+          "max_gap_ms": 110.60000000149012,
+          "passed": true,
+          "sample_history_ms": [
+            17814.70000000298,
+            17916.40000000596,
+            18017.60000000149,
+            18128.20000000298,
+            18229.20000000298,
+            18330.20000000298,
+            18431.30000000447,
+            18532.10000000149,
+            18633.10000000149,
+            18733.90000000596,
+            18838.5
+          ],
+          "span_ms": 1023.7999999970198
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-development-p0-census-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "development_reused_v11d_cicada__synthetic_development_only",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999504776028352,
+          1.00005689346106
+        ],
+        "beta_at_origin_feasible_ms": [
+          19703.203825707817,
+          19704.66327199671
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 1.9531855525492574,
+        "origin_browser_ms": 19293.249999996275,
+        "p95_held_out_width_ms": 1.9531855525492574,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "development_reused_v11d_cicada",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_development_only",
+      "network_profile_id": "synthetic_constant_0.35",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "ack_ms": 18963.69999999553,
+        "assignment_ms": 18962.19999999553,
+        "cap_bps": 229711,
+        "continuous_log2_bwe": -0.5388354657620067,
+        "geometric_mean_bwe_bps": 344163.1487425492,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            335688,
+            339560,
+            339560,
+            339560,
+            344425,
+            344425,
+            344425,
+            348383,
+            348383,
+            348383,
+            353401
+          ],
+          "continuous_log2_bwe": -0.5388354657620066,
+          "elapsed_ms": 18030.39999999851,
+          "geometric_mean_bwe_bps": 344163.14874254924,
+          "history_samples": 11,
+          "max_gap_ms": 109.5,
+          "passed": true,
+          "sample_history_ms": [
+            17944,
+            18045,
+            18145.89999999851,
+            18246.79999999702,
+            18347.69999999553,
+            18448.69999999553,
+            18549.69999999553,
+            18650.59999999404,
+            18751.89999999851,
+            18861.39999999851,
+            18962.19999999553
+          ],
+          "span_ms": 1018.1999999955297
+        },
+        "ratio": 0.65
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-development-p0-s0"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "development_reused_v11d_cicada__synthetic_development_only",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999491347606715,
+          1.000056238909997
+        ],
+        "beta_at_origin_feasible_ms": [
+          19477.80547469523,
+          19479.062250202434
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 1.843008911677316,
+        "origin_browser_ms": 19117.400000002235,
+        "p95_held_out_width_ms": 1.843008911677316,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 8
+      },
+      "content_id": "development_reused_v11d_cicada",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_development_only",
+      "network_profile_id": "synthetic_constant_0.35",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "ack_ms": 18832.60000000149,
+        "assignment_ms": 18831.39999999851,
+        "cap_bps": 418124,
+        "continuous_log2_bwe": -0.36827857792846735,
+        "geometric_mean_bwe_bps": 387353.1621030059,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            377338,
+            381779,
+            381779,
+            381779,
+            387378,
+            387378,
+            387378,
+            392793,
+            392793,
+            392793,
+            398213
+          ],
+          "continuous_log2_bwe": -0.36827857792846747,
+          "elapsed_ms": 18044.19999999553,
+          "geometric_mean_bwe_bps": 387353.1621030059,
+          "history_samples": 11,
+          "max_gap_ms": 112,
+          "passed": true,
+          "sample_history_ms": [
+            17811.5,
+            17912.30000000447,
+            18013.60000000149,
+            18114.5,
+            18215.39999999851,
+            18316.30000000447,
+            18417.20000000298,
+            18529.20000000298,
+            18630.10000000149,
+            18730.80000000447,
+            18831.39999999851
+          ],
+          "span_ms": 1019.8999999985099
+        },
+        "ratio": 1.05
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-development-p0-s1"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "development_reused_v11d_cicada__synthetic_development_only",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999225547092468,
+          1.0000574210972513
+        ],
+        "beta_at_origin_feasible_ms": [
+          19590.21554211289,
+          19591.851932885224
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.4229087010571675,
+        "origin_browser_ms": 19238.849999997765,
+        "p95_held_out_width_ms": 2.4229087010571675,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "development_reused_v11d_cicada",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_development_only",
+      "network_profile_id": "synthetic_constant_1.2",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 1.3939325787890853,
+        "geometric_mean_bwe_bps": 1313970.220177773,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1298971,
+            1305668,
+            1305668,
+            1305668,
+            1314078,
+            1314078,
+            1314078,
+            1322279,
+            1322279,
+            1322279,
+            1328955
+          ],
+          "continuous_log2_bwe": 1.3939325787890855,
+          "elapsed_ms": 18002.39999999851,
+          "geometric_mean_bwe_bps": 1313970.2201777732,
+          "history_samples": 11,
+          "max_gap_ms": 101.59999999403954,
+          "passed": true,
+          "sample_history_ms": [
+            17853.60000000149,
+            17955.19999999553,
+            18056.29999999702,
+            18157.19999999553,
+            18258.10000000149,
+            18358.79999999702,
+            18459.69999999553,
+            18560.89999999851,
+            18661.60000000149,
+            18762.5,
+            18863.29999999702
+          ],
+          "span_ms": 1009.6999999955297
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-development-p1-census-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "development_reused_v11d_cicada__synthetic_development_only",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999226205128673,
+          1.0000668675450057
+        ],
+        "beta_at_origin_feasible_ms": [
+          19543.424174672702,
+          19545.04848285932
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.5070734637774876,
+        "origin_browser_ms": 19161.89999999851,
+        "p95_held_out_width_ms": 2.5070734637774876,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "development_reused_v11d_cicada",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_development_only",
+      "network_profile_id": "synthetic_constant_1.2",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "ack_ms": 18867,
+        "assignment_ms": 18865.70000000298,
+        "cap_bps": 841778,
+        "continuous_log2_bwe": 1.3540379681018473,
+        "geometric_mean_bwe_bps": 1278133.000003607,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1261327,
+            1269594,
+            1269594,
+            1269594,
+            1278155,
+            1278155,
+            1278155,
+            1286747,
+            1286747,
+            1286747,
+            1295043
+          ],
+          "continuous_log2_bwe": 1.3540379681018475,
+          "elapsed_ms": 18077.5,
+          "geometric_mean_bwe_bps": 1278133.0000036072,
+          "history_samples": 11,
+          "max_gap_ms": 111.60000000149012,
+          "passed": true,
+          "sample_history_ms": [
+            17846.39999999851,
+            17947.20000000298,
+            18048.10000000149,
+            18148.80000000447,
+            18249.5,
+            18350.39999999851,
+            18462,
+            18563.30000000447,
+            18664.10000000149,
+            18764.89999999851,
+            18865.70000000298
+          ],
+          "span_ms": 1019.3000000044703
+        },
+        "ratio": 0.65
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-development-p1-s0"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "development_reused_v11d_cicada__synthetic_development_only",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999374683917214,
+          1.0000641265844796
+        ],
+        "beta_at_origin_feasible_ms": [
+          19554.702419713918,
+          19556.023334430298
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.143867555401812,
+        "origin_browser_ms": 19186.599999997765,
+        "p95_held_out_width_ms": 2.143867555401812,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "development_reused_v11d_cicada",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_development_only",
+      "network_profile_id": "synthetic_constant_1.2",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "ack_ms": 18915.39999999851,
+        "assignment_ms": 18913.89999999851,
+        "cap_bps": 1378267,
+        "continuous_log2_bwe": 1.3790230274157131,
+        "geometric_mean_bwe_bps": 1300460.9035442453,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1283854,
+            1291744,
+            1291744,
+            1298134,
+            1298134,
+            1298134,
+            1306126,
+            1306126,
+            1306126,
+            1312635,
+            1312635
+          ],
+          "continuous_log2_bwe": 1.3790230274157134,
+          "elapsed_ms": 18058.79999999702,
+          "geometric_mean_bwe_bps": 1300460.9035442455,
+          "history_samples": 11,
+          "max_gap_ms": 110,
+          "passed": true,
+          "sample_history_ms": [
+            17894.19999999553,
+            17995.39999999851,
+            18096.39999999851,
+            18197.29999999702,
+            18307.29999999702,
+            18408.19999999553,
+            18509,
+            18609.89999999851,
+            18710.69999999553,
+            18812.89999999851,
+            18913.89999999851
+          ],
+          "span_ms": 1019.7000000029802
+        },
+        "ratio": 1.05
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "v13-development-p1-s1"
+    }
+  ]
+}
