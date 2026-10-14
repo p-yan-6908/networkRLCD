@@ -1,0 +1,111 @@
+{
+  "abi": "native_prefix_memory_m5_reporting_v1",
+  "actual_clock_beginning_max_width_ms": 2.7915267140313063,
+  "actual_clock_full_max_width_ms": 1.5985338521713857,
+  "actual_first_measured_bwe_bps_unique": [
+    1200000
+  ],
+  "actual_maximum_startup_poll_gap_ms": 56.79999999701977,
+  "actual_native_initial_bwe_bps_unique": [
+    1200000
+  ],
+  "all_endpoint_fidelity_pairs_passed": 42,
+  "controller_state_redesigned": false,
+  "counts_by_content_prefix": {
+    "content_kampar_boating_01__ascending_prefix": {
+      "original_attempts": 21,
+      "qualified": 21,
+      "sealed": 21
+    },
+    "content_kampar_boating_01__descending_prefix": {
+      "original_attempts": 21,
+      "qualified": 21,
+      "sealed": 21
+    },
+    "content_volga_lock_01__ascending_prefix": {
+      "original_attempts": 21,
+      "qualified": 21,
+      "sealed": 21
+    },
+    "content_volga_lock_01__descending_prefix": {
+      "original_attempts": 21,
+      "qualified": 21,
+      "sealed": 21
+    }
+  },
+  "delivery_qoe_action_outcomes_read": false,
+  "gate_sha256": "a483ddf2b440cb89d46b4391bdcf8400b3f60f7ad07b68c4e2a288228d91fbd1",
+  "history_timing_descriptions": {
+    "content_kampar_boating_01": {
+      "18000": {
+        "history_end_elapsed_ms_range": [
+          18002.60000000894,
+          18100.0
+        ],
+        "maximum_pair_history_end_difference_ms": 68.0
+      },
+      "24000": {
+        "history_end_elapsed_ms_range": [
+          24001.40000000596,
+          24100.5
+        ],
+        "maximum_pair_history_end_difference_ms": 94.5
+      },
+      "30000": {
+        "history_end_elapsed_ms_range": [
+          30000.79999999702,
+          30100.20000000298
+        ],
+        "maximum_pair_history_end_difference_ms": 97.70000000298023
+      },
+      "36000": {
+        "history_end_elapsed_ms_range": [
+          36002.79999999702,
+          36093.09999999404
+        ],
+        "maximum_pair_history_end_difference_ms": 75.2000000178814
+      }
+    },
+    "content_volga_lock_01": {
+      "18000": {
+        "history_end_elapsed_ms_range": [
+          18006.40000000596,
+          18103.5
+        ],
+        "maximum_pair_history_end_difference_ms": 78.0
+      },
+      "24000": {
+        "history_end_elapsed_ms_range": [
+          24000.29999999702,
+          24100.70000000298
+        ],
+        "maximum_pair_history_end_difference_ms": 75.59999999403954
+      },
+      "30000": {
+        "history_end_elapsed_ms_range": [
+          30001.5,
+          30099.79999999702
+        ],
+        "maximum_pair_history_end_difference_ms": 81.20000000298023
+      },
+      "36000": {
+        "history_end_elapsed_ms_range": [
+          36006.29999999702,
+          36103.90000000596
+        ],
+        "maximum_pair_history_end_difference_ms": 90.6000000089407
+      }
+    }
+  },
+  "maximum_registered_vertex_suffix_exposure_difference_octaves": 0.0009465012710874297,
+  "new_inferential_tests": 0,
+  "plots": {
+    "reports/native-prefix-memory-m5-clocks.png": "593e5af2a6dcfb4a62de0a619c193812fcdf1465bcf7729e070d0a55c5cdcc84",
+    "reports/native-prefix-memory-m5-distributions.png": "6f5f0bf2a9f4a3d13d0a98c75c4c64fa69a048aa6ca1ed977ae0feaefdcc20dd",
+    "reports/native-prefix-memory-m5-uncertainty.png": "96c1e813d29988d3e9b91fc6547c447b208de18856d5b767e3fd7e7fb8d7670c"
+  },
+  "predictors_fitted": false,
+  "prefix_test_or_convergence_gate_changed": false,
+  "summary_sha256": "2721e77f02b25d580584f862e5ffc2d0a6bdb5d68df185f642874a7a94a900d6",
+  "tool_sha256": "6736ec67fcb11d57e5c5a0d684ba3463e49f646eff27788d9c6c867e0b00ccb6"
+}

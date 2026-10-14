@@ -1,0 +1,45 @@
+{
+  "abi": "native_bwe_support_mechanism_archive_receipt_v1",
+  "additional_bindings_verified_against_freshly_restored_inventory": true,
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_helper_sha256": "a6e2a7f9206df0badc31730c2264970d29ac60e840882557210d8ea1776a2913",
+  "base_gate_sha256": "22c009d2f4e0d30f78cb931480e1da0990181a94afc5028739231a06ecc8c1d3",
+  "capture_index_sha256": "d0c67f391c6aa313cdcc4e8b0a8359d64b8d2115d73eade8cb8ce8433e769632",
+  "files_deleted": 0,
+  "files_verified": 4428,
+  "full_prefix_gate_required_for_effect_analysis": true,
+  "gate_sha256": "22c009d2f4e0d30f78cb931480e1da0990181a94afc5028739231a06ecc8c1d3",
+  "generic_gate_fields_describe": "Inherited acquisition qualification; the additional prefix_memory_gate binding is the scientific 84-session and 42-pair effect-admission authority.",
+  "local_raw_evidence_retained": true,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "3d7eeb2574f95f8c8bb089f10981e096d241e577b3e3e1c0ef616f0049dbd24b",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "707f178e3e2dc6ed17fa3f4f03dbfbc4919f4a7e8db61b326bc20df864429798",
+      "size": 757488
+    },
+    "results.tar.part-000": {
+      "sha256": "f0660837d4d4e5b72601206b0ba7b58bfb12d67cc15b8add7edbc50bfde8b517",
+      "size": 389754880
+    }
+  },
+  "prefix": "native-prefix-memory-m5-20261014-01",
+  "prefix_memory_gate_passed": true,
+  "prefix_memory_gate_sha256": "a483ddf2b440cb89d46b4391bdcf8400b3f60f7ad07b68c4e2a288228d91fbd1",
+  "prefix_memory_summary_sha256": "2721e77f02b25d580584f862e5ffc2d0a6bdb5d68df185f642874a7a94a900d6",
+  "private": true,
+  "protocol_sha256": "f7a38e32d3051767db3ff8f100ee43ca77a504e0e5cece89bea05b6b3d516d48",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-prefix-memory-m5",
+  "registered_gate_passed": true,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "revision": "0f4da165bcd87ace87616d564cfe949eaff95d47",
+  "scientific_registration_commit": "692656354c33c54e8c6cc9472cc321e0ea131895",
+  "stage": "prefix_memory_validation"
+}

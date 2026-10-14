@@ -1,0 +1,42 @@
+{
+  "abi": "native_prefix_memory_m5_preservation_audit_v1",
+  "audit_source_sha256": "215e8500bd5b6318771334bad63ffbbc554523a8f401cd774b0c7d34783845ae",
+  "controller_fitted": false,
+  "delivery_qoe_action_outcomes_read": false,
+  "external_new_workflow_bytes": 1033568405,
+  "external_peak_bound_including_fresh_download_bytes": 1424081277,
+  "external_storage_by_root": {
+    "native-prefix-instrumentation-m4": 8695002,
+    "native-prefix-instrumentation-m4-archive-feasibility-20261014-01": 8805517,
+    "native-prefix-instrumentation-m4r": 120350169,
+    "native-prefix-instrumentation-m4r-feasibility-20261014-01-archive-stage": 15828035,
+    "native-prefix-instrumentation-m4r-qualification-20261014-01-archive-stage": 107559145,
+    "native-prefix-memory-m5": 381817503,
+    "native-prefix-memory-m5-20261014-01-archive-stage": 390513034
+  },
+  "external_workflow_limit_bytes": 2000000000,
+  "files_deleted": 0,
+  "frozen_exact_reference_arrays_verified": 8,
+  "full_prefix_gate_passed": true,
+  "new_inferential_tests": 0,
+  "original_attempts": 84,
+  "pinned_archive_revision": "0f4da165bcd87ace87616d564cfe949eaff95d47",
+  "predictors_fitted": false,
+  "prior_tracked_files_unchanged": 1333,
+  "project_bytes": 290971236,
+  "project_limit_bytes": 10000000000,
+  "qualified_sessions": 84,
+  "raw_files_exactly_match_archived_inventory": 4428,
+  "receipt_sha256": "1f06a6726b534a0e000fa41eb22206175723bffa652683c658a8c3bcdce0cf61",
+  "remote_objects_freshly_verified": 4,
+  "scientific_registration_commit": "692656354c33c54e8c6cc9472cc321e0ea131895",
+  "sealed_sessions": 84,
+  "verification": {
+    "parent_qualified_originals": 32,
+    "planned_sessions": 84,
+    "predictors_fitted": false,
+    "prior_files_unchanged": 1333,
+    "started": true,
+    "verified": true
+  }
+}
