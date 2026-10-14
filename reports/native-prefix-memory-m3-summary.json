@@ -1,0 +1,132 @@
+{
+  "abi": "native_prefix_memory_m3_summary_v1",
+  "augmented_state_development_candidate_passed": false,
+  "bitrate_actions_assigned": 0,
+  "capture_index_sha256": "77ae45aa4634618fd7ea0f967a9fdd52186663f6434131346a34968df65ba62a",
+  "causal_state_sufficiency_established": false,
+  "contents": {
+    "content_kampar_boating_01": {
+      "sustained_convergence": false,
+      "windows": {
+        "18000": {
+          "convergence_passed": false,
+          "estimable": false,
+          "family_alpha": 0.025,
+          "original_sessions": 42,
+          "primary_rejected": false,
+          "qualified_fidelity_pairs": 16,
+          "qualified_session_histories": 36,
+          "reason": "Every original session/history and suffix-fidelity pair is required; no replacements or subset analysis."
+        },
+        "24000": {
+          "convergence_passed": false,
+          "estimable": false,
+          "formal_persistence": {
+            "gated_off": true,
+            "reason": "Qualified primary rejection and all three later tests required; late p-values remain descriptive."
+          },
+          "original_sessions": 42,
+          "qualified_fidelity_pairs": 16,
+          "qualified_session_histories": 36,
+          "reason": "Every original session/history and suffix-fidelity pair is required; no replacements or subset analysis."
+        },
+        "30000": {
+          "convergence_passed": false,
+          "estimable": false,
+          "formal_persistence": {
+            "gated_off": true,
+            "reason": "Qualified primary rejection and all three later tests required; late p-values remain descriptive."
+          },
+          "original_sessions": 42,
+          "qualified_fidelity_pairs": 16,
+          "qualified_session_histories": 36,
+          "reason": "Every original session/history and suffix-fidelity pair is required; no replacements or subset analysis."
+        },
+        "36000": {
+          "convergence_passed": false,
+          "estimable": false,
+          "formal_persistence": {
+            "gated_off": true,
+            "reason": "Qualified primary rejection and all three later tests required; late p-values remain descriptive."
+          },
+          "original_sessions": 42,
+          "qualified_fidelity_pairs": 16,
+          "qualified_session_histories": 36,
+          "reason": "Every original session/history and suffix-fidelity pair is required; no replacements or subset analysis."
+        }
+      }
+    },
+    "content_volga_lock_01": {
+      "sustained_convergence": false,
+      "windows": {
+        "18000": {
+          "convergence_passed": false,
+          "estimable": false,
+          "family_alpha": 0.025,
+          "original_sessions": 42,
+          "primary_rejected": false,
+          "qualified_fidelity_pairs": 20,
+          "qualified_session_histories": 41,
+          "reason": "Every original session/history and suffix-fidelity pair is required; no replacements or subset analysis."
+        },
+        "24000": {
+          "convergence_passed": false,
+          "estimable": false,
+          "formal_persistence": {
+            "gated_off": true,
+            "reason": "Qualified primary rejection and all three later tests required; late p-values remain descriptive."
+          },
+          "original_sessions": 42,
+          "qualified_fidelity_pairs": 20,
+          "qualified_session_histories": 41,
+          "reason": "Every original session/history and suffix-fidelity pair is required; no replacements or subset analysis."
+        },
+        "30000": {
+          "convergence_passed": false,
+          "estimable": false,
+          "formal_persistence": {
+            "gated_off": true,
+            "reason": "Qualified primary rejection and all three later tests required; late p-values remain descriptive."
+          },
+          "original_sessions": 42,
+          "qualified_fidelity_pairs": 20,
+          "qualified_session_histories": 41,
+          "reason": "Every original session/history and suffix-fidelity pair is required; no replacements or subset analysis."
+        },
+        "36000": {
+          "convergence_passed": false,
+          "estimable": false,
+          "formal_persistence": {
+            "gated_off": true,
+            "reason": "Qualified primary rejection and all three later tests required; late p-values remain descriptive."
+          },
+          "original_sessions": 42,
+          "qualified_fidelity_pairs": 20,
+          "qualified_session_histories": 41,
+          "reason": "Every original session/history and suffix-fidelity pair is required; no replacements or subset analysis."
+        }
+      }
+    }
+  },
+  "controller_fitted": false,
+  "gate_sha256": "6ebdbe88ac5fdab485c90fa87acf9628b884ec09b095f3dd300d52948e833fcf",
+  "native_common_support_established": false,
+  "negative_difference_test_is_convergence": false,
+  "outcomes_read": false,
+  "planned_sessions": 84,
+  "prefix_effect_detected_in_at_least_one_content": false,
+  "prefix_effect_replicated_across_both_contents": false,
+  "prior_or_synthetic_sources_pooled": false,
+  "protocol_sha256": "e3a2791090e7a495609895a76af1bfced1c3554fb6fb77ce70289e8db78f39f0",
+  "qualified_primary_rejections": 0,
+  "qualified_sessions": 77,
+  "registration_commit": "f43550787386a4f5bfbaf2329f02b43cbf05a154",
+  "scope": "Two reused clips and one reused LTE trace; constructed prefixes and common original measured suffix. Support-state development, no independent source or action evidence.",
+  "sealed_sessions": 83,
+  "state_evaluation": {},
+  "state_evaluation_enabled": false,
+  "sustained_distribution_convergence_both_contents": false,
+  "technical_gate_passed": false,
+  "v13_reopened": false,
+  "verified_session_files": 3516
+}

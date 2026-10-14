@@ -1,0 +1,56 @@
+{
+  "abi": "native_prefix_memory_m3_final_integrity_execution_v1",
+  "all_local_raw_files_match_verified_archive": true,
+  "anchor_commit": "7cf6ae5",
+  "archive_receipt_sha256": "a7e4f1a4b93851b1da69ee720745602cc986711d60d3ff7014d9607c7e84991a",
+  "archive_revision": "ecdf7f14bfaef244c8572b49f1ee1641da52531e",
+  "archive_stage_bytes": 296637846,
+  "bounded_task_evidence_plus_stage_plus_fresh_object_bytes": 882684415,
+  "content_primary_estimability": {
+    "content_kampar_boating_01": false,
+    "content_volga_lock_01": false
+  },
+  "controller_fitted": false,
+  "effect_randomization_references_generated": 0,
+  "evidence_files_deleted": 0,
+  "failed_originals": [
+    "m3-r12-c00-s1-support"
+  ],
+  "fresh_object_bytes": 296637684,
+  "fresh_remote_files_verified": 3708,
+  "original_attempts_recorded": 84,
+  "original_interrupted_files_retained_and_verified": 27,
+  "outcomes_read": false,
+  "planned_new_external_bytes": 1000000000,
+  "prior_files_verified_unchanged": 1289,
+  "prior_or_synthetic_sources_pooled": false,
+  "project_storage_status": {
+    "event": "STORAGE_budget",
+    "external_cache": "/home/agent/.cache/networkrlcd",
+    "limit_bytes": 10000000000,
+    "planned_bytes": 0,
+    "project_bytes": 301318159,
+    "symlinks_followed": false,
+    "within_budget": true
+  },
+  "qualified_sessions": 77,
+  "raw_root_bytes": 289408885,
+  "recovery_registration_commit": "c595edce7c79d7284af7f97d05f2006699f91029",
+  "replacements": 0,
+  "result_doc_sha256": "969ca3a5af5a753dd12bf5987d42261fb74cd7a2a580fc0995adbf259f4e2fca",
+  "scientific_registration_commit": "f43550787386a4f5bfbaf2329f02b43cbf05a154",
+  "scientific_verify": {
+    "protocol_sha256": "e3a2791090e7a495609895a76af1bfced1c3554fb6fb77ce70289e8db78f39f0",
+    "registration_matches_head": true,
+    "sessions": 84,
+    "started": true,
+    "v13_actions_started": false,
+    "verified": true
+  },
+  "sealed_captures": 83,
+  "session_manifest_hashes_verified": 84,
+  "session_payload_files_verified": 3516,
+  "state_predictors_fitted": 0,
+  "v13_reopened": false,
+  "verified_at_utc": "2026-10-14T19:19:51.379086+00:00"
+}
