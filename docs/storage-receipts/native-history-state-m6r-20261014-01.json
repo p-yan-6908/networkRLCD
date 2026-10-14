@@ -1,0 +1,52 @@
+{
+  "abi": "native_bwe_support_mechanism_archive_receipt_v1",
+  "additional_bindings_verified_against_freshly_restored_inventory": true,
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_helper_sha256": "a6e2a7f9206df0badc31730c2264970d29ac60e840882557210d8ea1776a2913",
+  "base_gate_sha256": "66782cbc67cf0d512e927234cd4f7b0a195adab6ea07ee123a5579030fe8d71e",
+  "capture_index_sha256": "5620b073b28749ceb6b9ed0cf84f1081a35d5345d4a118c15123b7db7686c2db",
+  "closed_m6_development_failure_included": true,
+  "conditional_future_bwe_comparisons_estimable": false,
+  "files_deleted": 0,
+  "files_verified": 1858,
+  "gate_sha256": "66782cbc67cf0d512e927234cd4f7b0a195adab6ea07ee123a5579030fe8d71e",
+  "generic_gate_fields_describe": "Inherited acquisition qualification only; separate state-membership and screen bindings govern conditional future BWE analysis and remain failed/unqualified.",
+  "history_state_acquisition_gate_passed": true,
+  "history_state_acquisition_gate_sha256": "50f2f1d9652d46c97700cb8f11628b513ab9e12a62ac3e615de4aa0a00a9f804",
+  "history_state_screen_qualified": false,
+  "history_state_summary_sha256": "e296ef048035accff776803b5ab060d63729e15bd5222e050a7b733152f605da",
+  "local_raw_evidence_retained": true,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "40c6110368c1ada0ffe2db20db03e0b3d889983d898eb8da5d2f11e4067eee19",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "9eacbb1408fc6a11dda364844f0830725b7cd6be7f94369f368965a1550b29d2",
+      "size": 321066
+    },
+    "results.tar.part-000": {
+      "sha256": "0926e8999127f1f3e07b6f150d9c12b9f5cb2f26303ed7f408fc60ab486234f0",
+      "size": 131072000
+    }
+  },
+  "prefix": "native-history-state-m6r-20261014-01",
+  "private": true,
+  "protocol_sha256": "13804cd014ebe397343cdd0c1388def8378bf398233de2f52facf2c0761bfb44",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-history-state-m6r/validation",
+  "registered_gate_passed": true,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "revision": "38d09402609e023b2a124196b3ffcec4c8752c00",
+  "scientific_registration_commit": "e6612f7722556b8c61be52229b37b283e205ccd3",
+  "selected_state_sha256": "68b2faf5399992674ec6f410e742a2c3ec42718a08739dab4d25d83529a8a225",
+  "stage": "history_state_support_validation",
+  "state_design_registration_commit": "e901b0dca91ac30e7b31c4ebd54dd66b31c3f828",
+  "state_design_sha256": "e570fc80d5c1d0678edd233718d62956e4917934492c2f9bc8e72c4b144660c2",
+  "state_membership_gate_passed": false,
+  "state_membership_gate_sha256": "6ea0eca82d5ea7ab93a55b232b2b1a3b76c66ea06c30e05539d5e0f30a243724"
+}

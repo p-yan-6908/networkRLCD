@@ -1,0 +1,337 @@
+{
+  "abi": "native_history_state_m6r_summary_v1",
+  "acquisition_gate_passed": true,
+  "acquisition_gate_sha256": "50f2f1d9652d46c97700cb8f11628b513ab9e12a62ac3e615de4aa0a00a9f804",
+  "action_values_estimated": false,
+  "broad_native_common_support_established": false,
+  "closure": "Frozen state coverage/retention gate failed; no conditional future BWE estimates, no retuning or replacements.",
+  "controller_fitted": false,
+  "delivery_qoe_action_outcomes_read": false,
+  "design_sha256": "e570fc80d5c1d0678edd233718d62956e4917934492c2f9bc8e72c4b144660c2",
+  "history_state_qualified_for_this_support_screen": false,
+  "membership": {
+    "abi": "native_history_state_m6r_membership_gate_v1",
+    "cells": {
+      "content_kampar_boating_01__18000": {
+        "b0_instantaneous": {
+          "counts_by_prefix": {
+            "ascending_prefix": 4,
+            "descending_prefix": 6
+          },
+          "matched_trials": [
+            "m6r-r00-c00-s0-support",
+            "m6r-r00-c00-s1-support",
+            "m6r-r02-c00-s0-support",
+            "m6r-r02-c00-s1-support",
+            "m6r-r03-c00-s1-support",
+            "m6r-r04-c00-s0-support",
+            "m6r-r04-c00-s1-support",
+            "m6r-r06-c00-s0-support",
+            "m6r-r07-c00-s0-support",
+            "m6r-r07-c00-s1-support"
+          ],
+          "passed": true,
+          "retention_of_baseline": [
+            1.0,
+            1.0
+          ]
+        },
+        "h05_encode_history": {
+          "counts_by_prefix": {
+            "ascending_prefix": 4,
+            "descending_prefix": 6
+          },
+          "matched_trials": [
+            "m6r-r00-c00-s0-support",
+            "m6r-r00-c00-s1-support",
+            "m6r-r02-c00-s0-support",
+            "m6r-r02-c00-s1-support",
+            "m6r-r03-c00-s1-support",
+            "m6r-r04-c00-s0-support",
+            "m6r-r04-c00-s1-support",
+            "m6r-r06-c00-s0-support",
+            "m6r-r07-c00-s0-support",
+            "m6r-r07-c00-s1-support"
+          ],
+          "passed": true,
+          "retention_of_baseline": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "content_kampar_boating_01__24000": {
+        "b0_instantaneous": {
+          "counts_by_prefix": {
+            "ascending_prefix": 8,
+            "descending_prefix": 2
+          },
+          "matched_trials": [
+            "m6r-r00-c00-s0-support",
+            "m6r-r01-c00-s0-support",
+            "m6r-r02-c00-s0-support",
+            "m6r-r02-c00-s1-support",
+            "m6r-r03-c00-s0-support",
+            "m6r-r04-c00-s0-support",
+            "m6r-r04-c00-s1-support",
+            "m6r-r05-c00-s0-support",
+            "m6r-r06-c00-s1-support",
+            "m6r-r07-c00-s0-support"
+          ],
+          "passed": false,
+          "retention_of_baseline": [
+            1.0,
+            1.0
+          ]
+        },
+        "h05_encode_history": {
+          "counts_by_prefix": {
+            "ascending_prefix": 8,
+            "descending_prefix": 2
+          },
+          "matched_trials": [
+            "m6r-r00-c00-s0-support",
+            "m6r-r01-c00-s0-support",
+            "m6r-r02-c00-s0-support",
+            "m6r-r02-c00-s1-support",
+            "m6r-r03-c00-s0-support",
+            "m6r-r04-c00-s0-support",
+            "m6r-r04-c00-s1-support",
+            "m6r-r05-c00-s0-support",
+            "m6r-r06-c00-s1-support",
+            "m6r-r07-c00-s0-support"
+          ],
+          "passed": false,
+          "retention_of_baseline": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "content_kampar_boating_01__30000": {
+        "b0_instantaneous": {
+          "counts_by_prefix": {
+            "ascending_prefix": 7,
+            "descending_prefix": 4
+          },
+          "matched_trials": [
+            "m6r-r01-c00-s0-support",
+            "m6r-r02-c00-s0-support",
+            "m6r-r02-c00-s1-support",
+            "m6r-r03-c00-s0-support",
+            "m6r-r04-c00-s0-support",
+            "m6r-r04-c00-s1-support",
+            "m6r-r05-c00-s0-support",
+            "m6r-r05-c00-s1-support",
+            "m6r-r06-c00-s1-support",
+            "m6r-r07-c00-s0-support",
+            "m6r-r07-c00-s1-support"
+          ],
+          "passed": true,
+          "retention_of_baseline": [
+            1.0,
+            1.0
+          ]
+        },
+        "h05_encode_history": {
+          "counts_by_prefix": {
+            "ascending_prefix": 7,
+            "descending_prefix": 4
+          },
+          "matched_trials": [
+            "m6r-r01-c00-s0-support",
+            "m6r-r02-c00-s0-support",
+            "m6r-r02-c00-s1-support",
+            "m6r-r03-c00-s0-support",
+            "m6r-r04-c00-s0-support",
+            "m6r-r04-c00-s1-support",
+            "m6r-r05-c00-s0-support",
+            "m6r-r05-c00-s1-support",
+            "m6r-r06-c00-s1-support",
+            "m6r-r07-c00-s0-support",
+            "m6r-r07-c00-s1-support"
+          ],
+          "passed": true,
+          "retention_of_baseline": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "content_volga_lock_01__18000": {
+        "b0_instantaneous": {
+          "counts_by_prefix": {
+            "ascending_prefix": 6,
+            "descending_prefix": 6
+          },
+          "matched_trials": [
+            "m6r-r00-c01-s1-support",
+            "m6r-r01-c01-s0-support",
+            "m6r-r01-c01-s1-support",
+            "m6r-r02-c01-s0-support",
+            "m6r-r02-c01-s1-support",
+            "m6r-r03-c01-s0-support",
+            "m6r-r03-c01-s1-support",
+            "m6r-r04-c01-s0-support",
+            "m6r-r04-c01-s1-support",
+            "m6r-r06-c01-s0-support",
+            "m6r-r06-c01-s1-support",
+            "m6r-r07-c01-s0-support"
+          ],
+          "passed": true,
+          "retention_of_baseline": [
+            1.0,
+            1.0
+          ]
+        },
+        "h05_encode_history": {
+          "counts_by_prefix": {
+            "ascending_prefix": 6,
+            "descending_prefix": 6
+          },
+          "matched_trials": [
+            "m6r-r00-c01-s1-support",
+            "m6r-r01-c01-s0-support",
+            "m6r-r01-c01-s1-support",
+            "m6r-r02-c01-s0-support",
+            "m6r-r02-c01-s1-support",
+            "m6r-r03-c01-s0-support",
+            "m6r-r03-c01-s1-support",
+            "m6r-r04-c01-s0-support",
+            "m6r-r04-c01-s1-support",
+            "m6r-r06-c01-s0-support",
+            "m6r-r06-c01-s1-support",
+            "m6r-r07-c01-s0-support"
+          ],
+          "passed": true,
+          "retention_of_baseline": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "content_volga_lock_01__24000": {
+        "b0_instantaneous": {
+          "counts_by_prefix": {
+            "ascending_prefix": 7,
+            "descending_prefix": 5
+          },
+          "matched_trials": [
+            "m6r-r00-c01-s0-support",
+            "m6r-r00-c01-s1-support",
+            "m6r-r01-c01-s0-support",
+            "m6r-r02-c01-s0-support",
+            "m6r-r02-c01-s1-support",
+            "m6r-r03-c01-s0-support",
+            "m6r-r03-c01-s1-support",
+            "m6r-r04-c01-s0-support",
+            "m6r-r04-c01-s1-support",
+            "m6r-r05-c01-s0-support",
+            "m6r-r06-c01-s0-support",
+            "m6r-r07-c01-s0-support"
+          ],
+          "passed": true,
+          "retention_of_baseline": [
+            1.0,
+            1.0
+          ]
+        },
+        "h05_encode_history": {
+          "counts_by_prefix": {
+            "ascending_prefix": 7,
+            "descending_prefix": 5
+          },
+          "matched_trials": [
+            "m6r-r00-c01-s0-support",
+            "m6r-r00-c01-s1-support",
+            "m6r-r01-c01-s0-support",
+            "m6r-r02-c01-s0-support",
+            "m6r-r02-c01-s1-support",
+            "m6r-r03-c01-s0-support",
+            "m6r-r03-c01-s1-support",
+            "m6r-r04-c01-s0-support",
+            "m6r-r04-c01-s1-support",
+            "m6r-r05-c01-s0-support",
+            "m6r-r06-c01-s0-support",
+            "m6r-r07-c01-s0-support"
+          ],
+          "passed": true,
+          "retention_of_baseline": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "content_volga_lock_01__30000": {
+        "b0_instantaneous": {
+          "counts_by_prefix": {
+            "ascending_prefix": 8,
+            "descending_prefix": 3
+          },
+          "matched_trials": [
+            "m6r-r00-c01-s0-support",
+            "m6r-r00-c01-s1-support",
+            "m6r-r01-c01-s0-support",
+            "m6r-r01-c01-s1-support",
+            "m6r-r02-c01-s1-support",
+            "m6r-r03-c01-s0-support",
+            "m6r-r03-c01-s1-support",
+            "m6r-r04-c01-s0-support",
+            "m6r-r05-c01-s0-support",
+            "m6r-r06-c01-s1-support",
+            "m6r-r07-c01-s0-support"
+          ],
+          "passed": false,
+          "retention_of_baseline": [
+            1.0,
+            1.0
+          ]
+        },
+        "h05_encode_history": {
+          "counts_by_prefix": {
+            "ascending_prefix": 8,
+            "descending_prefix": 3
+          },
+          "matched_trials": [
+            "m6r-r00-c01-s0-support",
+            "m6r-r00-c01-s1-support",
+            "m6r-r01-c01-s0-support",
+            "m6r-r01-c01-s1-support",
+            "m6r-r02-c01-s1-support",
+            "m6r-r03-c01-s0-support",
+            "m6r-r03-c01-s1-support",
+            "m6r-r04-c01-s0-support",
+            "m6r-r05-c01-s0-support",
+            "m6r-r06-c01-s1-support",
+            "m6r-r07-c01-s0-support"
+          ],
+          "passed": false,
+          "retention_of_baseline": [
+            1.0,
+            1.0
+          ]
+        }
+      }
+    },
+    "controller_fitted": false,
+    "future_bwe_used_for_matching": false,
+    "minimum_baseline_retention": 0.8,
+    "passed": false,
+    "precutoff_features_sha256": "3ffb2af128c2b84e72a99dd251034ddc7c71ccada7e7930bd75f1b4709494bef",
+    "required_fraction_of_original_prefix_attempts": 0.5,
+    "required_matched_originals_per_prefix": 4,
+    "selected_state": "h05_encode_history",
+    "selection_sha256": "68b2faf5399992674ec6f410e742a2c3ec42718a08739dab4d25d83529a8a225"
+  },
+  "old_or_synthetic_captures_pooled": false,
+  "planned_originals": 32,
+  "post_prefix_conditioning_identifies_a_direct_causal_effect": false,
+  "protocol_sha256": "13804cd014ebe397343cdd0c1388def8378bf398233de2f52facf2c0761bfb44",
+  "qualified_originals": 32,
+  "selected_state": "h05_encode_history",
+  "selected_state_sha256": "68b2faf5399992674ec6f410e742a2c3ec42718a08739dab4d25d83529a8a225",
+  "state_membership_gate_passed": false,
+  "state_membership_gate_sha256": "6ea0eca82d5ea7ab93a55b232b2b1a3b76c66ea06c30e05539d5e0f30a243724",
+  "support_matching_future_responses_estimable": false,
+  "v13_reopened": false
+}

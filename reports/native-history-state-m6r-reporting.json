@@ -1,0 +1,291 @@
+{
+  "abi": "native_history_state_m6r_reporting_v1",
+  "clock_beginning_max_width_ms": 2.4433061526377173,
+  "clock_full_max_width_ms": 1.498522075737128,
+  "conditional_future_bwe_estimated": false,
+  "controller_fitted": false,
+  "delivery_qoe_action_outcomes_read": false,
+  "new_inferential_tests": 0,
+  "past_only_held_counts": [
+    5,
+    6
+  ],
+  "past_only_sequential_clock_boundary_max_width_ms": 4.163515269447089,
+  "past_only_training_counts": [
+    45,
+    55
+  ],
+  "plots": {
+    "reports/native-history-state-m6r-development.png": "52e9ffbb7d8ca52a7a4366c7afc212854e5a44fc09249123b09fd5fc2314ec2e",
+    "reports/native-history-state-m6r-membership.png": "5cf143fb85d32215307f8d4852872c62359c30fc9ce785e52643f5aad9219370"
+  },
+  "precutoff_diagnostics": {
+    "content_kampar_boating_01__18000": {
+      "ascending_prefix": {
+        "baseline_matches": 4,
+        "extra_caliper_rejections_among_baseline": {
+          "encode": 0
+        },
+        "originals": 8,
+        "selected_field_missing_counts": {
+          "encode": 0,
+          "x": 0
+        },
+        "selected_past_feature_ranges": {
+          "encode": [
+            3.0416666666666656,
+            3.7458333333333336
+          ],
+          "x": [
+            0.9253584158521797,
+            1.0262689081905514
+          ]
+        }
+      },
+      "descending_prefix": {
+        "baseline_matches": 6,
+        "extra_caliper_rejections_among_baseline": {
+          "encode": 0
+        },
+        "originals": 8,
+        "selected_field_missing_counts": {
+          "encode": 0,
+          "x": 0
+        },
+        "selected_past_feature_ranges": {
+          "encode": [
+            2.9416666666666673,
+            3.3416666666666694
+          ],
+          "x": [
+            0.9915035245826511,
+            1.2427744301807258
+          ]
+        }
+      }
+    },
+    "content_kampar_boating_01__24000": {
+      "ascending_prefix": {
+        "baseline_matches": 8,
+        "extra_caliper_rejections_among_baseline": {
+          "encode": 0
+        },
+        "originals": 8,
+        "selected_field_missing_counts": {
+          "encode": 0,
+          "x": 0
+        },
+        "selected_past_feature_ranges": {
+          "encode": [
+            3.0541666666666654,
+            3.2333333333333307
+          ],
+          "x": [
+            1.1662385377670197,
+            1.2367534279459302
+          ]
+        }
+      },
+      "descending_prefix": {
+        "baseline_matches": 2,
+        "extra_caliper_rejections_among_baseline": {
+          "encode": 0
+        },
+        "originals": 8,
+        "selected_field_missing_counts": {
+          "encode": 0,
+          "x": 0
+        },
+        "selected_past_feature_ranges": {
+          "encode": [
+            3.1833333333333287,
+            3.8124999999999964
+          ],
+          "x": [
+            1.215729532627299,
+            1.6120061159930308
+          ]
+        }
+      }
+    },
+    "content_kampar_boating_01__30000": {
+      "ascending_prefix": {
+        "baseline_matches": 7,
+        "extra_caliper_rejections_among_baseline": {
+          "encode": 0
+        },
+        "originals": 8,
+        "selected_field_missing_counts": {
+          "encode": 0,
+          "x": 0
+        },
+        "selected_past_feature_ranges": {
+          "encode": [
+            3.2250000000000054,
+            3.524999999999997
+          ],
+          "x": [
+            1.0084883231978439,
+            1.409259492145284
+          ]
+        }
+      },
+      "descending_prefix": {
+        "baseline_matches": 4,
+        "extra_caliper_rejections_among_baseline": {
+          "encode": 0
+        },
+        "originals": 8,
+        "selected_field_missing_counts": {
+          "encode": 0,
+          "x": 0
+        },
+        "selected_past_feature_ranges": {
+          "encode": [
+            3.066666666666675,
+            3.9958333333333336
+          ],
+          "x": [
+            1.2018019567116476,
+            1.5651194477326813
+          ]
+        }
+      }
+    },
+    "content_volga_lock_01__18000": {
+      "ascending_prefix": {
+        "baseline_matches": 6,
+        "extra_caliper_rejections_among_baseline": {
+          "encode": 0
+        },
+        "originals": 8,
+        "selected_field_missing_counts": {
+          "encode": 0,
+          "x": 0
+        },
+        "selected_past_feature_ranges": {
+          "encode": [
+            2.5874999999999972,
+            3.4291666666666702
+          ],
+          "x": [
+            0.982845762160148,
+            1.1464414736872066
+          ]
+        }
+      },
+      "descending_prefix": {
+        "baseline_matches": 6,
+        "extra_caliper_rejections_among_baseline": {
+          "encode": 0
+        },
+        "originals": 8,
+        "selected_field_missing_counts": {
+          "encode": 0,
+          "x": 0
+        },
+        "selected_past_feature_ranges": {
+          "encode": [
+            2.4666666666666672,
+            3.129166666666668
+          ],
+          "x": [
+            1.078936316800185,
+            1.3491433074359342
+          ]
+        }
+      }
+    },
+    "content_volga_lock_01__24000": {
+      "ascending_prefix": {
+        "baseline_matches": 7,
+        "extra_caliper_rejections_among_baseline": {
+          "encode": 0
+        },
+        "originals": 8,
+        "selected_field_missing_counts": {
+          "encode": 0,
+          "x": 0
+        },
+        "selected_past_feature_ranges": {
+          "encode": [
+            2.662500000000001,
+            3.4124999999999988
+          ],
+          "x": [
+            1.2169539404309009,
+            1.8198684303833346
+          ]
+        }
+      },
+      "descending_prefix": {
+        "baseline_matches": 5,
+        "extra_caliper_rejections_among_baseline": {
+          "encode": 0
+        },
+        "originals": 8,
+        "selected_field_missing_counts": {
+          "encode": 0,
+          "x": 0
+        },
+        "selected_past_feature_ranges": {
+          "encode": [
+            2.5958333333333314,
+            2.929166666666667
+          ],
+          "x": [
+            1.292428392886718,
+            1.8310900282077605
+          ]
+        }
+      }
+    },
+    "content_volga_lock_01__30000": {
+      "ascending_prefix": {
+        "baseline_matches": 8,
+        "extra_caliper_rejections_among_baseline": {
+          "encode": 0
+        },
+        "originals": 8,
+        "selected_field_missing_counts": {
+          "encode": 0,
+          "x": 0
+        },
+        "selected_past_feature_ranges": {
+          "encode": [
+            2.483333333333332,
+            3.033333333333338
+          ],
+          "x": [
+            1.3272585153836058,
+            1.522002501077225
+          ]
+        }
+      },
+      "descending_prefix": {
+        "baseline_matches": 3,
+        "extra_caliper_rejections_among_baseline": {
+          "encode": 0
+        },
+        "originals": 8,
+        "selected_field_missing_counts": {
+          "encode": 0,
+          "x": 0
+        },
+        "selected_past_feature_ranges": {
+          "encode": [
+            2.4833333333333263,
+            2.870833333333341
+          ],
+          "x": [
+            1.1098459454595848,
+            1.8043716439396527
+          ]
+        }
+      }
+    }
+  },
+  "selection_sha256": "68b2faf5399992674ec6f410e742a2c3ec42718a08739dab4d25d83529a8a225",
+  "summary_sha256": "e296ef048035accff776803b5ab060d63729e15bd5222e050a7b733152f605da",
+  "tool_sha256": "f9d15840eeccb3562d98ce1c6b9822d5bc85607bf6e1583995121c829773f625"
+}

@@ -1,0 +1,314 @@
+{
+  "abi": "native_history_state_m6r_membership_gate_v1",
+  "cells": {
+    "content_kampar_boating_01__18000": {
+      "b0_instantaneous": {
+        "counts_by_prefix": {
+          "ascending_prefix": 4,
+          "descending_prefix": 6
+        },
+        "matched_trials": [
+          "m6r-r00-c00-s0-support",
+          "m6r-r00-c00-s1-support",
+          "m6r-r02-c00-s0-support",
+          "m6r-r02-c00-s1-support",
+          "m6r-r03-c00-s1-support",
+          "m6r-r04-c00-s0-support",
+          "m6r-r04-c00-s1-support",
+          "m6r-r06-c00-s0-support",
+          "m6r-r07-c00-s0-support",
+          "m6r-r07-c00-s1-support"
+        ],
+        "passed": true,
+        "retention_of_baseline": [
+          1.0,
+          1.0
+        ]
+      },
+      "h05_encode_history": {
+        "counts_by_prefix": {
+          "ascending_prefix": 4,
+          "descending_prefix": 6
+        },
+        "matched_trials": [
+          "m6r-r00-c00-s0-support",
+          "m6r-r00-c00-s1-support",
+          "m6r-r02-c00-s0-support",
+          "m6r-r02-c00-s1-support",
+          "m6r-r03-c00-s1-support",
+          "m6r-r04-c00-s0-support",
+          "m6r-r04-c00-s1-support",
+          "m6r-r06-c00-s0-support",
+          "m6r-r07-c00-s0-support",
+          "m6r-r07-c00-s1-support"
+        ],
+        "passed": true,
+        "retention_of_baseline": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "content_kampar_boating_01__24000": {
+      "b0_instantaneous": {
+        "counts_by_prefix": {
+          "ascending_prefix": 8,
+          "descending_prefix": 2
+        },
+        "matched_trials": [
+          "m6r-r00-c00-s0-support",
+          "m6r-r01-c00-s0-support",
+          "m6r-r02-c00-s0-support",
+          "m6r-r02-c00-s1-support",
+          "m6r-r03-c00-s0-support",
+          "m6r-r04-c00-s0-support",
+          "m6r-r04-c00-s1-support",
+          "m6r-r05-c00-s0-support",
+          "m6r-r06-c00-s1-support",
+          "m6r-r07-c00-s0-support"
+        ],
+        "passed": false,
+        "retention_of_baseline": [
+          1.0,
+          1.0
+        ]
+      },
+      "h05_encode_history": {
+        "counts_by_prefix": {
+          "ascending_prefix": 8,
+          "descending_prefix": 2
+        },
+        "matched_trials": [
+          "m6r-r00-c00-s0-support",
+          "m6r-r01-c00-s0-support",
+          "m6r-r02-c00-s0-support",
+          "m6r-r02-c00-s1-support",
+          "m6r-r03-c00-s0-support",
+          "m6r-r04-c00-s0-support",
+          "m6r-r04-c00-s1-support",
+          "m6r-r05-c00-s0-support",
+          "m6r-r06-c00-s1-support",
+          "m6r-r07-c00-s0-support"
+        ],
+        "passed": false,
+        "retention_of_baseline": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "content_kampar_boating_01__30000": {
+      "b0_instantaneous": {
+        "counts_by_prefix": {
+          "ascending_prefix": 7,
+          "descending_prefix": 4
+        },
+        "matched_trials": [
+          "m6r-r01-c00-s0-support",
+          "m6r-r02-c00-s0-support",
+          "m6r-r02-c00-s1-support",
+          "m6r-r03-c00-s0-support",
+          "m6r-r04-c00-s0-support",
+          "m6r-r04-c00-s1-support",
+          "m6r-r05-c00-s0-support",
+          "m6r-r05-c00-s1-support",
+          "m6r-r06-c00-s1-support",
+          "m6r-r07-c00-s0-support",
+          "m6r-r07-c00-s1-support"
+        ],
+        "passed": true,
+        "retention_of_baseline": [
+          1.0,
+          1.0
+        ]
+      },
+      "h05_encode_history": {
+        "counts_by_prefix": {
+          "ascending_prefix": 7,
+          "descending_prefix": 4
+        },
+        "matched_trials": [
+          "m6r-r01-c00-s0-support",
+          "m6r-r02-c00-s0-support",
+          "m6r-r02-c00-s1-support",
+          "m6r-r03-c00-s0-support",
+          "m6r-r04-c00-s0-support",
+          "m6r-r04-c00-s1-support",
+          "m6r-r05-c00-s0-support",
+          "m6r-r05-c00-s1-support",
+          "m6r-r06-c00-s1-support",
+          "m6r-r07-c00-s0-support",
+          "m6r-r07-c00-s1-support"
+        ],
+        "passed": true,
+        "retention_of_baseline": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "content_volga_lock_01__18000": {
+      "b0_instantaneous": {
+        "counts_by_prefix": {
+          "ascending_prefix": 6,
+          "descending_prefix": 6
+        },
+        "matched_trials": [
+          "m6r-r00-c01-s1-support",
+          "m6r-r01-c01-s0-support",
+          "m6r-r01-c01-s1-support",
+          "m6r-r02-c01-s0-support",
+          "m6r-r02-c01-s1-support",
+          "m6r-r03-c01-s0-support",
+          "m6r-r03-c01-s1-support",
+          "m6r-r04-c01-s0-support",
+          "m6r-r04-c01-s1-support",
+          "m6r-r06-c01-s0-support",
+          "m6r-r06-c01-s1-support",
+          "m6r-r07-c01-s0-support"
+        ],
+        "passed": true,
+        "retention_of_baseline": [
+          1.0,
+          1.0
+        ]
+      },
+      "h05_encode_history": {
+        "counts_by_prefix": {
+          "ascending_prefix": 6,
+          "descending_prefix": 6
+        },
+        "matched_trials": [
+          "m6r-r00-c01-s1-support",
+          "m6r-r01-c01-s0-support",
+          "m6r-r01-c01-s1-support",
+          "m6r-r02-c01-s0-support",
+          "m6r-r02-c01-s1-support",
+          "m6r-r03-c01-s0-support",
+          "m6r-r03-c01-s1-support",
+          "m6r-r04-c01-s0-support",
+          "m6r-r04-c01-s1-support",
+          "m6r-r06-c01-s0-support",
+          "m6r-r06-c01-s1-support",
+          "m6r-r07-c01-s0-support"
+        ],
+        "passed": true,
+        "retention_of_baseline": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "content_volga_lock_01__24000": {
+      "b0_instantaneous": {
+        "counts_by_prefix": {
+          "ascending_prefix": 7,
+          "descending_prefix": 5
+        },
+        "matched_trials": [
+          "m6r-r00-c01-s0-support",
+          "m6r-r00-c01-s1-support",
+          "m6r-r01-c01-s0-support",
+          "m6r-r02-c01-s0-support",
+          "m6r-r02-c01-s1-support",
+          "m6r-r03-c01-s0-support",
+          "m6r-r03-c01-s1-support",
+          "m6r-r04-c01-s0-support",
+          "m6r-r04-c01-s1-support",
+          "m6r-r05-c01-s0-support",
+          "m6r-r06-c01-s0-support",
+          "m6r-r07-c01-s0-support"
+        ],
+        "passed": true,
+        "retention_of_baseline": [
+          1.0,
+          1.0
+        ]
+      },
+      "h05_encode_history": {
+        "counts_by_prefix": {
+          "ascending_prefix": 7,
+          "descending_prefix": 5
+        },
+        "matched_trials": [
+          "m6r-r00-c01-s0-support",
+          "m6r-r00-c01-s1-support",
+          "m6r-r01-c01-s0-support",
+          "m6r-r02-c01-s0-support",
+          "m6r-r02-c01-s1-support",
+          "m6r-r03-c01-s0-support",
+          "m6r-r03-c01-s1-support",
+          "m6r-r04-c01-s0-support",
+          "m6r-r04-c01-s1-support",
+          "m6r-r05-c01-s0-support",
+          "m6r-r06-c01-s0-support",
+          "m6r-r07-c01-s0-support"
+        ],
+        "passed": true,
+        "retention_of_baseline": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "content_volga_lock_01__30000": {
+      "b0_instantaneous": {
+        "counts_by_prefix": {
+          "ascending_prefix": 8,
+          "descending_prefix": 3
+        },
+        "matched_trials": [
+          "m6r-r00-c01-s0-support",
+          "m6r-r00-c01-s1-support",
+          "m6r-r01-c01-s0-support",
+          "m6r-r01-c01-s1-support",
+          "m6r-r02-c01-s1-support",
+          "m6r-r03-c01-s0-support",
+          "m6r-r03-c01-s1-support",
+          "m6r-r04-c01-s0-support",
+          "m6r-r05-c01-s0-support",
+          "m6r-r06-c01-s1-support",
+          "m6r-r07-c01-s0-support"
+        ],
+        "passed": false,
+        "retention_of_baseline": [
+          1.0,
+          1.0
+        ]
+      },
+      "h05_encode_history": {
+        "counts_by_prefix": {
+          "ascending_prefix": 8,
+          "descending_prefix": 3
+        },
+        "matched_trials": [
+          "m6r-r00-c01-s0-support",
+          "m6r-r00-c01-s1-support",
+          "m6r-r01-c01-s0-support",
+          "m6r-r01-c01-s1-support",
+          "m6r-r02-c01-s1-support",
+          "m6r-r03-c01-s0-support",
+          "m6r-r03-c01-s1-support",
+          "m6r-r04-c01-s0-support",
+          "m6r-r05-c01-s0-support",
+          "m6r-r06-c01-s1-support",
+          "m6r-r07-c01-s0-support"
+        ],
+        "passed": false,
+        "retention_of_baseline": [
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "controller_fitted": false,
+  "future_bwe_used_for_matching": false,
+  "minimum_baseline_retention": 0.8,
+  "passed": false,
+  "precutoff_features_sha256": "3ffb2af128c2b84e72a99dd251034ddc7c71ccada7e7930bd75f1b4709494bef",
+  "required_fraction_of_original_prefix_attempts": 0.5,
+  "required_matched_originals_per_prefix": 4,
+  "selected_state": "h05_encode_history",
+  "selection_sha256": "68b2faf5399992674ec6f410e742a2c3ec42718a08739dab4d25d83529a8a225"
+}

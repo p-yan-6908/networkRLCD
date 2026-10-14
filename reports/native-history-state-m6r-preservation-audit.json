@@ -1,0 +1,35 @@
+{
+  "abi": "native_history_state_m6r_preservation_audit_v1",
+  "action_values_estimated": false,
+  "audit_source_sha256": "5a19c93f8cb0d47d9a29cce2b29130463f48cf2be9b96636bbeec46c2e68b051",
+  "closed_m6_failed_development_preserved": true,
+  "controller_fitted": false,
+  "delivery_qoe_action_outcomes_read": false,
+  "files_deleted": 0,
+  "m5_archive_members_unchanged": 4428,
+  "new_external_peak_bound_with_fresh_download_bytes": 392157461,
+  "new_external_storage_by_root": {
+    "history-state-m6-input-verification": 757781,
+    "native-history-state-m6": 280260,
+    "native-history-state-m6r": 128332117,
+    "native-history-state-m6r-20261014-01-archive-stage": 131393733
+  },
+  "new_inferential_tests": 0,
+  "new_original_attempts": 32,
+  "new_raw_members_match_verified_archive": 1858,
+  "pinned_revision": "38d09402609e023b2a124196b3ffcec4c8752c00",
+  "planned_workflow_limit_bytes": 2000000000,
+  "prior_frozen_files_unchanged": 1358,
+  "receipt_sha256": "bcaf0fc86291da434ff691516c5d0eea6c654d32f50f560d6481e132f10588f7",
+  "remote_objects_freshly_verified": 4,
+  "scientific_capture_registration_commit": "e6612f7722556b8c61be52229b37b283e205ccd3",
+  "sealed": 32,
+  "state_design_registration_commit": "e901b0dca91ac30e7b31c4ebd54dd66b31c3f828",
+  "verification": {
+    "planned_originals": 32,
+    "prior_frozen_files_unchanged": 1358,
+    "selected_state": "h05_encode_history",
+    "started": true,
+    "verified": true
+  }
+}
