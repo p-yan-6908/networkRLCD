@@ -1,0 +1,36 @@
+{
+  "HF_TOKEN_available": true,
+  "HF_TOKEN_value_logged": false,
+  "abi": "native_prefix_memory_m3_runtime_preflight_v1",
+  "anchor_commit": "7cf6ae5",
+  "archive_revision_before_new_capture": "272aecdf4403e2ba173fd05b493b865c40de794f",
+  "authenticated_private_dataset_status": 200,
+  "cloud_spec_revision": "132",
+  "https_hostname": "huggingface.co",
+  "https_status": 200,
+  "managed_WebRtcIPHandling": "disable_non_proxied_udp",
+  "native_runtime_matches_frozen": true,
+  "network_policy": "unrestricted",
+  "network_policy_state": "enforced",
+  "observations_current": true,
+  "observed_at_utc": "2026-10-14T17:42:25.273167+00:00",
+  "planning": {
+    "chosen_repeats_per_arm_content": 21,
+    "development_max_sd_octaves": 0.25944469878205495,
+    "effect_margin_octaves": 0.25,
+    "independent_arm_difference_sd_octaves": 0.36691021170338456,
+    "initial_approximate_count_before_registration": 20,
+    "limits": "Gaussian location planning from four-repeat development SD; no assurance for arbitrary distribution alternatives or tails.",
+    "minimum_planning_power_target": 0.8,
+    "normal_location_planning_power": {
+      "12": 0.547331530688236,
+      "16": 0.6858285933377812,
+      "20": 0.7898085483819905,
+      "21": 0.810842958412551,
+      "8": 0.3766961908038666
+    },
+    "per_content_two_sided_alpha": 0.025
+  },
+  "prior_files_preserved": 1289,
+  "vpn_configured": false
+}
