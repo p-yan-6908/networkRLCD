@@ -1,0 +1,46 @@
+{
+  "abi": "native_bwe_support_mechanism_archive_receipt_v1",
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_helper_sha256": "a6e2a7f9206df0badc31730c2264970d29ac60e840882557210d8ea1776a2913",
+  "base_gate_sha256": "391fce9b107e7aa47d87998dbf844b64453814f1154958966b56c38d483fb609",
+  "capture_index_sha256": "48b8048b1f542ab2c6cf3701510ff16b8c090660d3210368ce5883f11ffefad0",
+  "files_deleted": 0,
+  "files_verified": 228,
+  "gate_sha256": "391fce9b107e7aa47d87998dbf844b64453814f1154958966b56c38d483fb609",
+  "local_raw_evidence_retained": true,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "e3b31c21800f3f97c38c2526a7cec703c5a80f66ad91985504f46b64a06c157d",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "62a739595e6b31fa7ba7df82182a6651f0d96f9e9a10f7042e6efffbfb2b8e1f",
+      "size": 39390
+    },
+    "results.tar.part-000": {
+      "sha256": "b17c4a6d104fc859e45c2e81aa84d55ed4bb9ac1ef2759108fabb403223064ba",
+      "size": 8765440
+    }
+  },
+  "prefix": "native-prefix-instrumentation-m4-feasibility-20261014-01",
+  "private": true,
+  "protocol_sha256": "edf6d0b6c8a2921cecf30e28b460b1e8db07e6586342bfcbf110ed9f561fd58d",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-prefix-instrumentation-m4/feasibility",
+  "registered_gate_passed": false,
+  "registration_metadata_audit": {
+    "corrected_before_first_git_commit": true,
+    "full_registration_commit_verified_against_every_protocol_source_hash": true,
+    "initial_cli_registration_argument": "ad9b4da1",
+    "initial_receipt_sha256": "c8d330a0c89f256e3d333e0fcfc0069a1798a02c3f4bc172f9a2c05fa79a778f",
+    "remote_revision_protocol_and_file_checksums_unchanged": true
+  },
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "revision": "862d62a4611e38df1059428f778bd9cbb4cb0eb7",
+  "scientific_registration_commit": "ad9b4da0da473e2453b61dcce520a92ccd7b80c8",
+  "stage": "feasibility"
+}

@@ -1,0 +1,18 @@
+{
+  "abi": "native_prefix_instrumentation_m4_closed_v1",
+  "fresh_prefix_validation_created": false,
+  "gate_sha256": "391fce9b107e7aa47d87998dbf844b64453814f1154958966b56c38d483fb609",
+  "next_change": "Prospective bounded inactive wait for the same nominated succeeded loopback TURN/TCP pair predicate; no threshold or acceptance changes.",
+  "original_attempts": 4,
+  "outcomes_read": false,
+  "passed": false,
+  "predictors_fitted": false,
+  "prefix_effects_estimated": false,
+  "protocol_sha256": "edf6d0b6c8a2921cecf30e28b460b1e8db07e6586342bfcbf110ed9f561fd58d",
+  "qualification_28_sessions_untouched": true,
+  "qualified": 2,
+  "reason": "Two original sessions failed unchanged selected-pair readiness before prefix replay; native stats remained in-progress after connectionState connected.",
+  "registration_commit": "ad9b4da0da473e2453b61dcce520a92ccd7b80c8",
+  "replacements": 0,
+  "sealed": 2
+}
