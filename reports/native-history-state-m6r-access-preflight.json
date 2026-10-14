@@ -1,0 +1,31 @@
+{
+  "hf_token_available": true,
+  "network_policy": {
+    "http_network_policy": {
+      "type": "unrestricted"
+    },
+    "http_proxy": "http://proxy:8080",
+    "tcp_connect_proxy": "http://proxy:8088",
+    "tcp_network_access": {
+      "domains": [],
+      "ip_ranges": []
+    },
+    "version": 1,
+    "vpn_configured": false
+  },
+  "requests": [
+    {
+      "authenticated": false,
+      "hostname": "huggingface.co",
+      "status": 200
+    },
+    {
+      "authenticated": true,
+      "dataset_id": "p-yan/networkrlcd-results-archive",
+      "hostname": "huggingface.co",
+      "private": true,
+      "revision": "0f4da165bcd87ace87616d564cfe949eaff95d47",
+      "status": 200
+    }
+  ]
+}
