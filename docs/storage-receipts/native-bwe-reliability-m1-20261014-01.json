@@ -1,0 +1,37 @@
+{
+  "abi": "native_bwe_reliability_m1_archive_receipt_v1",
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_helper_sha256": "22a0e260780476e5bbe8b415d64414973d58a60b003cf57cc6e44b4e9e7548db",
+  "capture_index_sha256": "0faac30f3042ab68a838de02e39eeb0386b90975369824469ce51d797971370d",
+  "files_deleted": 0,
+  "files_verified": 350,
+  "gate_sha256": "1b38af99953b95b52f8a037441ca64ba72508239dcaf309412821d614e1e96a2",
+  "local_raw_evidence_retained": true,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "f8b9834dbca33e263809c02b4bf8a80387b137d5e9eb2926e4cc955ca8e40fca",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "5573315886c07ca973262fdaa02cf53a80e5d31731970378085ad426ce439c21",
+      "size": 59027
+    },
+    "results.tar.part-000": {
+      "sha256": "db369d4a7488f83bf7ac7adbb7a99ba81e0707a726f243e3a0f93e5b7bcc9fca",
+      "size": 29542400
+    }
+  },
+  "prefix": "native-bwe-reliability-m1-20261014-01",
+  "private": true,
+  "protocol_sha256": "143501401fb23154d0c9fe96b57ec25ca8ac6698a1f82b2b533c702e1a1e9028",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-bwe-reliability-m1",
+  "registered_gate_passed": true,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "revision": "f90bcd3fb6682b0c6e89cb18f8ab65d6e9cde677",
+  "scientific_registration_commit": "4a67424bb07e3d06f83abb72c9922f4e51f06b8f"
+}

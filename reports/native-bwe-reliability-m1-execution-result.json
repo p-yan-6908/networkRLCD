@@ -1,0 +1,30 @@
+{
+  "abi": "native_bwe_reliability_m1_execution_result_v1",
+  "actions_assigned": 0,
+  "all_gate_qualified_sessions": 8,
+  "all_original_support_only_no_replacements": true,
+  "archive_files_fresh_download_verified": 350,
+  "archive_revision": "f90bcd3fb6682b0c6e89cb18f8ab65d6e9cde677",
+  "capture_index_sha256": "0faac30f3042ab68a838de02e39eeb0386b90975369824469ce51d797971370d",
+  "completed_at_utc": "2026-10-14T13:11:46.984162+00:00",
+  "conditional_action_value_established": false,
+  "controller_fitted_tuned_or_promoted": false,
+  "descriptive_reliability_passed": true,
+  "full_content_spreads_octaves": {
+    "content_kampar_boating_01": 0.040861478608015256,
+    "content_volga_lock_01": 0.04461645738312936
+  },
+  "local_files_deleted": 0,
+  "maximum_actual_clock_heldout_interval_width_ms": 3.585764070157893,
+  "next_step": "Prospective development comparison of dynamic measured-profile histories or validation of an actual pre-action continuous state; new independent confirmation is required before action-value claims.",
+  "outcome_analysis_performed": false,
+  "planned_support_sessions": 8,
+  "prior_or_synthetic_sources_pooled": false,
+  "protocol_sha256": "143501401fb23154d0c9fe96b57ec25ca8ac6698a1f82b2b533c702e1a1e9028",
+  "registration_commit": "4a67424bb07e3d06f83abb72c9922f4e51f06b8f",
+  "result": "qualified_finite_repeatability_under_one_synthetic_service_level",
+  "sealed_support_sessions": 8,
+  "storage_receipt": "docs/storage-receipts/native-bwe-reliability-m1-20261014-01.json",
+  "v13_captured_action_sessions": 0,
+  "v13_reopened": false
+}

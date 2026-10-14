@@ -1,0 +1,657 @@
+{
+  "abi": "native_v13_support_clock_transport_gate_v1",
+  "capture_index_sha256": "0faac30f3042ab68a838de02e39eeb0386b90975369824469ce51d797971370d",
+  "cells": {},
+  "census_states": {},
+  "common_support_at_least_half_octave": false,
+  "common_support_log2_interval": null,
+  "controller_fitted": false,
+  "kind": "development",
+  "outcomes_read": false,
+  "passed": true,
+  "planned_sessions": 8,
+  "protocol_sha256": "143501401fb23154d0c9fe96b57ec25ca8ac6698a1f82b2b533c702e1a1e9028",
+  "qualified_sessions": 8,
+  "sessions": [
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__synthetic_service_development",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999285208311667,
+          1.0000698310081961
+        ],
+        "beta_at_origin_feasible_ms": [
+          19688.03350668425,
+          19689.5329671178
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.316163826493721,
+        "origin_browser_ms": 19284.10000000149,
+        "p95_held_out_width_ms": 2.316163826493721,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_service_development",
+      "network_profile_id": "synthetic_constant_1.4523718338280722",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 1.5654858762846386,
+        "geometric_mean_bwe_bps": 1479885.8268694854,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1466387,
+            1466387,
+            1474002,
+            1474002,
+            1480184,
+            1480184,
+            1480184,
+            1487917,
+            1487917,
+            1487917,
+            1493942
+          ],
+          "continuous_log2_bwe": 1.5654858762846389,
+          "elapsed_ms": 18096.79999999702,
+          "geometric_mean_bwe_bps": 1479885.8268694857,
+          "history_samples": 11,
+          "max_gap_ms": 111.69999998807907,
+          "passed": true,
+          "sample_history_ms": [
+            18017.20000000298,
+            18117.90000000596,
+            18229.59999999404,
+            18330.59999999404,
+            18433.29999999702,
+            18534.09999999404,
+            18635.29999999702,
+            18736.09999999404,
+            18837.90000000596,
+            18938.70000000298,
+            19039.59999999404
+          ],
+          "span_ms": 1022.3999999910593
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "m1-c01-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__synthetic_service_development",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999312091621458,
+          1.0000883035876482
+        ],
+        "beta_at_origin_feasible_ms": [
+          19701.15501187168,
+          19702.721196611263
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.7207498576899525,
+        "origin_browser_ms": 19314.60000000149,
+        "p95_held_out_width_ms": 2.7207498576899525,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_service_development",
+      "network_profile_id": "synthetic_constant_1.4523718338280722",
+      "passed": true,
+      "repetition": 0,
+      "support": {
+        "continuous_log2_bwe": 1.6191323589407243,
+        "geometric_mean_bwe_bps": 1535951.177891131,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1522173,
+            1522173,
+            1530662,
+            1530662,
+            1530662,
+            1539200,
+            1539200,
+            1539200,
+            1545312,
+            1545312,
+            1551201
+          ],
+          "continuous_log2_bwe": 1.6191323589407245,
+          "elapsed_ms": 18012.79999999702,
+          "geometric_mean_bwe_bps": 1535951.1778911313,
+          "history_samples": 11,
+          "max_gap_ms": 110.79999999701977,
+          "passed": true,
+          "sample_history_ms": [
+            17937.29999999702,
+            18038.29999999702,
+            18139.29999999702,
+            18240.20000000298,
+            18341,
+            18442,
+            18543.10000000894,
+            18644,
+            18754.79999999702,
+            18856.29999999702,
+            18957
+          ],
+          "span_ms": 1019.7000000029802
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "m1-c00-r0-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__synthetic_service_development",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.999926962218354,
+          1.0000998487278632
+        ],
+        "beta_at_origin_feasible_ms": [
+          19854.05028494944,
+          19855.702061023305
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.945903752635786,
+        "origin_browser_ms": 19433.14999999106,
+        "p95_held_out_width_ms": 2.945903752635786,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 5
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_service_development",
+      "network_profile_id": "synthetic_constant_1.4523718338280722",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 1.5886251540077294,
+        "geometric_mean_bwe_bps": 1503812.9747601624,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1491181,
+            1491181,
+            1497374,
+            1497374,
+            1497374,
+            1505162,
+            1505162,
+            1511515,
+            1511515,
+            1517206,
+            1517206
+          ],
+          "continuous_log2_bwe": 1.5886251540077294,
+          "elapsed_ms": 18052.5,
+          "geometric_mean_bwe_bps": 1503812.9747601624,
+          "history_samples": 11,
+          "max_gap_ms": 112.09999999403954,
+          "passed": true,
+          "sample_history_ms": [
+            18071.09999999404,
+            18172.19999998808,
+            18273.09999999404,
+            18385.19999998808,
+            18486.09999999404,
+            18587.29999999702,
+            18689.69999998808,
+            18790.59999999404,
+            18891.59999999404,
+            18992.19999998808,
+            19093.29999999702
+          ],
+          "span_ms": 1022.2000000029802
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "m1-c00-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__synthetic_service_development",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999183119892452,
+          1.0000624628577242
+        ],
+        "beta_at_origin_feasible_ms": [
+          19779.307123880895,
+          19780.83017793513
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.441221654880792,
+        "origin_browser_ms": 19337.60000000149,
+        "p95_held_out_width_ms": 2.441221654880792,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_service_development",
+      "network_profile_id": "synthetic_constant_1.4523718338280722",
+      "passed": true,
+      "repetition": 1,
+      "support": {
+        "continuous_log2_bwe": 1.5497044227778922,
+        "geometric_mean_bwe_bps": 1463785.7669633594,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1449649,
+            1456979,
+            1456979,
+            1456979,
+            1462860,
+            1462860,
+            1462860,
+            1470294,
+            1470294,
+            1476069,
+            1476069
+          ],
+          "continuous_log2_bwe": 1.5497044227778922,
+          "elapsed_ms": 18009.5,
+          "geometric_mean_bwe_bps": 1463785.7669633594,
+          "history_samples": 11,
+          "max_gap_ms": 108.40000000596046,
+          "passed": true,
+          "sample_history_ms": [
+            17976.20000000298,
+            18077.10000000894,
+            18178.60000000894,
+            18279.30000001192,
+            18380.10000000894,
+            18481.10000000894,
+            18582.30000001192,
+            18683.20000000298,
+            18784.5,
+            18892.90000000596,
+            18993.90000000596
+          ],
+          "span_ms": 1017.7000000029802
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "m1-c01-r1-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__synthetic_service_development",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999029275033544,
+          1.0000829081837144
+        ],
+        "beta_at_origin_feasible_ms": [
+          19682.480297872968,
+          19684.37226345556
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 3.585764070157893,
+        "origin_browser_ms": 19297.30000000447,
+        "p95_held_out_width_ms": 3.585764070157893,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_service_development",
+      "network_profile_id": "synthetic_constant_1.4523718338280722",
+      "passed": true,
+      "repetition": 2,
+      "support": {
+        "continuous_log2_bwe": 1.578270880332709,
+        "geometric_mean_bwe_bps": 1493058.69358967,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1481283,
+            1481283,
+            1487270,
+            1487270,
+            1487270,
+            1494716,
+            1494716,
+            1500653,
+            1500653,
+            1500653,
+            1508141
+          ],
+          "continuous_log2_bwe": 1.578270880332709,
+          "elapsed_ms": 18091.59999999404,
+          "geometric_mean_bwe_bps": 1493058.69358967,
+          "history_samples": 11,
+          "max_gap_ms": 108.29999999701977,
+          "passed": true,
+          "sample_history_ms": [
+            18024.5,
+            18125.5,
+            18229.60000000894,
+            18337.90000000596,
+            18438.80000001192,
+            18539.70000000298,
+            18640.70000000298,
+            18744.40000000596,
+            18845.40000000596,
+            18946.10000000894,
+            19047
+          ],
+          "span_ms": 1022.5
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "m1-c00-r2-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__synthetic_service_development",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999505305068761,
+          1.0000816715262313
+        ],
+        "beta_at_origin_feasible_ms": [
+          19673.864278982393,
+          19675.671859588674
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.4455184821745206,
+        "origin_browser_ms": 19280.10000000149,
+        "p95_held_out_width_ms": 2.4455184821745206,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 7
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_service_development",
+      "network_profile_id": "synthetic_constant_1.4523718338280722",
+      "passed": true,
+      "repetition": 2,
+      "support": {
+        "continuous_log2_bwe": 1.5943208801610216,
+        "geometric_mean_bwe_bps": 1509761.7281242188,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1499835,
+            1499835,
+            1499835,
+            1506776,
+            1506776,
+            1512294,
+            1512294,
+            1512294,
+            1519213,
+            1519213,
+            1519213
+          ],
+          "continuous_log2_bwe": 1.5943208801610214,
+          "elapsed_ms": 18081.29999999702,
+          "geometric_mean_bwe_bps": 1509761.7281242185,
+          "history_samples": 11,
+          "max_gap_ms": 108.19999998807907,
+          "passed": true,
+          "sample_history_ms": [
+            17966.30000001192,
+            18067.40000000596,
+            18170.40000000596,
+            18271.5,
+            18374,
+            18475.20000000298,
+            18578.40000000596,
+            18679.30000001192,
+            18780.80000001192,
+            18889,
+            18990.10000000894
+          ],
+          "span_ms": 1023.7999999970198
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "m1-c01-r2-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_kampar_boating_01__synthetic_service_development",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999219185966665,
+          1.0000719256124049
+        ],
+        "beta_at_origin_feasible_ms": [
+          19674.159208641082,
+          19675.752059004124
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.531894007246592,
+        "origin_browser_ms": 19282.80000000447,
+        "p95_held_out_width_ms": 2.531894007246592,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_kampar_boating_01",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_service_development",
+      "network_profile_id": "synthetic_constant_1.4523718338280722",
+      "passed": true,
+      "repetition": 3,
+      "support": {
+        "continuous_log2_bwe": 1.5831314165847767,
+        "geometric_mean_bwe_bps": 1498097.3914513248,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1487828,
+            1487828,
+            1487828,
+            1495518,
+            1495518,
+            1495518,
+            1503316,
+            1503316,
+            1503316,
+            1509657,
+            1509657
+          ],
+          "continuous_log2_bwe": 1.5831314165847765,
+          "elapsed_ms": 18013,
+          "geometric_mean_bwe_bps": 1498097.3914513246,
+          "history_samples": 11,
+          "max_gap_ms": 112.70000000298023,
+          "passed": true,
+          "sample_history_ms": [
+            17901.5,
+            18002.5,
+            18103.40000000596,
+            18204.29999999702,
+            18305.5,
+            18418.20000000298,
+            18520,
+            18620.90000000596,
+            18722.09999999404,
+            18822.79999999702,
+            18924.09999999404
+          ],
+          "span_ms": 1022.5999999940395
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "m1-c00-r3-s0-support"
+    },
+    {
+      "capture_status": "sealed",
+      "cell_cluster": "content_volga_lock_01__synthetic_service_development",
+      "cleanup_passed": true,
+      "clock": {
+        "alpha_feasible": [
+          0.9999333065916097,
+          1.0000585386968557
+        ],
+        "beta_at_origin_feasible_ms": [
+          19675.423876137625,
+          19676.89027587061
+        ],
+        "coverage": 1.0,
+        "covered_count": 4,
+        "held_out_count": 4,
+        "max_held_out_width_ms": 2.0409601618885063,
+        "origin_browser_ms": 19298.80000000447,
+        "p95_held_out_width_ms": 2.0409601618885063,
+        "passed": true,
+        "training_marker_count": 8,
+        "vertex_count": 6
+      },
+      "content_id": "content_volga_lock_01",
+      "media_passed": true,
+      "network_campaign_id": "no_measured_campaign",
+      "network_family": "synthetic_service_development",
+      "network_profile_id": "synthetic_constant_1.4523718338280722",
+      "passed": true,
+      "repetition": 3,
+      "support": {
+        "continuous_log2_bwe": 1.590924767265901,
+        "geometric_mean_bwe_bps": 1506211.9196143376,
+        "outcomes_read": false,
+        "passed": true,
+        "qualification": {
+          "bwe_history_bps": [
+            1489897,
+            1498065,
+            1498065,
+            1498065,
+            1506268,
+            1506268,
+            1506268,
+            1514589,
+            1514589,
+            1514589,
+            1521975
+          ],
+          "continuous_log2_bwe": 1.5909247672659008,
+          "elapsed_ms": 18034.20000000298,
+          "geometric_mean_bwe_bps": 1506211.9196143374,
+          "history_samples": 11,
+          "max_gap_ms": 110.90000000596046,
+          "passed": true,
+          "sample_history_ms": [
+            17953.79999999702,
+            18064.70000000298,
+            18165.5,
+            18267.59999999404,
+            18368.40000000596,
+            18469.29999999702,
+            18570.20000000298,
+            18671.20000000298,
+            18772.5,
+            18874.29999999702,
+            18976.40000000596
+          ],
+          "span_ms": 1022.6000000089407
+        }
+      },
+      "trace": {
+        "exact_tick_count": 36,
+        "outcomes_read": false,
+        "passed": true,
+        "tick_tolerance_ms": 150
+      },
+      "transport_passed": true,
+      "trial": "m1-c01-r3-s0-support"
+    }
+  ]
+}

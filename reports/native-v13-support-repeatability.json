@@ -1,0 +1,9 @@
+{
+  "abi": "native_v13_support_figure_v1",
+  "figure_sha256": "f23dc24c0346473843acd5f1b61f676e1f5c68091fe444076fbc4605f27ef6a2",
+  "matplotlib_version": "3.10.8",
+  "outcomes_read": false,
+  "source": "reports/native-v13-support-census-summary.json",
+  "source_sha256": "69729de01a7e61c96fd85cb0fca3c9ab4c970f8e1cea372f22651804ae58578c",
+  "tool_sha256": "4aab86a0f147ff784563410178290439f89c735024881510871fc9e27f3c9d29"
+}
