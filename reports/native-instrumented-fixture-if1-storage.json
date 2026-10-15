@@ -1,0 +1,49 @@
+{
+  "abi": "native_if1_static_design_archive_receipt_v1",
+  "admission_sha256": "56e2080b9d9b877c06f5e251223cd7b559468f9293199ef69958531db17764d4",
+  "all_members_verified": true,
+  "archive_binding_sha256": "023e3f6308c9e180fc580e848e61daa12eccbccb845746eda79c58e829cd61be",
+  "archive_helper_sha256": "0c0f21cad96171e40266f0444d3df263704c6dad474dcc61648c97d8fb4a65da",
+  "classification": "resource/access admission limit; IF1 not built",
+  "controller_or_action_study": false,
+  "evidence_deleted": 0,
+  "fixture_built": false,
+  "fresh_download_bytes": 1794770,
+  "local_static_raw_bytes_including_reference_copy": 2968682,
+  "members_freshly_size_sha256_verified": 68,
+  "native_channels_qualified": false,
+  "native_contexts": 0,
+  "objects_freshly_verified": 4,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "f314bb12e2093852abf444716812c1fb137cc0a81dd343b9c6841c2d336223a9",
+      "size": 327
+    },
+    "SHA256SUMS": {
+      "sha256": "de5943932e666cd0bd2e7e03a66b719c27a48fef7c6faf328bb25725d1eb0100",
+      "size": 88
+    },
+    "evidence.tar.part-000": {
+      "sha256": "af3a0fcdd9c8bee8080d8d31fbb90d4fbd54d42ca98746138f6bedf853d5dab1",
+      "size": 1781760
+    },
+    "file-index.json": {
+      "sha256": "65529e2f4b9393fff008fc1a3cf2f8fadc972f56bf667a5b930bdc22a8683839",
+      "size": 12595
+    }
+  },
+  "prefix": "native-instrumented-fixture-if1-20261015-01",
+  "prior_tracked_files_unchanged": 1647,
+  "private": true,
+  "protocol_sha256": "5613e01863e1f08e4ba9f2f5959056475f26f873db1d3a2fedc4ed0aca20be6d",
+  "raw_evidence_retained": true,
+  "raw_root": "/home/agent/.cache/networkrlcd/native-instrumented-fixture-if1",
+  "raw_stage_fresh_budget_bytes": 20000000,
+  "raw_stage_fresh_peak_bound_bytes": 6558222,
+  "receiver_outcomes_read": false,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "revision": "cd59ef5b5f0bb36042c1e6edc18104370242bd43",
+  "scientific_registration_commit": "361c4bbe7c8e752b34ffec510e7130e21d77a0fe",
+  "stage_bytes": 1794770
+}
