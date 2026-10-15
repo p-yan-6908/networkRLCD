@@ -1,0 +1,25 @@
+{
+  "cleanup_duration_ms_range": [
+    1324.3875699999917,
+    1460.0590489999886
+  ],
+  "development_unopened_at_decision": true,
+  "future_labels_read": false,
+  "maximum_beginning_clock_width_ms": 2.182921955477525,
+  "maximum_full_clock_width_ms": 1.163474583059724,
+  "maximum_main_native_gap_ms": 88.30000001192093,
+  "maximum_relay_ack_ms": 26.900000005960464,
+  "maximum_relay_receipt_gap_ms": 125.5,
+  "minimum_observed_age_available_fraction": 1.0,
+  "minimum_rtcp_available_fraction": 1.0,
+  "optional_channels_qualified_every_original": {
+    "observed_feedback_counter_age": true,
+    "rtcp_rtt": true
+  },
+  "post_cutoff_persistence_ack_ms_range": [
+    322.2999999821186,
+    377.7000000178814
+  ],
+  "qualified_originals": 4,
+  "receiver_outcomes_read": false
+}
