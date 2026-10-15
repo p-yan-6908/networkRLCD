@@ -1,0 +1,5844 @@
+{
+  "abi": "native_bwe_transients_m8_summary_v1",
+  "action_value_estimated": false,
+  "causal_feature_future_leakage": false,
+  "characterization_gate_sha256": "04c2b11d742b1e7d82635e218ca9fd8025834e7feb4599b7d306a883bd9acb1b",
+  "controller_fitted": false,
+  "delivery_qoe_action_outcomes_read": false,
+  "design_sha256": "01e2d780cd843a62f67f90aa1f0d36a80a029a86f22d7323bdc6d47b51dfbc2b",
+  "fresh_native_runs": 16,
+  "future_samples_used_only_as_registered_verification_labels": true,
+  "history_contrasts": [
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.40363445079589144,
+        "mean": 0.1290416628664052,
+        "median": 0.1290416628664052,
+        "minimum": -0.14555112506308104,
+        "n": 2,
+        "values": [
+          0.40363445079589144,
+          -0.14555112506308104
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.23140579899982816,
+        "mean": -0.010639586441887228,
+        "median": -0.010639586441887228,
+        "minimum": -0.2526849718836026,
+        "n": 2,
+        "values": [
+          0.23140579899982816,
+          -0.2526849718836026
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 1.2654816311934625,
+        "mean": 1.208321023241968,
+        "median": 1.208321023241968,
+        "minimum": 1.1511604152904735,
+        "n": 2,
+        "values": [
+          1.2654816311934625,
+          1.1511604152904735
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 1.0932529793973993,
+        "mean": 1.0686397739336755,
+        "median": 1.0686397739336755,
+        "minimum": 1.044026568469952,
+        "n": 2,
+        "values": [
+          1.0932529793973993,
+          1.044026568469952
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.43186388819981747,
+        "mean": 0.14447431783504433,
+        "median": 0.14447431783504433,
+        "minimum": -0.1429152525297288,
+        "n": 2,
+        "values": [
+          0.43186388819981747,
+          -0.1429152525297288
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.27922236102794096,
+        "mean": 0.23689978543215617,
+        "median": 0.23689978543215617,
+        "minimum": 0.1945772098363714,
+        "n": 2,
+        "values": [
+          0.1945772098363714,
+          0.27922236102794096
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.7986194657304492,
+        "mean": 0.45464483543095285,
+        "median": 0.45464483543095285,
+        "minimum": 0.11067020513145653,
+        "n": 2,
+        "values": [
+          0.7986194657304492,
+          0.11067020513145653
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.5613327873670031,
+        "mean": 0.5470703030280647,
+        "median": 0.5470703030280647,
+        "minimum": 0.5328078186891263,
+        "n": 2,
+        "values": [
+          0.5613327873670031,
+          0.5328078186891263
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.26523546507288853,
+        "mean": 0.251249503224767,
+        "median": 0.251249503224767,
+        "minimum": 0.23726354137664551,
+        "n": 2,
+        "values": [
+          0.23726354137664551,
+          0.26523546507288853
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.23641915709628325,
+        "mean": -0.007369515509482061,
+        "median": -0.007369515509482061,
+        "minimum": -0.25115818811524737,
+        "n": 2,
+        "values": [
+          -0.25115818811524737,
+          0.23641915709628325
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.2782515630506641,
+        "mean": 0.15166320533937294,
+        "median": 0.15166320533937294,
+        "minimum": 0.025074847628081764,
+        "n": 2,
+        "values": [
+          0.2782515630506641,
+          0.025074847628081764
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.0037414603485235176,
+        "mean": -0.10695581339487614,
+        "median": -0.10695581339487614,
+        "minimum": -0.21017016644122877,
+        "n": 2,
+        "values": [
+          -0.21017016644122877,
+          -0.0037414603485235176
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.18169207220041872,
+        "mean": 0.0634477419176761,
+        "median": 0.0634477419176761,
+        "minimum": -0.05479658836506651,
+        "n": 2,
+        "values": [
+          0.18169207220041872,
+          -0.05479658836506651
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.047479314461175814,
+        "mean": -0.135029092748162,
+        "median": -0.135029092748162,
+        "minimum": -0.22257887103514817,
+        "n": 2,
+        "values": [
+          -0.047479314461175814,
+          -0.22257887103514817
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.3638189577248063,
+        "mean": 0.27227445729986754,
+        "median": 0.27227445729986754,
+        "minimum": 0.18072995687492877,
+        "n": 2,
+        "values": [
+          0.3638189577248063,
+          0.18072995687492877
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.1346475710632118,
+        "mean": 0.07379762263402945,
+        "median": 0.07379762263402945,
+        "minimum": 0.012947674204847104,
+        "n": 2,
+        "values": [
+          0.1346475710632118,
+          0.012947674204847104
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.15103394014624366,
+        "mean": -0.11064287573605686,
+        "median": -0.11064287573605686,
+        "minimum": -0.3723196916183574,
+        "n": 2,
+        "values": [
+          -0.3723196916183574,
+          0.15103394014624366
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.07933239517671142,
+        "mean": 0.003804057855600451,
+        "median": 0.003804057855600451,
+        "minimum": -0.07172427946551052,
+        "n": 2,
+        "values": [
+          -0.07172427946551052,
+          0.07933239517671142
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.16098652150293175,
+        "mean": 0.005875722994524796,
+        "median": 0.005875722994524796,
+        "minimum": -0.14923507551388215,
+        "n": 2,
+        "values": [
+          0.16098652150293175,
+          -0.14923507551388215
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.4615819336557786,
+        "mean": 0.1203226565861821,
+        "median": 0.1203226565861821,
+        "minimum": -0.2209366204834144,
+        "n": 2,
+        "values": [
+          0.4615819336557786,
+          -0.2209366204834144
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.342589389715368,
+        "mean": -0.3672534815268983,
+        "median": -0.3672534815268983,
+        "minimum": -0.3919175733384286,
+        "n": 2,
+        "values": [
+          -0.3919175733384286,
+          -0.342589389715368
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.2955978822527695,
+        "mean": 0.1406851149840703,
+        "median": 0.1406851149840703,
+        "minimum": -0.014227652284628911,
+        "n": 2,
+        "values": [
+          -0.014227652284628911,
+          0.2955978822527695
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.01829072664545213,
+        "mean": -0.16074580089596638,
+        "median": -0.16074580089596638,
+        "minimum": -0.30320087514648064,
+        "n": 2,
+        "values": [
+          -0.01829072664545213,
+          -0.30320087514648064
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.35939919440834756,
+        "mean": 0.3471927956150022,
+        "median": 0.3471927956150022,
+        "minimum": 0.3349863968216569,
+        "n": 2,
+        "values": [
+          0.35939919440834756,
+          0.3349863968216569
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.003137410694679262,
+        "mean": -0.06548489836955461,
+        "median": -0.06548489836955461,
+        "minimum": -0.12783238604442995,
+        "n": 2,
+        "values": [
+          -0.12783238604442995,
+          -0.003137410694679262
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.23732444000843675,
+        "mean": 0.08888296947913629,
+        "median": 0.08888296947913629,
+        "minimum": -0.05955850105016418,
+        "n": 2,
+        "values": [
+          -0.05955850105016418,
+          0.23732444000843675
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.04985445027227668,
+        "mean": -0.10160055315345304,
+        "median": -0.10160055315345304,
+        "minimum": -0.25305555657918277,
+        "n": 2,
+        "values": [
+          0.04985445027227668,
+          -0.25305555657918277
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.11812833526654246,
+        "mean": 0.05276731469523785,
+        "median": 0.05276731469523785,
+        "minimum": -0.012593705876066763,
+        "n": 2,
+        "values": [
+          0.11812833526654246,
+          -0.012593705876066763
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.21018023732655736,
+        "mean": 0.18168398704741054,
+        "median": 0.18168398704741054,
+        "minimum": 0.15318773676826372,
+        "n": 2,
+        "values": [
+          0.21018023732655736,
+          0.15318773676826372
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.09198646624392695,
+        "mean": -0.18132177400542793,
+        "median": -0.18132177400542793,
+        "minimum": -0.27065708176692893,
+        "n": 2,
+        "values": [
+          -0.09198646624392695,
+          -0.27065708176692893
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.28263452825237195,
+        "mean": 0.13731784144625747,
+        "median": 0.13731784144625747,
+        "minimum": -0.007998845359856982,
+        "n": 2,
+        "values": [
+          -0.007998845359856982,
+          0.28263452825237195
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.1412102902828207,
+        "mean": -0.22568791960658102,
+        "median": -0.22568791960658102,
+        "minimum": -0.3101655489303413,
+        "n": 2,
+        "values": [
+          -0.3101655489303413,
+          -0.1412102902828207
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.3278655188282719,
+        "mean": 0.29217599596990596,
+        "median": 0.29217599596990596,
+        "minimum": 0.25648647311153994,
+        "n": 2,
+        "values": [
+          0.3278655188282719,
+          0.25648647311153994
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.12124383210973869,
+        "mean": -0.27588057404369415,
+        "median": -0.27588057404369415,
+        "minimum": -0.4305173159776496,
+        "n": 2,
+        "values": [
+          -0.12124383210973869,
+          -0.4305173159776496
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.41679716665971445,
+        "mean": 0.20365818677456582,
+        "median": 0.20365818677456582,
+        "minimum": -0.009480793110582808,
+        "n": 2,
+        "values": [
+          -0.009480793110582808,
+          0.41679716665971445
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.2702066224294751,
+        "mean": -0.3643983832390343,
+        "median": -0.3643983832390343,
+        "minimum": -0.45859014404859344,
+        "n": 2,
+        "values": [
+          -0.45859014404859344,
+          -0.2702066224294751
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.3200559756563388,
+        "mean": 0.2847748351542688,
+        "median": 0.2847748351542688,
+        "minimum": 0.24949369465219884,
+        "n": 2,
+        "values": [
+          0.3200559756563388,
+          0.24949369465219884
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.275762552684254,
+        "mean": -0.3528923056474941,
+        "median": -0.3528923056474941,
+        "minimum": -0.43002205861073417,
+        "n": 2,
+        "values": [
+          -0.275762552684254,
+          -0.43002205861073417
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.41367643279343036,
+        "mean": 0.19878558539163327,
+        "median": 0.19878558539163327,
+        "minimum": -0.016105262010163823,
+        "n": 2,
+        "values": [
+          -0.016105262010163823,
+          0.41367643279343036
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.26583932046950265,
+        "mean": -0.43888155541012963,
+        "median": -0.43888155541012963,
+        "minimum": -0.6119237903507566,
+        "n": 2,
+        "values": [
+          -0.6119237903507566,
+          -0.26583932046950265
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.35342291236217305,
+        "mean": -0.36113030845546534,
+        "median": -0.36113030845546534,
+        "minimum": -0.36883770454875764,
+        "n": 2,
+        "values": [
+          -0.35342291236217305,
+          -0.36883770454875764
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.3059854052763542,
+        "mean": 0.018547299969421838,
+        "median": 0.018547299969421838,
+        "minimum": -0.26889080533751053,
+        "n": 2,
+        "values": [
+          -0.26889080533751053,
+          0.3059854052763542
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.013549704692058961,
+        "mean": -0.17136758038356625,
+        "median": -0.17136758038356625,
+        "minimum": -0.32918545607507355,
+        "n": 2,
+        "values": [
+          -0.013549704692058961,
+          -0.32918545607507355
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.3456376537500383,
+        "mean": 0.20831002804132093,
+        "median": 0.20831002804132093,
+        "minimum": 0.07098240233260356,
+        "n": 2,
+        "values": [
+          0.07098240233260356,
+          0.3456376537500383
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.2893110078451886,
+        "mean": 0.17594260935256734,
+        "median": 0.17594260935256734,
+        "minimum": 0.06257421085994608,
+        "n": 2,
+        "values": [
+          0.06257421085994608,
+          0.2893110078451886
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.14348336059019973,
+        "mean": 0.0298737969679298,
+        "median": 0.0298737969679298,
+        "minimum": -0.08373576665434013,
+        "n": 2,
+        "values": [
+          0.14348336059019973,
+          -0.08373576665434013
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.07521162633691691,
+        "mean": 0.04693994701233317,
+        "median": 0.04693994701233317,
+        "minimum": 0.01866826768774943,
+        "n": 2,
+        "values": [
+          0.01866826768774943,
+          0.07521162633691691
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.09957741741800308,
+        "mean": -0.09912886537230436,
+        "median": -0.09912886537230436,
+        "minimum": -0.2978351481626118,
+        "n": 2,
+        "values": [
+          0.09957741741800308,
+          -0.2978351481626118
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.2992584803784671,
+        "mean": 0.20093171583509864,
+        "median": 0.20093171583509864,
+        "minimum": 0.1026049512917302,
+        "n": 2,
+        "values": [
+          0.2992584803784671,
+          0.1026049512917302
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.025274444959801468,
+        "mean": -0.06177582835944351,
+        "median": -0.06177582835944351,
+        "minimum": -0.14882610167868848,
+        "n": 2,
+        "values": [
+          0.025274444959801468,
+          -0.14882610167868848
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 1.5546988089419813,
+        "mean": 1.462179743364522,
+        "median": 1.462179743364522,
+        "minimum": 1.3696606777870628,
+        "n": 2,
+        "values": [
+          1.5546988089419813,
+          1.3696606777870628
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 1.2807147735233158,
+        "mean": 1.19947219916998,
+        "median": 1.19947219916998,
+        "minimum": 1.1182296248166441,
+        "n": 2,
+        "values": [
+          1.2807147735233158,
+          1.1182296248166441
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.42934540359613393,
+        "mean": 0.2901782663569387,
+        "median": 0.2901782663569387,
+        "minimum": 0.1510111291177435,
+        "n": 2,
+        "values": [
+          0.42934540359613393,
+          0.1510111291177435
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.027391414832759198,
+        "mean": 0.019213477177963734,
+        "median": 0.019213477177963734,
+        "minimum": 0.01103553952316827,
+        "n": 2,
+        "values": [
+          0.027391414832759198,
+          0.01103553952316827
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 1.1642019428682802,
+        "mean": 0.9496870208608386,
+        "median": 0.9496870208608386,
+        "minimum": 0.7351720988533968,
+        "n": 2,
+        "values": [
+          1.1642019428682802,
+          0.7351720988533968
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.7622479541049053,
+        "mean": 0.6787222316818635,
+        "median": 0.6787222316818635,
+        "minimum": 0.5951965092588216,
+        "n": 2,
+        "values": [
+          0.7622479541049053,
+          0.5951965092588216
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.43555778668767475,
+        "mean": 0.2923247190570961,
+        "median": 0.2923247190570961,
+        "minimum": 0.14909165142651748,
+        "n": 2,
+        "values": [
+          0.43555778668767475,
+          0.14909165142651748
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.012966523738576097,
+        "mean": -0.06993512488082765,
+        "median": -0.06993512488082765,
+        "minimum": -0.1269037260230792,
+        "n": 2,
+        "values": [
+          -0.012966523738576097,
+          -0.1269037260230792
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.12486651988793263,
+        "mean": -0.01699189060136963,
+        "median": -0.01699189060136963,
+        "minimum": -0.15885030109067189,
+        "n": 2,
+        "values": [
+          0.12486651988793263,
+          -0.15885030109067189
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.3236577905383182,
+        "mean": -0.3792517345392934,
+        "median": -0.3792517345392934,
+        "minimum": -0.43484567854026857,
+        "n": 2,
+        "values": [
+          -0.3236577905383182,
+          -0.43484567854026857
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.08744757639601941,
+        "mean": 0.05377008445095299,
+        "median": 0.05377008445095299,
+        "minimum": 0.020092592505886575,
+        "n": 2,
+        "values": [
+          0.08744757639601941,
+          0.020092592505886575
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.00974617535304656,
+        "mean": -0.061602036350261846,
+        "median": -0.061602036350261846,
+        "minimum": -0.13295024805357025,
+        "n": 2,
+        "values": [
+          0.00974617535304656,
+          -0.13295024805357025
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.20215992240563074,
+        "mean": 0.17724553857384717,
+        "median": 0.17724553857384717,
+        "minimum": 0.1523311547420636,
+        "n": 2,
+        "values": [
+          0.1523311547420636,
+          0.20215992240563074
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.07462975369909075,
+        "mean": 0.06187341777263233,
+        "median": 0.06187341777263233,
+        "minimum": 0.049117081846173916,
+        "n": 2,
+        "values": [
+          0.07462975369909075,
+          0.049117081846173916
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.040218988669318834,
+        "mean": -0.04518640079178357,
+        "median": -0.04518640079178357,
+        "minimum": -0.05015381291424831,
+        "n": 2,
+        "values": [
+          -0.05015381291424831,
+          -0.040218988669318834
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.02241201756040001,
+        "mean": -0.05840200199315915,
+        "median": -0.05840200199315915,
+        "minimum": -0.09439198642591828,
+        "n": 2,
+        "values": [
+          -0.02241201756040001,
+          -0.09439198642591828
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.05120670323489562,
+        "mean": 0.021996239695810382,
+        "median": 0.021996239695810382,
+        "minimum": -0.0072142238432748584,
+        "n": 2,
+        "values": [
+          -0.0072142238432748584,
+          0.05120670323489562
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.02052757151057344,
+        "mean": 0.008780638494434806,
+        "median": 0.008780638494434806,
+        "minimum": -0.0029662945217038272,
+        "n": 2,
+        "values": [
+          0.02052757151057344,
+          -0.0029662945217038272
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.037782333987696454,
+        "mean": -0.04987625414496228,
+        "median": -0.04987625414496228,
+        "minimum": -0.061970174302228107,
+        "n": 2,
+        "values": [
+          -0.037782333987696454,
+          -0.061970174302228107
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.05605495352975426,
+        "mean": -0.06772182072932342,
+        "median": -0.06772182072932342,
+        "minimum": -0.07938868792889257,
+        "n": 2,
+        "values": [
+          -0.07938868792889257,
+          -0.05605495352975426
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.0018997254737892766,
+        "mean": -0.002033454932048734,
+        "median": -0.002033454932048734,
+        "minimum": -0.005966635337886744,
+        "n": 2,
+        "values": [
+          0.0018997254737892766,
+          -0.005966635337886744
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -5.1414565412896684e-05,
+        "mean": -0.01987902151640987,
+        "median": -0.01987902151640987,
+        "minimum": -0.03970662846740684,
+        "n": 2,
+        "values": [
+          -0.03970662846740684,
+          -5.1414565412896684e-05
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.023443028704301892,
+        "mean": 0.011218451513446116,
+        "median": 0.011218451513446116,
+        "minimum": -0.0010061256774096597,
+        "n": 2,
+        "values": [
+          -0.0010061256774096597,
+          0.023443028704301892
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.0442934565682405,
+        "mean": -0.07538820386097436,
+        "median": -0.07538820386097436,
+        "minimum": -0.10648295115370823,
+        "n": 2,
+        "values": [
+          -0.10648295115370823,
+          -0.0442934565682405
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.05467776846082011,
+        "mean": 0.01946396961481929,
+        "median": 0.01946396961481929,
+        "minimum": -0.015749829231181532,
+        "n": 2,
+        "values": [
+          -0.015749829231181532,
+          0.05467776846082011
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.013058716811722278,
+        "mean": -0.06714268575960118,
+        "median": -0.06714268575960118,
+        "minimum": -0.12122665470748009,
+        "n": 2,
+        "values": [
+          -0.12122665470748009,
+          -0.013058716811722278
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.10489369868544104,
+        "mean": 0.04980672916202723,
+        "median": 0.04980672916202723,
+        "minimum": -0.005280240361386579,
+        "n": 2,
+        "values": [
+          0.10489369868544104,
+          -0.005280240361386579
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.3991056339839847,
+        "mean": 0.19679261783578986,
+        "median": 0.19679261783578986,
+        "minimum": -0.005520398312404973,
+        "n": 2,
+        "values": [
+          0.3991056339839847,
+          -0.005520398312404973
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.001041435127225654,
+        "mean": 0.0007701297965295312,
+        "median": 0.0007701297965295312,
+        "minimum": 0.0004988244658334084,
+        "n": 2,
+        "values": [
+          0.0004988244658334084,
+          0.001041435127225654
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.2947107597643771,
+        "mean": 0.14775601847029218,
+        "median": 0.14775601847029218,
+        "minimum": 0.0008012771762072601,
+        "n": 2,
+        "values": [
+          0.2947107597643771,
+          0.0008012771762072601
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.08555392462291958,
+        "mean": 0.027889020247681306,
+        "median": 0.027889020247681306,
+        "minimum": -0.029775884127556967,
+        "n": 2,
+        "values": [
+          0.08555392462291958,
+          -0.029775884127556967
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.022773133019481556,
+        "mean": -0.06211913166698718,
+        "median": -0.06211913166698718,
+        "minimum": -0.10146513031449281,
+        "n": 2,
+        "values": [
+          -0.10146513031449281,
+          -0.022773133019481556
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.0026134496301544463,
+        "mean": -0.003959940441803617,
+        "median": -0.003959940441803617,
+        "minimum": -0.01053333051376168,
+        "n": 2,
+        "values": [
+          0.0026134496301544463,
+          -0.01053333051376168
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.0035305794056862683,
+        "mean": -0.0939680923564721,
+        "median": -0.0939680923564721,
+        "minimum": -0.18440560530725794,
+        "n": 2,
+        "values": [
+          -0.18440560530725794,
+          -0.0035305794056862683
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.10108866166680286,
+        "mean": 0.035522869029936344,
+        "median": 0.035522869029936344,
+        "minimum": -0.030042923606930172,
+        "n": 2,
+        "values": [
+          0.10108866166680286,
+          -0.030042923606930172
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.07261122812987175,
+        "mean": -0.01767758295584282,
+        "median": -0.01767758295584282,
+        "minimum": -0.10796639404155739,
+        "n": 2,
+        "values": [
+          -0.10796639404155739,
+          0.07261122812987175
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.015299491883530414,
+        "mean": -0.017364566358278766,
+        "median": -0.017364566358278766,
+        "minimum": -0.050028624600087945,
+        "n": 2,
+        "values": [
+          0.015299491883530414,
+          -0.050028624600087945
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.05262552713671398,
+        "mean": -0.07056501834405793,
+        "median": -0.07056501834405793,
+        "minimum": -0.19375556382482984,
+        "n": 2,
+        "values": [
+          -0.19375556382482984,
+          0.05262552713671398
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.03200986824455443,
+        "mean": -0.044721126531973354,
+        "median": -0.044721126531973354,
+        "minimum": -0.05743238481939228,
+        "n": 2,
+        "values": [
+          -0.05743238481939228,
+          -0.03200986824455443
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.06892757352554035,
+        "mean": -0.017235641519053102,
+        "median": -0.017235641519053102,
+        "minimum": -0.10339885656364656,
+        "n": 2,
+        "values": [
+          -0.10339885656364656,
+          0.06892757352554035
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.006947554576888448,
+        "mean": -0.02251825661081175,
+        "median": -0.02251825661081175,
+        "minimum": -0.051984067798511946,
+        "n": 2,
+        "values": [
+          0.006947554576888448,
+          -0.051984067798511946
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.048953373971582836,
+        "mean": 0.004967228402108503,
+        "median": 0.004967228402108503,
+        "minimum": -0.03901891716736583,
+        "n": 2,
+        "values": [
+          -0.03901891716736583,
+          0.048953373971582836
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.014760305678704233,
+        "mean": -0.015920118276878337,
+        "median": -0.015920118276878337,
+        "minimum": -0.01707993087505244,
+        "n": 2,
+        "values": [
+          -0.01707993087505244,
+          -0.014760305678704233
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.05562212938126043,
+        "mean": 0.028244343960752483,
+        "median": 0.028244343960752483,
+        "minimum": 0.000866558540244533,
+        "n": 2,
+        "values": [
+          0.000866558540244533,
+          0.05562212938126043
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.02609946677291486,
+        "mean": -0.03448302246319668,
+        "median": -0.03448302246319668,
+        "minimum": -0.042866578153478496,
+        "n": 2,
+        "values": [
+          -0.02609946677291486,
+          -0.042866578153478496
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.02751585690648617,
+        "mean": 0.009681439774434142,
+        "median": 0.009681439774434142,
+        "minimum": -0.008152977357617885,
+        "n": 2,
+        "values": [
+          -0.008152977357617885,
+          0.02751585690648617
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    }
+  ],
+  "measurement_program_replication": false,
+  "native_common_support_established": false,
+  "nested_plateau_occurrences": 64,
+  "new_next_allocation_native_sessions_started": 0,
+  "old_m7ra_panel_opened": false,
+  "responses_by_content_history_order_phase": {
+    "content_kampar_boating_01__ascending_prefix__hold_hold_fall_rise__0": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9989487453494803,
+          "delay": {
+            "observed": false,
+            "onset_delay_ms_bounds": null,
+            "right_censored_at_ms": 23818.316641246493
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "observed": false,
+              "onset_delay_ms_bounds": null,
+              "right_censored_at_ms": 23818.316641246493
+            },
+            "0.5": {
+              "observed": false,
+              "onset_delay_ms_bounds": null,
+              "right_censored_at_ms": 23818.316641246493
+            },
+            "0.9": {
+              "observed": false,
+              "onset_delay_ms_bounds": null,
+              "right_censored_at_ms": 23818.316641246493
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -0.1940870521163023,
+          "input_scaled_reference_x": 1.0686660007517126,
+          "late_drift_octaves_per_second": 0.023697168458748585,
+          "late_error_from_input_scaled_reference_octaves": 0.48368480802101965,
+          "late_mean_x": 1.5523508087727322,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.099717910269425,
+          "observation_horizon_ms": 23818.316641246493,
+          "overshoot_octaves": 0.0,
+          "pre_x": 1.2627530528680149,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.716,
+          "t10_to_t90_ms_bounds": null
+        },
+        {
+          "clock_input_application_width_ms": 0.9373057123011677,
+          "delay": {
+            "observed": false,
+            "onset_delay_ms_bounds": null,
+            "right_censored_at_ms": 23818.02275822818
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 14043.591411108173,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                12917.322758240101,
+                13019.060063964323
+              ]
+            },
+            "0.5": {
+              "observed": false,
+              "onset_delay_ms_bounds": null,
+              "right_censored_at_ms": 23818.02275822818
+            },
+            "0.9": {
+              "observed": false,
+              "onset_delay_ms_bounds": null,
+              "right_censored_at_ms": 23818.02275822818
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -0.1940870521163023,
+          "input_scaled_reference_x": 1.0989909111533078,
+          "late_drift_octaves_per_second": 0.029613666550744044,
+          "late_error_from_input_scaled_reference_octaves": 0.378324897673342,
+          "late_mean_x": 1.4773158088266498,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.11718934683591864,
+          "observation_horizon_ms": 23818.02275822818,
+          "overshoot_octaves": 0.0,
+          "pre_x": 1.29307796326961,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.716,
+          "t10_to_t90_ms_bounds": null
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__ascending_prefix__hold_hold_fall_rise__1": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9556053614651319,
+          "delay": null,
+          "estimable": true,
+          "fraction_crossings": {},
+          "input_change": false,
+          "input_log2_step": 0.0,
+          "late_drift_octaves_per_second": -0.3959581356357691,
+          "late_mean_x": 1.6280326149280322,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.45530891861565626,
+          "natural_drift_from_pre_octaves": 0.03395691249916255,
+          "observation_horizon_ms": 23792.99494887286,
+          "overshoot_octaves": null,
+          "pre_x": 1.5940757024288696,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.5
+        },
+        {
+          "clock_input_application_width_ms": 0.9417106402179343,
+          "delay": null,
+          "estimable": true,
+          "fraction_crossings": {},
+          "input_change": false,
+          "input_log2_step": 0.0,
+          "late_drift_octaves_per_second": 0.023258623921722954,
+          "late_mean_x": 1.5946835485945785,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.09538554212377393,
+          "natural_drift_from_pre_octaves": 0.06596882455077746,
+          "observation_horizon_ms": 23797.174059042758,
+          "overshoot_octaves": null,
+          "pre_x": 1.528714724043801,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.5
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__ascending_prefix__hold_hold_fall_rise__2": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9445476592009072,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1795.6562006304157,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              675.8839267888907,
+              786.228474454052
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1795.6562006304157,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                675.8839267888907,
+                786.228474454052
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1795.6562006304157,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                675.8839267888907,
+                786.228474454052
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2210.7562006244552,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1087.6839268008116,
+                1189.8284744480916
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.25819396785238635,
+          "late_drift_octaves_per_second": 0.07030939800915059,
+          "late_error_from_input_scaled_reference_octaves": 0.05941157729309571,
+          "late_mean_x": -0.19878239055929064,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.4938112501037123,
+          "observation_horizon_ms": 23797.28392679485,
+          "overshoot_octaves": 0.07845594717531046,
+          "pre_x": 1.32676853286877,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            301.45545234675956,
+            513.9445476592009
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9461131831849343,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1520.0039373788313,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              399.4308807931957,
+              501.27699395253876
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1520.0039373788313,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                399.4308807931957,
+                501.27699395253876
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1520.0039373788313,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                399.4308807931957,
+                501.27699395253876
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2127.7039373669104,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1005.3308807693538,
+                1107.2769939525388
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": 0.052374842465184424,
+          "late_drift_octaves_per_second": 0.05981087291113754,
+          "late_error_from_input_scaled_reference_octaves": 0.0027802358718844455,
+          "late_mean_x": 0.05515507833706887,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.24692522922646112,
+          "observation_horizon_ms": 23789.330880769354,
+          "overshoot_octaves": 0.7202478268659387,
+          "pre_x": 1.6373373431863407,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            504.05388681681507,
+            707.8461131593431
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__ascending_prefix__hold_hold_fall_rise__3": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9334968286711955,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1226.5488147758006,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              104.38206637337862,
+              217.21556320801028
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2864.5488147758006,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1738.282066379339,
+                1840.1155631841684
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 9898.64881476984,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                8777.082066361458,
+                8879.31556320205
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 15607.5488147758,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                14487.582066361458,
+                14589.41556319609
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.4804809625339437,
+          "late_drift_octaves_per_second": 0.03055534076453359,
+          "late_error_from_input_scaled_reference_octaves": -0.10996388591447603,
+          "late_mean_x": 1.3705170766194676,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.11306707061481447,
+          "observation_horizon_ms": 23797.38206637338,
+          "overshoot_octaves": 0.26855894990796436,
+          "pre_x": -0.10448153818721245,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            12647.46650317729,
+            12851.13349681675
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9772591004730202,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1239.8910502489307,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              128.80242070465465,
+              231.17967981108814
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2869.291050254891,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1751.3024207046547,
+                1853.0796798170486
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 8560.991050272773,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                7442.402420698694,
+                7553.879679799167
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 14371.991050272773,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                13249.402420698694,
+                13351.079679817049
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.7497386475739731,
+          "late_drift_octaves_per_second": 0.029361275416779797,
+          "late_error_from_input_scaled_reference_octaves": -0.3184324960623428,
+          "late_mean_x": 1.4313061515116303,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.1145233517216735,
+          "observation_horizon_ms": 23795.902420698694,
+          "overshoot_octaves": 0.2157508816950806,
+          "pre_x": 0.16477614685281708,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            11396.322740881646,
+            11599.777259112394
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__ascending_prefix__step_hold_fall_rise__0": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.949095207179198,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1558.9857687033582,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              434.3112210818872,
+              537.3603162831059
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1558.9857687033582,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                434.3112210818872,
+                537.3603162831059
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1558.9857687033582,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                434.3112210818872,
+                537.3603162831059
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2981.285768685477,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1870.8112210818872,
+                1972.4603163069478
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.7790495528374586,
+          "input_scaled_reference_x": -0.514078713999981,
+          "late_drift_octaves_per_second": -0.3860431078987629,
+          "late_error_from_input_scaled_reference_octaves": 0.4632674035788009,
+          "late_mean_x": -0.050811310421180006,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.5489746895573556,
+          "observation_horizon_ms": 23813.411221075927,
+          "overshoot_octaves": 0.3170533656993134,
+          "pre_x": 1.2649708388374776,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.716,
+          "t10_to_t90_ms_bounds": [
+            1333.4509047987813,
+            1538.1490952250606
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.892278898798395,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1539.1238870728776,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              417.2777476473202,
+              519.0700265222767
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1539.1238870728776,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                417.2777476473202,
+                519.0700265222767
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1639.823887090759,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                518.1777476234784,
+                620.2700265401581
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 4902.023887078838,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                3779.77774764732,
+                3881.770026540158
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.7790495528374586,
+          "input_scaled_reference_x": -0.5026310727311445,
+          "late_drift_octaves_per_second": 0.07315638368879593,
+          "late_error_from_input_scaled_reference_octaves": 0.3114485458867726,
+          "late_mean_x": -0.1911825268443719,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.28115448692290906,
+          "observation_horizon_ms": 23815.17774762348,
+          "overshoot_octaves": 0.0,
+          "pre_x": 1.276418480106314,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.716,
+          "t10_to_t90_ms_bounds": [
+            3260.7077211250435,
+            3464.492278892838
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__ascending_prefix__step_hold_fall_rise__1": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.8970146481588017,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1429.986348263381,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              304.7378409571829,
+              408.53485558149987
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 3054.986348263381,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1934.0378409393015,
+                2045.3348555934208
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 10183.386348269341,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                9073.237840957183,
+                9175.0348555815
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 15794.386348269341,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                14671.637840933341,
+                14783.134855605342
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.251545233008261,
+          "late_drift_octaves_per_second": 0.09091608092006198,
+          "late_error_from_input_scaled_reference_octaves": 0.2287357157791663,
+          "late_mean_x": 1.4802809487874273,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.6649749483102916,
+          "observation_horizon_ms": 23797.13784093334,
+          "overshoot_octaves": 0.5776792264918464,
+          "pre_x": -0.33341726771289504,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            12626.30298533992,
+            12849.09701466604
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9115863672850537,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1346.5250883932167,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              227.36929522149148,
+              329.180881594737
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2672.6250884170586,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1547.769295227452,
+                1649.7808815887765
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 8379.625088417059,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                7257.269295227452,
+                7359.0808816006975
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 14087.625088417059,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                12963.769295227452,
+                13065.380881582816
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.515690798638379,
+          "late_drift_octaves_per_second": 0.02987136619108388,
+          "late_error_from_input_scaled_reference_octaves": -0.10164506447603183,
+          "late_mean_x": 1.4140457341623471,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.11400913404607604,
+          "observation_horizon_ms": 23796.56929520957,
+          "overshoot_octaves": 0.30160909523739,
+          "pre_x": -0.06927170208277705,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            11313.988413638675,
+            11517.611586355364
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__ascending_prefix__step_hold_fall_rise__2": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.8803152676337049,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1624.5757717767265,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              497.2356141369528,
+              598.8159293926656
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1624.5757717767265,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                497.2356141369528,
+                598.8159293926656
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1624.5757717767265,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                497.2356141369528,
+                598.8159293926656
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2139.175771770766,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1016.0356141190714,
+                1117.915929386705
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.25872985679884963,
+          "late_drift_octaves_per_second": 0.07047643861263131,
+          "late_error_from_input_scaled_reference_octaves": 0.07408183037341096,
+          "late_mean_x": -0.18464802642543868,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.44781499344986986,
+          "observation_horizon_ms": 23797.03561411907,
+          "overshoot_octaves": 0.23890695008390495,
+          "pre_x": 1.3262326439223067,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            417.21968472640583,
+            620.6803152497523
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9309734457128798,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1588.5324864708818,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              469.46699975398224,
+              571.3979731996951
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1588.5324864708818,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                469.46699975398224,
+                571.3979731996951
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1588.5324864708818,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                469.46699975398224,
+                571.3979731996951
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1992.3324864828028,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                873.3669997599427,
+                974.9979731937347
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.12149213224074407,
+          "late_drift_octaves_per_second": 0.06740442096162788,
+          "late_error_from_input_scaled_reference_octaves": -0.05582337693059933,
+          "late_mean_x": -0.1773155091713434,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.46253694326745953,
+          "observation_horizon_ms": 23790.7669997361,
+          "overshoot_octaves": 0.3810947725878474,
+          "pre_x": 1.4634703684804122,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            301.9690265602476,
+            505.5309734397524
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__ascending_prefix__step_hold_fall_rise__3": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.8990005094674416,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1191.0308916655486,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              65.18139140485437,
+              166.88039192624274
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2927.0308916655486,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1806.9813914167753,
+                1908.8803919262427
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 9891.430891671509,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                8769.881391422736,
+                8872.180391938164
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 15622.430891671509,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                14502.781391428696,
+                14604.380391926243
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.488956159974221,
+          "late_drift_octaves_per_second": 0.03070931485763828,
+          "late_error_from_input_scaled_reference_octaves": -0.13632229744688917,
+          "late_mean_x": 1.3526338625273318,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.11021379127670161,
+          "observation_horizon_ms": 23797.181391404854,
+          "overshoot_octaves": 0.2751147815277797,
+          "pre_x": -0.09600634074693522,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            12593.900999502453,
+            12797.399000509467
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9503511426446494,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1227.7563902680558,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              108.28121469673351,
+              210.13156584533863
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 3163.756390268056,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                2042.2812146967335,
+                2144.1315658453386
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 9680.956390256135,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                8562.281214696734,
+                8672.731565839378
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 15394.356390262095,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                14282.981214684813,
+                14384.931565827457
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.4711857732502098,
+          "late_drift_octaves_per_second": 0.03084903152319174,
+          "late_error_from_input_scaled_reference_octaves": -0.11578836934908399,
+          "late_mean_x": 1.3553974039011258,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.11000762223724547,
+          "observation_horizon_ms": 23796.581214678852,
+          "overshoot_octaves": 0.28758557477822544,
+          "pre_x": -0.11377672747094623,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            12138.849648839474,
+            12342.650351130724
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__descending_prefix__hold_hold_fall_rise__0": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9093055361518054,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 10922.56158714576,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              9810.506934383644,
+              9912.216239931717
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 10415.86158715768,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                9298.406934389604,
+                9400.116239907875
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 13479.46158715172,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                12357.406934389604,
+                12459.416239919796
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 14799.86158715768,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                13681.106934377684,
+                13782.816239925756
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 0.36587144247495945,
+          "input_scaled_reference_x": 1.6203828686651305,
+          "late_drift_octaves_per_second": 0.06974451249745783,
+          "late_error_from_input_scaled_reference_octaves": -0.28864434984981324,
+          "late_mean_x": 1.3317385188153172,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.13299223561860463,
+          "observation_horizon_ms": 23815.306934395565,
+          "overshoot_octaves": 0.34657319320043634,
+          "pre_x": 1.254511426190171,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.164,
+          "t10_to_t90_ms_bounds": [
+            4280.990694469809,
+            4484.409305536152
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9569330347585492,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 9945.137283409553,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              8823.758816886213,
+              8925.51574990309
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 9642.237283403592,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                8521.158816892173,
+                8623.115749926932
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 13110.737283403592,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                11989.758816886213,
+                12091.715749920972
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 14432.737283403592,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                13311.858816880253,
+                13413.51574990309
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 0.36587144247495945,
+          "input_scaled_reference_x": 1.477183407550856,
+          "late_drift_octaves_per_second": 0.11516281813707607,
+          "late_error_from_input_scaled_reference_octaves": 0.07038402342090788,
+          "late_mean_x": 1.547567430971764,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.4699004756346521,
+          "observation_horizon_ms": 23819.05881686833,
+          "overshoot_octaves": 0.38516164990882773,
+          "pre_x": 1.1113119650758967,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.164,
+          "t10_to_t90_ms_bounds": [
+            4688.7430669533205,
+            4892.356933010917
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__descending_prefix__hold_hold_fall_rise__1": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.8859210585360415,
+          "delay": null,
+          "estimable": true,
+          "fraction_crossings": {},
+          "input_change": false,
+          "input_log2_step": 0.0,
+          "late_drift_octaves_per_second": 0.022967719378333973,
+          "late_mean_x": 1.5336379143563545,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.09603888563629437,
+          "natural_drift_from_pre_octaves": 0.11966169132773241,
+          "observation_horizon_ms": 23797.05762021245,
+          "overshoot_octaves": null,
+          "pre_x": 1.4139762230286221,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.5
+        },
+        {
+          "clock_input_application_width_ms": 0.9473789353505708,
+          "delay": null,
+          "estimable": true,
+          "fraction_crossings": {},
+          "input_change": false,
+          "input_log2_step": 0.0,
+          "late_drift_octaves_per_second": 0.03260586134680854,
+          "late_mean_x": 1.373834478811136,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.09783909454116935,
+          "natural_drift_from_pre_octaves": -0.36704207412084977,
+          "observation_horizon_ms": 23796.49403871472,
+          "overshoot_octaves": null,
+          "pre_x": 1.7408765529319858,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.5
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__descending_prefix__hold_hold_fall_rise__2": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9080630479220417,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1634.0204471861216,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              513.5664156621569,
+              615.3744787160394
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1634.0204471861216,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                513.5664156621569,
+                615.3744787160394
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1634.0204471861216,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                513.5664156621569,
+                615.3744787160394
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1936.8204471980425,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                826.2664156800383,
+                927.974478710079
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.008034828593416643,
+          "late_drift_octaves_per_second": 0.021139807172842418,
+          "late_error_from_input_scaled_reference_octaves": -0.1333629499913531,
+          "late_mean_x": -0.14139777858476973,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.495248129030616,
+          "observation_horizon_ms": 23789.76641568004,
+          "overshoot_octaves": 0.4003393658997907,
+          "pre_x": 1.5769276721277397,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            210.8919369639989,
+            414.40806304792204
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.937834324198775,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1813.0551631432172,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              690.1862459751574,
+              792.0240803053166
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1813.0551631432172,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                690.1862459751574,
+                792.0240803053166
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1813.0551631432172,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                690.1862459751574,
+                792.0240803053166
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2014.7551631312963,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                891.8862459930388,
+                993.7240802933957
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.1633346020029589,
+          "late_drift_octaves_per_second": 0.07518688341839805,
+          "late_error_from_input_scaled_reference_octaves": -0.04441417174688381,
+          "late_mean_x": -0.2077487737498427,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.24538244133057524,
+          "observation_horizon_ms": 23797.786245969197,
+          "overshoot_octaves": 0.449519057020472,
+          "pre_x": 1.4216278987181974,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            99.86216568772215,
+            303.5378343182383
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__descending_prefix__hold_hold_fall_rise__3": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9302097727486398,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1058.9162246351334,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              0.0,
+              44.28132952746819
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2789.4162246351334,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1666.451119748759,
+                1768.1813295334287
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 11060.316224641094,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                9915.85111975472,
+                10017.981329515547
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 16934.616224623212,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                15793.151119736838,
+                15903.881329521508
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.3532121300369335,
+          "late_drift_octaves_per_second": -0.3359927062317294,
+          "late_error_from_input_scaled_reference_octaves": 0.2685022713072236,
+          "late_mean_x": 1.6217144013441571,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.588497466357502,
+          "observation_horizon_ms": 23795.75111976068,
+          "overshoot_octaves": 0.5591395853978671,
+          "pre_x": -0.23175037068422252,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            14024.96979020341,
+            14237.430209772749
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9282888339803321,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1151.6323549853696,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              29.66821056837216,
+              131.69649939639203
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2886.9323549972905,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1767.0682105743326,
+                1868.7964993904316
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 10232.03235499133,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                9119.968210580293,
+                9222.896499414273
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 15962.23235497941,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                14840.968210580293,
+                14943.196499396392
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.4938221000454734,
+          "late_drift_octaves_per_second": 0.027735015662788243,
+          "late_error_from_input_scaled_reference_octaves": -0.14621205973319285,
+          "late_mean_x": 1.3476100403122806,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.11444533796564027,
+          "observation_horizon_ms": 23796.86821055645,
+          "overshoot_octaves": 0.24206741948775323,
+          "pre_x": -0.09114040067568252,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            12972.171711189862,
+            13176.12828882206
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__descending_prefix__step_hold_fall_rise__0": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9228371539211366,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1096.1156454474258,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              0.0,
+              76.87706403630727
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1096.1156454474258,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                0.0,
+                76.87706403630727
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1905.6156454474258,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                781.6542268704652,
+                883.5770640243863
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2218.4156454593467,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1095.6542268704652,
+                1197.3770640363073
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.2190910582461967,
+          "input_scaled_reference_x": -0.01722701813506644,
+          "late_drift_octaves_per_second": 0.07373303473216156,
+          "late_error_from_input_scaled_reference_octaves": -0.2242932955505678,
+          "late_mean_x": -0.24152031368563423,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.2762186341398936,
+          "observation_horizon_ms": 23815.154226870465,
+          "overshoot_octaves": 0.5564116033818806,
+          "pre_x": 1.2018640401111302,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.164,
+          "t10_to_t90_ms_bounds": [
+            1018.7771628341579,
+            1197.3770640363073
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.928084261060576,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1082.3785823255166,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              0.0,
+              57.14262443816551
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1082.3785823255166,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                0.0,
+                57.14262443816551
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1790.9785823195562,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                667.3145402009468,
+                769.3426244560469
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2001.4785823195562,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                879.8145402009468,
+                982.042624444126
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.2190910582461967,
+          "input_scaled_reference_x": -0.09544955400415289,
+          "late_drift_octaves_per_second": 0.0726655244413346,
+          "late_error_from_input_scaled_reference_octaves": -0.09841212325910134,
+          "late_mean_x": -0.19386167726325423,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.2585906042036157,
+          "observation_horizon_ms": 23813.914540194986,
+          "overshoot_octaves": 0.3263556067752889,
+          "pre_x": 1.1236415042420438,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.164,
+          "t10_to_t90_ms_bounds": [
+            822.6719157627813,
+            982.042624444126
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__descending_prefix__step_hold_fall_rise__1": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9064040768498671,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1234.9652674044773,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              109.61206536009558,
+              211.71846942502452
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2684.1652673925564,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1536.9120653720165,
+                1649.418469442906
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 8182.965267404477,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                7060.812065348175,
+                7162.818469448866
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 13905.865267410438,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                12786.112065360096,
+                12887.718469425025
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.4634136553966242,
+          "late_drift_octaves_per_second": 0.03180486613014977,
+          "late_error_from_input_scaled_reference_octaves": -0.0646340335618949,
+          "late_mean_x": 1.3987796218347293,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.11133598962940439,
+          "observation_horizon_ms": 23796.112065360096,
+          "overshoot_octaves": 0.36096318153339824,
+          "pre_x": -0.12154884532453189,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            11136.69359591719,
+            11350.806404053008
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.888525139685953,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1202.2000802070252,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              92.95581762526126,
+              194.44434278878907
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2954.3000802010647,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1820.7558176371822,
+                1922.444342788789
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 9577.800080201065,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                8451.355817631222,
+                8553.144342776868
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 15486.500080218946,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                14361.355817631222,
+                14463.144342776868
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.5128009718505557,
+          "late_drift_octaves_per_second": 0.04096680572182354,
+          "late_error_from_input_scaled_reference_octaves": -0.15842310227313106,
+          "late_mean_x": 1.3543778695774247,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.09150417720982262,
+          "observation_horizon_ms": 23796.155817643143,
+          "overshoot_octaves": 0.3501304113954018,
+          "pre_x": -0.07216152887060044,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            12438.911474842433,
+            12642.388525139686
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__descending_prefix__step_hold_fall_rise__2": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.8899906964215916,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1514.5679113233273,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              394.4229159870374,
+              496.1129066655776
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1514.5679113233273,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                394.4229159870374,
+                496.1129066655776
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1514.5679113233273,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                394.4229159870374,
+                496.1129066655776
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2220.867911335248,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1100.9229159870374,
+                1202.7129066894195
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.1351987131015202,
+          "late_drift_octaves_per_second": 0.07233518661147165,
+          "late_error_from_input_scaled_reference_octaves": 0.12549828541589295,
+          "late_mean_x": -0.009700427685627268,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.2970981894952275,
+          "observation_horizon_ms": 23790.522915981077,
+          "overshoot_octaves": 0.7414847165514105,
+          "pre_x": 1.449763787619636,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            604.8100093214598,
+            808.289990702382
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.8489962289677351,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1684.1635555322136,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              563.1390574236866,
+              664.9880536526543
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1684.1635555322136,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                563.1390574236866,
+                664.9880536526543
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1684.1635555322136,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                563.1390574236866,
+                664.9880536526543
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1986.9635555143323,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                865.8390574117657,
+                978.0880536466939
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.1744775498233304,
+          "late_drift_octaves_per_second": 0.0736509539193767,
+          "late_error_from_input_scaled_reference_octaves": 0.0924863950542482,
+          "late_mean_x": -0.08199115476908221,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.30328125567320763,
+          "observation_horizon_ms": 23796.739057417726,
+          "overshoot_octaves": 0.1770754148590174,
+          "pre_x": 1.4104849508978259,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            200.85100375911134,
+            414.94899622300727
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_kampar_boating_01__descending_prefix__step_hold_fall_rise__3": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.8735849304503063,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1360.1071891700558,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              240.1703967048379,
+              341.84398164720915
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2985.607189170056,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1872.2703966988774,
+                1974.0439816352882
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 8723.507189176016,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                7600.670396704838,
+                7702.343981647209
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 14530.407189181977,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                13403.970396716759,
+                13505.543981635288
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.698753992976307,
+          "late_drift_octaves_per_second": 0.03026780687941555,
+          "late_error_from_input_scaled_reference_octaves": -0.28171231948106246,
+          "late_mean_x": 1.4170416734952445,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.11216732005677565,
+          "observation_horizon_ms": 23796.0703967108,
+          "overshoot_octaves": 0.23824908420556445,
+          "pre_x": 0.11379149225515084,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            11429.92641508147,
+            11633.27358493641
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9033943351823837,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1105.9700253451883,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              0.0,
+              86.22172252470045
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 3145.1700253332674,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                2027.1183281716367,
+                2128.82172251874
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 9060.570025339228,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                7937.418328183558,
+                8039.32172251874
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 14665.77002535711,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                13546.618328171637,
+                13648.521722506819
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.6303125137217913,
+          "late_drift_octaves_per_second": -0.5001798126252461,
+          "late_error_from_input_scaled_reference_octaves": -0.041544326313483815,
+          "late_mean_x": 1.5887681874083075,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.5652743061620917,
+          "observation_horizon_ms": 23797.418328183558,
+          "overshoot_octaves": 0.22654413421132036,
+          "pre_x": 0.045350013000635236,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            11417.796605652897,
+            11621.403394335182
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__ascending_prefix__hold_hold_fall_rise__0": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.868616413550626,
+          "delay": {
+            "observed": false,
+            "onset_delay_ms_bounds": null,
+            "right_censored_at_ms": 23821.62851057642
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "observed": false,
+              "onset_delay_ms_bounds": null,
+              "right_censored_at_ms": 23821.62851057642
+            },
+            "0.5": {
+              "observed": false,
+              "onset_delay_ms_bounds": null,
+              "right_censored_at_ms": 23821.62851057642
+            },
+            "0.9": {
+              "observed": false,
+              "onset_delay_ms_bounds": null,
+              "right_censored_at_ms": 23821.62851057642
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -0.1940870521163023,
+          "input_scaled_reference_x": 1.076273204792177,
+          "late_drift_octaves_per_second": 0.0,
+          "late_error_from_input_scaled_reference_octaves": 0.257919416103624,
+          "late_mean_x": 1.334192620895801,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.010428169081941663,
+          "observation_horizon_ms": 23821.62851057642,
+          "overshoot_octaves": 0.0,
+          "pre_x": 1.2703602569084793,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.716,
+          "t10_to_t90_ms_bounds": null
+        },
+        {
+          "clock_input_application_width_ms": 0.9113458147112397,
+          "delay": {
+            "observed": false,
+            "onset_delay_ms_bounds": null,
+            "right_censored_at_ms": 23817.225553371325
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "observed": false,
+              "onset_delay_ms_bounds": null,
+              "right_censored_at_ms": 23817.225553371325
+            },
+            "0.5": {
+              "observed": false,
+              "onset_delay_ms_bounds": null,
+              "right_censored_at_ms": 23817.225553371325
+            },
+            "0.9": {
+              "observed": false,
+              "onset_delay_ms_bounds": null,
+              "right_censored_at_ms": 23817.225553371325
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -0.1940870521163023,
+          "input_scaled_reference_x": 1.0569564097734347,
+          "late_drift_octaves_per_second": 0.027937299523331793,
+          "late_error_from_input_scaled_reference_octaves": 0.4286788516767288,
+          "late_mean_x": 1.4856352614501636,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.11083800409734779,
+          "observation_horizon_ms": 23817.225553371325,
+          "overshoot_octaves": 0.0,
+          "pre_x": 1.251043461889737,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.716,
+          "t10_to_t90_ms_bounds": null
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__ascending_prefix__hold_hold_fall_rise__1": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.8954689498932566,
+          "delay": null,
+          "estimable": true,
+          "fraction_crossings": {},
+          "input_change": false,
+          "input_log2_step": 0.0,
+          "late_drift_octaves_per_second": 0.029576690604334877,
+          "late_mean_x": 1.4326207185144721,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.1223045343141067,
+          "natural_drift_from_pre_octaves": 0.09757086216228106,
+          "observation_horizon_ms": 23794.689920726407,
+          "overshoot_octaves": null,
+          "pre_x": 1.335049856352191,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.5
+        },
+        {
+          "clock_input_application_width_ms": 0.9408288647755398,
+          "delay": null,
+          "estimable": true,
+          "fraction_crossings": {},
+          "input_change": false,
+          "input_log2_step": 0.0,
+          "late_drift_octaves_per_second": 0.0255453165169659,
+          "late_mean_x": 1.5667269899179719,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.0995868701383198,
+          "natural_drift_from_pre_octaves": 0.03048234648489645,
+          "observation_horizon_ms": 23790.625438994226,
+          "overshoot_octaves": null,
+          "pre_x": 1.5362446434330754,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.5
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__ascending_prefix__hold_hold_fall_rise__2": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9222897693907726,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1727.8918815283978,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              604.1307366615802,
+              706.0530264309709
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1727.8918815283978,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                604.1307366615802,
+                706.0530264309709
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1727.8918815283978,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                604.1307366615802,
+                706.0530264309709
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1938.8918815283978,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                814.7307366556197,
+                918.3530264130895
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.10111754465258671,
+          "late_drift_octaves_per_second": 0.02914574584638041,
+          "late_error_from_input_scaled_reference_octaves": 0.006575218189547247,
+          "late_mean_x": -0.09454232646303946,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.4870416251442039,
+          "observation_horizon_ms": 23796.13073666158,
+          "overshoot_octaves": 0.35156293365867775,
+          "pre_x": 1.4838449560685696,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            108.67771022464876,
+            314.2222897515094
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.970271254889667,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1684.7454371288186,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              566.2603015013738,
+              668.2305727562634
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1684.7454371288186,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                566.2603015013738,
+                668.2305727562634
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1684.7454371288186,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                566.2603015013738,
+                668.2305727562634
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1987.3454371228581,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                869.1603014775319,
+                971.030572738382
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": 0.02375978460045136,
+          "late_drift_octaves_per_second": 0.0342612371061867,
+          "late_error_from_input_scaled_reference_octaves": -0.14932367837783672,
+          "late_mean_x": -0.12556389377738536,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.5238218677945283,
+          "observation_horizon_ms": 23797.160301477532,
+          "overshoot_octaves": 0.4406759336659253,
+          "pre_x": 1.6087222853216077,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            200.92972872126848,
+            404.7702712370083
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__ascending_prefix__hold_hold_fall_rise__3": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9491110343660694,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1122.1475027236738,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              1.972947188609396,
+              103.7220582348964
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2857.847502711753,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1737.9729471886094,
+                1839.7220582348964
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 10627.647502723674,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                9494.572947182649,
+                9597.422058222975
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 16329.647502723674,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                15208.47294718861,
+                15310.822058228936
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.3729046070013748,
+          "late_drift_octaves_per_second": 0.0022059877744344814,
+          "late_error_from_input_scaled_reference_octaves": 0.1221311487218737,
+          "late_mean_x": 1.4950357557232485,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.5871790532902763,
+          "observation_horizon_ms": 23797.17294720649,
+          "overshoot_octaves": 0.509454374639883,
+          "pre_x": -0.21205789371978118,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            13368.750888953713,
+            13572.849111040327
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9997219379874878,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1195.6368322851195,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              73.03697132208617,
+              175.4366932362318
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2831.736832279159,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1712.4369712982443,
+                1814.3366932421923
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 11177.63683228512,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                10054.636971316126,
+                10156.336693242192
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 16767.436832267238,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                15646.936971298244,
+                15748.736693248153
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.368412748142356,
+          "late_drift_octaves_per_second": 0.01296543451927712,
+          "late_error_from_input_scaled_reference_octaves": 0.08864480454851664,
+          "late_mean_x": 1.4570575526908727,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.5489937271066179,
+          "observation_horizon_ms": 23796.936971298244,
+          "overshoot_octaves": 0.442111794207668,
+          "pre_x": -0.21654975257880005,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            13832.600278056052,
+            14036.299721949908
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__ascending_prefix__step_hold_fall_rise__0": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9617855947872158,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1566.9333056773175,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              445.8524128560821,
+              547.6141984627902
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1566.9333056773175,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                445.8524128560821,
+                547.6141984627902
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1768.7333056594362,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                647.5524128739635,
+                749.5141984687507
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2888.8333056534757,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1768.2524128620425,
+                1870.0141984687507
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.7790495528374586,
+          "input_scaled_reference_x": -0.5436704113413886,
+          "late_drift_octaves_per_second": -0.41625338293762726,
+          "late_error_from_input_scaled_reference_octaves": 0.5112133663516999,
+          "late_mean_x": -0.03245704498968874,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.605692821434203,
+          "observation_horizon_ms": 23821.252412862043,
+          "overshoot_octaves": 0.0,
+          "pre_x": 1.23537914149607,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.716,
+          "t10_to_t90_ms_bounds": [
+            1220.6382143992523,
+            1424.1617856126686
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 1.0447622149440576,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1590.021359387425,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              470.79897829187394,
+              572.6437404889366
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1590.021359387425,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                470.79897829187394,
+                572.6437404889366
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1690.9213593933855,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                571.5989782739925,
+                673.4437405008575
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 3728.6213593814646,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                2607.0989782739925,
+                2709.043740494897
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.7790495528374586,
+          "input_scaled_reference_x": -0.5169260454756195,
+          "late_drift_octaves_per_second": 0.07465177081432312,
+          "late_error_from_input_scaled_reference_octaves": 0.32807864781492213,
+          "late_mean_x": -0.18884739766069733,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.22914585639182247,
+          "observation_horizon_ms": 23823.998978279953,
+          "overshoot_octaves": 0.055665160215906506,
+          "pre_x": 1.262123507361839,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.716,
+          "t10_to_t90_ms_bounds": [
+            2034.455237785056,
+            2238.244762203023
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__ascending_prefix__step_hold_fall_rise__1": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9854924745959579,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 2082.160462624219,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              961.767716410759,
+              1063.6532088615131
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 3505.5604626301792,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                2385.5677163928776,
+                2487.3532088793945
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 11454.8604626421,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                10336.467716398838,
+                10438.253208885355
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 17354.06046263018,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                16235.567716392878,
+                16337.253208885355
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.209203641473175,
+          "late_drift_octaves_per_second": 0.02094990096605498,
+          "late_error_from_input_scaled_reference_octaves": 0.18326433708848722,
+          "late_mean_x": 1.3924679785616623,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.32452742833790427,
+          "observation_horizon_ms": 23790.067716392878,
+          "overshoot_octaves": 0.4067352084973128,
+          "pre_x": -0.375758859247981,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            13748.214507513483,
+            13951.685492492477
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9625561087450478,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1138.3170232977136,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              21.435745237380615,
+              127.89830134612566
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2977.0170232857927,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1854.835745243341,
+                1956.9983013401652
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 10530.617023309635,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                9405.835745243341,
+                9507.498301340165
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 16449.417023291753,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                15328.43574523738,
+                15430.298301352086
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.5121491891845238,
+          "late_drift_octaves_per_second": 0.027421738370040583,
+          "late_error_from_input_scaled_reference_octaves": -0.14660872941622194,
+          "late_mean_x": 1.3655404597683019,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.0934238676761292,
+          "observation_horizon_ms": 23796.83574524334,
+          "overshoot_octaves": 0.27416613343099594,
+          "pre_x": -0.07281331153663233,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            13371.437443897215,
+            13575.462556108745
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__ascending_prefix__step_hold_fall_rise__2": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 1.0091615886776708,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1626.0699478055321,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              505.7653669992724,
+              607.574528599871
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1626.0699478055321,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                505.7653669992724,
+                607.574528599871
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1626.0699478055321,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                505.7653669992724,
+                607.574528599871
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2041.0699478055321,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                919.7653669992724,
+                1021.4745286058314
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.2594616384766255,
+          "late_drift_octaves_per_second": 0.0337637879847785,
+          "late_error_from_input_scaled_reference_octaves": 0.1630196595367342,
+          "late_mean_x": -0.0964419789398913,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.5073684957378063,
+          "observation_horizon_ms": 23797.165367005233,
+          "overshoot_octaves": 0.2388923493645534,
+          "pre_x": 1.3255008622445308,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            312.1908383994014,
+            515.7091616065591
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.8804429941956187,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1515.7922930664208,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              396.7520715752835,
+              498.4325145515977
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1515.7922930664208,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                396.7520715752835,
+                498.4325145515977
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1515.7922930664208,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                396.7520715752835,
+                498.4325145515977
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2020.0922930783418,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                910.652071581244,
+                1012.2325145635186
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.17333912315987976,
+          "late_drift_octaves_per_second": 0.05784505502991075,
+          "late_error_from_input_scaled_reference_octaves": 0.003651464104324653,
+          "late_mean_x": -0.1696876590555551,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.4775789326903146,
+          "observation_horizon_ms": 23796.852071569323,
+          "overshoot_octaves": 0.3216927542201759,
+          "pre_x": 1.4116233775612765,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            412.21955702964624,
+            615.4804429882352
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__ascending_prefix__step_hold_fall_rise__3": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 1.0328376132820267,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1353.6743866320612,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              228.85796781349927,
+              330.8908054267813
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 3085.674386632061,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1968.1579678254202,
+                2070.2908054327418
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 10719.474386643982,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                9595.25796781946,
+                9697.490805450623
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 16529.67438663206,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                15411.25796781946,
+                15513.290805432742
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.3777378039230597,
+          "late_drift_octaves_per_second": 0.0023700017407239926,
+          "late_error_from_input_scaled_reference_octaves": 0.15906580666652115,
+          "late_mean_x": 1.5368036105895808,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.5665619657513983,
+          "observation_horizon_ms": 23797.25796781946,
+          "overshoot_octaves": 0.510909213397861,
+          "pre_x": -0.20722469679809633,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            13340.967162386718,
+            13545.132837607322
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.8656368446245324,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1146.3626358982874,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              26.029817499817,
+              127.89545434444153
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2886.6626359102083,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1766.3298174819356,
+                1868.2954543205997
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 10814.762635904248,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                9695.329817481936,
+                9796.995454338481
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 16546.362635898287,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                15423.329817481936,
+                15527.19545432656
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.383975317275302,
+          "late_drift_octaves_per_second": 0.0144690170729318,
+          "late_error_from_input_scaled_reference_octaves": 0.11670428615764994,
+          "late_mean_x": 1.500679603432952,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.5857027110636719,
+          "observation_horizon_ms": 23797.229817487896,
+          "overshoot_octaves": 0.505912478198179,
+          "pre_x": -0.20098718344585406,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            13555.034363161336,
+            13760.865636844625
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__descending_prefix__hold_hold_fall_rise__0": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9474098516366212,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 9618.805316834303,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              8498.731611914445,
+              8600.57902174224
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 9214.805316834303,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                8095.131611890603,
+                8196.9790217482
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 14200.205316840264,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                13080.531611896564,
+                13182.679021766082
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 17148.905316828343,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                16027.831611908485,
+                16129.57902174224
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 0.36587144247495945,
+          "input_scaled_reference_x": 1.5911074215191894,
+          "late_drift_octaves_per_second": 0.028709432453790207,
+          "late_error_from_input_scaled_reference_octaves": -0.20922344826506367,
+          "late_mean_x": 1.3818839732541257,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.11198831056348868,
+          "observation_horizon_ms": 23816.931611902524,
+          "overshoot_octaves": 0.22206424657222734,
+          "pre_x": 1.22523597904423,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.164,
+          "t10_to_t90_ms_bounds": [
+            7830.852590160284,
+            8034.447409851637
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9462606054585194,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 8620.104976645453,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              7501.431846324842,
+              7603.178106942221
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 8309.204976639492,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                7190.031846318881,
+                7300.678106942221
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 12994.00497662161,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                11873.531846318881,
+                11975.178106942221
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 16968.704976639492,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                15849.131846342723,
+                15950.97810692434
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 0.36587144247495945,
+          "input_scaled_reference_x": 1.5244661461044313,
+          "late_drift_octaves_per_second": 0.0285159130747763,
+          "late_error_from_input_scaled_reference_octaves": -0.20048124189932426,
+          "late_mean_x": 1.323984904205107,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.08235062172847396,
+          "observation_horizon_ms": 23817.53184631888,
+          "overshoot_octaves": 0.332260651774678,
+          "pre_x": 1.158594703629472,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.164,
+          "t10_to_t90_ms_bounds": [
+            8548.453739400502,
+            8760.946260605459
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__descending_prefix__hold_hold_fall_rise__1": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9883148807712132,
+          "delay": null,
+          "estimable": true,
+          "fraction_crossings": {},
+          "input_change": false,
+          "input_log2_step": 0.0,
+          "late_drift_octaves_per_second": 0.02835645258004149,
+          "late_mean_x": 1.4436779750514863,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.11203494631140609,
+          "natural_drift_from_pre_octaves": 0.01459242874042288,
+          "observation_horizon_ms": 23797.14193523547,
+          "overshoot_octaves": null,
+          "pre_x": 1.4290855463110634,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.5
+        },
+        {
+          "clock_input_application_width_ms": 0.936955770222994,
+          "delay": null,
+          "estimable": true,
+          "fraction_crossings": {},
+          "input_change": false,
+          "input_log2_step": 0.0,
+          "late_drift_octaves_per_second": 0.02984332917601007,
+          "late_mean_x": 1.4323073978712293,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.10850337264331178,
+          "natural_drift_from_pre_octaves": 0.06740762248413668,
+          "observation_horizon_ms": 23796.837144073157,
+          "overshoot_octaves": null,
+          "pre_x": 1.3648997753870926,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 1.5
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__descending_prefix__hold_hold_fall_rise__2": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 1.0292514958491665,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1756.527626076364,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              634.8130003403567,
+              737.0422518242849
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1756.527626076364,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                634.8130003403567,
+                737.0422518242849
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1756.527626076364,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                634.8130003403567,
+                737.0422518242849
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1958.527626076364,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                837.0130003284357,
+                938.8422518362058
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.08876224161435853,
+          "late_drift_octaves_per_second": -0.35775273746129976,
+          "late_error_from_input_scaled_reference_octaves": 0.12695278445976865,
+          "late_mean_x": 0.03819054284541013,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.5065360500696966,
+          "observation_horizon_ms": 23793.813000340357,
+          "overshoot_octaves": 0.4209757095950697,
+          "pre_x": 1.4962002591067978,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            99.97074850415083,
+            304.02925149584917
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9276572351154755,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1662.970244603246,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              543.8064159678106,
+              645.7340732029261
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1662.970244603246,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                543.8064159678106,
+                645.7340732029261
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1662.970244603246,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                543.8064159678106,
+                645.7340732029261
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1965.1702445913252,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                856.006415985692,
+                957.7340732029261
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.10348940851024024,
+          "late_drift_octaves_per_second": 0.02502421691180204,
+          "late_error_from_input_scaled_reference_octaves": 0.008045867757500116,
+          "late_mean_x": -0.09544354075274013,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.5172705670992992,
+          "observation_horizon_ms": 23792.40641596185,
+          "overshoot_octaves": 0.40781872698115196,
+          "pre_x": 1.481473092210916,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            210.27234278276592,
+            413.9276572351155
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__descending_prefix__hold_hold_fall_rise__3": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 1.091458216207684,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 2078.6139736967452,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              961.1682445826882,
+              1063.0597028108168
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 3508.6139736967452,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                2392.8682445707673,
+                2499.559702810817
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 11033.413973678864,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                9910.868244570767,
+                10012.859702792935
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 16858.313973684824,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                15717.768244576728,
+                15819.759702798896
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.3123896527310117,
+          "late_drift_octaves_per_second": 0.010523427177510758,
+          "late_error_from_input_scaled_reference_octaves": 0.16430762723919878,
+          "late_mean_x": 1.4766972799702105,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.5125681777455073,
+          "observation_horizon_ms": 23795.16824458269,
+          "overshoot_octaves": 0.4935796168676896,
+          "pre_x": -0.2725728479901444,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            13218.208541765911,
+            13426.891458228129
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9277503639023053,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1281.5263653120492,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              163.66249012414482,
+              265.2902404761262
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 3011.4263653180096,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1886.4624901360658,
+                1989.890240499968
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 10259.92636531801,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                9133.362490112224,
+                9236.390240499968
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 15955.52636531205,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                14843.462490136066,
+                14945.190240482087
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.3501508147080041,
+          "late_drift_octaves_per_second": 0.008508037605916341,
+          "late_error_from_input_scaled_reference_octaves": 0.19923691776027996,
+          "late_mean_x": 1.549387732468284,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.6043837942364021,
+          "observation_horizon_ms": 23797.362490112224,
+          "overshoot_octaves": 0.5712382887716885,
+          "pre_x": -0.234811686013152,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            12853.572249636098,
+            13058.727750346021
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__descending_prefix__step_hold_fall_rise__0": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9467343904398149,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1595.6849055796993,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              474.3115384083212,
+              576.6582727749192
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1595.6849055796993,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                474.3115384083212,
+                576.6582727749192
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1595.6849055796993,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                474.3115384083212,
+                576.6582727749192
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1797.5849055856597,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                677.4115384023607,
+                779.3582727928006
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.2190910582461967,
+          "input_scaled_reference_x": 0.13157319053127958,
+          "late_drift_octaves_per_second": 0.07570842046647294,
+          "late_error_from_input_scaled_reference_octaves": -0.3335898362459514,
+          "late_mean_x": -0.20201664571467184,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.2013693711072015,
+          "observation_horizon_ms": 23820.31153840832,
+          "overshoot_octaves": 0.6316645595342422,
+          "pre_x": 1.3506642487774763,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.164,
+          "t10_to_t90_ms_bounds": [
+            100.75326562744158,
+            305.04673438447935
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9837808920492535,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1079.874759483424,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              0.0,
+              71.56664991752768
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1079.874759483424,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                0.0,
+                71.56664991752768
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1692.574759471503,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                574.7828690135575,
+                676.6666499115672
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1995.7747594595821,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                877.3828690373994,
+                979.4666499234881
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.2190910582461967,
+          "input_scaled_reference_x": -0.07119890080080005,
+          "late_drift_octaves_per_second": 0.07898273439140023,
+          "late_error_from_input_scaled_reference_octaves": -0.09712281345674095,
+          "late_mean_x": -0.168321714257541,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.2547698382787328,
+          "observation_horizon_ms": 23817.182869019518,
+          "overshoot_octaves": 0.5001955761313231,
+          "pre_x": 1.1478921574453966,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.164,
+          "t10_to_t90_ms_bounds": [
+            805.8162191198717,
+            979.4666499234881
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__descending_prefix__step_hold_fall_rise__1": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9319449432732654,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1402.0394656589924,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              278.17349318139895,
+              379.9054381067908
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2825.0394656589924,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1704.0734931873594,
+                1815.6054381246722
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 10084.139465653032,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                8960.673493181399,
+                9062.605438124672
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 15987.339465641111,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                14866.373493169478,
+                14968.105438124672
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.491976727911037,
+          "late_drift_octaves_per_second": 0.0318112258678076,
+          "late_error_from_input_scaled_reference_octaves": -0.1195719480152897,
+          "late_mean_x": 1.3724047798957473,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.09490030700600438,
+          "observation_horizon_ms": 23791.57349318736,
+          "overshoot_octaves": 0.3262357655260375,
+          "pre_x": -0.09298577281011902,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            13050.768055044806,
+            13264.031944937313
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9795114904991351,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1204.1325808608672,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              83.84282513349899,
+              185.72233660015627
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2948.2325808549067,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1822.2428251096571,
+                1923.9223366180377
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 9592.932580872788,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                8474.542825121578,
+                8576.322336623998
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 15103.032580866828,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                13984.642825115618,
+                14086.622336606117
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.5366837406554041,
+          "late_drift_octaves_per_second": 0.03165785595435544,
+          "late_error_from_input_scaled_reference_octaves": -0.15258457463326836,
+          "late_mean_x": 1.3840991660221358,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.11277842497965396,
+          "observation_horizon_ms": 23796.642825115618,
+          "overshoot_octaves": 0.31743322349263736,
+          "pre_x": -0.04827876006575201,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            12060.72048849758,
+            12264.37951149646
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__descending_prefix__step_hold_fall_rise__2": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9171758564261836,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1680.0738703985407,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              561.9152824822522,
+              663.5324583267575
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1680.0738703985407,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                561.9152824822522,
+                663.5324583267575
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1680.0738703985407,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                561.9152824822522,
+                663.5324583267575
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1982.5738703985407,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                864.6152824703313,
+                966.632458320797
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.16480287646398284,
+          "late_drift_octaves_per_second": 0.06797492860678887,
+          "late_error_from_input_scaled_reference_octaves": -0.02667823449169987,
+          "late_mean_x": -0.1914811109556827,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.2679534004973515,
+          "observation_horizon_ms": 23795.915282482252,
+          "overshoot_octaves": 0.33938736841018624,
+          "pre_x": 1.4201596242571735,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            201.08282414357382,
+            404.7171758385448
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9752455509296851,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1617.7681665737327,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              496.88054379230744,
+              598.7557893491976
+            ]
+          },
+          "direction": "fall",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1617.7681665737327,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                496.88054379230744,
+                598.7557893491976
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 1617.7681665737327,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                496.88054379230744,
+                598.7557893491976
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2022.2681665737327,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                901.480543786347,
+                1003.3557893432371
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": -1.5849625007211563,
+          "input_scaled_reference_x": -0.1529259759755186,
+          "late_drift_octaves_per_second": 0.029169596249021323,
+          "late_error_from_input_scaled_reference_octaves": 0.04648126230998613,
+          "late_mean_x": -0.10644471366553247,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.509665948067217,
+          "observation_horizon_ms": 23795.580543780387,
+          "overshoot_octaves": 0.3554158649941698,
+          "pre_x": 1.4320365247456377,
+          "service_after_mbps": 0.5,
+          "service_before_mbps": 1.5,
+          "t10_to_t90_ms_bounds": [
+            302.7247544371494,
+            506.4752455509297
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    },
+    "content_volga_lock_01__descending_prefix__step_hold_fall_rise__3": {
+      "original_runs": 2,
+      "per_run_response": [
+        {
+          "clock_input_application_width_ms": 0.9024036670016358,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1305.5674788606411,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              185.5162770330935,
+              287.3186807060556
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 3133.9674788666016,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                2011.416277039054,
+                2113.5186806941347
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 11057.767478878523,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                9936.216277050975,
+                10037.918680700095
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 16863.167478884483,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                15743.816277045014,
+                15845.518680694135
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.5068892050261162,
+          "late_drift_octaves_per_second": 0.03132146504482414,
+          "late_error_from_input_scaled_reference_octaves": -0.21999144200696974,
+          "late_mean_x": 1.2868977630191465,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.12028870648499068,
+          "observation_horizon_ms": 23795.216277050975,
+          "overshoot_octaves": 0.06121101864480494,
+          "pre_x": -0.07807329569503993,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            13630.29759635088,
+            13834.10240365508
+          ]
+        },
+        {
+          "clock_input_application_width_ms": 0.9758221654192312,
+          "delay": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1352.0724277130212,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              232.3845166422252,
+              334.0603387957235
+            ]
+          },
+          "direction": "rise",
+          "estimable": true,
+          "fraction_crossings": {
+            "0.1": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 2974.6724277070607,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                1856.6845166243438,
+                1958.460338801684
+              ]
+            },
+            "0.5": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 10750.17242770706,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                9630.884516642225,
+                9732.760338813605
+              ]
+            },
+            "0.9": {
+              "confirmation_samples": 11,
+              "confirmed_delay_ms": 16465.07242771302,
+              "observed": true,
+              "onset_delay_ms_bounds": [
+                15341.284516648186,
+                15444.560338795724
+              ]
+            }
+          },
+          "input_change": true,
+          "input_log2_step": 1.584962500721156,
+          "input_scaled_reference_x": 1.3560767377256537,
+          "late_drift_octaves_per_second": 0.012277822406459027,
+          "late_error_from_input_scaled_reference_octaves": 0.13382599499512926,
+          "late_mean_x": 1.489902732720783,
+          "late_native_bwe_eligible": true,
+          "late_range_octaves": 0.5723478834765505,
+          "observation_horizon_ms": 23797.584516630304,
+          "overshoot_octaves": 0.5035708508861128,
+          "pre_x": -0.22888576299550237,
+          "service_after_mbps": 1.5,
+          "service_before_mbps": 0.5,
+          "t10_to_t90_ms_bounds": [
+            13382.824177846502,
+            13587.87582217138
+          ]
+        }
+      ],
+      "settling_unverified_originals": 2,
+      "verified_settling_ages_ms": [
+        null,
+        null
+      ]
+    }
+  },
+  "rise_fall_asymmetry_per_run": [
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        8987.683439219589,
+        9191.72543845135
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-000-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        8788.519920751678,
+        8993.291321561395
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-001-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        9173.825992746482,
+        9378.046702452579
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-002-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        9272.683818724217,
+        9476.003398217843
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-003-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        7990.853591907406,
+        8203.43163641316
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-004-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        7104.55749003926,
+        7307.921065660172
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-005-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        9300.47664103868,
+        9504.41491385339
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-006-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        8171.06546203007,
+        8374.94477780121
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-007-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        8487.628416909298,
+        8692.583824532157
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-008-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        9386.406398559862,
+        9590.076391740819
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-009-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        9032.128727293028,
+        9235.879795021297
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-010-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        9196.897302930338,
+        9400.243382763198
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-011-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        8327.944130274976,
+        8532.710253439116
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-012-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        7990.883241497038,
+        8203.264566085396
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-013-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        6941.125426746155,
+        7154.4487990059715
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-014-support"
+    },
+    {
+      "fall_observed": true,
+      "rise_minus_fall_t50_ms_bounds": [
+        7272.430274530903,
+        7476.182665095053
+      ],
+      "rise_observed": true,
+      "trial": "m8-c-015-support"
+    }
+  ],
+  "scope": "Development system identification on controlled service. No population pooling; repeated phases remain nested within their native runs.",
+  "selection": {
+    "abi": "native_bwe_transients_m8_selection_v1",
+    "candidates": {
+      "12000": {
+        "baseline_false_tags": 64,
+        "baseline_tags": 64,
+        "cells": {
+          "content_kampar_boating_01__0.5": {
+            "full_spread_octaves": 0.49854038374117965,
+            "occurrences_nested_within_runs": 12,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.09155133087760708
+          },
+          "content_kampar_boating_01__1.5": {
+            "full_spread_octaves": 0.942786611841128,
+            "occurrences_nested_within_runs": 20,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.14353641605337852
+          },
+          "content_volga_lock_01__0.5": {
+            "full_spread_octaves": 0.4821908421904306,
+            "occurrences_nested_within_runs": 12,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.3642354034575795
+          },
+          "content_volga_lock_01__1.5": {
+            "full_spread_octaves": 1.1346264044299115,
+            "occurrences_nested_within_runs": 20,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.2391894252980158
+          }
+        },
+        "dynamic_false_tags": 12,
+        "dynamic_tags": 12,
+        "equal_cell_median_log2_bias": -0.23980179135809687,
+        "full_bias_spread_octaves": 1.1814295947770557,
+        "full_retention_required": true,
+        "native_runs": 16,
+        "nested_occurrences": 64,
+        "passed": false,
+        "proposed_constant_services_mbps": [
+          0.5904152093185049,
+          0.8349731964495795,
+          1.1808304186370098,
+          1.669946392899159
+        ],
+        "true_baseline_tags": 0,
+        "true_dynamic_tags": 0
+      },
+      "15000": {
+        "baseline_false_tags": 64,
+        "baseline_tags": 64,
+        "cells": {
+          "content_kampar_boating_01__0.5": {
+            "full_spread_octaves": 0.43380558545443043,
+            "occurrences_nested_within_runs": 12,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.1594755888955959
+          },
+          "content_kampar_boating_01__1.5": {
+            "full_spread_octaves": 0.7100957370136447,
+            "occurrences_nested_within_runs": 20,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.2550724505279751
+          },
+          "content_volga_lock_01__0.5": {
+            "full_spread_octaves": 0.1884150909111773,
+            "occurrences_nested_within_runs": 12,
+            "passed": true,
+            "prefix_w_infinity_octaves": 0.062893548816969
+          },
+          "content_volga_lock_01__1.5": {
+            "full_spread_octaves": 0.9463510423724175,
+            "occurrences_nested_within_runs": 20,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.21223698442536532
+          }
+        },
+        "dynamic_false_tags": 11,
+        "dynamic_tags": 11,
+        "equal_cell_median_log2_bias": -0.18697390710320783,
+        "full_bias_spread_octaves": 0.9463510423724175,
+        "full_retention_required": true,
+        "native_runs": 16,
+        "nested_occurrences": 64,
+        "passed": false,
+        "proposed_constant_services_mbps": [
+          0.5691867200093326,
+          0.8049515789598557,
+          1.1383734400186651,
+          1.6099031579197114
+        ],
+        "true_baseline_tags": 0,
+        "true_dynamic_tags": 0
+      },
+      "6000": {
+        "baseline_false_tags": 64,
+        "baseline_tags": 64,
+        "cells": {
+          "content_kampar_boating_01__0.5": {
+            "full_spread_octaves": 0.5400335146252339,
+            "occurrences_nested_within_runs": 12,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.07582757222992625
+          },
+          "content_kampar_boating_01__1.5": {
+            "full_spread_octaves": 1.5868369601709063,
+            "occurrences_nested_within_runs": 20,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.2920729108260607
+          },
+          "content_volga_lock_01__0.5": {
+            "full_spread_octaves": 0.28480876283695805,
+            "occurrences_nested_within_runs": 12,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.12333257836776096
+          },
+          "content_volga_lock_01__1.5": {
+            "full_spread_octaves": 1.6462655495321785,
+            "occurrences_nested_within_runs": 20,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.30447533679041916
+          }
+        },
+        "dynamic_false_tags": 20,
+        "dynamic_tags": 20,
+        "equal_cell_median_log2_bias": -0.6997145625582722,
+        "full_bias_spread_octaves": 1.6462655495321785,
+        "full_retention_required": true,
+        "native_runs": 16,
+        "nested_occurrences": 64,
+        "passed": false,
+        "proposed_constant_services_mbps": [
+          0.8120917079879469,
+          1.1484711073272857,
+          1.6241834159758939,
+          2.2969422146545715
+        ],
+        "true_baseline_tags": 0,
+        "true_dynamic_tags": 0
+      },
+      "9000": {
+        "baseline_false_tags": 64,
+        "baseline_tags": 64,
+        "cells": {
+          "content_kampar_boating_01__0.5": {
+            "full_spread_octaves": 0.5013754849053942,
+            "occurrences_nested_within_runs": 12,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.2796660950841835
+          },
+          "content_kampar_boating_01__1.5": {
+            "full_spread_octaves": 1.323907521953314,
+            "occurrences_nested_within_runs": 20,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.27832025737342314
+          },
+          "content_volga_lock_01__0.5": {
+            "full_spread_octaves": 0.1611503752552374,
+            "occurrences_nested_within_runs": 12,
+            "passed": true,
+            "prefix_w_infinity_octaves": 0.04464067601837002
+          },
+          "content_volga_lock_01__1.5": {
+            "full_spread_octaves": 1.4907724443696133,
+            "occurrences_nested_within_runs": 20,
+            "passed": false,
+            "prefix_w_infinity_octaves": 0.28391650224697784
+          }
+        },
+        "dynamic_false_tags": 16,
+        "dynamic_tags": 16,
+        "equal_cell_median_log2_bias": -0.31688456720547276,
+        "full_bias_spread_octaves": 1.4907724443696133,
+        "full_retention_required": true,
+        "native_runs": 16,
+        "nested_occurrences": 64,
+        "passed": false,
+        "proposed_constant_services_mbps": [
+          0.6228188728596871,
+          0.8807988969000938,
+          1.2456377457193741,
+          1.7615977938001877
+        ],
+        "true_baseline_tags": 0,
+        "true_dynamic_tags": 0
+      }
+    },
+    "controller_fitted": false,
+    "eligible": false,
+    "future_action_stage_enabled": false,
+    "native_common_support_established": false,
+    "next_validation_status": "128 fresh allocations untouched; no duration or executable conditioning schedule can be derived under the frozen rule",
+    "selected_age_ms": null
+  },
+  "settling_unverified_occurrences": 64,
+  "source_contents": 2
+}

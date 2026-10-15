@@ -1,0 +1,71 @@
+{
+  "abi": "native_bwe_transients_m8_registered_component_diagnostic_v1",
+  "ages": {
+    "12000": {
+      "all_future_component_failures": {
+        "future_drift_at_fixed_seconds": 61,
+        "future_in_frozen_caliper": 64,
+        "future_observable": 0,
+        "original_bwe_bounds": 0
+      },
+      "dynamic_tags": 12,
+      "future_component_failures_among_dynamic_tags": {
+        "future_drift_at_fixed_seconds": 12,
+        "future_in_frozen_caliper": 12,
+        "future_observable": 0,
+        "original_bwe_bounds": 0
+      },
+      "occurrences": 64
+    },
+    "15000": {
+      "all_future_component_failures": {
+        "future_drift_at_fixed_seconds": 59,
+        "future_in_frozen_caliper": 64,
+        "future_observable": 0,
+        "original_bwe_bounds": 0
+      },
+      "dynamic_tags": 11,
+      "future_component_failures_among_dynamic_tags": {
+        "future_drift_at_fixed_seconds": 8,
+        "future_in_frozen_caliper": 11,
+        "future_observable": 0,
+        "original_bwe_bounds": 0
+      },
+      "occurrences": 64
+    },
+    "6000": {
+      "all_future_component_failures": {
+        "future_drift_at_fixed_seconds": 64,
+        "future_in_frozen_caliper": 64,
+        "future_observable": 0,
+        "original_bwe_bounds": 0
+      },
+      "dynamic_tags": 20,
+      "future_component_failures_among_dynamic_tags": {
+        "future_drift_at_fixed_seconds": 20,
+        "future_in_frozen_caliper": 20,
+        "future_observable": 0,
+        "original_bwe_bounds": 0
+      },
+      "occurrences": 64
+    },
+    "9000": {
+      "all_future_component_failures": {
+        "future_drift_at_fixed_seconds": 64,
+        "future_in_frozen_caliper": 64,
+        "future_observable": 0,
+        "original_bwe_bounds": 0
+      },
+      "dynamic_tags": 16,
+      "future_component_failures_among_dynamic_tags": {
+        "future_drift_at_fixed_seconds": 16,
+        "future_in_frozen_caliper": 16,
+        "future_observable": 0,
+        "original_bwe_bounds": 0
+      },
+      "occurrences": 64
+    }
+  },
+  "new_features_or_thresholds": false,
+  "registered_labels_only": true
+}

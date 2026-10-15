@@ -1,0 +1,195 @@
+{
+  "abi": "native_bwe_transients_m8_selection_v1",
+  "candidates": {
+    "12000": {
+      "baseline_false_tags": 64,
+      "baseline_tags": 64,
+      "cells": {
+        "content_kampar_boating_01__0.5": {
+          "full_spread_octaves": 0.49854038374117965,
+          "occurrences_nested_within_runs": 12,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.09155133087760708
+        },
+        "content_kampar_boating_01__1.5": {
+          "full_spread_octaves": 0.942786611841128,
+          "occurrences_nested_within_runs": 20,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.14353641605337852
+        },
+        "content_volga_lock_01__0.5": {
+          "full_spread_octaves": 0.4821908421904306,
+          "occurrences_nested_within_runs": 12,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.3642354034575795
+        },
+        "content_volga_lock_01__1.5": {
+          "full_spread_octaves": 1.1346264044299115,
+          "occurrences_nested_within_runs": 20,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.2391894252980158
+        }
+      },
+      "dynamic_false_tags": 12,
+      "dynamic_tags": 12,
+      "equal_cell_median_log2_bias": -0.23980179135809687,
+      "full_bias_spread_octaves": 1.1814295947770557,
+      "full_retention_required": true,
+      "native_runs": 16,
+      "nested_occurrences": 64,
+      "passed": false,
+      "proposed_constant_services_mbps": [
+        0.5904152093185049,
+        0.8349731964495795,
+        1.1808304186370098,
+        1.669946392899159
+      ],
+      "true_baseline_tags": 0,
+      "true_dynamic_tags": 0
+    },
+    "15000": {
+      "baseline_false_tags": 64,
+      "baseline_tags": 64,
+      "cells": {
+        "content_kampar_boating_01__0.5": {
+          "full_spread_octaves": 0.43380558545443043,
+          "occurrences_nested_within_runs": 12,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.1594755888955959
+        },
+        "content_kampar_boating_01__1.5": {
+          "full_spread_octaves": 0.7100957370136447,
+          "occurrences_nested_within_runs": 20,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.2550724505279751
+        },
+        "content_volga_lock_01__0.5": {
+          "full_spread_octaves": 0.1884150909111773,
+          "occurrences_nested_within_runs": 12,
+          "passed": true,
+          "prefix_w_infinity_octaves": 0.062893548816969
+        },
+        "content_volga_lock_01__1.5": {
+          "full_spread_octaves": 0.9463510423724175,
+          "occurrences_nested_within_runs": 20,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.21223698442536532
+        }
+      },
+      "dynamic_false_tags": 11,
+      "dynamic_tags": 11,
+      "equal_cell_median_log2_bias": -0.18697390710320783,
+      "full_bias_spread_octaves": 0.9463510423724175,
+      "full_retention_required": true,
+      "native_runs": 16,
+      "nested_occurrences": 64,
+      "passed": false,
+      "proposed_constant_services_mbps": [
+        0.5691867200093326,
+        0.8049515789598557,
+        1.1383734400186651,
+        1.6099031579197114
+      ],
+      "true_baseline_tags": 0,
+      "true_dynamic_tags": 0
+    },
+    "6000": {
+      "baseline_false_tags": 64,
+      "baseline_tags": 64,
+      "cells": {
+        "content_kampar_boating_01__0.5": {
+          "full_spread_octaves": 0.5400335146252339,
+          "occurrences_nested_within_runs": 12,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.07582757222992625
+        },
+        "content_kampar_boating_01__1.5": {
+          "full_spread_octaves": 1.5868369601709063,
+          "occurrences_nested_within_runs": 20,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.2920729108260607
+        },
+        "content_volga_lock_01__0.5": {
+          "full_spread_octaves": 0.28480876283695805,
+          "occurrences_nested_within_runs": 12,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.12333257836776096
+        },
+        "content_volga_lock_01__1.5": {
+          "full_spread_octaves": 1.6462655495321785,
+          "occurrences_nested_within_runs": 20,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.30447533679041916
+        }
+      },
+      "dynamic_false_tags": 20,
+      "dynamic_tags": 20,
+      "equal_cell_median_log2_bias": -0.6997145625582722,
+      "full_bias_spread_octaves": 1.6462655495321785,
+      "full_retention_required": true,
+      "native_runs": 16,
+      "nested_occurrences": 64,
+      "passed": false,
+      "proposed_constant_services_mbps": [
+        0.8120917079879469,
+        1.1484711073272857,
+        1.6241834159758939,
+        2.2969422146545715
+      ],
+      "true_baseline_tags": 0,
+      "true_dynamic_tags": 0
+    },
+    "9000": {
+      "baseline_false_tags": 64,
+      "baseline_tags": 64,
+      "cells": {
+        "content_kampar_boating_01__0.5": {
+          "full_spread_octaves": 0.5013754849053942,
+          "occurrences_nested_within_runs": 12,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.2796660950841835
+        },
+        "content_kampar_boating_01__1.5": {
+          "full_spread_octaves": 1.323907521953314,
+          "occurrences_nested_within_runs": 20,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.27832025737342314
+        },
+        "content_volga_lock_01__0.5": {
+          "full_spread_octaves": 0.1611503752552374,
+          "occurrences_nested_within_runs": 12,
+          "passed": true,
+          "prefix_w_infinity_octaves": 0.04464067601837002
+        },
+        "content_volga_lock_01__1.5": {
+          "full_spread_octaves": 1.4907724443696133,
+          "occurrences_nested_within_runs": 20,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.28391650224697784
+        }
+      },
+      "dynamic_false_tags": 16,
+      "dynamic_tags": 16,
+      "equal_cell_median_log2_bias": -0.31688456720547276,
+      "full_bias_spread_octaves": 1.4907724443696133,
+      "full_retention_required": true,
+      "native_runs": 16,
+      "nested_occurrences": 64,
+      "passed": false,
+      "proposed_constant_services_mbps": [
+        0.6228188728596871,
+        0.8807988969000938,
+        1.2456377457193741,
+        1.7615977938001877
+      ],
+      "true_baseline_tags": 0,
+      "true_dynamic_tags": 0
+    }
+  },
+  "controller_fitted": false,
+  "eligible": false,
+  "future_action_stage_enabled": false,
+  "native_common_support_established": false,
+  "next_validation_status": "128 fresh allocations untouched; no duration or executable conditioning schedule can be derived under the frozen rule",
+  "selected_age_ms": null
+}

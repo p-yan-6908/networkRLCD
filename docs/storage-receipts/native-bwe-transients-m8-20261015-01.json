@@ -1,0 +1,60 @@
+{
+  "abi": "native_bwe_support_mechanism_archive_receipt_v1",
+  "action_value_estimated": false,
+  "additional_bindings_verified_against_freshly_restored_inventory": true,
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_bindings_sha256": "d3f9d10df45909b82ad4e4f7800d46424c6d957e9729e0a5c92941c13a8f60df",
+  "archive_helper_sha256": "a6e2a7f9206df0badc31730c2264970d29ac60e840882557210d8ea1776a2913",
+  "base_gate_sha256": "04c2b11d742b1e7d82635e218ca9fd8025834e7feb4599b7d306a883bd9acb1b",
+  "capture_index_sha256": "3bc34214a9fc44dca24f75a0064caee0a43fd654fa0dc945a3809f7ebccccd1a",
+  "characterization_originals": 16,
+  "controller_fitted": false,
+  "derived_conditioning_duration_ms": null,
+  "files_deleted": 0,
+  "files_verified": 1253,
+  "fresh_scientific_binding_proof_sha256": "e0d97a952aaf93508d40472900c7689ac8db67ca0719fed62cf4b685cd1522dc",
+  "gate_sha256": "04c2b11d742b1e7d82635e218ca9fd8025834e7feb4599b7d306a883bd9acb1b",
+  "generic_gate_scope": "Acquisition qualification only. The separate settling selection is false and no successor schedule is instantiated.",
+  "instrumentation_originals": 2,
+  "local_raw_evidence_retained": true,
+  "native_common_support_established": false,
+  "nested_plateau_occurrences": 64,
+  "new_successor_allocation_untouched": 128,
+  "old_m7ra_128_panel_untouched": true,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "8ac07b5cf305916de8284502ab287eb685d53eaf821673af43ec1a09b1dc99ab",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "5c8ece3db49f4ca5b4265c99d392a176e9953674cf2d5f7e617a587afa7ab637",
+      "size": 212771
+    },
+    "results.tar.part-000": {
+      "sha256": "ebf9e04f2ce633a2cac0dfd2df6d41e01a0452c974acfe179785f5b1733037c9",
+      "size": 205486080
+    }
+  },
+  "prefix": "native-bwe-transients-m8-20261015-01",
+  "private": true,
+  "prospective_settling_selection_passed": false,
+  "protocol_sha256": "32ed1a00d9d135d3e35c940cbb09caef2ef2366b2fe3e885d5ac321ada201738",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-bwe-transients-m8/characterization",
+  "registered_gate_passed": true,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "revision": "46d71bf31f318c92d92a7d2446137753ac4aacfb",
+  "scientific_registration_commit": "cbbafc4f6846d6ad0a5eaf064d09750c7e4d26fa",
+  "selected_age_ms": null,
+  "settling_selection_sha256": "3ec893818277dd23accff7a3c800be1c2b670fd74c63fee579c795d6595d684f",
+  "stage": "characterization",
+  "storage_binding_helper_sha256": "69e1a4abcb3572aa4a68d33e5902cb857d70723365ca31b8c227930518e84fe9",
+  "successor_executable_schedule_instantiated": false,
+  "system_id_summary_sha256": "a4d60c01718852a5cd6a96fc1327826da2bd84d70eab53811ac2f6a62c6a11b9",
+  "system_identification_estimable": true,
+  "verified_settling_onsets_on_registered_grid": 0
+}

@@ -1,0 +1,30 @@
+{
+  "abi": "native_bwe_transients_m8_fresh_scientific_bindings_v1",
+  "action_value_estimated": false,
+  "archive_members_verified": 1253,
+  "characterization_originals": 16,
+  "controller_fitted": false,
+  "executable_successor_schedule_instantiated": false,
+  "fresh_inventory_sha256": "5c8ece3db49f4ca5b4265c99d392a176e9953674cf2d5f7e617a587afa7ab637",
+  "instrumentation_originals": 2,
+  "native_common_support_established": false,
+  "new_successor_allocation_untouched": 128,
+  "old_m7ra_panel_untouched": true,
+  "revision": "46d71bf31f318c92d92a7d2446137753ac4aacfb",
+  "scientific_bindings": {
+    "instrumentation_evidence/mechanism_qualification_gate.json": "23e0c5e5e104a1388823350dc662b36daa8bfcab8089debb995aaf3eac293fe9",
+    "mechanism_qualification_gate.json": "04c2b11d742b1e7d82635e218ca9fd8025834e7feb4599b7d306a883bd9acb1b",
+    "protocol.json": "32ed1a00d9d135d3e35c940cbb09caef2ef2366b2fe3e885d5ac321ada201738",
+    "provenance/data/native-m8/next-validation-allocation.json": "6b25569c97dd4116577360e652f2163819ed1c64f972ff9c65e6e9cd17b2df9a",
+    "provenance/docs/NATIVE_BWE_TRANSIENTS_M8_RESULTS.md": "f3c37893ceef4111fbe5119df3abfbafe2290a1ce7a5ff25b81ba4e23ec30d23",
+    "provenance/reports/native-bwe-transients-m8-next-design-decision.json": "b6cefdbdd8c4aea2ff519f06c7e0581c4aa9bcb95c392c7ecdf31e38a6b53f29",
+    "provenance/reports/native-bwe-transients-m8-preservation-audit.json": "e57828e1646dbe77853e38e90acff2599a47dff862a098a0a26237be77634fa6",
+    "provenance/reports/native-bwe-transients-m8-support-failure-diagnostic.json": "1ed5efd9424e2019e24b9a11574886c1f6f91150500499917e96dbdc741fd7ab",
+    "settling_selection.json": "3ec893818277dd23accff7a3c800be1c2b670fd74c63fee579c795d6595d684f",
+    "system_id_summary.json": "a4d60c01718852a5cd6a96fc1327826da2bd84d70eab53811ac2f6a62c6a11b9"
+  },
+  "selected_age_ms": null,
+  "settling_selection_eligible": false,
+  "source_snapshot_bindings_verified": 243,
+  "system_identification_estimable": true
+}

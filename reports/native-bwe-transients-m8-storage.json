@@ -1,0 +1,15 @@
+{
+  "abi": "native_bwe_transients_m8_storage_bound_v1",
+  "conservative_peak_including_fresh_verification_bytes": 699701932,
+  "current_retained_bytes": 494002577,
+  "incremental_budget_bytes": 3000000000,
+  "incremental_roots_bytes": {
+    "/home/agent/.cache/networkrlcd/native-bwe-transients-m8": 225413675,
+    "/home/agent/.cache/networkrlcd/native-bwe-transients-m8-archive-20261015-01": 205912582,
+    "/home/agent/.cache/networkrlcd/native-bwe-transients-m8-assets": 62676320
+  },
+  "licensed_originals_and_old_derivatives_retained": true,
+  "private_archive_revision": "46d71bf31f318c92d92a7d2446137753ac4aacfb",
+  "raw_or_licensed_evidence_deleted": 0,
+  "within_budget": true
+}

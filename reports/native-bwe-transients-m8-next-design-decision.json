@@ -1,0 +1,43 @@
+{
+  "abi": "native_conditioning_after_m8_design_decision_v1",
+  "allocated_originals": 128,
+  "allocation_sha256": "6b25569c97dd4116577360e652f2163819ed1c64f972ff9c65e6e9cd17b2df9a",
+  "conditioning_duration_ms": null,
+  "constant_services_mbps": null,
+  "controller_fitted": false,
+  "executable_schedule_instantiated": false,
+  "native_common_support_established": false,
+  "native_sessions_started": 0,
+  "old_m7ra_panel_untouched": true,
+  "preserved_acceptance_gates": {
+    "all_original_attempts_required": true,
+    "census_samples": 11,
+    "eligible_bwe_bounds_bps": [
+      240000,
+      3800000
+    ],
+    "history_state_ms": 3000,
+    "maximum_actual_census_difference_octaves": 0.25,
+    "maximum_entry_elapsed_difference_ms": 250,
+    "maximum_prefix_w_infinity_octaves": 0.25,
+    "maximum_probe_exposure_difference_octaves": 0.01,
+    "maximum_recent_log2_drift": 0.05,
+    "maximum_repeat_spread_octaves": 0.25,
+    "maximum_sample_gap_ms": 250,
+    "minimum_census_span_ms": 900,
+    "minimum_common_overlap_octaves": 0.5,
+    "minimum_history_samples": 27,
+    "minimum_members_per_history": 4,
+    "minimum_profile_range_octaves": 1.0,
+    "minimum_profile_sample_sd_octaves": 0.35,
+    "target_caliper_octaves": 0.125,
+    "targets_log2_bwe_over_500k": [
+      0.0,
+      0.5,
+      1.0,
+      1.5
+    ]
+  },
+  "selected_age_ms": null,
+  "selection_sha256": "3ec893818277dd23accff7a3c800be1c2b670fd74c63fee579c795d6595d684f"
+}

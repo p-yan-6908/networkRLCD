@@ -1,0 +1,3078 @@
+{
+  "abi": "native_bwe_transients_m8_response_tables_v1",
+  "history_contrasts": [
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.40363445079589144,
+        "mean": 0.1290416628664052,
+        "median": 0.1290416628664052,
+        "minimum": -0.14555112506308104,
+        "n": 2,
+        "values": [
+          0.40363445079589144,
+          -0.14555112506308104
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.23140579899982816,
+        "mean": -0.010639586441887228,
+        "median": -0.010639586441887228,
+        "minimum": -0.2526849718836026,
+        "n": 2,
+        "values": [
+          0.23140579899982816,
+          -0.2526849718836026
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 1.2654816311934625,
+        "mean": 1.208321023241968,
+        "median": 1.208321023241968,
+        "minimum": 1.1511604152904735,
+        "n": 2,
+        "values": [
+          1.2654816311934625,
+          1.1511604152904735
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 1.0932529793973993,
+        "mean": 1.0686397739336755,
+        "median": 1.0686397739336755,
+        "minimum": 1.044026568469952,
+        "n": 2,
+        "values": [
+          1.0932529793973993,
+          1.044026568469952
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.43186388819981747,
+        "mean": 0.14447431783504433,
+        "median": 0.14447431783504433,
+        "minimum": -0.1429152525297288,
+        "n": 2,
+        "values": [
+          0.43186388819981747,
+          -0.1429152525297288
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.27922236102794096,
+        "mean": 0.23689978543215617,
+        "median": 0.23689978543215617,
+        "minimum": 0.1945772098363714,
+        "n": 2,
+        "values": [
+          0.1945772098363714,
+          0.27922236102794096
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.7986194657304492,
+        "mean": 0.45464483543095285,
+        "median": 0.45464483543095285,
+        "minimum": 0.11067020513145653,
+        "n": 2,
+        "values": [
+          0.7986194657304492,
+          0.11067020513145653
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.5613327873670031,
+        "mean": 0.5470703030280647,
+        "median": 0.5470703030280647,
+        "minimum": 0.5328078186891263,
+        "n": 2,
+        "values": [
+          0.5613327873670031,
+          0.5328078186891263
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.26523546507288853,
+        "mean": 0.251249503224767,
+        "median": 0.251249503224767,
+        "minimum": 0.23726354137664551,
+        "n": 2,
+        "values": [
+          0.23726354137664551,
+          0.26523546507288853
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.23641915709628325,
+        "mean": -0.007369515509482061,
+        "median": -0.007369515509482061,
+        "minimum": -0.25115818811524737,
+        "n": 2,
+        "values": [
+          -0.25115818811524737,
+          0.23641915709628325
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.2782515630506641,
+        "mean": 0.15166320533937294,
+        "median": 0.15166320533937294,
+        "minimum": 0.025074847628081764,
+        "n": 2,
+        "values": [
+          0.2782515630506641,
+          0.025074847628081764
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.0037414603485235176,
+        "mean": -0.10695581339487614,
+        "median": -0.10695581339487614,
+        "minimum": -0.21017016644122877,
+        "n": 2,
+        "values": [
+          -0.21017016644122877,
+          -0.0037414603485235176
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.18169207220041872,
+        "mean": 0.0634477419176761,
+        "median": 0.0634477419176761,
+        "minimum": -0.05479658836506651,
+        "n": 2,
+        "values": [
+          0.18169207220041872,
+          -0.05479658836506651
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.047479314461175814,
+        "mean": -0.135029092748162,
+        "median": -0.135029092748162,
+        "minimum": -0.22257887103514817,
+        "n": 2,
+        "values": [
+          -0.047479314461175814,
+          -0.22257887103514817
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.3638189577248063,
+        "mean": 0.27227445729986754,
+        "median": 0.27227445729986754,
+        "minimum": 0.18072995687492877,
+        "n": 2,
+        "values": [
+          0.3638189577248063,
+          0.18072995687492877
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.1346475710632118,
+        "mean": 0.07379762263402945,
+        "median": 0.07379762263402945,
+        "minimum": 0.012947674204847104,
+        "n": 2,
+        "values": [
+          0.1346475710632118,
+          0.012947674204847104
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.15103394014624366,
+        "mean": -0.11064287573605686,
+        "median": -0.11064287573605686,
+        "minimum": -0.3723196916183574,
+        "n": 2,
+        "values": [
+          -0.3723196916183574,
+          0.15103394014624366
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.07933239517671142,
+        "mean": 0.003804057855600451,
+        "median": 0.003804057855600451,
+        "minimum": -0.07172427946551052,
+        "n": 2,
+        "values": [
+          -0.07172427946551052,
+          0.07933239517671142
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.16098652150293175,
+        "mean": 0.005875722994524796,
+        "median": 0.005875722994524796,
+        "minimum": -0.14923507551388215,
+        "n": 2,
+        "values": [
+          0.16098652150293175,
+          -0.14923507551388215
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.4615819336557786,
+        "mean": 0.1203226565861821,
+        "median": 0.1203226565861821,
+        "minimum": -0.2209366204834144,
+        "n": 2,
+        "values": [
+          0.4615819336557786,
+          -0.2209366204834144
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.342589389715368,
+        "mean": -0.3672534815268983,
+        "median": -0.3672534815268983,
+        "minimum": -0.3919175733384286,
+        "n": 2,
+        "values": [
+          -0.3919175733384286,
+          -0.342589389715368
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.2955978822527695,
+        "mean": 0.1406851149840703,
+        "median": 0.1406851149840703,
+        "minimum": -0.014227652284628911,
+        "n": 2,
+        "values": [
+          -0.014227652284628911,
+          0.2955978822527695
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.01829072664545213,
+        "mean": -0.16074580089596638,
+        "median": -0.16074580089596638,
+        "minimum": -0.30320087514648064,
+        "n": 2,
+        "values": [
+          -0.01829072664545213,
+          -0.30320087514648064
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.35939919440834756,
+        "mean": 0.3471927956150022,
+        "median": 0.3471927956150022,
+        "minimum": 0.3349863968216569,
+        "n": 2,
+        "values": [
+          0.35939919440834756,
+          0.3349863968216569
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.003137410694679262,
+        "mean": -0.06548489836955461,
+        "median": -0.06548489836955461,
+        "minimum": -0.12783238604442995,
+        "n": 2,
+        "values": [
+          -0.12783238604442995,
+          -0.003137410694679262
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.23732444000843675,
+        "mean": 0.08888296947913629,
+        "median": 0.08888296947913629,
+        "minimum": -0.05955850105016418,
+        "n": 2,
+        "values": [
+          -0.05955850105016418,
+          0.23732444000843675
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.04985445027227668,
+        "mean": -0.10160055315345304,
+        "median": -0.10160055315345304,
+        "minimum": -0.25305555657918277,
+        "n": 2,
+        "values": [
+          0.04985445027227668,
+          -0.25305555657918277
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.11812833526654246,
+        "mean": 0.05276731469523785,
+        "median": 0.05276731469523785,
+        "minimum": -0.012593705876066763,
+        "n": 2,
+        "values": [
+          0.11812833526654246,
+          -0.012593705876066763
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.21018023732655736,
+        "mean": 0.18168398704741054,
+        "median": 0.18168398704741054,
+        "minimum": 0.15318773676826372,
+        "n": 2,
+        "values": [
+          0.21018023732655736,
+          0.15318773676826372
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.09198646624392695,
+        "mean": -0.18132177400542793,
+        "median": -0.18132177400542793,
+        "minimum": -0.27065708176692893,
+        "n": 2,
+        "values": [
+          -0.09198646624392695,
+          -0.27065708176692893
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.28263452825237195,
+        "mean": 0.13731784144625747,
+        "median": 0.13731784144625747,
+        "minimum": -0.007998845359856982,
+        "n": 2,
+        "values": [
+          -0.007998845359856982,
+          0.28263452825237195
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.1412102902828207,
+        "mean": -0.22568791960658102,
+        "median": -0.22568791960658102,
+        "minimum": -0.3101655489303413,
+        "n": 2,
+        "values": [
+          -0.3101655489303413,
+          -0.1412102902828207
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.3278655188282719,
+        "mean": 0.29217599596990596,
+        "median": 0.29217599596990596,
+        "minimum": 0.25648647311153994,
+        "n": 2,
+        "values": [
+          0.3278655188282719,
+          0.25648647311153994
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.12124383210973869,
+        "mean": -0.27588057404369415,
+        "median": -0.27588057404369415,
+        "minimum": -0.4305173159776496,
+        "n": 2,
+        "values": [
+          -0.12124383210973869,
+          -0.4305173159776496
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.41679716665971445,
+        "mean": 0.20365818677456582,
+        "median": 0.20365818677456582,
+        "minimum": -0.009480793110582808,
+        "n": 2,
+        "values": [
+          -0.009480793110582808,
+          0.41679716665971445
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.2702066224294751,
+        "mean": -0.3643983832390343,
+        "median": -0.3643983832390343,
+        "minimum": -0.45859014404859344,
+        "n": 2,
+        "values": [
+          -0.45859014404859344,
+          -0.2702066224294751
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.3200559756563388,
+        "mean": 0.2847748351542688,
+        "median": 0.2847748351542688,
+        "minimum": 0.24949369465219884,
+        "n": 2,
+        "values": [
+          0.3200559756563388,
+          0.24949369465219884
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.275762552684254,
+        "mean": -0.3528923056474941,
+        "median": -0.3528923056474941,
+        "minimum": -0.43002205861073417,
+        "n": 2,
+        "values": [
+          -0.275762552684254,
+          -0.43002205861073417
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.41367643279343036,
+        "mean": 0.19878558539163327,
+        "median": 0.19878558539163327,
+        "minimum": -0.016105262010163823,
+        "n": 2,
+        "values": [
+          -0.016105262010163823,
+          0.41367643279343036
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.26583932046950265,
+        "mean": -0.43888155541012963,
+        "median": -0.43888155541012963,
+        "minimum": -0.6119237903507566,
+        "n": 2,
+        "values": [
+          -0.6119237903507566,
+          -0.26583932046950265
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.35342291236217305,
+        "mean": -0.36113030845546534,
+        "median": -0.36113030845546534,
+        "minimum": -0.36883770454875764,
+        "n": 2,
+        "values": [
+          -0.35342291236217305,
+          -0.36883770454875764
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.3059854052763542,
+        "mean": 0.018547299969421838,
+        "median": 0.018547299969421838,
+        "minimum": -0.26889080533751053,
+        "n": 2,
+        "values": [
+          -0.26889080533751053,
+          0.3059854052763542
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.013549704692058961,
+        "mean": -0.17136758038356625,
+        "median": -0.17136758038356625,
+        "minimum": -0.32918545607507355,
+        "n": 2,
+        "values": [
+          -0.013549704692058961,
+          -0.32918545607507355
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.3456376537500383,
+        "mean": 0.20831002804132093,
+        "median": 0.20831002804132093,
+        "minimum": 0.07098240233260356,
+        "n": 2,
+        "values": [
+          0.07098240233260356,
+          0.3456376537500383
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.2893110078451886,
+        "mean": 0.17594260935256734,
+        "median": 0.17594260935256734,
+        "minimum": 0.06257421085994608,
+        "n": 2,
+        "values": [
+          0.06257421085994608,
+          0.2893110078451886
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.14348336059019973,
+        "mean": 0.0298737969679298,
+        "median": 0.0298737969679298,
+        "minimum": -0.08373576665434013,
+        "n": 2,
+        "values": [
+          0.14348336059019973,
+          -0.08373576665434013
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.07521162633691691,
+        "mean": 0.04693994701233317,
+        "median": 0.04693994701233317,
+        "minimum": 0.01866826768774943,
+        "n": 2,
+        "values": [
+          0.01866826768774943,
+          0.07521162633691691
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_kampar_boating_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.09957741741800308,
+        "mean": -0.09912886537230436,
+        "median": -0.09912886537230436,
+        "minimum": -0.2978351481626118,
+        "n": 2,
+        "values": [
+          0.09957741741800308,
+          -0.2978351481626118
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.2992584803784671,
+        "mean": 0.20093171583509864,
+        "median": 0.20093171583509864,
+        "minimum": 0.1026049512917302,
+        "n": 2,
+        "values": [
+          0.2992584803784671,
+          0.1026049512917302
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.025274444959801468,
+        "mean": -0.06177582835944351,
+        "median": -0.06177582835944351,
+        "minimum": -0.14882610167868848,
+        "n": 2,
+        "values": [
+          0.025274444959801468,
+          -0.14882610167868848
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 1.5546988089419813,
+        "mean": 1.462179743364522,
+        "median": 1.462179743364522,
+        "minimum": 1.3696606777870628,
+        "n": 2,
+        "values": [
+          1.5546988089419813,
+          1.3696606777870628
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 1.2807147735233158,
+        "mean": 1.19947219916998,
+        "median": 1.19947219916998,
+        "minimum": 1.1182296248166441,
+        "n": 2,
+        "values": [
+          1.2807147735233158,
+          1.1182296248166441
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.42934540359613393,
+        "mean": 0.2901782663569387,
+        "median": 0.2901782663569387,
+        "minimum": 0.1510111291177435,
+        "n": 2,
+        "values": [
+          0.42934540359613393,
+          0.1510111291177435
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.027391414832759198,
+        "mean": 0.019213477177963734,
+        "median": 0.019213477177963734,
+        "minimum": 0.01103553952316827,
+        "n": 2,
+        "values": [
+          0.027391414832759198,
+          0.01103553952316827
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 1.1642019428682802,
+        "mean": 0.9496870208608386,
+        "median": 0.9496870208608386,
+        "minimum": 0.7351720988533968,
+        "n": 2,
+        "values": [
+          1.1642019428682802,
+          0.7351720988533968
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.7622479541049053,
+        "mean": 0.6787222316818635,
+        "median": 0.6787222316818635,
+        "minimum": 0.5951965092588216,
+        "n": 2,
+        "values": [
+          0.7622479541049053,
+          0.5951965092588216
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.43555778668767475,
+        "mean": 0.2923247190570961,
+        "median": 0.2923247190570961,
+        "minimum": 0.14909165142651748,
+        "n": 2,
+        "values": [
+          0.43555778668767475,
+          0.14909165142651748
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.012966523738576097,
+        "mean": -0.06993512488082765,
+        "median": -0.06993512488082765,
+        "minimum": -0.1269037260230792,
+        "n": 2,
+        "values": [
+          -0.012966523738576097,
+          -0.1269037260230792
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.12486651988793263,
+        "mean": -0.01699189060136963,
+        "median": -0.01699189060136963,
+        "minimum": -0.15885030109067189,
+        "n": 2,
+        "values": [
+          0.12486651988793263,
+          -0.15885030109067189
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.3236577905383182,
+        "mean": -0.3792517345392934,
+        "median": -0.3792517345392934,
+        "minimum": -0.43484567854026857,
+        "n": 2,
+        "values": [
+          -0.3236577905383182,
+          -0.43484567854026857
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.08744757639601941,
+        "mean": 0.05377008445095299,
+        "median": 0.05377008445095299,
+        "minimum": 0.020092592505886575,
+        "n": 2,
+        "values": [
+          0.08744757639601941,
+          0.020092592505886575
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.00974617535304656,
+        "mean": -0.061602036350261846,
+        "median": -0.061602036350261846,
+        "minimum": -0.13295024805357025,
+        "n": 2,
+        "values": [
+          0.00974617535304656,
+          -0.13295024805357025
+        ]
+      },
+      "plateau": 1
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.20215992240563074,
+        "mean": 0.17724553857384717,
+        "median": 0.17724553857384717,
+        "minimum": 0.1523311547420636,
+        "n": 2,
+        "values": [
+          0.1523311547420636,
+          0.20215992240563074
+        ]
+      },
+      "plateau": 1,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.07462975369909075,
+        "mean": 0.06187341777263233,
+        "median": 0.06187341777263233,
+        "minimum": 0.049117081846173916,
+        "n": 2,
+        "values": [
+          0.07462975369909075,
+          0.049117081846173916
+        ]
+      },
+      "plateau": 1,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.040218988669318834,
+        "mean": -0.04518640079178357,
+        "median": -0.04518640079178357,
+        "minimum": -0.05015381291424831,
+        "n": 2,
+        "values": [
+          -0.05015381291424831,
+          -0.040218988669318834
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.02241201756040001,
+        "mean": -0.05840200199315915,
+        "median": -0.05840200199315915,
+        "minimum": -0.09439198642591828,
+        "n": 2,
+        "values": [
+          -0.02241201756040001,
+          -0.09439198642591828
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.05120670323489562,
+        "mean": 0.021996239695810382,
+        "median": 0.021996239695810382,
+        "minimum": -0.0072142238432748584,
+        "n": 2,
+        "values": [
+          -0.0072142238432748584,
+          0.05120670323489562
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.02052757151057344,
+        "mean": 0.008780638494434806,
+        "median": 0.008780638494434806,
+        "minimum": -0.0029662945217038272,
+        "n": 2,
+        "values": [
+          0.02052757151057344,
+          -0.0029662945217038272
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.037782333987696454,
+        "mean": -0.04987625414496228,
+        "median": -0.04987625414496228,
+        "minimum": -0.061970174302228107,
+        "n": 2,
+        "values": [
+          -0.037782333987696454,
+          -0.061970174302228107
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.05605495352975426,
+        "mean": -0.06772182072932342,
+        "median": -0.06772182072932342,
+        "minimum": -0.07938868792889257,
+        "n": 2,
+        "values": [
+          -0.07938868792889257,
+          -0.05605495352975426
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.0018997254737892766,
+        "mean": -0.002033454932048734,
+        "median": -0.002033454932048734,
+        "minimum": -0.005966635337886744,
+        "n": 2,
+        "values": [
+          0.0018997254737892766,
+          -0.005966635337886744
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -5.1414565412896684e-05,
+        "mean": -0.01987902151640987,
+        "median": -0.01987902151640987,
+        "minimum": -0.03970662846740684,
+        "n": 2,
+        "values": [
+          -0.03970662846740684,
+          -5.1414565412896684e-05
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.023443028704301892,
+        "mean": 0.011218451513446116,
+        "median": 0.011218451513446116,
+        "minimum": -0.0010061256774096597,
+        "n": 2,
+        "values": [
+          -0.0010061256774096597,
+          0.023443028704301892
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.0442934565682405,
+        "mean": -0.07538820386097436,
+        "median": -0.07538820386097436,
+        "minimum": -0.10648295115370823,
+        "n": 2,
+        "values": [
+          -0.10648295115370823,
+          -0.0442934565682405
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.05467776846082011,
+        "mean": 0.01946396961481929,
+        "median": 0.01946396961481929,
+        "minimum": -0.015749829231181532,
+        "n": 2,
+        "values": [
+          -0.015749829231181532,
+          0.05467776846082011
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.013058716811722278,
+        "mean": -0.06714268575960118,
+        "median": -0.06714268575960118,
+        "minimum": -0.12122665470748009,
+        "n": 2,
+        "values": [
+          -0.12122665470748009,
+          -0.013058716811722278
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.10489369868544104,
+        "mean": 0.04980672916202723,
+        "median": 0.04980672916202723,
+        "minimum": -0.005280240361386579,
+        "n": 2,
+        "values": [
+          0.10489369868544104,
+          -0.005280240361386579
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.3991056339839847,
+        "mean": 0.19679261783578986,
+        "median": 0.19679261783578986,
+        "minimum": -0.005520398312404973,
+        "n": 2,
+        "values": [
+          0.3991056339839847,
+          -0.005520398312404973
+        ]
+      },
+      "plateau": 2
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.001041435127225654,
+        "mean": 0.0007701297965295312,
+        "median": 0.0007701297965295312,
+        "minimum": 0.0004988244658334084,
+        "n": 2,
+        "values": [
+          0.0004988244658334084,
+          0.001041435127225654
+        ]
+      },
+      "plateau": 2,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.2947107597643771,
+        "mean": 0.14775601847029218,
+        "median": 0.14775601847029218,
+        "minimum": 0.0008012771762072601,
+        "n": 2,
+        "values": [
+          0.2947107597643771,
+          0.0008012771762072601
+        ]
+      },
+      "plateau": 2,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.08555392462291958,
+        "mean": 0.027889020247681306,
+        "median": 0.027889020247681306,
+        "minimum": -0.029775884127556967,
+        "n": 2,
+        "values": [
+          0.08555392462291958,
+          -0.029775884127556967
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.022773133019481556,
+        "mean": -0.06211913166698718,
+        "median": -0.06211913166698718,
+        "minimum": -0.10146513031449281,
+        "n": 2,
+        "values": [
+          -0.10146513031449281,
+          -0.022773133019481556
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.0026134496301544463,
+        "mean": -0.003959940441803617,
+        "median": -0.003959940441803617,
+        "minimum": -0.01053333051376168,
+        "n": 2,
+        "values": [
+          0.0026134496301544463,
+          -0.01053333051376168
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 6000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.0035305794056862683,
+        "mean": -0.0939680923564721,
+        "median": -0.0939680923564721,
+        "minimum": -0.18440560530725794,
+        "n": 2,
+        "values": [
+          -0.18440560530725794,
+          -0.0035305794056862683
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.10108866166680286,
+        "mean": 0.035522869029936344,
+        "median": 0.035522869029936344,
+        "minimum": -0.030042923606930172,
+        "n": 2,
+        "values": [
+          0.10108866166680286,
+          -0.030042923606930172
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.07261122812987175,
+        "mean": -0.01767758295584282,
+        "median": -0.01767758295584282,
+        "minimum": -0.10796639404155739,
+        "n": 2,
+        "values": [
+          -0.10796639404155739,
+          0.07261122812987175
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.015299491883530414,
+        "mean": -0.017364566358278766,
+        "median": -0.017364566358278766,
+        "minimum": -0.050028624600087945,
+        "n": 2,
+        "values": [
+          0.015299491883530414,
+          -0.050028624600087945
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 12000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.05262552713671398,
+        "mean": -0.07056501834405793,
+        "median": -0.07056501834405793,
+        "minimum": -0.19375556382482984,
+        "n": 2,
+        "values": [
+          -0.19375556382482984,
+          0.05262552713671398
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.03200986824455443,
+        "mean": -0.044721126531973354,
+        "median": -0.044721126531973354,
+        "minimum": -0.05743238481939228,
+        "n": 2,
+        "values": [
+          -0.05743238481939228,
+          -0.03200986824455443
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.06892757352554035,
+        "mean": -0.017235641519053102,
+        "median": -0.017235641519053102,
+        "minimum": -0.10339885656364656,
+        "n": 2,
+        "values": [
+          -0.10339885656364656,
+          0.06892757352554035
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.006947554576888448,
+        "mean": -0.02251825661081175,
+        "median": -0.02251825661081175,
+        "minimum": -0.051984067798511946,
+        "n": 2,
+        "values": [
+          0.006947554576888448,
+          -0.051984067798511946
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 18000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.048953373971582836,
+        "mean": 0.004967228402108503,
+        "median": 0.004967228402108503,
+        "minimum": -0.03901891716736583,
+        "n": 2,
+        "values": [
+          -0.03901891716736583,
+          0.048953373971582836
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "step_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.014760305678704233,
+        "mean": -0.015920118276878337,
+        "median": -0.015920118276878337,
+        "minimum": -0.01707993087505244,
+        "n": 2,
+        "values": [
+          -0.01707993087505244,
+          -0.014760305678704233
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_prefix_descending_minus_ascending",
+      "order": "hold_hold_fall_rise",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.05562212938126043,
+        "mean": 0.028244343960752483,
+        "median": 0.028244343960752483,
+        "minimum": 0.000866558540244533,
+        "n": 2,
+        "values": [
+          0.000866558540244533,
+          0.05562212938126043
+        ]
+      },
+      "plateau": 3
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": -0.02609946677291486,
+        "mean": -0.03448302246319668,
+        "median": -0.03448302246319668,
+        "minimum": -0.042866578153478496,
+        "n": 2,
+        "values": [
+          -0.02609946677291486,
+          -0.042866578153478496
+        ]
+      },
+      "plateau": 3,
+      "prefix": "ascending_prefix"
+    },
+    {
+      "age_ms": 23000,
+      "content": "content_volga_lock_01",
+      "kind": "initial_service_high_minus_low_under_common_later_service",
+      "paired_repetition_differences_octaves": {
+        "maximum": 0.02751585690648617,
+        "mean": 0.009681439774434142,
+        "median": 0.009681439774434142,
+        "minimum": -0.008152977357617885,
+        "n": 2,
+        "values": [
+          -0.008152977357617885,
+          0.02751585690648617
+        ]
+      },
+      "plateau": 3,
+      "prefix": "descending_prefix"
+    }
+  ],
+  "response_rows": [
+    {
+      "content": "content_kampar_boating_01",
+      "fall": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1624.5757717767265,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              497.2356141369528,
+              598.8159293926656
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.23890695008390495,
+          "late_drift_octaves_per_second": 0.07047643861263131,
+          "late_range_octaves": 0.44781499344986986,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            417.21968472640583,
+            620.6803152497523
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1624.5757717767265,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              497.2356141369528,
+              598.8159293926656
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 2139.175771770766,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              1016.0356141190714,
+              1117.915929386705
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1588.5324864708818,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              469.46699975398224,
+              571.3979731996951
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.3810947725878474,
+          "late_drift_octaves_per_second": 0.06740442096162788,
+          "late_range_octaves": 0.46253694326745953,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            301.9690265602476,
+            505.5309734397524
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1588.5324864708818,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              469.46699975398224,
+              571.3979731996951
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1992.3324864828028,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              873.3669997599427,
+              974.9979731937347
+            ]
+          }
+        }
+      ],
+      "independent_repetitions": 2,
+      "input_order": "step_hold_fall_rise",
+      "prefix": "ascending_prefix",
+      "rise": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1191.0308916655486,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              65.18139140485437,
+              166.88039192624274
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.2751147815277797,
+          "late_drift_octaves_per_second": 0.03070931485763828,
+          "late_range_octaves": 0.11021379127670161,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            12593.900999502453,
+            12797.399000509467
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 9891.430891671509,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              8769.881391422736,
+              8872.180391938164
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 15622.430891671509,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              14502.781391428696,
+              14604.380391926243
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1227.7563902680558,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              108.28121469673351,
+              210.13156584533863
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.28758557477822544,
+          "late_drift_octaves_per_second": 0.03084903152319174,
+          "late_range_octaves": 0.11000762223724547,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            12138.849648839474,
+            12342.650351130724
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 9680.956390256135,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              8562.281214696734,
+              8672.731565839378
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 15394.356390262095,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              14282.981214684813,
+              14384.931565827457
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "content": "content_kampar_boating_01",
+      "fall": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1795.6562006304157,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              675.8839267888907,
+              786.228474454052
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.07845594717531046,
+          "late_drift_octaves_per_second": 0.07030939800915059,
+          "late_range_octaves": 0.4938112501037123,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            301.45545234675956,
+            513.9445476592009
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1795.6562006304157,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              675.8839267888907,
+              786.228474454052
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 2210.7562006244552,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              1087.6839268008116,
+              1189.8284744480916
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1520.0039373788313,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              399.4308807931957,
+              501.27699395253876
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.7202478268659387,
+          "late_drift_octaves_per_second": 0.05981087291113754,
+          "late_range_octaves": 0.24692522922646112,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            504.05388681681507,
+            707.8461131593431
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1520.0039373788313,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              399.4308807931957,
+              501.27699395253876
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 2127.7039373669104,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              1005.3308807693538,
+              1107.2769939525388
+            ]
+          }
+        }
+      ],
+      "independent_repetitions": 2,
+      "input_order": "hold_hold_fall_rise",
+      "prefix": "ascending_prefix",
+      "rise": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1226.5488147758006,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              104.38206637337862,
+              217.21556320801028
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.26855894990796436,
+          "late_drift_octaves_per_second": 0.03055534076453359,
+          "late_range_octaves": 0.11306707061481447,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            12647.46650317729,
+            12851.13349681675
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 9898.64881476984,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              8777.082066361458,
+              8879.31556320205
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 15607.5488147758,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              14487.582066361458,
+              14589.41556319609
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1239.8910502489307,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              128.80242070465465,
+              231.17967981108814
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.2157508816950806,
+          "late_drift_octaves_per_second": 0.029361275416779797,
+          "late_range_octaves": 0.1145233517216735,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            11396.322740881646,
+            11599.777259112394
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 8560.991050272773,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              7442.402420698694,
+              7553.879679799167
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 14371.991050272773,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              13249.402420698694,
+              13351.079679817049
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "content": "content_kampar_boating_01",
+      "fall": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1514.5679113233273,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              394.4229159870374,
+              496.1129066655776
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.7414847165514105,
+          "late_drift_octaves_per_second": 0.07233518661147165,
+          "late_range_octaves": 0.2970981894952275,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            604.8100093214598,
+            808.289990702382
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1514.5679113233273,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              394.4229159870374,
+              496.1129066655776
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 2220.867911335248,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              1100.9229159870374,
+              1202.7129066894195
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1684.1635555322136,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              563.1390574236866,
+              664.9880536526543
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.1770754148590174,
+          "late_drift_octaves_per_second": 0.0736509539193767,
+          "late_range_octaves": 0.30328125567320763,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            200.85100375911134,
+            414.94899622300727
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1684.1635555322136,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              563.1390574236866,
+              664.9880536526543
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1986.9635555143323,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              865.8390574117657,
+              978.0880536466939
+            ]
+          }
+        }
+      ],
+      "independent_repetitions": 2,
+      "input_order": "step_hold_fall_rise",
+      "prefix": "descending_prefix",
+      "rise": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1360.1071891700558,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              240.1703967048379,
+              341.84398164720915
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.23824908420556445,
+          "late_drift_octaves_per_second": 0.03026780687941555,
+          "late_range_octaves": 0.11216732005677565,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            11429.92641508147,
+            11633.27358493641
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 8723.507189176016,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              7600.670396704838,
+              7702.343981647209
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 14530.407189181977,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              13403.970396716759,
+              13505.543981635288
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1105.9700253451883,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              0.0,
+              86.22172252470045
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.22654413421132036,
+          "late_drift_octaves_per_second": -0.5001798126252461,
+          "late_range_octaves": 0.5652743061620917,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            11417.796605652897,
+            11621.403394335182
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 9060.570025339228,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              7937.418328183558,
+              8039.32172251874
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 14665.77002535711,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              13546.618328171637,
+              13648.521722506819
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "content": "content_kampar_boating_01",
+      "fall": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1634.0204471861216,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              513.5664156621569,
+              615.3744787160394
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.4003393658997907,
+          "late_drift_octaves_per_second": 0.021139807172842418,
+          "late_range_octaves": 0.495248129030616,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            210.8919369639989,
+            414.40806304792204
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1634.0204471861216,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              513.5664156621569,
+              615.3744787160394
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1936.8204471980425,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              826.2664156800383,
+              927.974478710079
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1813.0551631432172,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              690.1862459751574,
+              792.0240803053166
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.449519057020472,
+          "late_drift_octaves_per_second": 0.07518688341839805,
+          "late_range_octaves": 0.24538244133057524,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            99.86216568772215,
+            303.5378343182383
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1813.0551631432172,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              690.1862459751574,
+              792.0240803053166
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 2014.7551631312963,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              891.8862459930388,
+              993.7240802933957
+            ]
+          }
+        }
+      ],
+      "independent_repetitions": 2,
+      "input_order": "hold_hold_fall_rise",
+      "prefix": "descending_prefix",
+      "rise": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1058.9162246351334,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              0.0,
+              44.28132952746819
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.5591395853978671,
+          "late_drift_octaves_per_second": -0.3359927062317294,
+          "late_range_octaves": 0.588497466357502,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            14024.96979020341,
+            14237.430209772749
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 11060.316224641094,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              9915.85111975472,
+              10017.981329515547
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 16934.616224623212,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              15793.151119736838,
+              15903.881329521508
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1151.6323549853696,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              29.66821056837216,
+              131.69649939639203
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.24206741948775323,
+          "late_drift_octaves_per_second": 0.027735015662788243,
+          "late_range_octaves": 0.11444533796564027,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            12972.171711189862,
+            13176.12828882206
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 10232.03235499133,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              9119.968210580293,
+              9222.896499414273
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 15962.23235497941,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              14840.968210580293,
+              14943.196499396392
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "content": "content_volga_lock_01",
+      "fall": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1626.0699478055321,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              505.7653669992724,
+              607.574528599871
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.2388923493645534,
+          "late_drift_octaves_per_second": 0.0337637879847785,
+          "late_range_octaves": 0.5073684957378063,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            312.1908383994014,
+            515.7091616065591
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1626.0699478055321,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              505.7653669992724,
+              607.574528599871
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 2041.0699478055321,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              919.7653669992724,
+              1021.4745286058314
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1515.7922930664208,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              396.7520715752835,
+              498.4325145515977
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.3216927542201759,
+          "late_drift_octaves_per_second": 0.05784505502991075,
+          "late_range_octaves": 0.4775789326903146,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            412.21955702964624,
+            615.4804429882352
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1515.7922930664208,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              396.7520715752835,
+              498.4325145515977
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 2020.0922930783418,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              910.652071581244,
+              1012.2325145635186
+            ]
+          }
+        }
+      ],
+      "independent_repetitions": 2,
+      "input_order": "step_hold_fall_rise",
+      "prefix": "ascending_prefix",
+      "rise": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1353.6743866320612,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              228.85796781349927,
+              330.8908054267813
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.510909213397861,
+          "late_drift_octaves_per_second": 0.0023700017407239926,
+          "late_range_octaves": 0.5665619657513983,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            13340.967162386718,
+            13545.132837607322
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 10719.474386643982,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              9595.25796781946,
+              9697.490805450623
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 16529.67438663206,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              15411.25796781946,
+              15513.290805432742
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1146.3626358982874,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              26.029817499817,
+              127.89545434444153
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.505912478198179,
+          "late_drift_octaves_per_second": 0.0144690170729318,
+          "late_range_octaves": 0.5857027110636719,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            13555.034363161336,
+            13760.865636844625
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 10814.762635904248,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              9695.329817481936,
+              9796.995454338481
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 16546.362635898287,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              15423.329817481936,
+              15527.19545432656
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "content": "content_volga_lock_01",
+      "fall": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1727.8918815283978,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              604.1307366615802,
+              706.0530264309709
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.35156293365867775,
+          "late_drift_octaves_per_second": 0.02914574584638041,
+          "late_range_octaves": 0.4870416251442039,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            108.67771022464876,
+            314.2222897515094
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1727.8918815283978,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              604.1307366615802,
+              706.0530264309709
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1938.8918815283978,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              814.7307366556197,
+              918.3530264130895
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1684.7454371288186,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              566.2603015013738,
+              668.2305727562634
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.4406759336659253,
+          "late_drift_octaves_per_second": 0.0342612371061867,
+          "late_range_octaves": 0.5238218677945283,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            200.92972872126848,
+            404.7702712370083
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1684.7454371288186,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              566.2603015013738,
+              668.2305727562634
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1987.3454371228581,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              869.1603014775319,
+              971.030572738382
+            ]
+          }
+        }
+      ],
+      "independent_repetitions": 2,
+      "input_order": "hold_hold_fall_rise",
+      "prefix": "ascending_prefix",
+      "rise": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1122.1475027236738,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              1.972947188609396,
+              103.7220582348964
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.509454374639883,
+          "late_drift_octaves_per_second": 0.0022059877744344814,
+          "late_range_octaves": 0.5871790532902763,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            13368.750888953713,
+            13572.849111040327
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 10627.647502723674,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              9494.572947182649,
+              9597.422058222975
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 16329.647502723674,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              15208.47294718861,
+              15310.822058228936
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1195.6368322851195,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              73.03697132208617,
+              175.4366932362318
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.442111794207668,
+          "late_drift_octaves_per_second": 0.01296543451927712,
+          "late_range_octaves": 0.5489937271066179,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            13832.600278056052,
+            14036.299721949908
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 11177.63683228512,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              10054.636971316126,
+              10156.336693242192
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 16767.436832267238,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              15646.936971298244,
+              15748.736693248153
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "content": "content_volga_lock_01",
+      "fall": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1680.0738703985407,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              561.9152824822522,
+              663.5324583267575
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.33938736841018624,
+          "late_drift_octaves_per_second": 0.06797492860678887,
+          "late_range_octaves": 0.2679534004973515,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            201.08282414357382,
+            404.7171758385448
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1680.0738703985407,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              561.9152824822522,
+              663.5324583267575
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1982.5738703985407,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              864.6152824703313,
+              966.632458320797
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1617.7681665737327,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              496.88054379230744,
+              598.7557893491976
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.3554158649941698,
+          "late_drift_octaves_per_second": 0.029169596249021323,
+          "late_range_octaves": 0.509665948067217,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            302.7247544371494,
+            506.4752455509297
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1617.7681665737327,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              496.88054379230744,
+              598.7557893491976
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 2022.2681665737327,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              901.480543786347,
+              1003.3557893432371
+            ]
+          }
+        }
+      ],
+      "independent_repetitions": 2,
+      "input_order": "step_hold_fall_rise",
+      "prefix": "descending_prefix",
+      "rise": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1305.5674788606411,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              185.5162770330935,
+              287.3186807060556
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.06121101864480494,
+          "late_drift_octaves_per_second": 0.03132146504482414,
+          "late_range_octaves": 0.12028870648499068,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            13630.29759635088,
+            13834.10240365508
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 11057.767478878523,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              9936.216277050975,
+              10037.918680700095
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 16863.167478884483,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              15743.816277045014,
+              15845.518680694135
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1352.0724277130212,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              232.3845166422252,
+              334.0603387957235
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.5035708508861128,
+          "late_drift_octaves_per_second": 0.012277822406459027,
+          "late_range_octaves": 0.5723478834765505,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            13382.824177846502,
+            13587.87582217138
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 10750.17242770706,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              9630.884516642225,
+              9732.760338813605
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 16465.07242771302,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              15341.284516648186,
+              15444.560338795724
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "content": "content_volga_lock_01",
+      "fall": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1756.527626076364,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              634.8130003403567,
+              737.0422518242849
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.4209757095950697,
+          "late_drift_octaves_per_second": -0.35775273746129976,
+          "late_range_octaves": 0.5065360500696966,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            99.97074850415083,
+            304.02925149584917
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1756.527626076364,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              634.8130003403567,
+              737.0422518242849
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1958.527626076364,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              837.0130003284357,
+              938.8422518362058
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1662.970244603246,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              543.8064159678106,
+              645.7340732029261
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.40781872698115196,
+          "late_drift_octaves_per_second": 0.02502421691180204,
+          "late_range_octaves": 0.5172705670992992,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            210.27234278276592,
+            413.9276572351155
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1662.970244603246,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              543.8064159678106,
+              645.7340732029261
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1965.1702445913252,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              856.006415985692,
+              957.7340732029261
+            ]
+          }
+        }
+      ],
+      "independent_repetitions": 2,
+      "input_order": "hold_hold_fall_rise",
+      "prefix": "descending_prefix",
+      "rise": [
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 2078.6139736967452,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              961.1682445826882,
+              1063.0597028108168
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.4935796168676896,
+          "late_drift_octaves_per_second": 0.010523427177510758,
+          "late_range_octaves": 0.5125681777455073,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            13218.208541765911,
+            13426.891458228129
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 11033.413973678864,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              9910.868244570767,
+              10012.859702792935
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 16858.313973684824,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              15717.768244576728,
+              15819.759702798896
+            ]
+          }
+        },
+        {
+          "departure": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 1281.5263653120492,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              163.66249012414482,
+              265.2902404761262
+            ]
+          },
+          "estimable": true,
+          "input_normalized_overshoot_octaves": 0.5712382887716885,
+          "late_drift_octaves_per_second": 0.008508037605916341,
+          "late_range_octaves": 0.6043837942364021,
+          "reason": null,
+          "t10_to_t90_ms_bounds": [
+            12853.572249636098,
+            13058.727750346021
+          ],
+          "t50": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 10259.92636531801,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              9133.362490112224,
+              9236.390240499968
+            ]
+          },
+          "t90": {
+            "confirmation_samples": 11,
+            "confirmed_delay_ms": 15955.52636531205,
+            "observed": true,
+            "onset_delay_ms_bounds": [
+              14843.462490136066,
+              14945.190240482087
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "All per-cell repetitions retained; no population pooling or new state rules.",
+  "tag_rows": [
+    {
+      "age_ms": 6000,
+      "baseline_false_tags": 64,
+      "baseline_tags": 64,
+      "dynamic_false_tags": 20,
+      "dynamic_retention_of_baseline": 0.3125,
+      "dynamic_tags": 20,
+      "dynamic_verified_fraction_among_tags": 0.0,
+      "true_baseline_tags": 0,
+      "true_dynamic_tags": 0
+    },
+    {
+      "age_ms": 9000,
+      "baseline_false_tags": 64,
+      "baseline_tags": 64,
+      "dynamic_false_tags": 16,
+      "dynamic_retention_of_baseline": 0.25,
+      "dynamic_tags": 16,
+      "dynamic_verified_fraction_among_tags": 0.0,
+      "true_baseline_tags": 0,
+      "true_dynamic_tags": 0
+    },
+    {
+      "age_ms": 12000,
+      "baseline_false_tags": 64,
+      "baseline_tags": 64,
+      "dynamic_false_tags": 12,
+      "dynamic_retention_of_baseline": 0.1875,
+      "dynamic_tags": 12,
+      "dynamic_verified_fraction_among_tags": 0.0,
+      "true_baseline_tags": 0,
+      "true_dynamic_tags": 0
+    },
+    {
+      "age_ms": 15000,
+      "baseline_false_tags": 64,
+      "baseline_tags": 64,
+      "dynamic_false_tags": 11,
+      "dynamic_retention_of_baseline": 0.171875,
+      "dynamic_tags": 11,
+      "dynamic_verified_fraction_among_tags": 0.0,
+      "true_baseline_tags": 0,
+      "true_dynamic_tags": 0
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "abi": "native_bwe_transients_m8_reporting_v1",
+  "additional_state_rules_tested_by_reporting": false,
+  "controller_fitted": false,
+  "outcomes_read": false,
+  "plots": {
+    "reports/native-bwe-transients-m8-settling.png": "9cab214907c63b9a332ddc15344284fe06c9769d22e288873a6745fc20a75994",
+    "reports/native-bwe-transients-m8-trajectories.png": "f9e2f5ea88c2bf1da2d46610bfda39b21b8e9de245b47d6e1d0aba94880b9f74"
+  },
+  "response_tables_sha256": "d05a9145df05a54f0b2f40169888a604239197da5c85d9a8e70ff6db3c2dc632",
+  "selected_age_ms": null,
+  "summary_sha256": "a4d60c01718852a5cd6a96fc1327826da2bd84d70eab53811ac2f6a62c6a11b9"
+}

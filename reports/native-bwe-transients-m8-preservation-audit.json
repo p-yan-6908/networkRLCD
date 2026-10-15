@@ -1,0 +1,50 @@
+{
+  "abi": "native_bwe_transients_m8_preservation_audit_v1",
+  "all_preregistration_tracked_files_unchanged": 1452,
+  "licensed_originals_and_old_derivatives_unchanged": true,
+  "new_states_tested_on_prior_validation": false,
+  "next_allocation_originals": 128,
+  "next_allocation_sha256": "6b25569c97dd4116577360e652f2163819ed1c64f972ff9c65e6e9cd17b2df9a",
+  "old_m7ra_128_sessions_untouched": true,
+  "prior_archives": {
+    "M5": {
+      "bytes_rehashed": 381817503,
+      "members_unchanged": 4428,
+      "revision": "0f4da165bcd87ace87616d564cfe949eaff95d47",
+      "telemetry_decoded": false
+    },
+    "M6R": {
+      "bytes_rehashed": 127733349,
+      "members_unchanged": 1858,
+      "revision": "38d09402609e023b2a124196b3ffcec4c8752c00",
+      "telemetry_decoded": false
+    },
+    "M7": {
+      "bytes_rehashed": 27115003,
+      "members_unchanged": 576,
+      "revision": "b524c3be76923ea86ce072a53e67a91ac45cfffa",
+      "telemetry_decoded": false
+    },
+    "M7R": {
+      "bytes_rehashed": 5393320,
+      "members_unchanged": 376,
+      "revision": "011397d260abc55da7103403f88c24a14ff1f6e4",
+      "telemetry_decoded": false
+    },
+    "M7RA": {
+      "bytes_rehashed": 27683385,
+      "members_unchanged": 585,
+      "revision": "89bf041ef6eacbed8d78ce13ea311e3cf388ca1e",
+      "telemetry_decoded": false
+    }
+  },
+  "raw_or_licensed_evidence_deleted": 0,
+  "registration": {
+    "characterization_sessions": 16,
+    "controller_fitted": false,
+    "instrumentation_sessions": 2,
+    "next_untouched_allocation": 128,
+    "prior_files_unchanged": 1437,
+    "verified": true
+  }
+}
