@@ -1,0 +1,115 @@
+{
+  "Cxx_patch_implemented": false,
+  "abi": "native_instrumented_fixture_if1_build_admission_v1",
+  "actions_opened": false,
+  "admitted": false,
+  "alternate_admission_checks": {
+    "docker_additional_resource_attestation": false,
+    "provenance_verified_IF1_binary_available": false,
+    "remote_builder_resource_attestation": false
+  },
+  "at_utc": "2026-10-15T22:20:35.806345+00:00",
+  "classification": "resource/access admission limit; IF1 not built",
+  "closed": {
+    "IF1_native_observability_unopened": true,
+    "IF1_native_technical_unopened": true,
+    "IF1_support_uninstantiated": true,
+    "M10_development_protocol_sha256": "8bb2b87b95886148f6e521f6987a23e23ab2ef07f4db6c0ba99baacae0c1eabe",
+    "M10_development_unopened": true,
+    "M11R_development_unopened": true,
+    "M11_capability_protocol_sha256": "bb277cbb0ab34f4ce1efa4407af4cea26bfd94157c7dd2fddc416164bf97893f",
+    "M11_completed_capability_excluded": true,
+    "M11_verbose_fallback_uninstantiated": true,
+    "m8_allocation_sha256": "6b25569c97dd4116577360e652f2163819ed1c64f972ff9c65e6e9cd17b2df9a",
+    "m8_schedule_uninstantiated": true,
+    "old_validation_session_directories": {
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7r/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7ra/validation": false
+    }
+  },
+  "common_support_qualified": false,
+  "compiler_invocations": 0,
+  "docker_same_host_metadata": {
+    "ContainersRunning": 0,
+    "DockerRootDir": "/var/lib/docker",
+    "Driver": "vfs",
+    "MemTotal": 10452496384,
+    "NCPU": 3,
+    "ServerVersion": "28.4.0",
+    "root_disk": {
+      "free": 17701101568,
+      "total": 33770192896,
+      "used": 14334328832
+    }
+  },
+  "experimental_limit": "Fine-grained native conditional action value remains unestablished under the available bounded fixture effort; no empirical claim that native hooks are impossible.",
+  "filesystem_total_below_published_minimum": true,
+  "full_source_checkouts": 0,
+  "local_admission_checks": {
+    "bounded_peak_and_reserve": false,
+    "effective_cpu": false,
+    "memory_limit": false,
+    "published_minimum_free_disk": false
+  },
+  "native_sessions": 0,
+  "next_research_question": "Partially observed / uncertainty-aware policy-sequence value with a separately preregistered permitted fixture and fresh data",
+  "observability_qualified": false,
+  "old_panel_search": false,
+  "predictor_or_controller_fitted": false,
+  "protocol_sha256": "5613e01863e1f08e4ba9f2f5959056475f26f873db1d3a2fedc4ed0aca20be6d",
+  "published_minimum_disk_shortfall_bytes": 82300913664,
+  "receiver_outcomes_read": false,
+  "remote_build_metadata": [
+    {
+      "archived": false,
+      "default_branch": "main",
+      "endpoint": "repos/{configured-origin}",
+      "exit_code": 0,
+      "private": false
+    },
+    {
+      "endpoint": "repos/{configured-origin}/actions/runners",
+      "exit_code": 1,
+      "message": "Resource not accessible by integration",
+      "status": "403"
+    },
+    {
+      "endpoint": "repos/{configured-origin}/actions/workflows",
+      "exit_code": 0,
+      "total_count": 1,
+      "workflows": [
+        {
+          "name": "tests",
+          "path": ".github/workflows/tests.yml",
+          "state": "active"
+        }
+      ]
+    },
+    {
+      "candidate_build_artifacts": [],
+      "endpoint": "repos/{configured-origin}/actions/artifacts?per_page=100",
+      "exit_code": 0,
+      "total_count": 2
+    }
+  ],
+  "resources": {
+    "build_tools": {
+      "clang++": null,
+      "docker": "/usr/local/bin/docker",
+      "g++": "/usr/bin/g++",
+      "gclient": null,
+      "gn": null,
+      "ninja": null
+    },
+    "effective_cpu_cores": 2.0,
+    "filesystem": {
+      "free": 17699086336,
+      "total": 33770192896,
+      "used": 14336344064
+    },
+    "memory_limit_bytes": 8589934592
+  },
+  "source_hook_presence_is_only_static": true,
+  "support_panel_instantiated": false
+}
