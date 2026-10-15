@@ -1,0 +1,4279 @@
+{
+  "abi": "native_phase_state_m9r_acquisition_v1",
+  "capture_index_sha256": "dbee604c3fde26783ae5ddbbce5cc116b495c36b153e50e2f1c53b22bcba63b1",
+  "common_probe_checks": {},
+  "controller_fitted": false,
+  "delivery_qoe_action_outcomes_read": false,
+  "native_common_support_established": false,
+  "passed": true,
+  "planned_sessions": 8,
+  "protocol_sha256": "1eb4f108eff36a7c82592a0cf021ebf7ecf770579c4e537ac512c5fc5194b7b5",
+  "qualified_sessions": 8,
+  "sessions": [
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_kampar_boating_01__0",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9986971490800047,
+            1.0016334042792792
+          ],
+          "beta_at_origin_feasible_ms": [
+            1238.6559181401833,
+            1240.0250606326008
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1308.371579809388,
+                1309.4877592417563
+              ],
+              "mapped_send_ms": [
+                1308.5984023165342,
+                1309.7148592861727
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 1.1164569696384206
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                341.5612192214237,
+                343.32438502705185
+              ],
+              "mapped_send_ms": [
+                341.56388669674635,
+                343.3270446827588
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 1.800000011920929,
+              "width_ms": 1.763165805628148
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                804.0615306752725,
+                805.4331316654822
+              ],
+              "mapped_send_ms": [
+                804.0631241375916,
+                805.4347238972107
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.3716009902096857
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1262.045411171484,
+                1263.1049064654999
+              ],
+              "mapped_send_ms": [
+                1262.0468618020177,
+                1263.1063588710078
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.0594970689901402
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 1.763165805628148,
+          "origin_browser_ms": 808.1000000089407,
+          "p95_held_out_width_ms": 1.763165805628148,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 5
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999897612898673,
+            1.000010561539496
+          ],
+          "beta_at_origin_feasible_ms": [
+            56609.92270879305,
+            56610.88986874285
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1308.454887979533,
+                1309.477984990226
+              ],
+              "mapped_send_ms": [
+                1308.6820812063743,
+                1309.7051755907523
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 1.0230970106931636
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11376.382081870797,
+                11377.39470414685
+              ],
+              "mapped_send_ms": [
+                11376.436683925313,
+                11377.449306145965
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.012622276051843
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99429.99403063198,
+                99431.07667780333
+              ],
+              "mapped_send_ms": [
+                99430.04020929648,
+                99431.12285695979
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.0826476633083075
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105779.61264188288,
+                105780.76310042286
+              ],
+              "mapped_send_ms": [
+                105779.61361387582,
+                105780.7640724328
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 1.899999976158142,
+              "width_ms": 1.1504585569782648
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                341.821955667765,
+                342.864686914756
+              ],
+              "mapped_send_ms": [
+                341.8246196950422,
+                342.86735088661953
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 1.800000011920929,
+              "width_ms": 1.0427312469910248
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                804.1884197039617,
+                805.2215337146554
+              ],
+              "mapped_send_ms": [
+                804.1900127202753,
+                805.223126697827
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.03311401069368
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1262.053003651563,
+                1263.076637059894
+              ],
+              "mapped_send_ms": [
+                1262.0544566530152,
+                1263.0780900445534
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.0236334083310794
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23422.46456776659,
+                23423.464966621028
+              ],
+              "mapped_send_ms": [
+                23422.46612976815,
+                23423.466528621
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 3.199999988079071,
+              "width_ms": 1.0003988544376625
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35427.72165290201,
+                35428.70986976124
+              ],
+              "mapped_send_ms": [
+                35427.72299490335,
+                35428.71121176122
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 0.988216859230306
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47431.591754652654,
+                47432.567790924084
+              ],
+              "mapped_send_ms": [
+                47431.59291665381,
+                47432.56895292407
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 1.0999999940395355,
+              "width_ms": 0.9760362714296207
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59427.63531058922,
+                59428.59917421462
+              ],
+              "mapped_send_ms": [
+                59427.636572590476,
+                59428.6004362146
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 5.100000023841858,
+              "width_ms": 0.9638636254021549
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71428.00530784532,
+                71428.95699443456
+              ],
+              "mapped_send_ms": [
+                71428.00732084733,
+                71428.95900743453
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 2.0,
+              "width_ms": 0.9516865892364876
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83430.12530384865,
+                83431.06481162595
+              ],
+              "mapped_send_ms": [
+                83430.12632584968,
+                83431.06583362594
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1.199999988079071,
+              "width_ms": 0.939507777307881
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91424.59249310558,
+                91425.58989319914
+              ],
+              "mapped_send_ms": [
+                91424.59466608978,
+                91425.5920661991
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 3.800000011920929,
+              "width_ms": 0.9974001093214611
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95428.20364875454,
+                95429.24366317395
+              ],
+              "mapped_send_ms": [
+                95428.20479074627,
+                95429.24480517782
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 1.5,
+              "width_ms": 1.0400144315499347
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.1504585569782648,
+          "origin_browser_ms": 56179.15000002086,
+          "p95_held_out_width_ms": 1.1504585569782648,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 6
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_kampar_boating_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124309.3579068882,
+            2124337.4511114033
+          ],
+          "6000": [
+            961716.4557396651,
+            961732.6366027115
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35412,
+        "common_service_application_bounds_ms": [
+          35410.210734418986,
+          35411.19896904693
+        ],
+        "maximum_ack_ms": 4.699999988079071,
+        "maximum_command_lateness_ms": 1.300000011920929,
+        "maximum_tick_error_ms": 0.834763999999268,
+        "passed": true
+      },
+      "input_order": "fall",
+      "input_x": 0.0,
+      "maximum_observer_gap_ms": 55.400000005960464,
+      "maximum_scheduling_lateness_ms": 26.599999994039536,
+      "maximum_stats_duration_ms": 22.299999982118607,
+      "measurement_step_start_elapsed_ms": 10121.59999999404,
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3518,
+      "passed": true,
+      "prefix": "ascending_prefix",
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 27.0,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 84
+      },
+      "step_phase_start_ms": 11406,
+      "transport_passed": true,
+      "trial": "m9r-phase-i-000-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_kampar_boating_01__0",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9981628697596423,
+            1.001888345367848
+          ],
+          "beta_at_origin_feasible_ms": [
+            1244.780674261597,
+            1245.9907940417152
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1308.6150210736491,
+                1309.7448536018596
+              ],
+              "mapped_send_ms": [
+                1308.9608909518665,
+                1310.092014381426
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 1.1311234295594659
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                373.4193757516837,
+                375.7712263323745
+              ],
+              "mapped_send_ms": [
+                373.42242535420064,
+                375.7742645950851
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 19.19999998807907,
+              "width_ms": 2.3518505806908365
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                808.1680559270412,
+                809.4045859191914
+              ],
+              "mapped_send_ms": [
+                808.1693293060929,
+                809.4058560994512
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.2365299921501673
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1268.1156409699174,
+                1269.1797151357973
+              ],
+              "mapped_send_ms": [
+                1268.1171133440282,
+                1269.181187026186
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 1.0640741658799016
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 2.3518505806908365,
+          "origin_browser_ms": 823.8499999940395,
+          "p95_held_out_width_ms": 2.3518505806908365,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 7
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999891728308136,
+            1.0000098098872892
+          ],
+          "beta_at_origin_feasible_ms": [
+            56605.01597386929,
+            56605.93079061423
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1308.635644359354,
+                1309.692197899676
+              ],
+              "mapped_send_ms": [
+                1308.9821676164356,
+                1310.0387182837876
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 1.0565535403220565
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11350.828557482717,
+                11351.801957508615
+              ],
+              "mapped_send_ms": [
+                11350.879093520212,
+                11351.852493480073
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 1.5,
+              "width_ms": 0.9734000258977176
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99392.89883989564,
+                99393.94837806176
+              ],
+              "mapped_send_ms": [
+                99392.93254081375,
+                99393.98207924231
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 8.099999994039536,
+              "width_ms": 1.0495384285604814
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105743.52202293207,
+                105744.62101346863
+              ],
+              "mapped_send_ms": [
+                105743.52325492908,
+                105744.62224547521
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 1.9000000059604645,
+              "width_ms": 1.0989905461319722
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                374.02035378585424,
+                375.0959757664241
+              ],
+              "mapped_send_ms": [
+                374.02339781881165,
+                375.0990197365609
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 19.19999998807907,
+              "width_ms": 1.0756219805698493
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                808.2928937281176,
+                809.3595536896682
+              ],
+              "mapped_send_ms": [
+                808.2941657418924,
+                809.3608256771913
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.066659961550613
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1268.1217673731298,
+                1269.1789379133406
+              ],
+              "mapped_send_ms": [
+                1268.1232393890677,
+                1269.1804098988941
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 1.057170540210791
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23389.146750495725,
+                23390.10441995514
+              ],
+              "mapped_send_ms": [
+                23389.147772496486,
+                23390.10544195457
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 1.199999988079071,
+              "width_ms": 0.9576694594143191
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35400.82072774187,
+                35401.76270145102
+              ],
+              "mapped_send_ms": [
+                35400.82253074321,
+                35401.76450445
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 2.0,
+              "width_ms": 0.9419737091520801
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47397.98067222031,
+                47398.906969144795
+              ],
+              "mapped_send_ms": [
+                47397.98252522168,
+                47398.90882214375
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 1.9000000059604645,
+              "width_ms": 0.9262969244882697
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59391.73050916885,
+                59392.64113376468
+              ],
+              "mapped_send_ms": [
+                59391.73301317071,
+                59392.64363776327
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 4.600000023841858,
+              "width_ms": 0.910624595831905
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71394.25711262872,
+                71395.15205342721
+              ],
+              "mapped_send_ms": [
+                71394.25921563029,
+                71395.15415642604
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 0.8949407984910067
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83387.81230843285,
+                83388.76258961014
+              ],
+              "mapped_send_ms": [
+                83387.8134404337,
+                83388.76372161621
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1.5,
+              "width_ms": 0.9502811825077515
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91397.3445935105,
+                91398.33187021049
+              ],
+              "mapped_send_ms": [
+                91397.34741750365,
+                91398.33469422563
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 1.199999988079071,
+              "width_ms": 0.9872767219785601
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95393.15602497906,
+                95394.17441710527
+              ],
+              "mapped_send_ms": [
+                95393.15803797418,
+                95394.17643011606
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 1.9000000059604645,
+              "width_ms": 1.0183921418793034
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.0989905461319722,
+          "origin_browser_ms": 56183.94999998808,
+          "p95_held_out_width_ms": 1.0989905461319722,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 7
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_kampar_boating_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124590.385062469,
+            2124617.3645385588
+          ],
+          "6000": [
+            961892.8427736872,
+            961908.3224977973
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35383.90000000596,
+        "common_service_application_bounds_ms": [
+          35382.508537156384,
+          35383.45053479422
+        ],
+        "maximum_ack_ms": 2.9000000059604645,
+        "maximum_command_lateness_ms": 8.400000005960464,
+        "maximum_tick_error_ms": 0.8751870000003237,
+        "passed": true
+      },
+      "input_order": "rise",
+      "input_x": 1.5,
+      "maximum_observer_gap_ms": 48.80000001192093,
+      "maximum_scheduling_lateness_ms": 18.19999998807907,
+      "maximum_stats_duration_ms": 15,
+      "measurement_step_start_elapsed_ms": 10083.300000011921,
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3519,
+      "passed": true,
+      "prefix": "ascending_prefix",
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 29.80000001192093,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 84
+      },
+      "step_phase_start_ms": 11372.59999999404,
+      "transport_passed": true,
+      "trial": "m9r-phase-i-001-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_volga_lock_01__0",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9982081655356596,
+            1.0016063101736974
+          ],
+          "beta_at_origin_feasible_ms": [
+            1233.6442850099786,
+            1234.8208674483374
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1235.3182103740492,
+                1236.450240092456
+              ],
+              "mapped_send_ms": [
+                1235.586694105899,
+                1236.7196378085682
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 1.1329437026693085
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                397.8455673378572,
+                399.55866743064365
+              ],
+              "mapped_send_ms": [
+                397.84735353843297,
+                399.5604475711858
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 3.0999999940395355,
+              "width_ms": 1.7131000927864761
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                728.0245656191124,
+                729.2338342139733
+              ],
+              "mapped_send_ms": [
+                728.025838382791,
+                729.2351053689299
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.2092685948608732
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1187.73654882029,
+                1188.8006637894514
+              ],
+              "mapped_send_ms": [
+                1187.737961256401,
+                1188.8020758041403
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.0641149691614373
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 1.7131000927864761,
+          "origin_browser_ms": 810.7500000149012,
+          "p95_held_out_width_ms": 1.7131000927864761,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 7
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999886429040085,
+            1.0000110168092458
+          ],
+          "beta_at_origin_feasible_ms": [
+            56593.456992876636,
+            56594.439180855974
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1235.3315792166904,
+                1236.3774749792574
+              ],
+              "mapped_send_ms": [
+                1235.6004944496235,
+                1236.6463892278261
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 1.0458957625669427
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11280.05870682207,
+                11281.06786659018
+              ],
+              "mapped_send_ms": [
+                11280.116142871826,
+                11281.125302548578
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.0091597681093845
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99324.84476650126,
+                99326.0461883526
+              ],
+              "mapped_send_ms": [
+                99324.88569730273,
+                99326.08711975616
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.2014224534359528
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105662.49717032106,
+                105663.79191067079
+              ],
+              "mapped_send_ms": [
+                105662.50791620268,
+                105663.80265679283
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 4.300000011920929,
+              "width_ms": 1.294740590150468
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                398.2201274674371,
+                399.28056309902604
+              ],
+              "mapped_send_ms": [
+                398.2219104876858,
+                399.28234607938066
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 3.0999999940395355,
+              "width_ms": 1.0604356315889163
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                728.1753768008712,
+                729.2284301263062
+              ],
+              "mapped_send_ms": [
+                728.1766488153226,
+                729.229702112294
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.0530533254350303
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1187.7482262138365,
+                1188.794707940484
+              ],
+              "mapped_send_ms": [
+                1187.7496382298777,
+                1188.7961199365454
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.046481726647471
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23314.6093382096,
+                23315.61126015641
+              ],
+              "mapped_send_ms": [
+                23314.610309209485,
+                23315.612231155705
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 1.399999976158142,
+              "width_ms": 1.0019219468085794
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35322.658366529955,
+                35323.65307591953
+              ],
+              "mapped_send_ms": [
+                35322.65978852978,
+                35323.6544979185
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 0.9947093895752914
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47318.50656435985,
+                47319.49406852052
+              ],
+              "mapped_send_ms": [
+                47318.50892835956,
+                47319.49643251881
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 2.7000000178813934,
+              "width_ms": 0.9875041606719606
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59310.998465605,
+                59311.97876655271
+              ],
+              "mapped_send_ms": [
+                59310.99949660487,
+                59311.97979755196
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 0.9803009477109299
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71318.95838493638,
+                71319.93147338036
+              ],
+              "mapped_send_ms": [
+                71318.95953693625,
+                71319.93262537954
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 1.5,
+              "width_ms": 0.9730884439777583
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83311.60794016202,
+                83312.57385042259
+              ],
+              "mapped_send_ms": [
+                83311.6088611619,
+                83312.57477143167
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 0.9659102697623894
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91320.27398109683,
+                91321.35765507602
+              ],
+              "mapped_send_ms": [
+                91320.27483209272,
+                91321.35850608442
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 1.399999976158142,
+              "width_ms": 1.0836739916994702
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95325.29007555364,
+                95326.43266363774
+              ],
+              "mapped_send_ms": [
+                95325.29199854431,
+                95326.4345866567
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 7.5999999940395355,
+              "width_ms": 1.1425881123868749
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.294740590150468,
+          "origin_browser_ms": 56170.5000000149,
+          "p95_held_out_width_ms": 1.294740590150468,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 8
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_volga_lock_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124310.905007013,
+            2124342.334567742
+          ],
+          "6000": [
+            961644.0205209902,
+            961662.2056672823
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35303.40000000596,
+        "common_service_application_bounds_ms": [
+          35302.04539908028,
+          35303.040120850885
+        ],
+        "maximum_ack_ms": 2.699999988079071,
+        "maximum_command_lateness_ms": 2.300000011920929,
+        "maximum_tick_error_ms": 2.0991959999955725,
+        "passed": true
+      },
+      "input_order": "fall",
+      "input_x": 0.0,
+      "maximum_observer_gap_ms": 49.900000005960464,
+      "maximum_scheduling_lateness_ms": 14.699999988079071,
+      "maximum_stats_duration_ms": 19.700000017881393,
+      "measurement_step_start_elapsed_ms": 10087.59999999404,
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3518,
+      "passed": true,
+      "prefix": "descending_prefix",
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 29.80000001192093,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 84
+      },
+      "step_phase_start_ms": 11298.40000000596,
+      "transport_passed": true,
+      "trial": "m9r-phase-i-002-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_volga_lock_01__0",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9979012318840581,
+            1.002059289858513
+          ],
+          "beta_at_origin_feasible_ms": [
+            1233.0460580113845,
+            1234.2296066621518
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1265.4726217294055,
+                1266.780365959664
+              ],
+              "mapped_send_ms": [
+                1265.728291231792,
+                1267.0369216207419
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 4.0,
+              "width_ms": 1.3086303889499504
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                407.63927328784325,
+                409.9137374631356
+              ],
+              "mapped_send_ms": [
+                407.64353823898665,
+                409.91798471680914
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 4.5999999940395355,
+              "width_ms": 2.274464175292337
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                746.9413606714401,
+                748.1431434459419
+              ],
+              "mapped_send_ms": [
+                746.9432763409127,
+                748.1450565989941
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.0999999940395355,
+              "width_ms": 1.201782774501794
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1206.5091907041672,
+                1207.6711447089567
+              ],
+              "mapped_send_ms": [
+                1206.51112033843,
+                1207.6730768635289
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.161956525098958
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 2.274464175292337,
+          "origin_browser_ms": 810.1000000089407,
+          "p95_held_out_width_ms": 2.274464175292337,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 8
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999897112601948,
+            1.0000113427344068
+          ],
+          "beta_at_origin_feasible_ms": [
+            56607.87493025669,
+            56608.85784390685
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1265.5605454583638,
+                1266.672141525989
+              ],
+              "mapped_send_ms": [
+                1265.8167417664881,
+                1266.9283369565674
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 4.0,
+              "width_ms": 1.1115960676252143
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11326.134676397429,
+                11327.211812018184
+              ],
+              "mapped_send_ms": [
+                11326.187425460877,
+                11327.264560900949
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 1.5,
+              "width_ms": 1.0771356207551435
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99373.7210544878,
+                99374.75095111833
+              ],
+              "mapped_send_ms": [
+                99374.30642513174,
+                99375.33632252495
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 6.5999999940395355,
+              "width_ms": 1.0298973932076478
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105716.84733409042,
+                105718.00063637973
+              ],
+              "mapped_send_ms": [
+                105716.84828508165,
+                105718.0015873895
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 2.4000000059604645,
+              "width_ms": 1.1533023078518454
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                408.23161956735566,
+                409.3563308602679
+              ],
+              "mapped_send_ms": [
+                408.2358756111498,
+                409.3605868119994
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 4.5999999940395355,
+              "width_ms": 1.1247112929122522
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                747.0249803240949,
+                748.1424410076434
+              ],
+              "mapped_send_ms": [
+                747.0268933437837,
+                748.1443540033943
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.0999999940395355,
+              "width_ms": 1.1174606835484155
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1206.5208604508298,
+                1207.6326587468648
+              ],
+              "mapped_send_ms": [
+                1206.52279245315,
+                1207.6345907425712
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.1117982960349764
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23360.49832123013,
+                23361.534235590196
+              ],
+              "mapped_send_ms": [
+                23360.500153232337,
+                23361.536067586123
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 4.0,
+              "width_ms": 1.0359143600653624
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35369.452933018736,
+                35370.4694475877
+              ],
+              "mapped_send_ms": [
+                35369.4547960176,
+                35370.471310583554
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 2.0999999940395355,
+              "width_ms": 1.0165145689607016
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47362.130319484924,
+                47363.12747376279
+              ],
+              "mapped_send_ms": [
+                47362.13197148392,
+                47363.12912575912
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 1.800000011920929,
+              "width_ms": 0.9971542778657749
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59358.635341622954,
+                59359.61312943062
+              ],
+              "mapped_send_ms": [
+                59358.636773622085,
+                59359.614561427436
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 3.4000000059604645,
+              "width_ms": 0.9777878076638444
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71363.62637059938,
+                71364.6197728999
+              ],
+              "mapped_send_ms": [
+                71363.62842359813,
+                71364.62182590133
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 0.9934023031964898
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83358.57058468676,
+                83359.57961519054
+              ],
+              "mapped_send_ms": [
+                83358.57194668596,
+                83359.58097719148
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 2.100000023841858,
+              "width_ms": 1.0090305055200588
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91361.1744811111,
+                91362.19393820109
+              ],
+              "mapped_send_ms": [
+                91361.17656410983,
+                91362.19602120253
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.0194570926978486
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95362.13616853023,
+                95363.16083847
+              ],
+              "mapped_send_ms": [
+                95362.13841152885,
+                95363.16308147155
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 2.0999999940395355,
+              "width_ms": 1.0246699426934356
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.1533023078518454,
+          "origin_browser_ms": 56184.80000001192,
+          "p95_held_out_width_ms": 1.1533023078518454,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 7
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_volga_lock_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124426.159896368,
+            2124454.473807793
+          ],
+          "6000": [
+            961760.8781261399,
+            961777.1264458249
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35348.30000001192,
+        "common_service_application_bounds_ms": [
+          35346.53253996004,
+          35347.54909153037
+        ],
+        "maximum_ack_ms": 3.5999999940395355,
+        "maximum_command_lateness_ms": 2.5,
+        "maximum_tick_error_ms": 0.9127179999923101,
+        "passed": true
+      },
+      "input_order": "rise",
+      "input_x": 1.5,
+      "maximum_observer_gap_ms": 57.80000001192093,
+      "maximum_scheduling_lateness_ms": 25,
+      "maximum_stats_duration_ms": 23.299999982118607,
+      "measurement_step_start_elapsed_ms": 10106.5,
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3519,
+      "passed": true,
+      "prefix": "descending_prefix",
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 29.69999998807907,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 84
+      },
+      "step_phase_start_ms": 11342.200000017881,
+      "transport_passed": true,
+      "trial": "m9r-phase-i-003-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_kampar_boating_01__0",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9985746396542409,
+            1.001300875562609
+          ],
+          "beta_at_origin_feasible_ms": [
+            1343.1284322159136,
+            1344.4427560698691
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1408.6872976328914,
+                1409.8723911829538
+              ],
+              "mapped_send_ms": [
+                1409.0008957547623,
+                1410.186370716931
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 5.899999976158142,
+              "width_ms": 1.185474962168655
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                379.8427327528718,
+                381.4882328327655
+              ],
+              "mapped_send_ms": [
+                379.8458311692316,
+                381.49132281308556
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 32.10000002384186,
+              "width_ms": 1.6455000798936794
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                881.1326532293201,
+                882.4495955083835
+              ],
+              "mapped_send_ms": [
+                881.1348867002454,
+                882.4518280781667
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.316942279063369
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1352.5482767728263,
+                1353.6750162678063
+              ],
+              "mapped_send_ms": [
+                1352.549689070608,
+                1353.676427995766
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.9000000059604645,
+              "width_ms": 1.1267394949800291
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 1.6455000798936794,
+          "origin_browser_ms": 888.2499999850988,
+          "p95_held_out_width_ms": 1.6455000798936794,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 4
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999905487773774,
+            1.000010386475197
+          ],
+          "beta_at_origin_feasible_ms": [
+            56723.17130807006,
+            56724.06473343736
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1408.6907844067682,
+                1409.8009270909242
+              ],
+              "mapped_send_ms": [
+                1409.0043193700549,
+                1410.1144585084476
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 5.899999976158142,
+              "width_ms": 1.110142684156017
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11493.76542103834,
+                11494.8356192203
+              ],
+              "mapped_send_ms": [
+                11493.825181163258,
+                11494.895379109272
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 2.5999999940395355,
+              "width_ms": 1.0701981819584034
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99555.63228981406,
+                99556.51299016885
+              ],
+              "mapped_send_ms": [
+                99556.3697051933,
+                99557.25040679888
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 2.800000011920929,
+              "width_ms": 0.8807016055798158
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105886.7275876413,
+                105887.69047269222
+              ],
+              "mapped_send_ms": [
+                105886.73810353209,
+                105887.70098879159
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 3.2999999821186066,
+              "width_ms": 0.9628852595051285
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                380.1195681512181,
+                381.24968867065763
+              ],
+              "mapped_send_ms": [
+                380.1226621804599,
+                381.2527826385194
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 32.10000002384186,
+              "width_ms": 1.1301205194395152
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                881.2423893745654,
+                882.3625688741595
+              ],
+              "mapped_send_ms": [
+                881.2446223956649,
+                882.364801850963
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.1201794995940872
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1352.5630699312387,
+                1353.6738996107088
+              ],
+              "mapped_send_ms": [
+                1352.5644819445806,
+                1353.6753115960382
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.9000000059604645,
+              "width_ms": 1.1108296794700436
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23542.331678621053,
+                23543.354307609898
+              ],
+              "mapped_send_ms": [
+                23542.33314062411,
+                23543.35576960718
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 1.7999999821186066,
+              "width_ms": 1.0226289888450992
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35543.85491186792,
+                35544.83015739519
+              ],
+              "mapped_send_ms": [
+                35543.856354870935,
+                35544.83160039251
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 0.975245527268271
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47540.450474814286,
+                47541.378356335015
+              ],
+              "mapped_send_ms": [
+                47540.45163681672,
+                47541.379518332855
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 2.0,
+              "width_ms": 0.9278815207289881
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59542.44343404304,
+                59543.32393024766
+              ],
+              "mapped_send_ms": [
+                59542.44486604604,
+                59543.325362245
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 0.8804962046197033
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71541.32841291347,
+                71542.16159493414
+              ],
+              "mapped_send_ms": [
+                71541.33043590629,
+                71542.16361793039
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 1.399999976158142,
+              "width_ms": 0.8331820241000969
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83538.99028611036,
+                83539.84381876719
+              ],
+              "mapped_send_ms": [
+                83538.99132710666,
+                83539.84485976526
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1.7000000178813934,
+              "width_ms": 0.8535326585988514
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91542.55935435064,
+                91543.42646279614
+              ],
+              "mapped_send_ms": [
+                91542.56070634583,
+                91543.42781479361
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 3.7999999821186066,
+              "width_ms": 0.8671084477828117
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95543.52571787857,
+                95544.39961283059
+              ],
+              "mapped_send_ms": [
+                95543.5269698741,
+                95544.40086482826
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 2.0,
+              "width_ms": 0.8738949541584589
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.1301205194395152,
+          "origin_browser_ms": 56268.09999999404,
+          "p95_held_out_width_ms": 1.1301205194395152,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 5
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_kampar_boating_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124318.666285699,
+            2124342.647771252
+          ],
+          "6000": [
+            961745.2713534512,
+            961758.895470417
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35527.59999999404,
+        "common_service_application_bounds_ms": [
+          35526.11668178902,
+          35527.09199734896
+        ],
+        "maximum_ack_ms": 2.7000000178813934,
+        "maximum_command_lateness_ms": 0.699999988079071,
+        "maximum_tick_error_ms": 1.3286729999963427,
+        "passed": true
+      },
+      "input_order": "fall",
+      "input_x": 0.0,
+      "maximum_observer_gap_ms": 79.0,
+      "maximum_scheduling_lateness_ms": 64.80000001192093,
+      "maximum_stats_duration_ms": 19.69999998807907,
+      "measurement_step_start_elapsed_ms": 10144.699999988079,
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3516,
+      "passed": true,
+      "prefix": "descending_prefix",
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 29.30000001192093,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 85
+      },
+      "step_phase_start_ms": 11524.199999988079,
+      "transport_passed": true,
+      "trial": "m9r-phase-i-004-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_volga_lock_01__0",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9980670801228634,
+            1.0021805215702757
+          ],
+          "beta_at_origin_feasible_ms": [
+            1163.9604494469027,
+            1165.0587285754152
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1209.6539982800562,
+                1210.947800459732
+              ],
+              "mapped_send_ms": [
+                1209.9055476341748,
+                1211.1998666835464
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.294319049371552
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                349.16390724273674,
+                351.43722803804985
+              ],
+              "mapped_send_ms": [
+                349.16775067177707,
+                351.4410556917683
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 3.800000011920929,
+              "width_ms": 2.2733207953131114
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                700.4468099370692,
+                701.5340991803754
+              ],
+              "mapped_send_ms": [
+                700.4480929200616,
+                701.5353789668272
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 1.0872892433061452
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1156.738787503805,
+                1158.0019262263208
+              ],
+              "mapped_send_ms": [
+                1156.7402893268106,
+                1158.0034286607063
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.2631393338956514
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 2.2733207953131114,
+          "origin_browser_ms": 752.5499999970198,
+          "p95_held_out_width_ms": 2.2733207953131114,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 7
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999886152675861,
+            1.0000105038265144
+          ],
+          "beta_at_origin_feasible_ms": [
+            56533.9200270608,
+            56534.925669672135
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1209.7135240179923,
+                1210.7867557264472
+              ],
+              "mapped_send_ms": [
+                1209.9651031435496,
+                1211.0383321122572
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.0732317084548413
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11275.818126527978,
+                11276.781736527912
+              ],
+              "mapped_send_ms": [
+                11275.907952572808,
+                11276.871561594518
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 1.5,
+              "width_ms": 0.9636099999333965
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99317.58409513374,
+                99318.68693407215
+              ],
+              "mapped_send_ms": [
+                99317.6237048621,
+                99318.72654452309
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.1028396609908668
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105654.99183682617,
+                105656.21029707979
+              ],
+              "mapped_send_ms": [
+                105654.9931088128,
+                105656.21156909427
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 1.199999988079071,
+              "width_ms": 1.2184602814668324
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                349.5910733985147,
+                350.6775990741371
+              ],
+              "mapped_send_ms": [
+                349.59490944218123,
+                350.6814350338391
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 3.800000011920929,
+              "width_ms": 1.086525675622397
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                700.4515298509214,
+                701.5303757774382
+              ],
+              "mapped_send_ms": [
+                700.4528118655217,
+                701.5316577639751
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 1.0788459265168058
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1156.7920506074224,
+                1157.8658586403399
+              ],
+              "mapped_send_ms": [
+                1156.793552608171,
+                1157.867360624732
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.0738080329174409
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23309.1836168035,
+                23310.158365088966
+              ],
+              "mapped_send_ms": [
+                23309.185058804214,
+                23310.159807091048
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 3.7000000178813934,
+              "width_ms": 0.9747482868333464
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35323.640705642756,
+                35324.62676630273
+              ],
+              "mapped_send_ms": [
+                35323.64208764344,
+                35324.62814830472
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 4.5,
+              "width_ms": 0.9860606612783158
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47311.90916841252,
+                47312.90651678876
+              ],
+              "mapped_send_ms": [
+                47311.911611413736,
+                47312.90895979228
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 0.9973483785433928
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59318.19529317404,
+                59319.20394623131
+              ],
+              "mapped_send_ms": [
+                59318.19704617491,
+                59319.20569923383
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 2.5,
+              "width_ms": 1.0086530589251197
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71322.84069311674,
+                71323.8687452632
+              ],
+              "mapped_send_ms": [
+                71322.8423961176,
+                71323.8704482668
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 1.600000023841858,
+              "width_ms": 1.0280521491949912
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83342.32544246507,
+                83343.37292037976
+              ],
+              "mapped_send_ms": [
+                83342.32706546587,
+                83343.3745433832
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.0474779173237039
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91311.59800454674,
+                91312.65836231818
+              ],
+              "mapped_send_ms": [
+                91311.60023854786,
+                91312.66059632291
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 2.4000000059604645,
+              "width_ms": 1.0603577750443947
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95314.27526909098,
+                95315.34209594844
+              ],
+              "mapped_send_ms": [
+                95314.27681109174,
+                95315.34363795171
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.0668268599692965
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.2184602814668324,
+          "origin_browser_ms": 56122.45000000298,
+          "p95_held_out_width_ms": 1.2184602814668324,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 7
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_volga_lock_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124496.221782433,
+            2124525.9550767434
+          ],
+          "6000": [
+            961812.4227095532,
+            961829.5601289957
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35298.80000001192,
+        "common_service_application_bounds_ms": [
+          35297.37132353297,
+          35298.357359458656
+        ],
+        "maximum_ack_ms": 3.0,
+        "maximum_command_lateness_ms": 1.9000000059604645,
+        "maximum_tick_error_ms": 0.8321539999999459,
+        "passed": true
+      },
+      "input_order": "rise",
+      "input_x": 1.5,
+      "maximum_observer_gap_ms": 69.2999999821186,
+      "maximum_scheduling_lateness_ms": 35.30000001192093,
+      "maximum_stats_duration_ms": 16.700000017881393,
+      "measurement_step_start_elapsed_ms": 10111.800000011921,
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3519,
+      "passed": true,
+      "prefix": "ascending_prefix",
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 30.099999994039536,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 84
+      },
+      "step_phase_start_ms": 11293.90000000596,
+      "transport_passed": true,
+      "trial": "m9r-phase-i-005-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_kampar_boating_01__0",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9984770150063593,
+            1.0016015601129011
+          ],
+          "beta_at_origin_feasible_ms": [
+            1386.1849869717475,
+            1387.2553380526315
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1294.177984182439,
+                1295.419112759974
+              ],
+              "mapped_send_ms": [
+                1294.4546381045525,
+                1295.696366527775
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 9.799999982118607,
+              "width_ms": 1.241728423222412
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                369.80345547559705,
+                371.48732811183464
+              ],
+              "mapped_send_ms": [
+                369.8051385557213,
+                371.48900866736983
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 22.600000023841858,
+              "width_ms": 1.683872636237595
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                781.620757074341,
+                782.6892673782519
+              ],
+              "mapped_send_ms": [
+                781.6225912514324,
+                782.6911006908736
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.068510303910898
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1239.549363111591,
+                1240.6866693794539
+              ],
+              "mapped_send_ms": [
+                1239.5511551221703,
+                1240.6884616850828
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.1373065629124994
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 1.683872636237595,
+          "origin_browser_ms": 834.0,
+          "p95_held_out_width_ms": 1.683872636237595,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 7
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999892386538526,
+            1.000010781061604
+          ],
+          "beta_at_origin_feasible_ms": [
+            56752.962972967085,
+            56753.90889359177
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1294.251978033768,
+                1295.3100683579687
+              ],
+              "mapped_send_ms": [
+                1294.5290752556393,
+                1295.5871650137415
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 9.799999982118607,
+              "width_ms": 1.058090324200748
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11349.72442141109,
+                11350.76196895427
+              ],
+              "mapped_send_ms": [
+                11349.781487456785,
+                11350.819034883381
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.0375475431792438
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99398.77890156565,
+                99399.92572703105
+              ],
+              "mapped_send_ms": [
+                99398.8293873762,
+                99399.97621325971
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 1.7000000178813934,
+              "width_ms": 1.146825883508427
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105733.59229517431,
+                105734.79166870684
+              ],
+              "mapped_send_ms": [
+                105733.59326716381,
+                105734.79264071729
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 4.0999999940395355,
+              "width_ms": 1.1993735534779262
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                370.06986146373674,
+                371.14027326028736
+              ],
+              "mapped_send_ms": [
+                370.0715434818412,
+                371.14195524215756
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 22.600000023841858,
+              "width_ms": 1.0704117965506157
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                781.6273063758636,
+                782.6888741625953
+              ],
+              "mapped_send_ms": [
+                781.6291393955908,
+                782.6907071603127
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.0615677867317572
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1239.5493631115896,
+                1240.6076083122025
+              ],
+              "mapped_send_ms": [
+                1239.5511551221716,
+                1240.6094003099788
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.0582452006128733
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23388.770541028076,
+                23389.783493457544
+              ],
+              "mapped_send_ms": [
+                23388.77234402951,
+                23389.785296455295
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 1.5,
+              "width_ms": 1.0129524294679868
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35398.793353406196,
+                35399.78177001499
+              ],
+              "mapped_send_ms": [
+                35398.79503640755,
+                35399.783453012904
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 0.9884166087940685
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47382.965132085505,
+                47383.92906568587
+              ],
+              "mapped_send_ms": [
+                47382.96619408636,
+                47383.93012768456
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 1.199999988079071,
+              "width_ms": 0.9639336003674543
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59390.727300653554,
+                59391.66670305162
+              ],
+              "mapped_send_ms": [
+                59390.7281216542,
+                59391.667524050594
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 2.0,
+              "width_ms": 0.9394023980639759
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71383.30302806187,
+                71384.2179302827
+              ],
+              "mapped_send_ms": [
+                71383.30417006278,
+                71384.21907228127
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 5.399999976158142,
+              "width_ms": 0.91490222082939
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83391.46950049223,
+                83392.48375416105
+              ],
+              "mapped_send_ms": [
+                83391.47042248877,
+                83392.48467616522
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 1.0142536764469696
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91380.32996404846,
+                91381.41038109039
+              ],
+              "mapped_send_ms": [
+                91380.33110604418,
+                91381.41152309556
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 1.7000000178813934,
+              "width_ms": 1.0804170513874851
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95399.72151815222,
+                95400.8352236092
+              ],
+              "mapped_send_ms": [
+                95399.72259014819,
+                95400.83629561406
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.1137054658756824
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.1993735534779262,
+          "origin_browser_ms": 56200.70000000298,
+          "p95_held_out_width_ms": 1.1993735534779262,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 7
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_kampar_boating_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124412.8698871336,
+            2124442.1388745913
+          ],
+          "6000": [
+            961758.1011722005,
+            961774.971387371
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35372.59999999404,
+        "common_service_application_bounds_ms": [
+          35370.98587914087,
+          35371.97435255881
+        ],
+        "maximum_ack_ms": 3.7999999821186066,
+        "maximum_command_lateness_ms": 0.7000000178813934,
+        "maximum_tick_error_ms": 0.7705010000063339,
+        "passed": true
+      },
+      "input_order": "rise",
+      "input_x": 1.5,
+      "maximum_observer_gap_ms": 49.80000001192093,
+      "maximum_scheduling_lateness_ms": 13.599999994039536,
+      "maximum_stats_duration_ms": 20.200000017881393,
+      "measurement_step_start_elapsed_ms": 10105.40000000596,
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3519,
+      "passed": true,
+      "prefix": "descending_prefix",
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 32.5,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 84
+      },
+      "step_phase_start_ms": 11368.09999999404,
+      "transport_passed": true,
+      "trial": "m9r-phase-i-006-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_volga_lock_01__0",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.998763786743524,
+            1.0016039706190976
+          ],
+          "beta_at_origin_feasible_ms": [
+            1264.1780753066314,
+            1265.3135326920253
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1326.5811901918382,
+                1327.7699481428401
+              ],
+              "mapped_send_ms": [
+                1326.8747681793197,
+                1328.063617000391
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.1888488210713604
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                375.3382883318292,
+                376.95691662881677
+              ],
+              "mapped_send_ms": [
+                375.3427775424033,
+                376.96139644332584
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 17.799999982118607,
+              "width_ms": 1.6186282969875947
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                741.480673929124,
+                742.6204603841246
+              ],
+              "mapped_send_ms": [
+                741.4833392415755,
+                742.6231223956629
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 1.1397864550006034
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1217.1410776566404,
+                1218.2983574991786
+              ],
+              "mapped_send_ms": [
+                1217.1442910940004,
+                1218.3015711255568
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 7.5999999940395355,
+              "width_ms": 1.157280031556411
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 1.6186282969875947,
+          "origin_browser_ms": 843.9000000059605,
+          "p95_held_out_width_ms": 1.6186282969875947,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 7
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999894381198161,
+            1.0000106751409839
+          ],
+          "beta_at_origin_feasible_ms": [
+            56647.53387800137,
+            56648.57887196326
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1326.7106360866092,
+                1327.766460649611
+              ],
+              "mapped_send_ms": [
+                1327.0043405769393,
+                1328.0601605143238
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.0558245630018064
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11382.087256655133,
+                11383.092506200395
+              ],
+              "mapped_send_ms": [
+                11382.138643613609,
+                11383.143893204418
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 1.7000000178813934,
+              "width_ms": 1.0052495908093988
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99422.0988093461,
+                99423.1820998462
+              ],
+              "mapped_send_ms": [
+                99422.14006109146,
+                99423.22335184943
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 1.0832907579751918
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105769.05929328615,
+                105770.22491965599
+              ],
+              "mapped_send_ms": [
+                105769.06050527867,
+                105770.2261316688
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.165626390124089
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                375.51742638341966,
+                376.59027058953507
+              ],
+              "mapped_send_ms": [
+                375.52191343082086,
+                376.59475754164305
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 17.799999982118607,
+              "width_ms": 1.0728442061154055
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                741.4833816719911,
+                742.5484539343379
+              ],
+              "mapped_send_ms": [
+                741.4860457001341,
+                742.5511179058958
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 1.0650722623468027
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1217.2257625323618,
+                1218.2833113976594
+              ],
+              "mapped_send_ms": [
+                1217.2289765486712,
+                1218.2865253633572
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 7.5999999940395355,
+              "width_ms": 1.0575488652975764
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23458.807927459005,
+                23459.823880137246
+              ],
+              "mapped_send_ms": [
+                23458.811302456277,
+                23459.827255137512
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 2.100000023841858,
+              "width_ms": 1.0159526812349213
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35438.57734660113,
+                35439.603916488195
+              ],
+              "mapped_send_ms": [
+                35438.58167359763,
+                35439.60824348853
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 4.600000023841858,
+              "width_ms": 1.026569890898827
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47424.55435872743,
+                47425.59155132486
+              ],
+              "mapped_send_ms": [
+                47424.55627172588,
+                47425.59346432501
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 1.9000000059604645,
+              "width_ms": 1.037192599127593
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59423.44808941679,
+                59424.49591617218
+              ],
+              "mapped_send_ms": [
+                59423.44952241563,
+                59424.497349172285
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 1.800000011920929,
+              "width_ms": 1.0478267566577415
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71422.84422970019,
+                71423.90269105881
+              ],
+              "mapped_send_ms": [
+                71422.845711699,
+                71423.90417305892
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 3.199999988079071,
+              "width_ms": 1.0584613599203294
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83425.33034148686,
+                83426.39944018722
+              ],
+              "mapped_send_ms": [
+                83425.3318834856,
+                83426.40098218733
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.069098701729672
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91421.91970510635,
+                91422.99589087628
+              ],
+              "mapped_send_ms": [
+                91421.92150810489,
+                91422.99769387642
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 1.800000011920929,
+              "width_ms": 1.0761857715260703
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95421.81705212113,
+                95422.89678284619
+              ],
+              "mapped_send_ms": [
+                95421.81849411997,
+                95422.89822484631
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 1.0797307263419498
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.165626390124089,
+          "origin_browser_ms": 56227.20000000298,
+          "p95_held_out_width_ms": 1.165626390124089,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 7
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_volga_lock_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124511.7815832696,
+            2124540.273428892
+          ],
+          "6000": [
+            961829.3275801783,
+            961845.7256221307
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35408.59999999404,
+        "common_service_application_bounds_ms": [
+          35406.40526259673,
+          35407.43180397091
+        ],
+        "maximum_ack_ms": 3.5999999940395355,
+        "maximum_command_lateness_ms": 1,
+        "maximum_tick_error_ms": 1.893341999995755,
+        "passed": true
+      },
+      "input_order": "fall",
+      "input_x": 0.0,
+      "maximum_observer_gap_ms": 52.5,
+      "maximum_scheduling_lateness_ms": 31.19999998807907,
+      "maximum_stats_duration_ms": 17.5,
+      "measurement_step_start_elapsed_ms": 10129.199999988079,
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3517,
+      "passed": true,
+      "prefix": "ascending_prefix",
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 32.0,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 86
+      },
+      "step_phase_start_ms": 11404,
+      "transport_passed": true,
+      "trial": "m9r-phase-i-007-support"
+    }
+  ],
+  "stage": "instrumentation"
+}
