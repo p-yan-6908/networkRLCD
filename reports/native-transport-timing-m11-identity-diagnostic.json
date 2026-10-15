@@ -1,0 +1,31 @@
+{
+  "abi": "native_transport_timing_m11_identity_diagnostic_v1",
+  "direct_source_field": "rtclog2.OutgoingRtpPackets.ssrc: fixed32 field6, little endian",
+  "headers_only_no_frame_or_payload_outcomes": true,
+  "independent_raw_header_checks": [
+    {
+      "live_sender_ssrc": 1415253258,
+      "logged_video_config_ssrc": 0,
+      "matching_logfiles": 1,
+      "original": "m11-timing-c-000-support",
+      "outgoing_packet_ssrcs": [
+        1415253258
+      ]
+    },
+    {
+      "live_sender_ssrc": 2351920217,
+      "logged_video_config_ssrc": 0,
+      "matching_logfiles": 1,
+      "original": "m11-timing-c-001-support",
+      "outgoing_packet_ssrcs": [
+        2351920217
+      ]
+    }
+  ],
+  "native_acquisition_passed": true,
+  "new_capture_required_before_qualified_online_use": true,
+  "no_future_labels_or_state_comparison": true,
+  "no_original_gate_reclassified": true,
+  "primary_gate_failed": true,
+  "root_cause": "VideoSendStreamConfig logged SSRC 0, not the later live outbound SSRC; frozen parser used only that config for identity."
+}

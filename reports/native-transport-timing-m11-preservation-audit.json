@@ -1,0 +1,88 @@
+{
+  "abi": "native_transport_timing_m11_preservation_v1",
+  "all_prior_tracked_files_unchanged": 1587,
+  "closed_panels": {
+    "M10_development_protocol_sha256": "8bb2b87b95886148f6e521f6987a23e23ab2ef07f4db6c0ba99baacae0c1eabe",
+    "M10_development_unopened": true,
+    "m8_allocation_sha256": "6b25569c97dd4116577360e652f2163819ed1c64f972ff9c65e6e9cd17b2df9a",
+    "m8_schedule_uninstantiated": true,
+    "old_validation_session_directories": {
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7r/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7ra/validation": false
+    }
+  },
+  "evidence_deleted": 0,
+  "licensed_originals_verified_by_registration": true,
+  "new_representations_on_old_panels": false,
+  "prior_archives": {
+    "M10": {
+      "bytes_rehashed": 136873739,
+      "members_unchanged": 501,
+      "revision": "a1d0cbddb853f675a414cfaa39c79ce70bb5e513",
+      "telemetry_decoded": false
+    },
+    "M10R": {
+      "bytes_rehashed": 403089396,
+      "members_unchanged": 1032,
+      "revision": "b45f047d5082bf72ecbea61f1caa0798ea8e8249",
+      "telemetry_decoded": false
+    },
+    "M5": {
+      "bytes_rehashed": 381817503,
+      "members_unchanged": 4428,
+      "revision": "0f4da165bcd87ace87616d564cfe949eaff95d47",
+      "telemetry_decoded": false
+    },
+    "M6R": {
+      "bytes_rehashed": 127733349,
+      "members_unchanged": 1858,
+      "revision": "38d09402609e023b2a124196b3ffcec4c8752c00",
+      "telemetry_decoded": false
+    },
+    "M7": {
+      "bytes_rehashed": 27115003,
+      "members_unchanged": 576,
+      "revision": "b524c3be76923ea86ce072a53e67a91ac45cfffa",
+      "telemetry_decoded": false
+    },
+    "M7R": {
+      "bytes_rehashed": 5393320,
+      "members_unchanged": 376,
+      "revision": "011397d260abc55da7103403f88c24a14ff1f6e4",
+      "telemetry_decoded": false
+    },
+    "M7RA": {
+      "bytes_rehashed": 27683385,
+      "members_unchanged": 585,
+      "revision": "89bf041ef6eacbed8d78ce13ea311e3cf388ca1e",
+      "telemetry_decoded": false
+    },
+    "M8": {
+      "bytes_rehashed": 203226983,
+      "members_unchanged": 1253,
+      "revision": "46d71bf31f318c92d92a7d2446137753ac4aacfb",
+      "telemetry_decoded": false
+    },
+    "M9": {
+      "bytes_rehashed": 685125623,
+      "members_unchanged": 3905,
+      "revision": "995876800a5b59e867a35a91fb070fe6a75a34ea",
+      "telemetry_decoded": false
+    },
+    "M9R": {
+      "bytes_rehashed": 1121047509,
+      "members_unchanged": 4250,
+      "revision": "b4028214ecc26b7c94114953b018640e78b023a6",
+      "telemetry_decoded": false
+    }
+  },
+  "verification": {
+    "capability_originals": 2,
+    "development_opened": false,
+    "old_panels_closed": true,
+    "prior_files_unchanged": 1587,
+    "receiver_outcomes_read": false,
+    "verified": true
+  }
+}

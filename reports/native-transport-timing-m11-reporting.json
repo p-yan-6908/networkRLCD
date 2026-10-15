@@ -1,0 +1,13 @@
+{
+  "abi": "native_transport_timing_m11_reporting_v1",
+  "acquisition_passed": true,
+  "classification": "sender-identity instrumentation limitation; prospective channel gate failed",
+  "controller_or_predictor": false,
+  "development_opened": false,
+  "future_BWE_labels_read": false,
+  "identity_diagnostic_sha256": "ee831362d4f571764339eb6071acfd35882a62bef93e73c79a07754db8d34247",
+  "next_registration": "M11R: direct fixed32 outgoing RTP SSRC linkage and source-qualified verbose path on fresh originals; unchanged technical/freshness gates",
+  "primary_originals": 2,
+  "receiver_outcomes_read": false,
+  "required_channels_qualified": false
+}

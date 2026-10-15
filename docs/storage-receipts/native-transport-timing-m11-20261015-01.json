@@ -1,0 +1,49 @@
+{
+  "abi": "native_transport_timing_m11_archive_receipt_v1",
+  "acquisition_gate_passed": true,
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_binding_sha256": "3f61e9086db1f7169ea5fea98dfc973f28ed75e9372d9ff4879f44d97ce31ee6",
+  "archive_helper_sha256": "bd2df3d882cd4af9cbabf81fcfa7ac5796ca6e4bc8748e21fbb1306c086af56f",
+  "capture_index_sha256": "fece5281cf26c36840fc7f6ec30c0ea16fbc222b35622f60a97fd7e072a30dd7",
+  "development_opened": false,
+  "evidence_deleted": 0,
+  "files_deleted": 0,
+  "files_verified": 479,
+  "future_BWE_labels_read": false,
+  "gate_is_acquisition_only": true,
+  "gate_sha256": "4aa1268e3823aecfed9cbc1b737f062741dd94f9df087f44401df506464c0390",
+  "local_raw_evidence_retained": true,
+  "native_common_support_established": false,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "fbfe959c25689ca78bf0df4045d9e2605cab02068097843d172aac825fe86a00",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "0547aff3b0f4dd872bfa2c675bad6869940a5c3c7dd86c654e49f7f1ad586917",
+      "size": 84914
+    },
+    "results.tar.part-000": {
+      "sha256": "73a2ea9176fac333707d49ee77274b99d044009db8a3e4860da8d9978a4869d0",
+      "size": 237352960
+    }
+  },
+  "predictor_or_controller_fitted": false,
+  "prefix": "native-transport-timing-m11-20261015-01",
+  "private": true,
+  "protocol_sha256": "bb277cbb0ab34f4ce1efa4407af4cea26bfd94157c7dd2fddc416164bf97893f",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-transport-timing-m11/capability",
+  "raw_evidence_retained": true,
+  "receiver_outcomes_read": false,
+  "registered_gate_passed": true,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "required_transport_channels_qualified": false,
+  "result_classification": "sender-identity instrumentation limitation; prospective channel gate failed",
+  "revision": "445ca6e04412b51a643d10a68e46ca1d1b3b8b5b",
+  "scientific_registration_commit": "fba94f71da4cc3be308b7ac88476b45935e8319c"
+}
