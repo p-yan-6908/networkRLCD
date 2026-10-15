@@ -1,0 +1,3856 @@
+{
+  "abi": "rd1_publication_claim_traceability_v1",
+  "claims": [
+    {
+      "evidence": [
+        {
+          "end": 40,
+          "excerpt_sha256": "4e567dfac99abe202ef2510ddb953cb30f103643b513361b9d52025f03b49ea7",
+          "heading": "## 1. Decision and its exact scope",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 11
+        },
+        {
+          "end": 58,
+          "excerpt_sha256": "63bb49cc96678daefb4e85a807c1885c543c91a8096ef0a29ef508a5f5b138c7",
+          "heading": "## 2. How the evidence is classified",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 41
+        },
+        {
+          "end": 198,
+          "excerpt_sha256": "74772daaaf50067862b1ea49883101aba0ab98653b1a1e2d99c5726e44658fd8",
+          "heading": "## 7. What remains unresolved",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 187
+        },
+        {
+          "end": 34,
+          "excerpt_sha256": "d238c4a9cd07cde4a462fbd167a0a6b5fd3a56bbc13d0cb74b210455b44702ed",
+          "heading": "## Capture and qualification",
+          "kind": "line_span",
+          "source": "native_v9",
+          "start": 3
+        },
+        {
+          "end": 64,
+          "excerpt_sha256": "784a0381960c26094e682502432c8e43158cd90757795d5933796b0dbe569fa9",
+          "heading": "## State-conditional action estimates",
+          "kind": "line_span",
+          "source": "native_v9",
+          "start": 35
+        },
+        {
+          "end": 34,
+          "excerpt_sha256": "70a1ee847615c9ed1bc130a8af003c398afacfe5413d2fb1c86686d3109083b2",
+          "heading": "## Capture and qualification",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 3
+        },
+        {
+          "end": 65,
+          "excerpt_sha256": "875374c2ff5cb80a303a7956231a697d6ac313aa3f6c9918d27cefee8cfb25be",
+          "heading": "## Whole-session policy contrast",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 35
+        },
+        {
+          "end": 63,
+          "excerpt_sha256": "ebe40132a1bc499cf360aaf072c8e6c7fa5182f96c64d6a30244ccedb137f083",
+          "heading": "## Conditional action effects",
+          "kind": "line_span",
+          "source": "v11d",
+          "start": 24
+        },
+        {
+          "end": 34,
+          "excerpt_sha256": "93db3000c103733d6edd4e3c7b849c5f86a69ce433db3833f18cfc30f763a97d",
+          "heading": "## Support by measured campaign and content",
+          "kind": "line_span",
+          "source": "v12",
+          "start": 15
+        },
+        {
+          "end": 83,
+          "excerpt_sha256": "6b62cd9f9d30e31628ebeec528b024337abffa125d82ce442626023e6b4bfc6e",
+          "heading": "## Transport, clocks and outcome access",
+          "kind": "line_span",
+          "source": "v12",
+          "start": 63
+        },
+        {
+          "end": 40,
+          "excerpt_sha256": "bce91d4da5641674025179a2460e0d8af846bd942aa232fa653ec51344e1fdb0",
+          "heading": "## Cell and family support",
+          "kind": "line_span",
+          "source": "v13",
+          "start": 17
+        },
+        {
+          "end": 73,
+          "excerpt_sha256": "86a2efa8bd2b84711a47ba27e17c66067325e4a0448299a1bcea0ec515ac8d81",
+          "heading": "## Outcome-free diagnosis",
+          "kind": "line_span",
+          "source": "v13",
+          "start": 41
+        },
+        {
+          "end": 56,
+          "excerpt_sha256": "a003d66e653800e32723be558608426388b5182738140a2d369254b16832903b",
+          "heading": "## Instrumentation qualification before the causal panel",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 20
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "f17517e14cf0cee524b9c589c9af4368d706f3cbce23a6cf95827ec30d15d7fe",
+          "heading": "## Fixed intervention and service fidelity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 57
+        },
+        {
+          "end": 115,
+          "excerpt_sha256": "b3d237561c1852854736acbb7767f156cb31e46ad2ae6f19aa69eb843a9e05f8",
+          "heading": "## Registered effects, with content and time heterogeneity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 78
+        },
+        {
+          "end": 135,
+          "excerpt_sha256": "18591e68c416e0bcfa54a7e560211b2dbe76f263c7485338d315c2dac1826732",
+          "heading": "## Convergence failed, including repeatability",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 116
+        },
+        {
+          "end": 157,
+          "excerpt_sha256": "2e78a1bbb3cdd2b23d5d76206e9cba1d70679a0928d6d75a59564586d3c29e31",
+          "heading": "## Scientific decision and scope",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 136
+        },
+        {
+          "end": 121,
+          "excerpt_sha256": "6b969304b8f2b4906f99f4cdd1436538ac4483b1e0b5f329e72837e1a04d071e",
+          "heading": "## Untouched validation failed coverage before conditional responses",
+          "kind": "line_span",
+          "source": "m6r",
+          "start": 85
+        },
+        {
+          "end": 152,
+          "excerpt_sha256": "e1f18d0925b2b83bbf72f777f9507cba9449f5079aa004584c4f688d059066d0",
+          "heading": "## Interpretation and next research constraint",
+          "kind": "line_span",
+          "source": "m6r",
+          "start": 122
+        },
+        {
+          "end": 28,
+          "excerpt_sha256": "b85bce2e480f91f9f6ce0b42e62b9832890852be33c675ce1210a14633f1d982",
+          "heading": "## Registration and acquisition",
+          "kind": "line_span",
+          "source": "m7ra",
+          "start": 11
+        },
+        {
+          "end": 80,
+          "excerpt_sha256": "7c4658b26be1a229df14aab3e0daf301f7c041763d1faab05ae7be31c0d1a037",
+          "heading": "## Frozen membership and repeatability results",
+          "kind": "line_span",
+          "source": "m7ra",
+          "start": 50
+        },
+        {
+          "end": 55,
+          "excerpt_sha256": "ff51b00c30a586f0f0f0f3295fc463dee86e9f3ac8e37bb4c98b4976cde63550",
+          "heading": "## Response delay and rise/fall asymmetry",
+          "kind": "line_span",
+          "source": "m8",
+          "start": 32
+        },
+        {
+          "end": 104,
+          "excerpt_sha256": "b798a96a79c78e304dcc8e4b9369f925769eb7c45c983816d4f78193ad745e7e",
+          "heading": "## Prospective causal settling rule",
+          "kind": "line_span",
+          "source": "m8",
+          "start": 88
+        },
+        {
+          "end": 45,
+          "excerpt_sha256": "e29cc7476ee744653191670e8d4abcc104b5580581b179c88a9b3eee9e5c6c04",
+          "heading": "## Frozen state predictions",
+          "kind": "line_span",
+          "source": "m9r",
+          "start": 30
+        },
+        {
+          "end": 64,
+          "excerpt_sha256": "39c4fe4a11dc8080b8358299ea0d160e3f33391778c934b7b01722b7c0cc9a74",
+          "heading": "## Later settling and remaining history dependence",
+          "kind": "line_span",
+          "source": "m9r",
+          "start": 46
+        },
+        {
+          "end": 55,
+          "excerpt_sha256": "1fb121ec714765bca6933d505e1b0614e2983c740e04487b826533391ba5f3c3",
+          "heading": "## Stationary state and moving trajectories",
+          "kind": "line_span",
+          "source": "m10r",
+          "start": 21
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "b4f3da3ad535873ce351a504ec5b9a5b5662bbfd71e40c03f579b4e1e2a0000e",
+          "heading": "## Predeclared mechanism contrasts",
+          "kind": "line_span",
+          "source": "m10r",
+          "start": 56
+        },
+        {
+          "end": 60,
+          "excerpt_sha256": "2aadb79a728210af88cb9ed2d4bf8d0b67df9291d139a3370581d7458cead800",
+          "heading": "## All three required RTC-log channel families failed freshness",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 34
+        },
+        {
+          "end": 87,
+          "excerpt_sha256": "a069412c665b60eae21b5e1402628cad3b8035e6bf0b8c89b44f2d3b31312f0a",
+          "heading": "## Supported alternatives and their exact limitations",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 61
+        },
+        {
+          "end": 120,
+          "excerpt_sha256": "3e5e61dbdf9370cf6a77e855274b55fb1792c7bac24d5073d038f452c2c16cee",
+          "heading": "## Decision and identifiability boundary",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 88
+        },
+        {
+          "end": 22,
+          "excerpt_sha256": "e03073fe223fd24f1ec0a91caa35313f617e6f252e5f629027c415333d1ca1f7",
+          "heading": "## What is complete",
+          "kind": "line_span",
+          "source": "if1",
+          "start": 6
+        },
+        {
+          "end": 59,
+          "excerpt_sha256": "7d084f3bb7d02483fb6841f1ba15612316be244d8aab9f739d094be637078ac9",
+          "heading": "## Admission result",
+          "kind": "line_span",
+          "source": "if1",
+          "start": 23
+        },
+        {
+          "end": 48,
+          "excerpt_sha256": "8c96f7b9fed644c029d433d37ecb2240e59170081c36a90103c0ee8df4de11b9",
+          "heading": "## Preregistration and execution",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 18
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "429de5379a035a76b5fc7648096a052c10b53cdb224b184e19166fbc433ac2a9",
+          "heading": "## Point prediction and reproducibility",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 49
+        },
+        {
+          "end": 126,
+          "excerpt_sha256": "f1d6650921da3ef4da9bb61614044702826ded69427f9483e3239e2209cea504",
+          "heading": "## Calibration, uncertainty and safety",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 91
+        },
+        {
+          "end": 143,
+          "excerpt_sha256": "56e33ca0d456fff13d19b35461b052848bc3313b9054f8a4d25a8529091543af",
+          "heading": "## Scope and stopping decision",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 127
+        }
+      ],
+      "finding_classes": [
+        "synthesis"
+      ],
+      "id": "abstract",
+      "independence_unit": "Separate study-specific units; no pooled sample",
+      "manuscript": {
+        "block_sha256": "c1b3fb776d282170ebd391752453dd8703b8966b81ecbd9f1dac78ae09c2c846",
+        "end_line": 42,
+        "marker_line": 17,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Bounded native causal effects coexist with failed control prerequisites; synthetic and native findings stay separate."
+    },
+    {
+      "evidence": [
+        {
+          "end": 40,
+          "excerpt_sha256": "4e567dfac99abe202ef2510ddb953cb30f103643b513361b9d52025f03b49ea7",
+          "heading": "## 1. Decision and its exact scope",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 11
+        },
+        {
+          "end": 58,
+          "excerpt_sha256": "63bb49cc96678daefb4e85a807c1885c543c91a8096ef0a29ef508a5f5b138c7",
+          "heading": "## 2. How the evidence is classified",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 41
+        },
+        {
+          "end": 198,
+          "excerpt_sha256": "74772daaaf50067862b1ea49883101aba0ab98653b1a1e2d99c5726e44658fd8",
+          "heading": "## 7. What remains unresolved",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 187
+        },
+        {
+          "end": 55,
+          "excerpt_sha256": "ff51b00c30a586f0f0f0f3295fc463dee86e9f3ac8e37bb4c98b4976cde63550",
+          "heading": "## Response delay and rise/fall asymmetry",
+          "kind": "line_span",
+          "source": "m8",
+          "start": 32
+        },
+        {
+          "end": 104,
+          "excerpt_sha256": "b798a96a79c78e304dcc8e4b9369f925769eb7c45c983816d4f78193ad745e7e",
+          "heading": "## Prospective causal settling rule",
+          "kind": "line_span",
+          "source": "m8",
+          "start": 88
+        },
+        {
+          "kind": "whole_file_sha256",
+          "source": "bibliography"
+        }
+      ],
+      "finding_classes": [
+        "background",
+        "analytical_requirement"
+      ],
+      "id": "motivation",
+      "independence_unit": "No new empirical unit",
+      "manuscript": {
+        "block_sha256": "98a1c873a88adcb5b2223e8f4feb689df3ff24ac6e493c6a6235069eb9059996",
+        "end_line": 51,
+        "marker_line": 43,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Competing media endpoints, endogenous BWE and the need for validation and uncertainty under shift."
+    },
+    {
+      "evidence": [
+        {
+          "end": 40,
+          "excerpt_sha256": "4e567dfac99abe202ef2510ddb953cb30f103643b513361b9d52025f03b49ea7",
+          "heading": "## 1. Decision and its exact scope",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 11
+        },
+        {
+          "end": 58,
+          "excerpt_sha256": "63bb49cc96678daefb4e85a807c1885c543c91a8096ef0a29ef508a5f5b138c7",
+          "heading": "## 2. How the evidence is classified",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 41
+        },
+        {
+          "end": 198,
+          "excerpt_sha256": "74772daaaf50067862b1ea49883101aba0ab98653b1a1e2d99c5726e44658fd8",
+          "heading": "## 7. What remains unresolved",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 187
+        },
+        {
+          "kind": "whole_file_sha256",
+          "source": "rd1_ledger"
+        }
+      ],
+      "finding_classes": [
+        "synthesis",
+        "stopping_decision"
+      ],
+      "id": "contribution",
+      "independence_unit": "Separate study-specific units",
+      "manuscript": {
+        "block_sha256": "fa120cd1e73c8771c82a24cd3c229d194d6907c79f73c384aa2cdd9959d53994",
+        "end_line": 69,
+        "marker_line": 52,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Evidence through f109ab2, RD1 stop at 050e4f4; causal findings do not establish transferable conditional control."
+    },
+    {
+      "evidence": [
+        {
+          "end": 40,
+          "excerpt_sha256": "4e567dfac99abe202ef2510ddb953cb30f103643b513361b9d52025f03b49ea7",
+          "heading": "## 1. Decision and its exact scope",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 11
+        },
+        {
+          "end": 58,
+          "excerpt_sha256": "63bb49cc96678daefb4e85a807c1885c543c91a8096ef0a29ef508a5f5b138c7",
+          "heading": "## 2. How the evidence is classified",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 41
+        },
+        {
+          "end": 198,
+          "excerpt_sha256": "74772daaaf50067862b1ea49883101aba0ab98653b1a1e2d99c5726e44658fd8",
+          "heading": "## 7. What remains unresolved",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 187
+        },
+        {
+          "kind": "whole_file_sha256",
+          "source": "earlier"
+        }
+      ],
+      "finding_classes": [
+        "historical_synthetic_mixed_findings"
+      ],
+      "id": "earlier_simulation",
+      "independence_unit": "Original family/model-seed units",
+      "manuscript": {
+        "block_sha256": "f307776b0d759f29fbbbca35551f1d497793289f328b0c0a9894d6e622ec0bf0",
+        "end_line": 78,
+        "marker_line": 70,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Earlier simulator positives and negatives retain scope; no uniform within-family or native validation follows."
+    },
+    {
+      "evidence": [
+        {
+          "end": 40,
+          "excerpt_sha256": "4e567dfac99abe202ef2510ddb953cb30f103643b513361b9d52025f03b49ea7",
+          "heading": "## 1. Decision and its exact scope",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 11
+        },
+        {
+          "end": 58,
+          "excerpt_sha256": "63bb49cc96678daefb4e85a807c1885c543c91a8096ef0a29ef508a5f5b138c7",
+          "heading": "## 2. How the evidence is classified",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 41
+        },
+        {
+          "end": 198,
+          "excerpt_sha256": "74772daaaf50067862b1ea49883101aba0ab98653b1a1e2d99c5726e44658fd8",
+          "heading": "## 7. What remains unresolved",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 187
+        },
+        {
+          "end": 56,
+          "excerpt_sha256": "a003d66e653800e32723be558608426388b5182738140a2d369254b16832903b",
+          "heading": "## Instrumentation qualification before the causal panel",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 20
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "f17517e14cf0cee524b9c589c9af4368d706f3cbce23a6cf95827ec30d15d7fe",
+          "heading": "## Fixed intervention and service fidelity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 57
+        },
+        {
+          "end": 115,
+          "excerpt_sha256": "b3d237561c1852854736acbb7767f156cb31e46ad2ae6f19aa69eb843a9e05f8",
+          "heading": "## Registered effects, with content and time heterogeneity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 78
+        },
+        {
+          "end": 135,
+          "excerpt_sha256": "18591e68c416e0bcfa54a7e560211b2dbe76f263c7485338d315c2dac1826732",
+          "heading": "## Convergence failed, including repeatability",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 116
+        },
+        {
+          "end": 157,
+          "excerpt_sha256": "2e78a1bbb3cdd2b23d5d76206e9cba1d70679a0928d6d75a59564586d3c29e31",
+          "heading": "## Scientific decision and scope",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 136
+        }
+      ],
+      "finding_classes": [
+        "analytical_definition"
+      ],
+      "id": "estimands",
+      "independence_unit": "Randomized pairs, conditional history mixture, complete policies, or factual logging targets",
+      "manuscript": {
+        "block_sha256": "5ef8b26ed50fbbe942e30005e4dc6ebb5115000f5952e6eecd5a06872c676091",
+        "end_line": 97,
+        "marker_line": 79,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Definitions distinguish total prefix effect, conditional action effect, policy value and prediction."
+    },
+    {
+      "evidence": [
+        {
+          "end": 40,
+          "excerpt_sha256": "4e567dfac99abe202ef2510ddb953cb30f103643b513361b9d52025f03b49ea7",
+          "heading": "## 1. Decision and its exact scope",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 11
+        },
+        {
+          "end": 58,
+          "excerpt_sha256": "63bb49cc96678daefb4e85a807c1885c543c91a8096ef0a29ef508a5f5b138c7",
+          "heading": "## 2. How the evidence is classified",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 41
+        },
+        {
+          "end": 198,
+          "excerpt_sha256": "74772daaaf50067862b1ea49883101aba0ab98653b1a1e2d99c5726e44658fd8",
+          "heading": "## 7. What remains unresolved",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 187
+        },
+        {
+          "end": 34,
+          "excerpt_sha256": "d238c4a9cd07cde4a462fbd167a0a6b5fd3a56bbc13d0cb74b210455b44702ed",
+          "heading": "## Capture and qualification",
+          "kind": "line_span",
+          "source": "native_v9",
+          "start": 3
+        },
+        {
+          "end": 64,
+          "excerpt_sha256": "784a0381960c26094e682502432c8e43158cd90757795d5933796b0dbe569fa9",
+          "heading": "## State-conditional action estimates",
+          "kind": "line_span",
+          "source": "native_v9",
+          "start": 35
+        },
+        {
+          "end": 34,
+          "excerpt_sha256": "70a1ee847615c9ed1bc130a8af003c398afacfe5413d2fb1c86686d3109083b2",
+          "heading": "## Capture and qualification",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 3
+        },
+        {
+          "end": 65,
+          "excerpt_sha256": "875374c2ff5cb80a303a7956231a697d6ac313aa3f6c9918d27cefee8cfb25be",
+          "heading": "## Whole-session policy contrast",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 35
+        },
+        {
+          "end": 56,
+          "excerpt_sha256": "a003d66e653800e32723be558608426388b5182738140a2d369254b16832903b",
+          "heading": "## Instrumentation qualification before the causal panel",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 20
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "f17517e14cf0cee524b9c589c9af4368d706f3cbce23a6cf95827ec30d15d7fe",
+          "heading": "## Fixed intervention and service fidelity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 57
+        },
+        {
+          "end": 115,
+          "excerpt_sha256": "b3d237561c1852854736acbb7767f156cb31e46ad2ae6f19aa69eb843a9e05f8",
+          "heading": "## Registered effects, with content and time heterogeneity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 78
+        },
+        {
+          "end": 135,
+          "excerpt_sha256": "18591e68c416e0bcfa54a7e560211b2dbe76f263c7485338d315c2dac1826732",
+          "heading": "## Convergence failed, including repeatability",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 116
+        },
+        {
+          "end": 157,
+          "excerpt_sha256": "2e78a1bbb3cdd2b23d5d76206e9cba1d70679a0928d6d75a59564586d3c29e31",
+          "heading": "## Scientific decision and scope",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 136
+        }
+      ],
+      "finding_classes": [
+        "analytical_scope",
+        "supported_bounded",
+        "unresolved"
+      ],
+      "id": "identification",
+      "independence_unit": "Local randomized clusters versus transferable history-mixture population",
+      "manuscript": {
+        "block_sha256": "177dd410d9128e4501e372ed4c59053378c23b48e85b652ac74e4d42cb6424f1",
+        "end_line": 109,
+        "marker_line": 98,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Hidden state does not universally prevent local randomized effects; transferable conditional support remains unestablished."
+    },
+    {
+      "evidence": [
+        {
+          "end": 40,
+          "excerpt_sha256": "4e567dfac99abe202ef2510ddb953cb30f103643b513361b9d52025f03b49ea7",
+          "heading": "## 1. Decision and its exact scope",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 11
+        },
+        {
+          "end": 58,
+          "excerpt_sha256": "63bb49cc96678daefb4e85a807c1885c543c91a8096ef0a29ef508a5f5b138c7",
+          "heading": "## 2. How the evidence is classified",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 41
+        },
+        {
+          "end": 198,
+          "excerpt_sha256": "74772daaaf50067862b1ea49883101aba0ab98653b1a1e2d99c5726e44658fd8",
+          "heading": "## 7. What remains unresolved",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 187
+        }
+      ],
+      "finding_classes": [
+        "classification_contract"
+      ],
+      "id": "classifications",
+      "independence_unit": "No common pooled unit",
+      "manuscript": {
+        "block_sha256": "e1415ff49358c5dc86307a783415ec99340e8a1fa55230488fb4907be988b5af",
+        "end_line": 120,
+        "marker_line": 110,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Supported, contradicted, failed recipe, unestimable, fixture-limited and unresolved findings are distinct."
+    },
+    {
+      "evidence": [
+        {
+          "end": 40,
+          "excerpt_sha256": "4e567dfac99abe202ef2510ddb953cb30f103643b513361b9d52025f03b49ea7",
+          "heading": "## 1. Decision and its exact scope",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 11
+        },
+        {
+          "end": 58,
+          "excerpt_sha256": "63bb49cc96678daefb4e85a807c1885c543c91a8096ef0a29ef508a5f5b138c7",
+          "heading": "## 2. How the evidence is classified",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 41
+        },
+        {
+          "end": 198,
+          "excerpt_sha256": "74772daaaf50067862b1ea49883101aba0ab98653b1a1e2d99c5726e44658fd8",
+          "heading": "## 7. What remains unresolved",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 187
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/source_documents_and_committed_reports_only",
+          "reported_value": true,
+          "source": "rd1_audit",
+          "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/raw_telemetry_restored_or_decoded",
+          "reported_value": false,
+          "source": "rd1_audit",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        }
+      ],
+      "finding_classes": [
+        "publication_process"
+      ],
+      "id": "evidence_handling",
+      "independence_unit": "1,698 baseline tracked files; summary-only sources",
+      "manuscript": {
+        "block_sha256": "9e3a4e97c38439a98c0ae56a7e0d2487f64ef75595d0f4b26f9d7c215472e780",
+        "end_line": 130,
+        "marker_line": 121,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "No raw restore, receiver outcome access, new estimates or fits; all prior bytes preserved."
+    },
+    {
+      "evidence": [
+        {
+          "end": 34,
+          "excerpt_sha256": "d238c4a9cd07cde4a462fbd167a0a6b5fd3a56bbc13d0cb74b210455b44702ed",
+          "heading": "## Capture and qualification",
+          "kind": "line_span",
+          "source": "native_v9",
+          "start": 3
+        },
+        {
+          "end": 64,
+          "excerpt_sha256": "784a0381960c26094e682502432c8e43158cd90757795d5933796b0dbe569fa9",
+          "heading": "## State-conditional action estimates",
+          "kind": "line_span",
+          "source": "native_v9",
+          "start": 35
+        },
+        {
+          "end": 34,
+          "excerpt_sha256": "70a1ee847615c9ed1bc130a8af003c398afacfe5413d2fb1c86686d3109083b2",
+          "heading": "## Capture and qualification",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 3
+        },
+        {
+          "end": 65,
+          "excerpt_sha256": "875374c2ff5cb80a303a7956231a697d6ac313aa3f6c9918d27cefee8cfb25be",
+          "heading": "## Whole-session policy contrast",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 35
+        },
+        {
+          "end": 63,
+          "excerpt_sha256": "ebe40132a1bc499cf360aaf072c8e6c7fa5182f96c64d6a30244ccedb137f083",
+          "heading": "## Conditional action effects",
+          "kind": "line_span",
+          "source": "v11d",
+          "start": 24
+        },
+        {
+          "end": 34,
+          "excerpt_sha256": "93db3000c103733d6edd4e3c7b849c5f86a69ce433db3833f18cfc30f763a97d",
+          "heading": "## Support by measured campaign and content",
+          "kind": "line_span",
+          "source": "v12",
+          "start": 15
+        },
+        {
+          "end": 83,
+          "excerpt_sha256": "6b62cd9f9d30e31628ebeec528b024337abffa125d82ce442626023e6b4bfc6e",
+          "heading": "## Transport, clocks and outcome access",
+          "kind": "line_span",
+          "source": "v12",
+          "start": 63
+        },
+        {
+          "end": 40,
+          "excerpt_sha256": "bce91d4da5641674025179a2460e0d8af846bd942aa232fa653ec51344e1fdb0",
+          "heading": "## Cell and family support",
+          "kind": "line_span",
+          "source": "v13",
+          "start": 17
+        },
+        {
+          "end": 73,
+          "excerpt_sha256": "86a2efa8bd2b84711a47ba27e17c66067325e4a0448299a1bcea0ec515ac8d81",
+          "heading": "## Outcome-free diagnosis",
+          "kind": "line_span",
+          "source": "v13",
+          "start": 41
+        },
+        {
+          "end": 56,
+          "excerpt_sha256": "a003d66e653800e32723be558608426388b5182738140a2d369254b16832903b",
+          "heading": "## Instrumentation qualification before the causal panel",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 20
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "f17517e14cf0cee524b9c589c9af4368d706f3cbce23a6cf95827ec30d15d7fe",
+          "heading": "## Fixed intervention and service fidelity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 57
+        },
+        {
+          "end": 115,
+          "excerpt_sha256": "b3d237561c1852854736acbb7767f156cb31e46ad2ae6f19aa69eb843a9e05f8",
+          "heading": "## Registered effects, with content and time heterogeneity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 78
+        },
+        {
+          "end": 135,
+          "excerpt_sha256": "18591e68c416e0bcfa54a7e560211b2dbe76f263c7485338d315c2dac1826732",
+          "heading": "## Convergence failed, including repeatability",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 116
+        },
+        {
+          "end": 157,
+          "excerpt_sha256": "2e78a1bbb3cdd2b23d5d76206e9cba1d70679a0928d6d75a59564586d3c29e31",
+          "heading": "## Scientific decision and scope",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 136
+        },
+        {
+          "end": 55,
+          "excerpt_sha256": "ff51b00c30a586f0f0f0f3295fc463dee86e9f3ac8e37bb4c98b4976cde63550",
+          "heading": "## Response delay and rise/fall asymmetry",
+          "kind": "line_span",
+          "source": "m8",
+          "start": 32
+        },
+        {
+          "end": 104,
+          "excerpt_sha256": "b798a96a79c78e304dcc8e4b9369f925769eb7c45c983816d4f78193ad745e7e",
+          "heading": "## Prospective causal settling rule",
+          "kind": "line_span",
+          "source": "m8",
+          "start": 88
+        },
+        {
+          "end": 45,
+          "excerpt_sha256": "e29cc7476ee744653191670e8d4abcc104b5580581b179c88a9b3eee9e5c6c04",
+          "heading": "## Frozen state predictions",
+          "kind": "line_span",
+          "source": "m9r",
+          "start": 30
+        },
+        {
+          "end": 64,
+          "excerpt_sha256": "39c4fe4a11dc8080b8358299ea0d160e3f33391778c934b7b01722b7c0cc9a74",
+          "heading": "## Later settling and remaining history dependence",
+          "kind": "line_span",
+          "source": "m9r",
+          "start": 46
+        }
+      ],
+      "finding_classes": [
+        "source_and_fixture_scope"
+      ],
+      "id": "source_scope",
+      "independence_unit": "Content productions and measurement campaigns, not fresh runs/windows",
+      "manuscript": {
+        "block_sha256": "2125f783c8e658eb6bb20cf9de77bad42441ffcca2b318da9b95dbfd9c88fe47",
+        "end_line": 142,
+        "marker_line": 131,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Native telemetry, constructed inputs, measured replay and simulation remain separate."
+    },
+    {
+      "evidence": [
+        {
+          "end": 34,
+          "excerpt_sha256": "d238c4a9cd07cde4a462fbd167a0a6b5fd3a56bbc13d0cb74b210455b44702ed",
+          "heading": "## Capture and qualification",
+          "kind": "line_span",
+          "source": "native_v9",
+          "start": 3
+        },
+        {
+          "end": 64,
+          "excerpt_sha256": "784a0381960c26094e682502432c8e43158cd90757795d5933796b0dbe569fa9",
+          "heading": "## State-conditional action estimates",
+          "kind": "line_span",
+          "source": "native_v9",
+          "start": 35
+        },
+        {
+          "end": 34,
+          "excerpt_sha256": "70a1ee847615c9ed1bc130a8af003c398afacfe5413d2fb1c86686d3109083b2",
+          "heading": "## Capture and qualification",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 3
+        },
+        {
+          "end": 65,
+          "excerpt_sha256": "875374c2ff5cb80a303a7956231a697d6ac313aa3f6c9918d27cefee8cfb25be",
+          "heading": "## Whole-session policy contrast",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 35
+        },
+        {
+          "end": 56,
+          "excerpt_sha256": "a003d66e653800e32723be558608426388b5182738140a2d369254b16832903b",
+          "heading": "## Instrumentation qualification before the causal panel",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 20
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "f17517e14cf0cee524b9c589c9af4368d706f3cbce23a6cf95827ec30d15d7fe",
+          "heading": "## Fixed intervention and service fidelity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 57
+        },
+        {
+          "end": 115,
+          "excerpt_sha256": "b3d237561c1852854736acbb7767f156cb31e46ad2ae6f19aa69eb843a9e05f8",
+          "heading": "## Registered effects, with content and time heterogeneity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 78
+        },
+        {
+          "end": 135,
+          "excerpt_sha256": "18591e68c416e0bcfa54a7e560211b2dbe76f263c7485338d315c2dac1826732",
+          "heading": "## Convergence failed, including repeatability",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 116
+        },
+        {
+          "end": 157,
+          "excerpt_sha256": "2e78a1bbb3cdd2b23d5d76206e9cba1d70679a0928d6d75a59564586d3c29e31",
+          "heading": "## Scientific decision and scope",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 136
+        },
+        {
+          "end": 121,
+          "excerpt_sha256": "6b969304b8f2b4906f99f4cdd1436538ac4483b1e0b5f329e72837e1a04d071e",
+          "heading": "## Untouched validation failed coverage before conditional responses",
+          "kind": "line_span",
+          "source": "m6r",
+          "start": 85
+        },
+        {
+          "end": 152,
+          "excerpt_sha256": "e1f18d0925b2b83bbf72f777f9507cba9449f5079aa004584c4f688d059066d0",
+          "heading": "## Interpretation and next research constraint",
+          "kind": "line_span",
+          "source": "m6r",
+          "start": 122
+        },
+        {
+          "end": 60,
+          "excerpt_sha256": "2aadb79a728210af88cb9ed2d4bf8d0b67df9291d139a3370581d7458cead800",
+          "heading": "## All three required RTC-log channel families failed freshness",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 34
+        },
+        {
+          "end": 87,
+          "excerpt_sha256": "a069412c665b60eae21b5e1402628cad3b8035e6bf0b8c89b44f2d3b31312f0a",
+          "heading": "## Supported alternatives and their exact limitations",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 61
+        },
+        {
+          "end": 120,
+          "excerpt_sha256": "3e5e61dbdf9370cf6a77e855274b55fb1792c7bac24d5073d038f452c2c16cee",
+          "heading": "## Decision and identifiability boundary",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 88
+        }
+      ],
+      "finding_classes": [
+        "technical_qualification_not_scientific_support"
+      ],
+      "id": "technical_controls",
+      "independence_unit": "Actual-run technical gates",
+      "manuscript": {
+        "block_sha256": "00323476a4bf7e96d9198bd7c3c895d8890f9b23b674a1576f6437ba3cc39315",
+        "end_line": 154,
+        "marker_line": 143,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Managed policy unchanged, TURN/TCP, clock/readback/replay/cleanup gates and causal receipt rules."
+    },
+    {
+      "evidence": [
+        {
+          "end": 34,
+          "excerpt_sha256": "d238c4a9cd07cde4a462fbd167a0a6b5fd3a56bbc13d0cb74b210455b44702ed",
+          "heading": "## Capture and qualification",
+          "kind": "line_span",
+          "source": "native_v9",
+          "start": 3
+        },
+        {
+          "end": 64,
+          "excerpt_sha256": "784a0381960c26094e682502432c8e43158cd90757795d5933796b0dbe569fa9",
+          "heading": "## State-conditional action estimates",
+          "kind": "line_span",
+          "source": "native_v9",
+          "start": 35
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/primary_interaction",
+          "source": "native_v9_report",
+          "value_sha256": "677b6efd8538f5e2c7c3b50d6943cad78eb84b0dad3377fe3c7274bdc413ea85"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/action_effects/mean_ontime_psnr_db/interaction_high_bwe_minus_low_bwe",
+          "source": "native_v9_report",
+          "value_sha256": "e2e296a6d0623a10e54fbc1ca7accdf0e3922f70c05b7d49138ff28675f44594"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/coverage/complete_seed_cluster_count",
+          "reported_value": 11,
+          "source": "native_v9_report",
+          "value_sha256": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/degrees_of_freedom",
+          "reported_value": 10,
+          "source": "native_v9_report",
+          "value_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5"
+        }
+      ],
+      "finding_classes": [
+        "supported_bounded_secondary",
+        "primary_unresolved"
+      ],
+      "id": "native_v9",
+      "independence_unit": "11 complete generated-scene seed clusters among 12; 48 nested sessions",
+      "manuscript": {
+        "block_sha256": "10e9305f851b8bbf586459d66363208919d9d777b324586a097700771e8d2b13",
+        "end_line": 170,
+        "marker_line": 155,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Secondary PSNR +0.508 dB; primary -1.8 pp unresolved; unadjusted 95% t intervals df10."
+    },
+    {
+      "evidence": [
+        {
+          "end": 34,
+          "excerpt_sha256": "70a1ee847615c9ed1bc130a8af003c398afacfe5413d2fb1c86686d3109083b2",
+          "heading": "## Capture and qualification",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 3
+        },
+        {
+          "end": 65,
+          "excerpt_sha256": "875374c2ff5cb80a303a7956231a697d6ac313aa3f6c9918d27cefee8cfb25be",
+          "heading": "## Whole-session policy contrast",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 35
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/primary_endpoint",
+          "reported_value": "whole-session 150 ms receiver on-time frame fraction across six registered 800 ms post-ack windows; threshold-rule minus fixed-0.65 difference paired by seed after averaging two repetitions per policy",
+          "source": "native_v10_report",
+          "value_sha256": "083c66e4a4c924c35594b7ff1df7cdc2e18ea42deb6cb50c7f3c0b33371854ab"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/primary_effect",
+          "source": "native_v10_report",
+          "value_sha256": "3c59b55c64f826cf6e0468df20ae1ac3def2a2af0973f86c983749585e6c9f71"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/policy_effects_bwe_threshold_minus_fixed065/all/mean_ontime_psnr_db",
+          "source": "native_v10_report",
+          "value_sha256": "4a31c8400223d1423022685ab4e600df2dcb08a5751ec67a441d562355e5e89a"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/degrees_of_freedom",
+          "reported_value": 11,
+          "source": "native_v10_report",
+          "value_sha256": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8"
+        }
+      ],
+      "finding_classes": [
+        "supported_bounded_policy_harm",
+        "specific_superiority_contradicted"
+      ],
+      "id": "native_v10",
+      "independence_unit": "12 paired scene-seed contrasts after averaging 2 sessions/policy/seed",
+      "manuscript": {
+        "block_sha256": "a7d53e1f8aaed183b75110e6a4668eada65827de6266c3ce2d7315318f6d68b7",
+        "end_line": 185,
+        "marker_line": 171,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Whole-session policy assignment, six 800 ms measurement windows; -14.1 pp; unadjusted 95% t df11."
+    },
+    {
+      "evidence": [
+        {
+          "end": 63,
+          "excerpt_sha256": "ebe40132a1bc499cf360aaf072c8e6c7fa5182f96c64d6a30244ccedb137f083",
+          "heading": "## Conditional action effects",
+          "kind": "line_span",
+          "source": "v11d",
+          "start": 24
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/coverage",
+          "source": "v11d_report",
+          "value_sha256": "b12ae55ac59de2cfc19da3556e4eefbdb656087ad52de3f21c22d8f216e7a1bd"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/primary_replication",
+          "source": "v11d_report",
+          "value_sha256": "a535283dd24ea65a27acccc3aae98de3876e6100488702aae7d9adf406e66ada"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/source_dependence",
+          "reported_value": "Three NordicDat operator/RAN/band strata share the NordicDat drive-test campaign; the Rome LTE family comes from a separate active Speedtest campaign. The four family strata count as only two independent measurement campaigns. Windows and Rome subcampaigns remain nested.",
+          "source": "v11d_report",
+          "value_sha256": "6828b989abe7594f56e146f485db9b07536091ce40380208d3a857de328d8e57"
+        }
+      ],
+      "finding_classes": [
+        "negative_undercovered_replication",
+        "population_effect_unestimable_under_gate"
+      ],
+      "id": "v11d",
+      "independence_unit": "4 content groups by 4 family strata nested in 2 campaigns; 64 sessions",
+      "manuscript": {
+        "block_sha256": "4eb1a5969d29dd8d2d0d991291ceea058f6e829abc59ee67df09101525064d09",
+        "end_line": 197,
+        "marker_line": 186,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "9/16 hold-complete, 7/16 primary-estimable versus minimum13; -0.609 dB descriptive; campaign means use 4/3 cells."
+    },
+    {
+      "evidence": [
+        {
+          "end": 34,
+          "excerpt_sha256": "93db3000c103733d6edd4e3c7b849c5f86a69ce433db3833f18cfc30f763a97d",
+          "heading": "## Support by measured campaign and content",
+          "kind": "line_span",
+          "source": "v12",
+          "start": 15
+        },
+        {
+          "end": 83,
+          "excerpt_sha256": "6b62cd9f9d30e31628ebeec528b024337abffa125d82ce442626023e6b4bfc6e",
+          "heading": "## Transport, clocks and outcome access",
+          "kind": "line_span",
+          "source": "v12",
+          "start": 63
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/planned_checks",
+          "reported_value": 24,
+          "source": "v12_summary",
+          "value_sha256": "c2356069e9d1e79ca924378153cfbbfb4d4416b1f99d41a2940bfdb66c5319db"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/qualified_registered_checks",
+          "reported_value": 10,
+          "source": "v12_summary",
+          "value_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/fully_supported_cell_count",
+          "reported_value": 0,
+          "source": "v12_summary",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/treatment_capture_started",
+          "reported_value": false,
+          "source": "v12_summary",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        }
+      ],
+      "finding_classes": [
+        "support_recipe_failed",
+        "action_effect_unestimable_unrun"
+      ],
+      "id": "v12",
+      "independence_unit": "24 checks: 2 contents by 3 campaigns by 2 states by 2 checks",
+      "manuscript": {
+        "block_sha256": "2c5d44987a9d80855b80d7a6837e81faf79988ee31dba190921e55eb8286857e",
+        "end_line": 207,
+        "marker_line": 198,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "10/24 full pass; 23 ordinary technical-pass captures plus one failed original; 0/6 cells; 48 actions unrun."
+    },
+    {
+      "evidence": [
+        {
+          "end": 40,
+          "excerpt_sha256": "bce91d4da5641674025179a2460e0d8af846bd942aa232fa653ec51344e1fdb0",
+          "heading": "## Cell and family support",
+          "kind": "line_span",
+          "source": "v13",
+          "start": 17
+        },
+        {
+          "end": 73,
+          "excerpt_sha256": "86a2efa8bd2b84711a47ba27e17c66067325e4a0448299a1bcea0ec515ac8d81",
+          "heading": "## Outcome-free diagnosis",
+          "kind": "line_span",
+          "source": "v13",
+          "start": 41
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/fully_supported_cell_count",
+          "reported_value": 1,
+          "source": "v13_summary",
+          "value_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/repeatability_failed_profiles",
+          "source": "v13_summary",
+          "value_sha256": "42990a010fd02a488d837604a83feb1ce86856948102b36ccb65a0f940863adc"
+        }
+      ],
+      "finding_classes": [
+        "repeatability_common_support_failed",
+        "action_effect_unestimable_unrun"
+      ],
+      "id": "v13",
+      "independence_unit": "32 runs;16 repeated contexts;4 crossed cells;one measurement program",
+      "manuscript": {
+        "block_sha256": "ea090210595394717459d774d69f03b2faab297e9a2949b92aaf13d8c0c8da07",
+        "end_line": 220,
+        "marker_line": 208,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "32 individual qualifications;6/16 repeat failures;all4 range/SD pass but only1 full cell;empty intersection;64 actions unrun."
+    },
+    {
+      "evidence": [
+        {
+          "end": 56,
+          "excerpt_sha256": "a003d66e653800e32723be558608426388b5182738140a2d369254b16832903b",
+          "heading": "## Instrumentation qualification before the causal panel",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 20
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "f17517e14cf0cee524b9c589c9af4368d706f3cbce23a6cf95827ec30d15d7fe",
+          "heading": "## Fixed intervention and service fidelity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 57
+        },
+        {
+          "end": 115,
+          "excerpt_sha256": "b3d237561c1852854736acbb7767f156cb31e46ad2ae6f19aa69eb843a9e05f8",
+          "heading": "## Registered effects, with content and time heterogeneity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 78
+        },
+        {
+          "end": 135,
+          "excerpt_sha256": "18591e68c416e0bcfa54a7e560211b2dbe76f263c7485338d315c2dac1826732",
+          "heading": "## Convergence failed, including repeatability",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 116
+        },
+        {
+          "end": 157,
+          "excerpt_sha256": "2e78a1bbb3cdd2b23d5d76206e9cba1d70679a0928d6d75a59564586d3c29e31",
+          "heading": "## Scientific decision and scope",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 136
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/qualified_sessions",
+          "reported_value": 84,
+          "source": "m5_report",
+          "value_sha256": "44c8031cb036a7350d8b9b8603af662a4b9cdbd2f96e8d5de5af435c9c35da69"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/contents/content_kampar_boating_01/windows/18000/paired_mean_octaves",
+          "reported_value": 0.2074639083663665,
+          "source": "m5_report",
+          "value_sha256": "f924f8696e158a838f737ddb556d55a2c4b5f1b748a93f03c0a35ea3da629933"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/contents/content_volga_lock_01/windows/18000/paired_mean_octaves",
+          "reported_value": 0.14749670042977336,
+          "source": "m5_report",
+          "value_sha256": "f37c02230fffd237ed6f440ac6fab72669245381f3e099c027f389ca35254ded"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/sustained_distribution_convergence_both_contents",
+          "reported_value": false,
+          "source": "m5_report",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        }
+      ],
+      "finding_classes": [
+        "qualified_randomized_history_design"
+      ],
+      "id": "m5_design",
+      "independence_unit": "21 randomized adjacent pairs/content;84 runs;2 reused clips and 1 LTE source",
+      "manuscript": {
+        "block_sha256": "b8c66d8c622c18c1e4bba02a74382fdfa06c61fc1a6048b1a351fe4ce984bd7f",
+        "end_line": 227,
+        "marker_line": 221,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Early equal-multiset prefix permutations share subsequent measured-source service; all session/fidelity gates pass."
+    },
+    {
+      "evidence": [
+        {
+          "end": 56,
+          "excerpt_sha256": "a003d66e653800e32723be558608426388b5182738140a2d369254b16832903b",
+          "heading": "## Instrumentation qualification before the causal panel",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 20
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "f17517e14cf0cee524b9c589c9af4368d706f3cbce23a6cf95827ec30d15d7fe",
+          "heading": "## Fixed intervention and service fidelity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 57
+        },
+        {
+          "end": 115,
+          "excerpt_sha256": "b3d237561c1852854736acbb7767f156cb31e46ad2ae6f19aa69eb843a9e05f8",
+          "heading": "## Registered effects, with content and time heterogeneity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 78
+        },
+        {
+          "end": 135,
+          "excerpt_sha256": "18591e68c416e0bcfa54a7e560211b2dbe76f263c7485338d315c2dac1826732",
+          "heading": "## Convergence failed, including repeatability",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 116
+        },
+        {
+          "end": 157,
+          "excerpt_sha256": "2e78a1bbb3cdd2b23d5d76206e9cba1d70679a0928d6d75a59564586d3c29e31",
+          "heading": "## Scientific decision and scope",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 136
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/qualified_sessions",
+          "reported_value": 84,
+          "source": "m5_report",
+          "value_sha256": "44c8031cb036a7350d8b9b8603af662a4b9cdbd2f96e8d5de5af435c9c35da69"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/contents/content_kampar_boating_01/windows/18000/paired_mean_octaves",
+          "reported_value": 0.2074639083663665,
+          "source": "m5_report",
+          "value_sha256": "f924f8696e158a838f737ddb556d55a2c4b5f1b748a93f03c0a35ea3da629933"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/contents/content_volga_lock_01/windows/18000/paired_mean_octaves",
+          "reported_value": 0.14749670042977336,
+          "source": "m5_report",
+          "value_sha256": "f37c02230fffd237ed6f440ac6fab72669245381f3e099c027f389ca35254ded"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/sustained_distribution_convergence_both_contents",
+          "reported_value": false,
+          "source": "m5_report",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        }
+      ],
+      "finding_classes": [
+        "supported_bounded_total_causal_history_effect"
+      ],
+      "id": "m5_effect",
+      "independence_unit": "21 paired assignments per reused content; no pooling",
+      "manuscript": {
+        "block_sha256": "0e4297f9c3bfdac11a9c2e7a85dc74cc4906279ec52655d1112da2f7824212b4",
+        "end_line": 239,
+        "marker_line": 228,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "18s mean log2-BWE effects, exact paired distribution tests and separate 10,000-draw paired-bootstrap 95% intervals."
+    },
+    {
+      "evidence": [
+        {
+          "end": 56,
+          "excerpt_sha256": "a003d66e653800e32723be558608426388b5182738140a2d369254b16832903b",
+          "heading": "## Instrumentation qualification before the causal panel",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 20
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "f17517e14cf0cee524b9c589c9af4368d706f3cbce23a6cf95827ec30d15d7fe",
+          "heading": "## Fixed intervention and service fidelity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 57
+        },
+        {
+          "end": 115,
+          "excerpt_sha256": "b3d237561c1852854736acbb7767f156cb31e46ad2ae6f19aa69eb843a9e05f8",
+          "heading": "## Registered effects, with content and time heterogeneity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 78
+        },
+        {
+          "end": 135,
+          "excerpt_sha256": "18591e68c416e0bcfa54a7e560211b2dbe76f263c7485338d315c2dac1826732",
+          "heading": "## Convergence failed, including repeatability",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 116
+        },
+        {
+          "end": 157,
+          "excerpt_sha256": "2e78a1bbb3cdd2b23d5d76206e9cba1d70679a0928d6d75a59564586d3c29e31",
+          "heading": "## Scientific decision and scope",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 136
+        }
+      ],
+      "finding_classes": [
+        "supported_bounded_history_effect",
+        "convergence_not_established",
+        "mechanism_unresolved"
+      ],
+      "id": "m5_scope",
+      "independence_unit": "Same pairs at nested18/24/30/36s endpoints",
+      "manuscript": {
+        "block_sha256": "21d5d74202fba9d37328516cc140113b5b3920a56270a25a1c8fd9ca7437c7ca",
+        "end_line": 249,
+        "marker_line": 240,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Time/content heterogeneity and no sustained convergence by36s; not permanent memory or unique mediation."
+    },
+    {
+      "evidence": [
+        {
+          "end": 121,
+          "excerpt_sha256": "6b969304b8f2b4906f99f4cdd1436538ac4483b1e0b5f329e72837e1a04d071e",
+          "heading": "## Untouched validation failed coverage before conditional responses",
+          "kind": "line_span",
+          "source": "m6r",
+          "start": 85
+        },
+        {
+          "end": 152,
+          "excerpt_sha256": "e1f18d0925b2b83bbf72f777f9507cba9449f5079aa004584c4f688d059066d0",
+          "heading": "## Interpretation and next research constraint",
+          "kind": "line_span",
+          "source": "m6r",
+          "start": 122
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/passed",
+          "reported_value": false,
+          "source": "m6r_report",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/required_matched_originals_per_prefix",
+          "reported_value": 4,
+          "source": "m6r_report",
+          "value_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        }
+      ],
+      "finding_classes": [
+        "prospective_state_coverage_failed",
+        "conditional_future_comparison_unestimable"
+      ],
+      "id": "m6r",
+      "independence_unit": "32 runs;8 originals/history/content;6 content/landmark strata share runs",
+      "manuscript": {
+        "block_sha256": "ae3bca82fabcdf64cc615e429acd186b3340e5243d66f522be1c26ff02145b67",
+        "end_line": 260,
+        "marker_line": 250,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "4/6 membership strata; encoder history excludes zero BWE-only matches; future comparisons not run."
+    },
+    {
+      "evidence": [
+        {
+          "end": 28,
+          "excerpt_sha256": "b85bce2e480f91f9f6ce0b42e62b9832890852be33c675ce1210a14633f1d982",
+          "heading": "## Registration and acquisition",
+          "kind": "line_span",
+          "source": "m7ra",
+          "start": 11
+        },
+        {
+          "end": 80,
+          "excerpt_sha256": "7c4658b26be1a229df14aab3e0daf301f7c041763d1faab05ae7be31c0d1a037",
+          "heading": "## Frozen membership and repeatability results",
+          "kind": "line_span",
+          "source": "m7ra",
+          "start": 50
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/untouched_validation_originals",
+          "reported_value": 128,
+          "source": "m7ra_report",
+          "value_sha256": "2747b7c718564ba5f066f0523b03e17f6a496b06851333d2d59ab6d863225848"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/validation_started",
+          "reported_value": false,
+          "source": "m7ra_report",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        }
+      ],
+      "finding_classes": [
+        "prospective_state_creation_failed"
+      ],
+      "id": "m7ra",
+      "independence_unit": "4 feasibility contexts:1 content by2 targets by2 histories;1 original/context",
+      "manuscript": {
+        "block_sha256": "048e337617587341e8d179366ba3d80481fd9a4b9484c070a45a8fd8e090d6c2",
+        "end_line": 269,
+        "marker_line": 261,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "2 instantaneous/1 sustained members; neither region qualifies;128 validation originals untouched."
+    },
+    {
+      "evidence": [
+        {
+          "end": 55,
+          "excerpt_sha256": "ff51b00c30a586f0f0f0f3295fc463dee86e9f3ac8e37bb4c98b4976cde63550",
+          "heading": "## Response delay and rise/fall asymmetry",
+          "kind": "line_span",
+          "source": "m8",
+          "start": 32
+        },
+        {
+          "end": 104,
+          "excerpt_sha256": "b798a96a79c78e304dcc8e4b9369f925769eb7c45c983816d4f78193ad745e7e",
+          "heading": "## Prospective causal settling rule",
+          "kind": "line_span",
+          "source": "m8",
+          "start": 88
+        }
+      ],
+      "finding_classes": [
+        "qualified_native_response_characterization"
+      ],
+      "id": "m8_dynamics",
+      "independence_unit": "16 runs:2 contents by2 prefixes by2 orders by2 repeats;2 earlier qualification originals",
+      "manuscript": {
+        "block_sha256": "8db7eb73e069aa207ebad2e31f55870bdc76498804a0c48fb4dddafde21dc93c",
+        "end_line": 280,
+        "marker_line": 270,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Input-normalized rise/fall onset-interval envelopes, not population intervals or time to assumed equilibrium."
+    },
+    {
+      "evidence": [
+        {
+          "end": 55,
+          "excerpt_sha256": "ff51b00c30a586f0f0f0f3295fc463dee86e9f3ac8e37bb4c98b4976cde63550",
+          "heading": "## Response delay and rise/fall asymmetry",
+          "kind": "line_span",
+          "source": "m8",
+          "start": 32
+        },
+        {
+          "end": 104,
+          "excerpt_sha256": "b798a96a79c78e304dcc8e4b9369f925769eb7c45c983816d4f78193ad745e7e",
+          "heading": "## Prospective causal settling rule",
+          "kind": "line_span",
+          "source": "m8",
+          "start": 88
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/eligible",
+          "reported_value": false,
+          "source": "m8_report",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/selected_age_ms",
+          "reported_value": null,
+          "source": "m8_report",
+          "value_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+        }
+      ],
+      "finding_classes": [
+        "tested_settling_recipe_failed"
+      ],
+      "id": "m8_settling",
+      "independence_unit": "64 plateau occurrences nested in16 runs, at each candidate age separately",
+      "manuscript": {
+        "block_sha256": "e1792752c33913cc2f31e8864e25c440342816143844422606024d02c8588fba",
+        "end_line": 287,
+        "marker_line": 281,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "At6/9/12/15s zero future verified, despite some D1 tags; no age selected; onset censoring finite."
+    },
+    {
+      "evidence": [
+        {
+          "end": 45,
+          "excerpt_sha256": "e29cc7476ee744653191670e8d4abcc104b5580581b179c88a9b3eee9e5c6c04",
+          "heading": "## Frozen state predictions",
+          "kind": "line_span",
+          "source": "m9r",
+          "start": 30
+        },
+        {
+          "end": 64,
+          "excerpt_sha256": "39c4fe4a11dc8080b8358299ea0d160e3f33391778c934b7b01722b7c0cc9a74",
+          "heading": "## Later settling and remaining history dependence",
+          "kind": "line_span",
+          "source": "m9r",
+          "start": 46
+        },
+        {
+          "end": 10,
+          "excerpt_sha256": "1b720f8121cb13938d4cd9a8085f4fe73642d3857b8adf4d3877e7463877e995",
+          "heading": "## Classification",
+          "kind": "line_span",
+          "source": "m9r_interpretation",
+          "start": 5
+        },
+        {
+          "end": 48,
+          "excerpt_sha256": "72e94c87e4fc15246c41379ff44e91c799925fe4b58f12d65736e702394b0804",
+          "heading": "## Remaining future variation after causal matching",
+          "kind": "line_span",
+          "source": "m9r_interpretation",
+          "start": 24
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/P2_qualified",
+          "reported_value": false,
+          "source": "m9r_report",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/methods",
+          "source": "m9r_report",
+          "value_sha256": "b14d8a5d8831a9bfeef53b6a5c834de8892fea60bae4ef1e35aa55bd89e6768c"
+        }
+      ],
+      "finding_classes": [
+        "prospective_state_coverage_stability_failed",
+        "p2_precision_unestimable"
+      ],
+      "id": "m9r",
+      "independence_unit": "64 validation runs plus8 qualification;64 matching strata share landmarks;3200 nested queries",
+      "manuscript": {
+        "block_sha256": "bfb267297370383e0689a1d6c7cf6ee915bb88739165e867c734a0fbb35dec38",
+        "end_line": 304,
+        "marker_line": 288,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "B0 tags64/D1 tags55,0 first verified;P2 emits0;42/64 versus13/64 complete matching;0 stable labels."
+    },
+    {
+      "evidence": [
+        {
+          "end": 55,
+          "excerpt_sha256": "1fb121ec714765bca6933d505e1b0614e2983c740e04487b826533391ba5f3c3",
+          "heading": "## Stationary state and moving trajectories",
+          "kind": "line_span",
+          "source": "m10r",
+          "start": 21
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "b4f3da3ad535873ce351a504ec5b9a5b5662bbfd71e40c03f579b4e1e2a0000e",
+          "heading": "## Predeclared mechanism contrasts",
+          "kind": "line_span",
+          "source": "m10r",
+          "start": 56
+        },
+        {
+          "end": 49,
+          "excerpt_sha256": "18c56e12238e174207eb02dfdca31d92abcee4c473fa9a4e1cc2ac5e845bbc4e",
+          "heading": "## Instrumentation qualified, with explicit visibility limits",
+          "kind": "line_span",
+          "source": "m10r_interpretation",
+          "start": 19
+        },
+        {
+          "end": 129,
+          "excerpt_sha256": "fd1bad53adb18405a58fe49b6f7fb58f0f73e935622402cbf75ac890487c3c5b",
+          "heading": "## Unexplained variation is not all prefix dependence",
+          "kind": "line_span",
+          "source": "m10r_interpretation",
+          "start": 114
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/compact_matched_pairs_nested",
+          "reported_value": 49,
+          "source": "m10r_report",
+          "value_sha256": "0e17daca5f3e175f448bacace3bc0da47d0655a74c8dd0dc497a3afbdad95f1f"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/compact_matched_future_divergent_pairs_nested",
+          "reported_value": 23,
+          "source": "m10r_report",
+          "value_sha256": "535fa30d7e25dd8a49f1536779734ec8286108d115da5045d77f3b4185d8f790"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/positive_future_stationarity_labels_nested",
+          "reported_value": 0,
+          "source": "m10r_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/total_nested_queries",
+          "reported_value": 400,
+          "source": "m10r_report",
+          "value_sha256": "26d228663f13a88592a12d16cf9587caab0388b262d6d9f126ed62f9333aca94"
+        }
+      ],
+      "finding_classes": [
+        "qualified_channel_acquisition",
+        "registered_mechanism_discrimination_failed"
+      ],
+      "id": "m10r",
+      "independence_unit": "4 qualification plus8 development runs;96 overlapping contrasts;400 nested queries",
+      "manuscript": {
+        "block_sha256": "a1e745890c090756fafb2a602488e06c0d2311afa8af1ee003b22af86d29effc",
+        "end_line": 316,
+        "marker_line": 305,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "49/96 compact matches,23/49 divergent;0/400 stationary labels;no qualifying repeated mechanism contrast."
+    },
+    {
+      "evidence": [
+        {
+          "end": 49,
+          "excerpt_sha256": "18c56e12238e174207eb02dfdca31d92abcee4c473fa9a4e1cc2ac5e845bbc4e",
+          "heading": "## Instrumentation qualified, with explicit visibility limits",
+          "kind": "line_span",
+          "source": "m10r_interpretation",
+          "start": 19
+        },
+        {
+          "end": 129,
+          "excerpt_sha256": "fd1bad53adb18405a58fe49b6f7fb58f0f73e935622402cbf75ac890487c3c5b",
+          "heading": "## Unexplained variation is not all prefix dependence",
+          "kind": "line_span",
+          "source": "m10r_interpretation",
+          "start": 114
+        }
+      ],
+      "finding_classes": [
+        "mechanism_unresolved",
+        "trajectory_state_not_established"
+      ],
+      "id": "m10r_scope",
+      "independence_unit": "Same8 runs;14 compact-matched within-history comparisons",
+      "manuscript": {
+        "block_sha256": "7e766481f65186bb396329fa5953f05725d0a25b03c1b8c1278b9f165d8ab330",
+        "end_line": 326,
+        "marker_line": 317,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "RTT-counter age is not TCC age; one relay is not every queue;7/14 same-history comparisons diverge."
+    },
+    {
+      "evidence": [
+        {
+          "end": 60,
+          "excerpt_sha256": "2aadb79a728210af88cb9ed2d4bf8d0b67df9291d139a3370581d7458cead800",
+          "heading": "## All three required RTC-log channel families failed freshness",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 34
+        },
+        {
+          "end": 87,
+          "excerpt_sha256": "a069412c665b60eae21b5e1402628cad3b8035e6bf0b8c89b44f2d3b31312f0a",
+          "heading": "## Supported alternatives and their exact limitations",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 61
+        },
+        {
+          "end": 120,
+          "excerpt_sha256": "3e5e61dbdf9370cf6a77e855274b55fb1792c7bac24d5073d038f452c2c16cee",
+          "heading": "## Decision and identifiability boundary",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 88
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/acquisition_passed",
+          "reported_value": true,
+          "source": "m11r_report",
+          "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/originals",
+          "reported_value": 2,
+          "source": "m11r_report",
+          "value_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/passed",
+          "reported_value": false,
+          "source": "m11r_report",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/development_opened",
+          "reported_value": false,
+          "source": "m11r_report",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        }
+      ],
+      "finding_classes": [
+        "qualified_native_acquisition",
+        "required_online_channels_failed"
+      ],
+      "id": "m11r_channels",
+      "independence_unit": "2 capability originals; event counts nested within originals",
+      "manuscript": {
+        "block_sha256": "24b539580f1ecfc0e3a77ba27fd38a5fda441df059297f5bb43d14aadab3e4c9",
+        "end_line": 338,
+        "marker_line": 327,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Fresh TCC31/1739,33/1747; BWE30/2110,37/2090; probes0/16,0/31 against250ms/90%,50ms,1000ms gates."
+    },
+    {
+      "evidence": [
+        {
+          "end": 60,
+          "excerpt_sha256": "2aadb79a728210af88cb9ed2d4bf8d0b67df9291d139a3370581d7458cead800",
+          "heading": "## All three required RTC-log channel families failed freshness",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 34
+        },
+        {
+          "end": 87,
+          "excerpt_sha256": "a069412c665b60eae21b5e1402628cad3b8035e6bf0b8c89b44f2d3b31312f0a",
+          "heading": "## Supported alternatives and their exact limitations",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 61
+        },
+        {
+          "end": 120,
+          "excerpt_sha256": "3e5e61dbdf9370cf6a77e855274b55fb1792c7bac24d5073d038f452c2c16cee",
+          "heading": "## Decision and identifiability boundary",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 88
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/acquisition_passed",
+          "reported_value": true,
+          "source": "m11r_report",
+          "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/originals",
+          "reported_value": 2,
+          "source": "m11r_report",
+          "value_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/passed",
+          "reported_value": false,
+          "source": "m11r_report",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/development_opened",
+          "reported_value": false,
+          "source": "m11r_report",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        }
+      ],
+      "finding_classes": [
+        "fixture_limited_observability",
+        "causal_timing_explanation_unresolved"
+      ],
+      "id": "m11r_limit",
+      "independence_unit": "2 originals; conditional4 qualification/8 development not instantiated",
+      "manuscript": {
+        "block_sha256": "c2aeec758f7ff8480c49aeb2fcb66fdea12ff0bf6c458489db4d6acc51b061d8",
+        "end_line": 348,
+        "marker_line": 339,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Real events existed; no jointly qualified freshness/identity or equivalent proxy; full pacer state not obtained."
+    },
+    {
+      "evidence": [
+        {
+          "end": 22,
+          "excerpt_sha256": "e03073fe223fd24f1ec0a91caa35313f617e6f252e5f629027c415333d1ca1f7",
+          "heading": "## What is complete",
+          "kind": "line_span",
+          "source": "if1",
+          "start": 6
+        },
+        {
+          "end": 59,
+          "excerpt_sha256": "7d084f3bb7d02483fb6841f1ba15612316be244d8aab9f739d094be637078ac9",
+          "heading": "## Admission result",
+          "kind": "line_span",
+          "source": "if1",
+          "start": 23
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/compiler_invocations",
+          "reported_value": 0,
+          "source": "if1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/Cxx_patch_implemented",
+          "reported_value": false,
+          "source": "if1_report",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/native_sessions",
+          "reported_value": 0,
+          "source": "if1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        }
+      ],
+      "finding_classes": [
+        "practical_fixture_admission_failure",
+        "instrumentability_and_scientific_value_untested"
+      ],
+      "id": "if1",
+      "independence_unit": "Static resource/source audit;zero build/compiler/native attempts",
+      "manuscript": {
+        "block_sha256": "0a20fa3a3fc057b5c714c307e141e4767a775cd3bb6b4f3bcf780364b1f5c59b",
+        "end_line": 361,
+        "marker_line": 349,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "17.7GB free/33.8GB total versus100GB source/130GB registered; no admitted builder; proposed hooks only."
+    },
+    {
+      "evidence": [
+        {
+          "end": 48,
+          "excerpt_sha256": "8c96f7b9fed644c029d433d37ecb2240e59170081c36a90103c0ee8df4de11b9",
+          "heading": "## Preregistration and execution",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 18
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "429de5379a035a76b5fc7648096a052c10b53cdb224b184e19166fbc433ac2a9",
+          "heading": "## Point prediction and reproducibility",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 49
+        },
+        {
+          "end": 126,
+          "excerpt_sha256": "f1d6650921da3ef4da9bb61614044702826ded69427f9483e3239e2209cea504",
+          "heading": "## Calibration, uncertainty and safety",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 91
+        },
+        {
+          "end": 143,
+          "excerpt_sha256": "56e33ca0d456fff13d19b35461b052848bc3313b9054f8a4d25a8529091543af",
+          "heading": "## Scope and stopping decision",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 127
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/roles",
+          "source": "po1_config",
+          "value_sha256": "c92e42c090e44467e61024506a8579417045579e1104694c22ce1b4702dd1b8d"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/models",
+          "source": "po1_config",
+          "value_sha256": "d208a41071b09556ecf0d377491ac596051555fb2d024200290348322d0572d2"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/targets",
+          "source": "po1_config",
+          "value_sha256": "982413b9b7ccbd2f54926fa2a371d4ff00066e96435958afdf25f9972f01e574"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/gates",
+          "source": "po1_config",
+          "value_sha256": "e8d7b1d0d3a8f0cae66478c11fb1a7ac31b8c07ecc518d1dc805fb27f3129a36"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/synthetic_episodes",
+          "reported_value": 816,
+          "source": "po1_report",
+          "value_sha256": "96bb293aaa330ef307ee004448b92b75ffdc25ade2831ed23fc60ffa97fffb7f"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/families",
+          "source": "po1_report",
+          "value_sha256": "c4b76d48bbe558d066462b2dec3730ec490ba97c313255baee5f426c274e6a8c"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/native_reservation_untouched",
+          "reported_value": true,
+          "source": "po1_report",
+          "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/learned_actions_executed",
+          "reported_value": 0,
+          "source": "po1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/native_sessions",
+          "reported_value": 0,
+          "source": "po1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        }
+      ],
+      "finding_classes": [
+        "qualified_synthetic_screen"
+      ],
+      "id": "po1_design",
+      "independence_unit": "816 episodes:384fit+144cal+288validation;3 fits;72validation/family;6 nested anchors",
+      "manuscript": {
+        "block_sha256": "cffb21f5c6f44d46d6868077c8a04a2f4cd7572834e253aadee9aa9ea33a69a5",
+        "end_line": 373,
+        "marker_line": 362,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Disjoint generator-family roles in one fluid/AckedBwe/assumed-encoder simulator; support passes; models locked."
+    },
+    {
+      "evidence": [
+        {
+          "end": 48,
+          "excerpt_sha256": "8c96f7b9fed644c029d433d37ecb2240e59170081c36a90103c0ee8df4de11b9",
+          "heading": "## Preregistration and execution",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 18
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "429de5379a035a76b5fc7648096a052c10b53cdb224b184e19166fbc433ac2a9",
+          "heading": "## Point prediction and reproducibility",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 49
+        },
+        {
+          "end": 126,
+          "excerpt_sha256": "f1d6650921da3ef4da9bb61614044702826ded69427f9483e3239e2209cea504",
+          "heading": "## Calibration, uncertainty and safety",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 91
+        },
+        {
+          "end": 143,
+          "excerpt_sha256": "56e33ca0d456fff13d19b35461b052848bc3313b9054f8a4d25a8529091543af",
+          "heading": "## Scope and stopping decision",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 127
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/roles",
+          "source": "po1_config",
+          "value_sha256": "c92e42c090e44467e61024506a8579417045579e1104694c22ce1b4702dd1b8d"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/models",
+          "source": "po1_config",
+          "value_sha256": "d208a41071b09556ecf0d377491ac596051555fb2d024200290348322d0572d2"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/targets",
+          "source": "po1_config",
+          "value_sha256": "982413b9b7ccbd2f54926fa2a371d4ff00066e96435958afdf25f9972f01e574"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/gates",
+          "source": "po1_config",
+          "value_sha256": "e8d7b1d0d3a8f0cae66478c11fb1a7ac31b8c07ecc518d1dc805fb27f3129a36"
+        }
+      ],
+      "finding_classes": [
+        "frozen_synthetic_target_definitions"
+      ],
+      "id": "po1_targets",
+      "independence_unit": "5s branches at6 nested anchors/episode",
+      "manuscript": {
+        "block_sha256": "b9003e8f7ca6102e8fdfba736cc1b6472d6af81d0358ffe67b43b1f2a9b74c3a",
+        "end_line": 384,
+        "marker_line": 374,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Factual BWE mean-change and high-then-low minus low utility; .5octave/.02utility/.10unsafe binary targets."
+    },
+    {
+      "evidence": [
+        {
+          "end": 48,
+          "excerpt_sha256": "8c96f7b9fed644c029d433d37ecb2240e59170081c36a90103c0ee8df4de11b9",
+          "heading": "## Preregistration and execution",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 18
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "429de5379a035a76b5fc7648096a052c10b53cdb224b184e19166fbc433ac2a9",
+          "heading": "## Point prediction and reproducibility",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 49
+        },
+        {
+          "end": 126,
+          "excerpt_sha256": "f1d6650921da3ef4da9bb61614044702826ded69427f9483e3239e2209cea504",
+          "heading": "## Calibration, uncertainty and safety",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 91
+        },
+        {
+          "end": 143,
+          "excerpt_sha256": "56e33ca0d456fff13d19b35461b052848bc3313b9054f8a4d25a8529091543af",
+          "heading": "## Scope and stopping decision",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 127
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "83aa04bde26bd117adc361ae6adc953e4955be264ec2698fc6893bda891c18d3",
+          "heading": "### Single representation and strong baselines",
+          "kind": "line_span",
+          "source": "po1_plan",
+          "start": 65
+        },
+        {
+          "end": 135,
+          "excerpt_sha256": "ebc7523dc21cb96714534bb96a1b6a8cf6f5ff676bcc6de509c557d67769e575",
+          "heading": "### Frozen uncertainty and acceptance",
+          "kind": "line_span",
+          "source": "po1_plan",
+          "start": 91
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/roles",
+          "source": "po1_config",
+          "value_sha256": "c92e42c090e44467e61024506a8579417045579e1104694c22ce1b4702dd1b8d"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/models",
+          "source": "po1_config",
+          "value_sha256": "d208a41071b09556ecf0d377491ac596051555fb2d024200290348322d0572d2"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/targets",
+          "source": "po1_config",
+          "value_sha256": "982413b9b7ccbd2f54926fa2a371d4ff00066e96435958afdf25f9972f01e574"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/gates",
+          "source": "po1_config",
+          "value_sha256": "e8d7b1d0d3a8f0cae66478c11fb1a7ac31b8c07ecc518d1dc805fb27f3129a36"
+        }
+      ],
+      "finding_classes": [
+        "frozen_synthetic_methods"
+      ],
+      "id": "po1_models",
+      "independence_unit": "3 separate fixed-penalty fits and held-out calibration batches",
+      "manuscript": {
+        "block_sha256": "8d81d047fc141952db12c0c7802bbfb5fd3469960514a4686bc9abff3c4e8d57",
+        "end_line": 393,
+        "marker_line": 385,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "S1 summaries,H1 ordered lags,strong simple baselines; no recurrent model or learned-action policy."
+    },
+    {
+      "evidence": [
+        {
+          "end": 48,
+          "excerpt_sha256": "8c96f7b9fed644c029d433d37ecb2240e59170081c36a90103c0ee8df4de11b9",
+          "heading": "## Preregistration and execution",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 18
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "429de5379a035a76b5fc7648096a052c10b53cdb224b184e19166fbc433ac2a9",
+          "heading": "## Point prediction and reproducibility",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 49
+        },
+        {
+          "end": 126,
+          "excerpt_sha256": "f1d6650921da3ef4da9bb61614044702826ded69427f9483e3239e2209cea504",
+          "heading": "## Calibration, uncertainty and safety",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 91
+        },
+        {
+          "end": 143,
+          "excerpt_sha256": "56e33ca0d456fff13d19b35461b052848bc3313b9054f8a4d25a8529091543af",
+          "heading": "## Scope and stopping decision",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 127
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/synthetic_episodes",
+          "reported_value": 816,
+          "source": "po1_report",
+          "value_sha256": "96bb293aaa330ef307ee004448b92b75ffdc25ade2831ed23fc60ffa97fffb7f"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/families",
+          "source": "po1_report",
+          "value_sha256": "c4b76d48bbe558d066462b2dec3730ec490ba97c313255baee5f426c274e6a8c"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/native_reservation_untouched",
+          "reported_value": true,
+          "source": "po1_report",
+          "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/learned_actions_executed",
+          "reported_value": 0,
+          "source": "po1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/native_sessions",
+          "reported_value": 0,
+          "source": "po1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        },
+        {
+          "kind": "whole_file_sha256",
+          "source": "rd1_tables"
+        }
+      ],
+      "finding_classes": [
+        "copied_synthetic_report_values"
+      ],
+      "id": "po1_table",
+      "independence_unit": "72validationepisodes/family across3fixedfits;6nested decisions",
+      "manuscript": {
+        "block_sha256": "f4cdecc8b6a86a6f704772a29d158f161e50ee432c432caac6284b2fad00f9a8",
+        "end_line": 397,
+        "marker_line": 394,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "24 MAE entries copied from RD1 rounded table and checked against PO1 report."
+    },
+    {
+      "evidence": [
+        {
+          "end": 48,
+          "excerpt_sha256": "8c96f7b9fed644c029d433d37ecb2240e59170081c36a90103c0ee8df4de11b9",
+          "heading": "## Preregistration and execution",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 18
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "429de5379a035a76b5fc7648096a052c10b53cdb224b184e19166fbc433ac2a9",
+          "heading": "## Point prediction and reproducibility",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 49
+        },
+        {
+          "end": 126,
+          "excerpt_sha256": "f1d6650921da3ef4da9bb61614044702826ded69427f9483e3239e2209cea504",
+          "heading": "## Calibration, uncertainty and safety",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 91
+        },
+        {
+          "end": 143,
+          "excerpt_sha256": "56e33ca0d456fff13d19b35461b052848bc3313b9054f8a4d25a8529091543af",
+          "heading": "## Scope and stopping decision",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 127
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/synthetic_episodes",
+          "reported_value": 816,
+          "source": "po1_report",
+          "value_sha256": "96bb293aaa330ef307ee004448b92b75ffdc25ade2831ed23fc60ffa97fffb7f"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/families",
+          "source": "po1_report",
+          "value_sha256": "c4b76d48bbe558d066462b2dec3730ec490ba97c313255baee5f426c274e6a8c"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/native_reservation_untouched",
+          "reported_value": true,
+          "source": "po1_report",
+          "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/learned_actions_executed",
+          "reported_value": 0,
+          "source": "po1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/native_sessions",
+          "reported_value": 0,
+          "source": "po1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        }
+      ],
+      "finding_classes": [
+        "frozen_package_ood_prediction_failed"
+      ],
+      "id": "po1_prediction",
+      "independence_unit": "Episodes within fit;4 held-out generator families in1 simulator",
+      "manuscript": {
+        "block_sha256": "95a15e3746317e34db0d0ef7513b3e840a1e9b7d64a2ae30d8252d5a7bdd3ad1",
+        "end_line": 407,
+        "marker_line": 398,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "H1 BWE worseS1 all4;feedback-flap77.8% worsepersistence;some weaker-baseline signal in3 families."
+    },
+    {
+      "evidence": [
+        {
+          "end": 48,
+          "excerpt_sha256": "8c96f7b9fed644c029d433d37ecb2240e59170081c36a90103c0ee8df4de11b9",
+          "heading": "## Preregistration and execution",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 18
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "429de5379a035a76b5fc7648096a052c10b53cdb224b184e19166fbc433ac2a9",
+          "heading": "## Point prediction and reproducibility",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 49
+        },
+        {
+          "end": 126,
+          "excerpt_sha256": "f1d6650921da3ef4da9bb61614044702826ded69427f9483e3239e2209cea504",
+          "heading": "## Calibration, uncertainty and safety",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 91
+        },
+        {
+          "end": 143,
+          "excerpt_sha256": "56e33ca0d456fff13d19b35461b052848bc3313b9054f8a4d25a8529091543af",
+          "heading": "## Scope and stopping decision",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 127
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/synthetic_episodes",
+          "reported_value": 816,
+          "source": "po1_report",
+          "value_sha256": "96bb293aaa330ef307ee004448b92b75ffdc25ade2831ed23fc60ffa97fffb7f"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/families",
+          "source": "po1_report",
+          "value_sha256": "c4b76d48bbe558d066462b2dec3730ec490ba97c313255baee5f426c274e6a8c"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/native_reservation_untouched",
+          "reported_value": true,
+          "source": "po1_report",
+          "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/learned_actions_executed",
+          "reported_value": 0,
+          "source": "po1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/native_sessions",
+          "reported_value": 0,
+          "source": "po1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/roles",
+          "source": "po1_config",
+          "value_sha256": "c92e42c090e44467e61024506a8579417045579e1104694c22ce1b4702dd1b8d"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/models",
+          "source": "po1_config",
+          "value_sha256": "d208a41071b09556ecf0d377491ac596051555fb2d024200290348322d0572d2"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/targets",
+          "source": "po1_config",
+          "value_sha256": "982413b9b7ccbd2f54926fa2a371d4ff00066e96435958afdf25f9972f01e574"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/gates",
+          "source": "po1_config",
+          "value_sha256": "e8d7b1d0d3a8f0cae66478c11fb1a7ac31b8c07ecc518d1dc805fb27f3129a36"
+        }
+      ],
+      "finding_classes": [
+        "frozen_synthetic_action_discrimination_failed"
+      ],
+      "id": "po1_discrimination",
+      "independence_unit": "Paired episode bootstrap within3fixedfits;family-by-family",
+      "manuscript": {
+        "block_sha256": "9156eb9b631024d2896bfc12d5c8fa66f16b0dfe3bdd5c7fe75a3e62a42cc904",
+        "end_line": 419,
+        "marker_line": 408,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "H1 advantage gains .19%/.43% below5%,bounds below0 and sign reversals;feedback-flap179.4% worseconstant."
+    },
+    {
+      "evidence": [
+        {
+          "end": 48,
+          "excerpt_sha256": "8c96f7b9fed644c029d433d37ecb2240e59170081c36a90103c0ee8df4de11b9",
+          "heading": "## Preregistration and execution",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 18
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "429de5379a035a76b5fc7648096a052c10b53cdb224b184e19166fbc433ac2a9",
+          "heading": "## Point prediction and reproducibility",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 49
+        },
+        {
+          "end": 126,
+          "excerpt_sha256": "f1d6650921da3ef4da9bb61614044702826ded69427f9483e3239e2209cea504",
+          "heading": "## Calibration, uncertainty and safety",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 91
+        },
+        {
+          "end": 143,
+          "excerpt_sha256": "56e33ca0d456fff13d19b35461b052848bc3313b9054f8a4d25a8529091543af",
+          "heading": "## Scope and stopping decision",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 127
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/synthetic_episodes",
+          "reported_value": 816,
+          "source": "po1_report",
+          "value_sha256": "96bb293aaa330ef307ee004448b92b75ffdc25ade2831ed23fc60ffa97fffb7f"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/families",
+          "source": "po1_report",
+          "value_sha256": "c4b76d48bbe558d066462b2dec3730ec490ba97c313255baee5f426c274e6a8c"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/native_reservation_untouched",
+          "reported_value": true,
+          "source": "po1_report",
+          "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/learned_actions_executed",
+          "reported_value": 0,
+          "source": "po1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/native_sessions",
+          "reported_value": 0,
+          "source": "po1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/roles",
+          "source": "po1_config",
+          "value_sha256": "c92e42c090e44467e61024506a8579417045579e1104694c22ce1b4702dd1b8d"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/models",
+          "source": "po1_config",
+          "value_sha256": "d208a41071b09556ecf0d377491ac596051555fb2d024200290348322d0572d2"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/targets",
+          "source": "po1_config",
+          "value_sha256": "982413b9b7ccbd2f54926fa2a371d4ff00066e96435958afdf25f9972f01e574"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/gates",
+          "source": "po1_config",
+          "value_sha256": "e8d7b1d0d3a8f0cae66478c11fb1a7ac31b8c07ecc518d1dc805fb27f3129a36"
+        }
+      ],
+      "finding_classes": [
+        "minimum_coverage_passed",
+        "useful_width_failed",
+        "binary_calibration_failed"
+      ],
+      "id": "po1_uncertainty",
+      "independence_unit": "Sequence coverage over6 decisions/episode;432 feedback decisions nested in72 episodes",
+      "manuscript": {
+        "block_sha256": "76e92641723edb143048a111d5937a7ba1baa7059009235a63e403b9f7da4b3e",
+        "end_line": 431,
+        "marker_line": 420,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Nominal90%;80%/75% minima pass;widths4.08-5.40>1 and2.96-3.31>.5;ECE.397/.321;zero unsafe positives."
+    },
+    {
+      "evidence": [
+        {
+          "end": 48,
+          "excerpt_sha256": "8c96f7b9fed644c029d433d37ecb2240e59170081c36a90103c0ee8df4de11b9",
+          "heading": "## Preregistration and execution",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 18
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "429de5379a035a76b5fc7648096a052c10b53cdb224b184e19166fbc433ac2a9",
+          "heading": "## Point prediction and reproducibility",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 49
+        },
+        {
+          "end": 126,
+          "excerpt_sha256": "f1d6650921da3ef4da9bb61614044702826ded69427f9483e3239e2209cea504",
+          "heading": "## Calibration, uncertainty and safety",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 91
+        },
+        {
+          "end": 143,
+          "excerpt_sha256": "56e33ca0d456fff13d19b35461b052848bc3313b9054f8a4d25a8529091543af",
+          "heading": "## Scope and stopping decision",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 127
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/synthetic_episodes",
+          "reported_value": 816,
+          "source": "po1_report",
+          "value_sha256": "96bb293aaa330ef307ee004448b92b75ffdc25ade2831ed23fc60ffa97fffb7f"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/families",
+          "source": "po1_report",
+          "value_sha256": "c4b76d48bbe558d066462b2dec3730ec490ba97c313255baee5f426c274e6a8c"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/native_reservation_untouched",
+          "reported_value": true,
+          "source": "po1_report",
+          "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/learned_actions_executed",
+          "reported_value": 0,
+          "source": "po1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/native_sessions",
+          "reported_value": 0,
+          "source": "po1_report",
+          "value_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/roles",
+          "source": "po1_config",
+          "value_sha256": "c92e42c090e44467e61024506a8579417045579e1104694c22ce1b4702dd1b8d"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/models",
+          "source": "po1_config",
+          "value_sha256": "d208a41071b09556ecf0d377491ac596051555fb2d024200290348322d0572d2"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/targets",
+          "source": "po1_config",
+          "value_sha256": "982413b9b7ccbd2f54926fa2a371d4ff00066e96435958afdf25f9972f01e574"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/gates",
+          "source": "po1_config",
+          "value_sha256": "e8d7b1d0d3a8f0cae66478c11fb1a7ac31b8c07ecc518d1dc805fb27f3129a36"
+        }
+      ],
+      "finding_classes": [
+        "supported_synthetic_discrimination_failed",
+        "native_panel_unopened"
+      ],
+      "id": "po1_assertions",
+      "independence_unit": "Distinct assertedepisodes/family;64native sessions reserved only",
+      "manuscript": {
+        "block_sha256": "3dbcd103187982d2b533144d1a7321352a6b7838b3ba715f86148260ffd03ffb",
+        "end_line": 442,
+        "marker_line": 432,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Lowerbound>.02,benefit>=.90,risk<=.10;min30episodes,Wilsonupper<=.10;0assertions=>upper1;0actions."
+    },
+    {
+      "evidence": [
+        {
+          "end": 48,
+          "excerpt_sha256": "8c96f7b9fed644c029d433d37ecb2240e59170081c36a90103c0ee8df4de11b9",
+          "heading": "## Preregistration and execution",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 18
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "429de5379a035a76b5fc7648096a052c10b53cdb224b184e19166fbc433ac2a9",
+          "heading": "## Point prediction and reproducibility",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 49
+        },
+        {
+          "end": 126,
+          "excerpt_sha256": "f1d6650921da3ef4da9bb61614044702826ded69427f9483e3239e2209cea504",
+          "heading": "## Calibration, uncertainty and safety",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 91
+        },
+        {
+          "end": 143,
+          "excerpt_sha256": "56e33ca0d456fff13d19b35461b052848bc3313b9054f8a4d25a8529091543af",
+          "heading": "## Scope and stopping decision",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 127
+        },
+        {
+          "kind": "whole_file_sha256",
+          "source": "po1_figure"
+        }
+      ],
+      "finding_classes": [
+        "unchanged_frozen_synthetic_figure"
+      ],
+      "id": "po1_figure",
+      "independence_unit": "Same PO1 episodes, fits and nested decisions",
+      "manuscript": {
+        "block_sha256": "a89dcf55c82148b2db09ea90e00f5c3955e5407c79983ccc32e2b2d7e0cb6523",
+        "end_line": 456,
+        "marker_line": 443,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Frozen figure unchanged; read error/calibration/width alongside coverage; not a new native replication."
+    },
+    {
+      "evidence": [
+        {
+          "end": 40,
+          "excerpt_sha256": "4e567dfac99abe202ef2510ddb953cb30f103643b513361b9d52025f03b49ea7",
+          "heading": "## 1. Decision and its exact scope",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 11
+        },
+        {
+          "end": 58,
+          "excerpt_sha256": "63bb49cc96678daefb4e85a807c1885c543c91a8096ef0a29ef508a5f5b138c7",
+          "heading": "## 2. How the evidence is classified",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 41
+        },
+        {
+          "end": 198,
+          "excerpt_sha256": "74772daaaf50067862b1ea49883101aba0ab98653b1a1e2d99c5726e44658fd8",
+          "heading": "## 7. What remains unresolved",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 187
+        },
+        {
+          "end": 48,
+          "excerpt_sha256": "8c96f7b9fed644c029d433d37ecb2240e59170081c36a90103c0ee8df4de11b9",
+          "heading": "## Preregistration and execution",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 18
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "429de5379a035a76b5fc7648096a052c10b53cdb224b184e19166fbc433ac2a9",
+          "heading": "## Point prediction and reproducibility",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 49
+        },
+        {
+          "end": 126,
+          "excerpt_sha256": "f1d6650921da3ef4da9bb61614044702826ded69427f9483e3239e2209cea504",
+          "heading": "## Calibration, uncertainty and safety",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 91
+        },
+        {
+          "end": 143,
+          "excerpt_sha256": "56e33ca0d456fff13d19b35461b052848bc3313b9054f8a4d25a8529091543af",
+          "heading": "## Scope and stopping decision",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 127
+        }
+      ],
+      "finding_classes": [
+        "unchanged_scientific_stopping_decision",
+        "unresolved_nonclaims"
+      ],
+      "id": "stop",
+      "independence_unit": "No successor unit or panel instantiated",
+      "manuscript": {
+        "block_sha256": "1331c5aed6d97127a0b85f317d1a0f7aa7f69b2bf079d881966e593d09de5424",
+        "end_line": 476,
+        "marker_line": 457,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "RD1 stop exact; unresolved mechanism/build questions do not license further searching."
+    },
+    {
+      "evidence": [
+        {
+          "end": 40,
+          "excerpt_sha256": "4e567dfac99abe202ef2510ddb953cb30f103643b513361b9d52025f03b49ea7",
+          "heading": "## 1. Decision and its exact scope",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 11
+        },
+        {
+          "end": 58,
+          "excerpt_sha256": "63bb49cc96678daefb4e85a807c1885c543c91a8096ef0a29ef508a5f5b138c7",
+          "heading": "## 2. How the evidence is classified",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 41
+        },
+        {
+          "end": 198,
+          "excerpt_sha256": "74772daaaf50067862b1ea49883101aba0ab98653b1a1e2d99c5726e44658fd8",
+          "heading": "## 7. What remains unresolved",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 187
+        },
+        {
+          "end": 34,
+          "excerpt_sha256": "d238c4a9cd07cde4a462fbd167a0a6b5fd3a56bbc13d0cb74b210455b44702ed",
+          "heading": "## Capture and qualification",
+          "kind": "line_span",
+          "source": "native_v9",
+          "start": 3
+        },
+        {
+          "end": 64,
+          "excerpt_sha256": "784a0381960c26094e682502432c8e43158cd90757795d5933796b0dbe569fa9",
+          "heading": "## State-conditional action estimates",
+          "kind": "line_span",
+          "source": "native_v9",
+          "start": 35
+        },
+        {
+          "end": 34,
+          "excerpt_sha256": "70a1ee847615c9ed1bc130a8af003c398afacfe5413d2fb1c86686d3109083b2",
+          "heading": "## Capture and qualification",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 3
+        },
+        {
+          "end": 65,
+          "excerpt_sha256": "875374c2ff5cb80a303a7956231a697d6ac313aa3f6c9918d27cefee8cfb25be",
+          "heading": "## Whole-session policy contrast",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 35
+        },
+        {
+          "end": 56,
+          "excerpt_sha256": "a003d66e653800e32723be558608426388b5182738140a2d369254b16832903b",
+          "heading": "## Instrumentation qualification before the causal panel",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 20
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "f17517e14cf0cee524b9c589c9af4368d706f3cbce23a6cf95827ec30d15d7fe",
+          "heading": "## Fixed intervention and service fidelity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 57
+        },
+        {
+          "end": 115,
+          "excerpt_sha256": "b3d237561c1852854736acbb7767f156cb31e46ad2ae6f19aa69eb843a9e05f8",
+          "heading": "## Registered effects, with content and time heterogeneity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 78
+        },
+        {
+          "end": 135,
+          "excerpt_sha256": "18591e68c416e0bcfa54a7e560211b2dbe76f263c7485338d315c2dac1826732",
+          "heading": "## Convergence failed, including repeatability",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 116
+        },
+        {
+          "end": 157,
+          "excerpt_sha256": "2e78a1bbb3cdd2b23d5d76206e9cba1d70679a0928d6d75a59564586d3c29e31",
+          "heading": "## Scientific decision and scope",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 136
+        },
+        {
+          "end": 55,
+          "excerpt_sha256": "1fb121ec714765bca6933d505e1b0614e2983c740e04487b826533391ba5f3c3",
+          "heading": "## Stationary state and moving trajectories",
+          "kind": "line_span",
+          "source": "m10r",
+          "start": 21
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "b4f3da3ad535873ce351a504ec5b9a5b5662bbfd71e40c03f579b4e1e2a0000e",
+          "heading": "## Predeclared mechanism contrasts",
+          "kind": "line_span",
+          "source": "m10r",
+          "start": 56
+        }
+      ],
+      "finding_classes": [
+        "scope_constraints"
+      ],
+      "id": "limitations",
+      "independence_unit": "Original source/campaign clusters;no repeated-measurement inflation",
+      "manuscript": {
+        "block_sha256": "97194d7f1cc66afd79719dcb9f400f505eb11bcadae95eb273b56277aae150a7",
+        "end_line": 485,
+        "marker_line": 477,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Adaptive questions, not an omnibus trial; local proxies are not humanQoE or live-deployment safety."
+    },
+    {
+      "evidence": [
+        {
+          "kind": "whole_file_sha256",
+          "source": "m6"
+        },
+        {
+          "kind": "whole_file_sha256",
+          "source": "m7"
+        },
+        {
+          "kind": "whole_file_sha256",
+          "source": "m7r"
+        },
+        {
+          "kind": "whole_file_sha256",
+          "source": "m9"
+        },
+        {
+          "kind": "whole_file_sha256",
+          "source": "m10"
+        },
+        {
+          "kind": "whole_file_sha256",
+          "source": "m11"
+        }
+      ],
+      "finding_classes": [
+        "instrumentation_limited_unestimable_not_scientific_null"
+      ],
+      "id": "instrumentation_failures",
+      "independence_unit": "M6:252cutoffs;M7:4runs/104commands;M7R:4attempts/0native;M9:64runs2fail;M10:4runs;M11:2runs",
+      "manuscript": {
+        "block_sha256": "ac3c9723bcc94e28deb45886eddb4fa7ccf005d96fc41ba38ab5927821f30102",
+        "end_line": 496,
+        "marker_line": 486,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Failed originals remain separate from prospective fresh repairs; no null inference or failure erasure."
+    },
+    {
+      "evidence": [
+        {
+          "end": 40,
+          "excerpt_sha256": "4e567dfac99abe202ef2510ddb953cb30f103643b513361b9d52025f03b49ea7",
+          "heading": "## 1. Decision and its exact scope",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 11
+        },
+        {
+          "end": 58,
+          "excerpt_sha256": "63bb49cc96678daefb4e85a807c1885c543c91a8096ef0a29ef508a5f5b138c7",
+          "heading": "## 2. How the evidence is classified",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 41
+        },
+        {
+          "end": 198,
+          "excerpt_sha256": "74772daaaf50067862b1ea49883101aba0ab98653b1a1e2d99c5726e44658fd8",
+          "heading": "## 7. What remains unresolved",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 187
+        },
+        {
+          "end": 56,
+          "excerpt_sha256": "a003d66e653800e32723be558608426388b5182738140a2d369254b16832903b",
+          "heading": "## Instrumentation qualification before the causal panel",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 20
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "f17517e14cf0cee524b9c589c9af4368d706f3cbce23a6cf95827ec30d15d7fe",
+          "heading": "## Fixed intervention and service fidelity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 57
+        },
+        {
+          "end": 115,
+          "excerpt_sha256": "b3d237561c1852854736acbb7767f156cb31e46ad2ae6f19aa69eb843a9e05f8",
+          "heading": "## Registered effects, with content and time heterogeneity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 78
+        },
+        {
+          "end": 135,
+          "excerpt_sha256": "18591e68c416e0bcfa54a7e560211b2dbe76f263c7485338d315c2dac1826732",
+          "heading": "## Convergence failed, including repeatability",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 116
+        },
+        {
+          "end": 157,
+          "excerpt_sha256": "2e78a1bbb3cdd2b23d5d76206e9cba1d70679a0928d6d75a59564586d3c29e31",
+          "heading": "## Scientific decision and scope",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 136
+        },
+        {
+          "end": 60,
+          "excerpt_sha256": "2aadb79a728210af88cb9ed2d4bf8d0b67df9291d139a3370581d7458cead800",
+          "heading": "## All three required RTC-log channel families failed freshness",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 34
+        },
+        {
+          "end": 87,
+          "excerpt_sha256": "a069412c665b60eae21b5e1402628cad3b8035e6bf0b8c89b44f2d3b31312f0a",
+          "heading": "## Supported alternatives and their exact limitations",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 61
+        },
+        {
+          "end": 120,
+          "excerpt_sha256": "3e5e61dbdf9370cf6a77e855274b55fb1792c7bac24d5073d038f452c2c16cee",
+          "heading": "## Decision and identifiability boundary",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 88
+        },
+        {
+          "end": 22,
+          "excerpt_sha256": "e03073fe223fd24f1ec0a91caa35313f617e6f252e5f629027c415333d1ca1f7",
+          "heading": "## What is complete",
+          "kind": "line_span",
+          "source": "if1",
+          "start": 6
+        },
+        {
+          "end": 59,
+          "excerpt_sha256": "7d084f3bb7d02483fb6841f1ba15612316be244d8aab9f739d094be637078ac9",
+          "heading": "## Admission result",
+          "kind": "line_span",
+          "source": "if1",
+          "start": 23
+        },
+        {
+          "end": 48,
+          "excerpt_sha256": "8c96f7b9fed644c029d433d37ecb2240e59170081c36a90103c0ee8df4de11b9",
+          "heading": "## Preregistration and execution",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 18
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "429de5379a035a76b5fc7648096a052c10b53cdb224b184e19166fbc433ac2a9",
+          "heading": "## Point prediction and reproducibility",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 49
+        },
+        {
+          "end": 126,
+          "excerpt_sha256": "f1d6650921da3ef4da9bb61614044702826ded69427f9483e3239e2209cea504",
+          "heading": "## Calibration, uncertainty and safety",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 91
+        },
+        {
+          "end": 143,
+          "excerpt_sha256": "56e33ca0d456fff13d19b35461b052848bc3313b9054f8a4d25a8529091543af",
+          "heading": "## Scope and stopping decision",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 127
+        }
+      ],
+      "finding_classes": [
+        "unresolved_and_scope_constraints"
+      ],
+      "id": "nonclaims",
+      "independence_unit": "Separate study-specific units",
+      "manuscript": {
+        "block_sha256": "64469d7b83f027b009c2b56a846c1fdbd6d1fc4aa8b0c4f95c4433f80e7d1e7e",
+        "end_line": 506,
+        "marker_line": 497,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "No permanentmemory,universalnonsettling,unique mediator,universal fixture/control impossibility,or nativePO1failure."
+    },
+    {
+      "evidence": [
+        {
+          "end": 40,
+          "excerpt_sha256": "4e567dfac99abe202ef2510ddb953cb30f103643b513361b9d52025f03b49ea7",
+          "heading": "## 1. Decision and its exact scope",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 11
+        },
+        {
+          "end": 58,
+          "excerpt_sha256": "63bb49cc96678daefb4e85a807c1885c543c91a8096ef0a29ef508a5f5b138c7",
+          "heading": "## 2. How the evidence is classified",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 41
+        },
+        {
+          "end": 198,
+          "excerpt_sha256": "74772daaaf50067862b1ea49883101aba0ab98653b1a1e2d99c5726e44658fd8",
+          "heading": "## 7. What remains unresolved",
+          "kind": "line_span",
+          "source": "rd1",
+          "start": 187
+        },
+        {
+          "end": 56,
+          "excerpt_sha256": "a003d66e653800e32723be558608426388b5182738140a2d369254b16832903b",
+          "heading": "## Instrumentation qualification before the causal panel",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 20
+        },
+        {
+          "end": 77,
+          "excerpt_sha256": "f17517e14cf0cee524b9c589c9af4368d706f3cbce23a6cf95827ec30d15d7fe",
+          "heading": "## Fixed intervention and service fidelity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 57
+        },
+        {
+          "end": 115,
+          "excerpt_sha256": "b3d237561c1852854736acbb7767f156cb31e46ad2ae6f19aa69eb843a9e05f8",
+          "heading": "## Registered effects, with content and time heterogeneity",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 78
+        },
+        {
+          "end": 135,
+          "excerpt_sha256": "18591e68c416e0bcfa54a7e560211b2dbe76f263c7485338d315c2dac1826732",
+          "heading": "## Convergence failed, including repeatability",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 116
+        },
+        {
+          "end": 157,
+          "excerpt_sha256": "2e78a1bbb3cdd2b23d5d76206e9cba1d70679a0928d6d75a59564586d3c29e31",
+          "heading": "## Scientific decision and scope",
+          "kind": "line_span",
+          "source": "m5",
+          "start": 136
+        },
+        {
+          "end": 34,
+          "excerpt_sha256": "70a1ee847615c9ed1bc130a8af003c398afacfe5413d2fb1c86686d3109083b2",
+          "heading": "## Capture and qualification",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 3
+        },
+        {
+          "end": 65,
+          "excerpt_sha256": "875374c2ff5cb80a303a7956231a697d6ac313aa3f6c9918d27cefee8cfb25be",
+          "heading": "## Whole-session policy contrast",
+          "kind": "line_span",
+          "source": "native_v10",
+          "start": 35
+        },
+        {
+          "end": 60,
+          "excerpt_sha256": "2aadb79a728210af88cb9ed2d4bf8d0b67df9291d139a3370581d7458cead800",
+          "heading": "## All three required RTC-log channel families failed freshness",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 34
+        },
+        {
+          "end": 87,
+          "excerpt_sha256": "a069412c665b60eae21b5e1402628cad3b8035e6bf0b8c89b44f2d3b31312f0a",
+          "heading": "## Supported alternatives and their exact limitations",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 61
+        },
+        {
+          "end": 120,
+          "excerpt_sha256": "3e5e61dbdf9370cf6a77e855274b55fb1792c7bac24d5073d038f452c2c16cee",
+          "heading": "## Decision and identifiability boundary",
+          "kind": "line_span",
+          "source": "m11r",
+          "start": 88
+        },
+        {
+          "end": 22,
+          "excerpt_sha256": "e03073fe223fd24f1ec0a91caa35313f617e6f252e5f629027c415333d1ca1f7",
+          "heading": "## What is complete",
+          "kind": "line_span",
+          "source": "if1",
+          "start": 6
+        },
+        {
+          "end": 59,
+          "excerpt_sha256": "7d084f3bb7d02483fb6841f1ba15612316be244d8aab9f739d094be637078ac9",
+          "heading": "## Admission result",
+          "kind": "line_span",
+          "source": "if1",
+          "start": 23
+        },
+        {
+          "end": 48,
+          "excerpt_sha256": "8c96f7b9fed644c029d433d37ecb2240e59170081c36a90103c0ee8df4de11b9",
+          "heading": "## Preregistration and execution",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 18
+        },
+        {
+          "end": 90,
+          "excerpt_sha256": "429de5379a035a76b5fc7648096a052c10b53cdb224b184e19166fbc433ac2a9",
+          "heading": "## Point prediction and reproducibility",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 49
+        },
+        {
+          "end": 126,
+          "excerpt_sha256": "f1d6650921da3ef4da9bb61614044702826ded69427f9483e3239e2209cea504",
+          "heading": "## Calibration, uncertainty and safety",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 91
+        },
+        {
+          "end": 143,
+          "excerpt_sha256": "56e33ca0d456fff13d19b35461b052848bc3313b9054f8a4d25a8529091543af",
+          "heading": "## Scope and stopping decision",
+          "kind": "line_span",
+          "source": "po1",
+          "start": 127
+        }
+      ],
+      "finding_classes": [
+        "synthesis_no_new_inference"
+      ],
+      "id": "conclusion",
+      "independence_unit": "Separate study-specific units;no pooled result",
+      "manuscript": {
+        "block_sha256": "5219e86092e493655d2ec16c6b81d31f6656d053ed6175a02f25fab43fec09c5",
+        "end_line": 521,
+        "marker_line": 507,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Bounded native causal history and policyharm coexist with unmet control prerequisites;RD1 stops the objective."
+    },
+    {
+      "evidence": [
+        {
+          "kind": "json_pointer",
+          "pointer": "/source_documents_and_committed_reports_only",
+          "reported_value": true,
+          "source": "rd1_audit",
+          "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+        },
+        {
+          "kind": "json_pointer",
+          "pointer": "/raw_telemetry_restored_or_decoded",
+          "reported_value": false,
+          "source": "rd1_audit",
+          "value_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+        },
+        {
+          "kind": "whole_file_sha256",
+          "source": "rd1_receipt"
+        },
+        {
+          "kind": "whole_file_sha256",
+          "source": "rd1_ledger"
+        }
+      ],
+      "finding_classes": [
+        "publication_process_and_access_limits"
+      ],
+      "id": "provenance",
+      "independence_unit": "1,698 baseline tracked files;summary-only source access",
+      "manuscript": {
+        "block_sha256": "b6b3ba1364d010ab750511e9d7af2803ff2c3df2bed7cefa8509b6849bbcccfa",
+        "end_line": 543,
+        "marker_line": 522,
+        "path": "paper/negative-result-publication/main.tex"
+      },
+      "reviewed_statement": "Pinned RD1 archive receipt and new publication provenance; private raw/licensed media are not public release."
+    }
+  ],
+  "public_files_do_not_imply_private_raw_release": true,
+  "publication_baseline_commit": "02c3693704b2fe42640f7a6b8c6eecc347577161",
+  "scientific_stopping_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+  "scope": "Publication narrative and provenance only. No new experiment, effect estimate, fit or successor.",
+  "semantic_review": "Manual study-by-study interpretation. Mechanical checks verify provenance, locators, values and preservation; they are not an automated proof of causal interpretation.",
+  "sources": {
+    "bibliography": {
+      "bytes": 8125,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/research/references.bib",
+      "path": "research/references.bib",
+      "sha256": "fd099113ddc56bfc9ab99ada9bc2209de7f9ef7ad1f3924fbc1c29fc784cbb86"
+    },
+    "earlier": {
+      "bytes": 205413,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/paper/main.tex",
+      "path": "paper/main.tex",
+      "sha256": "c0c3b373af3371d58dc59e9cc91711b75d3373bdb98dc4401f812488f1e496d7"
+    },
+    "if1": {
+      "bytes": 5954,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_INSTRUMENTED_FIXTURE_IF1_RESULT.md",
+      "path": "docs/NATIVE_INSTRUMENTED_FIXTURE_IF1_RESULT.md",
+      "sha256": "ffb1230cd97415e78a625936323a87f48e58565a28f18d24332ad1633a6e067f"
+    },
+    "if1_report": {
+      "bytes": 4026,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-instrumented-fixture-if1-build-admission.json",
+      "path": "reports/native-instrumented-fixture-if1-build-admission.json",
+      "sha256": "56e2080b9d9b877c06f5e251223cd7b559468f9293199ef69958531db17764d4"
+    },
+    "m10": {
+      "bytes": 3474,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_MECHANISM_OBSERVABILITY_M10_RESULTS.md",
+      "path": "docs/NATIVE_MECHANISM_OBSERVABILITY_M10_RESULTS.md",
+      "sha256": "929bfe9bc7c3083404b0c0b0f1aa059f89f3d323398741695a5b59699248ccaf"
+    },
+    "m10_report": {
+      "bytes": 60606,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-mechanism-observability-m10-instrumentation-gate.json",
+      "path": "reports/native-mechanism-observability-m10-instrumentation-gate.json",
+      "sha256": "2777ebc62ec9ce882ac836adfd2d0f70c1b4f85c22e247e5cad73a72237af5ed"
+    },
+    "m10r": {
+      "bytes": 5679,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_MECHANISM_OBSERVABILITY_M10R_RESULTS.md",
+      "path": "docs/NATIVE_MECHANISM_OBSERVABILITY_M10R_RESULTS.md",
+      "sha256": "e8cada0ecc87432ffc5b497ef1f4e1fed789de523cc617182e76b021d2d27da7"
+    },
+    "m10r_interpretation": {
+      "bytes": 8894,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_MECHANISM_OBSERVABILITY_M10R_INTERPRETATION.md",
+      "path": "docs/NATIVE_MECHANISM_OBSERVABILITY_M10R_INTERPRETATION.md",
+      "sha256": "625004d1e9a2f70e76f85d6bc99712f63ee079ba40722a1aa47e64213621b0b3"
+    },
+    "m10r_report": {
+      "bytes": 566517,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-mechanism-observability-m10r-summary.json",
+      "path": "reports/native-mechanism-observability-m10r-summary.json",
+      "sha256": "01e65546001837b8da6ed6c0b799d9f73fd6524e9152a5c96d5ea8e2b5a20e86"
+    },
+    "m11": {
+      "bytes": 2121,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_TRANSPORT_TIMING_M11_RESULTS.md",
+      "path": "docs/NATIVE_TRANSPORT_TIMING_M11_RESULTS.md",
+      "sha256": "7a29bd83a20860ad6adb8fc37af69609c44689f542d5eb9c0eb5383019351cc2"
+    },
+    "m11_report": {
+      "bytes": 241877,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-transport-timing-m11-channel-qualification.json",
+      "path": "reports/native-transport-timing-m11-channel-qualification.json",
+      "sha256": "1fd3a87f6e94687e8e34dad56059d3266d0b0d55e475d3fe082d0b7754a6665d"
+    },
+    "m11r": {
+      "bytes": 9320,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_TRANSPORT_TIMING_M11R_RESULTS.md",
+      "path": "docs/NATIVE_TRANSPORT_TIMING_M11R_RESULTS.md",
+      "sha256": "7dcbb64d96ba8ad8dfc7776a96cd17c051658e8726f8f0b606466a0f94d03999"
+    },
+    "m11r_report": {
+      "bytes": 233813,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-transport-timing-m11r-channel-qualification.json",
+      "path": "reports/native-transport-timing-m11r-channel-qualification.json",
+      "sha256": "67f494b79a65dfffd81037dc968ed29bc00e9aa1b64de6861a28b3d92c71fb3c"
+    },
+    "m5": {
+      "bytes": 12034,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_PREFIX_MEMORY_M5_RESULTS.md",
+      "path": "docs/NATIVE_PREFIX_MEMORY_M5_RESULTS.md",
+      "sha256": "74dd09e9b932422e19b0ebb2044c0ba5bf2ee999eb29cf46762c2611a014de46"
+    },
+    "m5_report": {
+      "bytes": 80546,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-prefix-memory-m5-summary.json",
+      "path": "reports/native-prefix-memory-m5-summary.json",
+      "sha256": "2721e77f02b25d580584f862e5ffc2d0a6bdb5d68df185f642874a7a94a900d6"
+    },
+    "m6": {
+      "bytes": 2435,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_HISTORY_STATE_M6_CLOSURE.md",
+      "path": "docs/NATIVE_HISTORY_STATE_M6_CLOSURE.md",
+      "sha256": "52132e453da7c339a076f84c243cea46eb1ae2e6f444ebb3a3c6be9f190a5bda"
+    },
+    "m6_report": {
+      "bytes": 53265,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-history-state-m6-clock-closure.json",
+      "path": "reports/native-history-state-m6-clock-closure.json",
+      "sha256": "0a3c5ce4b8aa1fbb8c3c18daac79d086485f2712dbda03f38adc1eb75e0d46a6"
+    },
+    "m6r": {
+      "bytes": 11534,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_HISTORY_STATE_M6R_RESULTS.md",
+      "path": "docs/NATIVE_HISTORY_STATE_M6R_RESULTS.md",
+      "sha256": "df8694b1f50e43e46f86a41b13a49718a9b52645c019de88689a5d9537f4f519"
+    },
+    "m6r_report": {
+      "bytes": 8940,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-history-state-m6r-membership-gate.json",
+      "path": "reports/native-history-state-m6r-membership-gate.json",
+      "sha256": "6ea0eca82d5ea7ab93a55b232b2b1a3b76c66ea06c30e05539d5e0f30a243724"
+    },
+    "m7": {
+      "bytes": 2867,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_STATE_CONDITIONING_M7_RESULTS.md",
+      "path": "docs/NATIVE_STATE_CONDITIONING_M7_RESULTS.md",
+      "sha256": "8747a4de9b3bc5290f05e50fde3362760b84709e0573554b8e79c1ac381f0b0b"
+    },
+    "m7_report": {
+      "bytes": 14963,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-state-conditioning-m7-summary.json",
+      "path": "reports/native-state-conditioning-m7-summary.json",
+      "sha256": "9646bba277fce070b871255bbc6a8e9f2d6f74deadbd4822fa091c48c9b33757"
+    },
+    "m7r": {
+      "bytes": 1281,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_STATE_CONDITIONING_M7R_RESULTS.md",
+      "path": "docs/NATIVE_STATE_CONDITIONING_M7R_RESULTS.md",
+      "sha256": "77ff67295dab8a3a8d2aecda5e16c387895db0ae154958c8b1a9389a33ebafd4"
+    },
+    "m7r_report": {
+      "bytes": 7099,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-state-conditioning-m7r-summary.json",
+      "path": "reports/native-state-conditioning-m7r-summary.json",
+      "sha256": "fd09c93e9906722ac49cb9a199c88736635fbe158d2a86386fa69a12c67a3214"
+    },
+    "m7ra": {
+      "bytes": 6412,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_STATE_CONDITIONING_M7RA_RESULTS.md",
+      "path": "docs/NATIVE_STATE_CONDITIONING_M7RA_RESULTS.md",
+      "sha256": "9920d157a89aa563cadf6b8ea543f71a0a1283210bc6bd89f323cb83e3275177"
+    },
+    "m7ra_report": {
+      "bytes": 15035,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-state-conditioning-m7ra-summary.json",
+      "path": "reports/native-state-conditioning-m7ra-summary.json",
+      "sha256": "5f10861a9b2b8e8937d57f02c3407c713e846407726e9dddebeb8ece5c3c66fc"
+    },
+    "m8": {
+      "bytes": 11013,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_BWE_TRANSIENTS_M8_RESULTS.md",
+      "path": "docs/NATIVE_BWE_TRANSIENTS_M8_RESULTS.md",
+      "sha256": "f3c37893ceef4111fbe5119df3abfbafe2290a1ce7a5ff25b81ba4e23ec30d23"
+    },
+    "m8_report": {
+      "bytes": 6695,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-bwe-transients-m8-selection.json",
+      "path": "reports/native-bwe-transients-m8-selection.json",
+      "sha256": "3ec893818277dd23accff7a3c800be1c2b670fd74c63fee579c795d6595d684f"
+    },
+    "m9": {
+      "bytes": 3976,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_PHASE_STATE_M9_RESULTS.md",
+      "path": "docs/NATIVE_PHASE_STATE_M9_RESULTS.md",
+      "sha256": "02a14e2e6a28c5bfd1e9d47730d98bfe1c1e92547bf9729ba022668e99da45e4"
+    },
+    "m9_report": {
+      "bytes": 1451,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-phase-state-m9-scientific-stop.json",
+      "path": "reports/native-phase-state-m9-scientific-stop.json",
+      "sha256": "dadfd6285098f33f14d487e1b53b3d2cdb10e9952bb3c3e6ee9781a11379832d"
+    },
+    "m9r": {
+      "bytes": 8807,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_PHASE_STATE_M9R_RESULTS.md",
+      "path": "docs/NATIVE_PHASE_STATE_M9R_RESULTS.md",
+      "sha256": "aec26922a1153fc6412110a8a0507d28077595a782ad03c2ade6d5ce7e479db8"
+    },
+    "m9r_interpretation": {
+      "bytes": 7474,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_PHASE_STATE_M9R_INTERPRETATION.md",
+      "path": "docs/NATIVE_PHASE_STATE_M9R_INTERPRETATION.md",
+      "sha256": "a53f71be71eedfa8be2c30ef3fd4d2093cc45acc21f032f47cfbe11fbd34a1ba"
+    },
+    "m9r_report": {
+      "bytes": 636581,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-phase-state-m9r-summary.json",
+      "path": "reports/native-phase-state-m9r-summary.json",
+      "sha256": "58d586dd3a42b976b649de72a28d3b269e7fc16f445f1677981b06b1fd82539d"
+    },
+    "native_v10": {
+      "bytes": 5021,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_CLOCK_ACTION_TURN_TCP_V10_RESULTS.md",
+      "path": "docs/NATIVE_CLOCK_ACTION_TURN_TCP_V10_RESULTS.md",
+      "sha256": "11c30fe3c4c717bd8855737bab9c796685190bd2765dfbfeafe7605dfafbb5b7"
+    },
+    "native_v10_report": {
+      "bytes": 46737,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-clock-action-turntcp-v10-analysis.json",
+      "path": "reports/native-clock-action-turntcp-v10-analysis.json",
+      "sha256": "9ca5df3fc70cb8f81ac5dd94b4e4057d78e91976b41bcb21ae73bbce19c1d162"
+    },
+    "native_v9": {
+      "bytes": 3712,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_CLOCK_ACTION_TURN_TCP_V9_RESULTS.md",
+      "path": "docs/NATIVE_CLOCK_ACTION_TURN_TCP_V9_RESULTS.md",
+      "sha256": "3666b255475873fe2235313b9e77fe393c978dd787694dfb72f3875bc19e56f6"
+    },
+    "native_v9_report": {
+      "bytes": 31842,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-clock-action-turntcp-v9-analysis.json",
+      "path": "reports/native-clock-action-turntcp-v9-analysis.json",
+      "sha256": "a20a40e4417cbd2992af71b695d0972b601dc6178394e7dbe41d544c67a12617"
+    },
+    "po1": {
+      "bytes": 9406,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/PARTIAL_OBSERVABILITY_PO1_RESULTS.md",
+      "path": "docs/PARTIAL_OBSERVABILITY_PO1_RESULTS.md",
+      "sha256": "74f934494b288ee9f7efff1c25fecb1a431e26c749bd7ba53ed8d23e04d1229a"
+    },
+    "po1_config": {
+      "bytes": 4804,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/configs/partial_observability_po1.json",
+      "path": "configs/partial_observability_po1.json",
+      "sha256": "c6838090d905cb64a1ec3f94f93a878c3a909fb39e479a7e5d5c083bd6a1a90b"
+    },
+    "po1_figure": {
+      "bytes": 308039,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/figures/partial-observability-po1.png",
+      "path": "reports/figures/partial-observability-po1.png",
+      "sha256": "9fd1122596a6fd710e459a2da540b3a3951c346cd25e4f1965ffa1ad18712e35"
+    },
+    "po1_plan": {
+      "bytes": 11868,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/PARTIAL_OBSERVABILITY_PO1_PLAN.md",
+      "path": "docs/PARTIAL_OBSERVABILITY_PO1_PLAN.md",
+      "sha256": "cf19519a30071a1678a380c05ed19f22599fc84673bffa72ba934d70a459d64f"
+    },
+    "po1_report": {
+      "bytes": 320311,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/partial-observability-po1-result.json",
+      "path": "reports/partial-observability-po1-result.json",
+      "sha256": "f6743c77a52f7b271642aa73e6fcd125c2b735f6eb6732e235f816cb940b55f3"
+    },
+    "rd1": {
+      "bytes": 21366,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/RESEARCH_DECISION_RD1.md",
+      "path": "docs/RESEARCH_DECISION_RD1.md",
+      "sha256": "13b3094d954d056cb1fdd2e7ccb74bf07c2945cfa30572a4e4f3a0bc6984e722"
+    },
+    "rd1_audit": {
+      "bytes": 1488,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/research-decision-rd1-audit.json",
+      "path": "reports/research-decision-rd1-audit.json",
+      "sha256": "e9ad94c520c83a59dd42d5fdf8d1aeb7fd4fbe58783391d43407c1c9bf76a28e"
+    },
+    "rd1_ledger": {
+      "bytes": 30135,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/data/research-decision-rd1/evidence-ledger.json",
+      "path": "data/research-decision-rd1/evidence-ledger.json",
+      "sha256": "3f48abb4fd7a0a50e5398c400146689544b691b3e573766fba1e4210db266b1b"
+    },
+    "rd1_receipt": {
+      "bytes": 1736,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/storage-receipts/research-decision-rd1-20261015-01.json",
+      "path": "docs/storage-receipts/research-decision-rd1-20261015-01.json",
+      "sha256": "1478a7e500cb84a4e1e77426894d229e691c620ed492a61c1682f9a293be9c81"
+    },
+    "rd1_tables": {
+      "bytes": 1269,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/paper/negative-result/evidence-tables.tex",
+      "path": "paper/negative-result/evidence-tables.tex",
+      "sha256": "0f19dae6146c2556648e6490b94a234aace189aa1863dbf82cccd591f1b52cdd"
+    },
+    "v11d": {
+      "bytes": 4647,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_CLOCK_ACTION_TURN_TCP_V11D_RESULTS.md",
+      "path": "docs/NATIVE_CLOCK_ACTION_TURN_TCP_V11D_RESULTS.md",
+      "sha256": "d1bafb94e9c751f58c4eebf5427fe250db2c6e68e462619866abc9c06504cb6b"
+    },
+    "v11d_report": {
+      "bytes": 94155,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-clock-action-turntcp-v11d-analysis-final.json",
+      "path": "reports/native-clock-action-turntcp-v11d-analysis-final.json",
+      "sha256": "63ea1bac7c6f2edbf92810c0259fe2b373383c66420624e5025e504cb99a3c79"
+    },
+    "v12": {
+      "bytes": 5729,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_SUPPORT_VALIDATION_V12_RESULTS.md",
+      "path": "docs/NATIVE_SUPPORT_VALIDATION_V12_RESULTS.md",
+      "sha256": "f18f165af1ce8445d4827c272a545d27be2617e3d8903d6492f9a7d6debeec3f"
+    },
+    "v12_report": {
+      "bytes": 32055,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-v12-support-census-gate.json",
+      "path": "reports/native-v12-support-census-gate.json",
+      "sha256": "0f8aa75807507d93f3054a0bdeeda71534a5b23d4465b8a3fa4828d7ce2ef6a2"
+    },
+    "v12_summary": {
+      "bytes": 106843,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-v12-support-census-summary.json",
+      "path": "reports/native-v12-support-census-summary.json",
+      "sha256": "ef92e608d2da17cd9b8f8095bd1bf20c767c4ebce16da0887cd81386da40930e"
+    },
+    "v13": {
+      "bytes": 6353,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/docs/NATIVE_CONTINUOUS_VALIDATION_V13_RESULTS.md",
+      "path": "docs/NATIVE_CONTINUOUS_VALIDATION_V13_RESULTS.md",
+      "sha256": "853342b97aa0098208741458f61e6b48ccde8861a3cd5c6e5e764823d1c63f45"
+    },
+    "v13_report": {
+      "bytes": 80710,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-v13-support-census-gate.json",
+      "path": "reports/native-v13-support-census-gate.json",
+      "sha256": "d760e812c861b874aeb252eb06f3af2eeedcf734a687d6efb770ab069d21ed3f"
+    },
+    "v13_summary": {
+      "bytes": 244095,
+      "frozen_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+      "github_url": "https://github.com/p-yan-6908/networkRLCD/blob/050e4f4be9b5135628cffb82e08821bbed143786/reports/native-v13-support-census-summary.json",
+      "path": "reports/native-v13-support-census-summary.json",
+      "sha256": "69729de01a7e61c96fd85cb0fca3c9ab4c970f8e1cea372f22651804ae58578c"
+    }
+  }
+}

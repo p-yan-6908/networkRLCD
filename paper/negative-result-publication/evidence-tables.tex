@@ -1,0 +1,26 @@
+% Rounded existing report values only. No reanalysis or model search.
+\newcommand{\NVNinePSNR}{0.508}
+\newcommand{\NVNinePSNRLow}{0.077}
+\newcommand{\NVNinePSNRHigh}{0.938}
+\newcommand{\NVTenDelta}{-14.1}
+\newcommand{\NVTenLow}{-22.6}
+\newcommand{\NVTenHigh}{-5.5}
+\newcommand{\MFiveKampar}{0.20746}
+\newcommand{\MFiveKamparLow}{0.09910}
+\newcommand{\MFiveKamparHigh}{0.31413}
+\newcommand{\MFiveVolga}{0.14750}
+\newcommand{\MFiveVolgaLow}{0.09807}
+\newcommand{\MFiveVolgaHigh}{0.19353}
+\newcommand{\POOneTable}{%
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lrrrrrr}\toprule
+&\multicolumn{3}{c}{Factual BWE MAE (octaves)}&\multicolumn{3}{c}{Synthetic advantage MAE}\\
+Family&Persistence&S1&H1&Constant&S1&H1\\\midrule
+sawtooth & 0.740 & 0.457 & 0.469 & 0.256 & 0.204 & 0.203\\
+square\_wave & 0.684 & 0.413 & 0.421 & 0.251 & 0.200 & 0.199\\
+slow\_fade & 0.587 & 0.447 & 0.469 & 0.183 & 0.152 & 0.154\\
+feedback\_flap & 0.407 & 0.716 & 0.724 & 0.080 & 0.221 & 0.225\\
+\bottomrule\end{tabular}
+\caption{PO1 frozen validation values: 72 episodes/family across three fixed fits, six nested decisions/episode. S1 is the fixed-history summary baseline; H1 adds ordered lags. Lower is better. These are simulator results, not native effects.}\label{tab:po1}
+\end{table}}

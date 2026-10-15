@@ -1,0 +1,49 @@
+{
+  "abi": "rd1_publication_document_build_v1",
+  "compile_logs_sha256": {
+    "compile-pass-1.log": "4148c6e5f67d9fb86b90aeef1022b2f31a731bf487366016f5b6d7a1702176cd",
+    "compile-pass-2.txt": "df85ed35cda75ed2e03f7676838e3fcc784a71d0a139259e34b23b84c298cc32",
+    "compile-pass-3.txt": "df85ed35cda75ed2e03f7676838e3fcc784a71d0a139259e34b23b84c298cc32",
+    "compile-pass-4.txt": "2202da27432b47098a5d60d19749a44b3270e527b2f7a7937dac5ba4680c58d2",
+    "compile-pass-5.txt": "5166815a4e2de86eb1fa82eef48aa60ca26bf82029e75729057a1ed10b33bd30"
+  },
+  "external_build_directory": "/home/agent/.cache/networkrlcd/publication-readiness-rd1/paper-build",
+  "final_compile_log": "compile-pass-5.txt",
+  "final_warning_lines": [],
+  "new_scientific_analysis_or_model_run": false,
+  "overfull_box_warnings": 0,
+  "pages": 10,
+  "pdf_bytes": 489417,
+  "pdf_sha256": "24aeefa8061d5a2ad21c5fcbff16a620dfc07b6738794b0673941a446d7677c5",
+  "pdflatex_version": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "previous_editions_unchanged": true,
+  "repository_pdf": "paper/negative-result-publication/networkRLCD-negative-result-publication.pdf",
+  "scientific_stopping_commit": "050e4f4be9b5135628cffb82e08821bbed143786",
+  "source_sha256": {
+    "paper/negative-result-publication/evidence-tables.tex": "0f19dae6146c2556648e6490b94a234aace189aa1863dbf82cccd591f1b52cdd",
+    "paper/negative-result-publication/main.tex": "c6b6e9e06f9afa6166dc1d5763e8b2ecf9523e192f5e4a7a3e1ef9bb80df9a35",
+    "paper/negative-result-publication/references.tex": "2d71ffb399820895ea268c9bc26525a2e55ee708c82a87f5baa581f95fd0ea29",
+    "reports/figures/partial-observability-po1.png": "9fd1122596a6fd710e459a2da540b3a3951c346cd25e4f1965ffa1ad18712e35"
+  },
+  "text_extracted_for_document_proofreading": true,
+  "undefined_reference_warnings": 0,
+  "underfull_box_warnings": 0,
+  "unresolved_reference_tokens": 0,
+  "visual_inspection": {
+    "earlier_typeset_pages": [
+      1,
+      3,
+      5
+    ],
+    "final_pages": [
+      2,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "findings": "Readable text, table, unchanged frozen figure and references; no clipping. Figure precedes the stopping section without splitting its body paragraphs."
+  }
+}
