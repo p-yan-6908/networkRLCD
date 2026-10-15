@@ -1,0 +1,17 @@
+{
+  "checked_utc": "2026-10-15T22:55:00.368822+00:00",
+  "environment_spec_revision": "212",
+  "observed_spec_revision": "212",
+  "observations_current": true,
+  "network_policy": {
+    "mode": "unrestricted",
+    "state": "enforced"
+  },
+  "HF_TOKEN_available_without_value": true,
+  "https_huggingface_co_status": 200,
+  "private_dataset_metadata_authenticated_status": 200,
+  "private_dataset": "p-yan/networkrlcd-results-archive",
+  "environment_dump_performed": false,
+  "managed_policy_changed": false,
+  "network_proxy_preserved": true
+}

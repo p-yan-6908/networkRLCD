@@ -1,0 +1,48 @@
+{
+  "abi": "po1_verified_synthetic_screen_archive_receipt_v1",
+  "archive_and_file_checksums_verified": true,
+  "archive_helper_sha256": "46debc23ea85479ec28046323a38b50a2a920e1c7e3e514f9a4366fc5c00d25e",
+  "budget_bytes": 150000000,
+  "closed_native_data_opened": false,
+  "controller_fitted": false,
+  "evidence_deleted": 0,
+  "fresh_download_bytes": 3056423,
+  "members_freshly_size_sha256_verified": 73,
+  "native_reservation_untouched": true,
+  "native_sessions": 0,
+  "objects": {
+    "RESTORE.md": {
+      "bytes": 376,
+      "sha256": "69d6760af3ada7a67f9c4a0bc76146349fc597d96bc58ed93bb325678079654c"
+    },
+    "SHA256SUMS": {
+      "bytes": 82,
+      "sha256": "2de34593c9086cc040c4fad35fb70a51ca5191cf80282e75b82694257c49d990"
+    },
+    "evidence.tar.gz": {
+      "bytes": 3043918,
+      "sha256": "a45f0a17f54e3ec4a629c5901833dcb2030b17cc7bbab03c32cba6630bcd7a25"
+    },
+    "file-index.json": {
+      "bytes": 12047,
+      "sha256": "45ba206cecb776f6bd8390aba64ebf428d98a29509f67f9324784b04e2158672"
+    }
+  },
+  "objects_freshly_verified": 4,
+  "prefix": "partial-observability-po1-20261015-01",
+  "preservation_audit_sha256": "7a4f4adc1746d44b939a0f68ec3e3a6123a3df492e930d21158cb806463a2e60",
+  "prior_tracked_files_unchanged": 1667,
+  "private": true,
+  "protocol_sha256": "2fafa6ec6063691f56ad573b7353f76bdc199fc33b8b235baa905234981a61b3",
+  "raw_bytes": 4894216,
+  "raw_evidence_retained": true,
+  "raw_root": "/home/agent/.cache/networkrlcd/partial-observability-po1",
+  "raw_stage_fresh_bytes": 11007062,
+  "registration_commit": "d43d407ec63c894dabeffe33de12612ff83dc39b",
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "result_sha256": "f6743c77a52f7b271642aa73e6fcd125c2b735f6eb6732e235f816cb940b55f3",
+  "revision": "d9c774f22b2feb390e01dbc41c6105224e0ed1e9",
+  "stage_bytes": 3056423,
+  "synthetic_episodes": 816,
+  "synthetic_passed": false
+}
