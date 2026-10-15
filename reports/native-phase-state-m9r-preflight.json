@@ -1,0 +1,45 @@
+{
+  "HF_TOKEN_available": true,
+  "M8_census_equivalence_queries": 256,
+  "M9_inventory_verified": true,
+  "M9_pinned_revision": "995876800a5b59e867a35a91fb070fe6a75a34ea",
+  "M9_state_or_future_labels_opened": false,
+  "abi": "native_phase_state_m9r_preflight_v1",
+  "all_legacy_census_results_identical": true,
+  "authenticated_hostname": "huggingface.co",
+  "authenticated_status": 200,
+  "cloud_observed_spec_revision": 189,
+  "external_free_bytes": 22274969600,
+  "frozen_gap_limit_ms": 250,
+  "new_native_captures_started": false,
+  "no_missing_values_filled": true,
+  "observations_current": true,
+  "observed_timing_excess_ms": [
+    201.2,
+    196.8
+  ],
+  "old_nominal_ms": 100,
+  "poll_ms": 25,
+  "runtime": {
+    "chromium_binary_path": "/usr/bin/chromium",
+    "chromium_sha256": "2c8d32d29dc6781c35ae196ea83299d507ac88fc339301abe74672feda299779",
+    "chromium_version": "Chrome/154.0.8037.57",
+    "coturn_binary_path": "/home/agent/.cache/networkrlcd/turn-runtime/extracted/usr/bin/turnserver",
+    "coturn_binary_sha256": "6de6c80134271abd2c51cbadac1e2bb973ac89b5491b0a2ae480148d66a37162",
+    "coturn_library_dir": "/home/agent/.cache/networkrlcd/turn-runtime/extracted/usr/lib/x86_64-linux-gnu",
+    "coturn_library_sha256": {
+      "libevent_extra-2.1.so.7": "0da7f591283f063939323d9dc3370dc9e53559c6b2c43c28c18159bb8f656daf",
+      "libevent_openssl-2.1.so.7": "2ec9f0a63b5af4df80b7155611794246ebe9932ded259bbba873bfc9da98d5f9",
+      "libhiredis.so.1.1.0": "adfb8e6f9d2d430d5d577f85626490769fb69ef41a6967fba611b5a16b09ab15"
+    },
+    "coturn_package_path": "/home/agent/.cache/networkrlcd/turn-runtime/coturn_4.6.1-2_amd64.deb",
+    "coturn_package_sha256": "cb55194d0118d26035aa39aa7306fd810a47069643266724357e8da2a22612e0",
+    "coturn_version": "4.6.1",
+    "managed_policy_path": "/etc/chromium/policies/managed/misc.json",
+    "managed_policy_sha256": "10ee54ed22fc23337096004f8248d6ea977f059149386e0f9e70c4b77d9db6b5",
+    "managed_policy_value": "disable_non_proxied_udp",
+    "network_policy": "TURN control TCP and relay/queue UDP are loopback-only"
+  },
+  "runtime_matches_qualified_M8_M9": true,
+  "source_syntax_parsed": true
+}

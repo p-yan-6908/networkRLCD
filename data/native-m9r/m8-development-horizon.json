@@ -1,0 +1,56 @@
+{
+  "M8_pinned_revision": "46d71bf31f318c92d92a7d2446137753ac4aacfb",
+  "M8_record_sha256": "445e21cfc88068aa3f85a1b6632d4224da9717670456c427e61e764223cab42c",
+  "M8_summary_sha256": "a4d60c01718852a5cd6a96fc1327826da2bd84d70eab53811ac2f6a62c6a11b9",
+  "M9_instrumentation_stop_sha256": "dadfd6285098f33f14d487e1b53b3d2cdb10e9952bb3c3e6ee9781a11379832d",
+  "abi": "M9_M8_only_support_development_v1",
+  "common_horizon_ms": 64000,
+  "common_t90_upper_bounds_ms": {
+    "fall": [
+      1021.4745286058314,
+      918.3530264130895,
+      938.8422518362058,
+      966.632458320797,
+      1189.8284744480916,
+      1202.7129066894195,
+      927.974478710079,
+      1117.915929386705,
+      957.7340732029261,
+      971.030572738382,
+      1003.3557893432371,
+      1012.2325145635186,
+      993.7240802933957,
+      974.9979731937347,
+      1107.2769939525388,
+      978.0880536466939
+    ],
+    "rise": [
+      15513.290805432742,
+      15310.822058228936,
+      15819.759702798896,
+      15845.518680694135,
+      14589.41556319609,
+      13505.543981635288,
+      15903.881329521508,
+      14604.380391926243,
+      14945.190240482087,
+      15748.736693248153,
+      15444.560338795724,
+      15527.19545432656,
+      14943.196499396392,
+      14384.931565827457,
+      13351.079679817049,
+      13648.521722506819
+    ]
+  },
+  "direction_envelope_ms": {
+    "fall": 2000,
+    "rise": 16000
+  },
+  "new_conditioning_duration_derived": false,
+  "new_validation_untouched": true,
+  "outcomes_read": false,
+  "rule": "four times upward maximum observed common t90 upper bound rounded to whole seconds; observation budget only",
+  "sampler_derivation": "largest of 100/50/25ms whose sum with maximum timing excess 201.2ms stays below 250ms; no future/state data used",
+  "sampler_period_ms": 25
+}
