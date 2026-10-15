@@ -1,0 +1,46 @@
+{
+  "abi": "rd1_research_decision_manuscript_archive_receipt_v1",
+  "archive_and_file_checksums_verified": true,
+  "archive_helper_sha256": "8bebbb8edfb089c249b8876aef7921e654ab656c4e1c15c66048df03c38f1c73",
+  "budget_bytes": 150000000,
+  "evidence_anchor_commit": "f109ab2",
+  "evidence_deleted": 0,
+  "evidence_ledger_sha256": "3f48abb4fd7a0a50e5398c400146689544b691b3e573766fba1e4210db266b1b",
+  "fresh_download_bytes": 2234314,
+  "local_evidence_retained": true,
+  "members_freshly_size_sha256_verified": 95,
+  "native_panels_opened": 0,
+  "new_models_or_effect_estimates": 0,
+  "objects": {
+    "RESTORE.md": {
+      "bytes": 376,
+      "sha256": "37f5a405073d59f043e8c27f417fc2e6a3ca899259ce756144a2ce606db519ef"
+    },
+    "SHA256SUMS": {
+      "bytes": 82,
+      "sha256": "0f49734be0d3d9413b083966747d6ad4484a0819dee064ede4812d393c18233d"
+    },
+    "evidence.tar.gz": {
+      "bytes": 2216720,
+      "sha256": "6848b8375bd8aff8efd4bd4cdfdc6fbb5acc69116e0d805d5484a6087ce3aef9"
+    },
+    "file-index.json": {
+      "bytes": 17136,
+      "sha256": "9721fc348841fdfadf5b23a88ad9e91bf614c1a7cc9a0723ff89cafcaceadf5c"
+    }
+  },
+  "objects_freshly_verified": 4,
+  "paper_pages": 9,
+  "pdf_sha256": "160fc6b1671d127750329561c1ec9cf946343c499cb53f28b346d3daab7b0122",
+  "prefix": "research-decision-rd1-20261015-01",
+  "prior_files_unchanged": 1684,
+  "private": true,
+  "raw_bytes": 5768823,
+  "raw_root": "/home/agent/.cache/networkrlcd/research-decision-rd1",
+  "raw_stage_fresh_bytes": 10237451,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "revision": "b764081ce10f66276fb626eac326300f1ce64fcb",
+  "stage_bytes": 2234314,
+  "successor_selected": false,
+  "synthesis_commit": "1644b7cb455fc2995c00705d5e2d985485de9fb7"
+}
