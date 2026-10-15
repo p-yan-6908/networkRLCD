@@ -19,12 +19,15 @@ def preserve():
         'reports/native-phase-state-m9-preservation-audit.json','reports/native-phase-state-m9-next-decision.json',
         'reports/native-phase-state-m9-instrumentation-gate.json','reports/native-phase-state-m9-validation-gate.json',
         'docs/NATIVE_PHASE_STATE_M9_RESULTS.md'}
+    names|={str(p.relative_to(REPO)) for p in (REPO/'reports').glob('native-phase-state-m9-runtime-refresh-*.json')}
     for name in sorted(names):
         target=root/'provenance'/name;target.parent.mkdir(parents=True,exist_ok=True);assert not target.exists()
         shutil.copy2(REPO/name,target)
     shutil.copytree(m.ROOT/'instrumentation',root/'instrumentation_evidence')
     for stage in ('instrumentation','validation'):
         for suffix in ('capture.log','worker.json'):shutil.copy2(m.ROOT/(stage+'-'+suffix),root/(stage+'-'+suffix))
+    for name in ('postprocessing.log','postprocessing-worker.json','analysis-complete.json'):
+        shutil.copy2(m.ROOT/name,root/name)
     bindings={'scientific_registration_commit':'96ada5a290b3807629bf28bf5d74183aff35a9c3',
         'acquisition_only_gate_sha256':m.v.sha(root/'mechanism_qualification_gate.json'),
         'phase_state_summary_sha256':m.v.sha(root/'phase_state_summary.json'),'phase_state_records_sha256':m.v.sha(root/'phase_state_records.json'),
