@@ -1,0 +1,208 @@
+{
+  "abi": "native_transport_timing_m11_static_source_survey_v1",
+  "browser_revision": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+  "chromium_tag": "154.0.8037.57",
+  "files": {
+    "DEPS": {
+      "sha256": "cd59c0f5c31e1dbbc65b2db96bb11a18f7bdc91496fafb5b6a4e7f94d8ad797c",
+      "size": 197649
+    },
+    "alt__AUTHORS": {
+      "sha256": "a06c2ce36ff39a2ffbd3ba1b40a69e5ccb805d8f83dafb51dd68e4492b059a7c",
+      "size": 8166
+    },
+    "alt__PATENTS": {
+      "sha256": "01462e2068d1a04c2274f3389773014c14ed9bc3446b28303543bd3e3c064145",
+      "size": 1388
+    },
+    "alt__modules__congestion_controller__goog_cc__probe_controller.cc": {
+      "sha256": "4ace95a37f1956d4965ef83a55365e23f711d024760a5f95b53b74e5123b370c",
+      "size": 25295
+    },
+    "alt__modules__rtp_rtcp__source__rtcp_receiver.cc": {
+      "sha256": "5f06224ad552f40807a77a6530816e2ba317177678841929eabb4b3f9fbbe082",
+      "size": 37365
+    },
+    "alternatives-source-survey.json": {
+      "sha256": "171c15d49f5d9fe01e6ad28c134ffc128978387ac9e0a2d9054ca2586ed72b6e",
+      "size": 1827
+    },
+    "binary-channel-strings.txt": {
+      "sha256": "4fc1ef38092630e924193e581e9e3ce1a3edfa322014a4ad5d1518062d4fbf2f",
+      "size": 698
+    },
+    "browser-metadata/metadata.json": {
+      "sha256": "2fad1527d67a2274d6d69d9fd8d42df2346c9367677ffaef105c2629074cbdb4",
+      "size": 8223
+    },
+    "chrome__browser__media__webrtc__webrtc_event_log_manager.cc": {
+      "sha256": "f72897b45e9c3a84ec8b94ec8f5cf5fb2db7f23add40aa43a88992b43e70994c",
+      "size": 50975
+    },
+    "chrome__browser__media__webrtc__webrtc_event_log_manager.h": {
+      "sha256": "d369ee968ce64d72a6c63de5ff7e0ee6dfe4e146fb3196a0aa506a673a02d3a2",
+      "size": 26730
+    },
+    "chrome__browser__media__webrtc__webrtc_event_log_manager_local.cc": {
+      "sha256": "8ca668ef695078978abd859ebf43ed1e7b770abaa50321c78bfe1a6e1077453b",
+      "size": 11217
+    },
+    "chrome__browser__media__webrtc__webrtc_event_log_manager_remote.cc": {
+      "sha256": "26ac695509b8b6c3672cbb1f6d214068e856a300c53f84b08581e94a65301c24",
+      "size": 56291
+    },
+    "content__browser__webrtc__webrtc_internals.cc": {
+      "sha256": "d62de9a2b0eedd293f4929ae112ab6fc67c0d4123b2598d8ef9b9a2998ef5f17",
+      "size": 34649
+    },
+    "content__public__common__content_switches.cc": {
+      "sha256": "0262144447bae97b511b1f4e3cfcda4dcd58c5775c890b0b2ff517a3d1b4764e",
+      "size": 45378
+    },
+    "encoding-source-survey.json": {
+      "sha256": "ef9bf1a7516cdbbc8b2ca05d73d527f9404d5cda0f764848bd4c5f936d91a195",
+      "size": 2463
+    },
+    "extra__base__time__time_now_posix.cc": {
+      "sha256": "ad8a692b7c94b84c6a8e516b61074485a3414fa419401630ad73b58d13f1ebf7",
+      "size": 4340
+    },
+    "extra__chrome__browser__extensions__api__webrtc_logging_private__webrtc_logging_private_api.cc": {
+      "sha256": "0d3be2697b154026ef3e64932fd4f0edd0b9341445393da774158cbb18864e2d",
+      "size": 22082
+    },
+    "extra__chrome__common__extensions__api___api_features.json": {
+      "sha256": "b7770352130f58cbbaf54cf0ed7cf96e9a66b279f4f9705a9d37955337e88b66",
+      "size": 34104
+    },
+    "extra__rtc_base__system_time.cc": {
+      "sha256": "02c630b36ad5fbbe4e6c1643965d6d39468aa28199997e4adeb917da0e2329e3",
+      "size": 3366
+    },
+    "final__chrome__browser__media__webrtc__webrtc_logging_controller.cc": {
+      "sha256": "0cd5ef1dc70cedbdb693a5d21b62603640f8a239583a61979361f78fe230c905",
+      "size": 32459
+    },
+    "final__chrome__common__extensions__api__webrtc_logging_private.idl": {
+      "sha256": "0f16f28d29c336871877d9b41ac046eb29f8aead20df1b2b76c8fb57e28e9050",
+      "size": 8240
+    },
+    "final__third_party__blink__renderer__core__inspector__inspector_performance_agent.cc": {
+      "sha256": "0eee80a8c94d9bd303ddefe49fb419b2e07665df371273bbe451a399b5159262",
+      "size": 14962
+    },
+    "final__third_party__webrtc_overrides__rtc_base__logging.cc": {
+      "sha256": "186fea27bade264f01dcaf0c09e0e6c1e23d060037a94f20df381a53274185c8",
+      "size": 7851
+    },
+    "final__third_party__webrtc_overrides__rtc_base__logging.h": {
+      "sha256": "1a99f3bdb9b7f867bb552e2dc8320cf78923b6d7ab1fe757a67e7b857f572b85",
+      "size": 6097
+    },
+    "private-permission-features.json": {
+      "sha256": "67a6a120634c85480b50f460bd9a65cb7d9f4502b951fc080cd3e4db6c0c9e8a",
+      "size": 44322
+    },
+    "private-permission-survey.json": {
+      "sha256": "7f9d1603adfea9ccd3110395521956fb6e3f232786b0a1b40e6e5dc808b24abd",
+      "size": 393
+    },
+    "source-survey-2.json": {
+      "sha256": "9932a9bd10339463b1e2afe4eb4fadf1b36c6f29fafb1ca3fdeb2230f6a6a48c",
+      "size": 2079
+    },
+    "source-survey.json": {
+      "sha256": "b5873a0f355f2f780b0fdc995cb6fe5daee71c9513f29076bdd4afe8080a23df",
+      "size": 1727
+    },
+    "supported-alternatives-survey.json": {
+      "sha256": "867bb8fde8953f08754a371a77d9611d6d517a80f2f492418159524bdea81971",
+      "size": 2322
+    },
+    "third_party__blink__common__switches.cc": {
+      "sha256": "78ae06507a47a2fc8658e7af356a3cedd011d7c95fdb182bd0b0a037184e0c29",
+      "size": 9508
+    },
+    "third_party__blink__renderer__modules__peerconnection__peer_connection_tracker.cc": {
+      "sha256": "abc37af20e20857aa05c6a842df9ce2ffecc77d75560a5f7f1f76db9791b881d",
+      "size": 44063
+    },
+    "verbose-source-survey.json": {
+      "sha256": "2f256f1cece8033ef4f2a8693c333aa0fc7361d37eb0cbca70cbd4dc10668a5a",
+      "size": 1731
+    },
+    "webrtc-source-survey.json": {
+      "sha256": "465428081642120e10490b9dbcc31c9fbe615200a6c3fcaaeae09e335f84398c",
+      "size": 4109
+    },
+    "webrtc__LICENSE": {
+      "sha256": "ab00a482b6a3902e40211b43c5d0441962ea99b6cc7c25c0f243fa270b78d482",
+      "size": 1511
+    },
+    "webrtc__logging__rtc_event_log__encoder__blob_encoding.cc": {
+      "sha256": "9e08e4a7eaf49d13c1091b8782d503c630aece78cf5108dd3d6074ddfe873624",
+      "size": 2981
+    },
+    "webrtc__logging__rtc_event_log__encoder__delta_encoding.cc": {
+      "sha256": "432cf57ebd3b28a28b31c32bee9f3134b4dc2cf4c0942b8cdce44e99c739a02b",
+      "size": 32078
+    },
+    "webrtc__logging__rtc_event_log__encoder__delta_encoding.h": {
+      "sha256": "5135ee79b283460f9a616cc64b2dda7ce950b6dec7b7079c32487c9413083629",
+      "size": 2019
+    },
+    "webrtc__logging__rtc_event_log__encoder__optional_blob_encoding.cc": {
+      "sha256": "80d282f0be17c84b7b6b8441e989761376bf837a25b79477ceec878a93405998",
+      "size": 3211
+    },
+    "webrtc__logging__rtc_event_log__encoder__var_int.cc": {
+      "sha256": "0bb454a77a6e27ff751cb357139e38c5ce5ded3db49736a4f7c4ebc7e3bb4c09",
+      "size": 2301
+    },
+    "webrtc__logging__rtc_event_log__rtc_event_log.proto": {
+      "sha256": "ae373879fdb4de6501b7bb261613ec609dce9df11155ea1283b0a4d96ef2ce4c",
+      "size": 12023
+    },
+    "webrtc__logging__rtc_event_log__rtc_event_log2.proto": {
+      "sha256": "38fadbab1558cb6d7699e85c5b2f387ec28bb4134d9de3691f742a0bfa560c29",
+      "size": 25487
+    },
+    "webrtc__logging__rtc_event_log__rtc_event_log_impl.cc": {
+      "sha256": "a7b8cbb236c9a8b80cbbb0251ff45e79f6a58993bca16e33c1a9abcdc33cbf9d",
+      "size": 12833
+    },
+    "webrtc__modules__congestion_controller__goog_cc__goog_cc_network_control.cc": {
+      "sha256": "bd051c9d0444324975be8bb1c6582ac9ee33d5e2d3bb13fb92fc608a5e107804",
+      "size": 28696
+    },
+    "webrtc__modules__congestion_controller__rtp__transport_feedback_adapter.cc": {
+      "sha256": "12caec1b5920f04a8c945cbbac72cb45750faabc4f0a23bb98fec138d92a2bf5",
+      "size": 18617
+    },
+    "webrtc__modules__pacing__pacing_controller.cc": {
+      "sha256": "6a6a936390a8a7a567772ff19c5b4bb6d52b34b6acfe86d02ea82221d09fb9c8",
+      "size": 27214
+    },
+    "webrtc__modules__pacing__task_queue_paced_sender.cc": {
+      "sha256": "1d50ecfc23093e6fa17c6ff45bd2504b863a679f5101dc85956c4603cb17fc0f",
+      "size": 11242
+    },
+    "webrtc__rtc_base__time_utils.cc": {
+      "sha256": "1d1583c421ace18794a935d6e9eba61b55a346dc4be9c4aa91d28dba77be7f71",
+      "size": 7334
+    },
+    "webrtc__rtc_base__trace_event.h": {
+      "sha256": "1b55a579f4279c4cc540178ea002fa919d09f1df3d619da4beeac6f29dac9f9e",
+      "size": 38531
+    },
+    "webrtc__system_wrappers__source__clock.cc": {
+      "sha256": "9baf2b4749b7a4a384b8d9c038821ef24a9cb5029c2a7a5d9910ae934367971e",
+      "size": 3524
+    }
+  },
+  "native_peer_sessions_created": 0,
+  "old_telemetry_decoded": false,
+  "root": "/home/agent/.cache/networkrlcd/native-transport-timing-m11-discovery",
+  "source_errors_preserved": true,
+  "webrtc_revision_from_DEPS": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d"
+}

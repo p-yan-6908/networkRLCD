@@ -1,0 +1,86 @@
+{
+  "HF_TOKEN_available": true,
+  "abi": "native_transport_timing_m11_preflight_v1",
+  "archive_head": "b45f047d5082bf72ecbea61f1caa0798ea8e8249",
+  "authenticated_dataset_status": 200,
+  "chromium_elf_sha256": "4dc9f9f9b20e9bd95bf201f43d2d643f48938f36a70ddcb6fce3dd611a178180",
+  "dataset_private": true,
+  "free_bytes": 18663895040,
+  "hostname": "huggingface.co",
+  "https_status": 200,
+  "network_policy": {
+    "http_network_policy": {
+      "type": "unrestricted"
+    },
+    "http_proxy": "http://proxy:8080",
+    "tcp_connect_proxy": "http://proxy:8088",
+    "tcp_network_access": {
+      "domains": [],
+      "ip_ranges": []
+    },
+    "version": 1,
+    "vpn_configured": false
+  },
+  "observations_current": true,
+  "old_closed_panels": {
+    "M10_development_protocol_sha256": "8bb2b87b95886148f6e521f6987a23e23ab2ef07f4db6c0ba99baacae0c1eabe",
+    "M10_development_unopened": true,
+    "m8_allocation_sha256": "6b25569c97dd4116577360e652f2163819ed1c64f972ff9c65e6e9cd17b2df9a",
+    "m8_schedule_uninstantiated": true,
+    "old_validation_session_directories": {
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7r/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7ra/validation": false
+    }
+  },
+  "planned_external_peak_bytes": 4000000000,
+  "planned_raw_bytes": 1000000000,
+  "preflight_reference": {
+    "bidirectional_video_frames": [
+      39,
+      40
+    ],
+    "passed": true,
+    "path": "/home/agent/.cache/networkrlcd/native-turn-tcp-queue-preflight-v2.json",
+    "policy_sha256": "10ee54ed22fc23337096004f8248d6ea977f059149386e0f9e70c4b77d9db6b5",
+    "queue_forwarded_packets": [
+      113,
+      114
+    ],
+    "sha256": "a45a8e2a9fec3303a8c09afb8d44896b8b642692fbc43a37d9917e768c345061",
+    "source_sha256": "74306c30a373430acaa9a37b9486fe83632624454df002c3661513cf67b34874",
+    "turn_candidates": [
+      1,
+      1
+    ]
+  },
+  "prior_verification": {
+    "controller_fitted": false,
+    "development_originals": 8,
+    "instrumentation_originals": 4,
+    "old_panels_closed": true,
+    "prior_files_unchanged": 1560,
+    "verified": true
+  },
+  "runtime": {
+    "chromium_binary_path": "/usr/bin/chromium",
+    "chromium_sha256": "2c8d32d29dc6781c35ae196ea83299d507ac88fc339301abe74672feda299779",
+    "chromium_version": "Chrome/154.0.8037.57",
+    "coturn_binary_path": "/home/agent/.cache/networkrlcd/turn-runtime/extracted/usr/bin/turnserver",
+    "coturn_binary_sha256": "6de6c80134271abd2c51cbadac1e2bb973ac89b5491b0a2ae480148d66a37162",
+    "coturn_library_dir": "/home/agent/.cache/networkrlcd/turn-runtime/extracted/usr/lib/x86_64-linux-gnu",
+    "coturn_library_sha256": {
+      "libevent_extra-2.1.so.7": "0da7f591283f063939323d9dc3370dc9e53559c6b2c43c28c18159bb8f656daf",
+      "libevent_openssl-2.1.so.7": "2ec9f0a63b5af4df80b7155611794246ebe9932ded259bbba873bfc9da98d5f9",
+      "libhiredis.so.1.1.0": "adfb8e6f9d2d430d5d577f85626490769fb69ef41a6967fba611b5a16b09ab15"
+    },
+    "coturn_package_path": "/home/agent/.cache/networkrlcd/turn-runtime/coturn_4.6.1-2_amd64.deb",
+    "coturn_package_sha256": "cb55194d0118d26035aa39aa7306fd810a47069643266724357e8da2a22612e0",
+    "coturn_version": "4.6.1",
+    "managed_policy_path": "/etc/chromium/policies/managed/misc.json",
+    "managed_policy_sha256": "10ee54ed22fc23337096004f8248d6ea977f059149386e0f9e70c4b77d9db6b5",
+    "managed_policy_value": "disable_non_proxied_udp",
+    "network_policy": "TURN control TCP and relay/queue UDP are loopback-only"
+  },
+  "runtime_spec_revision": "207"
+}
