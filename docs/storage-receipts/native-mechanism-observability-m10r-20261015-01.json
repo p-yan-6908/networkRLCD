@@ -1,0 +1,61 @@
+{
+  "abi": "native_mechanism_observability_m10r_archive_receipt_v1",
+  "acquisition_gate_passed": true,
+  "analysis_sha256": "01e65546001837b8da6ed6c0b799d9f73fd6524e9152a5c96d5ea8e2b5a20e86",
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_binding_sha256": "511dc62f8b531cddb238923b6b3911e4a262acea6327b76c769e6dad854cbcf8",
+  "archive_helper_sha256": "8422517ab76c69cfa95844de47918c95202fb76aa477829f20fc190500f858c1",
+  "capture_index_sha256": "7c00998d0f1a8782db8fc06345188b55bbd5a60d1011a378bf814a1b8aaa2ac4",
+  "controller_fitted": false,
+  "evidence_deleted": 0,
+  "files_deleted": 0,
+  "files_verified": 1032,
+  "fit_predictor": false,
+  "gate_is_acquisition_only": true,
+  "gate_sha256": "178b2c6ea24fc63437cf05d049f136e7f25997d0764d78907e1c237045b68b16",
+  "local_raw_evidence_retained": true,
+  "native_common_support_established": false,
+  "old_closed_panels": {
+    "M10_development_protocol_sha256": "8bb2b87b95886148f6e521f6987a23e23ab2ef07f4db6c0ba99baacae0c1eabe",
+    "M10_development_unopened": true,
+    "m8_allocation_sha256": "6b25569c97dd4116577360e652f2163819ed1c64f972ff9c65e6e9cd17b2df9a",
+    "m8_schedule_uninstantiated": true,
+    "old_validation_session_directories": {
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7r/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7ra/validation": false
+    }
+  },
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "cab846ea688ac1fd747f5851df8abb746c844d27b2f64a6d100573532ffe1431",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "068c0f23af9b389305f3ec4ee4a1d2809872f7d25a7c551a71b27c40fa795332",
+      "size": 189674
+    },
+    "results.tar.part-000": {
+      "sha256": "15f3817162511976cc4bcba7df45356c5d5ba7049a7d1ef94347ab7d579c53c0",
+      "size": 404940800
+    }
+  },
+  "positive_future_stability_labels_nested": 0,
+  "prefix": "native-mechanism-observability-m10r-20261015-01",
+  "private": true,
+  "protocol_sha256": "3d1083f40a7293bbc0c3fead76dbb8353dd1ee97f9ef34dfa66c54c8d89901bc",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-mechanism-observability-m10r/development",
+  "raw_evidence_retained": true,
+  "receiver_outcomes_read": false,
+  "registered_gate_passed": true,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "result_classification": "qualified fresh development mechanism assay",
+  "revision": "b45f047d5082bf72ecbea61f1caa0798ea8e8249",
+  "scientific_common_support_gate_passed": false,
+  "scientific_registration_commit": "597f3eac529930a329dde9c4b017e7d9217bfe12"
+}

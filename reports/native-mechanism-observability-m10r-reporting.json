@@ -1,0 +1,34 @@
+{
+  "abi": "native_mechanism_observability_m10r_reporting_v1",
+  "actions": false,
+  "analysis_sha256": "01e65546001837b8da6ed6c0b799d9f73fd6524e9152a5c96d5ea8e2b5a20e86",
+  "classification": "qualified fresh development mechanism assay",
+  "common_support_established": false,
+  "compact_divergent_pairs_nested": 23,
+  "compact_matched_pairs_nested": 49,
+  "controller_fitted": false,
+  "gates": {
+    "development": {
+      "optional_channels_qualified_every_original": {
+        "observed_feedback_counter_age": true,
+        "rtcp_rtt": true
+      },
+      "passed": true,
+      "planned_sessions": 8,
+      "qualified_sessions": 8
+    },
+    "instrumentation": {
+      "optional_channels_qualified_every_original": {
+        "observed_feedback_counter_age": true,
+        "rtcp_rtt": true
+      },
+      "passed": true,
+      "planned_sessions": 4,
+      "qualified_sessions": 4
+    }
+  },
+  "no_predictor_fitted": true,
+  "positive_future_stationarity_labels_nested": 0,
+  "receiver_outcomes_read": false,
+  "trajectory_followup_motivation_channels": []
+}

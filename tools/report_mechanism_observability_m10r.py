@@ -126,10 +126,12 @@ def plot(root,records):
             axes[2,col].plot([(n['available_ms']-common)/1000 for n in ns],[n['rtcp']['roundTripTime']['value']*1000 for n in ns],**kwargs)
         axes[0,col].axhline(m.DESIGN['service_mbps'][1],color='black',ls=':',lw=.8,label='controlled service')
         axes[0,col].set_title(label(content));axes[2,col].set_xlabel('Seconds after scheduled common-service change')
-        axes[0,col].legend(fontsize=7,loc='upper left')
+        # One shared legend below the panels keeps the rise transient visible.
         for row in range(3):axes[row,col].grid(alpha=.2)
-    for row,title in enumerate(['Native BWE (Mbps)','Owned forward queue (service ms)','Native RTCP RTT (ms)']):axes[row,0].set_ylabel(title)
+    for row,title in enumerate(['Native BWE (Mbps)','Owned relay queue (service ms)','Native RTCP RTT (ms)']):axes[row,0].set_ylabel(title,fontsize=10)
     fig.suptitle('M10R fresh development: moving BWE and observed mechanisms\nTwo histories × two repeats per content; no receiver outcome analysis')
-    fig.tight_layout();fig.savefig(REPO/'reports/native-mechanism-observability-m10r-trajectories.png',dpi=160);plt.close(fig)
+    handles,labels=axes[0,0].get_legend_handles_labels()
+    fig.legend(handles,labels,loc='lower center',ncol=3,fontsize=8,frameon=False)
+    fig.tight_layout(rect=[0,.065,1,.96]);fig.savefig(REPO/'reports/native-mechanism-observability-m10r-trajectories.png',dpi=160);plt.close(fig)
 
 if __name__=='__main__':print(json.dumps(report()))
