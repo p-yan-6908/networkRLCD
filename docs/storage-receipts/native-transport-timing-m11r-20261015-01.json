@@ -1,0 +1,49 @@
+{
+  "abi": "native_transport_timing_m11r_archive_receipt_v1",
+  "acquisition_gate_passed": true,
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_binding_sha256": "6e686385d48734b65ef3fcdd4ae386828ad40ab311a18977bd69d787e97f10d0",
+  "archive_helper_sha256": "620b79b025c985f5b5c3b8f59926381b82ceae9ddb5fd104bb0948938172cbe7",
+  "capture_index_sha256": "8187057e7e86ceffb9d7d0513ccd2867d112ee794f11fe5fd5a588d642d41c1c",
+  "development_opened": false,
+  "evidence_deleted": 0,
+  "files_deleted": 0,
+  "files_verified": 513,
+  "future_BWE_labels_read": false,
+  "gate_is_acquisition_only": true,
+  "gate_sha256": "495218ab8de77703ec8c5efe97edaf05209d2883adacdb7aeb0979b9c2872dfa",
+  "local_raw_evidence_retained": true,
+  "native_common_support_established": false,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "f15be162d95bb318bac72e9801cc2182565d9ea37d99f613b8a10d00af1b1abd",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "ce24db56945862f5f02e9b3070eb956ca0426bcf5fa398d9f116d838ab12200f",
+      "size": 91442
+    },
+    "results.tar.part-000": {
+      "sha256": "ef96088028d9e45a23086df11ee933667b888937019975a1449a3a72301c22db",
+      "size": 240783360
+    }
+  },
+  "predictor_or_controller_fitted": false,
+  "prefix": "native-transport-timing-m11r-20261015-01",
+  "private": true,
+  "protocol_sha256": "c4f65be006cafd0d50c83ff049ac24154e37e0921b7696d841634ba58719ffff",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-transport-timing-m11r/capability",
+  "raw_evidence_retained": true,
+  "receiver_outcomes_read": false,
+  "registered_gate_passed": true,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "required_transport_channels_qualified": false,
+  "result_classification": "transport-control causal-availability instrumentation failure",
+  "revision": "367786c572c769a2e90439300a1ef98da6c491ae",
+  "scientific_registration_commit": "86ac6f45ffc96e19bb7320c1a9f3f2d14810133c"
+}
