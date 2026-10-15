@@ -1,0 +1,38 @@
+{
+  "abi": "native_state_conditioning_m7_preservation_audit_v1",
+  "files_deleted": 0,
+  "licensed_originals_and_old_clips_unchanged": true,
+  "m6r_validation_new_state_features_computed": false,
+  "prior_archives": {
+    "M5": {
+      "bytes_rehashed": 381817503,
+      "checksum_only": true,
+      "files_unchanged": 4428,
+      "revision": "0f4da165bcd87ace87616d564cfe949eaff95d47",
+      "telemetry_fields_decoded": false
+    },
+    "M6R": {
+      "bytes_rehashed": 127733349,
+      "checksum_only": true,
+      "files_unchanged": 1858,
+      "revision": "38d09402609e023b2a124196b3ffcec4c8752c00",
+      "telemetry_fields_decoded": false
+    }
+  },
+  "prior_files_unchanged": 1382,
+  "prior_frozen_files_modified": 0,
+  "prior_outcomes_read": false,
+  "registration": {
+    "feasibility_sessions": 4,
+    "prior_files_unchanged": 1382,
+    "validation_sessions": 128,
+    "validation_started": false,
+    "verified": true
+  },
+  "validation": {
+    "capture_index_exists": false,
+    "panels": 128,
+    "protocol_sha256": "6b3b892ae9c034827d61d22d0b8f4a50e28e151dab1e9c1f1865dc800361e09e",
+    "started": false
+  }
+}

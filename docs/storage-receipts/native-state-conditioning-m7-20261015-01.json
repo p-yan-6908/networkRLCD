@@ -1,0 +1,49 @@
+{
+  "abi": "native_bwe_support_mechanism_archive_receipt_v1",
+  "additional_bindings_verified_against_freshly_restored_inventory": true,
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_bindings_sha256": "7a6cfe2be1a4a1c12ef9fccd86908d143e3eb6803a049f115f5b243b259cd983",
+  "archive_helper_sha256": "a6e2a7f9206df0badc31730c2264970d29ac60e840882557210d8ea1776a2913",
+  "base_gate_sha256": "06e7c33ec0971c753307576c44b7c7de2fc56447ee0642ad291a67cb74aa39c2",
+  "capture_index_sha256": "a0513dc1234d62bbd3165b9799cbe722f253fd92e5ead01b6df8781eb35eae47",
+  "conditioning_failure": "Sub-millisecond early timer returns; strict not-before gate unchanged",
+  "files_deleted": 0,
+  "files_verified": 576,
+  "gate_sha256": "7f8bde8655755de869b0e7669a2ee150450cc391b91988a750effc6edd814b07",
+  "instrumentation_qualified": false,
+  "local_raw_evidence_retained": true,
+  "native_common_support_established": false,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "3f84af3aa05cd3c51f1927872ebcb42b83c19bd175616a8344ed08b863a61e26",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "459150fe41f76b26cacdbd0ae8f95553a721e98375887c461ee6b9e457b6e2f5",
+      "size": 99554
+    },
+    "results.tar.part-000": {
+      "sha256": "7b219c09729111bd0ff9327a369496736689888774b3192d51c1866f614edce4",
+      "size": 28160000
+    }
+  },
+  "prefix": "native-state-conditioning-m7-20261015-01",
+  "private": true,
+  "protocol_sha256": "2d9103a36324a06708a7c24ebe5cea260b2d9c38d2104426602c8208c4bbeb6d",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-state-conditioning-m7/feasibility",
+  "registered_gate_passed": false,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "revision": "b524c3be76923ea86ce072a53e67a91ac45cfffa",
+  "scientific_gate_passed": false,
+  "scientific_registration_commit": "c262b151fff4c3aa81835c60b7b0069d36cae73d",
+  "sealed_originals": 4,
+  "stage": "state_creation_feasibility",
+  "summary_sha256": "9646bba277fce070b871255bbc6a8e9f2d6f74deadbd4822fa091c48c9b33757",
+  "technical_qualified_originals": 0,
+  "validation_originals_untouched": 128
+}

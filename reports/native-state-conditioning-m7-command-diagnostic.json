@@ -1,0 +1,328 @@
+{
+  "abi": "native_state_conditioning_m7_command_timing_diagnostic_v1",
+  "gates_changed": false,
+  "outcome_variables_read": false,
+  "sessions": [
+    {
+      "all_other_technical_gates": {
+        "cleanup_passed": true,
+        "media_passed": true,
+        "readback_passed": true,
+        "transport_passed": true
+      },
+      "command_failures": [
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.29999999701976776,
+          "sequence": 1
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.5,
+          "sequence": 3
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.5999999940395355,
+          "sequence": 8
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.3999999910593033,
+          "sequence": 9
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.29999999701976776,
+          "sequence": 12
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.699999988079071,
+          "sequence": 13
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.19999998807907104,
+          "sequence": 19
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.5999999940395355,
+          "sequence": 21
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.3999999910593033,
+          "sequence": 24
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.3999999910593033,
+          "sequence": 26
+        }
+      ],
+      "release_relative_ms": 27002.30000001192,
+      "trial": "m7-f-p000-s0-support"
+    },
+    {
+      "all_other_technical_gates": {
+        "cleanup_passed": true,
+        "media_passed": true,
+        "readback_passed": true,
+        "transport_passed": true
+      },
+      "command_failures": [
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.09999999403953552,
+          "sequence": 1
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.09999999403953552,
+          "sequence": 3
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.09999999403953552,
+          "sequence": 10
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.20000000298023224,
+          "sequence": 14
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.29999999701976776,
+          "sequence": 20
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.5,
+          "sequence": 21
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.20000000298023224,
+          "sequence": 23
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.20000000298023224,
+          "sequence": 26
+        }
+      ],
+      "release_relative_ms": 27000,
+      "trial": "m7-f-p000-s1-support"
+    },
+    {
+      "all_other_technical_gates": {
+        "cleanup_passed": true,
+        "media_passed": true,
+        "readback_passed": true,
+        "transport_passed": true
+      },
+      "command_failures": [
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.5,
+          "sequence": 2
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.09999999403953552,
+          "sequence": 5
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.09999999403953552,
+          "sequence": 7
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.29999999701976776,
+          "sequence": 8
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.3999999910593033,
+          "sequence": 9
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.09999999403953552,
+          "sequence": 11
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.19999998807907104,
+          "sequence": 12
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.09999999403953552,
+          "sequence": 14
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.699999988079071,
+          "sequence": 17
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.09999999403953552,
+          "sequence": 18
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.5999999940395355,
+          "sequence": 21
+        }
+      ],
+      "release_relative_ms": 26999.70000000298,
+      "trial": "m7-f-p001-s0-support"
+    },
+    {
+      "all_other_technical_gates": {
+        "cleanup_passed": true,
+        "media_passed": true,
+        "readback_passed": true,
+        "transport_passed": true
+      },
+      "command_failures": [
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.7000000029802322,
+          "sequence": 4
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.09999999403953552,
+          "sequence": 5
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.5,
+          "sequence": 7
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.20000000298023224,
+          "sequence": 8
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.5,
+          "sequence": 11
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.29999999701976776,
+          "sequence": 13
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.7000000029802322,
+          "sequence": 14
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.4000000059604645,
+          "sequence": 20
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.7000000029802322,
+          "sequence": 24
+        },
+        {
+          "failed_components": [
+            "not_early_and_within150ms"
+          ],
+          "lateness_ms": -0.4000000059604645,
+          "sequence": 26
+        }
+      ],
+      "release_relative_ms": 26999.5,
+      "trial": "m7-f-p001-s1-support"
+    }
+  ]
+}
