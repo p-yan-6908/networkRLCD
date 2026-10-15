@@ -1,0 +1,5905 @@
+{
+  "abi": "native_mechanism_observability_m10r_gate_v1",
+  "capture_index_sha256": "7c00998d0f1a8782db8fc06345188b55bbd5a60d1011a378bf814a1b8aaa2ac4",
+  "common_probe_checks": {
+    "content_kampar_boating_01__0": {
+      "maximum_probe_exposure_difference_octaves": 5.760441220990963e-05,
+      "passed": true,
+      "step_start_elapsed_spread_ms": 13.099999994039536
+    },
+    "content_kampar_boating_01__1": {
+      "maximum_probe_exposure_difference_octaves": 4.115044272367446e-05,
+      "passed": true,
+      "step_start_elapsed_spread_ms": 40.59999996423721
+    },
+    "content_volga_lock_01__0": {
+      "maximum_probe_exposure_difference_octaves": 4.575884880464907e-05,
+      "passed": true,
+      "step_start_elapsed_spread_ms": 4.699999958276749
+    },
+    "content_volga_lock_01__1": {
+      "maximum_probe_exposure_difference_octaves": 0.00017477576418131974,
+      "passed": true,
+      "step_start_elapsed_spread_ms": 3.5
+    }
+  },
+  "controller_fitted": false,
+  "fit_predictor": false,
+  "native_common_support_established": false,
+  "optional_channels_qualified_every_original": {
+    "observed_feedback_counter_age": true,
+    "rtcp_rtt": true
+  },
+  "passed": true,
+  "planned_sessions": 8,
+  "protocol_sha256": "3d1083f40a7293bbc0c3fead76dbb8353dd1ee97f9ef34dfa66c54c8d89901bc",
+  "qualified_sessions": 8,
+  "receiver_outcomes_read": false,
+  "sessions": [
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_volga_lock_01__0",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9984305116246706,
+            1.0014922384757425
+          ],
+          "beta_at_origin_feasible_ms": [
+            1227.260660826653,
+            1228.358987269534
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1218.290621532969,
+                1219.4511062430395
+              ],
+              "mapped_send_ms": [
+                1218.6306371485848,
+                1219.7921556810934
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 3.399999976158142,
+              "width_ms": 1.1615185325085804
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                417.6520314280695,
+                418.9431575741754
+              ],
+              "mapped_send_ms": [
+                417.6541878124897,
+                418.945307366173
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 2.600000023841858,
+              "width_ms": 1.2911261461059098
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                699.2341743235773,
+                700.3771670894992
+              ],
+              "mapped_send_ms": [
+                699.2357176844175,
+                700.3787098112678
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.1429927659218038
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1153.6076877267183,
+                1154.5806763618134
+              ],
+              "mapped_send_ms": [
+                1153.6092091573707,
+                1154.5822007147785
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.0999999940395355,
+              "width_ms": 0.972991557407795
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 1.2911261461059098,
+          "origin_browser_ms": 814.0000000149012,
+          "p95_held_out_width_ms": 1.2911261461059098,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 7
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999888483211645,
+            1.0000105966910406
+          ],
+          "beta_at_origin_feasible_ms": [
+            56783.31619597392,
+            56784.2410112018
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1218.3805055722987,
+                1219.3478970678989
+              ],
+              "mapped_send_ms": [
+                1218.7210289809882,
+                1219.6884199712003
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 3.399999976158142,
+              "width_ms": 0.9673914956001681
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11266.1392005534,
+                11267.091679577468
+              ],
+              "mapped_send_ms": [
+                11266.182776605689,
+                11267.135255565088
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 1.2000000178813934,
+              "width_ms": 0.9524790240684524
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99312.83455234583,
+                99314.00195578673
+              ],
+              "mapped_send_ms": [
+                99312.8803508605,
+                99314.04775529748
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.1674044369719923
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105653.4837954448,
+                105654.78909920852
+              ],
+              "mapped_send_ms": [
+                105653.48479743418,
+                105654.7901012197
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 1.305303785513388
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                417.8320064613945,
+                418.8154107124283
+              ],
+              "mapped_send_ms": [
+                417.83415948539914,
+                418.81756368961214
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 2.600000023841858,
+              "width_ms": 0.9834042510337895
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                699.3338926800207,
+                700.3111747887888
+              ],
+              "mapped_send_ms": [
+                699.3354356972268,
+                700.3127177724382
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 0.9772821087681223
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1153.6101308370853,
+                1154.5776184622227
+              ],
+              "mapped_send_ms": [
+                1153.6116528389102,
+                1154.5791404617848
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.0999999940395355,
+              "width_ms": 0.9674876251374371
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23308.111637922564,
+                23309.046244744823
+              ],
+              "mapped_send_ms": [
+                23308.11321992446,
+                23309.047826744376
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 0.9346068222585018
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35315.71612304447,
+                35316.63290867243
+              ],
+              "mapped_send_ms": [
+                35315.71794504666,
+                35316.63473067191
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 1.199999988079071,
+              "width_ms": 0.9167856279600528
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47298.72680664973,
+                47299.625807584496
+              ],
+              "mapped_send_ms": [
+                47298.72775865087,
+                47299.62675958423
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 1.0999999940395355,
+              "width_ms": 0.899000934768992
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59325.7103470629,
+                59326.64357761907
+              ],
+              "mapped_send_ms": [
+                59325.713131058204,
+                59326.646361622305
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 2.100000023841858,
+              "width_ms": 0.9332305641000858
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71306.63320346065,
+                71307.60054106085
+              ],
+              "mapped_send_ms": [
+                71306.63526645716,
+                71307.60260406323
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 4.699999988079071,
+              "width_ms": 0.9673376060673036
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83304.390748467,
+                83305.39224103588
+              ],
+              "mapped_send_ms": [
+                83304.391930465,
+                83305.39342303724
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.0014925722352928
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91316.51789382816,
+                91317.54232083705
+              ],
+              "mapped_send_ms": [
+                91316.51848482419,
+                91317.54291184364
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.0244270194525598
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95310.89999596795,
+                95311.99581669956
+              ],
+              "mapped_send_ms": [
+                95310.90073696295,
+                95311.99655770783
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.0958207448711619
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.305303785513388,
+          "origin_browser_ms": 56370.0000000149,
+          "p95_held_out_width_ms": 1.305303785513388,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 7
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_volga_lock_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124420.2009171126,
+            2124451.729519675
+          ],
+          "6000": [
+            961766.2883599472,
+            961784.5925078182
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35292.20000001788,
+        "common_service_application_bounds_ms": [
+          35287.49499017441,
+          35288.411817687025
+        ],
+        "maximum_ack_ms": 6.300000011920929,
+        "maximum_command_lateness_ms": 0.4000000059604645,
+        "maximum_tick_error_ms": 0.6376510000000053,
+        "passed": true
+      },
+      "input_order": "rise",
+      "input_x": 1.5,
+      "maximum_observer_gap_ms": 43.29999998211861,
+      "maximum_scheduling_lateness_ms": 14.800000011920929,
+      "maximum_stats_duration_ms": 17.200000017881393,
+      "measurement_step_start_elapsed_ms": 10106.899999976158,
+      "mechanism": {
+        "checks": {
+          "mandatory_native_channels": true,
+          "native_inventory": true,
+          "no_errors": true,
+          "persistence_before_terminal_drain": true,
+          "receipt_only_online": true,
+          "relay_counters": true,
+          "relay_coverage": true,
+          "snapshot_causality": true,
+          "snapshot_copies": true
+        },
+        "main_native_records": 3521,
+        "main_relay_records": 881,
+        "mandatory_channel_fractions": {
+          "cap": 1.0,
+          "encoder_frames": 1.0,
+          "encoder_time": 1.0,
+          "send_counter": 1.0,
+          "unique_sender": 1.0
+        },
+        "maximum_conservation_residual_bytes": 2.086162567138672e-07,
+        "maximum_relay_ack_ms": 44.900000005960464,
+        "maximum_relay_gap_ms": 139.0,
+        "native_field_status_counts": {
+          "outbound": {
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "firCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "frameHeight": {
+              "absent": 2,
+              "invalid": 0,
+              "present": 4429
+            },
+            "frameWidth": {
+              "absent": 2,
+              "invalid": 0,
+              "present": 4429
+            },
+            "framesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "framesPerSecond": {
+              "absent": 7,
+              "invalid": 0,
+              "present": 4424
+            },
+            "headerBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "keyFramesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "nackCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "packetsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "pliCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "qualityLimitationReason": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "retransmittedBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "targetBitrate": {
+              "absent": 7,
+              "invalid": 0,
+              "present": 4424
+            },
+            "totalEncodeTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "totalEncodedBytesTarget": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "totalPacketSendDelay": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            }
+          },
+          "pair": {
+            "availableOutgoingBitrate": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "bytesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "currentRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "requestsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "responsesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "totalRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            }
+          },
+          "rtcp": {
+            "fractionLost": {
+              "absent": 61,
+              "invalid": 0,
+              "present": 4370
+            },
+            "jitter": {
+              "absent": 61,
+              "invalid": 0,
+              "present": 4370
+            },
+            "reportsReceived": {
+              "absent": 4431,
+              "invalid": 0,
+              "present": 0
+            },
+            "roundTripTime": {
+              "absent": 61,
+              "invalid": 0,
+              "present": 4370
+            },
+            "roundTripTimeMeasurements": {
+              "absent": 61,
+              "invalid": 0,
+              "present": 4370
+            },
+            "totalRoundTripTime": {
+              "absent": 61,
+              "invalid": 0,
+              "present": 4370
+            }
+          }
+        },
+        "native_records": 4431,
+        "optional_channels": {
+          "observed_feedback_counter_age": {
+            "distinct_common_counter_advances": 62,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          },
+          "rtcp_rtt": {
+            "distinct_common_counter_advances": 62,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          }
+        },
+        "passed": true,
+        "receiver_outcomes_read": false,
+        "relay_records": 1108,
+        "true_transport_cc_feedback_age_observed": false
+      },
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3521,
+      "passed": true,
+      "prefix": "ascending_prefix",
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 33.20000001788139,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 84
+      },
+      "step_phase_start_ms": 11285.5,
+      "transport_passed": true,
+      "trial": "m10r-mechanism-d-000-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_volga_lock_01__0",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9984184228566197,
+            1.0022440364712368
+          ],
+          "beta_at_origin_feasible_ms": [
+            1207.3612615697677,
+            1208.5623942082455
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1248.930656991739,
+                1250.2078847572327
+              ],
+              "mapped_send_ms": [
+                1249.1817026361568,
+                1250.4598923266444
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.2781896904875794
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                358.5523517464541,
+                360.6786159674479
+              ],
+              "mapped_send_ms": [
+                358.55586229866327,
+                360.6821131197107
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 4.9000000059604645,
+              "width_ms": 2.1262642209937894
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                734.6744040747916,
+                735.9099057694914
+              ],
+              "mapped_send_ms": [
+                734.6757664143693,
+                735.9112649884675
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 1.235501694699792
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1195.0028912035245,
+                1196.1076896272032
+              ],
+              "mapped_send_ms": [
+                1195.0040331214946,
+                1196.108831634443
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.1047985129484914
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 2.1262642209937894,
+          "origin_browser_ms": 795.1000000089407,
+          "p95_held_out_width_ms": 2.1262642209937894,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 7
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999903222777862,
+            1.0000114746465933
+          ],
+          "beta_at_origin_feasible_ms": [
+            56762.65905154307,
+            56763.62705704461
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1249.031695939244,
+                1250.1302241097874
+              ],
+              "mapped_send_ms": [
+                1249.2833048766624,
+                1250.3818314903983
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.0985281705434318
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11307.755588098036,
+                11308.791878767726
+              ],
+              "mapped_send_ms": [
+                11307.8466060754,
+                11308.88289618193
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 1.5,
+              "width_ms": 1.036290669690061
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99348.9650242315,
+                99349.96344582841
+              ],
+              "mapped_send_ms": [
+                99349.00641714662,
+                99350.00483882439
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 1.7999999821186066,
+              "width_ms": 0.9984216777666006
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105682.75536966763,
+                105683.8784615345
+              ],
+              "mapped_send_ms": [
+                105682.75803364083,
+                105683.88112556029
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.1230919194640592
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                358.7783304732875,
+                359.8925857088034
+              ],
+              "mapped_send_ms": [
+                358.7818355072086,
+                359.8960906685825
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 4.9000000059604645,
+              "width_ms": 1.1142552355158841
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                734.7840923526019,
+                735.8903942668258
+              ],
+              "mapped_send_ms": [
+                734.7854543657813,
+                735.8917562511997
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 1.1063019142238772
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1195.0030703774319,
+                1196.1019328455222
+              ],
+              "mapped_send_ms": [
+                1195.004212377149,
+                1196.1030748381745
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.098862468090374
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23347.927355424137,
+                23348.890347979024
+              ],
+              "mapped_send_ms": [
+                23347.92986942351,
+                23348.892861978784
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 2.9000000059604645,
+              "width_ms": 0.962992555272649
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35357.58132234073,
+                35358.54613908932
+              ],
+              "mapped_send_ms": [
+                35357.58396634007,
+                35358.54878308906
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 0.9648167489940533
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47343.15347824704,
+                47344.120115531434
+              ],
+              "mapped_send_ms": [
+                47343.15460924676,
+                47344.12124653133
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 1.7000000178813934,
+              "width_ms": 0.966637284567696
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59347.88925538691,
+                59348.85771611796
+              ],
+              "mapped_send_ms": [
+                59347.89038738663,
+                59348.85884811785
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 1.0999999940395355,
+              "width_ms": 0.9684607312228763
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71342.27762610042,
+                71343.24790870641
+              ],
+              "mapped_send_ms": [
+                71342.27887810011,
+                71343.2491607063
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 5,
+              "width_ms": 0.9702826061839005
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83343.8475610277,
+                83344.81966659948
+              ],
+              "mapped_send_ms": [
+                83343.84836202751,
+                83344.82046759939
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 0.9721055718837306
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91341.0392200227,
+                91342.02199823387
+              ],
+              "mapped_send_ms": [
+                91341.03981102149,
+                91342.02258923382
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 4.299999982118607,
+              "width_ms": 0.9827782123320503
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95348.49053247474,
+                95349.48113919336
+              ],
+              "mapped_send_ms": [
+                95348.49136347303,
+                95349.48197019327
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 0.9906067202391569
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.1230919194640592,
+          "origin_browser_ms": 56350.2500000149,
+          "p95_held_out_width_ms": 1.1230919194640592,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 9
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_volga_lock_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124384.348041905,
+            2124411.7419234077
+          ],
+          "6000": [
+            961760.1479850587,
+            961775.9311696639
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35334.20000001788,
+        "common_service_application_bounds_ms": [
+          35331.54940281548,
+          35332.514215609976
+        ],
+        "maximum_ack_ms": 5.4000000059604645,
+        "maximum_command_lateness_ms": 4.0999999940395355,
+        "maximum_tick_error_ms": 0.8984049999999115,
+        "passed": true
+      },
+      "input_order": "rise",
+      "input_x": 1.5,
+      "maximum_observer_gap_ms": 97.10000002384186,
+      "maximum_scheduling_lateness_ms": 13.299999982118607,
+      "maximum_stats_duration_ms": 13.399999976158142,
+      "measurement_step_start_elapsed_ms": 10102.200000017881,
+      "mechanism": {
+        "checks": {
+          "mandatory_native_channels": true,
+          "native_inventory": true,
+          "no_errors": true,
+          "persistence_before_terminal_drain": true,
+          "receipt_only_online": true,
+          "relay_counters": true,
+          "relay_coverage": true,
+          "snapshot_causality": true,
+          "snapshot_copies": true
+        },
+        "main_native_records": 3518,
+        "main_relay_records": 881,
+        "mandatory_channel_fractions": {
+          "cap": 1.0,
+          "encoder_frames": 1.0,
+          "encoder_time": 1.0,
+          "send_counter": 1.0,
+          "unique_sender": 1.0
+        },
+        "maximum_conservation_residual_bytes": 8.201459422707558e-08,
+        "maximum_relay_ack_ms": 24.099999994039536,
+        "maximum_relay_gap_ms": 127.7999999821186,
+        "native_field_status_counts": {
+          "outbound": {
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "firCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "frameHeight": {
+              "absent": 2,
+              "invalid": 0,
+              "present": 4425
+            },
+            "frameWidth": {
+              "absent": 2,
+              "invalid": 0,
+              "present": 4425
+            },
+            "framesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "framesPerSecond": {
+              "absent": 7,
+              "invalid": 0,
+              "present": 4420
+            },
+            "headerBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "keyFramesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "nackCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "packetsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "pliCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "qualityLimitationReason": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "retransmittedBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "targetBitrate": {
+              "absent": 4,
+              "invalid": 0,
+              "present": 4423
+            },
+            "totalEncodeTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "totalEncodedBytesTarget": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "totalPacketSendDelay": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            }
+          },
+          "pair": {
+            "availableOutgoingBitrate": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "bytesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "currentRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "requestsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "responsesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "totalRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            }
+          },
+          "rtcp": {
+            "fractionLost": {
+              "absent": 59,
+              "invalid": 0,
+              "present": 4368
+            },
+            "jitter": {
+              "absent": 59,
+              "invalid": 0,
+              "present": 4368
+            },
+            "reportsReceived": {
+              "absent": 4427,
+              "invalid": 0,
+              "present": 0
+            },
+            "roundTripTime": {
+              "absent": 59,
+              "invalid": 0,
+              "present": 4368
+            },
+            "roundTripTimeMeasurements": {
+              "absent": 59,
+              "invalid": 0,
+              "present": 4368
+            },
+            "totalRoundTripTime": {
+              "absent": 59,
+              "invalid": 0,
+              "present": 4368
+            }
+          }
+        },
+        "native_records": 4427,
+        "optional_channels": {
+          "observed_feedback_counter_age": {
+            "distinct_common_counter_advances": 64,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          },
+          "rtcp_rtt": {
+            "distinct_common_counter_advances": 64,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          }
+        },
+        "passed": true,
+        "receiver_outcomes_read": false,
+        "relay_records": 1108,
+        "true_transport_cc_feedback_age_observed": false
+      },
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3518,
+      "passed": true,
+      "prefix": "descending_prefix",
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 26.700000017881393,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 84
+      },
+      "step_phase_start_ms": 11324.700000017881,
+      "transport_passed": true,
+      "trial": "m10r-mechanism-d-001-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_kampar_boating_01__0",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9986435027659932,
+            1.0019156930407838
+          ],
+          "beta_at_origin_feasible_ms": [
+            1291.087192237433,
+            1292.2839863626625
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1406.025948745842,
+                1407.130789050536
+              ],
+              "mapped_send_ms": [
+                1406.2491481642696,
+                1407.3544905607941
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.1053423965245202
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                366.55327421487374,
+                368.8728048059147
+              ],
+              "mapped_send_ms": [
+                366.5573357243,
+                368.87685305072034
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 4.200000017881393,
+              "width_ms": 2.319530591040973
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                796.7710463852292,
+                798.0033573927366
+              ],
+              "mapped_send_ms": [
+                796.7728997288955,
+                798.0052068497446
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.2323110075074055
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1353.695821167043,
+                1354.7474692707933
+              ],
+              "mapped_send_ms": [
+                1353.6972434307738,
+                1354.7488917445894
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.2000000178813934,
+              "width_ms": 1.0516483138155763
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 2.319530591040973,
+          "origin_browser_ms": 869.1500000059605,
+          "p95_held_out_width_ms": 2.319530591040973,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 7
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999889577781943,
+            1.0000102935178468
+          ],
+          "beta_at_origin_feasible_ms": [
+            56848.113812000185,
+            56849.05493774082
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1406.0642080397738,
+                1407.1125050968767
+              ],
+              "mapped_send_ms": [
+                1406.2878357313602,
+                1407.336131600925
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.0482970571029
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11463.60427666171,
+                11464.599164727355
+              ],
+              "mapped_send_ms": [
+                11463.660871836735,
+                11464.65575960184
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 1.399999976158142,
+              "width_ms": 0.9948880656447727
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99511.33673328566,
+                99512.41432943683
+              ],
+              "mapped_send_ms": [
+                99511.37155592721,
+                99512.44915268687
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 1.0775967596564442
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105861.27646006775,
+                105862.46501114406
+              ],
+              "mapped_send_ms": [
+                105861.27883304332,
+                105862.4673841611
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 5.0999999940395355,
+              "width_ms": 1.188551117767929
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                366.9130362288488,
+                367.98275016927073
+              ],
+              "mapped_send_ms": [
+                366.91709227363754,
+                367.9868061275265
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 4.200000017881393,
+              "width_ms": 1.0697139404219342
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                796.8704189136333,
+                797.9309594897059
+              ],
+              "mapped_send_ms": [
+                796.8722719340949,
+                797.9328124706371
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.0605405760725262
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1353.6980715280806,
+                1354.7467492330034
+              ],
+              "mapped_send_ms": [
+                1353.6994935437833,
+                1354.748171229854
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.2000000178813934,
+              "width_ms": 1.0486777049227385
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23501.394015339487,
+                23502.324978607918
+              ],
+              "mapped_send_ms": [
+                23501.39516734305,
+                23502.32613060536
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 1.0,
+              "width_ms": 0.9309632684307871
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35509.12421898873,
+                35510.0588734842
+              ],
+              "mapped_send_ms": [
+                35509.12548098943,
+                35510.06013548529
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 0.934654495860741
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47501.31991222212,
+                47502.258277302535
+              ],
+              "mapped_send_ms": [
+                47501.32075322258,
+                47502.259118303264
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 1.100000023841858,
+              "width_ms": 0.9383650806848891
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59506.49634968424,
+                59507.43842936607
+              ],
+              "mapped_send_ms": [
+                59506.497380684814,
+                59507.43946036696
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 0.9420796821432305
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71501.70243659406,
+                71502.6482277923
+              ],
+              "mapped_send_ms": [
+                71501.70343759462,
+                71502.64922879318
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 4.800000011920929,
+              "width_ms": 0.9457911985518876
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83509.01900124799,
+                83509.96850770983
+              ],
+              "mapped_send_ms": [
+                83509.01965224835,
+                83509.96915871039
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 0.9495064620423364
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91502.70127475652,
+                91503.65328362296
+              ],
+              "mapped_send_ms": [
+                91502.7022167485,
+                91503.65422562376
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 1.199999988079071,
+              "width_ms": 0.9520088752615266
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95509.73409108116,
+                95510.74888752296
+              ],
+              "mapped_send_ms": [
+                95509.73496207375,
+                95510.74975852921
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 3.4000000059604645,
+              "width_ms": 1.014796455463511
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.188551117767929,
+          "origin_browser_ms": 56426.10000000894,
+          "p95_held_out_width_ms": 1.188551117767929,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 9
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_kampar_boating_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124404.870747204,
+            2124433.7105887607
+          ],
+          "6000": [
+            961760.686333714,
+            961777.3646523487
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35491.40000000596,
+        "common_service_application_bounds_ms": [
+          35489.3210479607,
+          35490.25569632874
+        ],
+        "maximum_ack_ms": 2.9000000059604645,
+        "maximum_command_lateness_ms": 3.800000011920929,
+        "maximum_tick_error_ms": 0.7015050000009069,
+        "passed": true
+      },
+      "input_order": "rise",
+      "input_x": 1.5,
+      "maximum_observer_gap_ms": 41.10000002384186,
+      "maximum_scheduling_lateness_ms": 13.199999988079071,
+      "maximum_stats_duration_ms": 9.700000017881393,
+      "measurement_step_start_elapsed_ms": 10106.199999988079,
+      "mechanism": {
+        "checks": {
+          "mandatory_native_channels": true,
+          "native_inventory": true,
+          "no_errors": true,
+          "persistence_before_terminal_drain": true,
+          "receipt_only_online": true,
+          "relay_counters": true,
+          "relay_coverage": true,
+          "snapshot_causality": true,
+          "snapshot_copies": true
+        },
+        "main_native_records": 3521,
+        "main_relay_records": 881,
+        "mandatory_channel_fractions": {
+          "cap": 1.0,
+          "encoder_frames": 1.0,
+          "encoder_time": 1.0,
+          "send_counter": 1.0,
+          "unique_sender": 1.0
+        },
+        "maximum_conservation_residual_bytes": 1.5367550076916814e-07,
+        "maximum_relay_ack_ms": 18.799999982118607,
+        "maximum_relay_gap_ms": 119.0,
+        "native_field_status_counts": {
+          "outbound": {
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "firCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "frameHeight": {
+              "absent": 3,
+              "invalid": 0,
+              "present": 4428
+            },
+            "frameWidth": {
+              "absent": 3,
+              "invalid": 0,
+              "present": 4428
+            },
+            "framesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "framesPerSecond": {
+              "absent": 7,
+              "invalid": 0,
+              "present": 4424
+            },
+            "headerBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "keyFramesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "nackCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "packetsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "pliCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "qualityLimitationReason": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "retransmittedBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "targetBitrate": {
+              "absent": 1,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalEncodeTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "totalEncodedBytesTarget": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "totalPacketSendDelay": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            }
+          },
+          "pair": {
+            "availableOutgoingBitrate": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "bytesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "currentRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "requestsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "responsesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "totalRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            }
+          },
+          "rtcp": {
+            "fractionLost": {
+              "absent": 26,
+              "invalid": 0,
+              "present": 4405
+            },
+            "jitter": {
+              "absent": 26,
+              "invalid": 0,
+              "present": 4405
+            },
+            "reportsReceived": {
+              "absent": 4431,
+              "invalid": 0,
+              "present": 0
+            },
+            "roundTripTime": {
+              "absent": 26,
+              "invalid": 0,
+              "present": 4405
+            },
+            "roundTripTimeMeasurements": {
+              "absent": 26,
+              "invalid": 0,
+              "present": 4405
+            },
+            "totalRoundTripTime": {
+              "absent": 26,
+              "invalid": 0,
+              "present": 4405
+            }
+          }
+        },
+        "native_records": 4431,
+        "optional_channels": {
+          "observed_feedback_counter_age": {
+            "distinct_common_counter_advances": 62,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          },
+          "rtcp_rtt": {
+            "distinct_common_counter_advances": 62,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          }
+        },
+        "passed": true,
+        "receiver_outcomes_read": false,
+        "relay_records": 1108,
+        "true_transport_cc_feedback_age_observed": false
+      },
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3521,
+      "passed": true,
+      "prefix": "ascending_prefix",
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 31.400000005960464,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 88
+      },
+      "step_phase_start_ms": 11484.699999988079,
+      "transport_passed": true,
+      "trial": "m10r-mechanism-d-002-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_kampar_boating_01__0",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9984261649659836,
+            1.0020372017837236
+          ],
+          "beta_at_origin_feasible_ms": [
+            1159.6474560657553,
+            1160.7088925127705
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1225.0577293947608,
+                1226.154657487845
+              ],
+              "mapped_send_ms": [
+                1225.2837450610855,
+                1226.3806902179335
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.5,
+              "width_ms": 1.0969451568480508
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                325.79585993149266,
+                328.01039066600754
+              ],
+              "mapped_send_ms": [
+                325.7980764198797,
+                328.01259916684563
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 3.100000023841858,
+              "width_ms": 2.214530734514881
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                717.9859084219181,
+                719.0607807356758
+              ],
+              "mapped_send_ms": [
+                717.9871818600654,
+                719.0620504976175
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 1.0748723137577372
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1177.0474101883085,
+                1178.1407135913478
+              ],
+              "mapped_send_ms": [
+                1177.048701929214,
+                1178.1420054297776
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.5,
+              "width_ms": 1.0933035005634792
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 2.214530734514881,
+          "origin_browser_ms": 753.1999999880791,
+          "p95_held_out_width_ms": 2.214530734514881,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 6
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999906369392526,
+            1.0000095690793829
+          ],
+          "beta_at_origin_feasible_ms": [
+            56728.964373040726,
+            56729.918620309414
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1225.1584209256253,
+                1226.1524693044703
+              ],
+              "mapped_send_ms": [
+                1225.3844820660452,
+                1226.378528141293
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.5,
+              "width_ms": 0.9940483788450365
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11267.041568636429,
+                11268.028216208135
+              ],
+              "mapped_send_ms": [
+                11267.145083700721,
+                11268.131731197995
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 5.5999999940395355,
+              "width_ms": 0.9866475717062713
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99322.73858226638,
+                99323.69611344051
+              ],
+              "mapped_send_ms": [
+                99322.77923301596,
+                99323.73676444664
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 0.9575314306857763
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105668.50491516423,
+                105669.50249565646
+              ],
+              "mapped_send_ms": [
+                105668.50648715455,
+                105669.50406765672
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 1.100000023841858,
+              "width_ms": 0.9975805021676933
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                326.24478516996896,
+                327.2514759594342
+              ],
+              "mapped_send_ms": [
+                326.24699819069065,
+                327.2536889382536
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 3.100000023841858,
+              "width_ms": 1.0066907894652104
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                717.9933161352601,
+                718.9925903576077
+              ],
+              "mapped_send_ms": [
+                717.9945881471722,
+                718.9938623454364
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 0.9992742223475943
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1177.1384420970862,
+                1178.1329798067818
+              ],
+              "mapped_send_ms": [
+                1177.1397340978874,
+                1178.1342717944135
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.5,
+              "width_ms": 0.9945377096955781
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23312.916099165406,
+                23313.894084267406
+              ],
+              "mapped_send_ms": [
+                23312.917251166124,
+                23313.895236267286
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 3.4000000059604645,
+              "width_ms": 0.9779851019993657
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35319.31451617303,
+                35320.28386719351
+              ],
+              "mapped_send_ms": [
+                35319.31598817395,
+                35320.28533919337
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 1.5,
+              "width_ms": 0.9693510204815539
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47326.9698249614,
+                47327.9305409965
+              ],
+              "mapped_send_ms": [
+                47326.97097696211,
+                47327.93169299638
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 1.7999999821186066,
+              "width_ms": 0.9607160351006314
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59318.55496976747,
+                59319.50706237363
+              ],
+              "mapped_send_ms": [
+                59318.55622176825,
+                59319.50831437351
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 3.0999999940395355,
+              "width_ms": 0.9520926061595674
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71309.58223122702,
+                71310.52570128422
+              ],
+              "mapped_send_ms": [
+                71309.58341222774,
+                71310.5268822844
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 2.199999988079071,
+              "width_ms": 0.943470057201921
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83326.90053901773,
+                83327.83835510942
+              ],
+              "mapped_send_ms": [
+                83326.90172101847,
+                83327.8395371096
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 0.9378160916821798
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91318.54292718167,
+                91319.47698332713
+              ],
+              "mapped_send_ms": [
+                91318.54382918222,
+                91319.47788532727
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 1.5,
+              "width_ms": 0.9340561454591807
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95310.46364689159,
+                95311.39585584824
+              ],
+              "mapped_send_ms": [
+                95310.46446788654,
+                95311.39667684837
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 0.9322089618217433
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.0066907894652104,
+          "origin_browser_ms": 56322.44999998808,
+          "p95_held_out_width_ms": 1.0066907894652104,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 7
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_kampar_boating_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124398.7167175217,
+            2124423.039628165
+          ],
+          "6000": [
+            961738.9632493183,
+            961752.9765157475
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35302,
+        "common_service_application_bounds_ms": [
+          35300.415098433295,
+          35301.384463044786
+        ],
+        "maximum_ack_ms": 2.9000000059604645,
+        "maximum_command_lateness_ms": 0.4000000059604645,
+        "maximum_tick_error_ms": 1.4466239999997015,
+        "passed": true
+      },
+      "input_order": "rise",
+      "input_x": 1.5,
+      "maximum_observer_gap_ms": 50.70000001788139,
+      "maximum_scheduling_lateness_ms": 25.19999998807907,
+      "maximum_stats_duration_ms": 12.099999994039536,
+      "measurement_step_start_elapsed_ms": 10093.09999999404,
+      "mechanism": {
+        "checks": {
+          "mandatory_native_channels": true,
+          "native_inventory": true,
+          "no_errors": true,
+          "persistence_before_terminal_drain": true,
+          "receipt_only_online": true,
+          "relay_counters": true,
+          "relay_coverage": true,
+          "snapshot_causality": true,
+          "snapshot_copies": true
+        },
+        "main_native_records": 3518,
+        "main_relay_records": 880,
+        "mandatory_channel_fractions": {
+          "cap": 1.0,
+          "encoder_frames": 1.0,
+          "encoder_time": 1.0,
+          "send_counter": 1.0,
+          "unique_sender": 1.0
+        },
+        "maximum_conservation_residual_bytes": 8.784809324424714e-08,
+        "maximum_relay_ack_ms": 28.100000023841858,
+        "maximum_relay_gap_ms": 129.09999999403954,
+        "native_field_status_counts": {
+          "outbound": {
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "firCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "frameHeight": {
+              "absent": 2,
+              "invalid": 0,
+              "present": 4425
+            },
+            "frameWidth": {
+              "absent": 2,
+              "invalid": 0,
+              "present": 4425
+            },
+            "framesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "framesPerSecond": {
+              "absent": 8,
+              "invalid": 0,
+              "present": 4419
+            },
+            "headerBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "keyFramesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "nackCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "packetsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "pliCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "qualityLimitationReason": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "retransmittedBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "targetBitrate": {
+              "absent": 9,
+              "invalid": 0,
+              "present": 4418
+            },
+            "totalEncodeTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "totalEncodedBytesTarget": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "totalPacketSendDelay": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            }
+          },
+          "pair": {
+            "availableOutgoingBitrate": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "bytesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "currentRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "requestsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "responsesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            },
+            "totalRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4427
+            }
+          },
+          "rtcp": {
+            "fractionLost": {
+              "absent": 36,
+              "invalid": 0,
+              "present": 4391
+            },
+            "jitter": {
+              "absent": 36,
+              "invalid": 0,
+              "present": 4391
+            },
+            "reportsReceived": {
+              "absent": 4427,
+              "invalid": 0,
+              "present": 0
+            },
+            "roundTripTime": {
+              "absent": 36,
+              "invalid": 0,
+              "present": 4391
+            },
+            "roundTripTimeMeasurements": {
+              "absent": 36,
+              "invalid": 0,
+              "present": 4391
+            },
+            "totalRoundTripTime": {
+              "absent": 36,
+              "invalid": 0,
+              "present": 4391
+            }
+          }
+        },
+        "native_records": 4427,
+        "optional_channels": {
+          "observed_feedback_counter_age": {
+            "distinct_common_counter_advances": 66,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          },
+          "rtcp_rtt": {
+            "distinct_common_counter_advances": 66,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          }
+        },
+        "passed": true,
+        "receiver_outcomes_read": false,
+        "relay_records": 1108,
+        "true_transport_cc_feedback_age_observed": false
+      },
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3518,
+      "passed": true,
+      "prefix": "descending_prefix",
+      "readback_passed": true,
+      "repetition": 0,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 31.899999976158142,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 85
+      },
+      "step_phase_start_ms": 11298.699999988079,
+      "transport_passed": true,
+      "trial": "m10r-mechanism-d-003-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_volga_lock_01__1",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9984954280487803,
+            1.0022967776990936
+          ],
+          "beta_at_origin_feasible_ms": [
+            1139.2606645924166,
+            1140.406722673274
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1153.3525154062286,
+                1154.6454527274832
+              ],
+              "mapped_send_ms": [
+                1153.5835437853993,
+                1154.8773606496381
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.5,
+              "width_ms": 1.2938168642388064
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                332.7320086625383,
+                334.6112700399141
+              ],
+              "mapped_send_ms": [
+                332.7344729177657,
+                334.6137283936221
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.8792613773757694
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                641.663613260529,
+                642.8090574816358
+              ],
+              "mapped_send_ms": [
+                641.6648153850354,
+                642.81025961507
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.0999999940395355,
+              "width_ms": 1.1454442300346273
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1103.3553354967087,
+                1104.504208564107
+              ],
+              "mapped_send_ms": [
+                1103.3568876574689,
+                1104.505760736395
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.5,
+              "width_ms": 1.1488730789260444
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 1.8792613773757694,
+          "origin_browser_ms": 741.4499999880791,
+          "p95_held_out_width_ms": 1.8792613773757694,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 5
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999912693365869,
+            1.0000093926572378
+          ],
+          "beta_at_origin_feasible_ms": [
+            56677.60839539891,
+            56678.535069121455
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1153.4344557401782,
+                1154.528230147902
+              ],
+              "mapped_send_ms": [
+                1153.6660160815227,
+                1154.7597879533278
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.5,
+              "width_ms": 1.0937744077236857
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11226.99188302709,
+                11227.97539459006
+              ],
+              "mapped_send_ms": [
+                11227.079786075774,
+                11228.06329713657
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 2.0,
+              "width_ms": 0.9835115629684879
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99266.53544141265,
+                99267.40790830432
+              ],
+              "mapped_send_ms": [
+                99266.60926245354,
+                99267.48172925212
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 3.0,
+              "width_ms": 0.872466891669319
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105594.02676323039,
+                105594.89125118846
+              ],
+              "mapped_send_ms": [
+                105594.02801523109,
+                105594.89250318757
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 1.0999999940395355,
+              "width_ms": 0.8644879580679117
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                332.8057073064774,
+                333.9120487791224
+              ],
+              "mapped_send_ms": [
+                332.80817132798984,
+                333.914512755975
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.1063414726449992
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                641.7080122285333,
+                642.8087660397287
+              ],
+              "mapped_send_ms": [
+                641.7092142390247,
+                642.809968033529
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.0999999940395355,
+              "width_ms": 1.1007538111953181
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1103.355946721269,
+                1104.4502884932663
+              ],
+              "mapped_send_ms": [
+                1103.357498734811,
+                1104.451840485257
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.5,
+              "width_ms": 1.0943417719972786
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23262.166330348817,
+                23263.13463835414
+              ],
+              "mapped_send_ms": [
+                23262.16747234945,
+                23263.135780353332
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 1.199999988079071,
+              "width_ms": 0.9683080053218873
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35264.906916705324,
+                35265.86008931727
+              ],
+              "mapped_send_ms": [
+                35264.90795870591,
+                35265.861131316546
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 8.100000023841858,
+              "width_ms": 0.9531726119457744
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47258.640302072716,
+                47259.578350649324
+              ],
+              "mapped_send_ms": [
+                47258.642235073785,
+                47259.580283647956
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 3.2999999821186066,
+              "width_ms": 0.9380485766087077
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59260.7388400736,
+                59261.66175406645
+              ],
+              "mapped_send_ms": [
+                59260.73980107413,
+                59261.662715065766
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 1.5,
+              "width_ms": 0.9229139928502264
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71261.80892150481,
+                71262.71670221078
+              ],
+              "mapped_send_ms": [
+                71261.80992350537,
+                71262.71770421008
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 1.0999999940395355,
+              "width_ms": 0.9077807059657061
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83258.17786633206,
+                83259.07051967926
+              ],
+              "mapped_send_ms": [
+                83258.17853733242,
+                83259.07119067879
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 0.8926533471967559
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91265.0077463408,
+                91265.89030311722
+              ],
+              "mapped_send_ms": [
+                91265.0088473414,
+                91265.89140411644
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 0.882556776428828
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95259.09301267745,
+                95259.97053293315
+              ],
+              "mapped_send_ms": [
+                95259.09357267775,
+                95259.97109293274
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 0.8775202557008015
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.1063414726449992,
+          "origin_browser_ms": 56279.69999998808,
+          "p95_held_out_width_ms": 1.1063414726449992,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 6
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_volga_lock_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124243.6501705437,
+            2124263.915194479
+          ],
+          "6000": [
+            961617.5777689979,
+            961629.5221691219
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35249.39999997616,
+        "common_service_application_bounds_ms": [
+          35247.8407082523,
+          35248.79390238464
+        ],
+        "maximum_ack_ms": 3.0,
+        "maximum_command_lateness_ms": 1.399999976158142,
+        "maximum_tick_error_ms": 0.9975059999997029,
+        "passed": true
+      },
+      "input_order": "rise",
+      "input_x": 1.5,
+      "maximum_observer_gap_ms": 50.900000005960464,
+      "maximum_scheduling_lateness_ms": 22.5,
+      "maximum_stats_duration_ms": 16.80000001192093,
+      "measurement_step_start_elapsed_ms": 10119.600000023842,
+      "mechanism": {
+        "checks": {
+          "mandatory_native_channels": true,
+          "native_inventory": true,
+          "no_errors": true,
+          "persistence_before_terminal_drain": true,
+          "receipt_only_online": true,
+          "relay_counters": true,
+          "relay_coverage": true,
+          "snapshot_causality": true,
+          "snapshot_copies": true
+        },
+        "main_native_records": 3519,
+        "main_relay_records": 880,
+        "mandatory_channel_fractions": {
+          "cap": 1.0,
+          "encoder_frames": 1.0,
+          "encoder_time": 1.0,
+          "send_counter": 1.0,
+          "unique_sender": 1.0
+        },
+        "maximum_conservation_residual_bytes": 2.123415470123291e-07,
+        "maximum_relay_ack_ms": 21.399999976158142,
+        "maximum_relay_gap_ms": 122.09999999403954,
+        "native_field_status_counts": {
+          "outbound": {
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "firCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "frameHeight": {
+              "absent": 3,
+              "invalid": 0,
+              "present": 4427
+            },
+            "frameWidth": {
+              "absent": 3,
+              "invalid": 0,
+              "present": 4427
+            },
+            "framesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "framesPerSecond": {
+              "absent": 8,
+              "invalid": 0,
+              "present": 4422
+            },
+            "headerBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "keyFramesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "nackCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "packetsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "pliCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "qualityLimitationReason": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "retransmittedBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "targetBitrate": {
+              "absent": 5,
+              "invalid": 0,
+              "present": 4425
+            },
+            "totalEncodeTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalEncodedBytesTarget": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalPacketSendDelay": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            }
+          },
+          "pair": {
+            "availableOutgoingBitrate": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "bytesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "currentRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "requestsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "responsesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            }
+          },
+          "rtcp": {
+            "fractionLost": {
+              "absent": 41,
+              "invalid": 0,
+              "present": 4389
+            },
+            "jitter": {
+              "absent": 41,
+              "invalid": 0,
+              "present": 4389
+            },
+            "reportsReceived": {
+              "absent": 4430,
+              "invalid": 0,
+              "present": 0
+            },
+            "roundTripTime": {
+              "absent": 41,
+              "invalid": 0,
+              "present": 4389
+            },
+            "roundTripTimeMeasurements": {
+              "absent": 41,
+              "invalid": 0,
+              "present": 4389
+            },
+            "totalRoundTripTime": {
+              "absent": 41,
+              "invalid": 0,
+              "present": 4389
+            }
+          }
+        },
+        "native_records": 4430,
+        "optional_channels": {
+          "observed_feedback_counter_age": {
+            "distinct_common_counter_advances": 68,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          },
+          "rtcp_rtt": {
+            "distinct_common_counter_advances": 68,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          }
+        },
+        "passed": true,
+        "receiver_outcomes_read": false,
+        "relay_records": 1108,
+        "true_transport_cc_feedback_age_observed": false
+      },
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3519,
+      "passed": true,
+      "prefix": "descending_prefix",
+      "readback_passed": true,
+      "repetition": 1,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 33.79999998211861,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 84
+      },
+      "step_phase_start_ms": 11245,
+      "transport_passed": true,
+      "trial": "m10r-mechanism-d-004-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_volga_lock_01__1",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9983755112828046,
+            1.0014238186966085
+          ],
+          "beta_at_origin_feasible_ms": [
+            1097.2803200967041,
+            1098.4792519343189
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1161.6827973956001,
+                1162.9289442171912
+              ],
+              "mapped_send_ms": [
+                1162.1251645449822,
+                1163.3726620317748
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 2.0999999940395355,
+              "width_ms": 1.247497486792554
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                312.0790481610211,
+                313.422865745867
+              ],
+              "mapped_send_ms": [
+                312.0834222667064,
+                313.42722653689117
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 3.5999999940395355,
+              "width_ms": 1.3438175848459082
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                635.2743991254056,
+                636.4884001474595
+              ],
+              "mapped_send_ms": [
+                635.2755712902092,
+                636.4895720931896
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.2140010220539352
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1094.167838430251,
+                1095.2960739325572
+              ],
+              "mapped_send_ms": [
+                1094.1693106372397,
+                1095.2975458643957
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.1282355023060973
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 1.3438175848459082,
+          "origin_browser_ms": 716.2000000029802,
+          "p95_held_out_width_ms": 1.3438175848459082,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 4
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999893800525868,
+            1.0000110259704769
+          ],
+          "beta_at_origin_feasible_ms": [
+            56634.53412374855,
+            56635.567617933986
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1161.7026080867508,
+                1162.8231003851324
+              ],
+              "mapped_send_ms": [
+                1162.1456064921294,
+                1163.2660970949291
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 2.0999999940395355,
+              "width_ms": 1.1204922983815777
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11218.352424805998,
+                11219.43442524597
+              ],
+              "mapped_send_ms": [
+                11218.399004953775,
+                11219.481005215457
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 1.899999976158142,
+              "width_ms": 1.0820004399720347
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99262.94736128063,
+                99264.0053281344
+              ],
+              "mapped_send_ms": [
+                99262.98694009244,
+                99264.04490746443
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 3,
+              "width_ms": 1.0579673719912535
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105594.26902058616,
+                105595.4099101068
+              ],
+              "mapped_send_ms": [
+                105594.27892553907,
+                105595.419815212
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.1408896729262779
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                312.22599023007933,
+                313.364092149277
+              ],
+              "mapped_send_ms": [
+                312.2303572764504,
+                313.3684591011188
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 3.5999999940395355,
+              "width_ms": 1.138101919197652
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                635.3410166946633,
+                636.4721245696419
+              ],
+              "mapped_send_ms": [
+                635.342188707109,
+                636.4732965567237
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.1311078749786247
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1094.174809485412,
+                1095.2959855912995
+              ],
+              "mapped_send_ms": [
+                1094.1762815010516,
+                1095.2974575750704
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.1211761058875709
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23254.74786777186,
+                23255.783808169952
+              ],
+              "mapped_send_ms": [
+                23254.74885877139,
+                23255.784799169305
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 1.5,
+              "width_ms": 1.0359403980910429
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35265.99116924457,
+                35267.024974542466
+              ],
+              "mapped_send_ms": [
+                35265.99251124393,
+                35267.02631654159
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 1.7000000178813934,
+              "width_ms": 1.0338052978986525
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47265.23399344567,
+                47266.265665776555
+              ],
+              "mapped_send_ms": [
+                47265.23674744435,
+                47266.268419774744
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 2.2999999821186066,
+              "width_ms": 1.0316723308860674
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59260.14705371992,
+                59261.1811568441
+              ],
+              "mapped_send_ms": [
+                59260.14879571843,
+                59261.18289884296
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 1.9000000059604645,
+              "width_ms": 1.0341031245334307
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71263.64108146631,
+                71264.67761829021
+              ],
+              "mapped_send_ms": [
+                71263.64314446453,
+                71264.67968128885
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 1.800000011920929,
+              "width_ms": 1.0365368243219564
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83266.8918294214,
+                83267.93079989568
+              ],
+              "mapped_send_ms": [
+                83266.89282042054,
+                83267.93179089505
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 2.0,
+              "width_ms": 1.038970474503003
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91255.7519361403,
+                91256.7925263502
+              ],
+              "mapped_send_ms": [
+                91255.75243713988,
+                91256.79302734986
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.040590209988295
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95262.8080684754,
+                95263.84949530603
+              ],
+              "mapped_send_ms": [
+                95262.80880947187,
+                95263.85023630554
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 1.100000023841858,
+              "width_ms": 1.0414268336753594
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.1408896729262779,
+          "origin_browser_ms": 56253.40000000596,
+          "p95_held_out_width_ms": 1.1408896729262779,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 8
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_volga_lock_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124310.970745171,
+            2124339.0314601017
+          ],
+          "6000": [
+            961717.9967319078,
+            961734.0803027594
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35246.69999998808,
+        "common_service_application_bounds_ms": [
+          35243.710625880114,
+          35244.744435138564
+        ],
+        "maximum_ack_ms": 4.799999982118607,
+        "maximum_command_lateness_ms": 0.0,
+        "maximum_tick_error_ms": 3.573382999999467,
+        "passed": true
+      },
+      "input_order": "rise",
+      "input_x": 1.5,
+      "maximum_observer_gap_ms": 56.0,
+      "maximum_scheduling_lateness_ms": 31.19999998807907,
+      "maximum_stats_duration_ms": 10,
+      "measurement_step_start_elapsed_ms": 10123.100000023842,
+      "mechanism": {
+        "checks": {
+          "mandatory_native_channels": true,
+          "native_inventory": true,
+          "no_errors": true,
+          "persistence_before_terminal_drain": true,
+          "receipt_only_online": true,
+          "relay_counters": true,
+          "relay_coverage": true,
+          "snapshot_causality": true,
+          "snapshot_copies": true
+        },
+        "main_native_records": 3519,
+        "main_relay_records": 880,
+        "mandatory_channel_fractions": {
+          "cap": 1.0,
+          "encoder_frames": 1.0,
+          "encoder_time": 1.0,
+          "send_counter": 1.0,
+          "unique_sender": 1.0
+        },
+        "maximum_conservation_residual_bytes": 2.2899621399119496e-07,
+        "maximum_relay_ack_ms": 33.39999997615814,
+        "maximum_relay_gap_ms": 129.19999998807907,
+        "native_field_status_counts": {
+          "outbound": {
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "firCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "frameHeight": {
+              "absent": 3,
+              "invalid": 0,
+              "present": 4427
+            },
+            "frameWidth": {
+              "absent": 3,
+              "invalid": 0,
+              "present": 4427
+            },
+            "framesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "framesPerSecond": {
+              "absent": 5,
+              "invalid": 0,
+              "present": 4425
+            },
+            "headerBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "keyFramesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "nackCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "packetsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "pliCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "qualityLimitationReason": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "retransmittedBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "targetBitrate": {
+              "absent": 5,
+              "invalid": 0,
+              "present": 4425
+            },
+            "totalEncodeTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalEncodedBytesTarget": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalPacketSendDelay": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            }
+          },
+          "pair": {
+            "availableOutgoingBitrate": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "bytesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "currentRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "requestsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "responsesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            }
+          },
+          "rtcp": {
+            "fractionLost": {
+              "absent": 64,
+              "invalid": 0,
+              "present": 4366
+            },
+            "jitter": {
+              "absent": 64,
+              "invalid": 0,
+              "present": 4366
+            },
+            "reportsReceived": {
+              "absent": 4430,
+              "invalid": 0,
+              "present": 0
+            },
+            "roundTripTime": {
+              "absent": 64,
+              "invalid": 0,
+              "present": 4366
+            },
+            "roundTripTimeMeasurements": {
+              "absent": 64,
+              "invalid": 0,
+              "present": 4366
+            },
+            "totalRoundTripTime": {
+              "absent": 64,
+              "invalid": 0,
+              "present": 4366
+            }
+          }
+        },
+        "native_records": 4430,
+        "optional_channels": {
+          "observed_feedback_counter_age": {
+            "distinct_common_counter_advances": 67,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          },
+          "rtcp_rtt": {
+            "distinct_common_counter_advances": 67,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          }
+        },
+        "passed": true,
+        "receiver_outcomes_read": false,
+        "relay_records": 1108,
+        "true_transport_cc_feedback_age_observed": false
+      },
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3519,
+      "passed": true,
+      "prefix": "ascending_prefix",
+      "readback_passed": true,
+      "repetition": 1,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 32.80000001192093,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 84
+      },
+      "step_phase_start_ms": 11241.90000000596,
+      "transport_passed": true,
+      "trial": "m10r-mechanism-d-005-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_kampar_boating_01__1",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9983956651480638,
+            1.0021284721134975
+          ],
+          "beta_at_origin_feasible_ms": [
+            1243.4906081246334,
+            1244.639124902509
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1270.189791235724,
+                1271.379707726916
+              ],
+              "mapped_send_ms": [
+                1270.4601946895132,
+                1271.6511221665608
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 10.700000017881393,
+              "width_ms": 1.1909274770475804
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                358.6164388030141,
+                360.82645473849544
+              ],
+              "mapped_send_ms": [
+                358.62028096713186,
+                360.8302825910181
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 25.200000017881393,
+              "width_ms": 2.2100159354813513
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                758.8040666570781,
+                759.9630177489192
+              ],
+              "mapped_send_ms": [
+                758.8053098647047,
+                759.9642594858095
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.1589510918411179
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1216.3036304263103,
+                1217.3856071337482
+              ],
+              "mapped_send_ms": [
+                1216.3047600219973,
+                1217.386738893941
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.0819788719436474
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 2.2100159354813513,
+          "origin_browser_ms": 801.0500000119209,
+          "p95_held_out_width_ms": 2.2100159354813513,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 6
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999914207721723,
+            1.0000099628840788
+          ],
+          "beta_at_origin_feasible_ms": [
+            56804.65007091767,
+            56805.553429901556
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1270.3274509560724,
+                1271.3755548173722
+              ],
+              "mapped_send_ms": [
+                1270.5984303227524,
+                1271.6465323239463
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 10.700000017881393,
+              "width_ms": 1.0481038612997509
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11330.299329851696,
+                11331.278378123534
+              ],
+              "mapped_send_ms": [
+                11330.3526899239,
+                11331.33173782946
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 2.0,
+              "width_ms": 0.9790482718381099
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99385.44277421277,
+                99386.38460381511
+              ],
+              "mapped_send_ms": [
+                99385.5068111778,
+                99386.44864083738
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 1.9000000059604645,
+              "width_ms": 0.9418296595831634
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105713.80099911964,
+                105714.74848735482
+              ],
+              "mapped_send_ms": [
+                105713.80249111883,
+                105714.74997935534
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 1.0,
+              "width_ms": 0.947488236517529
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                359.02442066194635,
+                360.08573142684327
+              ],
+              "mapped_send_ms": [
+                359.028256694859,
+                360.08956738862616
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 25.200000017881393,
+              "width_ms": 1.0613107648969162
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                758.8063734824027,
+                759.8602715194429
+              ],
+              "mapped_send_ms": [
+                758.8076154930604,
+                759.861513507065
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.0538980370401987
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1216.3265218833985,
+                1217.3752253509883
+              ],
+              "mapped_send_ms": [
+                1216.3276538849386,
+                1217.3763573397155
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.4000000059604645,
+              "width_ms": 1.048703467589803
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23369.811796348906,
+                23370.70820075082
+              ],
+              "mapped_send_ms": [
+                23369.814210352117,
+                23370.710614737516
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 1.5,
+              "width_ms": 0.8964044019157882
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35379.602930698224,
+                35380.48754126973
+              ],
+              "mapped_send_ms": [
+                35379.60399169963,
+                35380.488602270096
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 1.100000023841858,
+              "width_ms": 0.8846105715056183
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47379.908729322895,
+                47380.804057097565
+              ],
+              "mapped_send_ms": [
+                47379.91138332144,
+                47380.80671109849
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 1.399999976158142,
+              "width_ms": 0.8953277770488057
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59374.99497168043,
+                59375.90102511043
+              ],
+              "mapped_send_ms": [
+                59374.99680467943,
+                59375.90285811107
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 1.7999999821186066,
+              "width_ms": 0.9060534316377016
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71379.60052183621,
+                71380.51730943342
+              ],
+              "mapped_send_ms": [
+                71379.60150383567,
+                71380.51829143376
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 0.9167875980929239
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83369.0824472562,
+                83370.0099554975
+              ],
+              "mapped_send_ms": [
+                83369.08291825594,
+                83370.01042649767
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1,
+              "width_ms": 0.9275082417298108
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91382.03577662622,
+                91382.97044981607
+              ],
+              "mapped_send_ms": [
+                91382.03662762576,
+                91382.97130081637
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 0.9346731906116474
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95373.19883367926,
+                95374.13707565039
+              ],
+              "mapped_send_ms": [
+                95373.2000656786,
+                95374.13830765082
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 1.9000000059604645,
+              "width_ms": 0.9382419722242048
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.0613107648969162,
+          "origin_browser_ms": 56362.0000000149,
+          "p95_held_out_width_ms": 1.0613107648969162,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 7
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_kampar_boating_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124414.4020306743,
+            2124436.6526547098
+          ],
+          "6000": [
+            961763.2491134945,
+            961776.3639496781
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35365.30000001192,
+        "common_service_application_bounds_ms": [
+          35362.4013248454,
+          35363.28595228828
+        ],
+        "maximum_ack_ms": 3.9000000059604645,
+        "maximum_command_lateness_ms": 5.800000011920929,
+        "maximum_tick_error_ms": 0.6949210000020685,
+        "passed": true
+      },
+      "input_order": "rise",
+      "input_x": 1.5,
+      "maximum_observer_gap_ms": 53.599999994039536,
+      "maximum_scheduling_lateness_ms": 16,
+      "maximum_stats_duration_ms": 26.099999994039536,
+      "measurement_step_start_elapsed_ms": 10115.399999976158,
+      "mechanism": {
+        "checks": {
+          "mandatory_native_channels": true,
+          "native_inventory": true,
+          "no_errors": true,
+          "persistence_before_terminal_drain": true,
+          "receipt_only_online": true,
+          "relay_counters": true,
+          "relay_coverage": true,
+          "snapshot_causality": true,
+          "snapshot_copies": true
+        },
+        "main_native_records": 3519,
+        "main_relay_records": 880,
+        "mandatory_channel_fractions": {
+          "cap": 1.0,
+          "encoder_frames": 1.0,
+          "encoder_time": 1.0,
+          "send_counter": 1.0,
+          "unique_sender": 1.0
+        },
+        "maximum_conservation_residual_bytes": 9.514042176306248e-08,
+        "maximum_relay_ack_ms": 20.69999998807907,
+        "maximum_relay_gap_ms": 118.30000001192093,
+        "native_field_status_counts": {
+          "outbound": {
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "firCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "frameHeight": {
+              "absent": 3,
+              "invalid": 0,
+              "present": 4427
+            },
+            "frameWidth": {
+              "absent": 3,
+              "invalid": 0,
+              "present": 4427
+            },
+            "framesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "framesPerSecond": {
+              "absent": 7,
+              "invalid": 0,
+              "present": 4423
+            },
+            "headerBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "keyFramesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "nackCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "packetsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "pliCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "qualityLimitationReason": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "retransmittedBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "targetBitrate": {
+              "absent": 5,
+              "invalid": 0,
+              "present": 4425
+            },
+            "totalEncodeTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalEncodedBytesTarget": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalPacketSendDelay": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            }
+          },
+          "pair": {
+            "availableOutgoingBitrate": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "bytesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "currentRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "requestsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "responsesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            }
+          },
+          "rtcp": {
+            "fractionLost": {
+              "absent": 48,
+              "invalid": 0,
+              "present": 4382
+            },
+            "jitter": {
+              "absent": 48,
+              "invalid": 0,
+              "present": 4382
+            },
+            "reportsReceived": {
+              "absent": 4430,
+              "invalid": 0,
+              "present": 0
+            },
+            "roundTripTime": {
+              "absent": 48,
+              "invalid": 0,
+              "present": 4382
+            },
+            "roundTripTimeMeasurements": {
+              "absent": 48,
+              "invalid": 0,
+              "present": 4382
+            },
+            "totalRoundTripTime": {
+              "absent": 48,
+              "invalid": 0,
+              "present": 4382
+            }
+          }
+        },
+        "native_records": 4430,
+        "optional_channels": {
+          "observed_feedback_counter_age": {
+            "distinct_common_counter_advances": 61,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          },
+          "rtcp_rtt": {
+            "distinct_common_counter_advances": 61,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          }
+        },
+        "passed": true,
+        "receiver_outcomes_read": false,
+        "relay_records": 1108,
+        "true_transport_cc_feedback_age_observed": false
+      },
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3519,
+      "passed": true,
+      "prefix": "ascending_prefix",
+      "readback_passed": true,
+      "repetition": 1,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 31.599999994039536,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 84
+      },
+      "step_phase_start_ms": 11355.59999999404,
+      "transport_passed": true,
+      "trial": "m10r-mechanism-d-006-support"
+    },
+    {
+      "acquisition_timing_passed": true,
+      "block": "content_kampar_boating_01__1",
+      "capture_status": "sealed",
+      "cleanup_passed": true,
+      "clock": {
+        "beginning": {
+          "alpha_feasible": [
+            0.9986704703438782,
+            1.0012993227571116
+          ],
+          "beta_at_origin_feasible_ms": [
+            1199.8527992057104,
+            1201.0433834983894
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1254.9788598540867,
+                1256.025514069704
+              ],
+              "mapped_send_ms": [
+                1255.3701514400245,
+                1256.4173202860852
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.0471688460606856
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                348.39819786136303,
+                349.78856427164897
+              ],
+              "mapped_send_ms": [
+                348.40088261686384,
+                349.7912478404178
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 3.100000023841858,
+              "width_ms": 1.3903664102859352
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                757.0000240274677,
+                758.2097777648014
+              ],
+              "mapped_send_ms": [
+                757.0015064446259,
+                758.2112595266925
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.209753737333699
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1206.806650072513,
+                1207.8298858762353
+              ],
+              "mapped_send_ms": [
+                1206.8083721057903,
+                1207.8316085994052
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 1.0232364936148315
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 4,
+          "held_out_count": 4,
+          "max_held_out_width_ms": 1.3903664102859352,
+          "origin_browser_ms": 800.8000000119209,
+          "p95_held_out_width_ms": 1.3903664102859352,
+          "passed": true,
+          "training_marker_count": 35,
+          "vertex_count": 6
+        },
+        "full": {
+          "alpha_feasible": [
+            0.9999904085320622,
+            1.0000086654987685
+          ],
+          "beta_at_origin_feasible_ms": [
+            56758.68558186131,
+            56759.62355339855
+          ],
+          "checks": [
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1255.0178449839586,
+                1256.0254735400013
+              ],
+              "mapped_send_ms": [
+                1255.4096454078754,
+                1256.4172734686435
+              ],
+              "marker_id": "m0003",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 1.0076285560426186
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                11294.506820260227,
+                11295.501757980142
+              ],
+              "mapped_send_ms": [
+                11294.671678438594,
+                11295.666615950111
+              ],
+              "marker_id": "m0006",
+              "round_trip_ms": 1.5999999940395355,
+              "width_ms": 0.9949377199154696
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                99331.37590597966,
+                99332.2683132296
+              ],
+              "mapped_send_ms": [
+                99331.4147650132,
+                99332.3071722225
+              ],
+              "marker_id": "m0009",
+              "round_trip_ms": 1.0,
+              "width_ms": 0.8924072499357862
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                105661.73243577495,
+                105662.63161725036
+              ],
+              "mapped_send_ms": [
+                105661.7338977762,
+                105662.6330792532
+              ],
+              "marker_id": "m0011",
+              "round_trip_ms": 1.0,
+              "width_ms": 0.8991814769979101
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                348.62755591984023,
+                349.6511763008675
+              ],
+              "mapped_send_ms": [
+                348.6302399455817,
+                349.6538602776054
+              ],
+              "marker_id": "x0005",
+              "round_trip_ms": 3.100000023841858,
+              "width_ms": 1.0236203810272855
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                757.1183179458822,
+                758.134480589295
+              ],
+              "mapped_send_ms": [
+                757.119799960099,
+                758.1359625764526
+              ],
+              "marker_id": "x0014",
+              "round_trip_ms": 1.300000011920929,
+              "width_ms": 1.0161626434128266
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                1206.8148658305,
+                1207.8229428144768
+              ],
+              "mapped_send_ms": [
+                1206.8165888323638,
+                1207.8246657995478
+              ],
+              "marker_id": "x0023",
+              "round_trip_ms": 1.2999999821186066,
+              "width_ms": 1.0080769839769346
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                23350.207583987103,
+                23351.187282194027
+              ],
+              "mapped_send_ms": [
+                23350.210517990286,
+                23351.190216193485
+              ],
+              "marker_id": "x0048",
+              "round_trip_ms": 2.300000011920929,
+              "width_ms": 0.9796982069237856
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                35331.92168366374,
+                35332.88623588359
+              ],
+              "mapped_send_ms": [
+                35331.923045665215,
+                35332.887597883346
+              ],
+              "marker_id": "x0057",
+              "round_trip_ms": 1.800000011920929,
+              "width_ms": 0.9645522198479739
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                47327.948787826404,
+                47328.898175966235
+              ],
+              "mapped_send_ms": [
+                47327.95028982803,
+                47328.899677965965
+              ],
+              "marker_id": "x0066",
+              "round_trip_ms": 1.7000000178813934,
+              "width_ms": 0.9493881398302619
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                59325.12291117463,
+                59326.05713483997
+              ],
+              "mapped_send_ms": [
+                59325.1240331756,
+                59326.058256839766
+              ],
+              "marker_id": "x0075",
+              "round_trip_ms": 3.9000000059604645,
+              "width_ms": 0.934223665339232
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                71329.87416459787,
+                71330.79584033314
+              ],
+              "mapped_send_ms": [
+                71329.87632759976,
+                71330.79800333276
+              ],
+              "marker_id": "x0084",
+              "round_trip_ms": 1.5,
+              "width_ms": 0.9216757352696732
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                83333.77399228627,
+                83334.6831209814
+              ],
+              "mapped_send_ms": [
+                83333.77454328674,
+                83334.6836719813
+              ],
+              "marker_id": "x0093",
+              "round_trip_ms": 1.699999988079071,
+              "width_ms": 0.9091286951297661
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                91333.42623686772,
+                91334.32700395044
+              ],
+              "mapped_send_ms": [
+                91333.42684786825,
+                91334.32761495034
+              ],
+              "marker_id": "x0102",
+              "round_trip_ms": 1.5,
+              "width_ms": 0.9007670827268157
+            },
+            {
+              "covered": true,
+              "mapped_receive_ms": [
+                95332.07385514127,
+                95332.97044264962
+              ],
+              "mapped_send_ms": [
+                95332.07439614175,
+                95332.97098364952
+              ],
+              "marker_id": "x0111",
+              "round_trip_ms": 1,
+              "width_ms": 0.8965875083522405
+            }
+          ],
+          "coverage": 1.0,
+          "covered_count": 15,
+          "held_out_count": 15,
+          "max_held_out_width_ms": 1.0236203810272855,
+          "origin_browser_ms": 56359.55000001192,
+          "p95_held_out_width_ms": 1.0236203810272855,
+          "passed": true,
+          "training_marker_count": 128,
+          "vertex_count": 6
+        },
+        "holdout_ids": [
+          "m0003",
+          "m0006",
+          "m0009",
+          "m0011",
+          "x0005",
+          "x0014",
+          "x0023",
+          "x0048",
+          "x0057",
+          "x0066",
+          "x0075",
+          "x0084",
+          "x0093",
+          "x0102",
+          "x0111"
+        ],
+        "training_ids": [
+          "m0001",
+          "m0002",
+          "m0004",
+          "m0005",
+          "m0007",
+          "m0008",
+          "m0010",
+          "m0012",
+          "x0001",
+          "x0002",
+          "x0003",
+          "x0004",
+          "x0006",
+          "x0007",
+          "x0008",
+          "x0009",
+          "x0010",
+          "x0011",
+          "x0012",
+          "x0013",
+          "x0015",
+          "x0016",
+          "x0017",
+          "x0018",
+          "x0019",
+          "x0020",
+          "x0021",
+          "x0022",
+          "x0024",
+          "x0025",
+          "x0026",
+          "x0027",
+          "x0028",
+          "x0029",
+          "x0030",
+          "x0031",
+          "x0032",
+          "x0033",
+          "x0034",
+          "x0035",
+          "x0036",
+          "x0037",
+          "x0038",
+          "x0039",
+          "x0040",
+          "x0041",
+          "x0042",
+          "x0043",
+          "x0044",
+          "x0045",
+          "x0046",
+          "x0047",
+          "x0049",
+          "x0050",
+          "x0051",
+          "x0052",
+          "x0053",
+          "x0054",
+          "x0055",
+          "x0056",
+          "x0058",
+          "x0059",
+          "x0060",
+          "x0061",
+          "x0062",
+          "x0063",
+          "x0064",
+          "x0065",
+          "x0067",
+          "x0068",
+          "x0069",
+          "x0070",
+          "x0071",
+          "x0072",
+          "x0073",
+          "x0074",
+          "x0076",
+          "x0077",
+          "x0078",
+          "x0079",
+          "x0080",
+          "x0081",
+          "x0082",
+          "x0083",
+          "x0085",
+          "x0086",
+          "x0087",
+          "x0088",
+          "x0089",
+          "x0090",
+          "x0091",
+          "x0092",
+          "x0094",
+          "x0095",
+          "x0096",
+          "x0097",
+          "x0098",
+          "x0099",
+          "x0100",
+          "x0101",
+          "x0103",
+          "x0104",
+          "x0105",
+          "x0106",
+          "x0107",
+          "x0108",
+          "x0109",
+          "x0110",
+          "x0112",
+          "x0113",
+          "x0114",
+          "x0115",
+          "x0116",
+          "x0117",
+          "x0118",
+          "x0119",
+          "x0120",
+          "x0121",
+          "x0122",
+          "x0123",
+          "x0124",
+          "x0125",
+          "x0126",
+          "x0127",
+          "x0128",
+          "x0129",
+          "x0130",
+          "x0131"
+        ]
+      },
+      "content_id": "content_kampar_boating_01",
+      "input_fidelity": {
+        "capacity_exposure_bytes_bounds": {
+          "12000": [
+            2124402.538789661,
+            2124424.879702729
+          ],
+          "6000": [
+            961748.9312923109,
+            961761.6445065426
+          ]
+        },
+        "checks": {
+          "completion": true,
+          "exact_source_ticks": true,
+          "initial_setting": true,
+          "inventory": true,
+          "strict_commands_and_clock_ordering": true
+        },
+        "common_service_ack_ms": 35316.80000001192,
+        "common_service_application_bounds_ms": [
+          35315.08039044222,
+          35316.044963951004
+        ],
+        "maximum_ack_ms": 2.9000000059604645,
+        "maximum_command_lateness_ms": 3.5999999940395355,
+        "maximum_tick_error_ms": 0.7636870000005729,
+        "passed": true
+      },
+      "input_order": "rise",
+      "input_x": 1.5,
+      "maximum_observer_gap_ms": 86.80000001192093,
+      "maximum_scheduling_lateness_ms": 14,
+      "maximum_stats_duration_ms": 56,
+      "measurement_step_start_elapsed_ms": 10074.800000011921,
+      "mechanism": {
+        "checks": {
+          "mandatory_native_channels": true,
+          "native_inventory": true,
+          "no_errors": true,
+          "persistence_before_terminal_drain": true,
+          "receipt_only_online": true,
+          "relay_counters": true,
+          "relay_coverage": true,
+          "snapshot_causality": true,
+          "snapshot_copies": true
+        },
+        "main_native_records": 3518,
+        "main_relay_records": 880,
+        "mandatory_channel_fractions": {
+          "cap": 1.0,
+          "encoder_frames": 1.0,
+          "encoder_time": 1.0,
+          "send_counter": 1.0,
+          "unique_sender": 1.0
+        },
+        "maximum_conservation_residual_bytes": 1.1808924682554789e-07,
+        "maximum_relay_ack_ms": 68.39999997615814,
+        "maximum_relay_gap_ms": 160.7999999821186,
+        "native_field_status_counts": {
+          "outbound": {
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "firCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "frameHeight": {
+              "absent": 2,
+              "invalid": 0,
+              "present": 4424
+            },
+            "frameWidth": {
+              "absent": 2,
+              "invalid": 0,
+              "present": 4424
+            },
+            "framesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "framesPerSecond": {
+              "absent": 7,
+              "invalid": 0,
+              "present": 4419
+            },
+            "headerBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "keyFramesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "nackCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "packetsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "pliCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "qualityLimitationReason": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "retransmittedBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "targetBitrate": {
+              "absent": 9,
+              "invalid": 0,
+              "present": 4417
+            },
+            "totalEncodeTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "totalEncodedBytesTarget": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "totalPacketSendDelay": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            }
+          },
+          "pair": {
+            "availableOutgoingBitrate": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "bytesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "currentRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "requestsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "responsesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            },
+            "totalRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4426
+            }
+          },
+          "rtcp": {
+            "fractionLost": {
+              "absent": 59,
+              "invalid": 0,
+              "present": 4367
+            },
+            "jitter": {
+              "absent": 59,
+              "invalid": 0,
+              "present": 4367
+            },
+            "reportsReceived": {
+              "absent": 4426,
+              "invalid": 0,
+              "present": 0
+            },
+            "roundTripTime": {
+              "absent": 59,
+              "invalid": 0,
+              "present": 4367
+            },
+            "roundTripTimeMeasurements": {
+              "absent": 59,
+              "invalid": 0,
+              "present": 4367
+            },
+            "totalRoundTripTime": {
+              "absent": 59,
+              "invalid": 0,
+              "present": 4367
+            }
+          }
+        },
+        "native_records": 4426,
+        "optional_channels": {
+          "observed_feedback_counter_age": {
+            "distinct_common_counter_advances": 61,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          },
+          "rtcp_rtt": {
+            "distinct_common_counter_advances": 61,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          }
+        },
+        "passed": true,
+        "receiver_outcomes_read": false,
+        "relay_records": 1108,
+        "true_transport_cc_feedback_age_observed": false
+      },
+      "media_passed": true,
+      "observer_passed": true,
+      "observer_samples": 3518,
+      "passed": true,
+      "prefix": "descending_prefix",
+      "readback_passed": true,
+      "repetition": 1,
+      "startup": {
+        "components": {
+          "encoder_held_inactive": true,
+          "explicit_pre_sdp_observation": true,
+          "fixed_delay_exercised": true,
+          "initialization_observed_promptly": true,
+          "media_activation_readback": true,
+          "native_first_measurement_bwe_exact": true,
+          "native_initial_bwe_exact": true,
+          "native_initialization_success": true,
+          "native_measurement_start_bwe_exact": true,
+          "no_stats_errors": true,
+          "observes_postactivation_evolution": true,
+          "same_selected_pair": true,
+          "sdp_and_cap_readbacks": true,
+          "startup_sample_gaps": true,
+          "strict_transport_readiness": true
+        },
+        "first_measured_bwe_bps": 1200000,
+        "initialization_success": true,
+        "maximum_poll_gap_ms": 28.900000005960464,
+        "native_initial_bwe_bps": 1200000,
+        "passed": true,
+        "sample_count": 84
+      },
+      "step_phase_start_ms": 11310.300000011921,
+      "transport_passed": true,
+      "trial": "m10r-mechanism-d-007-support"
+    }
+  ],
+  "stage": "development"
+}
