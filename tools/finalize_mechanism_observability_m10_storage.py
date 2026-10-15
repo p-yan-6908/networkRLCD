@@ -31,7 +31,7 @@ def finalize():
         archive_binding_sha256=v.sha(root/'archive_bindings.json'))
     if 'analysis_sha256' in binding:receipt.update(analysis_sha256=binding['analysis_sha256'],
         positive_future_stability_labels_nested=binding['positive_future_stability_labels_nested'])
-    v.write(path,receipt)
+    path.write_text(json.dumps(receipt,sort_keys=True,indent=2)+"\n")
     raw=sum(p.stat().st_size for p in m.ROOT.rglob('*') if p.is_file())
     stage=v.CACHE/(PREFIX+'-archive');staged=sum(p.stat().st_size for p in stage.rglob('*') if p.is_file())
     fresh=max(x['size'] for x in receipt['parts'].values());assert raw<=m.DESIGN['raw_budget_bytes']

@@ -1,0 +1,57 @@
+{
+  "abi": "native_mechanism_observability_m10_archive_receipt_v1",
+  "acquisition_gate_passed": false,
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_binding_sha256": "dd110d8c0eb658e537690292071ca27421e25618cc7fc48d75fde17f4ad8931b",
+  "archive_helper_sha256": "a3350146264d7c2888ceb86ca756ae44d215e3e28ef3f47efb012ddb227bbb08",
+  "capture_index_sha256": "969566eef7f74329a0b8e21148b442eaec7862c2fba646c9ed3c0f1db8d70828",
+  "controller_fitted": false,
+  "evidence_deleted": 0,
+  "files_deleted": 0,
+  "files_verified": 501,
+  "fit_predictor": false,
+  "gate_is_acquisition_only": true,
+  "gate_sha256": "2777ebc62ec9ce882ac836adfd2d0f70c1b4f85c22e247e5cad73a72237af5ed",
+  "local_raw_evidence_retained": true,
+  "native_common_support_established": false,
+  "old_closed_panels": {
+    "m8_allocation_sha256": "6b25569c97dd4116577360e652f2163819ed1c64f972ff9c65e6e9cd17b2df9a",
+    "m8_schedule_uninstantiated": true,
+    "old_validation_session_directories": {
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7r/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7ra/validation": false
+    }
+  },
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "0ff9cfa20244cb028c6dd77b972823371e90ec5d40e06e646aacbd870c449f6c",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "67523c6c2de7635b3905a58d1dd7aac1500f8cbd82471c4f22e06e2ac37af928",
+      "size": 88440
+    },
+    "results.tar.part-000": {
+      "sha256": "e9cce59b72ae5be875beacda5dd3bc4308ce8c00b7fbcdb63c88798687ab9a28",
+      "size": 137779200
+    }
+  },
+  "prefix": "native-mechanism-observability-m10-20261015-01",
+  "private": true,
+  "protocol_sha256": "43899e30f3b03ee8ebea4a900b728c9bca15d2c29596add75095a15e9d7ce31f",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-mechanism-observability-m10/instrumentation",
+  "raw_evidence_retained": true,
+  "receiver_outcomes_read": false,
+  "registered_gate_passed": false,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "result_classification": "instrumentation-limited; no mechanism/state interpretation",
+  "revision": "a1d0cbddb853f675a414cfaa39c79ce70bb5e513",
+  "scientific_common_support_gate_passed": false,
+  "scientific_registration_commit": "03aac061347fb9c9c44b69a8f8f900e27720c60e"
+}

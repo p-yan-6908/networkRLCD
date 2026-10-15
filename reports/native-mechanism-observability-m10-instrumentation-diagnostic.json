@@ -1,0 +1,862 @@
+{
+  "abi": "native_mechanism_observability_m10_instrumentation_stop_v1",
+  "all_four_cleanup_failed": true,
+  "development_unopened": true,
+  "future_labels_or_mechanism_effects_analyzed": false,
+  "hypothesis": "bulk mechanism JSON returned through CDP after drain start delays cleanup-complete bookkeeping; no in-window network/clock failure",
+  "scientific_registration_commit": "03aac061347fb9c9c44b69a8f8f900e27720c60e",
+  "sessions": [
+    {
+      "cleanup_elapsed_ms": 2481.8428060000006,
+      "cleanup_limit_ms": 2000,
+      "id": "m10-mechanism-i-000-support",
+      "mechanism_diagnostic": {
+        "checks": {
+          "mandatory_native_channels": true,
+          "native_inventory": true,
+          "no_errors": true,
+          "receipt_only_online": true,
+          "relay_counters": true,
+          "relay_coverage": true,
+          "snapshot_causality": true,
+          "snapshot_copies": true
+        },
+        "main_native_records": 3520,
+        "main_relay_records": 880,
+        "mandatory_channel_fractions": {
+          "cap": 1.0,
+          "encoder_frames": 1.0,
+          "encoder_time": 1.0,
+          "send_counter": 1.0,
+          "unique_sender": 1.0
+        },
+        "maximum_conservation_residual_bytes": 1.5781370166223496e-07,
+        "maximum_relay_ack_ms": 15.900000005960464,
+        "maximum_relay_gap_ms": 113.5,
+        "native_field_status_counts": {
+          "outbound": {
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "firCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "frameHeight": {
+              "absent": 4,
+              "invalid": 0,
+              "present": 4426
+            },
+            "frameWidth": {
+              "absent": 4,
+              "invalid": 0,
+              "present": 4426
+            },
+            "framesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "framesPerSecond": {
+              "absent": 7,
+              "invalid": 0,
+              "present": 4423
+            },
+            "headerBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "keyFramesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "nackCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "packetsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "pliCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "qualityLimitationReason": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "retransmittedBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "targetBitrate": {
+              "absent": 7,
+              "invalid": 0,
+              "present": 4423
+            },
+            "totalEncodeTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalEncodedBytesTarget": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalPacketSendDelay": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            }
+          },
+          "pair": {
+            "availableOutgoingBitrate": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "bytesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "currentRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "requestsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "responsesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            }
+          },
+          "rtcp": {
+            "fractionLost": {
+              "absent": 30,
+              "invalid": 0,
+              "present": 4400
+            },
+            "jitter": {
+              "absent": 30,
+              "invalid": 0,
+              "present": 4400
+            },
+            "reportsReceived": {
+              "absent": 4430,
+              "invalid": 0,
+              "present": 0
+            },
+            "roundTripTime": {
+              "absent": 30,
+              "invalid": 0,
+              "present": 4400
+            },
+            "roundTripTimeMeasurements": {
+              "absent": 30,
+              "invalid": 0,
+              "present": 4400
+            },
+            "totalRoundTripTime": {
+              "absent": 30,
+              "invalid": 0,
+              "present": 4400
+            }
+          }
+        },
+        "native_records": 4430,
+        "optional_channels": {
+          "observed_feedback_counter_age": {
+            "distinct_common_counter_advances": 62,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          },
+          "rtcp_rtt": {
+            "distinct_common_counter_advances": 62,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          }
+        },
+        "passed": true,
+        "receiver_outcomes_read": false,
+        "relay_records": 1108,
+        "true_transport_cc_feedback_age_observed": false
+      },
+      "mechanism_native_bytes": 14830547,
+      "pre_pending_forward": {
+        "a_to_b": 2,
+        "b_to_a": 3
+      },
+      "pre_queued": {
+        "a_to_b": 0,
+        "b_to_a": 0
+      }
+    },
+    {
+      "cleanup_elapsed_ms": 2470.3937949999963,
+      "cleanup_limit_ms": 2000,
+      "id": "m10-mechanism-i-001-support",
+      "mechanism_diagnostic": {
+        "checks": {
+          "mandatory_native_channels": true,
+          "native_inventory": true,
+          "no_errors": true,
+          "receipt_only_online": true,
+          "relay_counters": true,
+          "relay_coverage": true,
+          "snapshot_causality": true,
+          "snapshot_copies": true
+        },
+        "main_native_records": 3521,
+        "main_relay_records": 880,
+        "mandatory_channel_fractions": {
+          "cap": 1.0,
+          "encoder_frames": 1.0,
+          "encoder_time": 1.0,
+          "send_counter": 1.0,
+          "unique_sender": 1.0
+        },
+        "maximum_conservation_residual_bytes": 2.3102620616555214e-07,
+        "maximum_relay_ack_ms": 23.299999982118607,
+        "maximum_relay_gap_ms": 118.59999999403954,
+        "native_field_status_counts": {
+          "outbound": {
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "firCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "frameHeight": {
+              "absent": 2,
+              "invalid": 0,
+              "present": 4428
+            },
+            "frameWidth": {
+              "absent": 2,
+              "invalid": 0,
+              "present": 4428
+            },
+            "framesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "framesPerSecond": {
+              "absent": 7,
+              "invalid": 0,
+              "present": 4423
+            },
+            "headerBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "keyFramesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "nackCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "packetsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "pliCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "qualityLimitationReason": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "retransmittedBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "targetBitrate": {
+              "absent": 7,
+              "invalid": 0,
+              "present": 4423
+            },
+            "totalEncodeTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalEncodedBytesTarget": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalPacketSendDelay": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            }
+          },
+          "pair": {
+            "availableOutgoingBitrate": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "bytesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "currentRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "requestsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "responsesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            }
+          },
+          "rtcp": {
+            "fractionLost": {
+              "absent": 32,
+              "invalid": 0,
+              "present": 4398
+            },
+            "jitter": {
+              "absent": 32,
+              "invalid": 0,
+              "present": 4398
+            },
+            "reportsReceived": {
+              "absent": 4430,
+              "invalid": 0,
+              "present": 0
+            },
+            "roundTripTime": {
+              "absent": 32,
+              "invalid": 0,
+              "present": 4398
+            },
+            "roundTripTimeMeasurements": {
+              "absent": 32,
+              "invalid": 0,
+              "present": 4398
+            },
+            "totalRoundTripTime": {
+              "absent": 32,
+              "invalid": 0,
+              "present": 4398
+            }
+          }
+        },
+        "native_records": 4430,
+        "optional_channels": {
+          "observed_feedback_counter_age": {
+            "distinct_common_counter_advances": 67,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          },
+          "rtcp_rtt": {
+            "distinct_common_counter_advances": 67,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          }
+        },
+        "passed": true,
+        "receiver_outcomes_read": false,
+        "relay_records": 1108,
+        "true_transport_cc_feedback_age_observed": false
+      },
+      "mechanism_native_bytes": 14853055,
+      "pre_pending_forward": {
+        "a_to_b": 3,
+        "b_to_a": 2
+      },
+      "pre_queued": {
+        "a_to_b": 0,
+        "b_to_a": 0
+      }
+    },
+    {
+      "cleanup_elapsed_ms": 2658.02175,
+      "cleanup_limit_ms": 2000,
+      "id": "m10-mechanism-i-002-support",
+      "mechanism_diagnostic": {
+        "checks": {
+          "mandatory_native_channels": true,
+          "native_inventory": true,
+          "no_errors": true,
+          "receipt_only_online": true,
+          "relay_counters": true,
+          "relay_coverage": true,
+          "snapshot_causality": true,
+          "snapshot_copies": true
+        },
+        "main_native_records": 3520,
+        "main_relay_records": 880,
+        "mandatory_channel_fractions": {
+          "cap": 1.0,
+          "encoder_frames": 1.0,
+          "encoder_time": 1.0,
+          "send_counter": 1.0,
+          "unique_sender": 1.0
+        },
+        "maximum_conservation_residual_bytes": 2.228434823337011e-07,
+        "maximum_relay_ack_ms": 21.5,
+        "maximum_relay_gap_ms": 117.69999998807907,
+        "native_field_status_counts": {
+          "outbound": {
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "firCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "frameHeight": {
+              "absent": 2,
+              "invalid": 0,
+              "present": 4429
+            },
+            "frameWidth": {
+              "absent": 2,
+              "invalid": 0,
+              "present": 4429
+            },
+            "framesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "framesPerSecond": {
+              "absent": 7,
+              "invalid": 0,
+              "present": 4424
+            },
+            "headerBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "keyFramesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "nackCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "packetsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "pliCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "qualityLimitationReason": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "retransmittedBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "targetBitrate": {
+              "absent": 7,
+              "invalid": 0,
+              "present": 4424
+            },
+            "totalEncodeTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "totalEncodedBytesTarget": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "totalPacketSendDelay": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            }
+          },
+          "pair": {
+            "availableOutgoingBitrate": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "bytesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "currentRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "requestsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "responsesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            },
+            "totalRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4431
+            }
+          },
+          "rtcp": {
+            "fractionLost": {
+              "absent": 58,
+              "invalid": 0,
+              "present": 4373
+            },
+            "jitter": {
+              "absent": 58,
+              "invalid": 0,
+              "present": 4373
+            },
+            "reportsReceived": {
+              "absent": 4431,
+              "invalid": 0,
+              "present": 0
+            },
+            "roundTripTime": {
+              "absent": 58,
+              "invalid": 0,
+              "present": 4373
+            },
+            "roundTripTimeMeasurements": {
+              "absent": 58,
+              "invalid": 0,
+              "present": 4373
+            },
+            "totalRoundTripTime": {
+              "absent": 58,
+              "invalid": 0,
+              "present": 4373
+            }
+          }
+        },
+        "native_records": 4431,
+        "optional_channels": {
+          "observed_feedback_counter_age": {
+            "distinct_common_counter_advances": 65,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          },
+          "rtcp_rtt": {
+            "distinct_common_counter_advances": 65,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          }
+        },
+        "passed": true,
+        "receiver_outcomes_read": false,
+        "relay_records": 1108,
+        "true_transport_cc_feedback_age_observed": false
+      },
+      "mechanism_native_bytes": 14741997,
+      "pre_pending_forward": {
+        "a_to_b": 6,
+        "b_to_a": 2
+      },
+      "pre_queued": {
+        "a_to_b": 0,
+        "b_to_a": 0
+      }
+    },
+    {
+      "cleanup_elapsed_ms": 2622.4465619999974,
+      "cleanup_limit_ms": 2000,
+      "id": "m10-mechanism-i-003-support",
+      "mechanism_diagnostic": {
+        "checks": {
+          "mandatory_native_channels": true,
+          "native_inventory": true,
+          "no_errors": true,
+          "receipt_only_online": true,
+          "relay_counters": true,
+          "relay_coverage": true,
+          "snapshot_causality": true,
+          "snapshot_copies": true
+        },
+        "main_native_records": 3520,
+        "main_relay_records": 880,
+        "mandatory_channel_fractions": {
+          "cap": 1.0,
+          "encoder_frames": 1.0,
+          "encoder_time": 1.0,
+          "send_counter": 1.0,
+          "unique_sender": 1.0
+        },
+        "maximum_conservation_residual_bytes": 9.309133019996807e-08,
+        "maximum_relay_ack_ms": 38.60000002384186,
+        "maximum_relay_gap_ms": 135.60000002384186,
+        "native_field_status_counts": {
+          "outbound": {
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "firCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "frameHeight": {
+              "absent": 4,
+              "invalid": 0,
+              "present": 4426
+            },
+            "frameWidth": {
+              "absent": 4,
+              "invalid": 0,
+              "present": 4426
+            },
+            "framesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "framesPerSecond": {
+              "absent": 6,
+              "invalid": 0,
+              "present": 4424
+            },
+            "headerBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "keyFramesEncoded": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "nackCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "packetsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "pliCount": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "qualityLimitationReason": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "retransmittedBytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "targetBitrate": {
+              "absent": 6,
+              "invalid": 0,
+              "present": 4424
+            },
+            "totalEncodeTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalEncodedBytesTarget": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalPacketSendDelay": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            }
+          },
+          "pair": {
+            "availableOutgoingBitrate": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "bytesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "bytesSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "currentRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "requestsSent": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "responsesReceived": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            },
+            "totalRoundTripTime": {
+              "absent": 0,
+              "invalid": 0,
+              "present": 4430
+            }
+          },
+          "rtcp": {
+            "fractionLost": {
+              "absent": 27,
+              "invalid": 0,
+              "present": 4403
+            },
+            "jitter": {
+              "absent": 27,
+              "invalid": 0,
+              "present": 4403
+            },
+            "reportsReceived": {
+              "absent": 4430,
+              "invalid": 0,
+              "present": 0
+            },
+            "roundTripTime": {
+              "absent": 27,
+              "invalid": 0,
+              "present": 4403
+            },
+            "roundTripTimeMeasurements": {
+              "absent": 27,
+              "invalid": 0,
+              "present": 4403
+            },
+            "totalRoundTripTime": {
+              "absent": 27,
+              "invalid": 0,
+              "present": 4403
+            }
+          }
+        },
+        "native_records": 4430,
+        "optional_channels": {
+          "observed_feedback_counter_age": {
+            "distinct_common_counter_advances": 63,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          },
+          "rtcp_rtt": {
+            "distinct_common_counter_advances": 63,
+            "main_available_fraction": 1.0,
+            "qualified": true
+          }
+        },
+        "passed": true,
+        "receiver_outcomes_read": false,
+        "relay_records": 1108,
+        "true_transport_cc_feedback_age_observed": false
+      },
+      "mechanism_native_bytes": 14712916,
+      "pre_pending_forward": {
+        "a_to_b": 2,
+        "b_to_a": 3
+      },
+      "pre_queued": {
+        "a_to_b": 0,
+        "b_to_a": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "abi": "native_mechanism_observability_m10_reporting_v1",
+  "actions": false,
+  "classification": "instrumentation-limited; no mechanism/state interpretation",
+  "common_support_established": false,
+  "controller_fitted": false,
+  "gates": {
+    "instrumentation": {
+      "optional_channels_qualified_every_original": {
+        "observed_feedback_counter_age": false,
+        "rtcp_rtt": false
+      },
+      "passed": false,
+      "planned_sessions": 4,
+      "qualified_sessions": 0
+    }
+  },
+  "receiver_outcomes_read": false
+}
