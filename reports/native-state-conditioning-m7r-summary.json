@@ -1,0 +1,200 @@
+{
+  "abi": "native_state_conditioning_m7r_summary_v1",
+  "additional_state_representations_tested_on_m6r": false,
+  "controller_fitted": false,
+  "delivery_qoe_action_outcomes_read": false,
+  "design_sha256": "4ea12ce41b976f4abb0db2fd94fe0e8911afaa409927902e74527461bf7fdb3c",
+  "future_action_stage_enabled": false,
+  "native_common_support_established": false,
+  "plots": {},
+  "population_equivalence_established": false,
+  "predictors_fitted": false,
+  "registration_commit": "6e4f5af2125949d9f6a631feb7eed19b7ff1abfa",
+  "result": "instrumentation-limited feasibility failure",
+  "stages": {
+    "feasibility": {
+      "all_pair_probe_fidelity_passed": false,
+      "baseline_members": 0,
+      "common_overlap_octaves": null,
+      "gate_sha256": "b39e20cbe2b8b0ee221d37c5196d5dbdafc354e788b53c52b524dbf15e3e5712",
+      "groups": {
+        "content_kampar_boating_01__att_lte_driving_2016__0.0": {
+          "all_originals_passed": false,
+          "baseline_counts": {
+            "ascending_prefix": 0,
+            "descending_prefix": 0
+          },
+          "history_counts": {
+            "ascending_prefix": 0,
+            "descending_prefix": 0
+          },
+          "originals": 2,
+          "states": {
+            "12000": {
+              "all_originals_observable": false,
+              "census_mean_x": null,
+              "full_repeat_spread_octaves": null,
+              "maximum_actual_census_difference_octaves": null,
+              "passed": false,
+              "prefix_values": {
+                "ascending_prefix": [],
+                "descending_prefix": []
+              },
+              "prefix_w_infinity_octaves": null
+            },
+            "6000": {
+              "all_originals_observable": false,
+              "census_mean_x": null,
+              "full_repeat_spread_octaves": null,
+              "maximum_actual_census_difference_octaves": null,
+              "passed": false,
+              "prefix_values": {
+                "ascending_prefix": [],
+                "descending_prefix": []
+              },
+              "prefix_w_infinity_octaves": null
+            },
+            "entry": {
+              "all_originals_observable": false,
+              "census_mean_x": null,
+              "full_repeat_spread_octaves": null,
+              "maximum_actual_census_difference_octaves": null,
+              "passed": false,
+              "prefix_values": {
+                "ascending_prefix": [],
+                "descending_prefix": []
+              },
+              "prefix_w_infinity_octaves": null
+            }
+          }
+        },
+        "content_kampar_boating_01__att_lte_driving_2016__1.5": {
+          "all_originals_passed": false,
+          "baseline_counts": {
+            "ascending_prefix": 0,
+            "descending_prefix": 0
+          },
+          "history_counts": {
+            "ascending_prefix": 0,
+            "descending_prefix": 0
+          },
+          "originals": 2,
+          "states": {
+            "12000": {
+              "all_originals_observable": false,
+              "census_mean_x": null,
+              "full_repeat_spread_octaves": null,
+              "maximum_actual_census_difference_octaves": null,
+              "passed": false,
+              "prefix_values": {
+                "ascending_prefix": [],
+                "descending_prefix": []
+              },
+              "prefix_w_infinity_octaves": null
+            },
+            "6000": {
+              "all_originals_observable": false,
+              "census_mean_x": null,
+              "full_repeat_spread_octaves": null,
+              "maximum_actual_census_difference_octaves": null,
+              "passed": false,
+              "prefix_values": {
+                "ascending_prefix": [],
+                "descending_prefix": []
+              },
+              "prefix_w_infinity_octaves": null
+            },
+            "entry": {
+              "all_originals_observable": false,
+              "census_mean_x": null,
+              "full_repeat_spread_octaves": null,
+              "maximum_actual_census_difference_octaves": null,
+              "passed": false,
+              "prefix_values": {
+                "ascending_prefix": [],
+                "descending_prefix": []
+              },
+              "prefix_w_infinity_octaves": null
+            }
+          }
+        }
+      },
+      "history_members": 0,
+      "instrumentation": {
+        "beginning_clock_max_heldout_width_ms": null,
+        "full_clock_max_heldout_width_ms": null,
+        "maximum_conditioning_command_lateness_ms": null,
+        "maximum_readback_delay_ms": null,
+        "maximum_source_tick_error_ms": null,
+        "maximum_startup_poll_gap_ms": null
+      },
+      "originals": 4,
+      "panel_gates": {},
+      "passed": false,
+      "per_original": [
+        {
+          "baseline_member": null,
+          "conditioning": null,
+          "content_id": "content_kampar_boating_01",
+          "entry": null,
+          "history_member": null,
+          "network_family": "att_lte_driving_2016",
+          "prefix": "ascending_prefix",
+          "probe_windows": null,
+          "reason": "failed capture; retained original, no treatment interpretation",
+          "target_x": 1.5,
+          "technical_passed": false,
+          "trial": "m7r-f-p000-s0-support"
+        },
+        {
+          "baseline_member": null,
+          "conditioning": null,
+          "content_id": "content_kampar_boating_01",
+          "entry": null,
+          "history_member": null,
+          "network_family": "att_lte_driving_2016",
+          "prefix": "descending_prefix",
+          "probe_windows": null,
+          "reason": "failed capture; retained original, no treatment interpretation",
+          "target_x": 1.5,
+          "technical_passed": false,
+          "trial": "m7r-f-p000-s1-support"
+        },
+        {
+          "baseline_member": null,
+          "conditioning": null,
+          "content_id": "content_kampar_boating_01",
+          "entry": null,
+          "history_member": null,
+          "network_family": "att_lte_driving_2016",
+          "prefix": "ascending_prefix",
+          "probe_windows": null,
+          "reason": "failed capture; retained original, no treatment interpretation",
+          "target_x": 0.0,
+          "technical_passed": false,
+          "trial": "m7r-f-p001-s0-support"
+        },
+        {
+          "baseline_member": null,
+          "conditioning": null,
+          "content_id": "content_kampar_boating_01",
+          "entry": null,
+          "history_member": null,
+          "network_family": "att_lte_driving_2016",
+          "prefix": "descending_prefix",
+          "probe_windows": null,
+          "reason": "failed capture; retained original, no treatment interpretation",
+          "target_x": 0.0,
+          "technical_passed": false,
+          "trial": "m7r-f-p001-s1-support"
+        }
+      ],
+      "repeatability_passed": false,
+      "state_membership_passed": false,
+      "technical_qualified": 0
+    }
+  },
+  "untouched_validation_originals": 128,
+  "v13_action_stage_reopened": false,
+  "validation_started": false
+}

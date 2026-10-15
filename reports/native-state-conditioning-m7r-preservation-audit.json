@@ -1,0 +1,45 @@
+{
+  "abi": "native_state_conditioning_m7r_preservation_audit_v1",
+  "files_deleted": 0,
+  "licensed_originals_and_old_clips_unchanged": true,
+  "m6r_validation_new_state_features_computed": false,
+  "prior_archives": {
+    "M5": {
+      "bytes_rehashed": 381817503,
+      "checksum_only": true,
+      "files_unchanged": 4428,
+      "revision": "0f4da165bcd87ace87616d564cfe949eaff95d47",
+      "telemetry_fields_decoded": false
+    },
+    "M6R": {
+      "bytes_rehashed": 127733349,
+      "checksum_only": true,
+      "files_unchanged": 1858,
+      "revision": "38d09402609e023b2a124196b3ffcec4c8752c00",
+      "telemetry_fields_decoded": false
+    },
+    "M7": {
+      "bytes_rehashed": 27115003,
+      "checksum_only": true,
+      "files_unchanged": 576,
+      "revision": "b524c3be76923ea86ce072a53e67a91ac45cfffa",
+      "telemetry_fields_decoded": false
+    }
+  },
+  "prior_files_unchanged": 1404,
+  "prior_frozen_files_modified": 0,
+  "prior_outcomes_read": false,
+  "registration": {
+    "feasibility_sessions": 4,
+    "prior_files_unchanged": 1404,
+    "validation_sessions": 128,
+    "validation_started": false,
+    "verified": true
+  },
+  "validation": {
+    "capture_index_exists": false,
+    "panels": 128,
+    "protocol_sha256": "7d5fe931487ff0e5721c59c8da52ea7223c3ab419951181c5672acde3c5628cb",
+    "started": false
+  }
+}

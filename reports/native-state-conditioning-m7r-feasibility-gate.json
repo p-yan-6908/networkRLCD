@@ -1,0 +1,217 @@
+{
+  "abi": "native_state_conditioning_m7r_qualification_v1",
+  "base_gate_sha256": "35f7b10c5bb5ebae25764be44e29cd0e379f7909717bc34ff6e3450f37f44ddc",
+  "capture_index_sha256": "9cef0e537528c2a5430aa08e3a8ec8e511ac538a022912d1e5d341d9cdc73c82",
+  "common_overlap_octaves": null,
+  "controller_fitted": false,
+  "delivery_qoe_action_outcomes_read": false,
+  "future_action_stage_enabled": false,
+  "groups": {
+    "content_kampar_boating_01__att_lte_driving_2016__0.0": {
+      "all_originals_passed": false,
+      "baseline_counts": {
+        "ascending_prefix": 0,
+        "descending_prefix": 0
+      },
+      "history_counts": {
+        "ascending_prefix": 0,
+        "descending_prefix": 0
+      },
+      "originals": 2,
+      "states": {
+        "12000": {
+          "all_originals_observable": false,
+          "census_mean_x": null,
+          "full_repeat_spread_octaves": null,
+          "maximum_actual_census_difference_octaves": null,
+          "passed": false,
+          "prefix_values": {
+            "ascending_prefix": [],
+            "descending_prefix": []
+          },
+          "prefix_w_infinity_octaves": null
+        },
+        "6000": {
+          "all_originals_observable": false,
+          "census_mean_x": null,
+          "full_repeat_spread_octaves": null,
+          "maximum_actual_census_difference_octaves": null,
+          "passed": false,
+          "prefix_values": {
+            "ascending_prefix": [],
+            "descending_prefix": []
+          },
+          "prefix_w_infinity_octaves": null
+        },
+        "entry": {
+          "all_originals_observable": false,
+          "census_mean_x": null,
+          "full_repeat_spread_octaves": null,
+          "maximum_actual_census_difference_octaves": null,
+          "passed": false,
+          "prefix_values": {
+            "ascending_prefix": [],
+            "descending_prefix": []
+          },
+          "prefix_w_infinity_octaves": null
+        }
+      }
+    },
+    "content_kampar_boating_01__att_lte_driving_2016__1.5": {
+      "all_originals_passed": false,
+      "baseline_counts": {
+        "ascending_prefix": 0,
+        "descending_prefix": 0
+      },
+      "history_counts": {
+        "ascending_prefix": 0,
+        "descending_prefix": 0
+      },
+      "originals": 2,
+      "states": {
+        "12000": {
+          "all_originals_observable": false,
+          "census_mean_x": null,
+          "full_repeat_spread_octaves": null,
+          "maximum_actual_census_difference_octaves": null,
+          "passed": false,
+          "prefix_values": {
+            "ascending_prefix": [],
+            "descending_prefix": []
+          },
+          "prefix_w_infinity_octaves": null
+        },
+        "6000": {
+          "all_originals_observable": false,
+          "census_mean_x": null,
+          "full_repeat_spread_octaves": null,
+          "maximum_actual_census_difference_octaves": null,
+          "passed": false,
+          "prefix_values": {
+            "ascending_prefix": [],
+            "descending_prefix": []
+          },
+          "prefix_w_infinity_octaves": null
+        },
+        "entry": {
+          "all_originals_observable": false,
+          "census_mean_x": null,
+          "full_repeat_spread_octaves": null,
+          "maximum_actual_census_difference_octaves": null,
+          "passed": false,
+          "prefix_values": {
+            "ascending_prefix": [],
+            "descending_prefix": []
+          },
+          "prefix_w_infinity_octaves": null
+        }
+      }
+    }
+  },
+  "native_common_support_established": false,
+  "pair_fidelity": {
+    "m7r-f-p000": {
+      "entry_elapsed_difference_ms": null,
+      "passed": false,
+      "probe": {
+        "12000": {
+          "maximum_log2_exposure_difference": null,
+          "passed": false
+        },
+        "6000": {
+          "maximum_log2_exposure_difference": null,
+          "passed": false
+        }
+      }
+    },
+    "m7r-f-p001": {
+      "entry_elapsed_difference_ms": null,
+      "passed": false,
+      "probe": {
+        "12000": {
+          "maximum_log2_exposure_difference": null,
+          "passed": false
+        },
+        "6000": {
+          "maximum_log2_exposure_difference": null,
+          "passed": false
+        }
+      }
+    }
+  },
+  "panel_gates": {},
+  "passed": false,
+  "planned_sessions": 4,
+  "predictors_fitted": false,
+  "protocol_sha256": "a1b81d2fe1de6f1749cdd5b4561678d7e4f9b7d4a65b30c5ba5567092701fcb9",
+  "qualified_sessions": 0,
+  "range_sd_overlap_passed": true,
+  "registered_minimum_history_count": 1,
+  "repeatability_passed": false,
+  "scope": "Feasibility gate only",
+  "sessions": [
+    {
+      "capture_status": "failed",
+      "cell_cluster": "content_kampar_boating_01__att_lte_driving_2016__1.5",
+      "content_id": "content_kampar_boating_01",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-uplink-lower",
+      "pair_id": "m7r-f-p000",
+      "passed": false,
+      "prefix": "ascending_prefix",
+      "reason": "failed capture; retained original, no treatment interpretation",
+      "repetition": 0,
+      "target_x": 1.5,
+      "technical_passed": false,
+      "trial": "m7r-f-p000-s0-support"
+    },
+    {
+      "capture_status": "failed",
+      "cell_cluster": "content_kampar_boating_01__att_lte_driving_2016__1.5",
+      "content_id": "content_kampar_boating_01",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-uplink-lower",
+      "pair_id": "m7r-f-p000",
+      "passed": false,
+      "prefix": "descending_prefix",
+      "reason": "failed capture; retained original, no treatment interpretation",
+      "repetition": 0,
+      "target_x": 1.5,
+      "technical_passed": false,
+      "trial": "m7r-f-p000-s1-support"
+    },
+    {
+      "capture_status": "failed",
+      "cell_cluster": "content_kampar_boating_01__att_lte_driving_2016__0.0",
+      "content_id": "content_kampar_boating_01",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-uplink-lower",
+      "pair_id": "m7r-f-p001",
+      "passed": false,
+      "prefix": "ascending_prefix",
+      "reason": "failed capture; retained original, no treatment interpretation",
+      "repetition": 0,
+      "target_x": 0.0,
+      "technical_passed": false,
+      "trial": "m7r-f-p001-s0-support"
+    },
+    {
+      "capture_status": "failed",
+      "cell_cluster": "content_kampar_boating_01__att_lte_driving_2016__0.0",
+      "content_id": "content_kampar_boating_01",
+      "network_family": "att_lte_driving_2016",
+      "network_profile_id": "att_lte_driving_2016-uplink-lower",
+      "pair_id": "m7r-f-p001",
+      "passed": false,
+      "prefix": "descending_prefix",
+      "reason": "failed capture; retained original, no treatment interpretation",
+      "repetition": 0,
+      "target_x": 0.0,
+      "technical_passed": false,
+      "trial": "m7r-f-p001-s1-support"
+    }
+  ],
+  "stage": "state_creation_feasibility",
+  "state_membership_passed": false,
+  "technical_passed": false
+}

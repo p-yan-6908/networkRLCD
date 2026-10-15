@@ -1,0 +1,50 @@
+{
+  "abi": "native_bwe_support_mechanism_archive_receipt_v1",
+  "additional_bindings_verified_against_freshly_restored_inventory": true,
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_bindings_sha256": "0f28ba623117ea243fc1b02d039f4e842d00fbc42daaa11a637d205f082c9ec8",
+  "archive_helper_sha256": "a6e2a7f9206df0badc31730c2264970d29ac60e840882557210d8ea1776a2913",
+  "base_gate_sha256": "35f7b10c5bb5ebae25764be44e29cd0e379f7909717bc34ff6e3450f37f44ddc",
+  "capture_index_sha256": "9cef0e537528c2a5430aa08e3a8ec8e511ac538a022912d1e5d341d9cdc73c82",
+  "failed_setup_attempts": 4,
+  "files_deleted": 0,
+  "files_verified": 376,
+  "gate_sha256": "b39e20cbe2b8b0ee221d37c5196d5dbdafc354e788b53c52b524dbf15e3e5712",
+  "instrumentation_qualified": false,
+  "local_raw_evidence_retained": true,
+  "native_common_support_established": false,
+  "native_sessions_started": 0,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "78c4cb43713cd3b04b2966faea5bce74b36d71931ed2e1c3a9a403b5916c459b",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "620655513adfc0f82bf636ebe85370d600c28e743553cc8b333511bd9f641211",
+      "size": 65590
+    },
+    "results.tar.part-000": {
+      "sha256": "77b0ba87b524a37bf9201e2d2a4d8fd0adc8aadb10c8082bd3a14cefd36755d5",
+      "size": 6072320
+    }
+  },
+  "prefix": "native-state-conditioning-m7r-20261015-01",
+  "private": true,
+  "protocol_sha256": "a1b81d2fe1de6f1749cdd5b4561678d7e4f9b7d4a65b30c5ba5567092701fcb9",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-state-conditioning-m7r/feasibility",
+  "registered_gate_passed": false,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "revision": "011397d260abc55da7103403f88c24a14ff1f6e4",
+  "scientific_gate_passed": false,
+  "scientific_registration_commit": "6e4f5af2125949d9f6a631feb7eed19b7ff1abfa",
+  "setup_failure": "MODULE_NOT_FOUND: recorder path referenced episode_m7.mjs instead of episode_m7r.mjs",
+  "stage": "state_creation_feasibility",
+  "summary_sha256": "fd09c93e9906722ac49cb9a199c88736635fbe158d2a86386fa69a12c67a3214",
+  "technical_qualified_originals": 0,
+  "validation_originals_untouched": 128
+}
