@@ -1,0 +1,14 @@
+{
+  "HF_TOKEN_available": true,
+  "abi": "native_phase_state_m9r_runtime_refresh_v1",
+  "authenticated_hostname": "huggingface.co",
+  "authenticated_status": 200,
+  "capture_worker_survived": true,
+  "gates_unchanged": true,
+  "observations_current": true,
+  "observed_spec_revision": 192,
+  "originals_restarted": 0,
+  "qualified_runtime_unchanged": true,
+  "state_or_future_labels_evaluated": false,
+  "utc": "2026-10-15T16:52:16.573100+00:00"
+}
