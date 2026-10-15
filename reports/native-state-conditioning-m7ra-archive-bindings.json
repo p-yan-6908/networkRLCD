@@ -1,0 +1,19 @@
+{
+  "abi": "native_state_conditioning_m7ra_archive_bindings_v1",
+  "acquisition_passed": true,
+  "additional_scientific_bindings": {
+    "mechanism_qualification_gate.json": "4371aa6ea30d4953ded22053ead916f1b44c7492e0f71693ac7efe0195e6f912",
+    "protocol.json": "3683efac4d538c9ab88cc202dac37e45ffd793fe7e9a6490ccaa7370694c64fa",
+    "provenance/docs/NATIVE_STATE_CONDITIONING_M7RA_RESULTS.md": "9920d157a89aa563cadf6b8ea543f71a0a1283210bc6bd89f323cb83e3275177",
+    "provenance/reports/native-state-conditioning-m7ra-preservation-audit.json": "9560a00c85ab2cc0129e1ff5b5c5c0dcfaa221999a97cb797065ea1116b7ba0a",
+    "state_creation_summary.json": "5f10861a9b2b8e8937d57f02c3407c713e846407726e9dddebeb8ece5c3c66fc",
+    "untouched_validation/protocol.json": "1b784525272adfcdf419fae125b0b6e78418f66b3ed5d0f0759d94e995c1f1e2"
+  },
+  "archive_files_verified": 585,
+  "fresh_inventory_sha256": "f0168a26b9f43ea77537f5544835a610ac1f6166ccdbe86dc2b6bdf3051551cb",
+  "native_common_support_established": false,
+  "revision": "89bf041ef6eacbed8d78ce13ea311e3cf388ca1e",
+  "state_creation_passed": false,
+  "untouched_validation_panels_verified": 128,
+  "validation_capture_absent": true
+}

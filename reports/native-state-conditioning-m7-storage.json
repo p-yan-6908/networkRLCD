@@ -1,0 +1,23 @@
+{
+  "abi": "native_state_conditioning_m7_incremental_storage_v1",
+  "conservative_peak_including_largest_fresh_verification_bytes": 178258993,
+  "current_retained_bytes": 149412970,
+  "incremental_budget_bytes": 3000000000,
+  "incremental_roots_bytes": {
+    "/home/agent/.cache/networkrlcd/native-state-conditioning-m7": 27632663,
+    "/home/agent/.cache/networkrlcd/native-state-conditioning-m7-archive-20261015-01": 28260225,
+    "/home/agent/.cache/networkrlcd/native-state-conditioning-m7-assets": 24316086,
+    "/home/agent/.cache/networkrlcd/native-state-conditioning-m7r": 5912766,
+    "/home/agent/.cache/networkrlcd/native-state-conditioning-m7r-archive-20261015-01": 6138582,
+    "/home/agent/.cache/networkrlcd/native-state-conditioning-m7ra": 28204324,
+    "/home/agent/.cache/networkrlcd/native-state-conditioning-m7ra-archive-20261015-01": 28948324
+  },
+  "licensed_originals_and_old_clips_retained": true,
+  "private_new_archives": {
+    "M7": "b524c3be76923ea86ce072a53e67a91ac45cfffa",
+    "M7R": "011397d260abc55da7103403f88c24a14ff1f6e4",
+    "M7RA": "89bf041ef6eacbed8d78ce13ea311e3cf388ca1e"
+  },
+  "raw_or_licensed_evidence_files_deleted": 0,
+  "within_budget": true
+}

@@ -1,0 +1,410 @@
+{
+  "abi": "native_state_conditioning_m7ra_summary_v1",
+  "additional_state_representations_tested_on_m6r": false,
+  "controller_fitted": false,
+  "delivery_qoe_action_outcomes_read": false,
+  "design_sha256": "19f9f991dac12fa2c8545b09bdbe1fd47c1fbcbfd56b3d4a863c4ebe91d1162f",
+  "future_action_stage_enabled": false,
+  "native_common_support_established": false,
+  "plots": {
+    "reports/native-state-conditioning-m7ra-trajectories.png": "e9272bd5fc7d720231405d5029bb4e1b653c4429ddffd63d5fd588d98740ca94"
+  },
+  "population_equivalence_established": false,
+  "predictors_fitted": false,
+  "registration_commit": "c992058a9d8c0569c5544aea1d22507ca1b7b4f0",
+  "result": "fixed-recipe state-creation feasibility failure",
+  "stages": {
+    "feasibility": {
+      "all_pair_probe_fidelity_passed": true,
+      "baseline_members": 2,
+      "common_overlap_octaves": null,
+      "gate_sha256": "4371aa6ea30d4953ded22053ead916f1b44c7492e0f71693ac7efe0195e6f912",
+      "groups": {
+        "content_kampar_boating_01__att_lte_driving_2016__0.0": {
+          "all_originals_passed": false,
+          "baseline_counts": {
+            "ascending_prefix": 1,
+            "descending_prefix": 0
+          },
+          "history_counts": {
+            "ascending_prefix": 0,
+            "descending_prefix": 0
+          },
+          "originals": 2,
+          "states": {
+            "12000": {
+              "all_originals_observable": true,
+              "census_mean_x": 1.088504073107316,
+              "full_repeat_spread_octaves": 0.46443682599195757,
+              "maximum_actual_census_difference_octaves": 0.23221841299597878,
+              "passed": false,
+              "prefix_values": {
+                "ascending_prefix": [
+                  1.3207224861032947
+                ],
+                "descending_prefix": [
+                  0.8562856601113371
+                ]
+              },
+              "prefix_w_infinity_octaves": 0.46443682599195757
+            },
+            "6000": {
+              "all_originals_observable": true,
+              "census_mean_x": 0.47068148866498527,
+              "full_repeat_spread_octaves": 0.3615269634985849,
+              "maximum_actual_census_difference_octaves": 0.18076348174929247,
+              "passed": false,
+              "prefix_values": {
+                "ascending_prefix": [
+                  0.6514449704142777
+                ],
+                "descending_prefix": [
+                  0.28991800691569286
+                ]
+              },
+              "prefix_w_infinity_octaves": 0.3615269634985849
+            },
+            "entry": {
+              "all_originals_observable": true,
+              "census_mean_x": 0.06422572346180007,
+              "full_repeat_spread_octaves": 0.01144490460526578,
+              "maximum_actual_census_difference_octaves": 0.005722452302632894,
+              "passed": true,
+              "prefix_values": {
+                "ascending_prefix": [
+                  0.05850327115916718
+                ],
+                "descending_prefix": [
+                  0.06994817576443296
+                ]
+              },
+              "prefix_w_infinity_octaves": 0.01144490460526578
+            }
+          }
+        },
+        "content_kampar_boating_01__att_lte_driving_2016__1.5": {
+          "all_originals_passed": false,
+          "baseline_counts": {
+            "ascending_prefix": 0,
+            "descending_prefix": 1
+          },
+          "history_counts": {
+            "ascending_prefix": 0,
+            "descending_prefix": 1
+          },
+          "originals": 2,
+          "states": {
+            "12000": {
+              "all_originals_observable": true,
+              "census_mean_x": 1.3934055349173056,
+              "full_repeat_spread_octaves": 0.2588847382865658,
+              "maximum_actual_census_difference_octaves": 0.1294423691432829,
+              "passed": false,
+              "prefix_values": {
+                "ascending_prefix": [
+                  1.5228479040605885
+                ],
+                "descending_prefix": [
+                  1.2639631657740227
+                ]
+              },
+              "prefix_w_infinity_octaves": 0.2588847382865658
+            },
+            "6000": {
+              "all_originals_observable": true,
+              "census_mean_x": 1.3564494039278494,
+              "full_repeat_spread_octaves": 0.009169477437310336,
+              "maximum_actual_census_difference_octaves": 0.004584738718655279,
+              "passed": true,
+              "prefix_values": {
+                "ascending_prefix": [
+                  1.3518646652091941
+                ],
+                "descending_prefix": [
+                  1.3610341426465045
+                ]
+              },
+              "prefix_w_infinity_octaves": 0.009169477437310336
+            },
+            "entry": {
+              "all_originals_observable": true,
+              "census_mean_x": 1.617117243918993,
+              "full_repeat_spread_octaves": 0.17319464743574975,
+              "maximum_actual_census_difference_octaves": 0.08659732371787499,
+              "passed": true,
+              "prefix_values": {
+                "ascending_prefix": [
+                  1.7037145676368677
+                ],
+                "descending_prefix": [
+                  1.530519920201118
+                ]
+              },
+              "prefix_w_infinity_octaves": 0.17319464743574975
+            }
+          }
+        }
+      },
+      "history_members": 1,
+      "instrumentation": {
+        "beginning_clock_max_heldout_width_ms": 2.185745309798733,
+        "full_clock_max_heldout_width_ms": 1.3055657259901636,
+        "maximum_conditioning_command_lateness_ms": 9.5,
+        "maximum_readback_delay_ms": 6.4000000059604645,
+        "maximum_source_tick_error_ms": 1.9841489999998885,
+        "maximum_startup_poll_gap_ms": 31.400000005960464
+      },
+      "originals": 4,
+      "panel_gates": {},
+      "passed": false,
+      "per_original": [
+        {
+          "baseline_member": true,
+          "conditioning": {
+            "checks": {
+              "all_26_updates": true,
+              "causal_inputs_exact_formula_and_readback": true,
+              "feedback_off_on_time": true,
+              "initial_service": true,
+              "release_recorded": true
+            },
+            "feedback_off_ms": 38128.10000000894,
+            "final_service_mbps": 1.586295994880779,
+            "last_feedback_update_ms": 37125.10000000894,
+            "maximum_ack_ms": 5.5,
+            "maximum_lateness_ms": 7.100000008940697,
+            "passed": true
+          },
+          "content_id": "content_kampar_boating_01",
+          "entry": {
+            "baseline_member": true,
+            "cutoff_ms": 41144.20000000298,
+            "feedback_off_before_cutoff_ms": 3016.0999999940395,
+            "history_member": true,
+            "history_span_ms": 1030.7999999970198,
+            "instantaneous_x": 1.5442479674490839,
+            "measurement_elapsed_ms": 40108.39999999106,
+            "passed": true,
+            "recent_drift_x": 0.029785036659967012,
+            "recent_max_x": 1.5442479674490839,
+            "recent_min_x": 1.4727383367330953,
+            "recent_n": 30,
+            "samples": 11,
+            "x": 1.530519920201118
+          },
+          "history_member": true,
+          "network_family": "att_lte_driving_2016",
+          "prefix": "descending_prefix",
+          "probe_windows": {
+            "12000": {
+              "cutoff_ms": 55168.70000000298,
+              "history_span_ms": 1020.8999999910593,
+              "instantaneous_x": 1.2773218476960928,
+              "passed": true,
+              "samples": 11,
+              "x": 1.2639631657740227
+            },
+            "6000": {
+              "cutoff_ms": 49222.90000000596,
+              "history_span_ms": 1020.2999999970198,
+              "instantaneous_x": 1.1026446952588824,
+              "passed": true,
+              "samples": 11,
+              "x": 1.3610341426465045
+            }
+          },
+          "reason": null,
+          "target_x": 1.5,
+          "technical_passed": true,
+          "trial": "m7ra-f-p000-s0-support"
+        },
+        {
+          "baseline_member": false,
+          "conditioning": {
+            "checks": {
+              "all_26_updates": true,
+              "causal_inputs_exact_formula_and_readback": true,
+              "feedback_off_on_time": true,
+              "initial_service": true,
+              "release_recorded": true
+            },
+            "feedback_off_ms": 38225.59999999404,
+            "final_service_mbps": 1.5955971241820242,
+            "last_feedback_update_ms": 37225.09999999404,
+            "maximum_ack_ms": 6.4000000059604645,
+            "maximum_lateness_ms": 9.5,
+            "passed": true
+          },
+          "content_id": "content_kampar_boating_01",
+          "entry": {
+            "baseline_member": false,
+            "cutoff_ms": 41314.39999999106,
+            "feedback_off_before_cutoff_ms": 3088.7999999970198,
+            "history_member": false,
+            "history_span_ms": 1018.8999999910593,
+            "instantaneous_x": 1.714705348076558,
+            "measurement_elapsed_ms": 40180.0,
+            "passed": true,
+            "recent_drift_x": 0.02418760472975956,
+            "recent_max_x": 1.714705348076558,
+            "recent_min_x": 1.6420370167265543,
+            "recent_n": 30,
+            "samples": 11,
+            "x": 1.7037145676368677
+          },
+          "history_member": false,
+          "network_family": "att_lte_driving_2016",
+          "prefix": "ascending_prefix",
+          "probe_windows": {
+            "12000": {
+              "cutoff_ms": 55371.70000000298,
+              "history_span_ms": 1019.9000000059605,
+              "instantaneous_x": 1.5328674974304106,
+              "passed": true,
+              "samples": 11,
+              "x": 1.5228479040605885
+            },
+            "6000": {
+              "cutoff_ms": 49360.59999999404,
+              "history_span_ms": 1017.7999999970198,
+              "instantaneous_x": 1.3702390643409867,
+              "passed": true,
+              "samples": 11,
+              "x": 1.3518646652091941
+            }
+          },
+          "reason": null,
+          "target_x": 1.5,
+          "technical_passed": true,
+          "trial": "m7ra-f-p000-s1-support"
+        },
+        {
+          "baseline_member": true,
+          "conditioning": {
+            "checks": {
+              "all_26_updates": true,
+              "causal_inputs_exact_formula_and_readback": true,
+              "feedback_off_on_time": true,
+              "initial_service": true,
+              "release_recorded": true
+            },
+            "feedback_off_ms": 38141,
+            "final_service_mbps": 0.5491630310601902,
+            "last_feedback_update_ms": 37151.59999999404,
+            "maximum_ack_ms": 5.300000011920929,
+            "maximum_lateness_ms": 7.5,
+            "passed": true
+          },
+          "content_id": "content_kampar_boating_01",
+          "entry": {
+            "baseline_member": true,
+            "cutoff_ms": 41146.20000001788,
+            "feedback_off_before_cutoff_ms": 3005.2000000178814,
+            "history_member": false,
+            "history_span_ms": 1018.4000000059605,
+            "instantaneous_x": 0.09654253722893455,
+            "measurement_elapsed_ms": 40101.20000001788,
+            "passed": true,
+            "recent_drift_x": 0.07753526469057369,
+            "recent_max_x": 0.09654253722893455,
+            "recent_min_x": -0.10211524999298206,
+            "recent_n": 30,
+            "samples": 11,
+            "x": 0.05850327115916718
+          },
+          "history_member": false,
+          "network_family": "att_lte_driving_2016",
+          "prefix": "ascending_prefix",
+          "probe_windows": {
+            "12000": {
+              "cutoff_ms": 55236.70000001788,
+              "history_span_ms": 1025.1000000238419,
+              "instantaneous_x": 1.3712175935114852,
+              "passed": true,
+              "samples": 11,
+              "x": 1.3207224861032947
+            },
+            "6000": {
+              "cutoff_ms": 49208.20000001788,
+              "history_span_ms": 1023.0,
+              "instantaneous_x": 0.7189240168657234,
+              "passed": true,
+              "samples": 11,
+              "x": 0.6514449704142777
+            }
+          },
+          "reason": null,
+          "target_x": 0.0,
+          "technical_passed": true,
+          "trial": "m7ra-f-p001-s0-support"
+        },
+        {
+          "baseline_member": false,
+          "conditioning": {
+            "checks": {
+              "all_26_updates": true,
+              "causal_inputs_exact_formula_and_readback": true,
+              "feedback_off_on_time": true,
+              "initial_service": true,
+              "release_recorded": true
+            },
+            "feedback_off_ms": 38055.69999998808,
+            "final_service_mbps": 0.5550086762055882,
+            "last_feedback_update_ms": 37058.89999997616,
+            "maximum_ack_ms": 4.699999988079071,
+            "maximum_lateness_ms": 7.300000011920929,
+            "passed": true
+          },
+          "content_id": "content_kampar_boating_01",
+          "entry": {
+            "baseline_member": false,
+            "cutoff_ms": 41156.39999997616,
+            "feedback_off_before_cutoff_ms": 3100.699999988079,
+            "history_member": false,
+            "history_span_ms": 1020.6999999880791,
+            "instantaneous_x": -0.15512911097869664,
+            "measurement_elapsed_ms": 40173.0,
+            "passed": true,
+            "recent_drift_x": -0.2684643514579038,
+            "recent_max_x": 0.3511918365219836,
+            "recent_min_x": -0.15932810658709656,
+            "recent_n": 30,
+            "samples": 11,
+            "x": 0.06994817576443296
+          },
+          "history_member": false,
+          "network_family": "att_lte_driving_2016",
+          "prefix": "descending_prefix",
+          "probe_windows": {
+            "12000": {
+              "cutoff_ms": 55143.29999998212,
+              "history_span_ms": 1018.5999999940395,
+              "instantaneous_x": 0.9199929139366293,
+              "passed": true,
+              "samples": 11,
+              "x": 0.8562856601113371
+            },
+            "6000": {
+              "cutoff_ms": 49140.89999997616,
+              "history_span_ms": 1019.1999999880791,
+              "instantaneous_x": 0.32188885304855863,
+              "passed": true,
+              "samples": 11,
+              "x": 0.28991800691569286
+            }
+          },
+          "reason": null,
+          "target_x": 0.0,
+          "technical_passed": true,
+          "trial": "m7ra-f-p001-s1-support"
+        }
+      ],
+      "repeatability_passed": false,
+      "state_membership_passed": false,
+      "technical_qualified": 4
+    }
+  },
+  "untouched_validation_originals": 128,
+  "v13_action_stage_reopened": false,
+  "validation_started": false
+}

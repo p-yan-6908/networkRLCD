@@ -1,0 +1,52 @@
+{
+  "abi": "native_bwe_support_mechanism_archive_receipt_v1",
+  "additional_bindings_verified_against_freshly_restored_inventory": true,
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_bindings_sha256": "1c741213d38421ada88b0f0887450ae337774aebab64073a6719d3b462930b9b",
+  "archive_helper_sha256": "a6e2a7f9206df0badc31730c2264970d29ac60e840882557210d8ea1776a2913",
+  "base_gate_sha256": "9a0ec5773c4e6913141058f83f61df18a1ab6c6be246ae99e7c409063ddf1bc5",
+  "capture_index_sha256": "5e28716bc787e536ed812f665b25b272f5f33ebaa122e7ae42eb71f35bad2d0e",
+  "files_deleted": 0,
+  "files_verified": 585,
+  "fresh_scientific_binding_verification_sha256": "903f29774565936e0c761b53d323a4d44f7066837ee37f5cfe96777bc68c8e44",
+  "gate_sha256": "4371aa6ea30d4953ded22053ead916f1b44c7492e0f71693ac7efe0195e6f912",
+  "instantaneous_baseline_members": 2,
+  "instrumentation_qualified": true,
+  "local_raw_evidence_retained": true,
+  "native_common_support_established": false,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "4495bda0c6145e2b390c1b8905e6be43f932ab0bb56ef48e3e1c8f4e998debaf",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "f0168a26b9f43ea77537f5544835a610ac1f6166ccdbe86dc2b6bdf3051551cb",
+      "size": 101839
+    },
+    "results.tar.part-000": {
+      "sha256": "ca395c26bf7db2632a59e77c898a01fe79221e1908afc91dfc9dd5c89df755e0",
+      "size": 28743680
+    }
+  },
+  "prefix": "native-state-conditioning-m7ra-20261015-01",
+  "prior_failures_preserved_and_not_pooled": true,
+  "private": true,
+  "protocol_sha256": "3683efac4d538c9ab88cc202dac37e45ffd793fe7e9a6490ccaa7370694c64fa",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-state-conditioning-m7ra/feasibility",
+  "registered_gate_passed": false,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "revision": "89bf041ef6eacbed8d78ce13ea311e3cf388ca1e",
+  "scientific_gate_passed": false,
+  "scientific_registration_commit": "c992058a9d8c0569c5544aea1d22507ca1b7b4f0",
+  "sealed_originals": 4,
+  "stage": "state_creation_feasibility",
+  "summary_sha256": "5f10861a9b2b8e8937d57f02c3407c713e846407726e9dddebeb8ece5c3c66fc",
+  "sustained_history_members": 1,
+  "technical_qualified_originals": 4,
+  "validation_originals_untouched": 128
+}
