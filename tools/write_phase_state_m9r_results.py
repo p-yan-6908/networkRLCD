@@ -27,7 +27,7 @@ def write():
     rows=gate['sessions'];clock=max(x['clock']['full']['max_held_out_width_ms'] for x in rows);begin=max(x['clock']['beginning']['max_held_out_width_ms'] for x in rows)
     def f(x,n=3):return 'unavailable' if x is None else f'{x:.{n}f}'
     lines=['# M9R: prospective phase-aware state and longer-horizon stability','',
-        'Scientific registration: `df23517803303e323ae6fee5068967b02bb4b52b`; schedule/clock qualification: `M9R_INSTRUMENTATION_PENDING`.',
+        'Scientific registration: `df23517803303e323ae6fee5068967b02bb4b52b`; schedule/clock qualification: `3761af4755c926cf0167be25bb406c7e4b2dff09`.',
         'Eight instrumentation originals and **64/64 validation originals** qualified before state interpretation. No bitrate actions, delivery/QoE analysis or controller fitting occurred.','',
         '## Decision','',
         ('**P2 met every registered state gate.** It supplies a candidate for a new untouched transfer validation, not permission to open either old allocation or fit a controller.' if qualified else
