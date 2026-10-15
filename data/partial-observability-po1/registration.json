@@ -1,0 +1,5737 @@
+{
+  "abi": "po1_registered_information_screen_v1",
+  "anchor_commit": "d0b446770ebbdbcf0b08d200979fccfe8173eab3",
+  "design_sha256": "c6838090d905cb64a1ec3f94f93a878c3a909fb39e479a7e5d5c083bd6a1a90b",
+  "episodes": [
+    {
+      "episode": 0,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 558062506106162759
+    },
+    {
+      "episode": 1,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 12945614260200312223
+    },
+    {
+      "episode": 2,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 15476641250794296562
+    },
+    {
+      "episode": 3,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 13169623840482139611
+    },
+    {
+      "episode": 4,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 10760672060116824537
+    },
+    {
+      "episode": 5,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 8884850830311186892
+    },
+    {
+      "episode": 6,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 2734114221732175620
+    },
+    {
+      "episode": 7,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 3622548461241631537
+    },
+    {
+      "episode": 8,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 3494144788805954074
+    },
+    {
+      "episode": 9,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 1083865063504130199
+    },
+    {
+      "episode": 10,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 10849435476685997557
+    },
+    {
+      "episode": 11,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 13310271172839895661
+    },
+    {
+      "episode": 12,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 901211479147901150
+    },
+    {
+      "episode": 13,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 4145032340227156598
+    },
+    {
+      "episode": 14,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 4177958157492595354
+    },
+    {
+      "episode": 15,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 11365155163746151489
+    },
+    {
+      "episode": 16,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 8060936527684621340
+    },
+    {
+      "episode": 17,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 10686919069386026071
+    },
+    {
+      "episode": 18,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 11775668639750281951
+    },
+    {
+      "episode": 19,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 18006529123759147147
+    },
+    {
+      "episode": 20,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 9289468036512088984
+    },
+    {
+      "episode": 21,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 8281792757364737398
+    },
+    {
+      "episode": 22,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 13630519224159085376
+    },
+    {
+      "episode": 23,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 15370505516212997452
+    },
+    {
+      "episode": 24,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 13587972522390488560
+    },
+    {
+      "episode": 25,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 13165537225222232948
+    },
+    {
+      "episode": 26,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 9853717654289281822
+    },
+    {
+      "episode": 27,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 8004732935113419055
+    },
+    {
+      "episode": 28,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 10548082764824339321
+    },
+    {
+      "episode": 29,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 12353636633320697474
+    },
+    {
+      "episode": 30,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 7987852273193261685
+    },
+    {
+      "episode": 31,
+      "family": "multi_step",
+      "replication": 0,
+      "role": "train",
+      "seed": 9738208692711578560
+    },
+    {
+      "episode": 0,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 8318462302917779120
+    },
+    {
+      "episode": 1,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 14964058799152017241
+    },
+    {
+      "episode": 2,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 10431173374953774571
+    },
+    {
+      "episode": 3,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 4116441519847386430
+    },
+    {
+      "episode": 4,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 9812174530186820285
+    },
+    {
+      "episode": 5,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 6044853159489375680
+    },
+    {
+      "episode": 6,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 15380741486272979260
+    },
+    {
+      "episode": 7,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 11614145012114907478
+    },
+    {
+      "episode": 8,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 16399039993961890084
+    },
+    {
+      "episode": 9,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 8830900894019161179
+    },
+    {
+      "episode": 10,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 14100632255038855646
+    },
+    {
+      "episode": 11,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 5065229568727090784
+    },
+    {
+      "episode": 12,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 3957605033712787690
+    },
+    {
+      "episode": 13,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 6555618868193034559
+    },
+    {
+      "episode": 14,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 11702298144125845347
+    },
+    {
+      "episode": 15,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 7722902543564577243
+    },
+    {
+      "episode": 16,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 17574373054688622826
+    },
+    {
+      "episode": 17,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 733572385174083960
+    },
+    {
+      "episode": 18,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 13538485248392369382
+    },
+    {
+      "episode": 19,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 14845141679779403698
+    },
+    {
+      "episode": 20,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 12256448856042172736
+    },
+    {
+      "episode": 21,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 4996686315659232034
+    },
+    {
+      "episode": 22,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 18193670379534714942
+    },
+    {
+      "episode": 23,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 15026926453441579053
+    },
+    {
+      "episode": 24,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 3897124351419875977
+    },
+    {
+      "episode": 25,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 540378145085808981
+    },
+    {
+      "episode": 26,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 12935626589378225884
+    },
+    {
+      "episode": 27,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 12300145150632577315
+    },
+    {
+      "episode": 28,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 1908240224207386983
+    },
+    {
+      "episode": 29,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 1962586261462261721
+    },
+    {
+      "episode": 30,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 10807579202657215505
+    },
+    {
+      "episode": 31,
+      "family": "multi_ramp",
+      "replication": 0,
+      "role": "train",
+      "seed": 15076846096074596537
+    },
+    {
+      "episode": 0,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 5126362969801594529
+    },
+    {
+      "episode": 1,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 10933397054205614691
+    },
+    {
+      "episode": 2,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 2308509832167844885
+    },
+    {
+      "episode": 3,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 11915933940884626187
+    },
+    {
+      "episode": 4,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 4583913267672028127
+    },
+    {
+      "episode": 5,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 5708199714086988266
+    },
+    {
+      "episode": 6,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 7837736464074630754
+    },
+    {
+      "episode": 7,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 12244321000936724440
+    },
+    {
+      "episode": 8,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 648822322539526310
+    },
+    {
+      "episode": 9,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 10776086833428608899
+    },
+    {
+      "episode": 10,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 3538529247510328889
+    },
+    {
+      "episode": 11,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 8083640290451412252
+    },
+    {
+      "episode": 12,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 13046807964503512992
+    },
+    {
+      "episode": 13,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 16919066249238869529
+    },
+    {
+      "episode": 14,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 14004266681912861412
+    },
+    {
+      "episode": 15,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 8291391904315662733
+    },
+    {
+      "episode": 16,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 4477016436806370863
+    },
+    {
+      "episode": 17,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 8141456087744986295
+    },
+    {
+      "episode": 18,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 5409634378699500218
+    },
+    {
+      "episode": 19,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 5481249403634809061
+    },
+    {
+      "episode": 20,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 11631382707977333255
+    },
+    {
+      "episode": 21,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 8470528963384605761
+    },
+    {
+      "episode": 22,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 552064516707607179
+    },
+    {
+      "episode": 23,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 11905648627198688409
+    },
+    {
+      "episode": 24,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 214914263527059721
+    },
+    {
+      "episode": 25,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 2270518017872081975
+    },
+    {
+      "episode": 26,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 12866838394809247143
+    },
+    {
+      "episode": 27,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 16995443359725996907
+    },
+    {
+      "episode": 28,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 17671986349423115351
+    },
+    {
+      "episode": 29,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 4337205936160180856
+    },
+    {
+      "episode": 30,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 8023606609605973777
+    },
+    {
+      "episode": 31,
+      "family": "drift",
+      "replication": 0,
+      "role": "train",
+      "seed": 998396172729451155
+    },
+    {
+      "episode": 0,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 13561511947856057797
+    },
+    {
+      "episode": 1,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 14833486919257327572
+    },
+    {
+      "episode": 2,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 9661116520284239369
+    },
+    {
+      "episode": 3,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 5471203491315208974
+    },
+    {
+      "episode": 4,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 14880555928037701494
+    },
+    {
+      "episode": 5,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 10331438578527937089
+    },
+    {
+      "episode": 6,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 14308417213890206221
+    },
+    {
+      "episode": 7,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 2668760082205371579
+    },
+    {
+      "episode": 8,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 477680340156125101
+    },
+    {
+      "episode": 9,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 3263550236400818385
+    },
+    {
+      "episode": 10,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 10966592906508435889
+    },
+    {
+      "episode": 11,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 5207253180446640591
+    },
+    {
+      "episode": 12,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 12521319021751813985
+    },
+    {
+      "episode": 13,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 8310437590061540644
+    },
+    {
+      "episode": 14,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 15157043992181044154
+    },
+    {
+      "episode": 15,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 9264938385716739
+    },
+    {
+      "episode": 16,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 12144640858788606089
+    },
+    {
+      "episode": 17,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 3160898121334203410
+    },
+    {
+      "episode": 18,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 9163499767989324513
+    },
+    {
+      "episode": 19,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 9057398854717369833
+    },
+    {
+      "episode": 20,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 948112374792078441
+    },
+    {
+      "episode": 21,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 10543027818763660934
+    },
+    {
+      "episode": 22,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 12132257683605465744
+    },
+    {
+      "episode": 23,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 7129729259662208349
+    },
+    {
+      "episode": 24,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 13727835015403907743
+    },
+    {
+      "episode": 25,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 13116221845426002542
+    },
+    {
+      "episode": 26,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 5854210170711545704
+    },
+    {
+      "episode": 27,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 4134283236872556320
+    },
+    {
+      "episode": 28,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 14500243848227190218
+    },
+    {
+      "episode": 29,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 6531778655313633967
+    },
+    {
+      "episode": 30,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 11704646870068085211
+    },
+    {
+      "episode": 31,
+      "family": "loss_episode",
+      "replication": 0,
+      "role": "train",
+      "seed": 1254779936717888147
+    },
+    {
+      "episode": 0,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 11638918055145000910
+    },
+    {
+      "episode": 1,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 13230857667184618737
+    },
+    {
+      "episode": 2,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 7436152161508652999
+    },
+    {
+      "episode": 3,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 3708913139242993769
+    },
+    {
+      "episode": 4,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 8149534885774967189
+    },
+    {
+      "episode": 5,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 12457798310712005507
+    },
+    {
+      "episode": 6,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 9899495223313494538
+    },
+    {
+      "episode": 7,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 17511122009285980424
+    },
+    {
+      "episode": 8,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 11424856322629863750
+    },
+    {
+      "episode": 9,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 13081851558987991151
+    },
+    {
+      "episode": 10,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 15117697918934878849
+    },
+    {
+      "episode": 11,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 6987302421509002329
+    },
+    {
+      "episode": 12,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 3954597581297900700
+    },
+    {
+      "episode": 13,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 11385211005329606462
+    },
+    {
+      "episode": 14,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 15360194827806544075
+    },
+    {
+      "episode": 15,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 17874198979647888988
+    },
+    {
+      "episode": 16,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 13769847948239269099
+    },
+    {
+      "episode": 17,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 11663607217040668415
+    },
+    {
+      "episode": 18,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 14578169384389667854
+    },
+    {
+      "episode": 19,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 15581324365958798805
+    },
+    {
+      "episode": 20,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 14479972359920585921
+    },
+    {
+      "episode": 21,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 5772042270397103628
+    },
+    {
+      "episode": 22,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 10852225739162047302
+    },
+    {
+      "episode": 23,
+      "family": "dip",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 18373776538716721353
+    },
+    {
+      "episode": 0,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 15839727748032252464
+    },
+    {
+      "episode": 1,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 16718404347041426840
+    },
+    {
+      "episode": 2,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 6659570348399228512
+    },
+    {
+      "episode": 3,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 12635474660717827702
+    },
+    {
+      "episode": 4,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 3566360623595183352
+    },
+    {
+      "episode": 5,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 13711946818813720360
+    },
+    {
+      "episode": 6,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 13023341396722979162
+    },
+    {
+      "episode": 7,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 2417263761426590391
+    },
+    {
+      "episode": 8,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 4156833176116348338
+    },
+    {
+      "episode": 9,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 3843014385362595914
+    },
+    {
+      "episode": 10,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 10159824974706581420
+    },
+    {
+      "episode": 11,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 15118426012266870571
+    },
+    {
+      "episode": 12,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 1994013199570812179
+    },
+    {
+      "episode": 13,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 9277573450185553289
+    },
+    {
+      "episode": 14,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 16827099191285466691
+    },
+    {
+      "episode": 15,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 14216177660904045762
+    },
+    {
+      "episode": 16,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 6957385978303344374
+    },
+    {
+      "episode": 17,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 14483188258450926543
+    },
+    {
+      "episode": 18,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 13204105759765672142
+    },
+    {
+      "episode": 19,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 10725807454974218276
+    },
+    {
+      "episode": 20,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 9404683972551963771
+    },
+    {
+      "episode": 21,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 5539286752341973793
+    },
+    {
+      "episode": 22,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 2007453863771209691
+    },
+    {
+      "episode": 23,
+      "family": "deep_queue",
+      "replication": 0,
+      "role": "calibration",
+      "seed": 14341502980487186902
+    },
+    {
+      "episode": 0,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 15157774219373384809
+    },
+    {
+      "episode": 1,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 1889954841951179385
+    },
+    {
+      "episode": 2,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 11272307588588195319
+    },
+    {
+      "episode": 3,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 8740067262726938946
+    },
+    {
+      "episode": 4,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 7499156214925438405
+    },
+    {
+      "episode": 5,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 10951578786227468892
+    },
+    {
+      "episode": 6,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 4234389192697100399
+    },
+    {
+      "episode": 7,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 16240092497069866682
+    },
+    {
+      "episode": 8,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 5479015053811283754
+    },
+    {
+      "episode": 9,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 18045686603536327179
+    },
+    {
+      "episode": 10,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 15977500508835213130
+    },
+    {
+      "episode": 11,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 3924601007150760189
+    },
+    {
+      "episode": 12,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 3426079338428532846
+    },
+    {
+      "episode": 13,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 16941281902527859799
+    },
+    {
+      "episode": 14,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 13145883775769775957
+    },
+    {
+      "episode": 15,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 8489864787198700244
+    },
+    {
+      "episode": 16,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 8194948489975661019
+    },
+    {
+      "episode": 17,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 15167178661166984601
+    },
+    {
+      "episode": 18,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 1519109454663329668
+    },
+    {
+      "episode": 19,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 2994020931487106234
+    },
+    {
+      "episode": 20,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 6522683251154205314
+    },
+    {
+      "episode": 21,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 9177176330809922608
+    },
+    {
+      "episode": 22,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 8558033671174617893
+    },
+    {
+      "episode": 23,
+      "family": "sawtooth",
+      "replication": 0,
+      "role": "validation",
+      "seed": 2676633093144741722
+    },
+    {
+      "episode": 0,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 15754209580900102540
+    },
+    {
+      "episode": 1,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 2068070289343710491
+    },
+    {
+      "episode": 2,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 6155853033171396272
+    },
+    {
+      "episode": 3,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 9931858308520640932
+    },
+    {
+      "episode": 4,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 9109885299695194241
+    },
+    {
+      "episode": 5,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 10082126583440006141
+    },
+    {
+      "episode": 6,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 1720148356359097211
+    },
+    {
+      "episode": 7,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 578210689131737215
+    },
+    {
+      "episode": 8,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 11886912190347216045
+    },
+    {
+      "episode": 9,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 18443050435493076682
+    },
+    {
+      "episode": 10,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 13858447233776624345
+    },
+    {
+      "episode": 11,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 13975156531566091299
+    },
+    {
+      "episode": 12,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 424289106188521333
+    },
+    {
+      "episode": 13,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 10945571766719356660
+    },
+    {
+      "episode": 14,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 13102162460928525957
+    },
+    {
+      "episode": 15,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 10177747707695478077
+    },
+    {
+      "episode": 16,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 3662849874006800570
+    },
+    {
+      "episode": 17,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 14338278953949134661
+    },
+    {
+      "episode": 18,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 7965414455138762627
+    },
+    {
+      "episode": 19,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 9022616423488271979
+    },
+    {
+      "episode": 20,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 1964616801652603078
+    },
+    {
+      "episode": 21,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 18003007839608154642
+    },
+    {
+      "episode": 22,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 6186219636368049555
+    },
+    {
+      "episode": 23,
+      "family": "square_wave",
+      "replication": 0,
+      "role": "validation",
+      "seed": 15096371737815493504
+    },
+    {
+      "episode": 0,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 13888076936152844937
+    },
+    {
+      "episode": 1,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 9205881410816596142
+    },
+    {
+      "episode": 2,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 11215834140712126013
+    },
+    {
+      "episode": 3,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 5811666091514774701
+    },
+    {
+      "episode": 4,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 7742441820377073451
+    },
+    {
+      "episode": 5,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 14407827714381381114
+    },
+    {
+      "episode": 6,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 9872431512491979119
+    },
+    {
+      "episode": 7,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 8332131915579709006
+    },
+    {
+      "episode": 8,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 8483454400574360480
+    },
+    {
+      "episode": 9,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 8815301552313503391
+    },
+    {
+      "episode": 10,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 5720351724838468169
+    },
+    {
+      "episode": 11,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 8260246790953311180
+    },
+    {
+      "episode": 12,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 4540735158160225553
+    },
+    {
+      "episode": 13,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 11899961030480553862
+    },
+    {
+      "episode": 14,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 5982221118361226978
+    },
+    {
+      "episode": 15,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 7505451189216191339
+    },
+    {
+      "episode": 16,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 4160804161888937684
+    },
+    {
+      "episode": 17,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 15753891877185493400
+    },
+    {
+      "episode": 18,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 18014589164783931705
+    },
+    {
+      "episode": 19,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 18123380182863772068
+    },
+    {
+      "episode": 20,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 10383525195858657859
+    },
+    {
+      "episode": 21,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 17675030531795079489
+    },
+    {
+      "episode": 22,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 6894195314735361277
+    },
+    {
+      "episode": 23,
+      "family": "slow_fade",
+      "replication": 0,
+      "role": "validation",
+      "seed": 3222484942268234661
+    },
+    {
+      "episode": 0,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 6375623079247636579
+    },
+    {
+      "episode": 1,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 16902139249612493450
+    },
+    {
+      "episode": 2,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 16970074938310108225
+    },
+    {
+      "episode": 3,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 13284156592183287311
+    },
+    {
+      "episode": 4,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 3560947132675952815
+    },
+    {
+      "episode": 5,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 9628252921835077782
+    },
+    {
+      "episode": 6,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 3927843854155757378
+    },
+    {
+      "episode": 7,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 1604193294310311525
+    },
+    {
+      "episode": 8,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 1316363352115251131
+    },
+    {
+      "episode": 9,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 7144705832709216329
+    },
+    {
+      "episode": 10,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 604841071262014638
+    },
+    {
+      "episode": 11,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 12314835231497965654
+    },
+    {
+      "episode": 12,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 11286472217896436246
+    },
+    {
+      "episode": 13,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 13529713800563124006
+    },
+    {
+      "episode": 14,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 11504264997565348804
+    },
+    {
+      "episode": 15,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 8467341338371316194
+    },
+    {
+      "episode": 16,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 6687455857421373170
+    },
+    {
+      "episode": 17,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 15375861797219807435
+    },
+    {
+      "episode": 18,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 2149023245649433900
+    },
+    {
+      "episode": 19,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 11856357753499672257
+    },
+    {
+      "episode": 20,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 18446333758702558496
+    },
+    {
+      "episode": 21,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 16952953655059282514
+    },
+    {
+      "episode": 22,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 16501932475173529044
+    },
+    {
+      "episode": 23,
+      "family": "feedback_flap",
+      "replication": 0,
+      "role": "validation",
+      "seed": 13594048712960146177
+    },
+    {
+      "episode": 0,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 1553203259695939721
+    },
+    {
+      "episode": 1,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 7509572129121318584
+    },
+    {
+      "episode": 2,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 726348311162431061
+    },
+    {
+      "episode": 3,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 2619959408827599300
+    },
+    {
+      "episode": 4,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 12653563947624241400
+    },
+    {
+      "episode": 5,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 6848796829712113237
+    },
+    {
+      "episode": 6,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 1425950766306466000
+    },
+    {
+      "episode": 7,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 8841726833183593743
+    },
+    {
+      "episode": 8,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 11870388721269853911
+    },
+    {
+      "episode": 9,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 7162171280785591462
+    },
+    {
+      "episode": 10,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 2842151391671161824
+    },
+    {
+      "episode": 11,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 10711417272479442487
+    },
+    {
+      "episode": 12,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 9702816960991580353
+    },
+    {
+      "episode": 13,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 5435614135958405481
+    },
+    {
+      "episode": 14,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 2273305226394195397
+    },
+    {
+      "episode": 15,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 8629371725906522060
+    },
+    {
+      "episode": 16,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 11774453161724675846
+    },
+    {
+      "episode": 17,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 11807507166715337645
+    },
+    {
+      "episode": 18,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 8070494255955637730
+    },
+    {
+      "episode": 19,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 5775566765272343636
+    },
+    {
+      "episode": 20,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 3162516705272612318
+    },
+    {
+      "episode": 21,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 6263021116489365924
+    },
+    {
+      "episode": 22,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 1761347245192882665
+    },
+    {
+      "episode": 23,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 17403114096085170838
+    },
+    {
+      "episode": 24,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 1426395335181811091
+    },
+    {
+      "episode": 25,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 243027777713869525
+    },
+    {
+      "episode": 26,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 13158217856983604684
+    },
+    {
+      "episode": 27,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 18439766672920738449
+    },
+    {
+      "episode": 28,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 5329768816408100951
+    },
+    {
+      "episode": 29,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 11170913170633047398
+    },
+    {
+      "episode": 30,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 11022506857037023422
+    },
+    {
+      "episode": 31,
+      "family": "multi_step",
+      "replication": 1,
+      "role": "train",
+      "seed": 16769549172592450026
+    },
+    {
+      "episode": 0,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 18317132424871503133
+    },
+    {
+      "episode": 1,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 17042337985983660388
+    },
+    {
+      "episode": 2,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 305576392614247860
+    },
+    {
+      "episode": 3,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 11369551549754548397
+    },
+    {
+      "episode": 4,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 3912244742448401266
+    },
+    {
+      "episode": 5,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 2235323538163186759
+    },
+    {
+      "episode": 6,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 10308642964979101903
+    },
+    {
+      "episode": 7,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 542223160466079026
+    },
+    {
+      "episode": 8,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 1373688924522222027
+    },
+    {
+      "episode": 9,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 9891539232517936882
+    },
+    {
+      "episode": 10,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 6747896544845848917
+    },
+    {
+      "episode": 11,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 12173332213922452180
+    },
+    {
+      "episode": 12,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 5225226328655988588
+    },
+    {
+      "episode": 13,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 5600993411326919517
+    },
+    {
+      "episode": 14,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 17419074065788394337
+    },
+    {
+      "episode": 15,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 13547993544348404239
+    },
+    {
+      "episode": 16,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 3171053001945918474
+    },
+    {
+      "episode": 17,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 7135737114441317505
+    },
+    {
+      "episode": 18,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 13103062492428427846
+    },
+    {
+      "episode": 19,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 15219716422318410126
+    },
+    {
+      "episode": 20,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 1119998644622970116
+    },
+    {
+      "episode": 21,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 7083100608414954728
+    },
+    {
+      "episode": 22,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 1151063925752753694
+    },
+    {
+      "episode": 23,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 7401830111555121746
+    },
+    {
+      "episode": 24,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 3005784488610331902
+    },
+    {
+      "episode": 25,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 14366180812505576648
+    },
+    {
+      "episode": 26,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 5348784015826448126
+    },
+    {
+      "episode": 27,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 4628312919606357803
+    },
+    {
+      "episode": 28,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 6926122208653695317
+    },
+    {
+      "episode": 29,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 16417831208318445228
+    },
+    {
+      "episode": 30,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 155293955182013173
+    },
+    {
+      "episode": 31,
+      "family": "multi_ramp",
+      "replication": 1,
+      "role": "train",
+      "seed": 416275257260256996
+    },
+    {
+      "episode": 0,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 355072134237617298
+    },
+    {
+      "episode": 1,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 829877917150100446
+    },
+    {
+      "episode": 2,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 886064149063585045
+    },
+    {
+      "episode": 3,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 4618816613991007844
+    },
+    {
+      "episode": 4,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 2920072269236851762
+    },
+    {
+      "episode": 5,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 17990331545234145798
+    },
+    {
+      "episode": 6,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 13420280348105860855
+    },
+    {
+      "episode": 7,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 9872424269755927750
+    },
+    {
+      "episode": 8,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 10600070086129079049
+    },
+    {
+      "episode": 9,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 14002652534309673428
+    },
+    {
+      "episode": 10,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 9441738968100581542
+    },
+    {
+      "episode": 11,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 7205352647684634465
+    },
+    {
+      "episode": 12,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 17249798765200497949
+    },
+    {
+      "episode": 13,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 18248232125627359211
+    },
+    {
+      "episode": 14,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 9980169141122029537
+    },
+    {
+      "episode": 15,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 5429107673509681069
+    },
+    {
+      "episode": 16,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 6938616889877899832
+    },
+    {
+      "episode": 17,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 15434465076197889556
+    },
+    {
+      "episode": 18,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 2975590183246806768
+    },
+    {
+      "episode": 19,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 1309245776874292179
+    },
+    {
+      "episode": 20,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 12732016447518531947
+    },
+    {
+      "episode": 21,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 8566219632820894507
+    },
+    {
+      "episode": 22,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 6414234978936267320
+    },
+    {
+      "episode": 23,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 10073046172786336975
+    },
+    {
+      "episode": 24,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 13722305795350525938
+    },
+    {
+      "episode": 25,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 13956859541329917177
+    },
+    {
+      "episode": 26,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 11278272002245148387
+    },
+    {
+      "episode": 27,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 18252168479098037756
+    },
+    {
+      "episode": 28,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 15227929842721119059
+    },
+    {
+      "episode": 29,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 15734046361187071693
+    },
+    {
+      "episode": 30,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 2704881311821240593
+    },
+    {
+      "episode": 31,
+      "family": "drift",
+      "replication": 1,
+      "role": "train",
+      "seed": 7793466846284253917
+    },
+    {
+      "episode": 0,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 2630792186487753998
+    },
+    {
+      "episode": 1,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 1607278654103966020
+    },
+    {
+      "episode": 2,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 13374152061376434279
+    },
+    {
+      "episode": 3,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 10935683684086625340
+    },
+    {
+      "episode": 4,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 18262576722820188526
+    },
+    {
+      "episode": 5,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 15780782581006291588
+    },
+    {
+      "episode": 6,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 5510680236783182733
+    },
+    {
+      "episode": 7,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 12491169191954170038
+    },
+    {
+      "episode": 8,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 12716274832468751886
+    },
+    {
+      "episode": 9,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 15939622381941363445
+    },
+    {
+      "episode": 10,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 11722442843509454409
+    },
+    {
+      "episode": 11,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 1916810948356222217
+    },
+    {
+      "episode": 12,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 1187822230705118763
+    },
+    {
+      "episode": 13,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 6161069065527522391
+    },
+    {
+      "episode": 14,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 7954126568188161364
+    },
+    {
+      "episode": 15,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 3832037862512380092
+    },
+    {
+      "episode": 16,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 13656598987754969824
+    },
+    {
+      "episode": 17,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 16661910629302240163
+    },
+    {
+      "episode": 18,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 4509463655724942719
+    },
+    {
+      "episode": 19,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 11457810460738602387
+    },
+    {
+      "episode": 20,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 1441280157633362619
+    },
+    {
+      "episode": 21,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 8963782490165697879
+    },
+    {
+      "episode": 22,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 5443946502680634833
+    },
+    {
+      "episode": 23,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 7169785847256883948
+    },
+    {
+      "episode": 24,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 5950288467987848287
+    },
+    {
+      "episode": 25,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 16371870061664338858
+    },
+    {
+      "episode": 26,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 2429883301824199123
+    },
+    {
+      "episode": 27,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 14616057294796852111
+    },
+    {
+      "episode": 28,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 15966180697079348773
+    },
+    {
+      "episode": 29,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 2964916273535887524
+    },
+    {
+      "episode": 30,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 17490261880559378850
+    },
+    {
+      "episode": 31,
+      "family": "loss_episode",
+      "replication": 1,
+      "role": "train",
+      "seed": 3557777836359247646
+    },
+    {
+      "episode": 0,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 15419149386148771446
+    },
+    {
+      "episode": 1,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 5490868555537540989
+    },
+    {
+      "episode": 2,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 7101995602529822387
+    },
+    {
+      "episode": 3,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 11563586266862971053
+    },
+    {
+      "episode": 4,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 1102400086034701042
+    },
+    {
+      "episode": 5,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 10645463366762851782
+    },
+    {
+      "episode": 6,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 669864028694212145
+    },
+    {
+      "episode": 7,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 9698859626198256178
+    },
+    {
+      "episode": 8,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 7151513546599888180
+    },
+    {
+      "episode": 9,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 7179721214193605636
+    },
+    {
+      "episode": 10,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 551424977696059652
+    },
+    {
+      "episode": 11,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 11144888339860387182
+    },
+    {
+      "episode": 12,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 2671796197904886672
+    },
+    {
+      "episode": 13,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 4054007551892071172
+    },
+    {
+      "episode": 14,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 10575925276949742613
+    },
+    {
+      "episode": 15,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 1443074353902266412
+    },
+    {
+      "episode": 16,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 11601278199630898425
+    },
+    {
+      "episode": 17,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 3369411121168531084
+    },
+    {
+      "episode": 18,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 10774628138900285607
+    },
+    {
+      "episode": 19,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 14374087514546352193
+    },
+    {
+      "episode": 20,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 16891332203658575547
+    },
+    {
+      "episode": 21,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 2970404258951394888
+    },
+    {
+      "episode": 22,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 5222363787723186155
+    },
+    {
+      "episode": 23,
+      "family": "dip",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 13427517882117315906
+    },
+    {
+      "episode": 0,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 16177095575838032977
+    },
+    {
+      "episode": 1,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 17691032306291261105
+    },
+    {
+      "episode": 2,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 15529064352794180798
+    },
+    {
+      "episode": 3,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 6277201928697503282
+    },
+    {
+      "episode": 4,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 8667984616628503762
+    },
+    {
+      "episode": 5,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 2794458091040019451
+    },
+    {
+      "episode": 6,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 15957674597096160215
+    },
+    {
+      "episode": 7,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 8490041377091486500
+    },
+    {
+      "episode": 8,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 14116039202996065607
+    },
+    {
+      "episode": 9,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 14078562227975415159
+    },
+    {
+      "episode": 10,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 9219867813275849219
+    },
+    {
+      "episode": 11,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 6415266142146138641
+    },
+    {
+      "episode": 12,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 3253843020647111039
+    },
+    {
+      "episode": 13,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 18247248685069651332
+    },
+    {
+      "episode": 14,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 1490301853841428049
+    },
+    {
+      "episode": 15,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 5262253047576661453
+    },
+    {
+      "episode": 16,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 17530781589460963983
+    },
+    {
+      "episode": 17,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 10412744562583262697
+    },
+    {
+      "episode": 18,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 11920242716006208173
+    },
+    {
+      "episode": 19,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 18072839833614672196
+    },
+    {
+      "episode": 20,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 10238141641247637282
+    },
+    {
+      "episode": 21,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 16513864640653505208
+    },
+    {
+      "episode": 22,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 1626766697243025013
+    },
+    {
+      "episode": 23,
+      "family": "deep_queue",
+      "replication": 1,
+      "role": "calibration",
+      "seed": 13997363641062984945
+    },
+    {
+      "episode": 0,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 14905900377283727733
+    },
+    {
+      "episode": 1,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 2960955285278969133
+    },
+    {
+      "episode": 2,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 16097599883426243483
+    },
+    {
+      "episode": 3,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 2544273460254588312
+    },
+    {
+      "episode": 4,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 16648760085237441392
+    },
+    {
+      "episode": 5,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 4998606941050276199
+    },
+    {
+      "episode": 6,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 18417342988296162737
+    },
+    {
+      "episode": 7,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 9694072005225214645
+    },
+    {
+      "episode": 8,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 13939639899260679925
+    },
+    {
+      "episode": 9,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 10726306124076571012
+    },
+    {
+      "episode": 10,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 8364695693005105346
+    },
+    {
+      "episode": 11,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 5398879502210614658
+    },
+    {
+      "episode": 12,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 5978069348460514700
+    },
+    {
+      "episode": 13,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 14366828054109305613
+    },
+    {
+      "episode": 14,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 3994796335757751703
+    },
+    {
+      "episode": 15,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 6637693048908173046
+    },
+    {
+      "episode": 16,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 1128972210479405853
+    },
+    {
+      "episode": 17,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 11796706412750464741
+    },
+    {
+      "episode": 18,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 1552661861264880305
+    },
+    {
+      "episode": 19,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 7758428547263884938
+    },
+    {
+      "episode": 20,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 6421498323396151386
+    },
+    {
+      "episode": 21,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 13367576918017210149
+    },
+    {
+      "episode": 22,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 9367153690267165751
+    },
+    {
+      "episode": 23,
+      "family": "sawtooth",
+      "replication": 1,
+      "role": "validation",
+      "seed": 2232980120598576844
+    },
+    {
+      "episode": 0,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 17394270871300449401
+    },
+    {
+      "episode": 1,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 18299648299938840307
+    },
+    {
+      "episode": 2,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 10975059173395207663
+    },
+    {
+      "episode": 3,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 6857228286834686210
+    },
+    {
+      "episode": 4,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 8647411713713950830
+    },
+    {
+      "episode": 5,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 18306400683591990515
+    },
+    {
+      "episode": 6,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 1279967448686765678
+    },
+    {
+      "episode": 7,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 8294507268429634608
+    },
+    {
+      "episode": 8,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 7738594176172927742
+    },
+    {
+      "episode": 9,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 12055815727496455335
+    },
+    {
+      "episode": 10,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 5671635512548001469
+    },
+    {
+      "episode": 11,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 5391176850209324293
+    },
+    {
+      "episode": 12,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 176465021593658002
+    },
+    {
+      "episode": 13,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 2125517671959706411
+    },
+    {
+      "episode": 14,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 2858606505514382374
+    },
+    {
+      "episode": 15,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 17092802686355749398
+    },
+    {
+      "episode": 16,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 14820357886446272657
+    },
+    {
+      "episode": 17,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 10773956807590298600
+    },
+    {
+      "episode": 18,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 6065526293889742120
+    },
+    {
+      "episode": 19,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 8390561069516911521
+    },
+    {
+      "episode": 20,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 1952128477184211269
+    },
+    {
+      "episode": 21,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 15848932061388651027
+    },
+    {
+      "episode": 22,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 161156318234612870
+    },
+    {
+      "episode": 23,
+      "family": "square_wave",
+      "replication": 1,
+      "role": "validation",
+      "seed": 13944267118682467175
+    },
+    {
+      "episode": 0,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 8546326791445230255
+    },
+    {
+      "episode": 1,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 12445881682204137920
+    },
+    {
+      "episode": 2,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 12710850969479220542
+    },
+    {
+      "episode": 3,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 14422923219650645329
+    },
+    {
+      "episode": 4,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 2131827752896963104
+    },
+    {
+      "episode": 5,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 10167521078794449693
+    },
+    {
+      "episode": 6,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 10101063442087130168
+    },
+    {
+      "episode": 7,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 2088226513585394726
+    },
+    {
+      "episode": 8,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 11907570277562177130
+    },
+    {
+      "episode": 9,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 12792991284325774386
+    },
+    {
+      "episode": 10,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 4686605847476975249
+    },
+    {
+      "episode": 11,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 10387193442419605620
+    },
+    {
+      "episode": 12,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 14243172076264897054
+    },
+    {
+      "episode": 13,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 13945611207315129392
+    },
+    {
+      "episode": 14,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 8057791268039782523
+    },
+    {
+      "episode": 15,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 1034758568992200224
+    },
+    {
+      "episode": 16,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 11587315340536611155
+    },
+    {
+      "episode": 17,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 6706162658615269032
+    },
+    {
+      "episode": 18,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 15518684782798140020
+    },
+    {
+      "episode": 19,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 5887597593906974047
+    },
+    {
+      "episode": 20,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 254377900886566076
+    },
+    {
+      "episode": 21,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 10335317024789373284
+    },
+    {
+      "episode": 22,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 3161795521707313184
+    },
+    {
+      "episode": 23,
+      "family": "slow_fade",
+      "replication": 1,
+      "role": "validation",
+      "seed": 1507510688908177832
+    },
+    {
+      "episode": 0,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 4642554691971076752
+    },
+    {
+      "episode": 1,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 6476627191772594804
+    },
+    {
+      "episode": 2,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 617384302522394521
+    },
+    {
+      "episode": 3,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 9098299492947213993
+    },
+    {
+      "episode": 4,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 16078812067142640
+    },
+    {
+      "episode": 5,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 5086446589670148431
+    },
+    {
+      "episode": 6,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 5966391754634019968
+    },
+    {
+      "episode": 7,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 2527119669665608723
+    },
+    {
+      "episode": 8,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 4092120146317108047
+    },
+    {
+      "episode": 9,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 3923709939857040485
+    },
+    {
+      "episode": 10,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 9970157167919458101
+    },
+    {
+      "episode": 11,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 3888250623108132941
+    },
+    {
+      "episode": 12,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 4678688902465567729
+    },
+    {
+      "episode": 13,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 668066921765633998
+    },
+    {
+      "episode": 14,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 13093525732982638123
+    },
+    {
+      "episode": 15,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 2849730470556266542
+    },
+    {
+      "episode": 16,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 9653815486264037971
+    },
+    {
+      "episode": 17,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 14436831394746241792
+    },
+    {
+      "episode": 18,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 11690559042405396342
+    },
+    {
+      "episode": 19,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 10500946092085662298
+    },
+    {
+      "episode": 20,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 15449277088845144618
+    },
+    {
+      "episode": 21,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 11372299765055793837
+    },
+    {
+      "episode": 22,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 1959418136327205544
+    },
+    {
+      "episode": 23,
+      "family": "feedback_flap",
+      "replication": 1,
+      "role": "validation",
+      "seed": 14653048308911409879
+    },
+    {
+      "episode": 0,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 5448925302425166087
+    },
+    {
+      "episode": 1,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 2992185506656458675
+    },
+    {
+      "episode": 2,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 13609095424403462303
+    },
+    {
+      "episode": 3,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 113830554780058212
+    },
+    {
+      "episode": 4,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 12760936509649865801
+    },
+    {
+      "episode": 5,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 667372335332220436
+    },
+    {
+      "episode": 6,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 5058663196609859637
+    },
+    {
+      "episode": 7,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 1619852440791182229
+    },
+    {
+      "episode": 8,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 9773376590357034068
+    },
+    {
+      "episode": 9,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 14183769822555379659
+    },
+    {
+      "episode": 10,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 11971859690544877894
+    },
+    {
+      "episode": 11,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 13181948336020065457
+    },
+    {
+      "episode": 12,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 13876086133450599723
+    },
+    {
+      "episode": 13,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 951152142904347180
+    },
+    {
+      "episode": 14,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 7270669990339324083
+    },
+    {
+      "episode": 15,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 13683494783765685511
+    },
+    {
+      "episode": 16,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 17419962919153754162
+    },
+    {
+      "episode": 17,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 2028188194692970715
+    },
+    {
+      "episode": 18,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 12501777867461105111
+    },
+    {
+      "episode": 19,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 2822522472555935996
+    },
+    {
+      "episode": 20,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 10285895574562198393
+    },
+    {
+      "episode": 21,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 153264565254092463
+    },
+    {
+      "episode": 22,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 14834374304502328566
+    },
+    {
+      "episode": 23,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 6685679191182575256
+    },
+    {
+      "episode": 24,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 2055331265127369451
+    },
+    {
+      "episode": 25,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 12757799172886417641
+    },
+    {
+      "episode": 26,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 13120874375489452334
+    },
+    {
+      "episode": 27,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 17541455475717354238
+    },
+    {
+      "episode": 28,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 7912412095478389231
+    },
+    {
+      "episode": 29,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 7741643216228125393
+    },
+    {
+      "episode": 30,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 11909252845008140337
+    },
+    {
+      "episode": 31,
+      "family": "multi_step",
+      "replication": 2,
+      "role": "train",
+      "seed": 1525831161243269086
+    },
+    {
+      "episode": 0,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 14571138905239715413
+    },
+    {
+      "episode": 1,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 4723668926212958840
+    },
+    {
+      "episode": 2,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 980269417536709246
+    },
+    {
+      "episode": 3,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 17040335294688319743
+    },
+    {
+      "episode": 4,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 10640478155697185516
+    },
+    {
+      "episode": 5,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 5987637796148931732
+    },
+    {
+      "episode": 6,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 14574075436051882118
+    },
+    {
+      "episode": 7,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 17971984244600155205
+    },
+    {
+      "episode": 8,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 10486666837345727406
+    },
+    {
+      "episode": 9,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 5371957037215919014
+    },
+    {
+      "episode": 10,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 13065295481859948049
+    },
+    {
+      "episode": 11,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 7204636192242976021
+    },
+    {
+      "episode": 12,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 11106982824830268417
+    },
+    {
+      "episode": 13,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 6688534265538581319
+    },
+    {
+      "episode": 14,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 5161836411381555897
+    },
+    {
+      "episode": 15,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 16701858128837611632
+    },
+    {
+      "episode": 16,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 6577223644224704108
+    },
+    {
+      "episode": 17,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 6660292411338309654
+    },
+    {
+      "episode": 18,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 11456422576210281762
+    },
+    {
+      "episode": 19,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 768368640256044013
+    },
+    {
+      "episode": 20,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 14924003325083407891
+    },
+    {
+      "episode": 21,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 978170812864185011
+    },
+    {
+      "episode": 22,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 15921678803338719176
+    },
+    {
+      "episode": 23,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 5643892943534170712
+    },
+    {
+      "episode": 24,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 10779520081641196224
+    },
+    {
+      "episode": 25,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 11399786391936826631
+    },
+    {
+      "episode": 26,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 9591461999220867080
+    },
+    {
+      "episode": 27,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 7922420899694405335
+    },
+    {
+      "episode": 28,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 2171817483341189083
+    },
+    {
+      "episode": 29,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 16642874453533822598
+    },
+    {
+      "episode": 30,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 12590526471298570447
+    },
+    {
+      "episode": 31,
+      "family": "multi_ramp",
+      "replication": 2,
+      "role": "train",
+      "seed": 8345802360836647356
+    },
+    {
+      "episode": 0,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 503174897989337879
+    },
+    {
+      "episode": 1,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 1681961836048306074
+    },
+    {
+      "episode": 2,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 5150857917892781900
+    },
+    {
+      "episode": 3,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 8758380917764937163
+    },
+    {
+      "episode": 4,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 1681590921526683890
+    },
+    {
+      "episode": 5,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 16397799277887082157
+    },
+    {
+      "episode": 6,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 2591757508805434079
+    },
+    {
+      "episode": 7,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 4305197986664935492
+    },
+    {
+      "episode": 8,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 9502823324230957837
+    },
+    {
+      "episode": 9,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 9029878298928397273
+    },
+    {
+      "episode": 10,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 12725157784696454563
+    },
+    {
+      "episode": 11,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 14264083311676193434
+    },
+    {
+      "episode": 12,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 307504920710662959
+    },
+    {
+      "episode": 13,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 2041624134626764224
+    },
+    {
+      "episode": 14,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 8152504910581013717
+    },
+    {
+      "episode": 15,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 5587407711591392183
+    },
+    {
+      "episode": 16,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 4550123284075386973
+    },
+    {
+      "episode": 17,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 6608510366060400445
+    },
+    {
+      "episode": 18,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 853807173843812039
+    },
+    {
+      "episode": 19,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 417694079231012596
+    },
+    {
+      "episode": 20,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 5545499862760579890
+    },
+    {
+      "episode": 21,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 11486098919511921376
+    },
+    {
+      "episode": 22,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 4318226280431765858
+    },
+    {
+      "episode": 23,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 13432067939224058608
+    },
+    {
+      "episode": 24,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 5616441133530054710
+    },
+    {
+      "episode": 25,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 3368810030656655714
+    },
+    {
+      "episode": 26,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 12727984393091726754
+    },
+    {
+      "episode": 27,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 12490891148784153131
+    },
+    {
+      "episode": 28,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 11415064391523061191
+    },
+    {
+      "episode": 29,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 5829527665787941063
+    },
+    {
+      "episode": 30,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 2325971729755287310
+    },
+    {
+      "episode": 31,
+      "family": "drift",
+      "replication": 2,
+      "role": "train",
+      "seed": 8637327211928845716
+    },
+    {
+      "episode": 0,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 16490278324400563892
+    },
+    {
+      "episode": 1,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 1956954378494562185
+    },
+    {
+      "episode": 2,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 14371219880073481561
+    },
+    {
+      "episode": 3,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 8820900922357792379
+    },
+    {
+      "episode": 4,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 2012225806211010344
+    },
+    {
+      "episode": 5,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 13825816240184407794
+    },
+    {
+      "episode": 6,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 17321875508715262367
+    },
+    {
+      "episode": 7,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 16250675528658786294
+    },
+    {
+      "episode": 8,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 5165483867788518981
+    },
+    {
+      "episode": 9,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 18265365096214583035
+    },
+    {
+      "episode": 10,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 1206320120069768162
+    },
+    {
+      "episode": 11,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 1362765143102409969
+    },
+    {
+      "episode": 12,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 793288801070563463
+    },
+    {
+      "episode": 13,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 10813403621897405896
+    },
+    {
+      "episode": 14,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 17072659030614089148
+    },
+    {
+      "episode": 15,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 14553832112229190167
+    },
+    {
+      "episode": 16,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 12186950482326476485
+    },
+    {
+      "episode": 17,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 1424613237177981933
+    },
+    {
+      "episode": 18,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 14292001361438435025
+    },
+    {
+      "episode": 19,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 16807890995317229284
+    },
+    {
+      "episode": 20,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 8423815320330490501
+    },
+    {
+      "episode": 21,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 12277355511700405112
+    },
+    {
+      "episode": 22,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 725003186058203666
+    },
+    {
+      "episode": 23,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 9516394682366225439
+    },
+    {
+      "episode": 24,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 13040167609476839053
+    },
+    {
+      "episode": 25,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 4423469714533448944
+    },
+    {
+      "episode": 26,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 16330834943402463058
+    },
+    {
+      "episode": 27,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 17252899536734360748
+    },
+    {
+      "episode": 28,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 4996643449046430879
+    },
+    {
+      "episode": 29,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 3036057261579615610
+    },
+    {
+      "episode": 30,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 3876776111852005044
+    },
+    {
+      "episode": 31,
+      "family": "loss_episode",
+      "replication": 2,
+      "role": "train",
+      "seed": 10173534722631955671
+    },
+    {
+      "episode": 0,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 8703344400579669646
+    },
+    {
+      "episode": 1,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 2979014826463604769
+    },
+    {
+      "episode": 2,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 17120652749254588764
+    },
+    {
+      "episode": 3,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 1257836486884504863
+    },
+    {
+      "episode": 4,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 6747923423960207120
+    },
+    {
+      "episode": 5,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 13757823804429183085
+    },
+    {
+      "episode": 6,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 15548082941475680678
+    },
+    {
+      "episode": 7,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 16884935637871409111
+    },
+    {
+      "episode": 8,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 9014008864353377468
+    },
+    {
+      "episode": 9,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 6862704510465003107
+    },
+    {
+      "episode": 10,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 9057539527299170028
+    },
+    {
+      "episode": 11,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 10699165481958649845
+    },
+    {
+      "episode": 12,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 8101896154731074074
+    },
+    {
+      "episode": 13,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 2195028145527731671
+    },
+    {
+      "episode": 14,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 11962797399881415702
+    },
+    {
+      "episode": 15,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 13346482405086816544
+    },
+    {
+      "episode": 16,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 647234343514903641
+    },
+    {
+      "episode": 17,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 6360255302762036394
+    },
+    {
+      "episode": 18,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 5565334531660752473
+    },
+    {
+      "episode": 19,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 3504847421538943671
+    },
+    {
+      "episode": 20,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 15384776540768534650
+    },
+    {
+      "episode": 21,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 16176390502845559043
+    },
+    {
+      "episode": 22,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 17891562667848406257
+    },
+    {
+      "episode": 23,
+      "family": "dip",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 15656581328023607913
+    },
+    {
+      "episode": 0,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 5650773755679669646
+    },
+    {
+      "episode": 1,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 3586253063272583114
+    },
+    {
+      "episode": 2,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 16639832046366497660
+    },
+    {
+      "episode": 3,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 10290712809339891750
+    },
+    {
+      "episode": 4,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 14063037892211049487
+    },
+    {
+      "episode": 5,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 3101036858822401331
+    },
+    {
+      "episode": 6,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 7987066333870170851
+    },
+    {
+      "episode": 7,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 10404067155263801983
+    },
+    {
+      "episode": 8,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 13429850509485097062
+    },
+    {
+      "episode": 9,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 14877027246128109073
+    },
+    {
+      "episode": 10,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 4669045973920188135
+    },
+    {
+      "episode": 11,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 12054624860383550409
+    },
+    {
+      "episode": 12,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 9249059301530880814
+    },
+    {
+      "episode": 13,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 5199905342716950831
+    },
+    {
+      "episode": 14,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 15120532623836909611
+    },
+    {
+      "episode": 15,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 1452704773402488987
+    },
+    {
+      "episode": 16,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 4884642097110410442
+    },
+    {
+      "episode": 17,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 10982222737447425411
+    },
+    {
+      "episode": 18,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 12048404294821187054
+    },
+    {
+      "episode": 19,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 3632368428881305745
+    },
+    {
+      "episode": 20,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 14497884394258806652
+    },
+    {
+      "episode": 21,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 9669389059707192275
+    },
+    {
+      "episode": 22,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 10517541840619466139
+    },
+    {
+      "episode": 23,
+      "family": "deep_queue",
+      "replication": 2,
+      "role": "calibration",
+      "seed": 4969677939692307686
+    },
+    {
+      "episode": 0,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 17898310164806789443
+    },
+    {
+      "episode": 1,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 3272794701364529714
+    },
+    {
+      "episode": 2,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 10457487373649989834
+    },
+    {
+      "episode": 3,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 6717534383854209877
+    },
+    {
+      "episode": 4,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 13001226394857490010
+    },
+    {
+      "episode": 5,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 13753630073958287699
+    },
+    {
+      "episode": 6,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 3404505986996291763
+    },
+    {
+      "episode": 7,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 196888491293885226
+    },
+    {
+      "episode": 8,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 13078138312228275266
+    },
+    {
+      "episode": 9,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 1359766015814367447
+    },
+    {
+      "episode": 10,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 350847618967879107
+    },
+    {
+      "episode": 11,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 12996319361916703131
+    },
+    {
+      "episode": 12,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 17406795515701207083
+    },
+    {
+      "episode": 13,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 3002195579413176371
+    },
+    {
+      "episode": 14,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 1466912844737354616
+    },
+    {
+      "episode": 15,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 11509742586464107741
+    },
+    {
+      "episode": 16,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 1342503633592212378
+    },
+    {
+      "episode": 17,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 463789632171535671
+    },
+    {
+      "episode": 18,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 11198798663990003135
+    },
+    {
+      "episode": 19,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 12327547087723661522
+    },
+    {
+      "episode": 20,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 14433840592259373535
+    },
+    {
+      "episode": 21,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 18340351708049951041
+    },
+    {
+      "episode": 22,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 6634830103774918733
+    },
+    {
+      "episode": 23,
+      "family": "sawtooth",
+      "replication": 2,
+      "role": "validation",
+      "seed": 1042671839399194338
+    },
+    {
+      "episode": 0,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 11583066857378405987
+    },
+    {
+      "episode": 1,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 4724214352790348384
+    },
+    {
+      "episode": 2,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 12437320931818054350
+    },
+    {
+      "episode": 3,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 9551619441374229087
+    },
+    {
+      "episode": 4,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 1432039848309653213
+    },
+    {
+      "episode": 5,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 12787828017830519511
+    },
+    {
+      "episode": 6,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 7800405155490881266
+    },
+    {
+      "episode": 7,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 15114502150578418767
+    },
+    {
+      "episode": 8,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 14797011550255044372
+    },
+    {
+      "episode": 9,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 7979265445189622249
+    },
+    {
+      "episode": 10,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 10417715172280174384
+    },
+    {
+      "episode": 11,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 12536068185818383342
+    },
+    {
+      "episode": 12,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 7630811903086234663
+    },
+    {
+      "episode": 13,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 13078442368705579071
+    },
+    {
+      "episode": 14,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 5783257036285684764
+    },
+    {
+      "episode": 15,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 6837986191609012150
+    },
+    {
+      "episode": 16,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 12237865807936022193
+    },
+    {
+      "episode": 17,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 597636192989473182
+    },
+    {
+      "episode": 18,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 9833288210637164741
+    },
+    {
+      "episode": 19,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 8623295100835457590
+    },
+    {
+      "episode": 20,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 9331277792543977541
+    },
+    {
+      "episode": 21,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 591239330662558250
+    },
+    {
+      "episode": 22,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 10904960592850434988
+    },
+    {
+      "episode": 23,
+      "family": "square_wave",
+      "replication": 2,
+      "role": "validation",
+      "seed": 9053864515052195555
+    },
+    {
+      "episode": 0,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 2105407249385633018
+    },
+    {
+      "episode": 1,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 18015083854586278075
+    },
+    {
+      "episode": 2,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 7016701544169094982
+    },
+    {
+      "episode": 3,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 9981142179122242390
+    },
+    {
+      "episode": 4,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 2996443941844662466
+    },
+    {
+      "episode": 5,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 1376779109808442586
+    },
+    {
+      "episode": 6,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 13621156877983975133
+    },
+    {
+      "episode": 7,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 12611132838415295059
+    },
+    {
+      "episode": 8,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 5027741367781488792
+    },
+    {
+      "episode": 9,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 3751379410243256128
+    },
+    {
+      "episode": 10,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 4869370979614354217
+    },
+    {
+      "episode": 11,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 2495695021281413448
+    },
+    {
+      "episode": 12,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 8446002831318701892
+    },
+    {
+      "episode": 13,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 6183236195760468271
+    },
+    {
+      "episode": 14,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 5828799017155153251
+    },
+    {
+      "episode": 15,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 10752801534322959740
+    },
+    {
+      "episode": 16,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 6524218060841214011
+    },
+    {
+      "episode": 17,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 17730769210289057421
+    },
+    {
+      "episode": 18,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 3064925641239560966
+    },
+    {
+      "episode": 19,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 10795412576845778458
+    },
+    {
+      "episode": 20,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 1372068091371202981
+    },
+    {
+      "episode": 21,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 8884565087786342752
+    },
+    {
+      "episode": 22,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 6382746750968651067
+    },
+    {
+      "episode": 23,
+      "family": "slow_fade",
+      "replication": 2,
+      "role": "validation",
+      "seed": 8382598308026651938
+    },
+    {
+      "episode": 0,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 4360052467036873258
+    },
+    {
+      "episode": 1,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 17980211720864540330
+    },
+    {
+      "episode": 2,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 9885951721401025857
+    },
+    {
+      "episode": 3,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 9668223918339868180
+    },
+    {
+      "episode": 4,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 7885047336987422405
+    },
+    {
+      "episode": 5,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 8493684561735573268
+    },
+    {
+      "episode": 6,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 3445794943802531526
+    },
+    {
+      "episode": 7,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 2782357357478987345
+    },
+    {
+      "episode": 8,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 12461857402242884909
+    },
+    {
+      "episode": 9,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 17668637064027835743
+    },
+    {
+      "episode": 10,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 13340184436788989933
+    },
+    {
+      "episode": 11,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 9028723127532624682
+    },
+    {
+      "episode": 12,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 18415393328998172057
+    },
+    {
+      "episode": 13,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 7234881943017289653
+    },
+    {
+      "episode": 14,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 8658185575989153662
+    },
+    {
+      "episode": 15,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 16374589398641848891
+    },
+    {
+      "episode": 16,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 9879203411801412391
+    },
+    {
+      "episode": 17,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 5849263583443111928
+    },
+    {
+      "episode": 18,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 4144133915870477025
+    },
+    {
+      "episode": 19,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 15400062657428474766
+    },
+    {
+      "episode": 20,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 18139087269708589927
+    },
+    {
+      "episode": 21,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 5309690522427294500
+    },
+    {
+      "episode": 22,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 1659792330967936163
+    },
+    {
+      "episode": 23,
+      "family": "feedback_flap",
+      "replication": 2,
+      "role": "validation",
+      "seed": 1049424058136322627
+    }
+  ],
+  "native_factual_stage_conditionally_admitted": false,
+  "native_reservation_sha256": "41333df6c157b1de1726d71bafe2331f7af4ec72d24ed66f1fd1c1d8ff3dbd34",
+  "new_data_observed": false,
+  "runtime": {
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "scipy": "1.17.0"
+  },
+  "source_hashes": {
+    "configs/partial_observability_po1.json": "c6838090d905cb64a1ec3f94f93a878c3a909fb39e479a7e5d5c083bd6a1a90b",
+    "data/partial-observability-po1/draft-01-registration.json": "402ce50773c952486d1f0f2373928f1d3b7310b9ca8a6024fea80d55a3cb519a",
+    "data/partial-observability-po1/draft-01-supersession.json": "48fbdb5d97f0be9566b86992698fb760febee38caf0a3662d7124209ce9a5fee",
+    "data/partial-observability-po1/native-reservation.json": "41333df6c157b1de1726d71bafe2331f7af4ec72d24ed66f1fd1c1d8ff3dbd34",
+    "data/partial-observability-po1/prior-freeze-sha256.json": "16053ce426ce4161f9e3cf29b2ad3167938022d8453619efc1540e6775351384",
+    "docs/PARTIAL_OBSERVABILITY_PO1_PLAN.md": "cf19519a30071a1678a380c05ed19f22599fc84673bffa72ba934d70a459d64f",
+    "src/media_rl/observable_history_po1.py": "343a5a4356f2cf0e61d6a980e8d4d6678d9fc12e5feaec970271a076ba37faf6",
+    "tools/partial_observability_po1.py": "c51c77d39a5a406a560ff321ff1f3ff7bc5f7a23a7f635af030493783103c305"
+  }
+}

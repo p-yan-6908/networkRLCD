@@ -1,0 +1,95 @@
+{
+  "abi": "partial_observability_history_screen_po1_v1",
+  "anchor_commit": "d0b446770ebbdbcf0b08d200979fccfe8173eab3",
+  "seed_namespace": "networkrlcd-po1-20261015-new-independent-episodes",
+  "replications": [0, 1, 2],
+  "roles": {
+    "train": {"families": ["multi_step", "multi_ramp", "drift", "loss_episode"], "episodes_per_family": 32},
+    "calibration": {"families": ["dip", "deep_queue"], "episodes_per_family": 24},
+    "validation": {"families": ["sawtooth", "square_wave", "slow_fade", "feedback_flap"], "episodes_per_family": 24}
+  },
+  "simulation": {
+    "steps": 360,
+    "dt_ms": 100,
+    "bwe": "acked",
+    "base_ratio": 0.65,
+    "logging_ratio": 1.05,
+    "ratios": [0.65, 1.05],
+    "decision_ms": [4000, 9000, 14000, 19000, 24000, 29000],
+    "commit_ms": 3000,
+    "tail_ms": 2000,
+    "encoder_up_ms": 1500,
+    "encoder_down_ms": 100,
+    "switch_weight": 0.15
+  },
+  "representation": {
+    "channels": ["log2_bwe_over_500k", "log2_delivery_over_500k", "rtt_over_200ms", "log2_requested_over_500k", "log2_actual_over_500k"],
+    "lag_ms": [0, 1000, 2000, 3000],
+    "maximum_lag_age_ms": 150,
+    "summary_window_ms": 3000,
+    "minimum_summary_samples": 20,
+    "log_floor_bps": 1000,
+    "missing": "zero placeholder before standardization with explicit presence masks; no future interpolation",
+    "forbidden": ["trace identity as input", "capacity", "future service", "hidden queue", "future labels", "receiver quality", "native unavailable internal timing"]
+  },
+  "models": {
+    "regression_penalty": 10.0,
+    "logistic_penalty": 10.0,
+    "logistic_maxiter": 1000,
+    "probability_calibration": "one intercept per binary head, calibration split only",
+    "regression_calibration": "90% quantile of per-episode maximum absolute residual; no OOD conformal guarantee",
+    "baselines": ["persistence", "trailing_mean", "clipped_trend", "constant", "instant_linear", "summary_linear"],
+    "candidate": "summary plus ordered 1/2/3-second lag values and their masks; linear only",
+    "complexity_escalation": false
+  },
+  "targets": {
+    "factual": "mean log2 BWE over next 5 seconds under continued fixed 1.05 synthetic logging; regress its difference from current log2 BWE",
+    "factual_drop": "any future BWE at least 0.5 octave below current BWE within 5 seconds",
+    "synthetic_advantage": "mean 5-second utility(1.05 for 3s then 0.65 for 2s) minus utility(0.65 for 5s)",
+    "beneficial_margin": 0.02,
+    "synthetic_risk": "1.05 branch has unsafe fraction greater than 0.10 over 5 seconds"
+  },
+  "gates": {
+    "all_original_episodes_required": true,
+    "minimum_positive_and_negative_train_episodes_per_binary_head": 20,
+    "minimum_positive_and_negative_calibration_episodes_per_binary_head": 10,
+    "minimum_relative_mae_improvement": 0.05,
+    "paired_episode_bootstraps": 10000,
+    "one_sided_lower_quantile": 0.05,
+    "all_families_both_regressions_and_all_replication_point_signs": true,
+    "nominal_sequence_interval_coverage": 0.90,
+    "minimum_validation_sequence_coverage": 0.80,
+    "minimum_per_replication_sequence_coverage": 0.75,
+    "maximum_bwe_interval_width_octaves": 1.0,
+    "maximum_advantage_interval_width_utility": 0.50,
+    "calibration_bins": 5,
+    "maximum_ece": 0.10,
+    "brier_no_worse_than_constant_in_each_family": true,
+    "safety_claim": "advantage lower interval > 0.02 and P(beneficial) >= 0.90 and P(unsafe) <= 0.10",
+    "minimum_claimed_episodes_per_validation_family": 30,
+    "maximum_one_sided_95_wilson_upper_episode_error": 0.10,
+    "episode_error": "any claimed row with true advantage <= 0.02 OR unsafe fraction > 0.10",
+    "native_stage_requires_all_synthetic_gates": true,
+    "no_retry_refit_threshold_change_or_panel_expansion": true
+  },
+  "native_reservation": {
+    "status": "new reservation only; never use any closed telemetry",
+    "role_families": {"train": ["nordic_op1_5g_nsa_b20"], "calibration": ["rome_op2_lte"], "validation": ["irish_lte", "umu_campus_tcp_upload"]},
+    "role_content": {
+      "train": ["content_cicada_emergence_01", "content_vizanice_outdoor_01"],
+      "calibration": ["content_schmilka_firefighting_01", "content_d3_tree_layout_tutorial_01"],
+      "validation": ["content_king_penguins_2013_01", "content_shirlan_waterfall_2012_01"]
+    },
+    "profiles_per_family": 4,
+    "repeats": 2,
+    "sessions_if_admitted": 64,
+    "next_registration_required_before_capture": true,
+    "only_factual_targets": true,
+    "counterfactual_labels_or_action_value": false,
+    "receiver_qoe_opened": false
+  },
+  "storage": {"maximum_raw_bytes": 50000000, "maximum_raw_stage_fresh_bytes": 150000000},
+  "controller_fitting_or_promotion": false,
+  "native_action_experiments": false,
+  "safe_policy_study_requires_separate_registration_and_native_factual_gate": true
+}

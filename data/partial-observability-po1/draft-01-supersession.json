@@ -1,0 +1,16 @@
+{
+  "classification": "uncommitted design draft superseded before new episode generation",
+  "reason": "Analytic AckedBwe application-limitation issue: fixed0.65 \u00d7 encoder output < 1/1.5 ACK growth bound can eliminate upward excitation; use prior frozen synthetic fixed1.05 logger, retain0.65 contrast and tail",
+  "new_episodes_generated": 0,
+  "new_labels_inspected": 0,
+  "draft_root": "/home/agent/.cache/networkrlcd/partial-observability-po1-design-draft-01",
+  "draft_source_sha256": {
+    "src/media_rl/observable_history_po1.py": "5d0020528d0334aa941d73415720d925b74089c67a954fc1955209958dbf2615",
+    "tools/partial_observability_po1.py": "9ed32e36221eb0b246ca7c284b9f292df5f9e84911f52cb891fd36fd73a8beb6",
+    "configs/partial_observability_po1.json": "0c60dba48a9c89f628092dd4cd59d8f0a65966e604d3b5b7e273b5a20ad28f4e",
+    "docs/PARTIAL_OBSERVABILITY_PO1_PLAN.md": "b4a5d11f77cdcf3d1c8c640de45d4f8395b55270a32d8f069c0f6530a3cd925d",
+    "data/partial-observability-po1/registration.json": "402ce50773c952486d1f0f2373928f1d3b7310b9ca8a6024fea80d55a3cb519a",
+    "data/partial-observability-po1/native-reservation.json": "41333df6c157b1de1726d71bafe2331f7af4ec72d24ed66f1fd1c1d8ff3dbd34",
+    "data/partial-observability-po1/prior-freeze-sha256.json": "16053ce426ce4161f9e3cf29b2ad3167938022d8453619efc1540e6775351384"
+  }
+}
