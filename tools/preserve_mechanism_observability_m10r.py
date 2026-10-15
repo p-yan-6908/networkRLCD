@@ -40,14 +40,14 @@ def preserve():
         'configs/native_mechanism_observability_m10r_instrumentation.json','configs/native_mechanism_observability_m10r_development.json',
         'tools/preserve_mechanism_observability_m10r.py','tools/report_mechanism_observability_m10r.py',
         'tools/archive_native_v13_run_evidence.py','tools/archive_mechanism_observability_m10r.py','tools/finalize_mechanism_observability_m10r_storage.py',
-        'docs/NATIVE_MECHANISM_OBSERVABILITY_M10R_RESULTS.md'}
+        'docs/NATIVE_MECHANISM_OBSERVABILITY_M10R_RESULTS.md','docs/NATIVE_MECHANISM_OBSERVABILITY_M10R_QUALIFICATION.md'}
     names|={str(p.relative_to(REPO)) for p in (REPO/'reports').glob('native-mechanism-observability-m10r-*') if p.is_file()}
     names={n for n in names if (REPO/n).is_file()}
     for name in sorted(names):
         target=root/'provenance'/name;target.parent.mkdir(parents=True,exist_ok=True);assert not target.exists();shutil.copy2(REPO/name,target)
     for p in m.ROOT.glob('*.log'):shutil.copy2(p,root/p.name)
     gate=v.read(root/'mechanism_qualification_gate.json')
-    binding={'scientific_registration_commit':REGISTRATION,'last_opened_stage':stage,'gate_is_acquisition_only':True,
+    binding={'scientific_registration_commit':REGISTRATION,'instrumentation_qualification_commit':'bebd85eae29ee64446d9ce3ee9d16baa990f8110','last_opened_stage':stage,'gate_is_acquisition_only':True,
         'gate_sha256':v.sha(root/'mechanism_qualification_gate.json'),'acquisition_qualified':gate['passed'],
         'native_common_support_established':False,'old_closed_panels':m.old_closed(),
         'source_files':{n:v.sha(root/'provenance'/n) for n in sorted(names)},
