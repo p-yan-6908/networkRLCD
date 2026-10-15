@@ -31,8 +31,8 @@ def preserve():
     for name in ('postprocessing.log','postprocessing-worker.json','analysis-complete.json'):
         shutil.copy2(m.ROOT/name,root/name)
     inherited=m.v.read(root/'inherited_gate_audit.json')
-    bindings={'scientific_registration_commit':'M9R_REGISTRATION_PENDING',
-        'inherited_gate_compatibility_commit':'M9R_REGISTRATION_PENDING',
+    bindings={'scientific_registration_commit':'df23517803303e323ae6fee5068967b02bb4b52b',
+        'inherited_gate_compatibility_commit':'df23517803303e323ae6fee5068967b02bb4b52b',
         'acquisition_only_gate_sha256':m.v.sha(root/'mechanism_qualification_gate.json'),
         'phase_state_summary_sha256':m.v.sha(root/'phase_state_summary.json'),'phase_state_records_sha256':m.v.sha(root/'phase_state_records.json'),
         'instrumentation_gate_sha256':m.v.sha(root/'instrumentation_evidence/mechanism_qualification_gate.json'),
