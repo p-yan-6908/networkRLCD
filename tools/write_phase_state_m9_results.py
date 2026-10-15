@@ -10,8 +10,11 @@ def write():
     m=importlib.util.module_from_spec(s);s.loader.exec_module(m);m.verify()
     summary=m.v.read(REPO/'reports/native-phase-state-m9-summary.json');report=m.v.read(REPO/'reports/native-phase-state-m9-reporting.json')
     gate=m.v.read(REPO/'reports/native-phase-state-m9-validation-gate.json');assert gate['passed'] and summary['technical_qualified']
-    cells=report['cells'];qualified=summary['P2_qualified'];methods=summary['methods'];res=summary['residuals']
-    decision={'abi':'native_phase_state_m9_next_decision_v1','P2_qualified':qualified,'compact_state_search_closed_on_M9':True,
+    spec=importlib.util.spec_from_file_location('m9_inherited_gate_veto',REPO/'tools/audit_phase_state_m9_inherited_gates.py')
+    legacy=importlib.util.module_from_spec(spec);spec.loader.exec_module(legacy);inherited=legacy.audit()
+    cells=report['cells'];qualified=inherited['qualified_for_next_common_state_validation'];methods=summary['methods'];res=summary['residuals']
+    decision={'abi':'native_phase_state_m9_next_decision_v1','P2_qualified':qualified,'registered_P2_qualified':summary['P2_qualified'],
+        'inherited_gates_passed':inherited['inherited_gates_passed'],'compact_state_search_closed_on_M9':True,
         'M5_causal_history_result_preserved':True,'M8_dynamic_asymmetry_preserved':True,
         'conditioning_duration_derived':False,'old_successor_allocations_opened':False,'actions_or_controller':False,
         'residuals_quantified_before_additional_features':True,
@@ -45,9 +48,10 @@ def write():
         '## Frozen state predictions','',
         'B0 tags an eligible instantaneous BWE. D1 is the unchanged M8 past3s/caliper/drift rule. The single new P2 rule additionally requires a bounded eligible6s trajectory, small3s-versus-previous3s contrast, known service history, and acknowledged response phase beyond the M8 direction-specific t90 envelope (rise16s/fall2s). Features use only past native samples and input acknowledgements. Queue, RTT, delivered throughput, encoder and outcome variables do not enter the state.',
         'For each original the first causal tag on the frozen6..55s grid is binding. Future truth requires the same +/-0.125-octave causal-center caliper and <=0.05 adjacent-second drift through common age63.8s, with >=8s verification. Later grid counts are nested diagnostic measurements and cannot rescue a failed first prediction.','',
-        '| Method | Originals tagged /64 | First predictions future-verified | All state gates |','|---|---:|---:|---|']
+        '| Method | Originals tagged /64 | First predictions future-verified | Registered M9 state gates |','|---|---:|---:|---|']
     for key,value in methods.items():lines.append(f"|{key}|{value['first_tags']}|{value['future_verified']}|{'pass' if value['passed'] else 'fail'}|")
-    lines+=['','Every method retains the original four-member/history, fixed target caliper, range>=1 octave, sample SD>=0.35, overlap>=0.5, repeat spread/W-infinity<=0.25, census agreement and elapsed gates. Empirical future distributions use all native samples, exact inverse-CDF W-infinity and equal weight per original. No failed/untagged original is removed from the qualification denominator.','',
+    lines+=['','Every method retains the original four-member/history, fixed target caliper, range>=1 octave, sample SD>=0.35, overlap>=0.5, repeat spread/W-infinity<=0.25, census agreement and elapsed gates. Empirical future distributions use all native samples, exact inverse-CDF W-infinity and equal weight per original. No failed/untagged original is removed from the qualification denominator.',
+        f"The separately frozen [inherited-gate veto](NATIVE_PHASE_STATE_M9_INHERITED_GATES.md) also enforces the exact old fixed-target three-second H1 history and6s/12s measured-probe repeatability requirements. It {'passed' if inherited['inherited_gates_passed'] else 'failed'} and cannot rescue a failed M9 prediction. Registered M9 results are unchanged; future-validation qualification requires both decisions.",'',
         '## Later settling and remaining history dependence','',
         'The following onset counts use the frozen D1 rule plus future labels over6..55s; they are descriptive onset estimates, not online state predictions. No verified onset is right-censored after55s, not evidence of permanent nonsettling. At age55s, future labels cover the next8s under identical common service. Each residual is descending minus ascending in subsequent BWE change from its causal current value.','',
         '| Content | Service Mbps | D1 verified onset /8 | P2 first tags / true | Age55 compact pairs /4 | Paired residual range (octaves) | Future W-infinity range |',

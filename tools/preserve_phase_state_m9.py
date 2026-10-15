@@ -14,6 +14,8 @@ def preserve():
     names=set(m.inventory())|{str(m.CONFIG.relative_to(REPO)),'configs/native_phase_state_m9_instrumentation.json',
         'configs/native_phase_state_m9_validation.json','tools/report_phase_state_m9.py','tools/audit_phase_state_m9.py',
         'tools/preserve_phase_state_m9.py','tools/write_phase_state_m9_results.py','tools/finalize_phase_state_m9_storage.py',
+        'tools/audit_phase_state_m9_inherited_gates.py','docs/NATIVE_PHASE_STATE_M9_INHERITED_GATES.md',
+        'reports/native-phase-state-m9-inherited-gates.json',
         'reports/native-phase-state-m9-summary.json','reports/native-phase-state-m9-reporting.json',
         'reports/native-phase-state-m9-trajectories.png','reports/native-phase-state-m9-residuals.png',
         'reports/native-phase-state-m9-preservation-audit.json','reports/native-phase-state-m9-next-decision.json',
@@ -28,11 +30,13 @@ def preserve():
         for suffix in ('capture.log','worker.json'):shutil.copy2(m.ROOT/(stage+'-'+suffix),root/(stage+'-'+suffix))
     for name in ('postprocessing.log','postprocessing-worker.json','analysis-complete.json'):
         shutil.copy2(m.ROOT/name,root/name)
+    inherited=m.v.read(root/'inherited_gate_audit.json')
     bindings={'scientific_registration_commit':'96ada5a290b3807629bf28bf5d74183aff35a9c3',
         'acquisition_only_gate_sha256':m.v.sha(root/'mechanism_qualification_gate.json'),
         'phase_state_summary_sha256':m.v.sha(root/'phase_state_summary.json'),'phase_state_records_sha256':m.v.sha(root/'phase_state_records.json'),
         'instrumentation_gate_sha256':m.v.sha(root/'instrumentation_evidence/mechanism_qualification_gate.json'),
-        'P2_qualified':summary['P2_qualified'],'native_common_support_established':summary['P2_qualified'],
+        'registered_P2_qualified':summary['P2_qualified'],'inherited_gate_audit_sha256':m.v.sha(root/'inherited_gate_audit.json'),
+        'P2_qualified':inherited['qualified_for_next_common_state_validation'],'native_common_support_established':inherited['qualified_for_next_common_state_validation'],
         'old_closed_panels':m.old_closed(),'actions_or_controller':False,'outcomes_read':False,
         'source_files':{name:m.v.sha(root/'provenance'/name) for name in sorted(names)},'raw_or_licensed_files_deleted':0}
     m.v.write(root/'archive_bindings.json',bindings)
