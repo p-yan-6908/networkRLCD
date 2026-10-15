@@ -31,7 +31,7 @@ def write():
         'Two instrumentation originals and **64/64 validation originals** qualified before state interpretation. No bitrate actions, delivery/QoE analysis or controller fitting occurred.','',
         '## Decision','',
         ('**P2 met every registered state gate.** It supplies a candidate for a new untouched transfer validation, not permission to open either old allocation or fit a controller.' if qualified else
-         '**P2 did not establish prospective native common support and future stability.** The fixed rule is closed on these validation captures; no alternative state, caliper, count, duration or favorable landmark is substituted.'),
+         '**P2 did not qualify for the next common-state validation.** The fixed rule is closed on these validation captures; no alternative state, caliper, count, duration or favorable landmark is substituted.'),
         'M5 remains causal evidence of finite-horizon history effects. M8 remains evidence of asymmetric native dynamics. This result does not establish that history is irrelevant or that no compact representation can ever work.','',
         '## Observation design and horizon','',
         'The longer common-service plateau was prospectively frozen at **64 seconds**, four times the maximum M8 common-rise t90 upper bound rounded up to 16s. This is an observation budget, not a new fixed conditioning duration. No capture-dependent extension was made.',

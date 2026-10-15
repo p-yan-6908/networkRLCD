@@ -32,6 +32,7 @@ def preserve():
         shutil.copy2(m.ROOT/name,root/name)
     inherited=m.v.read(root/'inherited_gate_audit.json')
     bindings={'scientific_registration_commit':'96ada5a290b3807629bf28bf5d74183aff35a9c3',
+        'inherited_gate_compatibility_commit':'b979441da2a634b226021910636f5bfb57f4a91d',
         'acquisition_only_gate_sha256':m.v.sha(root/'mechanism_qualification_gate.json'),
         'phase_state_summary_sha256':m.v.sha(root/'phase_state_summary.json'),'phase_state_records_sha256':m.v.sha(root/'phase_state_records.json'),
         'instrumentation_gate_sha256':m.v.sha(root/'instrumentation_evidence/mechanism_qualification_gate.json'),
