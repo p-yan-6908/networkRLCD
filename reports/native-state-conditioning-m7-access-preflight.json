@@ -1,0 +1,24 @@
+{
+  "hf_token_available": true,
+  "m6r_validation_telemetry_read": false,
+  "pinned_m6r_archive_inventory": {
+    "files": 1858,
+    "metadata_only": true,
+    "revision": "38d09402609e023b2a124196b3ffcec4c8752c00",
+    "sha256_verified": true
+  },
+  "requests": [
+    {
+      "authenticated": false,
+      "hostname": "huggingface.co",
+      "status": 200
+    },
+    {
+      "authenticated": true,
+      "hostname": "huggingface.co",
+      "private": true,
+      "revision": "38d09402609e023b2a124196b3ffcec4c8752c00",
+      "status": 200
+    }
+  ]
+}
