@@ -1,0 +1,54 @@
+{
+  "abi": "native_phase_state_m9_instrumentation_failure_v1",
+  "failed_originals": [
+    {
+      "cleanup": true,
+      "clock_beginning": true,
+      "clock_full": true,
+      "content": "content_volga_lock_01",
+      "failed_gaps": [
+        {
+          "from_phase_ms": 86879.70000001788,
+          "gap_ms": 301.19999998807907,
+          "to_phase_ms": 87180.90000000596
+        }
+      ],
+      "input_x": 0.0,
+      "invalid_samples": [],
+      "maximum_gap_ms": 301.19999998807907,
+      "observer_samples": 856,
+      "prefix": "ascending_prefix",
+      "readback": true,
+      "startup": true,
+      "transport": true,
+      "trial": "m9-phase-v-020-support"
+    },
+    {
+      "cleanup": true,
+      "clock_beginning": true,
+      "clock_full": true,
+      "content": "content_kampar_boating_01",
+      "failed_gaps": [
+        {
+          "from_phase_ms": 55143.40000000596,
+          "gap_ms": 296.7999999821186,
+          "to_phase_ms": 55440.19999998808
+        }
+      ],
+      "input_x": 0.0,
+      "invalid_samples": [],
+      "maximum_gap_ms": 296.7999999821186,
+      "observer_samples": 858,
+      "prefix": "descending_prefix",
+      "readback": true,
+      "startup": true,
+      "transport": true,
+      "trial": "m9-phase-v-026-support"
+    }
+  ],
+  "failed_sessions_not_replaced": true,
+  "future_state_analysis_started": false,
+  "planned": 64,
+  "registered_gate_not_relaxed": true,
+  "technical_qualified": 62
+}

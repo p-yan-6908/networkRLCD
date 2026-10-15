@@ -1,0 +1,27 @@
+{
+  "abi": "native_phase_state_m9_scientific_stop_v1",
+  "bitrate_actions_or_controller_fitting": false,
+  "classification": "instrumentation-limited; not evidence for or against phase-aware state sufficiency",
+  "closed_panels": {
+    "m8_allocation_sha256": "6b25569c97dd4116577360e652f2163819ed1c64f972ff9c65e6e9cd17b2df9a",
+    "m8_schedule_uninstantiated": true,
+    "old_validation_session_directories": {
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7r/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7ra/validation": false
+    }
+  },
+  "diagnostic_sha256": "d72e5b55d42a2d5ba197421ae5504df21754a030ff702b25c0c3a6c7b52ef345",
+  "failed_originals_replaced": false,
+  "fixed_gates_relaxed": false,
+  "future_state_predictions_or_residuals_evaluated": false,
+  "gate_sha256": "6713b5379492b41b620ad1ca867b44f38f7fcd17d43d2aa2c349e7d8ffe3616f",
+  "next_step": "Prospectively qualify denser actual observation timing, then use a fresh phase-state panel; preserve all time-domain gates and state rules",
+  "old_successor_allocations_opened": false,
+  "planned_originals": 64,
+  "protocol_sha256": "b2b48e132943435f867d5ecb675f0894bc47920480e41230a59e65496c41c07e",
+  "sealed_originals": 64,
+  "state_comparison_estimable": false,
+  "technical_gate_passed": false,
+  "technically_qualified_originals": 62
+}

@@ -1,0 +1,43 @@
+{
+  "abi": "native_bwe_support_mechanism_archive_receipt_v1",
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_helper_sha256": "a6e2a7f9206df0badc31730c2264970d29ac60e840882557210d8ea1776a2913",
+  "base_gate_sha256": "6713b5379492b41b620ad1ca867b44f38f7fcd17d43d2aa2c349e7d8ffe3616f",
+  "capture_index_sha256": "9dde11efdb10462b20c2b7dd7bff7ce9c02b07a1d89179106aa59c2dc4c06898",
+  "files_deleted": 0,
+  "files_verified": 3905,
+  "gate_sha256": "6713b5379492b41b620ad1ca867b44f38f7fcd17d43d2aa2c349e7d8ffe3616f",
+  "local_raw_evidence_retained": true,
+  "native_common_support_established": false,
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "4653918f4dc7d728fb27e1cb1d1f0a25554a07d5a8ae1de42c2c86b5ad605418",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "429b353cee409f00ea5a5c45c604921e02586b502c565b29f3f7f1bf7131950f",
+      "size": 673933
+    },
+    "results.tar.part-000": {
+      "sha256": "fd8f770b2582c83fac22d869921a60de93cfdfed742a2fd88e28f2e3f041bb62",
+      "size": 692111360
+    }
+  },
+  "prefix": "native-phase-state-m9-20261015-01",
+  "private": true,
+  "protocol_sha256": "b2b48e132943435f867d5ecb675f0894bc47920480e41230a59e65496c41c07e",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-phase-state-m9/validation",
+  "registered_gate_passed": false,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "result_classification": "instrumentation-limited; phase-state comparison unestimable",
+  "revision": "995876800a5b59e867a35a91fb070fe6a75a34ea",
+  "scientific_registration_commit": "96ada5a290b3807629bf28bf5d74183aff35a9c3",
+  "scientific_stop_sha256": "dadfd6285098f33f14d487e1b53b3d2cdb10e9952bb3c3e6ee9781a11379832d",
+  "stage": "validation",
+  "state_outcomes_evaluated": false
+}

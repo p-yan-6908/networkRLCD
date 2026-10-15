@@ -1,0 +1,22 @@
+{
+  "abi": "native_phase_state_m9_failed_instrumentation_archive_v1",
+  "closed_panels": {
+    "m8_allocation_sha256": "6b25569c97dd4116577360e652f2163819ed1c64f972ff9c65e6e9cd17b2df9a",
+    "m8_schedule_uninstantiated": true,
+    "old_validation_session_directories": {
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7r/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7ra/validation": false
+    }
+  },
+  "evidence_deleted": 0,
+  "future_state_analysis_started": false,
+  "incremental_external_budget_bytes": 3000000000,
+  "members_verified": 3905,
+  "planned_originals": 64,
+  "raw_stage_and_one_fresh_copy_bytes": 2090642454,
+  "revision": "995876800a5b59e867a35a91fb070fe6a75a34ea",
+  "scientific_stop_sha256": "dadfd6285098f33f14d487e1b53b3d2cdb10e9952bb3c3e6ee9781a11379832d",
+  "state_comparison_estimable": false,
+  "technical_qualified_originals": 62
+}
