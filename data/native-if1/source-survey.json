@@ -1,0 +1,636 @@
+{
+  "abi": "native_instrumented_fixture_if1_static_inventory_v1",
+  "chromium_commit": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+  "clang_package": "llvmorg-24-init-3796-g20e97c4b-27",
+  "closed_telemetry_decoded": false,
+  "depot_tools_commit": "382c208a9973e1a6c0867b6d8664dc6dc9116e30",
+  "files": {
+    "chromium__DEPS": {
+      "sha256": "cd59c0f5c31e1dbbc65b2db96bb11a18f7bdc91496fafb5b6a4e7f94d8ad797c",
+      "size": 197649
+    },
+    "chromium__LICENSE": {
+      "sha256": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b",
+      "size": 1536
+    },
+    "chromium__docs__linux__build_instructions.md": {
+      "sha256": "8e786ab78b5fdc0197864a91c37366830db626757cd617838ca10f6a539324fe",
+      "size": 35297
+    },
+    "chromium__third_party__blink__renderer__modules__peerconnection__rtc_peer_connection.cc": {
+      "sha256": "38e70adeb8f153ca95cec2fb697abbc478d21de02e929874afe57b2b29febd3d",
+      "size": 128699
+    },
+    "chromium__third_party__blink__renderer__modules__peerconnection__rtc_peer_connection.h": {
+      "sha256": "b0f272cb64c938e115194d96988ec763349f04cc9f78a06f4eca616b6e53e623",
+      "size": 27186
+    },
+    "chromium__third_party__blink__renderer__modules__peerconnection__rtc_peer_connection.idl": {
+      "sha256": "3a5ab7e3e235cae1cc8a1a9b1a3bcb08504e3474d38d315874e640914e46ae3d",
+      "size": 8430
+    },
+    "chromium__third_party__blink__renderer__modules__peerconnection__rtc_peer_connection_handler.cc": {
+      "sha256": "efe4e0a28684078972fa75a63e0f7733be533608784495cebee1cc524223084c",
+      "size": 91710
+    },
+    "chromium__third_party__blink__renderer__modules__peerconnection__rtc_peer_connection_handler.h": {
+      "sha256": "fb4f78ea48471bfea54bce3118b66279a46beb7e6602d02fc683c64f8fee02a2",
+      "size": 20072
+    },
+    "chromium__third_party__blink__renderer__modules__peerconnection__rtc_rtp_sender.cc": {
+      "sha256": "103277a4e8128db3614068516758c1484125a9d5684e8d0016db2ebaa8974065",
+      "size": 50365
+    },
+    "chromium__tools__clang__scripts__update.py": {
+      "sha256": "65e72af541dc1f789e2ff416c1cf4ddd6a5f3cb01b3059a811e969b394f03266",
+      "size": 14960
+    },
+    "clock_reference__extra__base__time__time_now_posix.cc": {
+      "sha256": "ad8a692b7c94b84c6a8e516b61074485a3414fa419401630ad73b58d13f1ebf7",
+      "size": 4340
+    },
+    "clock_reference__extra__rtc_base__system_time.cc": {
+      "sha256": "02c630b36ad5fbbe4e6c1643965d6d39468aa28199997e4adeb917da0e2329e3",
+      "size": 3366
+    },
+    "clock_reference__final__third_party__blink__renderer__core__inspector__inspector_performance_agent.cc": {
+      "sha256": "0eee80a8c94d9bd303ddefe49fb419b2e07665df371273bbe451a399b5159262",
+      "size": 14962
+    },
+    "clock_reference__webrtc__system_wrappers__source__clock.cc": {
+      "sha256": "9baf2b4749b7a4a384b8d9c038821ef24a9cb5029c2a7a5d9910ae934367971e",
+      "size": 3524
+    },
+    "depot-tools-pin.txt": {
+      "sha256": "2fc7cea183f7117377226f6ea31f878466599e9516bda0bd3747017776c8c69d",
+      "size": 2102
+    },
+    "docker-resource-metadata.json": {
+      "sha256": "1d8b66e030459c6514ca2efa323d8db898b302e982f07575eb959df7d1684f7b",
+      "size": 252
+    },
+    "remote-build-metadata.json": {
+      "sha256": "641d4f3e7f16c468ab63379196b4c82651ae660e102b4b41945ebb2983a47f9d",
+      "size": 734
+    },
+    "source-survey.json": {
+      "sha256": "081d4600e7e67c9662485b51181f0859142cd73b255d0102e323466412c50edc",
+      "size": 19536
+    },
+    "standalone-webrtc-development.txt": {
+      "sha256": "4aad7eefe232606f2fd47af2ba423d229f5fa26fe46af530f26bf5db67325de5",
+      "size": 30042
+    },
+    "webrtc__DEPS": {
+      "sha256": "f509de5a0182990668d7d62d8a0da59568c1e46b6ee7ccbfdd1a0785dce0c022",
+      "size": 53615
+    },
+    "webrtc__LICENSE": {
+      "sha256": "ab00a482b6a3902e40211b43c5d0441962ea99b6cc7c25c0f243fa270b78d482",
+      "size": 1511
+    },
+    "webrtc__README.md": {
+      "sha256": "f48373cd9e18363129403076d86e581d57222ed048d2e039ab6848c4f49b734f",
+      "size": 1277
+    },
+    "webrtc__api__environment__environment.h": {
+      "sha256": "04b899b69420ce49ecf5369df6bfd6e4d7462fc8939767d9e7b5c06e517d0f83",
+      "size": 5335
+    },
+    "webrtc__api__peer_connection_interface.h": {
+      "sha256": "bb8299e7f14c7c47dcc59b9ae0981e993ca900a8a1924302419109fad9374dce",
+      "size": 76568
+    },
+    "webrtc__api__rtc_event_log__rtc_event_log.h": {
+      "sha256": "bb803a7d0ba8124aa579bf2cb8ab1becd969207de1e68b696beedef03b6c223a",
+      "size": 2413
+    },
+    "webrtc__call__call.h": {
+      "sha256": "23520c4abc2c0e4c57a4e77e0a7c5dad97326a06da180c4a7d9f048a28ed3fcb",
+      "size": 6507
+    },
+    "webrtc__call__rtp_transport_controller_send.cc": {
+      "sha256": "27a90f365b08f9d6e37543a5b2d672d33fe6711de21439868f3b46cb0e480287",
+      "size": 34255
+    },
+    "webrtc__call__rtp_transport_controller_send.h": {
+      "sha256": "dc1f7eb8b9a3c975308f8eaf078bbd398b4b6c716f1dd196881022373584bcff",
+      "size": 10899
+    },
+    "webrtc__modules__congestion_controller__goog_cc__delay_based_bwe.cc": {
+      "sha256": "d2ad71e74c7f89fb8a88093c492d1d1db46a92f24138f129f8e6d32147eca0e1",
+      "size": 12144
+    },
+    "webrtc__modules__congestion_controller__goog_cc__loss_based_bwe_v2.cc": {
+      "sha256": "fd2ae1ace78c6792c64a88b0b4c9c6a32099694f6fe2cc2849b21b376924e6a3",
+      "size": 51108
+    },
+    "webrtc__modules__congestion_controller__goog_cc__probe_bitrate_estimator.cc": {
+      "sha256": "1fd1f16cd51dbaff92b7cecfaba17f4845886c7b189f2286cd7a1d466de89b93",
+      "size": 8527
+    },
+    "webrtc__modules__congestion_controller__goog_cc__probe_controller.cc": {
+      "sha256": "4ace95a37f1956d4965ef83a55365e23f711d024760a5f95b53b74e5123b370c",
+      "size": 25295
+    },
+    "webrtc__modules__congestion_controller__goog_cc__send_side_bandwidth_estimation.cc": {
+      "sha256": "889e313722c6263107e9765179a80b78945a96da4e4ac670fc78a6a832974c10",
+      "size": 24791
+    },
+    "webrtc__modules__pacing__bitrate_prober.cc": {
+      "sha256": "fa166f5668d1e71da9fc17d5abb278e07174c79396326e047a0edc71000f7142",
+      "size": 7448
+    },
+    "webrtc__modules__pacing__bitrate_prober.h": {
+      "sha256": "0bd8ce7c8d1d832494b9c6e095a8a16771e7a15c1796f613b8a5600e63f0e6c6",
+      "size": 4887
+    },
+    "webrtc__modules__pacing__pacing_controller.cc": {
+      "sha256": "6a6a936390a8a7a567772ff19c5b4bb6d52b34b6acfe86d02ea82221d09fb9c8",
+      "size": 27214
+    },
+    "webrtc__modules__pacing__pacing_controller.h": {
+      "sha256": "80c1c724dcc5f09d547d4dc2fd14df59ae844c6b4cc51c6cf4e1d83af33468a3",
+      "size": 11385
+    },
+    "webrtc__modules__pacing__task_queue_paced_sender.cc": {
+      "sha256": "1d50ecfc23093e6fa17c6ff45bd2504b863a679f5101dc85956c4603cb17fc0f",
+      "size": 11242
+    },
+    "webrtc__modules__pacing__task_queue_paced_sender.h": {
+      "sha256": "6761382aefe3bd6b17024aa941267a175f6b9baa5d4f53d0a1af8021d185e67a",
+      "size": 7602
+    },
+    "webrtc__modules__rtp_rtcp__source__rtcp_receiver.cc": {
+      "sha256": "5f06224ad552f40807a77a6530816e2ba317177678841929eabb4b3f9fbbe082",
+      "size": 37365
+    },
+    "webrtc__modules__rtp_rtcp__source__rtp_rtcp_impl2.cc": {
+      "sha256": "2e119abca3015d568a4ab7868ce35e02651597bea3f2883394d9f99da3513f0a",
+      "size": 30273
+    },
+    "webrtc__pc__jsep_transport_controller.h": {
+      "sha256": "b01270a7a46f0d6cf8790f356fd23a0838480436ea6e112b6ad907ba2bb88b98",
+      "size": 21481
+    },
+    "webrtc__pc__peer_connection.cc": {
+      "sha256": "d044c47068be6019a91145bda28f66e0f64dc59baa76b1b236d93c893b1678ca",
+      "size": 121021
+    },
+    "webrtc__pc__peer_connection.h": {
+      "sha256": "469fa43b112f35a65562e8fdf488bfd5301b710c7854f812f2372d58311560df",
+      "size": 33938
+    },
+    "webrtc__pc__peer_connection_factory.cc": {
+      "sha256": "e3d552e8beb0660c64989e4400426300e1b32af3c757f0ac69e53192e50de64e",
+      "size": 16268
+    },
+    "webrtc__pc__srtp_transport.cc": {
+      "sha256": "180da0ccec08c2bbf08e944a2170f91b23994e939166e23c67827009d920fbbe",
+      "size": 13780
+    }
+  },
+  "native_contexts_created": 0,
+  "reused_static_references": [
+    {
+      "file": "clock_reference__extra__rtc_base__system_time.cc",
+      "original_file": "extra__rtc_base__system_time.cc",
+      "prior_static_manifest": "data/native-m11r/source-survey.json",
+      "role": "source clock semantics only; no telemetry",
+      "sha256": "02c630b36ad5fbbe4e6c1643965d6d39468aa28199997e4adeb917da0e2329e3"
+    },
+    {
+      "file": "clock_reference__extra__base__time__time_now_posix.cc",
+      "original_file": "extra__base__time__time_now_posix.cc",
+      "prior_static_manifest": "data/native-m11r/source-survey.json",
+      "role": "source clock semantics only; no telemetry",
+      "sha256": "ad8a692b7c94b84c6a8e516b61074485a3414fa419401630ad73b58d13f1ebf7"
+    },
+    {
+      "file": "clock_reference__webrtc__system_wrappers__source__clock.cc",
+      "original_file": "webrtc__system_wrappers__source__clock.cc",
+      "prior_static_manifest": "data/native-m11r/source-survey.json",
+      "role": "source clock semantics only; no telemetry",
+      "sha256": "9baf2b4749b7a4a384b8d9c038821ef24a9cb5029c2a7a5d9910ae934367971e"
+    },
+    {
+      "file": "clock_reference__final__third_party__blink__renderer__core__inspector__inspector_performance_agent.cc",
+      "original_file": "final__third_party__blink__renderer__core__inspector__inspector_performance_agent.cc",
+      "prior_static_manifest": "data/native-m11r/source-survey.json",
+      "role": "source clock semantics only; no telemetry",
+      "sha256": "0eee80a8c94d9bd303ddefe49fb419b2e07665df371273bbe451a399b5159262"
+    }
+  ],
+  "source_survey": [
+    {
+      "file": "chromium__docs__linux__build_instructions.md",
+      "path": "docs/linux/build_instructions.md",
+      "project": "chromium",
+      "revision": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+      "sha256": "8e786ab78b5fdc0197864a91c37366830db626757cd617838ca10f6a539324fe",
+      "size": 35297,
+      "status": 200,
+      "url": "https://chromium.googlesource.com/chromium/src/+/73c14f6228d7cd537c855007e8f88678969cc0eb/docs/linux/build_instructions.md?format=TEXT"
+    },
+    {
+      "file": "chromium__third_party__blink__renderer__modules__peerconnection__rtc_peer_connection.h",
+      "path": "third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.h",
+      "project": "chromium",
+      "revision": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+      "sha256": "b0f272cb64c938e115194d96988ec763349f04cc9f78a06f4eca616b6e53e623",
+      "size": 27186,
+      "status": 200,
+      "url": "https://chromium.googlesource.com/chromium/src/+/73c14f6228d7cd537c855007e8f88678969cc0eb/third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.h?format=TEXT"
+    },
+    {
+      "file": "chromium__third_party__blink__renderer__modules__peerconnection__rtc_peer_connection.cc",
+      "path": "third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.cc",
+      "project": "chromium",
+      "revision": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+      "sha256": "38e70adeb8f153ca95cec2fb697abbc478d21de02e929874afe57b2b29febd3d",
+      "size": 128699,
+      "status": 200,
+      "url": "https://chromium.googlesource.com/chromium/src/+/73c14f6228d7cd537c855007e8f88678969cc0eb/third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.cc?format=TEXT"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "path": "third_party/blink/public/platform/webrtc/rtc_peer_connection_handler_platform.h",
+      "project": "chromium",
+      "revision": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+      "url": "https://chromium.googlesource.com/chromium/src/+/73c14f6228d7cd537c855007e8f88678969cc0eb/third_party/blink/public/platform/webrtc/rtc_peer_connection_handler_platform.h?format=TEXT"
+    },
+    {
+      "file": "chromium__third_party__blink__renderer__modules__peerconnection__rtc_rtp_sender.cc",
+      "path": "third_party/blink/renderer/modules/peerconnection/rtc_rtp_sender.cc",
+      "project": "chromium",
+      "revision": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+      "sha256": "103277a4e8128db3614068516758c1484125a9d5684e8d0016db2ebaa8974065",
+      "size": 50365,
+      "status": 200,
+      "url": "https://chromium.googlesource.com/chromium/src/+/73c14f6228d7cd537c855007e8f88678969cc0eb/third_party/blink/renderer/modules/peerconnection/rtc_rtp_sender.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__README.md",
+      "path": "README.md",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "f48373cd9e18363129403076d86e581d57222ed048d2e039ab6848c4f49b734f",
+      "size": 1277,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/README.md?format=TEXT"
+    },
+    {
+      "file": "webrtc__DEPS",
+      "path": "DEPS",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "f509de5a0182990668d7d62d8a0da59568c1e46b6ee7ccbfdd1a0785dce0c022",
+      "size": 53615,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/DEPS?format=TEXT"
+    },
+    {
+      "file": "webrtc__api__peer_connection_interface.h",
+      "path": "api/peer_connection_interface.h",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "bb8299e7f14c7c47dcc59b9ae0981e993ca900a8a1924302419109fad9374dce",
+      "size": 76568,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/api/peer_connection_interface.h?format=TEXT"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "path": "api/peer_connection_factory_interface.h",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/api/peer_connection_factory_interface.h?format=TEXT"
+    },
+    {
+      "file": "webrtc__pc__peer_connection.h",
+      "path": "pc/peer_connection.h",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "469fa43b112f35a65562e8fdf488bfd5301b710c7854f812f2372d58311560df",
+      "size": 33938,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/pc/peer_connection.h?format=TEXT"
+    },
+    {
+      "file": "webrtc__pc__peer_connection.cc",
+      "path": "pc/peer_connection.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "d044c47068be6019a91145bda28f66e0f64dc59baa76b1b236d93c893b1678ca",
+      "size": 121021,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/pc/peer_connection.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__pc__jsep_transport_controller.h",
+      "path": "pc/jsep_transport_controller.h",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "b01270a7a46f0d6cf8790f356fd23a0838480436ea6e112b6ad907ba2bb88b98",
+      "size": 21481,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/pc/jsep_transport_controller.h?format=TEXT"
+    },
+    {
+      "file": "webrtc__pc__srtp_transport.cc",
+      "path": "pc/srtp_transport.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "180da0ccec08c2bbf08e944a2170f91b23994e939166e23c67827009d920fbbe",
+      "size": 13780,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/pc/srtp_transport.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__call__call.h",
+      "path": "call/call.h",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "23520c4abc2c0e4c57a4e77e0a7c5dad97326a06da180c4a7d9f048a28ed3fcb",
+      "size": 6507,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/call/call.h?format=TEXT"
+    },
+    {
+      "file": "webrtc__call__rtp_transport_controller_send.h",
+      "path": "call/rtp_transport_controller_send.h",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "dc1f7eb8b9a3c975308f8eaf078bbd398b4b6c716f1dd196881022373584bcff",
+      "size": 10899,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/call/rtp_transport_controller_send.h?format=TEXT"
+    },
+    {
+      "file": "webrtc__call__rtp_transport_controller_send.cc",
+      "path": "call/rtp_transport_controller_send.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "27a90f365b08f9d6e37543a5b2d672d33fe6711de21439868f3b46cb0e480287",
+      "size": 34255,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/call/rtp_transport_controller_send.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__modules__rtp_rtcp__source__rtcp_receiver.cc",
+      "path": "modules/rtp_rtcp/source/rtcp_receiver.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "5f06224ad552f40807a77a6530816e2ba317177678841929eabb4b3f9fbbe082",
+      "size": 37365,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/rtp_rtcp/source/rtcp_receiver.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__modules__rtp_rtcp__source__rtp_rtcp_impl2.cc",
+      "path": "modules/rtp_rtcp/source/rtp_rtcp_impl2.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "2e119abca3015d568a4ab7868ce35e02651597bea3f2883394d9f99da3513f0a",
+      "size": 30273,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/rtp_rtcp/source/rtp_rtcp_impl2.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__modules__congestion_controller__goog_cc__delay_based_bwe.cc",
+      "path": "modules/congestion_controller/goog_cc/delay_based_bwe.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "d2ad71e74c7f89fb8a88093c492d1d1db46a92f24138f129f8e6d32147eca0e1",
+      "size": 12144,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/congestion_controller/goog_cc/delay_based_bwe.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__modules__congestion_controller__goog_cc__send_side_bandwidth_estimation.cc",
+      "path": "modules/congestion_controller/goog_cc/send_side_bandwidth_estimation.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "889e313722c6263107e9765179a80b78945a96da4e4ac670fc78a6a832974c10",
+      "size": 24791,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/congestion_controller/goog_cc/send_side_bandwidth_estimation.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__modules__congestion_controller__goog_cc__loss_based_bwe_v2.cc",
+      "path": "modules/congestion_controller/goog_cc/loss_based_bwe_v2.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "fd2ae1ace78c6792c64a88b0b4c9c6a32099694f6fe2cc2849b21b376924e6a3",
+      "size": 51108,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/congestion_controller/goog_cc/loss_based_bwe_v2.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__modules__congestion_controller__goog_cc__probe_controller.cc",
+      "path": "modules/congestion_controller/goog_cc/probe_controller.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "4ace95a37f1956d4965ef83a55365e23f711d024760a5f95b53b74e5123b370c",
+      "size": 25295,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/congestion_controller/goog_cc/probe_controller.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__modules__congestion_controller__goog_cc__probe_bitrate_estimator.cc",
+      "path": "modules/congestion_controller/goog_cc/probe_bitrate_estimator.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "1fd1f16cd51dbaff92b7cecfaba17f4845886c7b189f2286cd7a1d466de89b93",
+      "size": 8527,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/congestion_controller/goog_cc/probe_bitrate_estimator.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__modules__pacing__pacing_controller.h",
+      "path": "modules/pacing/pacing_controller.h",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "80c1c724dcc5f09d547d4dc2fd14df59ae844c6b4cc51c6cf4e1d83af33468a3",
+      "size": 11385,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/pacing/pacing_controller.h?format=TEXT"
+    },
+    {
+      "file": "webrtc__modules__pacing__pacing_controller.cc",
+      "path": "modules/pacing/pacing_controller.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "6a6a936390a8a7a567772ff19c5b4bb6d52b34b6acfe86d02ea82221d09fb9c8",
+      "size": 27214,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/pacing/pacing_controller.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__modules__pacing__bitrate_prober.h",
+      "path": "modules/pacing/bitrate_prober.h",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "0bd8ce7c8d1d832494b9c6e095a8a16771e7a15c1796f613b8a5600e63f0e6c6",
+      "size": 4887,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/pacing/bitrate_prober.h?format=TEXT"
+    },
+    {
+      "file": "webrtc__modules__pacing__bitrate_prober.cc",
+      "path": "modules/pacing/bitrate_prober.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "fa166f5668d1e71da9fc17d5abb278e07174c79396326e047a0edc71000f7142",
+      "size": 7448,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/pacing/bitrate_prober.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__modules__pacing__task_queue_paced_sender.h",
+      "path": "modules/pacing/task_queue_paced_sender.h",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "6761382aefe3bd6b17024aa941267a175f6b9baa5d4f53d0a1af8021d185e67a",
+      "size": 7602,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/pacing/task_queue_paced_sender.h?format=TEXT"
+    },
+    {
+      "file": "webrtc__modules__pacing__task_queue_paced_sender.cc",
+      "path": "modules/pacing/task_queue_paced_sender.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "1d50ecfc23093e6fa17c6ff45bd2504b863a679f5101dc85956c4603cb17fc0f",
+      "size": 11242,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/pacing/task_queue_paced_sender.cc?format=TEXT"
+    },
+    {
+      "file": "chromium__DEPS",
+      "path": "DEPS",
+      "project": "chromium",
+      "revision": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+      "sha256": "cd59c0f5c31e1dbbc65b2db96bb11a18f7bdc91496fafb5b6a4e7f94d8ad797c",
+      "size": 197649,
+      "status": 200,
+      "url": "https://chromium.googlesource.com/chromium/src/+/73c14f6228d7cd537c855007e8f88678969cc0eb/DEPS?format=TEXT"
+    },
+    {
+      "file": "chromium__LICENSE",
+      "path": "LICENSE",
+      "project": "chromium",
+      "revision": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+      "sha256": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b",
+      "size": 1536,
+      "status": 200,
+      "url": "https://chromium.googlesource.com/chromium/src/+/73c14f6228d7cd537c855007e8f88678969cc0eb/LICENSE?format=TEXT"
+    },
+    {
+      "file": "chromium__third_party__blink__renderer__modules__peerconnection__rtc_peer_connection_handler.h",
+      "path": "third_party/blink/renderer/modules/peerconnection/rtc_peer_connection_handler.h",
+      "project": "chromium",
+      "revision": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+      "sha256": "fb4f78ea48471bfea54bce3118b66279a46beb7e6602d02fc683c64f8fee02a2",
+      "size": 20072,
+      "status": 200,
+      "url": "https://chromium.googlesource.com/chromium/src/+/73c14f6228d7cd537c855007e8f88678969cc0eb/third_party/blink/renderer/modules/peerconnection/rtc_peer_connection_handler.h?format=TEXT"
+    },
+    {
+      "file": "chromium__third_party__blink__renderer__modules__peerconnection__rtc_peer_connection_handler.cc",
+      "path": "third_party/blink/renderer/modules/peerconnection/rtc_peer_connection_handler.cc",
+      "project": "chromium",
+      "revision": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+      "sha256": "efe4e0a28684078972fa75a63e0f7733be533608784495cebee1cc524223084c",
+      "size": 91710,
+      "status": 200,
+      "url": "https://chromium.googlesource.com/chromium/src/+/73c14f6228d7cd537c855007e8f88678969cc0eb/third_party/blink/renderer/modules/peerconnection/rtc_peer_connection_handler.cc?format=TEXT"
+    },
+    {
+      "file": "chromium__third_party__blink__renderer__modules__peerconnection__rtc_peer_connection.idl",
+      "path": "third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.idl",
+      "project": "chromium",
+      "revision": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+      "sha256": "3a5ab7e3e235cae1cc8a1a9b1a3bcb08504e3474d38d315874e640914e46ae3d",
+      "size": 8430,
+      "status": 200,
+      "url": "https://chromium.googlesource.com/chromium/src/+/73c14f6228d7cd537c855007e8f88678969cc0eb/third_party/blink/renderer/modules/peerconnection/rtc_peer_connection.idl?format=TEXT"
+    },
+    {
+      "file": "chromium__tools__clang__scripts__update.py",
+      "path": "tools/clang/scripts/update.py",
+      "project": "chromium",
+      "revision": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+      "sha256": "65e72af541dc1f789e2ff416c1cf4ddd6a5f3cb01b3059a811e969b394f03266",
+      "size": 14960,
+      "status": 200,
+      "url": "https://chromium.googlesource.com/chromium/src/+/73c14f6228d7cd537c855007e8f88678969cc0eb/tools/clang/scripts/update.py?format=TEXT"
+    },
+    {
+      "file": "webrtc__LICENSE",
+      "path": "LICENSE",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "ab00a482b6a3902e40211b43c5d0441962ea99b6cc7c25c0f243fa270b78d482",
+      "size": 1511,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/LICENSE?format=TEXT"
+    },
+    {
+      "file": "webrtc__pc__peer_connection_factory.cc",
+      "path": "pc/peer_connection_factory.cc",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "e3d552e8beb0660c64989e4400426300e1b32af3c757f0ac69e53192e50de64e",
+      "size": 16268,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/pc/peer_connection_factory.cc?format=TEXT"
+    },
+    {
+      "file": "webrtc__api__environment__environment.h",
+      "path": "api/environment/environment.h",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "04b899b69420ce49ecf5369df6bfd6e4d7462fc8939767d9e7b5c06e517d0f83",
+      "size": 5335,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/api/environment/environment.h?format=TEXT"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "path": "logging/rtc_event_log/rtc_event_log.h",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/logging/rtc_event_log/rtc_event_log.h?format=TEXT"
+    },
+    {
+      "file": "webrtc__api__rtc_event_log__rtc_event_log.h",
+      "path": "api/rtc_event_log/rtc_event_log.h",
+      "project": "webrtc",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "bb803a7d0ba8124aa579bf2cb8ab1becd969207de1e68b696beedef03b6c223a",
+      "size": 2413,
+      "status": 200,
+      "url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/api/rtc_event_log/rtc_event_log.h?format=TEXT"
+    },
+    {
+      "file": "standalone-webrtc-development.txt",
+      "path": "standalone-webrtc-development",
+      "project": "reference",
+      "sha256": "4aad7eefe232606f2fd47af2ba423d229f5fa26fe46af530f26bf5db67325de5",
+      "size": 30042,
+      "status": 200,
+      "url": "https://webrtc.github.io/webrtc-org/native-code/development/"
+    },
+    {
+      "file": "depot-tools-pin.txt",
+      "path": "depot-tools-pin",
+      "project": "reference",
+      "sha256": "2fc7cea183f7117377226f6ea31f878466599e9516bda0bd3747017776c8c69d",
+      "size": 2102,
+      "status": 200,
+      "url": "https://chromium.googlesource.com/chromium/tools/depot_tools/+/main?format=JSON"
+    }
+  ],
+  "webrtc_commit": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d"
+}

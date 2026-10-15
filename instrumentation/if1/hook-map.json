@@ -1,0 +1,219 @@
+{
+  "abi": "if1_proposed_native_hooks_v1",
+  "hooks": [
+    {
+      "channel": "identity",
+      "implemented": false,
+      "matching_lines": [
+        904,
+        938
+      ],
+      "native_qualification": false,
+      "path": "third_party/blink/renderer/modules/peerconnection/rtc_peer_connection_handler.cc",
+      "project": "chromium",
+      "proposed_semantics": "Bind the diagnostic endpoint to this actual JS PeerConnection handler; return an opaque native PC ID through the same object call.",
+      "revision": "73c14f6228d7cd537c855007e8f88678969cc0eb",
+      "sha256": "efe4e0a28684078972fa75a63e0f7733be533608784495cebee1cc524223084c",
+      "source_url": "https://chromium.googlesource.com/chromium/src/+/73c14f6228d7cd537c855007e8f88678969cc0eb/third_party/blink/renderer/modules/peerconnection/rtc_peer_connection_handler.cc?format=TEXT",
+      "symbol": "CreatePeerConnection"
+    },
+    {
+      "channel": "identity",
+      "implemented": false,
+      "matching_lines": [
+        370
+      ],
+      "native_qualification": false,
+      "path": "pc/peer_connection_factory.cc",
+      "project": "webrtc",
+      "proposed_semantics": "Create a PC-scoped sink before Call/controller creation; explicitly register transport/controller/pacer IDs and their generation.",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "e3d552e8beb0660c64989e4400426300e1b32af3c757f0ac69e53192e50de64e",
+      "source_url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/pc/peer_connection_factory.cc?format=TEXT",
+      "symbol": "PeerConnectionFactory::CreateCall_s"
+    },
+    {
+      "channel": "identity",
+      "implemented": false,
+      "matching_lines": [
+        64
+      ],
+      "native_qualification": false,
+      "path": "api/environment/environment.h",
+      "project": "webrtc",
+      "proposed_semantics": "Propagate the PC-scoped diagnostic context using the existing Environment construction path; do not infer identity from address/thread/file.",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "04b899b69420ce49ecf5369df6bfd6e4d7462fc8939767d9e7b5c06e517d0f83",
+      "source_url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/api/environment/environment.h?format=TEXT",
+      "symbol": "class RTC_EXPORT Environment"
+    },
+    {
+      "channel": "authenticated_rtcp_ingress",
+      "implemented": false,
+      "matching_lines": [
+        116,
+        117
+      ],
+      "native_qualification": false,
+      "path": "pc/srtp_transport.cc",
+      "project": "webrtc",
+      "proposed_semantics": "Stamp native callback entry and successful SRTCP authentication separately; carry an explicit packet token and original ingress stamp across asynchronous hops.",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "180da0ccec08c2bbf08e944a2170f91b23994e939166e23c67827009d920fbbe",
+      "source_url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/pc/srtp_transport.cc?format=TEXT",
+      "symbol": "SrtpTransport::OnRtcpPacketReceived"
+    },
+    {
+      "channel": "actual_transport_feedback",
+      "implemented": false,
+      "matching_lines": [
+        886
+      ],
+      "native_qualification": false,
+      "path": "modules/rtp_rtcp/source/rtcp_receiver.cc",
+      "project": "webrtc",
+      "proposed_semantics": "Emit only after actual PT205/FMT15 parse success; preserve ingress, parse and dispatch times, feedback sender/media SSRC, sequence/count and packet token.",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "5f06224ad552f40807a77a6530816e2ba317177678841929eabb4b3f9fbbe082",
+      "source_url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/rtp_rtcp/source/rtcp_receiver.cc?format=TEXT",
+      "symbol": "RTCPReceiver::HandleTransportFeedback"
+    },
+    {
+      "channel": "feedback_consumption",
+      "implemented": false,
+      "matching_lines": [
+        659
+      ],
+      "native_qualification": false,
+      "path": "call/rtp_transport_controller_send.cc",
+      "project": "webrtc",
+      "proposed_semantics": "Stamp real worker/controller consumption and adapter acceptance; include the registered controller ID and parent feedback token.",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "27a90f365b08f9d6e37543a5b2d672d33fe6711de21439868f3b46cb0e480287",
+      "source_url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/call/rtp_transport_controller_send.cc?format=TEXT",
+      "symbol": "RtpTransportControllerSend::OnTransportFeedback"
+    },
+    {
+      "channel": "delay_estimator",
+      "implemented": false,
+      "matching_lines": [
+        210
+      ],
+      "native_qualification": false,
+      "path": "modules/congestion_controller/goog_cc/delay_based_bwe.cc",
+      "project": "webrtc",
+      "proposed_semantics": "Emit each update invocation/result with before/after native estimate, detector state, logical estimator time and actual hook time; no-update remains explicit.",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "d2ad71e74c7f89fb8a88093c492d1d1db46a92f24138f129f8e6d32147eca0e1",
+      "source_url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/congestion_controller/goog_cc/delay_based_bwe.cc?format=TEXT",
+      "symbol": "DelayBasedBwe::MaybeUpdateEstimate"
+    },
+    {
+      "channel": "loss_estimator",
+      "implemented": false,
+      "matching_lines": [
+        413
+      ],
+      "native_qualification": false,
+      "path": "modules/congestion_controller/goog_cc/send_side_bandwidth_estimation.cc",
+      "project": "webrtc",
+      "proposed_semantics": "Emit periodic and feedback-triggered update invocations/results separately from target-rate emission, with sequence/cause/clock.",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "889e313722c6263107e9765179a80b78945a96da4e4ac670fc78a6a832974c10",
+      "source_url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/congestion_controller/goog_cc/send_side_bandwidth_estimation.cc?format=TEXT",
+      "symbol": "SendSideBandwidthEstimation::UpdateEstimate"
+    },
+    {
+      "channel": "loss_estimator_v2",
+      "implemented": false,
+      "matching_lines": [
+        189
+      ],
+      "native_qualification": false,
+      "path": "modules/congestion_controller/goog_cc/loss_based_bwe_v2.cc",
+      "project": "webrtc",
+      "proposed_semantics": "Record invoked/state-changed/version status; disabled estimator is unsupported/inactive rather than a fabricated zero.",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "fd2ae1ace78c6792c64a88b0b4c9c6a32099694f6fe2cc2849b21b376924e6a3",
+      "source_url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/congestion_controller/goog_cc/loss_based_bwe_v2.cc?format=TEXT",
+      "symbol": "LossBasedBweV2::UpdateBandwidthEstimate"
+    },
+    {
+      "channel": "probe_request",
+      "implemented": false,
+      "matching_lines": [
+        515
+      ],
+      "native_qualification": false,
+      "path": "modules/congestion_controller/goog_cc/probe_controller.cc",
+      "project": "webrtc",
+      "proposed_semantics": "Record cluster creation and configured thresholds/target, unique within controller generation.",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "4ace95a37f1956d4965ef83a55365e23f711d024760a5f95b53b74e5123b370c",
+      "source_url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/congestion_controller/goog_cc/probe_controller.cc?format=TEXT",
+      "symbol": "ProbeController::CreateProbeClusterConfig"
+    },
+    {
+      "channel": "probe_execution",
+      "implemented": false,
+      "matching_lines": [
+        179
+      ],
+      "native_qualification": false,
+      "path": "modules/pacing/bitrate_prober.cc",
+      "project": "webrtc",
+      "proposed_semantics": "Record pending/active/start/sent/completed/discard/timeout transitions at all actual mutation branches; sending completion is not estimation success.",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "fa166f5668d1e71da9fc17d5abb278e07174c79396326e047a0edc71000f7142",
+      "source_url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/pacing/bitrate_prober.cc?format=TEXT",
+      "symbol": "BitrateProber::ProbeSent"
+    },
+    {
+      "channel": "probe_result",
+      "implemented": false,
+      "matching_lines": [
+        67
+      ],
+      "native_qualification": false,
+      "path": "modules/congestion_controller/goog_cc/probe_bitrate_estimator.cc",
+      "project": "webrtc",
+      "proposed_semantics": "Record native success/failure/insufficient-support result and cluster ID; never infer lifecycle from a packet burst.",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "1fd1f16cd51dbaff92b7cecfaba17f4845886c7b189f2286cd7a1d466de89b93",
+      "source_url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/congestion_controller/goog_cc/probe_bitrate_estimator.cc?format=TEXT",
+      "symbol": "ProbeBitrateEstimator::HandleProbeAndEstimateBitrate"
+    },
+    {
+      "channel": "pacer_state",
+      "implemented": false,
+      "matching_lines": [
+        257
+      ],
+      "native_qualification": false,
+      "path": "modules/pacing/pacing_controller.h",
+      "project": "webrtc",
+      "proposed_semantics": "Read actual media/padding debt, rates, queue counters, congestion/pause/prober state and last-process/send stamps on the owning queue. No separate positive credit exists in this revision.",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "80c1c724dcc5f09d547d4dc2fd14df59ae844c6b4cc51c6cf4e1d83af33468a3",
+      "source_url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/pacing/pacing_controller.h?format=TEXT",
+      "symbol": "DataSize media_debt_"
+    },
+    {
+      "channel": "pacer_state_sampling",
+      "implemented": false,
+      "matching_lines": [
+        232,
+        237
+      ],
+      "native_qualification": false,
+      "path": "modules/pacing/task_queue_paced_sender.cc",
+      "project": "webrtc",
+      "proposed_semantics": "Emit bounded event records and 50ms owner-queue snapshots with observed-state stamp; querying must not advance queue budgets, call CurrentCluster or mutate native scheduling.",
+      "revision": "3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d",
+      "sha256": "1d50ecfc23093e6fa17c6ff45bd2504b863a679f5101dc85956c4603cb17fc0f",
+      "source_url": "https://webrtc.googlesource.com/src/+/3a8b0c76e6b7bf0e72141047f82eb2c3f4862c8d/modules/pacing/task_queue_paced_sender.cc?format=TEXT",
+      "symbol": "TaskQueuePacedSender::MaybeProcessPackets"
+    }
+  ],
+  "status": "source-reviewed design; not implemented or compiled"
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "networkrlcd:if1:transport-control:v1",
+  "title": "IF1 proposed native transport diagnostic record, not implemented",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["abi", "fixture_id", "build_sha256", "run_id", "process_generation", "pc_id", "transport_id", "controller_id", "pacer_id", "registry_sequence", "producer_sequence", "family", "event", "native_monotonic_us", "native_state_observed_us", "clock_domain", "status", "values", "parent_feedback_id"],
+  "properties": {
+    "abi": {"const": "if1_transport_control_v1"},
+    "fixture_id": {"const": "IF1"},
+    "build_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "run_id": {"type": "string", "minLength": 16},
+    "process_generation": {"$ref": "#/$defs/id"},
+    "pc_id": {"$ref": "#/$defs/id"},
+    "transport_id": {"oneOf": [{"$ref": "#/$defs/id"}, {"type": "null"}]},
+    "controller_id": {"oneOf": [{"$ref": "#/$defs/id"}, {"type": "null"}]},
+    "pacer_id": {"oneOf": [{"$ref": "#/$defs/id"}, {"type": "null"}]},
+    "registry_sequence": {"$ref": "#/$defs/id"},
+    "producer_sequence": {"$ref": "#/$defs/id"},
+    "family": {"enum": ["identity", "clock", "transport_feedback", "estimator_update", "probe_lifecycle", "pacer_state", "health"]},
+    "event": {"type": "string", "minLength": 1},
+    "native_monotonic_us": {"$ref": "#/$defs/time"},
+    "native_state_observed_us": {"$ref": "#/$defs/time"},
+    "clock_domain": {"const": "Linux_CLOCK_MONOTONIC"},
+    "status": {"enum": ["present", "missing", "invalid", "inactive", "unassigned", "not_applicable", "overflow", "closed"]},
+    "parent_feedback_id": {"type": ["string", "null"]},
+    "values": {"type": "object", "additionalProperties": {"$ref": "#/$defs/measurement"}}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"family": {"enum": ["transport_feedback", "estimator_update", "probe_lifecycle", "pacer_state"]}}},
+      "then": {"properties": {"controller_id": {"$ref": "#/$defs/id"}, "transport_id": {"$ref": "#/$defs/id"}}}
+    },
+    {
+      "if": {"properties": {"family": {"enum": ["probe_lifecycle", "pacer_state"]}}},
+      "then": {"properties": {"pacer_id": {"$ref": "#/$defs/id"}}}
+    }
+  ],
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[1-9][0-9]*$"},
+    "time": {"type": "string", "pattern": "^[0-9]+$"},
+    "measurement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "value", "unit", "observed_native_us"],
+      "properties": {
+        "status": {"enum": ["present", "missing", "invalid", "inactive", "unassigned", "not_applicable"]},
+        "value": {"type": ["string", "number", "boolean", "array", "null"]},
+        "unit": {"enum": ["bytes", "packets", "bps", "us", "enum", "boolean", "id", "ssrc", "count", "dimensionless"]},
+        "observed_native_us": {"oneOf": [{"$ref": "#/$defs/time"}, {"type": "null"}]}
+      },
+      "allOf": [
+        {"if": {"properties": {"status": {"enum": ["missing", "invalid", "inactive", "unassigned", "not_applicable"]}}}, "then": {"properties": {"value": {"type": "null"}}}},
+        {"if": {"properties": {"status": {"const": "present"}}}, "then": {"properties": {"value": {"not": {"type": "null"}}, "observed_native_us": {"$ref": "#/$defs/time"}}}}
+      ]
+    }
+  }
+}

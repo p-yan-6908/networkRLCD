@@ -1,0 +1,104 @@
+{
+  "abi": "if1_reserved_qualification_allocation_v1",
+  "actions": false,
+  "future_BWE_response_read": false,
+  "identity_controls": [
+    {
+      "id": "if1-identity-000",
+      "intervention": "two simultaneous independent senders; same renderer/process"
+    },
+    {
+      "id": "if1-identity-001",
+      "intervention": "close/recreate one PC while the other remains active; never reuse opaque IDs"
+    }
+  ],
+  "observability": [
+    {
+      "content_id": "content_volga_lock_01",
+      "history": "ascending_prefix",
+      "id": "if1-observability-000",
+      "repeat": 0
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "history": "descending_prefix",
+      "id": "if1-observability-001",
+      "repeat": 0
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "history": "descending_prefix",
+      "id": "if1-observability-002",
+      "repeat": 0
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "history": "ascending_prefix",
+      "id": "if1-observability-003",
+      "repeat": 0
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "history": "ascending_prefix",
+      "id": "if1-observability-004",
+      "repeat": 1
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "history": "ascending_prefix",
+      "id": "if1-observability-005",
+      "repeat": 1
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "history": "descending_prefix",
+      "id": "if1-observability-006",
+      "repeat": 1
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "history": "descending_prefix",
+      "id": "if1-observability-007",
+      "repeat": 1
+    }
+  ],
+  "receiver_outcomes_open": false,
+  "seed": 2026101701,
+  "status": "reserved; no session directories or binary exist",
+  "support_reservation": {
+    "contents": 2,
+    "full_support_protocol_required_after_interface_qualification": true,
+    "histories": 2,
+    "instantiated": false,
+    "originals": 64,
+    "repeats_per_history": 4,
+    "service_levels_log2_over_500k": [
+      0.0,
+      0.5,
+      1.0,
+      1.5
+    ]
+  },
+  "technical": [
+    {
+      "content_id": "content_kampar_boating_01",
+      "history": "ascending_prefix",
+      "id": "if1-technical-000"
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "history": "descending_prefix",
+      "id": "if1-technical-001"
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "history": "descending_prefix",
+      "id": "if1-technical-002"
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "history": "ascending_prefix",
+      "id": "if1-technical-003"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "Docker_or_remote_resource_workaround_used": false,
+  "HF_TOKEN_available": true,
+  "HTTP_network_policy": {
+    "mode": "unrestricted",
+    "state": "enforced"
+  },
+  "abi": "native_instrumented_fixture_if1_runtime_v1",
+  "archive_head": "367786c572c769a2e90439300a1ef98da6c491ae",
+  "artifact_metadata_only_no_old_telemetry_opened": true,
+  "at_utc": "2026-10-15T22:19:07.864921+00:00",
+  "authenticated_dataset_request": "success",
+  "credential_readiness": "ready",
+  "dataset_private": true,
+  "docker": {
+    "ContainersRunning": 0,
+    "DockerRootDir": "/var/lib/docker",
+    "Driver": "vfs",
+    "MemTotal": 10452496384,
+    "NCPU": 3,
+    "ServerVersion": "28.4.0",
+    "root_disk": {
+      "free": 17701101568,
+      "total": 33770192896,
+      "used": 14334328832
+    }
+  },
+  "existing_build_tree_or_instrumented_binary_found": false,
+  "https_host": "huggingface.co",
+  "https_status": 200,
+  "local_resources": {
+    "build_tools": {
+      "clang++": null,
+      "docker": "/usr/local/bin/docker",
+      "g++": "/usr/bin/g++",
+      "gclient": null,
+      "gn": null,
+      "ninja": null
+    },
+    "effective_cpu_cores": 2.0,
+    "filesystem": {
+      "free": 17699586048,
+      "total": 33770192896,
+      "used": 14335844352
+    },
+    "memory_limit_bytes": 8589934592
+  },
+  "managed_policy": {
+    "AIModeSettings": 1,
+    "AlwaysOpenPdfExternally": false,
+    "AudioCaptureAllowed": false,
+    "AutofillAddressEnabled": false,
+    "AutofillCreditCardEnabled": false,
+    "BookmarkBarEnabled": false,
+    "BrowserAddPersonEnabled": false,
+    "BrowserGuestModeEnabled": false,
+    "BrowserLabsEnabled": false,
+    "BrowserSignin": 0,
+    "DefaultClipboardSetting": 2,
+    "DefaultDirectSocketsSetting": 2,
+    "DefaultFileSystemReadGuardSetting": 2,
+    "DefaultFileSystemWriteGuardSetting": 2,
+    "DefaultGeolocationSetting": 2,
+    "DefaultNotificationsSetting": 2,
+    "DesktopSharingHubEnabled": false,
+    "DeveloperToolsAvailability": 0,
+    "DeveloperToolsAvailabilityAllowlist": [
+      "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/",
+      "chrome-extension://njkekoimnfiafpgdgahjjnmhckkfojea/"
+    ],
+    "DeveloperToolsAvailabilityBlocklist": [
+      "chrome-extension://kcdongibgcplmaagnmgpjhpjgmmaaaaa/",
+      "chrome-extension://njkekoimnfiafpgdgahjjnmhckkfojea/"
+    ],
+    "DisablePrintPreview": true,
+    "DownloadDirectory": "/workspace/shared/downloads/",
+    "DownloadRestrictions": 1,
+    "EditBookmarksEnabled": false,
+    "EnableMediaRouter": false,
+    "ExtensionManifestV2Availability": 3,
+    "FullscreenAllowed": false,
+    "HighEfficiencyModeEnabled": false,
+    "IncognitoModeAvailability": 1,
+    "LensOverlaySettings": 1,
+    "NTPFooterExtensionAttributionEnabled": false,
+    "NTPFooterManagementNoticeEnabled": false,
+    "NewTabPageLocation": "about:blank",
+    "PasswordManagerEnabled": false,
+    "PrintingEnabled": false,
+    "ProfilePickerOnStartupAvailability": 1,
+    "RestoreOnStartup": 1,
+    "SearchSuggestEnabled": false,
+    "SyncDisabled": true,
+    "TaskManagerEndProcessEnabled": false,
+    "VideoCaptureAllowed": false,
+    "WebAppInstallByUserEnabled": false,
+    "WebRtcIPHandling": "disable_non_proxied_udp"
+  },
+  "network_policy": {
+    "http_network_policy": {
+      "type": "unrestricted"
+    },
+    "http_proxy": "http://proxy:8080",
+    "tcp_connect_proxy": "http://proxy:8088",
+    "tcp_network_access": {
+      "domains": [],
+      "ip_ranges": []
+    },
+    "version": 1,
+    "vpn_configured": false
+  },
+  "observations_current": true,
+  "observed_spec_revision": "210",
+  "policy_sha256": "10ee54ed22fc23337096004f8248d6ea977f059149386e0f9e70c4b77d9db6b5",
+  "remote_build_metadata": [
+    {
+      "archived": false,
+      "default_branch": "main",
+      "endpoint": "repos/{configured-origin}",
+      "exit_code": 0,
+      "private": false
+    },
+    {
+      "endpoint": "repos/{configured-origin}/actions/runners",
+      "exit_code": 1,
+      "message": "Resource not accessible by integration",
+      "status": "403"
+    },
+    {
+      "endpoint": "repos/{configured-origin}/actions/workflows",
+      "exit_code": 0,
+      "total_count": 1,
+      "workflows": [
+        {
+          "name": "tests",
+          "path": ".github/workflows/tests.yml",
+          "state": "active"
+        }
+      ]
+    },
+    {
+      "candidate_build_artifacts": [],
+      "endpoint": "repos/{configured-origin}/actions/artifacts?per_page=100",
+      "exit_code": 0,
+      "total_count": 2
+    }
+  ],
+  "remote_metadata_hostname": "api.github.com",
+  "runtime_spec_revision": "210"
+}

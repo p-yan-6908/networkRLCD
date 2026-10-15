@@ -1,0 +1,39 @@
+{
+  "M11R_archive_revision": "367786c572c769a2e90439300a1ef98da6c491ae",
+  "M11R_bytes_rehashed": 239854904,
+  "M11R_index_sha256": "ce24db56945862f5f02e9b3070eb956ca0426bcf5fa398d9f116d838ab12200f",
+  "M11R_members_rehashed": 513,
+  "abi": "native_instrumented_fixture_if1_prior_audit_v1",
+  "anchor_commit": "14d411530b0f5d6cc06a1493ec33a5a6f1ce50bc",
+  "closed": {
+    "IF1_native_observability_unopened": true,
+    "IF1_native_technical_unopened": true,
+    "IF1_support_uninstantiated": true,
+    "M10_development_protocol_sha256": "8bb2b87b95886148f6e521f6987a23e23ab2ef07f4db6c0ba99baacae0c1eabe",
+    "M10_development_unopened": true,
+    "M11R_development_unopened": true,
+    "M11_capability_protocol_sha256": "bb277cbb0ab34f4ce1efa4407af4cea26bfd94157c7dd2fddc416164bf97893f",
+    "M11_completed_capability_excluded": true,
+    "M11_verbose_fallback_uninstantiated": true,
+    "m8_allocation_sha256": "6b25569c97dd4116577360e652f2163819ed1c64f972ff9c65e6e9cd17b2df9a",
+    "m8_schedule_uninstantiated": true,
+    "old_validation_session_directories": {
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7r/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7ra/validation": false
+    }
+  },
+  "evidence_deleted": 0,
+  "new_representations_on_prior_panels": false,
+  "prior_paths_written": false,
+  "prior_verification": {
+    "capability_originals": 2,
+    "development_opened": false,
+    "old_panels_closed": true,
+    "prior_files_unchanged": 1614,
+    "receiver_outcomes_read": false,
+    "verified": true
+  },
+  "receiver_outcomes_read": false,
+  "telemetry_decoded": false
+}
