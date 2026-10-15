@@ -16,6 +16,8 @@ def preserve():
         'tools/preserve_phase_state_m9r.py','tools/write_phase_state_m9r_results.py','tools/finalize_phase_state_m9r_storage.py',
         'tools/audit_phase_state_m9r_inherited_gates.py','docs/NATIVE_PHASE_STATE_M9R_INHERITED_GATES.md',
         'reports/native-phase-state-m9r-inherited-gates.json',
+        'tools/diagnose_phase_state_m9r.py','docs/NATIVE_PHASE_STATE_M9R_INTERPRETATION.md',
+        'reports/native-phase-state-m9r-support-failure-diagnostic.json',
         'reports/native-phase-state-m9r-summary.json','reports/native-phase-state-m9r-reporting.json',
         'reports/native-phase-state-m9r-trajectories.png','reports/native-phase-state-m9r-residuals.png',
         'reports/native-phase-state-m9r-preservation-audit.json','reports/native-phase-state-m9r-next-decision.json',

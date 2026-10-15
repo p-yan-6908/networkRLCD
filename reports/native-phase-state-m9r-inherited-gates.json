@@ -1,0 +1,2211 @@
+{
+  "abi": "native_phase_state_m9r_inherited_gate_veto_v1",
+  "actions": false,
+  "can_rescue_a_failed_rule": false,
+  "cells": [
+    {
+      "content": "content_kampar_boating_01",
+      "fixed_target_H1_counts": {
+        "ascending_prefix": 0,
+        "descending_prefix": 0
+      },
+      "input_x": 0.0,
+      "originals": 8,
+      "passed": false,
+      "probe_states": {
+        "12000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.31714248611453755,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.2575438725577728,
+          "repeat_spread_octaves": 0.5553340918819547
+        },
+        "6000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.2787629624363993,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.22093987767535322,
+          "repeat_spread_octaves": 0.5147709380790934
+        }
+      }
+    },
+    {
+      "content": "content_kampar_boating_01",
+      "fixed_target_H1_counts": {
+        "ascending_prefix": 0,
+        "descending_prefix": 0
+      },
+      "input_x": 0.5,
+      "originals": 8,
+      "passed": false,
+      "probe_states": {
+        "12000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.7692523199613179,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.811505319172062,
+          "repeat_spread_octaves": 1.0381687803756194
+        },
+        "6000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.4680174730202194,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.44359429870474704,
+          "repeat_spread_octaves": 0.6663349400284471
+        }
+      }
+    },
+    {
+      "content": "content_kampar_boating_01",
+      "fixed_target_H1_counts": {
+        "ascending_prefix": 0,
+        "descending_prefix": 0
+      },
+      "input_x": 1.0,
+      "originals": 8,
+      "passed": false,
+      "probe_states": {
+        "12000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.5128574033113968,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.5734218106959452,
+          "repeat_spread_octaves": 0.8049026269479747
+        },
+        "6000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.33645631877299487,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.2409651190698171,
+          "repeat_spread_octaves": 0.5622508224652151
+        }
+      }
+    },
+    {
+      "content": "content_kampar_boating_01",
+      "fixed_target_H1_counts": {
+        "ascending_prefix": 0,
+        "descending_prefix": 0
+      },
+      "input_x": 1.5,
+      "originals": 8,
+      "passed": false,
+      "probe_states": {
+        "12000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.21095946420218548,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.22757635795989328,
+          "repeat_spread_octaves": 0.26962644783084233
+        },
+        "6000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.06769652397871795,
+          "passed": true,
+          "prefix_w_infinity_octaves": 0.05618731581563052,
+          "repeat_spread_octaves": 0.13347848481819757
+        }
+      }
+    },
+    {
+      "content": "content_volga_lock_01",
+      "fixed_target_H1_counts": {
+        "ascending_prefix": 0,
+        "descending_prefix": 0
+      },
+      "input_x": 0.0,
+      "originals": 8,
+      "passed": false,
+      "probe_states": {
+        "12000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.16968779080432927,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.25504132077352293,
+          "repeat_spread_octaves": 0.2871413540651314
+        },
+        "6000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.09850344956641371,
+          "passed": true,
+          "prefix_w_infinity_octaves": 0.13424372978898652,
+          "repeat_spread_octaves": 0.16755324005530206
+        }
+      }
+    },
+    {
+      "content": "content_volga_lock_01",
+      "fixed_target_H1_counts": {
+        "ascending_prefix": 0,
+        "descending_prefix": 0
+      },
+      "input_x": 0.5,
+      "originals": 8,
+      "passed": false,
+      "probe_states": {
+        "12000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.4642457481895368,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.356036056812268,
+          "repeat_spread_octaves": 0.7321145745932957
+        },
+        "6000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.2584208503575739,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.15743835170923193,
+          "repeat_spread_octaves": 0.3906900676964127
+        }
+      }
+    },
+    {
+      "content": "content_volga_lock_01",
+      "fixed_target_H1_counts": {
+        "ascending_prefix": 0,
+        "descending_prefix": 0
+      },
+      "input_x": 1.0,
+      "originals": 8,
+      "passed": false,
+      "probe_states": {
+        "12000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.260799907304591,
+          "passed": false,
+          "prefix_w_infinity_octaves": 0.12082702252989863,
+          "repeat_spread_octaves": 0.515278332994165
+        },
+        "6000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.10639258896781656,
+          "passed": true,
+          "prefix_w_infinity_octaves": 0.1327760041735795,
+          "repeat_spread_octaves": 0.21232007929443508
+        }
+      }
+    },
+    {
+      "content": "content_volga_lock_01",
+      "fixed_target_H1_counts": {
+        "ascending_prefix": 0,
+        "descending_prefix": 0
+      },
+      "input_x": 1.5,
+      "originals": 8,
+      "passed": false,
+      "probe_states": {
+        "12000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.1420393261199817,
+          "passed": true,
+          "prefix_w_infinity_octaves": 0.15152834657650982,
+          "repeat_spread_octaves": 0.1830198483030998
+        },
+        "6000": {
+          "four_censuses_per_history": true,
+          "maximum_actual_census_distance_octaves": 0.11946790452234768,
+          "passed": true,
+          "prefix_w_infinity_octaves": 0.09946556630479342,
+          "repeat_spread_octaves": 0.2267369097698153
+        }
+      }
+    }
+  ],
+  "clarification_sha256": "36a69cf4c10df4bd2e84e61313082053940a959ca733c11a6012fa76ed12e6fc",
+  "controller_fitted": false,
+  "inherited_gates_passed": false,
+  "new_state_representation": false,
+  "primary_P2_qualified": false,
+  "primary_summary_sha256": "58d586dd3a42b976b649de72a28d3b269e7fc16f445f1677981b06b1fd82539d",
+  "qualified_for_next_common_state_validation": false,
+  "registered_M9R_results_modified": false,
+  "sessions": [
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-000-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111457.19999998808,
+          "history_span_ms": 1000.5999999940395,
+          "instantaneous_x": 1.4263871437317428,
+          "passed": true,
+          "samples": 11,
+          "x": 1.4078924862146502
+        },
+        "6000": {
+          "cutoff_ms": 105456.40000000596,
+          "history_span_ms": 1000.3000000119209,
+          "instantaneous_x": 1.263604157856327,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2506867302246054
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-001-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111476,
+          "history_span_ms": 999.8000000119209,
+          "instantaneous_x": 1.5754904780017376,
+          "passed": true,
+          "samples": 11,
+          "x": 1.5344528997894227
+        },
+        "6000": {
+          "cutoff_ms": 105475.40000000596,
+          "history_span_ms": 998.7000000178814,
+          "instantaneous_x": 1.1058268984244082,
+          "passed": true,
+          "samples": 11,
+          "x": 1.0877806775627257
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-002-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111417.30000001192,
+          "history_span_ms": 999.0,
+          "instantaneous_x": 0.6687200467919447,
+          "passed": true,
+          "samples": 11,
+          "x": 0.6239168077616868
+        },
+        "6000": {
+          "cutoff_ms": 105394,
+          "history_span_ms": 997.7999999821186,
+          "instantaneous_x": 0.1102349386984077,
+          "passed": true,
+          "samples": 11,
+          "x": 0.07133122533995268
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-003-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111363.29999998212,
+          "history_span_ms": 1001.9000000059605,
+          "instantaneous_x": 1.1400993496422076,
+          "passed": true,
+          "samples": 11,
+          "x": 1.1270691670580122
+        },
+        "6000": {
+          "cutoff_ms": 105362.39999997616,
+          "history_span_ms": 998.5999999940395,
+          "instantaneous_x": 0.9371108299226618,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2147894980341596
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-004-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111288.90000000596,
+          "history_span_ms": 999.5999999940395,
+          "instantaneous_x": 0.913219932923276,
+          "passed": true,
+          "samples": 11,
+          "x": 0.8585011982534367
+        },
+        "6000": {
+          "cutoff_ms": 105289.59999999404,
+          "history_span_ms": 1000.9000000059605,
+          "instantaneous_x": 0.5744154508845931,
+          "passed": true,
+          "samples": 11,
+          "x": 0.5406398076088825
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-005-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111375.30000001192,
+          "history_span_ms": 998.6999999880791,
+          "instantaneous_x": 1.271907290891191,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2549860728365136
+        },
+        "6000": {
+          "cutoff_ms": 105375.20000001788,
+          "history_span_ms": 1000.8000000119209,
+          "instantaneous_x": 1.0905784116637012,
+          "passed": true,
+          "samples": 11,
+          "x": 1.417675490980021
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-006-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111279.5,
+          "history_span_ms": 1019.9000000059605,
+          "instantaneous_x": 1.0560895982133478,
+          "passed": true,
+          "samples": 11,
+          "x": 0.9898386922809856
+        },
+        "6000": {
+          "cutoff_ms": 105275.79999998212,
+          "history_span_ms": 997.4000000059605,
+          "instantaneous_x": 0.586064298899064,
+          "passed": true,
+          "samples": 11,
+          "x": 0.5609146831900155
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-007-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111427.80000001192,
+          "history_span_ms": 1000.8000000119209,
+          "instantaneous_x": 0.9510998516280129,
+          "passed": true,
+          "samples": 11,
+          "x": 0.8837731245685306
+        },
+        "6000": {
+          "cutoff_ms": 105427.10000002384,
+          "history_span_ms": 999.1000000238419,
+          "instantaneous_x": 0.27112204469034423,
+          "passed": true,
+          "samples": 11,
+          "x": 0.21947980344196
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-008-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111556.5,
+          "history_span_ms": 999.8000000119209,
+          "instantaneous_x": 1.348885054273704,
+          "passed": true,
+          "samples": 11,
+          "x": 1.3054829538566073
+        },
+        "6000": {
+          "cutoff_ms": 105582,
+          "history_span_ms": 1000.0999999940395,
+          "instantaneous_x": 0.6895639658333292,
+          "passed": true,
+          "samples": 11,
+          "x": 0.6424352949033088
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-009-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111613.5,
+          "history_span_ms": 999.5,
+          "instantaneous_x": 1.2732437362412747,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2571040412954793
+        },
+        "6000": {
+          "cutoff_ms": 105614.29999998212,
+          "history_span_ms": 1000.2999999821186,
+          "instantaneous_x": 1.0916673414016589,
+          "passed": true,
+          "samples": 11,
+          "x": 1.356286859451158
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-010-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111440.70000001788,
+          "history_span_ms": 999.9000000059605,
+          "instantaneous_x": 1.8422958279986668,
+          "passed": true,
+          "samples": 11,
+          "x": 1.7869289799862405
+        },
+        "6000": {
+          "cutoff_ms": 105448.59999999404,
+          "history_span_ms": 1007.5,
+          "instantaneous_x": 1.1622487139470725,
+          "passed": true,
+          "samples": 11,
+          "x": 1.1225151828101225
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-011-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111497.5,
+          "history_span_ms": 1000.6000000238419,
+          "instantaneous_x": 1.1751988202163373,
+          "passed": true,
+          "samples": 11,
+          "x": 1.155351426102741
+        },
+        "6000": {
+          "cutoff_ms": 105500.19999998808,
+          "history_span_ms": 1001.9000000059605,
+          "instantaneous_x": 1.400333533307858,
+          "passed": true,
+          "samples": 11,
+          "x": 1.32966426289328
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-012-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111410.80000001192,
+          "history_span_ms": 999.8000000119209,
+          "instantaneous_x": 1.8524639413649295,
+          "passed": true,
+          "samples": 11,
+          "x": 1.8034753091440858
+        },
+        "6000": {
+          "cutoff_ms": 105410.70000001788,
+          "history_span_ms": 1000.2000000178814,
+          "instantaneous_x": 1.1724964763210688,
+          "passed": true,
+          "samples": 11,
+          "x": 1.1314727132468954
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-013-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111369.79999998212,
+          "history_span_ms": 1000.5,
+          "instantaneous_x": 1.1321359061141743,
+          "passed": true,
+          "samples": 11,
+          "x": 1.0766818525217192
+        },
+        "6000": {
+          "cutoff_ms": 105370.09999999404,
+          "history_span_ms": 998.7000000178814,
+          "instantaneous_x": 0.4799051790387508,
+          "passed": true,
+          "samples": 11,
+          "x": 0.41057707452342707
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-014-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111387.89999997616,
+          "history_span_ms": 1000.2999999821186,
+          "instantaneous_x": 2.0146088136408897,
+          "passed": true,
+          "samples": 11,
+          "x": 1.9602540530507158
+        },
+        "6000": {
+          "cutoff_ms": 105387.59999999404,
+          "history_span_ms": 999.9000000059605,
+          "instantaneous_x": 1.3551967308102584,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2981889232928536
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-015-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111442.29999998212,
+          "history_span_ms": 997.5999999940395,
+          "instantaneous_x": 1.2576406787729741,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2426380594309732
+        },
+        "6000": {
+          "cutoff_ms": 105440.09999999404,
+          "history_span_ms": 1002.1999999880791,
+          "instantaneous_x": 1.0939711572553745,
+          "passed": true,
+          "samples": 11,
+          "x": 1.4440164999120877
+        }
+      },
+      "repetition": 0
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-016-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111393.69999998808,
+          "history_span_ms": 999.7999999821186,
+          "instantaneous_x": 1.2040868651790317,
+          "passed": true,
+          "samples": 11,
+          "x": 1.1799539250064435
+        },
+        "6000": {
+          "cutoff_ms": 105393.40000000596,
+          "history_span_ms": 1000.2000000178814,
+          "instantaneous_x": 1.4161890315808825,
+          "passed": true,
+          "samples": 11,
+          "x": 1.3570955590381077
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-017-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111524.09999999404,
+          "history_span_ms": 997.6999999880791,
+          "instantaneous_x": 1.646801357713755,
+          "passed": true,
+          "samples": 11,
+          "x": 1.5873619051712735
+        },
+        "6000": {
+          "cutoff_ms": 105523.80000001192,
+          "history_span_ms": 1000.3000000119209,
+          "instantaneous_x": 0.9666770481485855,
+          "passed": true,
+          "samples": 11,
+          "x": 0.9200636261519212
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-018-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111507.09999999404,
+          "history_span_ms": 1024.2999999821186,
+          "instantaneous_x": 1.2638048396830759,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2519902413406876
+        },
+        "6000": {
+          "cutoff_ms": 105507.59999999404,
+          "history_span_ms": 1000.0,
+          "instantaneous_x": 1.0839267939002482,
+          "passed": true,
+          "samples": 11,
+          "x": 1.3755994249524417
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-019-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111322.29999998212,
+          "history_span_ms": 1000.8999999761581,
+          "instantaneous_x": 1.6642197634671532,
+          "passed": true,
+          "samples": 11,
+          "x": 1.6074664719338996
+        },
+        "6000": {
+          "cutoff_ms": 105319.79999998212,
+          "history_span_ms": 997.6999999880791,
+          "instantaneous_x": 1.0119893339088255,
+          "passed": true,
+          "samples": 11,
+          "x": 0.9444425356223697
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-020-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111420,
+          "history_span_ms": 999.9000000059605,
+          "instantaneous_x": 0.808261474053946,
+          "passed": true,
+          "samples": 11,
+          "x": 0.7501488619746526
+        },
+        "6000": {
+          "cutoff_ms": 105419.19999998808,
+          "history_span_ms": 1000.0999999940395,
+          "instantaneous_x": 0.16960693227594226,
+          "passed": true,
+          "samples": 11,
+          "x": 0.12766435682421537
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-021-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111552.19999998808,
+          "history_span_ms": 1001.1999999880791,
+          "instantaneous_x": 1.265277254570902,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2525861409029468
+        },
+        "6000": {
+          "cutoff_ms": 105551.79999998212,
+          "history_span_ms": 996.0,
+          "instantaneous_x": 1.087126059949025,
+          "passed": true,
+          "samples": 11,
+          "x": 1.4348809222065773
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-022-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111422.80000001192,
+          "history_span_ms": 1000.3000000119209,
+          "instantaneous_x": 1.1463606581031078,
+          "passed": true,
+          "samples": 11,
+          "x": 1.084558950345346
+        },
+        "6000": {
+          "cutoff_ms": 105424,
+          "history_span_ms": 1001.8000000119209,
+          "instantaneous_x": 0.48711585226790205,
+          "passed": true,
+          "samples": 11,
+          "x": 0.4214954172279555
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-023-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111399.19999998808,
+          "history_span_ms": 999.9000000059605,
+          "instantaneous_x": 1.9652087538481304,
+          "passed": true,
+          "samples": 11,
+          "x": 1.9076719104691866
+        },
+        "6000": {
+          "cutoff_ms": 105398.29999998212,
+          "history_span_ms": 998.6999999880791,
+          "instantaneous_x": 1.2918133464672967,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2426958927643217
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-024-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111344.59999999404,
+          "history_span_ms": 1000.8000000119209,
+          "instantaneous_x": 0.9722117980524825,
+          "passed": true,
+          "samples": 11,
+          "x": 0.9028303730764178
+        },
+        "6000": {
+          "cutoff_ms": 105343.39999997616,
+          "history_span_ms": 999.0,
+          "instantaneous_x": 0.27829645473771075,
+          "passed": true,
+          "samples": 11,
+          "x": 0.23888446539525474
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-025-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111408.79999998212,
+          "history_span_ms": 1000.3999999761581,
+          "instantaneous_x": 1.2468531409402324,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2313870578350168
+        },
+        "6000": {
+          "cutoff_ms": 105408.69999998808,
+          "history_span_ms": 999.4000000059605,
+          "instantaneous_x": 1.0565571711969726,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2701300830386857
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-026-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111363.29999998212,
+          "history_span_ms": 1000.0,
+          "instantaneous_x": 0.923245039950791,
+          "passed": true,
+          "samples": 11,
+          "x": 0.8659381134213842
+        },
+        "6000": {
+          "cutoff_ms": 105362.90000000596,
+          "history_span_ms": 998.3000000119209,
+          "instantaneous_x": 0.5182994543640865,
+          "passed": true,
+          "samples": 11,
+          "x": 0.4953934452661649
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-027-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111335.09999999404,
+          "history_span_ms": 1001.3000000119209,
+          "instantaneous_x": 1.2531760466627178,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2394399664968758
+        },
+        "6000": {
+          "cutoff_ms": 105333.40000000596,
+          "history_span_ms": 999.2000000178814,
+          "instantaneous_x": 1.0636906875302372,
+          "passed": true,
+          "samples": 11,
+          "x": 1.3182099246752277
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-028-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111361.30000001192,
+          "history_span_ms": 1000.4000000059605,
+          "instantaneous_x": 1.2494271366171557,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2274749489155892
+        },
+        "6000": {
+          "cutoff_ms": 105362.40000000596,
+          "history_span_ms": 1001.0999999940395,
+          "instantaneous_x": 1.0237677463255075,
+          "passed": true,
+          "samples": 11,
+          "x": 1.0024694187397245
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-029-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111313.90000000596,
+          "history_span_ms": 1003.3000000119209,
+          "instantaneous_x": 1.307186015462774,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2637595458096953
+        },
+        "6000": {
+          "cutoff_ms": 105310.30000001192,
+          "history_span_ms": 1000.7000000178814,
+          "instantaneous_x": 0.7399880459696283,
+          "passed": true,
+          "samples": 11,
+          "x": 0.7151748318301744
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-030-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111447.5,
+          "history_span_ms": 1000.5999999940395,
+          "instantaneous_x": 0.7212378995599302,
+          "passed": true,
+          "samples": 11,
+          "x": 0.6594830878862319
+        },
+        "6000": {
+          "cutoff_ms": 105447.30000001192,
+          "history_span_ms": 999.5,
+          "instantaneous_x": 0.15667878507101926,
+          "passed": true,
+          "samples": 11,
+          "x": 0.1072725778741742
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-031-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111315.69999998808,
+          "history_span_ms": 1025.7999999821186,
+          "instantaneous_x": 1.7098773006464922,
+          "passed": true,
+          "samples": 11,
+          "x": 1.6423475000521772
+        },
+        "6000": {
+          "cutoff_ms": 105315.69999998808,
+          "history_span_ms": 1000.2999999821186,
+          "instantaneous_x": 1.1497653257948262,
+          "passed": true,
+          "samples": 11,
+          "x": 1.1363516611532438
+        }
+      },
+      "repetition": 1
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-032-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111492.30000001192,
+          "history_span_ms": 999.9000000059605,
+          "instantaneous_x": 1.1186281711728945,
+          "passed": true,
+          "samples": 11,
+          "x": 1.0680380499802995
+        },
+        "6000": {
+          "cutoff_ms": 105492.59999999404,
+          "history_span_ms": 999.7999999821186,
+          "instantaneous_x": 0.4595617176329727,
+          "passed": true,
+          "samples": 11,
+          "x": 0.3975261635836987
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-033-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111520.19999998808,
+          "history_span_ms": 1004.5999999940395,
+          "instantaneous_x": 1.8447086262641885,
+          "passed": true,
+          "samples": 11,
+          "x": 1.7900085003729087
+        },
+        "6000": {
+          "cutoff_ms": 105515.69999998808,
+          "history_span_ms": 997.5,
+          "instantaneous_x": 1.2062030973624103,
+          "passed": true,
+          "samples": 11,
+          "x": 1.187175230720517
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-034-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111515.90000000596,
+          "history_span_ms": 1000.7000000178814,
+          "instantaneous_x": 1.091599645852906,
+          "passed": true,
+          "samples": 11,
+          "x": 1.022174706938742
+        },
+        "6000": {
+          "cutoff_ms": 105516.09999999404,
+          "history_span_ms": 1004.0999999940395,
+          "instantaneous_x": 0.412564766138746,
+          "passed": true,
+          "samples": 11,
+          "x": 0.3510773091503969
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-035-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111339.39999997616,
+          "history_span_ms": 1000.7999999821186,
+          "instantaneous_x": 1.2329713632200976,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2150539514245302
+        },
+        "6000": {
+          "cutoff_ms": 105337.59999999404,
+          "history_span_ms": 995.0,
+          "instantaneous_x": 1.0415724230742363,
+          "passed": true,
+          "samples": 11,
+          "x": 1.3105380150938901
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-036-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111395.19999998808,
+          "history_span_ms": 999.6999999880791,
+          "instantaneous_x": 1.193021031348127,
+          "passed": true,
+          "samples": 11,
+          "x": 1.1758589865392806
+        },
+        "6000": {
+          "cutoff_ms": 105394.90000000596,
+          "history_span_ms": 998.8000000119209,
+          "instantaneous_x": 0.9655530655979983,
+          "passed": true,
+          "samples": 11,
+          "x": 0.9462101116506999
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-037-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111364.80000001192,
+          "history_span_ms": 1000.0,
+          "instantaneous_x": 1.856293348671477,
+          "passed": true,
+          "samples": 11,
+          "x": 1.814025366374831
+        },
+        "6000": {
+          "cutoff_ms": 105364.80000001192,
+          "history_span_ms": 1001.3000000119209,
+          "instantaneous_x": 1.1900193293254397,
+          "passed": true,
+          "samples": 11,
+          "x": 1.1428042674756211
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-038-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111612,
+          "history_span_ms": 1002.5999999940395,
+          "instantaneous_x": 1.2548782005747956,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2345369527743861
+        },
+        "6000": {
+          "cutoff_ms": 105611.30000001192,
+          "history_span_ms": 1002.9000000059605,
+          "instantaneous_x": 1.0606865946647155,
+          "passed": true,
+          "samples": 11,
+          "x": 1.336142374173719
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-039-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111474.40000000596,
+          "history_span_ms": 999.4000000059605,
+          "instantaneous_x": 1.3263509592289064,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2664939154910413
+        },
+        "6000": {
+          "cutoff_ms": 105474.30000001192,
+          "history_span_ms": 999.2000000178814,
+          "instantaneous_x": 0.7839896301453615,
+          "passed": true,
+          "samples": 11,
+          "x": 0.7650230688893253
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-040-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111320,
+          "history_span_ms": 1000.2000000178814,
+          "instantaneous_x": 1.6261811807910733,
+          "passed": true,
+          "samples": 11,
+          "x": 1.5631793843224084
+        },
+        "6000": {
+          "cutoff_ms": 105319.59999999404,
+          "history_span_ms": 998.9000000059605,
+          "instantaneous_x": 1.1229986548897493,
+          "passed": true,
+          "samples": 11,
+          "x": 1.1068029336185752
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-041-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111312.60000002384,
+          "history_span_ms": 1000.1000000238419,
+          "instantaneous_x": 1.2404059261110427,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2248726379115504
+        },
+        "6000": {
+          "cutoff_ms": 105313.10000002384,
+          "history_span_ms": 1000.3000000119209,
+          "instantaneous_x": 1.0439771639630293,
+          "passed": true,
+          "samples": 11,
+          "x": 1.1961352280314603
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-042-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111280.69999998808,
+          "history_span_ms": 999.9000000059605,
+          "instantaneous_x": 1.1580590618301612,
+          "passed": true,
+          "samples": 11,
+          "x": 1.1369963054636416
+        },
+        "6000": {
+          "cutoff_ms": 105280.69999998808,
+          "history_span_ms": 999.5999999940395,
+          "instantaneous_x": 1.251923857464491,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2022118416322634
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-043-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111437,
+          "history_span_ms": 1000.6999999880791,
+          "instantaneous_x": 0.6781638739900174,
+          "passed": true,
+          "samples": 11,
+          "x": 0.6156890190112864
+        },
+        "6000": {
+          "cutoff_ms": 105438.90000000596,
+          "history_span_ms": 1001.7999999821186,
+          "instantaneous_x": 0.12047934846865035,
+          "passed": true,
+          "samples": 11,
+          "x": 0.08342349035641891
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-044-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111328.10000002384,
+          "history_span_ms": 1002.9000000059605,
+          "instantaneous_x": 1.2663727838819612,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2219741702336522
+        },
+        "6000": {
+          "cutoff_ms": 105324.80000001192,
+          "history_span_ms": 999.5,
+          "instantaneous_x": 0.7052878963152043,
+          "passed": true,
+          "samples": 11,
+          "x": 0.6846739487364059
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-045-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111312.09999999404,
+          "history_span_ms": 1001.0,
+          "instantaneous_x": 1.5974005451163518,
+          "passed": true,
+          "samples": 11,
+          "x": 1.5336907588095823
+        },
+        "6000": {
+          "cutoff_ms": 105312.79999998212,
+          "history_span_ms": 1002.0999999940395,
+          "instantaneous_x": 0.9380990670180263,
+          "passed": true,
+          "samples": 11,
+          "x": 0.8726131835394063
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-046-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111460.90000000596,
+          "history_span_ms": 1001.7999999821186,
+          "instantaneous_x": 0.9457515160796286,
+          "passed": true,
+          "samples": 11,
+          "x": 0.8789581285352097
+        },
+        "6000": {
+          "cutoff_ms": 105458.30000001192,
+          "history_span_ms": 999.4000000059605,
+          "instantaneous_x": 0.2656913256497004,
+          "passed": true,
+          "samples": 11,
+          "x": 0.21766722014540543
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-047-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111458.59999999404,
+          "history_span_ms": 1003.7000000178814,
+          "instantaneous_x": 1.2550559217351482,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2416959603129432
+        },
+        "6000": {
+          "cutoff_ms": 105455.59999999404,
+          "history_span_ms": 999.9000000059605,
+          "instantaneous_x": 1.0771787257785723,
+          "passed": true,
+          "samples": 11,
+          "x": 1.3164940406366075
+        }
+      },
+      "repetition": 2
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-048-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111321.5,
+          "history_span_ms": 1001.5999999940395,
+          "instantaneous_x": 1.276150019864605,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2563641396381404
+        },
+        "6000": {
+          "cutoff_ms": 105319.70000001788,
+          "history_span_ms": 993.5,
+          "instantaneous_x": 1.0944022911737412,
+          "passed": true,
+          "samples": 11,
+          "x": 1.4228721378012756
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-049-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111452.09999999404,
+          "history_span_ms": 1001.0999999940395,
+          "instantaneous_x": 1.6773440622330793,
+          "passed": true,
+          "samples": 11,
+          "x": 1.6136090613060345
+        },
+        "6000": {
+          "cutoff_ms": 105451.70000001788,
+          "history_span_ms": 1000.9000000059605,
+          "instantaneous_x": 1.1340697610611992,
+          "passed": true,
+          "samples": 11,
+          "x": 1.113193584810387
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-050-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111316.09999999404,
+          "history_span_ms": 1002.0,
+          "instantaneous_x": 0.8977515719150165,
+          "passed": true,
+          "samples": 11,
+          "x": 0.8404153768854695
+        },
+        "6000": {
+          "cutoff_ms": 105313.79999998212,
+          "history_span_ms": 999.5,
+          "instantaneous_x": 0.23872572714612827,
+          "passed": true,
+          "samples": 11,
+          "x": 0.19650808256079932
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-051-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111360.80000001192,
+          "history_span_ms": 1018.3000000119209,
+          "instantaneous_x": 0.9480580528578669,
+          "passed": true,
+          "samples": 11,
+          "x": 0.8779485608000923
+        },
+        "6000": {
+          "cutoff_ms": 105369.60000002384,
+          "history_span_ms": 1000.0,
+          "instantaneous_x": 0.2610734129271849,
+          "passed": true,
+          "samples": 11,
+          "x": 0.22411053413696594
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-052-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111459.70000001788,
+          "history_span_ms": 1014.8000000119209,
+          "instantaneous_x": 1.3050739918889511,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2578233279935402
+        },
+        "6000": {
+          "cutoff_ms": 105444.90000000596,
+          "history_span_ms": 999.2999999821186,
+          "instantaneous_x": 1.0205256697808456,
+          "passed": true,
+          "samples": 11,
+          "x": 1.0035756569796643
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-053-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111423.90000000596,
+          "history_span_ms": 1000.5999999940395,
+          "instantaneous_x": 1.092744626939364,
+          "passed": true,
+          "samples": 11,
+          "x": 1.0202814219353402
+        },
+        "6000": {
+          "cutoff_ms": 105425,
+          "history_span_ms": 1026.5999999940395,
+          "instantaneous_x": 0.5850932991420912,
+          "passed": true,
+          "samples": 11,
+          "x": 0.5622056494406165
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-054-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111517.69999998808,
+          "history_span_ms": 1002.1999999880791,
+          "instantaneous_x": 1.289251368748291,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2701869595116584
+        },
+        "6000": {
+          "cutoff_ms": 105515.5,
+          "history_span_ms": 998.1000000238419,
+          "instantaneous_x": 1.1052087234281835,
+          "passed": true,
+          "samples": 11,
+          "x": 1.3326214250425812
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_volga_lock_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-055-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111358,
+          "history_span_ms": 1000.1999999880791,
+          "instantaneous_x": 0.8619394884587211,
+          "passed": true,
+          "samples": 11,
+          "x": 0.8015761842162866
+        },
+        "6000": {
+          "cutoff_ms": 105356.80000001192,
+          "history_span_ms": 998.6000000238419,
+          "instantaneous_x": 0.5077368044074617,
+          "passed": true,
+          "samples": 11,
+          "x": 0.48192311584299363
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-056-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111540.70000001788,
+          "history_span_ms": 999.0999999940395,
+          "instantaneous_x": 1.4984336824309976,
+          "passed": true,
+          "samples": 11,
+          "x": 1.4846803992553725
+        },
+        "6000": {
+          "cutoff_ms": 105541.20000001788,
+          "history_span_ms": 999.5,
+          "instantaneous_x": 1.3329416098323774,
+          "passed": true,
+          "samples": 11,
+          "x": 1.3213089709090127
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-057-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111548.79999998212,
+          "history_span_ms": 1000.6999999880791,
+          "instantaneous_x": 0.8013325141733856,
+          "passed": true,
+          "samples": 11,
+          "x": 0.7758565859992115
+        },
+        "6000": {
+          "cutoff_ms": 105552.90000000596,
+          "history_span_ms": 1004.4000000059605,
+          "instantaneous_x": 0.5027562689006388,
+          "passed": true,
+          "samples": 11,
+          "x": 0.47646932744717413
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-058-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111578.40000000596,
+          "history_span_ms": 999.5,
+          "instantaneous_x": 1.234664403941384,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2165866896769635
+        },
+        "6000": {
+          "cutoff_ms": 105578.60000002384,
+          "history_span_ms": 999.1000000238419,
+          "instantaneous_x": 1.0337436626896432,
+          "passed": true,
+          "samples": 11,
+          "x": 1.3918405289138625
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-059-support",
+      "input_x": 1.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111375.90000000596,
+          "history_span_ms": 999.0999999940395,
+          "instantaneous_x": 1.2699415786728208,
+          "passed": true,
+          "samples": 11,
+          "x": 1.2511776940011212
+        },
+        "6000": {
+          "cutoff_ms": 105375.80000001192,
+          "history_span_ms": 999.1000000238419,
+          "instantaneous_x": 1.0854300952435219,
+          "passed": true,
+          "samples": 11,
+          "x": 1.4317867407680722
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-060-support",
+      "input_x": 1.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111415.59999999404,
+          "history_span_ms": 999.9000000059605,
+          "instantaneous_x": 1.213812602216494,
+          "passed": true,
+          "samples": 11,
+          "x": 1.193487706696311
+        },
+        "6000": {
+          "cutoff_ms": 105416.40000000596,
+          "history_span_ms": 1000.7000000178814,
+          "instantaneous_x": 1.5469492658282837,
+          "passed": true,
+          "samples": 11,
+          "x": 1.508460934115915
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-061-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111385.70000001788,
+          "history_span_ms": 1001.8000000119209,
+          "instantaneous_x": 1.0518412058841249,
+          "passed": true,
+          "samples": 11,
+          "x": 1.0076927345324254
+        },
+        "6000": {
+          "cutoff_ms": 105384.5,
+          "history_span_ms": 1000.1999999880791,
+          "instantaneous_x": 0.3945426772926686,
+          "passed": true,
+          "samples": 11,
+          "x": 0.34195197411008377
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-062-support",
+      "input_x": 0.0,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "ascending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111428.19999998808,
+          "history_span_ms": 1023.2999999821186,
+          "instantaneous_x": 1.2740445323626464,
+          "passed": true,
+          "samples": 11,
+          "x": 1.223552674563729
+        },
+        "6000": {
+          "cutoff_ms": 105427.79999998212,
+          "history_span_ms": 1000.0,
+          "instantaneous_x": 0.6148756561877068,
+          "passed": true,
+          "samples": 11,
+          "x": 0.5586909637618312
+        }
+      },
+      "repetition": 3
+    },
+    {
+      "content_id": "content_kampar_boating_01",
+      "entry_checks": {
+        "frozen_first_P2_tag": false
+      },
+      "entry_passed": false,
+      "first_P2_age_ms": null,
+      "id": "m9r-phase-v-063-support",
+      "input_x": 0.5,
+      "maximum_past_three_second_target_distance_octaves": null,
+      "prefix": "descending_prefix",
+      "probe_censuses": {
+        "12000": {
+          "cutoff_ms": 111375.79999998212,
+          "history_span_ms": 1001.0,
+          "instantaneous_x": 1.786822993570976,
+          "passed": true,
+          "samples": 11,
+          "x": 1.7192627135836516
+        },
+        "6000": {
+          "cutoff_ms": 105375.19999998808,
+          "history_span_ms": 992.5,
+          "instantaneous_x": 1.0928149743926174,
+          "passed": true,
+          "samples": 11,
+          "x": 1.053103682095719
+        }
+      },
+      "repetition": 3
+    }
+  ],
+  "source_H1_definition_sha256": "216ac3544fbbd08e45c5fb096c01ce7d735450ab9c36851aa4729eb2201631b3",
+  "state_records_sha256": "5ac129820b64321ee1cb6725e126fc3bdfe5438e84990a9992450f8f51f37e6a"
+}

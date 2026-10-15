@@ -1,0 +1,22 @@
+{
+  "M5_causal_history_result_preserved": true,
+  "M8_dynamic_asymmetry_preserved": true,
+  "P2_qualified": false,
+  "abi": "native_phase_state_m9r_next_decision_v1",
+  "actions_or_controller": false,
+  "compact_state_search_closed_on_M9R": true,
+  "conditioning_duration_derived": false,
+  "inherited_gates_passed": false,
+  "matched_four_pair_strata": {
+    "B0": 42,
+    "compact": 13,
+    "total": 64
+  },
+  "next_if_qualified": "New untouched phase-state conditioning validation with separately registered measured-family transfer; no old allocation or action session",
+  "next_if_unqualified": "Fresh prospective instrumentation study of omitted queue/RTT/encoder histories, selected only after this residual audit; no new feature evaluation on M9R validation",
+  "old_successor_allocations_opened": false,
+  "registered_P2_qualified": false,
+  "residuals_quantified_before_additional_features": true,
+  "scope": "This finite rule/matching representation and these reused contents/controlled inputs only; not a proof that every compact observable representation fails",
+  "selected_next_step": "fresh omitted-history instrumentation design"
+}

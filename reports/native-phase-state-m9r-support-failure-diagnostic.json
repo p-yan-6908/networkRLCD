@@ -1,0 +1,1238 @@
+{
+  "P2_accuracy_reason": "no positive P2 predictions; support absent, not a zero-percent precision estimate",
+  "P2_first_tags": 0,
+  "P2_positive_predictive_accuracy": null,
+  "abi": "native_phase_state_m9r_registered_component_diagnostic_v1",
+  "all_64_D1_onsets_right_censored_after_ms": 55000,
+  "bitrate_actions_or_controller_fitting": false,
+  "causal_components": {
+    "D1": {
+      "fail": 2130,
+      "pass": 1070
+    },
+    "past_M8_response_envelope": {
+      "fail": 336,
+      "pass": 2864
+    },
+    "six_second_acknowledged_service": {
+      "fail": 20,
+      "pass": 3180
+    },
+    "six_second_contrast": {
+      "fail": 2885,
+      "pass": 315
+    },
+    "six_second_eligible": {
+      "fail": 0,
+      "pass": 3200
+    },
+    "six_second_frozen_caliper": {
+      "fail": 3198,
+      "pass": 2
+    }
+  },
+  "cells": [
+    {
+      "P2_components": {
+        "D1": {
+          "fail": 396,
+          "pass": 4
+        },
+        "past_M8_response_envelope": {
+          "fail": 0,
+          "pass": 400
+        },
+        "six_second_acknowledged_service": {
+          "fail": 0,
+          "pass": 400
+        },
+        "six_second_contrast": {
+          "fail": 339,
+          "pass": 61
+        },
+        "six_second_eligible": {
+          "fail": 0,
+          "pass": 400
+        },
+        "six_second_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        }
+      },
+      "content": "content_kampar_boating_01",
+      "future_components": {
+        "future_drift_at_fixed_seconds": {
+          "fail": 400,
+          "pass": 0
+        },
+        "future_in_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        },
+        "future_observable": {
+          "fail": 0,
+          "pass": 400
+        },
+        "original_bwe_bounds": {
+          "fail": 0,
+          "pass": 400
+        }
+      },
+      "input_x": 0.0,
+      "native_originals": 8,
+      "nested_grid_measurements": 400
+    },
+    {
+      "P2_components": {
+        "D1": {
+          "fail": 365,
+          "pass": 35
+        },
+        "past_M8_response_envelope": {
+          "fail": 0,
+          "pass": 400
+        },
+        "six_second_acknowledged_service": {
+          "fail": 2,
+          "pass": 398
+        },
+        "six_second_contrast": {
+          "fail": 347,
+          "pass": 53
+        },
+        "six_second_eligible": {
+          "fail": 0,
+          "pass": 400
+        },
+        "six_second_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        }
+      },
+      "content": "content_kampar_boating_01",
+      "future_components": {
+        "future_drift_at_fixed_seconds": {
+          "fail": 400,
+          "pass": 0
+        },
+        "future_in_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        },
+        "future_observable": {
+          "fail": 0,
+          "pass": 400
+        },
+        "original_bwe_bounds": {
+          "fail": 0,
+          "pass": 400
+        }
+      },
+      "input_x": 0.5,
+      "native_originals": 8,
+      "nested_grid_measurements": 400
+    },
+    {
+      "P2_components": {
+        "D1": {
+          "fail": 148,
+          "pass": 252
+        },
+        "past_M8_response_envelope": {
+          "fail": 85,
+          "pass": 315
+        },
+        "six_second_acknowledged_service": {
+          "fail": 4,
+          "pass": 396
+        },
+        "six_second_contrast": {
+          "fail": 370,
+          "pass": 30
+        },
+        "six_second_eligible": {
+          "fail": 0,
+          "pass": 400
+        },
+        "six_second_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        }
+      },
+      "content": "content_kampar_boating_01",
+      "future_components": {
+        "future_drift_at_fixed_seconds": {
+          "fail": 388,
+          "pass": 12
+        },
+        "future_in_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        },
+        "future_observable": {
+          "fail": 0,
+          "pass": 400
+        },
+        "original_bwe_bounds": {
+          "fail": 0,
+          "pass": 400
+        }
+      },
+      "input_x": 1.0,
+      "native_originals": 8,
+      "nested_grid_measurements": 400
+    },
+    {
+      "P2_components": {
+        "D1": {
+          "fail": 148,
+          "pass": 252
+        },
+        "past_M8_response_envelope": {
+          "fail": 81,
+          "pass": 319
+        },
+        "six_second_acknowledged_service": {
+          "fail": 1,
+          "pass": 399
+        },
+        "six_second_contrast": {
+          "fail": 386,
+          "pass": 14
+        },
+        "six_second_eligible": {
+          "fail": 0,
+          "pass": 400
+        },
+        "six_second_frozen_caliper": {
+          "fail": 399,
+          "pass": 1
+        }
+      },
+      "content": "content_kampar_boating_01",
+      "future_components": {
+        "future_drift_at_fixed_seconds": {
+          "fail": 395,
+          "pass": 5
+        },
+        "future_in_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        },
+        "future_observable": {
+          "fail": 0,
+          "pass": 400
+        },
+        "original_bwe_bounds": {
+          "fail": 0,
+          "pass": 400
+        }
+      },
+      "input_x": 1.5,
+      "native_originals": 8,
+      "nested_grid_measurements": 400
+    },
+    {
+      "P2_components": {
+        "D1": {
+          "fail": 396,
+          "pass": 4
+        },
+        "past_M8_response_envelope": {
+          "fail": 0,
+          "pass": 400
+        },
+        "six_second_acknowledged_service": {
+          "fail": 3,
+          "pass": 397
+        },
+        "six_second_contrast": {
+          "fail": 347,
+          "pass": 53
+        },
+        "six_second_eligible": {
+          "fail": 0,
+          "pass": 400
+        },
+        "six_second_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        }
+      },
+      "content": "content_volga_lock_01",
+      "future_components": {
+        "future_drift_at_fixed_seconds": {
+          "fail": 400,
+          "pass": 0
+        },
+        "future_in_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        },
+        "future_observable": {
+          "fail": 0,
+          "pass": 400
+        },
+        "original_bwe_bounds": {
+          "fail": 0,
+          "pass": 400
+        }
+      },
+      "input_x": 0.0,
+      "native_originals": 8,
+      "nested_grid_measurements": 400
+    },
+    {
+      "P2_components": {
+        "D1": {
+          "fail": 361,
+          "pass": 39
+        },
+        "past_M8_response_envelope": {
+          "fail": 0,
+          "pass": 400
+        },
+        "six_second_acknowledged_service": {
+          "fail": 1,
+          "pass": 399
+        },
+        "six_second_contrast": {
+          "fail": 356,
+          "pass": 44
+        },
+        "six_second_eligible": {
+          "fail": 0,
+          "pass": 400
+        },
+        "six_second_frozen_caliper": {
+          "fail": 399,
+          "pass": 1
+        }
+      },
+      "content": "content_volga_lock_01",
+      "future_components": {
+        "future_drift_at_fixed_seconds": {
+          "fail": 399,
+          "pass": 1
+        },
+        "future_in_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        },
+        "future_observable": {
+          "fail": 0,
+          "pass": 400
+        },
+        "original_bwe_bounds": {
+          "fail": 0,
+          "pass": 400
+        }
+      },
+      "input_x": 0.5,
+      "native_originals": 8,
+      "nested_grid_measurements": 400
+    },
+    {
+      "P2_components": {
+        "D1": {
+          "fail": 156,
+          "pass": 244
+        },
+        "past_M8_response_envelope": {
+          "fail": 85,
+          "pass": 315
+        },
+        "six_second_acknowledged_service": {
+          "fail": 4,
+          "pass": 396
+        },
+        "six_second_contrast": {
+          "fail": 365,
+          "pass": 35
+        },
+        "six_second_eligible": {
+          "fail": 0,
+          "pass": 400
+        },
+        "six_second_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        }
+      },
+      "content": "content_volga_lock_01",
+      "future_components": {
+        "future_drift_at_fixed_seconds": {
+          "fail": 400,
+          "pass": 0
+        },
+        "future_in_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        },
+        "future_observable": {
+          "fail": 0,
+          "pass": 400
+        },
+        "original_bwe_bounds": {
+          "fail": 0,
+          "pass": 400
+        }
+      },
+      "input_x": 1.0,
+      "native_originals": 8,
+      "nested_grid_measurements": 400
+    },
+    {
+      "P2_components": {
+        "D1": {
+          "fail": 160,
+          "pass": 240
+        },
+        "past_M8_response_envelope": {
+          "fail": 85,
+          "pass": 315
+        },
+        "six_second_acknowledged_service": {
+          "fail": 5,
+          "pass": 395
+        },
+        "six_second_contrast": {
+          "fail": 375,
+          "pass": 25
+        },
+        "six_second_eligible": {
+          "fail": 0,
+          "pass": 400
+        },
+        "six_second_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        }
+      },
+      "content": "content_volga_lock_01",
+      "future_components": {
+        "future_drift_at_fixed_seconds": {
+          "fail": 391,
+          "pass": 9
+        },
+        "future_in_frozen_caliper": {
+          "fail": 400,
+          "pass": 0
+        },
+        "future_observable": {
+          "fail": 0,
+          "pass": 400
+        },
+        "original_bwe_bounds": {
+          "fail": 0,
+          "pass": 400
+        }
+      },
+      "input_x": 1.5,
+      "native_originals": 8,
+      "nested_grid_measurements": 400
+    }
+  ],
+  "classification": "qualified acquisition; prospective state-coverage failure",
+  "extra_queue_RTT_encoder_features_read": false,
+  "fully_covered_compact_matching_strata": [
+    {
+      "age_ms": 24000,
+      "all_four_future_distributions_within_original_bound": false,
+      "content": "content_kampar_boating_01",
+      "current_differences_octaves": [
+        0.13243196206410346,
+        -0.04874585061365755,
+        0.17816803368027567,
+        0.0034573587390140936
+      ],
+      "future_change_residuals_octaves": [
+        -0.10229953490442278,
+        -0.008743513557126548,
+        -0.23675489793068172,
+        -0.027752105655552084
+      ],
+      "future_maximum_one_second_mean_differences_octaves": [
+        0.14141087969461763,
+        0.47373805823152426,
+        0.29146528547893924,
+        0.31327528247347725
+      ],
+      "future_mean_differences_octaves": [
+        0.030132427159680675,
+        -0.057489364170784096,
+        -0.058586864250406046,
+        -0.02429474691653799
+      ],
+      "future_w_infinity_octaves": [
+        0.22452341372339335,
+        0.27481577237014354,
+        0.15528252014946198,
+        0.25500899269414823
+      ],
+      "independent_pairs": 4,
+      "input_x": 1.0,
+      "unconditional_prefix_uncertainty": {
+        "estimable_four_pairs": true,
+        "exact_two_sided_sign_flip_p": 0.375,
+        "minimum_attainable_two_sided_p": 0.125,
+        "paired_values": {
+          "maximum": 0.030132427159680675,
+          "mean": -0.027559637044511864,
+          "minimum": -0.058586864250406046,
+          "n": 4,
+          "values": [
+            0.030132427159680675,
+            -0.057489364170784096,
+            -0.058586864250406046,
+            -0.02429474691653799
+          ]
+        },
+        "permutation_assignments": 16,
+        "scope": "four paired native contexts; no broad population interval"
+      }
+    },
+    {
+      "age_ms": 6000,
+      "all_four_future_distributions_within_original_bound": true,
+      "content": "content_kampar_boating_01",
+      "current_differences_octaves": [
+        -0.009136345892845954,
+        0.008896767248292858,
+        0.007354577080041835,
+        -0.0034642109076626904
+      ],
+      "future_change_residuals_octaves": [
+        0.0017174454321052801,
+        0.00865229620036928,
+        -0.001924292089041879,
+        0.023630612631652004
+      ],
+      "future_maximum_one_second_mean_differences_octaves": [
+        0.011348142169745445,
+        0.021656575693165148,
+        0.006923481134475384,
+        0.022044122942056488
+      ],
+      "future_mean_differences_octaves": [
+        -0.007418900460740674,
+        0.01754906344866214,
+        0.005430284990999956,
+        0.020166401723989313
+      ],
+      "future_w_infinity_octaves": [
+        0.037880918092181526,
+        0.04385862807783869,
+        0.040464495480806884,
+        0.05225375570877144
+      ],
+      "independent_pairs": 4,
+      "input_x": 1.5,
+      "unconditional_prefix_uncertainty": {
+        "estimable_four_pairs": true,
+        "exact_two_sided_sign_flip_p": 0.375,
+        "minimum_attainable_two_sided_p": 0.125,
+        "paired_values": {
+          "maximum": 0.020166401723989313,
+          "mean": 0.008931712425727684,
+          "minimum": -0.007418900460740674,
+          "n": 4,
+          "values": [
+            -0.007418900460740674,
+            0.01754906344866214,
+            0.005430284990999956,
+            0.020166401723989313
+          ]
+        },
+        "permutation_assignments": 16,
+        "scope": "four paired native contexts; no broad population interval"
+      }
+    },
+    {
+      "age_ms": 12000,
+      "all_four_future_distributions_within_original_bound": true,
+      "content": "content_kampar_boating_01",
+      "current_differences_octaves": [
+        -0.009096798511356363,
+        0.029679041092307568,
+        0.005715563624111519,
+        0.03846221975558528
+      ],
+      "future_change_residuals_octaves": [
+        0.03655956278182204,
+        -0.019698017887085584,
+        -0.0012213029435215184,
+        -0.009760687461537909
+      ],
+      "future_maximum_one_second_mean_differences_octaves": [
+        0.09180767204890294,
+        0.02046734300495512,
+        0.025524321934931926,
+        0.10373542589233486
+      ],
+      "future_mean_differences_octaves": [
+        0.027462764270465678,
+        0.009981023205221984,
+        0.004494260680590001,
+        0.02870153229404737
+      ],
+      "future_w_infinity_octaves": [
+        0.05528843306068687,
+        0.03695801184053371,
+        0.03583710390645445,
+        0.07282197894710274
+      ],
+      "independent_pairs": 4,
+      "input_x": 1.5,
+      "unconditional_prefix_uncertainty": {
+        "estimable_four_pairs": true,
+        "exact_two_sided_sign_flip_p": 0.125,
+        "minimum_attainable_two_sided_p": 0.125,
+        "paired_values": {
+          "maximum": 0.02870153229404737,
+          "mean": 0.01765989511258126,
+          "minimum": 0.004494260680590001,
+          "n": 4,
+          "values": [
+            0.027462764270465678,
+            0.009981023205221984,
+            0.004494260680590001,
+            0.02870153229404737
+          ]
+        },
+        "permutation_assignments": 16,
+        "scope": "four paired native contexts; no broad population interval"
+      }
+    },
+    {
+      "age_ms": 24000,
+      "all_four_future_distributions_within_original_bound": true,
+      "content": "content_kampar_boating_01",
+      "current_differences_octaves": [
+        0.010679333215314557,
+        -0.00016898693625200245,
+        0.031891551207255064,
+        0.004422485900795525
+      ],
+      "future_change_residuals_octaves": [
+        2.6941366113364396e-05,
+        -0.005490047588490032,
+        -0.013525084563596135,
+        0.009603031637453796
+      ],
+      "future_maximum_one_second_mean_differences_octaves": [
+        0.017128464042295954,
+        0.008947143490981357,
+        0.021937603757012925,
+        0.019701384025685664
+      ],
+      "future_mean_differences_octaves": [
+        0.010706274581427921,
+        -0.005659034524742035,
+        0.01836646664365893,
+        0.014025517538249321
+      ],
+      "future_w_infinity_octaves": [
+        0.025959884567656744,
+        0.014249466178127168,
+        0.029478423147375254,
+        0.02218461973266006
+      ],
+      "independent_pairs": 4,
+      "input_x": 1.5,
+      "unconditional_prefix_uncertainty": {
+        "estimable_four_pairs": true,
+        "exact_two_sided_sign_flip_p": 0.25,
+        "minimum_attainable_two_sided_p": 0.125,
+        "paired_values": {
+          "maximum": 0.01836646664365893,
+          "mean": 0.009359806059648534,
+          "minimum": -0.005659034524742035,
+          "n": 4,
+          "values": [
+            0.010706274581427921,
+            -0.005659034524742035,
+            0.01836646664365893,
+            0.014025517538249321
+          ]
+        },
+        "permutation_assignments": 16,
+        "scope": "four paired native contexts; no broad population interval"
+      }
+    },
+    {
+      "age_ms": 32000,
+      "all_four_future_distributions_within_original_bound": false,
+      "content": "content_kampar_boating_01",
+      "current_differences_octaves": [
+        0.005998455528476887,
+        -0.007212356314217239,
+        0.01982022294196173,
+        0.006450726376800331
+      ],
+      "future_change_residuals_octaves": [
+        0.09290768689221207,
+        0.006168137591801237,
+        0.03831469393903708,
+        0.052554337447301425
+      ],
+      "future_maximum_one_second_mean_differences_octaves": [
+        0.48283115361557716,
+        0.04207959238342318,
+        0.38015894112299686,
+        0.33886098526095765
+      ],
+      "future_mean_differences_octaves": [
+        0.09890614242068896,
+        -0.0010442187224160016,
+        0.05813491688099881,
+        0.059005063824101756
+      ],
+      "future_w_infinity_octaves": [
+        0.34446570864485904,
+        0.29162746578243004,
+        0.33572900668505334,
+        0.33230183551424974
+      ],
+      "independent_pairs": 4,
+      "input_x": 1.5,
+      "unconditional_prefix_uncertainty": {
+        "estimable_four_pairs": true,
+        "exact_two_sided_sign_flip_p": 0.25,
+        "minimum_attainable_two_sided_p": 0.125,
+        "paired_values": {
+          "maximum": 0.09890614242068896,
+          "mean": 0.05375047610084338,
+          "minimum": -0.0010442187224160016,
+          "n": 4,
+          "values": [
+            0.09890614242068896,
+            -0.0010442187224160016,
+            0.05813491688099881,
+            0.059005063824101756
+          ]
+        },
+        "permutation_assignments": 16,
+        "scope": "four paired native contexts; no broad population interval"
+      }
+    },
+    {
+      "age_ms": 48000,
+      "all_four_future_distributions_within_original_bound": false,
+      "content": "content_kampar_boating_01",
+      "current_differences_octaves": [
+        -0.04602983686785289,
+        0.0003535423814071681,
+        -0.023133545338930306,
+        0.012182837803980773
+      ],
+      "future_change_residuals_octaves": [
+        0.11872622361394436,
+        -0.00022577465479711734,
+        0.05900093599893785,
+        0.08468430713683572
+      ],
+      "future_maximum_one_second_mean_differences_octaves": [
+        0.4232977819375825,
+        0.029827445771326122,
+        0.4509205155476239,
+        0.459243180881699
+      ],
+      "future_mean_differences_octaves": [
+        0.07269638674609147,
+        0.00012776772661005076,
+        0.03586739066000755,
+        0.0968671449408165
+      ],
+      "future_w_infinity_octaves": [
+        0.28708230210450836,
+        0.2709478648332795,
+        0.3038094725705274,
+        0.263095416018323
+      ],
+      "independent_pairs": 4,
+      "input_x": 1.5,
+      "unconditional_prefix_uncertainty": {
+        "estimable_four_pairs": true,
+        "exact_two_sided_sign_flip_p": 0.125,
+        "minimum_attainable_two_sided_p": 0.125,
+        "paired_values": {
+          "maximum": 0.0968671449408165,
+          "mean": 0.05138967251838139,
+          "minimum": 0.00012776772661005076,
+          "n": 4,
+          "values": [
+            0.07269638674609147,
+            0.00012776772661005076,
+            0.03586739066000755,
+            0.0968671449408165
+          ]
+        },
+        "permutation_assignments": 16,
+        "scope": "four paired native contexts; no broad population interval"
+      }
+    },
+    {
+      "age_ms": 24000,
+      "all_four_future_distributions_within_original_bound": false,
+      "content": "content_volga_lock_01",
+      "current_differences_octaves": [
+        -0.10295429196519168,
+        -0.039160922315292446,
+        -0.002056121583239978,
+        0.05709285974992928
+      ],
+      "future_change_residuals_octaves": [
+        0.11553076064039952,
+        0.11786088775978798,
+        0.14938524213629523,
+        -0.02846073247150316
+      ],
+      "future_maximum_one_second_mean_differences_octaves": [
+        0.31037311498496506,
+        0.37983460044206724,
+        0.4267845756801962,
+        0.07873811240170592
+      ],
+      "future_mean_differences_octaves": [
+        0.012576468675207841,
+        0.07869996544449553,
+        0.14732912055305525,
+        0.028632127278426123
+      ],
+      "future_w_infinity_octaves": [
+        0.15174128491829625,
+        0.1850538065307879,
+        0.2682580012886167,
+        0.17537707855592466
+      ],
+      "independent_pairs": 4,
+      "input_x": 0.5,
+      "unconditional_prefix_uncertainty": {
+        "estimable_four_pairs": true,
+        "exact_two_sided_sign_flip_p": 0.125,
+        "minimum_attainable_two_sided_p": 0.125,
+        "paired_values": {
+          "maximum": 0.14732912055305525,
+          "mean": 0.06680942048779619,
+          "minimum": 0.012576468675207841,
+          "n": 4,
+          "values": [
+            0.012576468675207841,
+            0.07869996544449553,
+            0.14732912055305525,
+            0.028632127278426123
+          ]
+        },
+        "permutation_assignments": 16,
+        "scope": "four paired native contexts; no broad population interval"
+      }
+    },
+    {
+      "age_ms": 6000,
+      "all_four_future_distributions_within_original_bound": true,
+      "content": "content_volga_lock_01",
+      "current_differences_octaves": [
+        0.05425287433212245,
+        -0.021492981843777847,
+        0.026480097282200687,
+        0.0035053154698439504
+      ],
+      "future_change_residuals_octaves": [
+        -0.01191858189740691,
+        -0.01168077185616595,
+        0.13124035388385313,
+        -0.021336579771179365
+      ],
+      "future_maximum_one_second_mean_differences_octaves": [
+        0.04554909741433821,
+        0.034665222532994866,
+        0.18834996948950955,
+        0.023160772752031544
+      ],
+      "future_mean_differences_octaves": [
+        0.04233429243471554,
+        -0.0331737536999438,
+        0.15772045116605382,
+        -0.017831264301335414
+      ],
+      "future_w_infinity_octaves": [
+        0.07684741536308248,
+        0.0712279763360667,
+        0.21121916214101488,
+        0.05583103938026568
+      ],
+      "independent_pairs": 4,
+      "input_x": 1.0,
+      "unconditional_prefix_uncertainty": {
+        "estimable_four_pairs": true,
+        "exact_two_sided_sign_flip_p": 0.625,
+        "minimum_attainable_two_sided_p": 0.125,
+        "paired_values": {
+          "maximum": 0.15772045116605382,
+          "mean": 0.037262431399872536,
+          "minimum": -0.0331737536999438,
+          "n": 4,
+          "values": [
+            0.04233429243471554,
+            -0.0331737536999438,
+            0.15772045116605382,
+            -0.017831264301335414
+          ]
+        },
+        "permutation_assignments": 16,
+        "scope": "four paired native contexts; no broad population interval"
+      }
+    },
+    {
+      "age_ms": 24000,
+      "all_four_future_distributions_within_original_bound": true,
+      "content": "content_volga_lock_01",
+      "current_differences_octaves": [
+        -0.018360546971971425,
+        -0.002933881173873276,
+        0.040423560805410874,
+        -0.02675913984753897
+      ],
+      "future_change_residuals_octaves": [
+        -0.012165544460998046,
+        -0.038902680818058144,
+        0.03750771757891225,
+        0.016117102293227048
+      ],
+      "future_maximum_one_second_mean_differences_octaves": [
+        0.10223300125203272,
+        0.19412766568877737,
+        0.4312928604264339,
+        0.02318434266390912
+      ],
+      "future_mean_differences_octaves": [
+        -0.03052609143296947,
+        -0.04183656199193142,
+        0.07793127838432312,
+        -0.010642037554311923
+      ],
+      "future_w_infinity_octaves": [
+        0.22078072421330397,
+        0.23373964531226377,
+        0.23391520171527458,
+        0.2154853619930972
+      ],
+      "independent_pairs": 4,
+      "input_x": 1.0,
+      "unconditional_prefix_uncertainty": {
+        "estimable_four_pairs": true,
+        "exact_two_sided_sign_flip_p": 1.0,
+        "minimum_attainable_two_sided_p": 0.125,
+        "paired_values": {
+          "maximum": 0.07793127838432312,
+          "mean": -0.001268353148722423,
+          "minimum": -0.04183656199193142,
+          "n": 4,
+          "values": [
+            -0.03052609143296947,
+            -0.04183656199193142,
+            0.07793127838432312,
+            -0.010642037554311923
+          ]
+        },
+        "permutation_assignments": 16,
+        "scope": "four paired native contexts; no broad population interval"
+      }
+    },
+    {
+      "age_ms": 32000,
+      "all_four_future_distributions_within_original_bound": true,
+      "content": "content_volga_lock_01",
+      "current_differences_octaves": [
+        -0.01580908277547699,
+        -0.040516660984146746,
+        -0.06618561539656953,
+        0.007878346927270519
+      ],
+      "future_change_residuals_octaves": [
+        0.003325409926245193,
+        -0.004761163792616929,
+        -0.0015195416177523624,
+        0.0072549037660302185
+      ],
+      "future_maximum_one_second_mean_differences_octaves": [
+        0.021383657799296962,
+        0.050440484939124675,
+        0.07134345101246742,
+        0.020138645060472582
+      ],
+      "future_mean_differences_octaves": [
+        -0.012483672849231797,
+        -0.045277824776763675,
+        -0.06770515701432189,
+        0.015133250693300737
+      ],
+      "future_w_infinity_octaves": [
+        0.11118264486525153,
+        0.06188711748432296,
+        0.08055235371843472,
+        0.026233615258357768
+      ],
+      "independent_pairs": 4,
+      "input_x": 1.0,
+      "unconditional_prefix_uncertainty": {
+        "estimable_four_pairs": true,
+        "exact_two_sided_sign_flip_p": 0.375,
+        "minimum_attainable_two_sided_p": 0.125,
+        "paired_values": {
+          "maximum": 0.015133250693300737,
+          "mean": -0.027583350986754157,
+          "minimum": -0.06770515701432189,
+          "n": 4,
+          "values": [
+            -0.012483672849231797,
+            -0.045277824776763675,
+            -0.06770515701432189,
+            0.015133250693300737
+          ]
+        },
+        "permutation_assignments": 16,
+        "scope": "four paired native contexts; no broad population interval"
+      }
+    },
+    {
+      "age_ms": 55000,
+      "all_four_future_distributions_within_original_bound": false,
+      "content": "content_volga_lock_01",
+      "current_differences_octaves": [
+        -0.1562871492451885,
+        -0.10454526309097667,
+        -0.08059442122085403,
+        -0.08908553425824173
+      ],
+      "future_change_residuals_octaves": [
+        0.1646746873693411,
+        0.24412679261002723,
+        0.17030874257207818,
+        0.21626600145964603
+      ],
+      "future_maximum_one_second_mean_differences_octaves": [
+        0.3649931001962592,
+        0.4436856559125524,
+        0.38849369449480986,
+        0.43627867760828076
+      ],
+      "future_mean_differences_octaves": [
+        0.008387538124152605,
+        0.13958152951905056,
+        0.08971432135122415,
+        0.1271804672014043
+      ],
+      "future_w_infinity_octaves": [
+        0.16915506733722885,
+        0.30547532283917,
+        0.21937832348564779,
+        0.2938914572929182
+      ],
+      "independent_pairs": 4,
+      "input_x": 1.0,
+      "unconditional_prefix_uncertainty": {
+        "estimable_four_pairs": true,
+        "exact_two_sided_sign_flip_p": 0.125,
+        "minimum_attainable_two_sided_p": 0.125,
+        "paired_values": {
+          "maximum": 0.13958152951905056,
+          "mean": 0.0912159640489579,
+          "minimum": 0.008387538124152605,
+          "n": 4,
+          "values": [
+            0.008387538124152605,
+            0.13958152951905056,
+            0.08971432135122415,
+            0.1271804672014043
+          ]
+        },
+        "permutation_assignments": 16,
+        "scope": "four paired native contexts; no broad population interval"
+      }
+    },
+    {
+      "age_ms": 32000,
+      "all_four_future_distributions_within_original_bound": false,
+      "content": "content_volga_lock_01",
+      "current_differences_octaves": [
+        0.03466323697883844,
+        0.018555103068590206,
+        0.033565411289322444,
+        0.025890646286040653
+      ],
+      "future_change_residuals_octaves": [
+        -0.029499884765229245,
+        0.018025748397056063,
+        -0.2540615458470321,
+        0.011927867023973082
+      ],
+      "future_maximum_one_second_mean_differences_octaves": [
+        0.03607793816957017,
+        0.14946937884660305,
+        0.4718801390125351,
+        0.055343590769956874
+      ],
+      "future_mean_differences_octaves": [
+        0.005163352213609196,
+        0.03658085146564627,
+        -0.22049613455770967,
+        0.037818513310013735
+      ],
+      "future_w_infinity_octaves": [
+        0.20332584430228362,
+        0.3405444275294711,
+        0.3815510148759389,
+        0.29427156275314004
+      ],
+      "independent_pairs": 4,
+      "input_x": 1.5,
+      "unconditional_prefix_uncertainty": {
+        "estimable_four_pairs": true,
+        "exact_two_sided_sign_flip_p": 1.0,
+        "minimum_attainable_two_sided_p": 0.125,
+        "paired_values": {
+          "maximum": 0.037818513310013735,
+          "mean": -0.03523335439211012,
+          "minimum": -0.22049613455770967,
+          "n": 4,
+          "values": [
+            0.005163352213609196,
+            0.03658085146564627,
+            -0.22049613455770967,
+            0.037818513310013735
+          ]
+        },
+        "permutation_assignments": 16,
+        "scope": "four paired native contexts; no broad population interval"
+      }
+    },
+    {
+      "age_ms": 48000,
+      "all_four_future_distributions_within_original_bound": false,
+      "content": "content_volga_lock_01",
+      "current_differences_octaves": [
+        -0.0005562877736018379,
+        -0.0054979361791791526,
+        0.024429474434530807,
+        0.025999889520641917
+      ],
+      "future_change_residuals_octaves": [
+        0.09655067949657337,
+        -0.00435267932395389,
+        -4.100796500394743e-05,
+        0.11294194894356302
+      ],
+      "future_maximum_one_second_mean_differences_octaves": [
+        0.5053269756529362,
+        0.012106046543248539,
+        0.2882584066468781,
+        0.46845524262722704
+      ],
+      "future_mean_differences_octaves": [
+        0.09599439172297153,
+        -0.009850615503133042,
+        0.02438846646952686,
+        0.13894183846420494
+      ],
+      "future_w_infinity_octaves": [
+        0.31136931798873113,
+        0.0175221774759573,
+        0.26580792942181874,
+        0.34841261136813517
+      ],
+      "independent_pairs": 4,
+      "input_x": 1.5,
+      "unconditional_prefix_uncertainty": {
+        "estimable_four_pairs": true,
+        "exact_two_sided_sign_flip_p": 0.25,
+        "minimum_attainable_two_sided_p": 0.125,
+        "paired_values": {
+          "maximum": 0.13894183846420494,
+          "mean": 0.06236852028839257,
+          "minimum": -0.009850615503133042,
+          "n": 4,
+          "values": [
+            0.09599439172297153,
+            -0.009850615503133042,
+            0.02438846646952686,
+            0.13894183846420494
+          ]
+        },
+        "permutation_assignments": 16,
+        "scope": "four paired native contexts; no broad population interval"
+      }
+    }
+  ],
+  "future_components": {
+    "future_drift_at_fixed_seconds": {
+      "fail": 3173,
+      "pass": 27
+    },
+    "future_in_frozen_caliper": {
+      "fail": 3200,
+      "pass": 0
+    },
+    "future_observable": {
+      "fail": 0,
+      "pass": 3200
+    },
+    "original_bwe_bounds": {
+      "fail": 0,
+      "pass": 3200
+    }
+  },
+  "interpretation": "Repeatable moving marginal distributions can occur without frozen future stability. Selected-context residuals do not isolate causal prefix effects or separate within-history native variability.",
+  "matching_coverage": {
+    "B0_four_pair_strata": 42,
+    "compact_four_pair_strata": 13,
+    "covered_strata_all_future_distributions_within_bound": 6,
+    "registered_strata": 64
+  },
+  "native_originals": 64,
+  "nested_grid_measurements": 3200,
+  "nested_measurements_are_independent": false,
+  "new_state_or_feature_evaluated": false,
+  "next_step": "Fresh causal observability/mechanism development; positive support must exist under unchanged gates before any state predictor can qualify. Do not fit additional representations on M9R.",
+  "observation_horizon_ms": 64000,
+  "positive_future_stability_labels": 0,
+  "primary_summary_sha256": "58d586dd3a42b976b649de72a28d3b269e7fc16f445f1677981b06b1fd82539d",
+  "six_second_caliper_events": [
+    {
+      "P2_components": {
+        "D1": true,
+        "past_M8_response_envelope": true,
+        "six_second_acknowledged_service": true,
+        "six_second_contrast": false,
+        "six_second_eligible": true,
+        "six_second_frozen_caliper": true
+      },
+      "age_ms": 55000,
+      "content": "content_kampar_boating_01",
+      "id": "m9r-phase-v-021-support",
+      "input_x": 1.5,
+      "long_contrast": 0.06093490118885403,
+      "prefix": "descending_prefix",
+      "recent_drift": 0.017732109935084006
+    },
+    {
+      "P2_components": {
+        "D1": false,
+        "past_M8_response_envelope": true,
+        "six_second_acknowledged_service": true,
+        "six_second_contrast": true,
+        "six_second_eligible": true,
+        "six_second_frozen_caliper": true
+      },
+      "age_ms": 7000,
+      "content": "content_volga_lock_01",
+      "id": "m9r-phase-v-004-support",
+      "input_x": 0.5,
+      "long_contrast": 0.022826934372054214,
+      "prefix": "descending_prefix",
+      "recent_drift": 0.06261855374582168
+    }
+  ],
+  "state_records_sha256": "5ac129820b64321ee1cb6725e126fc3bdfe5438e84990a9992450f8f51f37e6a"
+}

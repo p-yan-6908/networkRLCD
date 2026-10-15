@@ -1,0 +1,10 @@
+{
+  "abi": "native_phase_state_m9r_storage_v1",
+  "archive_staging_bytes": 1129409185,
+  "files_deleted": 0,
+  "incremental_external_budget_bytes": 10000000000,
+  "largest_fresh_download_bytes": 1128663040,
+  "raw_and_instrumentation_bytes": 1239240269,
+  "raw_stage_and_fresh_copy_upper_bound_bytes": 3497312494,
+  "within_budget": true
+}

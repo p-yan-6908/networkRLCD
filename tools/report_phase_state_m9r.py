@@ -26,7 +26,7 @@ def report():
             for hi,history in enumerate(m.m.PREFIXES):
                 rows=[x for x in records if x['content_id']==content and x['input_x']==level and x['prefix']==history]
                 for ri,row in enumerate(rows):
-                    pairs=[(x['age_ms']/1000,x['state']['current_x']) for x in row['entries'].values() if x['state']['census_passed']]
+                    pairs=sorted((x['age_ms']/1000,x['state']['current_x']) for x in row['entries'].values() if x['state']['census_passed'])
                     ax.plot([x[0] for x in pairs],[x[1] for x in pairs],color=colors[hi],alpha=.58,lw=1,label=history if ri==0 else None)
                     tag=row['first_tags_ms']['P2']
                     if tag is not None:
@@ -49,12 +49,13 @@ def report():
                     vals=row[method+'_conditional_change_residual']['values']
                     if vals:
                         mean=st.mean(vals);ax.errorbar(row['age_ms']/1000+offset,mean,yerr=[[mean-min(vals)],[max(vals)-mean]],fmt='o',color=color,ms=3,capsize=2)
-                        ax.annotate(str(len(vals)),(row['age_ms']/1000+offset,mean),xytext=(1,5),textcoords='offset points',fontsize=7,color=color)
+                        ax.annotate(str(len(vals)),(row['age_ms']/1000+offset,mean),xytext=((-4,-10) if method=='B0' else (2,5)),textcoords='offset points',fontsize=7,color=color)
             ax.set_title(content.replace('commons-','')+'; input '+format(.5*2**level,'.3f')+' Mbps',fontsize=10);ax.grid(alpha=.2)
             if ci==1:ax.set_xlabel('Causal matching landmark (s)')
-            if j==0:ax.set_ylabel('Prefix difference in subsequent BWE change (octaves)')
+    fig.supylabel('Prefix difference in subsequent BWE change (octaves)',fontsize=11)
     fig.suptitle('Residual prefix dependence after frozen causal matching\nBlue: BWE only; orange: compact history; ranges of paired values, numbers = matched pairs (required 4)',fontsize=12)
-    fig.tight_layout(rect=(0,0,1,.93));fig.savefig(REPO/'reports/native-phase-state-m9r-residuals.png',dpi=150);plt.close(fig)
+    fig.text(.5,.01,'Dotted ±0.25 lines are reference magnitudes; qualification uses future-distribution W-infinity.',ha='center',fontsize=9)
+    fig.tight_layout(rect=(.02,.035,1,.93));fig.savefig(REPO/'reports/native-phase-state-m9r-residuals.png',dpi=150);plt.close(fig)
     cells=[]
     for content in contents:
         for level in m.TARGETS:

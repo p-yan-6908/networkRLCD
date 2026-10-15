@@ -14,8 +14,9 @@ def finalize():
     assert receipt['archive_and_restored_file_checksums_verified'] and receipt['remote_fresh_download_verified']
     downloaded=Path(hf_hub_download(receipt['repo_id'],repo_type='dataset',filename=PREFIX+'/file-index.json',revision=receipt['revision'],force_download=True))
     assert m.v.sha(downloaded)==receipt['parts']['file-index.json']['sha256'];index=m.v.read(downloaded)['files']
-    for name in ('archive_bindings.json','phase_state_summary.json','phase_state_records.json','inherited_gate_audit.json','mechanism_qualification_gate.json',
+    for name in ('archive_bindings.json','phase_state_summary.json','phase_state_records.json','support_failure_diagnostic.json','inherited_gate_audit.json','mechanism_qualification_gate.json',
         'instrumentation_evidence/mechanism_qualification_gate.json','provenance/docs/NATIVE_PHASE_STATE_M9R_PLAN.md',
+        'provenance/docs/NATIVE_PHASE_STATE_M9R_INTERPRETATION.md',
         'provenance/docs/NATIVE_PHASE_STATE_M9R_RESULTS.md','provenance/reports/native-phase-state-m9r-preservation-audit.json'):
         assert (root/name).stat().st_size==index[name]['size'] and m.v.sha(root/name)==index[name]['sha256']
     binding=m.v.read(root/'archive_bindings.json')
@@ -30,6 +31,10 @@ def finalize():
         scientific_gate_passed=binding['P2_qualified'],acquisition_gate_passed=receipt['registered_gate_passed'],
         registered_M9R_P2_gate_passed=binding['registered_P2_qualified'],inherited_gate_audit_sha256=binding['inherited_gate_audit_sha256'],
         scientific_summary_sha256=binding['phase_state_summary_sha256'],old_closed_panels=binding['old_closed_panels'])
+    diagnostic=m.v.read(root/'support_failure_diagnostic.json')
+    receipt.update(result_classification=diagnostic['classification'],positive_future_stability_labels=diagnostic['positive_future_stability_labels'],
+        P2_first_tags=diagnostic['P2_first_tags'],P2_positive_predictive_accuracy=None,
+        support_diagnostic_sha256=m.v.sha(root/'support_failure_diagnostic.json'),bitrate_actions_or_controller_fitting=False)
     path.write_text(json.dumps(receipt,sort_keys=True,indent=2)+'\n')
     stage=m.v.CACHE/(PREFIX+'-archive')
     raw=sum(p.stat().st_size for p in m.ROOT.rglob('*') if p.is_file())

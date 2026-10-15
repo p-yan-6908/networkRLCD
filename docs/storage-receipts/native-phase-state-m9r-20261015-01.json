@@ -1,0 +1,60 @@
+{
+  "P2_first_tags": 0,
+  "P2_positive_predictive_accuracy": null,
+  "abi": "native_bwe_support_mechanism_archive_receipt_v1",
+  "acquisition_gate_passed": true,
+  "archive_and_restored_file_checksums_verified": true,
+  "archive_helper_sha256": "a6e2a7f9206df0badc31730c2264970d29ac60e840882557210d8ea1776a2913",
+  "base_gate_sha256": "3a8c7d311c09ed8350e8580c9edfb715fd29ad8ba2cc5be9929f6dc2b7a6c6dd",
+  "bitrate_actions_or_controller_fitting": false,
+  "capture_index_sha256": "ed4d49afb031fc8a7be13c003a5a6f1870e39391b1fe1b9c6c313aac59d6d244",
+  "files_deleted": 0,
+  "files_verified": 4250,
+  "gate_sha256": "3a8c7d311c09ed8350e8580c9edfb715fd29ad8ba2cc5be9929f6dc2b7a6c6dd",
+  "inherited_gate_audit_sha256": "5d35fc948c25a826b5cb96169adc0f6b8a8ed4ce8f80cea39411edaea3f82468",
+  "local_raw_evidence_retained": true,
+  "old_closed_panels": {
+    "m8_allocation_sha256": "6b25569c97dd4116577360e652f2163819ed1c64f972ff9c65e6e9cd17b2df9a",
+    "m8_schedule_uninstantiated": true,
+    "old_validation_session_directories": {
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7r/validation": false,
+      "/home/agent/.cache/networkrlcd/native-state-conditioning-m7ra/validation": false
+    }
+  },
+  "parts": {
+    "RESTORE.md": {
+      "sha256": "8e86537159a89b2310a6a1f86b31211cf56339f004b15bd9a39ccea49872a209",
+      "size": 417
+    },
+    "SHA256SUMS": {
+      "sha256": "cb88cc5bd6ed1df4c3a4e53dcb404cacf45e83387a9964c582372d1685ed7142",
+      "size": 87
+    },
+    "file-index.json": {
+      "sha256": "90d6b4ebae18e3b114875e6d797cc26e4461865a69929ca61ed704835b5d7cc1",
+      "size": 745480
+    },
+    "results.tar.part-000": {
+      "sha256": "404274e1e3362d90a0b2f1a230d85ad7206aec1c5f749719a70f088b043d2720",
+      "size": 1128663040
+    }
+  },
+  "positive_future_stability_labels": 0,
+  "prefix": "native-phase-state-m9r-20261015-01",
+  "private": true,
+  "protocol_sha256": "8024a79f48053be2202bdacaf8aa19262f97deec0eaba043528f6efd0e42155b",
+  "raw_capture_root": "/home/agent/.cache/networkrlcd/native-phase-state-m9r/validation",
+  "registered_M9R_P2_gate_passed": false,
+  "registered_gate_passed": true,
+  "remote_fresh_download_verified": true,
+  "repo_id": "p-yan/networkrlcd-results-archive",
+  "result_classification": "qualified acquisition; prospective state-coverage failure",
+  "revision": "b4028214ecc26b7c94114953b018640e78b023a6",
+  "scientific_gate": "inherited_gate_audit.json: qualified_for_next_common_state_validation",
+  "scientific_gate_passed": false,
+  "scientific_registration_commit": "df23517803303e323ae6fee5068967b02bb4b52b",
+  "scientific_summary_sha256": "58d586dd3a42b976b649de72a28d3b269e7fc16f445f1677981b06b1fd82539d",
+  "stage": "validation",
+  "support_diagnostic_sha256": "bad1695de4c198978a808294457c4dc839ff6a8b6c3398713f970dc3f23ebd63"
+}
