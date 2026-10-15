@@ -1,0 +1,25 @@
+{
+  "abi": "rd1_summary_only_preservation_audit_v1",
+  "evidence_anchor_commit": "f109ab2",
+  "new_capture_or_panel_instantiation": false,
+  "new_effect_estimate_or_cross_study_pooling": false,
+  "new_model_or_calibration_fit": false,
+  "new_source_hashes": {
+    "data/research-decision-rd1/evidence-ledger.json": "3f48abb4fd7a0a50e5398c400146689544b691b3e573766fba1e4210db266b1b",
+    "data/research-decision-rd1/prior-freeze-sha256.json": "d7b7fe4225fab41d7a9f91cf5eb6d4c9dfeeed99d13fd58790e999db4a0b047d",
+    "docs/RESEARCH_DECISION_RD1.md": "13b3094d954d056cb1fdd2e7ccb74bf07c2945cfa30572a4e4f3a0bc6984e722",
+    "paper/negative-result/README.md": "303465747e6f9ed3a32f4b139a81328d2a992125aaf3baf36530038a05bac3ed",
+    "paper/negative-result/evidence-tables.tex": "0f19dae6146c2556648e6490b94a234aace189aa1863dbf82cccd591f1b52cdd",
+    "paper/negative-result/main.tex": "9d4328585d36e75bc7b9015f1a96548eaafa339952d0ff502ff1895d350cc769",
+    "paper/negative-result/references.tex": "3db1103e483bd606e42c98952a4651db9b9bee7d5fda7ecaf838b909dc51e3c5",
+    "tools/synthesize_research_decision_rd1.py": "398b366e955bb692233b4af36a21d4dcb5b17c3ca900aca25157079210908325"
+  },
+  "old_paper_unchanged_new_edition_created": true,
+  "prior_evidence_deleted": 0,
+  "prior_files_unchanged": 1684,
+  "raw_telemetry_restored_or_decoded": false,
+  "receiver_outcomes_opened": false,
+  "source_documents_and_committed_reports_only": true,
+  "sources_checked": 65,
+  "successor_selected": false
+}

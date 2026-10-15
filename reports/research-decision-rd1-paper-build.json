@@ -1,0 +1,22 @@
+{
+  "abi": "rd1_document_build_receipt_v1",
+  "pages": 9,
+  "pdf_path": "/home/agent/.cache/networkrlcd/research-decision-rd1/paper-build/main.pdf",
+  "pdf_sha256": "160fc6b1671d127750329561c1ec9cf946343c499cb53f28b346d3daab7b0122",
+  "source_sha256": {
+    "paper/negative-result/main.tex": "9d4328585d36e75bc7b9015f1a96548eaafa339952d0ff502ff1895d350cc769",
+    "paper/negative-result/evidence-tables.tex": "0f19dae6146c2556648e6490b94a234aace189aa1863dbf82cccd591f1b52cdd",
+    "paper/negative-result/references.tex": "3db1103e483bd606e42c98952a4651db9b9bee7d5fda7ecaf838b909dc51e3c5",
+    "reports/figures/partial-observability-po1.png": "9fd1122596a6fd710e459a2da540b3a3951c346cd25e4f1965ffa1ad18712e35"
+  },
+  "compile_logs_sha256": {
+    "compile-pass-1-final.txt": "061288d04706fd98cc40a7931e40fea2ff4528c9c9420c35ed94317212bbdfe2",
+    "compile-pass-2.txt": "e4c9f5eea20d6525b64b4961756c2f65cffd28efdf342e10a0e1132844788c9b",
+    "compile-pass-3.txt": "e4c9f5eea20d6525b64b4961756c2f65cffd28efdf342e10a0e1132844788c9b"
+  },
+  "pdflatex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "unresolved_reference_tokens": 0,
+  "scientific_analysis_or_model_run": false,
+  "old_paper_sources_unchanged": true,
+  "draft_typesetting_logs_retained": true
+}
