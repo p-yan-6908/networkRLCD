@@ -1,0 +1,278 @@
+{
+  "abi": "native_transport_timing_m11r_supported_alternatives_v1",
+  "boundary": "No supported complete, uniquely attributed and sufficiently fresh transport-control channel set established in this binary/fixture. This is not a test that transport timing is irrelevant.",
+  "complete_required_channel_set_qualified": false,
+  "console_interpretation": "Failed before DevTools; no marker injected. Pinned multiprocess Perfetto config rejects ECHO_TO_CONSOLE with NOTREACHED. Exact process exit status was not captured by that frozen probe.",
+  "development_opened": false,
+  "direct_file_interpretation": "Both marks acknowledged; requested file absent. A retained temporary file contains both markers only in the final inventory; online visibility of that file was not measured.",
+  "external_proxy_equivalence": {
+    "RTP_bursts": "Packet spacing mixes encoder production, pacing, retransmission and probing; no native probe cluster/active state is identified by a burst alone.",
+    "equivalent_proxy_qualified": false,
+    "getStats_or_RTT_age": "Polled BWE changes and RTT-measurement detection age do not identify every internal update or transport-CC arrival.",
+    "offline_logs": "Producer timestamps and later learned source identity cannot be backdated into the sender information set.",
+    "relay_or_socket_receipt": "Some SRTCP common-header bytes may be visible; relay enqueue/forward or socket arrival is not browser decryption, transport-feedback parse/dispatch or estimator consumption time."
+  },
+  "fine_grained_native_conditional_action_value_identified": false,
+  "future_BWE_labels_read": false,
+  "metadata_probes": [
+    {
+      "error": "Error: DevTools unavailable",
+      "files": {
+        "probe.json": {
+          "sha256": "7ef3764e425c746a836149f71e554924518cbf87a2ee64478d884a9050f6b990",
+          "size": 904
+        },
+        "stderr_chunks.json": {
+          "sha256": "fc83f09e8af1e6b99502bf582b1e0cee34f4a92be777e428fec4b8115cf291ba",
+          "size": 442
+        }
+      },
+      "marks_acknowledged": 0,
+      "native_contexts": 0,
+      "online_marker_observations": [],
+      "policy_unchanged": true,
+      "probe": "console",
+      "process_exit_code": null,
+      "process_exit_status_recorded": false,
+      "process_signal_code": null,
+      "receiver_outcomes_read": false,
+      "registration_commit": "4b7cd10f05b0ee6786cafd55239ed7b129df4785"
+    },
+    {
+      "error": null,
+      "files": {
+        ".org.chromium.Chromium.MoVXm5": {
+          "artificial_marker_names_in_final_file": [
+            "M11R_PERFETTO_CAUSAL_MARKER_A",
+            "M11R_PERFETTO_CAUSAL_MARKER_B"
+          ],
+          "sha256": "1012503443060ac1f7307780a68039de7cffdd316e0db8ef4fa55d4972063a80",
+          "size": 12060
+        },
+        "config.pb": {
+          "sha256": "3ee483119ebd321c87b13bea61054adfec7e6f5170c4b1efaf901c7372545357",
+          "size": 191
+        },
+        "probe.json": {
+          "sha256": "d0d4c921e5872a226db97934125174bfcb9a55b48a9fad496e80bb532daeefbf",
+          "size": 26069
+        },
+        "stderr_chunks.json": {
+          "sha256": "9da2340c643a18feccbe23053621a36afd7279863fb057ac759bec3acceb9c3e",
+          "size": 7124
+        }
+      },
+      "marks_acknowledged": 2,
+      "native_contexts": 0,
+      "online_marker_observations": [
+        {
+          "delay_from_ack_lower_ms": null,
+          "delay_from_request_upper_ms": null,
+          "file_contains_marker": false,
+          "first_visible_node_ms": null,
+          "name": "M11R_PERFETTO_CAUSAL_MARKER_A"
+        },
+        {
+          "delay_from_ack_lower_ms": null,
+          "delay_from_request_upper_ms": null,
+          "file_contains_marker": false,
+          "first_visible_node_ms": null,
+          "name": "M11R_PERFETTO_CAUSAL_MARKER_B"
+        }
+      ],
+      "policy_unchanged": true,
+      "probe": "perfetto",
+      "process_exit_code": 0,
+      "process_exit_status_recorded": true,
+      "process_signal_code": null,
+      "receiver_outcomes_read": false,
+      "registration_commit": "971af241564b002b3eda704985f4533a4ee9cdef"
+    },
+    {
+      "error": null,
+      "files": {
+        ".org.chromium.Chromium.UbqcUN": {
+          "artificial_marker_names_in_final_file": [],
+          "sha256": "f25ec00f2667e1c3de505c606afcd013e7dcce6e3a2096e2df59d61034a276e9",
+          "size": 5046
+        },
+        "config.pb": {
+          "sha256": "4b0e8509f04c498cb2a2cf732b931d483e04d91e7ff965d70870f37f3d2cdab2",
+          "size": 196
+        },
+        "probe.json": {
+          "sha256": "6d76e8af738bc1152133150b528ef51a3b6d56621839cdde0a60bd49883146f1",
+          "size": 50706
+        },
+        "stderr_chunks.json": {
+          "sha256": "9463524e306d3efda5220af42266df75404dad3da73f5a951b28668aabd96367",
+          "size": 7440
+        }
+      },
+      "marks_acknowledged": 2,
+      "native_contexts": 0,
+      "online_marker_observations": [
+        {
+          "delay_from_ack_lower_ms": null,
+          "delay_from_request_upper_ms": null,
+          "file_contains_marker": false,
+          "files_containing_marker": [],
+          "first_visible_file": null,
+          "first_visible_node_ms": null,
+          "name": "M11R_PERFETTO_TEMP_MARKER_A",
+          "observed_before_5s": false
+        },
+        {
+          "delay_from_ack_lower_ms": null,
+          "delay_from_request_upper_ms": null,
+          "file_contains_marker": false,
+          "files_containing_marker": [],
+          "first_visible_file": null,
+          "first_visible_node_ms": null,
+          "name": "M11R_PERFETTO_TEMP_MARKER_B",
+          "observed_before_5s": false
+        }
+      ],
+      "policy_unchanged": true,
+      "probe": "perfetto-temp",
+      "process_exit_code": 0,
+      "process_exit_status_recorded": true,
+      "process_signal_code": null,
+      "receiver_outcomes_read": false,
+      "registration_commit": "369dcad70ac1b285157eb1a073899f60d6f550e6"
+    }
+  ],
+  "native_common_support_established": false,
+  "native_gate_reclassified": false,
+  "predictor_state_search_actions_or_controller": false,
+  "private_api": {
+    "allowlist_bypassed": false,
+    "approved_extension_access_available": false,
+    "immediate_output_parameter": "outputPeriodMs=0",
+    "name": "webrtcLoggingPrivate.startEventLogging",
+    "normal_page_api_present": false,
+    "required_permission": "explicit allowlisted extension identity"
+  },
+  "receiver_outcomes_read": false,
+  "source_files": {
+    "base__trace_event__trace_config.cc": {
+      "sha256": "285160223ccfed0b3226d2d475d091f7a785cf463fda36e63a38ae7b5daa733c",
+      "size": 28773
+    },
+    "base__trace_event__trace_log.cc": {
+      "sha256": "b5067e0cfe98476b3c4f4257a40c973f4437c2ea1bb0444d6fa19dcce898e628",
+      "size": 25370
+    },
+    "cdp_revision-commit.json": {
+      "sha256": "3a40bf7dfc4c40792770c50a497eac5f6c1d1e1b7d36500165e7383aff3c0620",
+      "size": 3094
+    },
+    "chrome__browser__media__webrtc__webrtc_event_log_manager_common.cc": {
+      "sha256": "e61f4d9c69d6c0ec9c0e2696c3c514aa1135bc2869b5d81b7f0372bec1c46988",
+      "size": 36403
+    },
+    "components__tracing__common__tracing_switches.cc": {
+      "sha256": "8f928c1b7e423bd583765c2783f39a703bb56c60dc5aa1d19a3210b5954d8d15",
+      "size": 6938
+    },
+    "modules__rtp_rtcp__source__rtcp_packet__transport_feedback.cc": {
+      "sha256": "85c011156f8182eaff29b91c6c6695c4b136eaf342217c3cf0aaae4e86a608aa",
+      "size": 25081
+    },
+    "protos__perfetto__config__data_source_config.proto": {
+      "sha256": "a6a245df997e69441b5e306836fa4d14dc3570d03ba386f4c5afcf8e28f4f482",
+      "size": 16810
+    },
+    "protos__perfetto__config__trace_config.proto": {
+      "sha256": "7c17acdc772c03f9fc1dd2c2404bbaf95abc9998fb2e307bd0e832485a1e6624",
+      "size": 46454
+    },
+    "protos__perfetto__config__track_event__track_event_config.proto": {
+      "sha256": "cdab98ee5daaa0987ef155c057c002ff0014c80c1933bf7d1b3a05c11748399d",
+      "size": 3955
+    },
+    "revision-survey.json": {
+      "sha256": "d901f18e6ac3da0dd7e0c8290cf3432cc6d5725fa214867aabeb488b4890ffad",
+      "size": 729
+    },
+    "services__tracing__perfetto__consumer_host.cc": {
+      "sha256": "9db4e8295b9b49a962f6a4156fbbe070c928b38ba93cd0768b04af2fcbeab1a3",
+      "size": 23848
+    },
+    "services__tracing__public__cpp__perfetto__perfetto_config.cc": {
+      "sha256": "0881d1fc63481a1a190873c1075e4d20151f3117012f3ef77ea3844d8ebdb2be",
+      "size": 15311
+    },
+    "services__tracing__public__cpp__startup_tracing_controller.cc": {
+      "sha256": "fee66827e2b15faf1626a7390bcb5186bb7753eb7b1d7d3a2186d28b217f98bd",
+      "size": 18935
+    },
+    "services__tracing__public__cpp__trace_startup.cc": {
+      "sha256": "1fc5df996d31cb37996341e2319d99a3bd9c306df2e882ed56d5c8301f7034e0",
+      "size": 7171
+    },
+    "services__tracing__public__cpp__trace_startup_config.cc": {
+      "sha256": "708f5d5bf7970810fc8409655c083f65f79242b4655e73d59c0291276219760d",
+      "size": 17233
+    },
+    "source-survey.json": {
+      "sha256": "40a10e630df94b340e5e1c431e0d960633528c2979bb79fa6b01e7699fbf06d4",
+      "size": 5080
+    },
+    "version_tag-commit.json": {
+      "sha256": "3a40bf7dfc4c40792770c50a497eac5f6c1d1e1b7d36500165e7383aff3c0620",
+      "size": 3094
+    }
+  },
+  "temporary_file_repair_interpretation": "Both marks acknowledged; actual Chromium temporary file observed, but neither marker is in the live or final trace. Recording control did not reproduce; no latency claim or native qualification follows.",
+  "transport_trace_schemas": [
+    {
+      "original": "m11r-timing-c-000-support",
+      "transport_trace_schemas": {
+        "TaskQueuePacedSender::EnqueuePackets": {
+          "argument_keys": [],
+          "count": 3265
+        },
+        "TaskQueuePacedSender::EnqueuePackets::Loop": {
+          "argument_keys": [
+            "rtp_timestamp",
+            "sequence_number"
+          ],
+          "count": 12094
+        },
+        "TaskQueuePacedSender::MaybeProcessPackets": {
+          "argument_keys": [],
+          "count": 4329
+        },
+        "TransportFeedback::Parse": {
+          "argument_keys": [],
+          "count": 1767
+        }
+      }
+    },
+    {
+      "original": "m11r-timing-c-001-support",
+      "transport_trace_schemas": {
+        "TaskQueuePacedSender::EnqueuePackets": {
+          "argument_keys": [],
+          "count": 3318
+        },
+        "TaskQueuePacedSender::EnqueuePackets::Loop": {
+          "argument_keys": [
+            "rtp_timestamp",
+            "sequence_number"
+          ],
+          "count": 12207
+        },
+        "TaskQueuePacedSender::MaybeProcessPackets": {
+          "argument_keys": [],
+          "count": 4244
+        },
+        "TransportFeedback::Parse": {
+          "argument_keys": [],
+          "count": 1774
+        }
+      }
+    }
+  ]
+}
